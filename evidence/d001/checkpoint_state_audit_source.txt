@@ -1,0 +1,331 @@
+Installed rl_games 1.6.1; exact local sources (not modified).
+Command: scripts/audit_checkpoint_state.py (CPU); full command in CHECKPOINT_REPRODUCIBILITY.md.
+
+common/a2c_common.py SHA256=b2ff92d888212227620138a6ca09d41ea2b8de6af044163ca3699f4ed48de661
+169:         self.is_adaptive_lr = config['lr_schedule'] == 'adaptive'
+170:         self.linear_lr = config['lr_schedule'] == 'linear'
+171:         self.schedule_type = config.get('schedule_type', 'legacy')
+172: 
+173:         # Setting learning rate scheduler
+174:         if self.is_adaptive_lr:
+175:             self.kl_threshold = config['kl_threshold']
+176:             self.scheduler = schedulers.AdaptiveScheduler(self.kl_threshold)
+177: 
+178:         elif self.linear_lr:
+179:             
+180:             if self.max_epochs == -1 and self.max_frames == -1:
+181:                 print("Max epochs and max frames are not set. Linear learning rate schedule can't be used, switching to the contstant (identity) one.")
+182:                 self.scheduler = schedulers.IdentityScheduler()
+183:             else:
+184:                 use_epochs = True
+185:                 max_steps = self.max_epochs
+186: 
+187:                 if self.max_epochs == -1:
+188:                     use_epochs = False
+189:                     max_steps = self.max_frames
+190: 
+191:                 self.scheduler = schedulers.LinearScheduler(float(config['learning_rate']), 
+192:                     max_steps = max_steps,
+193:                     use_epochs = use_epochs, 
+194:                     apply_to_entropy = config.get('schedule_entropy', False),
+195:                     start_entropy_coef = config.get('entropy_coef'))
+196:         else:
+197:             self.scheduler = schedulers.IdentityScheduler()
+253:         self.mixed_precision = self.config.get('mixed_precision', False)
+254:         self.scaler = torch.cuda.amp.GradScaler(enabled=self.mixed_precision)
+255: 
+256:         self.last_lr = self.config['learning_rate']
+257:         self.frame = 0
+258:         self.update_time = 0
+259:         self.mean_rewards = self.last_mean_rewards = -1000000000
+260:         self.play_time = 0
+261:         self.epoch_num = 0
+262:         self.curr_frames = 0
+600:     def get_full_state_weights(self):
+601:         state = self.get_weights()
+602:         state['epoch'] = self.epoch_num
+603:         state['frame'] = self.frame
+604:         state['optimizer'] = self.optimizer.state_dict()
+605: 
+606:         if self.has_central_value:
+607:             state['assymetric_vf_nets'] = self.central_value_net.state_dict()
+608: 
+609:         # This is actually the best reward ever achieved. last_mean_rewards is perhaps not the best variable name
+610:         # We save it to the checkpoint to prevent overriding the "best ever" checkpoint upon experiment restart
+611:         state['last_mean_rewards'] = self.last_mean_rewards
+612: 
+613:         if self.vec_env is not None:
+614:             env_state = self.vec_env.get_env_state()
+615:             state['env_state'] = env_state
+616: 
+617:         return state
+618: 
+619:     def set_full_state_weights(self, weights, set_epoch=True):
+620: 
+621:         self.set_weights(weights)
+622:         if set_epoch:
+623:             self.epoch_num = weights['epoch']
+624:             self.frame = weights['frame']
+625: 
+626:         if self.has_central_value:
+627:             self.central_value_net.load_state_dict(weights['assymetric_vf_nets'])
+628: 
+629:         self.optimizer.load_state_dict(weights['optimizer'])
+630: 
+631:         self.last_mean_rewards = weights.get('last_mean_rewards', -1000000000)
+632: 
+633:         if self.vec_env is not None:
+634:             env_state = weights.get('env_state', None)
+635:             self.vec_env.set_env_state(env_state)
+636: 
+637:     def get_weights(self):
+638:         state = self.get_stats_weights()
+639:         state['model'] = self.model.state_dict()
+640:         return state
+641: 
+642:     def get_stats_weights(self, model_stats=False):
+643:         state = {}
+644:         if self.mixed_precision:
+645:             state['scaler'] = self.scaler.state_dict()
+646:         if self.has_central_value:
+647:             state['central_val_stats'] = self.central_value_net.get_stats_weights(model_stats)
+648:         if model_stats:
+649:             if self.normalize_input:
+650:                 state['running_mean_std'] = self.model.running_mean_std.state_dict()
+651:             if self.normalize_value:
+652:                 state['reward_mean_std'] = self.model.value_mean_std.state_dict()
+653: 
+654:         return state
+655: 
+656:     def set_stats_weights(self, weights):
+657:         if self.normalize_rms_advantage:
+658:             self.advantage_mean_std.load_state_dic(weights['advantage_mean_std'])
+659:         if self.normalize_input and 'running_mean_std' in weights:
+660:             self.model.running_mean_std.load_state_dict(weights['running_mean_std'])
+661:         if self.normalize_value and 'normalize_value' in weights:
+662:             self.model.value_mean_std.load_state_dict(weights['reward_mean_std'])
+663:         if self.mixed_precision and 'scaler' in weights:
+664:             self.scaler.load_state_dict(weights['scaler'])
+665: 
+666:     def set_weights(self, weights):
+667:         self.model.load_state_dict(weights['model'])
+668:         self.set_stats_weights(weights)
+1213:                 if self.schedule_type == 'legacy':
+1214:                     av_kls = kl
+1215:                     if self.multi_gpu:
+1216:                         dist.all_reduce(kl, op=dist.ReduceOp.SUM)
+1217:                         av_kls /= self.world_size
+1218:                     self.last_lr, self.entropy_coef = self.scheduler.update(self.last_lr, self.entropy_coef, self.epoch_num, 0, av_kls.item())
+1219:                     self.update_lr(self.last_lr)
+1220: 
+1221:             av_kls = torch_ext.mean_list(ep_kls)
+1222:             if self.multi_gpu:
+1223:                 dist.all_reduce(av_kls, op=dist.ReduceOp.SUM)
+1224:                 av_kls /= self.world_size
+1225:             if self.schedule_type == 'standard':
+1226:                 self.last_lr, self.entropy_coef = self.scheduler.update(self.last_lr, self.entropy_coef, self.epoch_num, 0, av_kls.item())
+1227:                 self.update_lr(self.last_lr)
+1228: 
+1229:             kls.append(av_kls)
+1230:             self.diagnostics.mini_epoch(self, mini_ep)
+1231:             if self.normalize_input:
+1232:                 self.model.running_mean_std.eval() # don't need to update statstics more than one miniepoch
+1301:     def train(self):
+1302:         self.init_tensors()
+1303:         self.last_mean_rewards = -100500
+1304:         start_time = time.time()
+1305:         total_time = 0
+1306:         rep_count = 0
+1307:         self.obs = self.env_reset()
+1308:         self.curr_frames = self.batch_size_envs
+
+algos_torch/central_value.py SHA256=6e62bcce9fe892e9245ce2cd46f06fb50f85ee9843572a4dedaf5e797f1ee7b6
+12: class CentralValueTrain(nn.Module):
+13: 
+14:     def __init__(self, state_shape, value_size, ppo_device, num_agents, horizon_length, num_actors, num_actions, 
+15:                 seq_length, normalize_value, network, config, writter, max_epochs, multi_gpu, zero_rnn_on_done):
+16:         nn.Module.__init__(self)
+41:         self.model = network.build(state_config)
+42:         self.lr = float(config['learning_rate'])
+43:         self.linear_lr = config.get('lr_schedule') == 'linear'
+44: 
+45:         # todo: support max frames as well
+46:         if self.linear_lr:
+47:             self.scheduler = schedulers.LinearScheduler(self.lr, 
+48:                 max_steps = self.max_epochs, 
+49:                 apply_to_entropy = False,
+50:                 start_entropy_coef = 0)
+51:         else:
+52:             self.scheduler = schedulers.IdentityScheduler()
+53:         
+54:         self.mini_epoch = config['mini_epochs']
+55:         assert(('minibatch_size_per_env' in self.config) or ('minibatch_size' in self.config))
+56: 
+57:         self.minibatch_size_per_env = self.config.get('minibatch_size_per_env', 0)
+58:         self.minibatch_size = self.config.get('minibatch_size', self.num_actors * self.minibatch_size_per_env)
+59:         self.num_minibatches = self.horizon_length * self.num_actors // self.minibatch_size
+60:         self.clip_value = config['clip_value']
+61: 
+62:         self.writter = writter
+63:         self.weight_decay = config.get('weight_decay', 0.0)
+64:         self.optimizer = torch.optim.Adam(self.model.parameters(), float(self.lr), eps=1e-08, weight_decay=self.weight_decay)
+65:         self.frame = 0
+66:         self.epoch_num = 0
+67:         self.running_mean_std = None
+68:         self.grad_norm = config.get('grad_norm', 1)
+69:         self.truncate_grads = config.get('truncate_grads', False)
+70:         self.e_clip = config.get('e_clip', 0.2)
+71:         self.truncate_grad = self.config.get('truncate_grads', False)
+72: 
+73:         self.is_rnn = self.model.is_rnn()
+74:         self.rnn_states = None
+75:         self.batch_size = self.horizon_length * self.num_actors
+76: 
+77:         if self.is_rnn:
+78:             self.rnn_states = self.model.get_default_rnn_state()
+79:             self.rnn_states = [s.to(self.ppo_device) for s in self.rnn_states]
+80:             total_agents = self.num_actors #* self.num_agents
+81:             num_seqs = self.horizon_length // self.seq_length
+82:             assert ((self.horizon_length * total_agents // self.num_minibatches) % self.seq_length == 0)
+83:             self.mb_rnn_states = [ torch.zeros((num_seqs, s.size()[0], total_agents, s.size()[2]), dtype=torch.float32, device=self.ppo_device) for s in self.rnn_states]
+114:     def get_stats_weights(self, model_stats=False):
+115:         state = {}
+116:         if model_stats:
+117:             if self.normalize_input:
+118:                 state['running_mean_std'] = self.model.running_mean_std.state_dict()
+119:             if self.normalize_value:
+120:                 state['reward_mean_std'] = self.model.value_mean_std.state_dict()
+121:         return state
+122: 
+123:     def set_stats_weights(self, weights): 
+124:         pass
+218:     def train_net(self):
+219:         self.train()
+220:         loss = 0
+221:         for _ in range(self.mini_epoch):
+222:             for idx in range(len(self.dataset)):
+223:                 loss += self.train_critic(self.dataset[idx])
+224:             if self.normalize_input:
+225:                 self.model.running_mean_std.eval()  # don't need to update statstics more than one miniepoch
+226:         avg_loss = loss / (self.mini_epoch * self.num_minibatches)
+227: 
+228:         self.epoch_num += 1
+229:         self.lr, _ = self.scheduler.update(self.lr, 0, self.epoch_num, 0, 0)
+230:         self.update_lr(self.lr)
+231:         self.frame += self.batch_size
+232:         if self.writter != None:
+233:             self.writter.add_scalar('losses/cval_loss', avg_loss, self.frame)
+234:             self.writter.add_scalar('info/cval_lr', self.lr, self.frame)        
+
+algos_torch/a2c_continuous.py SHA256=998755d3365d8160930a8a8a0cfe8e7e1cd647b6cd2b7edc4e38895828c5a720
+26:         self.model = self.network.build(build_config)
+27:         self.model.to(self.ppo_device)
+28:         self.states = None
+29:         self.init_rnn_from_model(self.model)
+30:         self.last_lr = float(self.last_lr)
+31:         self.bound_loss_type = self.config.get('bound_loss_type', 'bound') # 'regularisation' or 'bound'
+32:         self.optimizer = optim.Adam(self.model.parameters(), float(self.last_lr), eps=1e-08, weight_decay=self.weight_decay)
+52:             self.central_value_net = central_value.CentralValueTrain(**cv_config).to(self.ppo_device)
+53: 
+54:         self.use_experimental_cv = self.config.get('use_experimental_cv', True)
+55:         self.dataset = datasets.PPODataset(self.batch_size, self.minibatch_size, self.is_discrete, self.is_rnn, self.ppo_device, self.seq_length)
+56:         if self.normalize_value:
+57:             self.value_mean_std = self.central_value_net.model.value_mean_std if self.has_central_value else self.model.value_mean_std
+58: 
+59:         self.has_value_loss = self.use_experimental_cv or not self.has_central_value
+60:         self.algo_observer.after_init(self)
+61: 
+62:     def update_epoch(self):
+63:         self.epoch_num += 1
+64:         return self.epoch_num
+65:         
+66:     def save(self, fn):
+67:         state = self.get_full_state_weights()
+68:         torch_ext.save_checkpoint(fn, state)
+69: 
+70:     def restore(self, fn, set_epoch=True):
+71:         checkpoint = torch_ext.load_checkpoint(fn)
+72:         self.set_full_state_weights(checkpoint, set_epoch=set_epoch)
+
+algos_torch/models.py SHA256=78a806701b3099ea45de5c9c1e00c761d0a9443b4b39d6cce087680fc4e62f37
+37:         self.obs_shape = obs_shape
+38:         self.normalize_value = normalize_value
+39:         self.normalize_input = normalize_input
+40:         self.value_size = value_size
+41: 
+42:         if normalize_value:
+43:             self.value_mean_std = RunningMeanStd((self.value_size,)) #   GeneralizedMovingStats((self.value_size,)) #   
+44:         if normalize_input:
+45:             if isinstance(obs_shape, dict):
+46:                 self.running_mean_std = RunningMeanStdObs(obs_shape)
+47:             else:
+48:                 self.running_mean_std = RunningMeanStd(obs_shape)
+49: 
+
+algos_torch/running_mean_std.py SHA256=c7ad469e2bbc89de8419b55c768d1076f5d394d72102cc38c7e49002fc1db788
+27:             in_size = insize
+28: 
+29:         self.register_buffer("running_mean", torch.zeros(in_size, dtype = torch.float64))
+30:         self.register_buffer("running_var", torch.ones(in_size, dtype = torch.float64))
+31:         self.register_buffer("count", torch.ones((), dtype = torch.float64))
+
+algos_torch/players.py SHA256=e22d083c540b479b31fefc2bbd05d132a54e3f97d14bf21421498e011942c043
+72:     def restore(self, fn):
+73:         checkpoint = torch_ext.load_checkpoint(fn)
+74:         self.model.load_state_dict(checkpoint['model'])
+75:         if self.normalize_input and 'running_mean_std' in checkpoint:
+76:             self.model.running_mean_std.load_state_dict(checkpoint['running_mean_std'])
+77: 
+78:         env_state = checkpoint.get('env_state', None)
+79:         if self.env is not None and env_state is not None:
+80:             self.env.set_env_state(env_state)
+81: 
+82:     def reset(self):
+83:         self.init_rnn()
+
+common/ivecenv.py SHA256=b27b45c3a566219625e09ca21346b21960c05e1a8b800a804427c80104f7aa36
+28:     def get_env_state(self):
+29:         """
+30:         Return serializable environment state to be saved to checkpoint.
+31:         Can be used for stateful training sessions, i.e. with adaptive curriculums.
+32:         """
+33:         return None
+34: 
+35:     def set_env_state(self, env_state):
+36:         pass
+
+common/schedulers.py SHA256=5c75d9851accf305f6417976169bb8eaffd5a77687282a3d1b3a2e90e35c8f94
+19: class AdaptiveScheduler(RLScheduler):
+20:     def __init__(self, kl_threshold = 0.008):
+21:         super().__init__()
+22:         self.min_lr = 1e-6
+23:         self.max_lr = 1e-2
+24:         self.kl_threshold = kl_threshold
+25: 
+26:     def update(self, current_lr, entropy_coef, epoch, frames, kl_dist, **kwargs):
+27:         lr = current_lr
+28:         if kl_dist > (2.0 * self.kl_threshold):
+29:             lr = max(current_lr / 1.5, self.min_lr)
+30:         if kl_dist < (0.5 * self.kl_threshold):
+31:             lr = min(current_lr * 1.5, self.max_lr)
+32:         return lr, entropy_coef         
+
+algos_torch/torch_ext.py SHA256=3e9cf37042a89a7a5af6a28ec5599d1cb36ce2af4a77fbf60415ea9a8ef5aede
+71: def safe_save(state, filename):
+72:     return safe_filesystem_op(torch.save, state, filename)
+73: 
+74: def safe_load(filename):
+75:     return safe_filesystem_op(torch.load, filename)
+76: 
+77: def save_checkpoint(filename, state):
+78:     print("=> saving checkpoint '{}'".format(filename + '.pth'))
+79:     safe_save(state, filename + '.pth')
+80: 
+81: def load_checkpoint(filename):
+82:     print("=> loading checkpoint '{}'".format(filename))
+83:     state = safe_load(filename)
+84:     return state
+
+Isaac Lab v2.1.1 wrapper: SHA256=512af373b28e659308bc98d54cb9f646fe1870d8ad087019ce2d54a5deee2623
+Wrapper classes inherit IVecEnv and do not implement get_env_state / set_env_state; rg confirmed no matches.
+Underlying IVecEnv.get_env_state returns None, set_env_state is pass; actual checkpoint env_state=null.

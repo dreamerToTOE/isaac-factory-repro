@@ -1,0 +1,465 @@
+{
+  "head": "a77d215b1244b120605eac5c0af59bf0f32c20c5",
+  "parent": "c54da28f61569ec6cc8249b46ffcea498ff27600",
+  "changed_file_count": 103,
+  "total_changed_file_bytes": 430792,
+  "largest": [
+    {
+      "path": "evidence/2026-10-23/gpu_gate_retry/console.txt",
+      "bytes": 38710
+    },
+    {
+      "path": "docs/SOURCE_AUDIT.md",
+      "bytes": 32045
+    },
+    {
+      "path": "docs/EXPERIMENT_PROTOCOL.md",
+      "bytes": 19086
+    },
+    {
+      "path": "evidence/2026-10-23/resume_peg4_pinned/console.txt",
+      "bytes": 17006
+    },
+    {
+      "path": "evidence/2026-10-23/environment_audit.txt",
+      "bytes": 15759
+    },
+    {
+      "path": "docs/SETUP.md",
+      "bytes": 15574
+    },
+    {
+      "path": "configs/resolved/g01_peg16_pinned/env.yaml",
+      "bytes": 12078
+    },
+    {
+      "path": "configs/resolved/g01_peg4_pinned/env.yaml",
+      "bytes": 12077
+    },
+    {
+      "path": "configs/resolved/g01_peg4_pinned_resume_compat/env.yaml",
+      "bytes": 12077
+    },
+    {
+      "path": "evidence/2026-10-23/events_peg4_pinned.json",
+      "bytes": 11449
+    }
+  ],
+  "all_files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 110
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 4760
+    },
+    {
+      "path": "README.md",
+      "bytes": 2244
+    },
+    {
+      "path": "configs/requirements-g01.lock",
+      "bytes": 1961
+    },
+    {
+      "path": "configs/resolved/g01_peg16_pinned/agent.yaml",
+      "bytes": 2408
+    },
+    {
+      "path": "configs/resolved/g01_peg16_pinned/env.yaml",
+      "bytes": 12078
+    },
+    {
+      "path": "configs/resolved/g01_peg4_pinned/agent.yaml",
+      "bytes": 2407
+    },
+    {
+      "path": "configs/resolved/g01_peg4_pinned/env.yaml",
+      "bytes": 12077
+    },
+    {
+      "path": "configs/resolved/g01_peg4_pinned_resume_compat/agent.yaml",
+      "bytes": 2574
+    },
+    {
+      "path": "configs/resolved/g01_peg4_pinned_resume_compat/env.yaml",
+      "bytes": 12077
+    },
+    {
+      "path": "docs/EXPERIMENT_PROTOCOL.md",
+      "bytes": 19086
+    },
+    {
+      "path": "docs/OPEN_ISSUES.md",
+      "bytes": 4781
+    },
+    {
+      "path": "docs/REQUIREMENTS.md",
+      "bytes": 10599
+    },
+    {
+      "path": "docs/RESULTS_G0_G1.md",
+      "bytes": 10139
+    },
+    {
+      "path": "docs/SETUP.md",
+      "bytes": 15574
+    },
+    {
+      "path": "docs/SOURCE_AUDIT.md",
+      "bytes": 32045
+    },
+    {
+      "path": "evidence/2026-10-23/README.md",
+      "bytes": 2895
+    },
+    {
+      "path": "evidence/2026-10-23/checkpoint_locations.json",
+      "bytes": 2026
+    },
+    {
+      "path": "evidence/2026-10-23/checkpoint_peg16_pinned.json",
+      "bytes": 528
+    },
+    {
+      "path": "evidence/2026-10-23/checkpoint_peg4.json",
+      "bytes": 1397
+    },
+    {
+      "path": "evidence/2026-10-23/checkpoint_peg4_pinned.json",
+      "bytes": 1409
+    },
+    {
+      "path": "evidence/2026-10-23/checkpoint_resume_peg4.json",
+      "bytes": 1402
+    },
+    {
+      "path": "evidence/2026-10-23/checkpoint_resume_peg4_pinned.json",
+      "bytes": 1422
+    },
+    {
+      "path": "evidence/2026-10-23/delivery_verification.json",
+      "bytes": 2130
+    },
+    {
+      "path": "evidence/2026-10-23/environment_audit.txt",
+      "bytes": 15759
+    },
+    {
+      "path": "evidence/2026-10-23/events_peg16_pinned.json",
+      "bytes": 182
+    },
+    {
+      "path": "evidence/2026-10-23/events_peg4_pinned.json",
+      "bytes": 11449
+    },
+    {
+      "path": "evidence/2026-10-23/events_resume_peg4_pinned.json",
+      "bytes": 195
+    },
+    {
+      "path": "evidence/2026-10-23/gear_probe_1_pinned/console.txt",
+      "bytes": 6960
+    },
+    {
+      "path": "evidence/2026-10-23/gear_probe_1_pinned/gpu.csv",
+      "bytes": 862
+    },
+    {
+      "path": "evidence/2026-10-23/gear_probe_1_pinned/process_gpu.csv",
+      "bytes": 1608
+    },
+    {
+      "path": "evidence/2026-10-23/gear_probe_1_pinned/result.json",
+      "bytes": 894
+    },
+    {
+      "path": "evidence/2026-10-23/git_access.txt",
+      "bytes": 1274
+    },
+    {
+      "path": "evidence/2026-10-23/gpu_gate/console.txt",
+      "bytes": 8192
+    },
+    {
+      "path": "evidence/2026-10-23/gpu_gate/gpu.csv",
+      "bytes": 5553
+    },
+    {
+      "path": "evidence/2026-10-23/gpu_gate/result.json",
+      "bytes": 507
+    },
+    {
+      "path": "evidence/2026-10-23/gpu_gate_retry/console.txt",
+      "bytes": 38710
+    },
+    {
+      "path": "evidence/2026-10-23/gpu_gate_retry/gpu.csv",
+      "bytes": 3427
+    },
+    {
+      "path": "evidence/2026-10-23/gpu_gate_retry/result.json",
+      "bytes": 532
+    },
+    {
+      "path": "evidence/2026-10-23/install_editable.txt",
+      "bytes": 2035
+    },
+    {
+      "path": "evidence/2026-10-23/install_learning.txt",
+      "bytes": 2484
+    },
+    {
+      "path": "evidence/2026-10-23/install_learning_retry.txt",
+      "bytes": 303
+    },
+    {
+      "path": "evidence/2026-10-23/install_support.txt",
+      "bytes": 1824
+    },
+    {
+      "path": "evidence/2026-10-23/install_support_retry.txt",
+      "bytes": 1117
+    },
+    {
+      "path": "evidence/2026-10-23/install_torch.txt",
+      "bytes": 2331
+    },
+    {
+      "path": "evidence/2026-10-23/manifest.json",
+      "bytes": 1584
+    },
+    {
+      "path": "evidence/2026-10-23/nut_probe_1_pinned/console.txt",
+      "bytes": 6960
+    },
+    {
+      "path": "evidence/2026-10-23/nut_probe_1_pinned/gpu.csv",
+      "bytes": 887
+    },
+    {
+      "path": "evidence/2026-10-23/nut_probe_1_pinned/process_gpu.csv",
+      "bytes": 1669
+    },
+    {
+      "path": "evidence/2026-10-23/nut_probe_1_pinned/result.json",
+      "bytes": 895
+    },
+    {
+      "path": "evidence/2026-10-23/peg_probe_1/console.txt",
+      "bytes": 720
+    },
+    {
+      "path": "evidence/2026-10-23/peg_probe_1/gpu.csv",
+      "bytes": 94
+    },
+    {
+      "path": "evidence/2026-10-23/peg_probe_1/result.json",
+      "bytes": 659
+    },
+    {
+      "path": "evidence/2026-10-23/peg_probe_16/console.txt",
+      "bytes": 4956
+    },
+    {
+      "path": "evidence/2026-10-23/peg_probe_16/gpu.csv",
+      "bytes": 1323
+    },
+    {
+      "path": "evidence/2026-10-23/peg_probe_16/process_gpu.csv",
+      "bytes": 2570
+    },
+    {
+      "path": "evidence/2026-10-23/peg_probe_16/result.json",
+      "bytes": 842
+    },
+    {
+      "path": "evidence/2026-10-23/peg_probe_16_pinned/console.txt",
+      "bytes": 6965
+    },
+    {
+      "path": "evidence/2026-10-23/peg_probe_16_pinned/gpu.csv",
+      "bytes": 1220
+    },
+    {
+      "path": "evidence/2026-10-23/peg_probe_16_pinned/process_gpu.csv",
+      "bytes": 2311
+    },
+    {
+      "path": "evidence/2026-10-23/peg_probe_16_pinned/result.json",
+      "bytes": 842
+    },
+    {
+      "path": "evidence/2026-10-23/peg_probe_1_pinned/console.txt",
+      "bytes": 6961
+    },
+    {
+      "path": "evidence/2026-10-23/peg_probe_1_pinned/gpu.csv",
+      "bytes": 1106
+    },
+    {
+      "path": "evidence/2026-10-23/peg_probe_1_pinned/process_gpu.csv",
+      "bytes": 2083
+    },
+    {
+      "path": "evidence/2026-10-23/peg_probe_1_pinned/result.json",
+      "bytes": 841
+    },
+    {
+      "path": "evidence/2026-10-23/peg_probe_1_retry/console.txt",
+      "bytes": 720
+    },
+    {
+      "path": "evidence/2026-10-23/peg_probe_1_retry/gpu.csv",
+      "bytes": 94
+    },
+    {
+      "path": "evidence/2026-10-23/peg_probe_1_retry/result.json",
+      "bytes": 659
+    },
+    {
+      "path": "evidence/2026-10-23/peg_probe_1_support_fixed/console.txt",
+      "bytes": 4358
+    },
+    {
+      "path": "evidence/2026-10-23/peg_probe_1_support_fixed/gpu.csv",
+      "bytes": 2000
+    },
+    {
+      "path": "evidence/2026-10-23/peg_probe_1_support_fixed/result.json",
+      "bytes": 661
+    },
+    {
+      "path": "evidence/2026-10-23/resume_peg4/console.txt",
+      "bytes": 7467
+    },
+    {
+      "path": "evidence/2026-10-23/resume_peg4/gpu.csv",
+      "bytes": 1134
+    },
+    {
+      "path": "evidence/2026-10-23/resume_peg4/process_gpu.csv",
+      "bytes": 2150
+    },
+    {
+      "path": "evidence/2026-10-23/resume_peg4/result.json",
+      "bytes": 1276
+    },
+    {
+      "path": "evidence/2026-10-23/resume_peg4_pinned/console.txt",
+      "bytes": 17006
+    },
+    {
+      "path": "evidence/2026-10-23/resume_peg4_pinned/gpu.csv",
+      "bytes": 1055
+    },
+    {
+      "path": "evidence/2026-10-23/resume_peg4_pinned/process_gpu.csv",
+      "bytes": 2041
+    },
+    {
+      "path": "evidence/2026-10-23/resume_peg4_pinned/result.json",
+      "bytes": 1289
+    },
+    {
+      "path": "evidence/2026-10-23/resume_peg4_pinned_compat/console.txt",
+      "bytes": 8449
+    },
+    {
+      "path": "evidence/2026-10-23/resume_peg4_pinned_compat/gpu.csv",
+      "bytes": 992
+    },
+    {
+      "path": "evidence/2026-10-23/resume_peg4_pinned_compat/process_gpu.csv",
+      "bytes": 1851
+    },
+    {
+      "path": "evidence/2026-10-23/resume_peg4_pinned_compat/result.json",
+      "bytes": 1338
+    },
+    {
+      "path": "evidence/2026-10-23/rlgames_checkpoint_source.txt",
+      "bytes": 7299
+    },
+    {
+      "path": "evidence/2026-10-23/train_peg16_pinned/console.txt",
+      "bytes": 7664
+    },
+    {
+      "path": "evidence/2026-10-23/train_peg16_pinned/gpu.csv",
+      "bytes": 1085
+    },
+    {
+      "path": "evidence/2026-10-23/train_peg16_pinned/process_gpu.csv",
+      "bytes": 2019
+    },
+    {
+      "path": "evidence/2026-10-23/train_peg16_pinned/result.json",
+      "bytes": 1100
+    },
+    {
+      "path": "evidence/2026-10-23/train_peg4/console.txt",
+      "bytes": 6654
+    },
+    {
+      "path": "evidence/2026-10-23/train_peg4/gpu.csv",
+      "bytes": 2612
+    },
+    {
+      "path": "evidence/2026-10-23/train_peg4/process_gpu.csv",
+      "bytes": 5179
+    },
+    {
+      "path": "evidence/2026-10-23/train_peg4/result.json",
+      "bytes": 1092
+    },
+    {
+      "path": "evidence/2026-10-23/train_peg4_pinned/console.txt",
+      "bytes": 8317
+    },
+    {
+      "path": "evidence/2026-10-23/train_peg4_pinned/gpu.csv",
+      "bytes": 2346
+    },
+    {
+      "path": "evidence/2026-10-23/train_peg4_pinned/process_gpu.csv",
+      "bytes": 4565
+    },
+    {
+      "path": "evidence/2026-10-23/train_peg4_pinned/result.json",
+      "bytes": 1099
+    },
+    {
+      "path": "scripts/factory_probe.py",
+      "bytes": 3782
+    },
+    {
+      "path": "scripts/gpu_probe.py",
+      "bytes": 1863
+    },
+    {
+      "path": "scripts/inspect_checkpoint.py",
+      "bytes": 2644
+    },
+    {
+      "path": "scripts/inspect_events.py",
+      "bytes": 1019
+    },
+    {
+      "path": "scripts/python_entry.py",
+      "bytes": 1373
+    },
+    {
+      "path": "scripts/run_logged.py",
+      "bytes": 3950
+    },
+    {
+      "path": "scripts/run_sim.sh",
+      "bytes": 775
+    }
+  ],
+  "credential_pattern_files": [],
+  "checkpoint_extensions": [],
+  "scan_scope": "Tracked contents changed in initial G0/G1 commit; common token/private-key/credential-in-URL signatures, no secret values emitted"
+}

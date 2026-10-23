@@ -2,9 +2,21 @@
 Reproduction and evaluation of contact-rich robotic assembly tasks using NVIDIA Isaac Lab, Franka, and PPO.
 
 
-## Isaac Factory — G0/G1（2026-10-23）
+## D001 审阅跟进（2026-10-23）
 
-G0/G1实机验证已完成，当前停止等待审阅；没有启动正式长训练、没有修改官方PPO或成功条件。本地提交后按用户决定暂不推送，GitHub认证单独处理。
+R1–R4已完成；建议后续使用64环境、seed0全新训练（GO），当前停止等待审阅，未启动200 epochs。原G0/G1提交`a77d215b1244b120605eac5c0af59bf0f32c20c5`已通过既有SSH推送并独立核验，D001增量接续提交，保留全部历史。
+
+- 16/32/64环境均完成3 epochs及checkpoint加载后额外1 epoch；PPO总FPS约67/125/227，全卡10Hz采样峰值约5669/5679/5725MiB。
+- 独立成功指标15项CPU测试通过；两个seed共8个完整episode验证加载/自动reset链路，smoke checkpoint的ever/terminal均0/8，不代表正式性能。
+- 全部损失和实际应用的梯度有限；各fresh run首次AMP overflow由官方GradScaler跳过，保留原AMP行为。
+- 独立critic Adam、调度变量等缺失，checkpoint可推理和继续优化，不能声称完整可复现续训。
+- 64环境200 epochs外推约2小时（建议排期2–2.5小时）；样本预算为官方默认128环境的一半。
+
+详见[审阅报告](docs/REVIEW_D001.md)、[成功指标](docs/SUCCESS_METRICS.md)、[checkpoint恢复边界](docs/CHECKPOINT_REPRODUCIBILITY.md)及[D001证据](evidence/d001/README.md)。
+
+## Isaac Factory — 原G0/G1记录（2026-10-23）
+
+G0/G1实机验证已完成，没有启动正式长训练、没有修改官方PPO或成功条件。当时按用户决定仅本地提交；推送及后续审阅状态已由上方D001更新。
 
 - 官方Isaac Lab：`v2.1.1` / `90b79bb2d44feb8d833f260f2bf37da3487180ba`。
 - 实机：Ubuntu22.04.5、RTX3070 8GB、Isaac Sim4.5.0；Vulkan + GPU PhysX通过。

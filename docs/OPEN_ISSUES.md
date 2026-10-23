@@ -2,33 +2,15 @@
 
 日期：2026-10-23（Asia/Seoul）。GPU仿真、Factory初始化与有限PPO已通过；当前停止G0/G1。
 
-## 独立非阻塞问题：GitHub推送
+## D001当前状态
 
-用户已选择继续全部G0/G1工作并本地提交，将认证单独处理。没有请求、读取或输出认证令牌。
+- **推送已解决**：原提交a77d215通过既有SSH写入并独立ls-remote核验；首次push返回Broken pipe但服务端已接受。保留HTTPS fetch地址，origin push URL改为SSH，没有请求/读取令牌或修改SSH配置。原始HTTPS无credential helper，历史失败见[git_access.txt](../evidence/2026-10-23/git_access.txt)，本轮见[r1_push.json](../evidence/d001/r1_push.json)。
+- **容量短测已扩展**：16/32/64各3epochs+加载后1epoch，10Hz NVML记录，未OOM，最小空闲均超过2GiB。128及长期内存增长仍未验证。
+- **损失/梯度证据已补齐**：逐次观察actor和central critic。全部损失及实际应用梯度有限；fresh首次AMP overflow被skip，未改AMP。旧0-tag TensorBoard的历史事实保留，不再依赖它证明本轮loss。
+- **指标独立验证已完成**：15项CPU测试；两个seed共8完整episode，ever/terminal均0/8。官方缓存未清零问题保留，独立评估不以该缓存为真值。
+- **仍不支持完整可复现续训**：critic Adam、last_lr、RNG、环境与运行时RNN等缺失。正式首轮必须fresh seed0，见[状态表](CHECKPOINT_REPRODUCIBILITY.md)。
 
-- 初始HTTPS公开clone/read成功；最终一次HTTPS读取发生TLS握手中断，存在瞬时网络波动。
-- HTTPS origin的`git push --dry-run origin main`仍报`could not read Username for https://github.com`，没有credential.helper，gh不在PATH。当前HTTPS写入路径缺少认证。
-- 早期SSH握手失败，但最终复查`ssh -T git@github.com`已通过既有配置`ssh.github.com:443`认证为dreamerToTOE。GitHub不提供shell所以该命令exit1伴随成功消息是预期行为。
-- 使用现有SSH的一次性`git push --dry-run git@github.com:dreamerToTOE/isaac-factory-repro.git main`成功（exit0）。没有实际推送、没有改origin或SSH配置。故当前可用SSH，无需为此任务请求令牌；原HTTPS认证缺失才是origin路径的实际问题。
-- 认证诊断及瞬时失败均见[git_access.txt](../evidence/2026-10-23/git_access.txt)。未读取或输出密钥、令牌，未绕过限制。
-
-### 使用现有SSH完成推送的确切步骤（本次未执行）
-
-用户完成审阅后可执行；一次性SSH地址保留origin原HTTPS配置：
-
-```bash
-cd /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro
-ssh -o BatchMode=yes -T git@github.com
-git fetch git@github.com:dreamerToTOE/isaac-factory-repro.git main
-git merge --ff-only FETCH_HEAD
-git log -1 --format='%H %s'
-git push git@github.com:dreamerToTOE/isaac-factory-repro.git main
-git ls-remote git@github.com:dreamerToTOE/isaac-factory-repro.git refs/heads/main
-```
-
-若网络再次关闭SSH连接，修复网络后重试即可；现有SSH认证已在本次最终检查通过。若remote已有新提交导致ff-only失败，应先检查差异并正常合并，保留历史，不强推。最后远程SHA应与本地`git rev-parse HEAD`一致。
-
-如果选择继续使用HTTPS而不使用已验证SSH，可以安装gh后按[官方浏览器登录说明](https://cli.github.com/manual/gh_auth_login)执行`gh auth login --hostname github.com --git-protocol https --web`，再执行[`gh auth setup-git`](https://cli.github.com/manual/gh_auth_setup-git)和`git push origin main`。本次未安装gh或变更凭证。
+当前建议GO（64环境fresh run）；没有GPU权限或Git写入阻塞。未启动200epochs，长期收敛/显存及统计性能仍是下一阶段验证内容。详细边界见[REVIEW_D001](REVIEW_D001.md)。
 
 ## 已解决：保留失败证据
 
@@ -46,11 +28,11 @@ git ls-remote git@github.com:dreamerToTOE/isaac-factory-repro.git refs/heads/mai
 ## 仍存在的验证边界
 
 - 有意最小安装未包含pin-pink/dex-retargeting/moviepy，pip check声明检查不完整；Factory headless无视频路径已实测。
-- GPU显存为约1Hz采样峰值；16环境仅1epoch，未验证长时增长或大规模容量。桌面仍占用显存，初始空闲随时间变化。
-- 16环境及恢复TensorBoard scalar tags为0，事件检查返回非零（无数据）；4环境3epoch有50项有限标量，所有最终checkpoint tensor有限。不能把无数据当loss检查通过。
+- 原G0/G1显存为约1Hz、16环境1epoch；D001已补10Hz及16/32/64短测，仍未验证长时增长或128环境容量。桌面占用随时间变化。
+- 原G0/G1的16环境及恢复TensorBoard scalar tags为0（无数据）；D001用优化调用观察补齐loss/gradient，旧日志没有被改写为通过。
 - checkpoint加载/继续更新通过，actor Adam状态递增；独立central-value Adam未被RL-Games1.6.1原样checkpoint保存，RNG/物理/RNN rollout逐位续接也未验证。后续精确续训应单列工程协议，当前不改基线。
 - 源码`success_times`缓存、Nut动作切片、无上限IK重试、timeout双标记等详见[SOURCE_AUDIT](SOURCE_AUDIT.md)。保留上游行为，后续修补必须独立标记。
 - Gear/Nut只做单环境reset+32步，不代表其完整episode或PPO验证；本阶段训练仅PegInsert。
-- 未进行200epoch正式训练、成功率评价、收敛或多seed实验。缺少长期结果是本阶段边界，不是伪造“已复现成功”的理由。
+- 未进行200epoch正式训练、收敛或统计可靠的多seed性能实验。D001的8episode评估只验证工具，不能当作性能结论。
 
 已完成的最小测试没有剩余GPU权限阻塞。后续训练配置见[EXPERIMENT_PROTOCOL](EXPERIMENT_PROTOCOL.md)，等待审阅后再执行。

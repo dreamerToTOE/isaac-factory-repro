@@ -1,0 +1,131 @@
+{
+  "scope": "CPU strict restore and controlled save/restore tests; no GPU or policy evaluation",
+  "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g01_peg4_pinned/nn/last_Factory_ep_3_rew__35.64205_.pth",
+  "sha256": "6dd7f429bef5aede4c9d55fa1da54858f47569b182a044c5b634fb94952de442",
+  "checkpoint_top_level_keys": [
+    "assymetric_vf_nets",
+    "central_val_stats",
+    "env_state",
+    "epoch",
+    "frame",
+    "last_mean_rewards",
+    "model",
+    "optimizer",
+    "scaler"
+  ],
+  "epoch": 3,
+  "frame": 1536,
+  "model_state_tensor_count": 28,
+  "central_critic_state_tensor_count": 24,
+  "actor_optimizer_state_count": 22,
+  "actor_optimizer_saved_lr": [
+    0.0003375
+  ],
+  "actor_last_lr_after_restore": 0.0001,
+  "central_critic_optimizer_state_count_after_restore": 0,
+  "central_critic_epoch_frame_after_restore": [
+    0,
+    0
+  ],
+  "central_critic_scheduler_class": "IdentityScheduler",
+  "scaler": {
+    "scale": 32768.0,
+    "growth_factor": 2.0,
+    "backoff_factor": 0.5,
+    "growth_interval": 2000,
+    "_growth_tracker": 11
+  },
+  "env_state": null,
+  "central_val_stats": {},
+  "normalization_buffers": {
+    "model": {
+      "value_mean_std.running_mean": {
+        "shape": [
+          1
+        ],
+        "finite": true,
+        "value": 0.0
+      },
+      "value_mean_std.running_var": {
+        "shape": [
+          1
+        ],
+        "finite": true,
+        "value": 1.0
+      },
+      "value_mean_std.count": {
+        "shape": [],
+        "finite": true,
+        "value": 1.0
+      },
+      "running_mean_std.running_mean": {
+        "shape": [
+          19
+        ],
+        "finite": true
+      },
+      "running_mean_std.running_var": {
+        "shape": [
+          19
+        ],
+        "finite": true
+      },
+      "running_mean_std.count": {
+        "shape": [],
+        "finite": true,
+        "value": 1537.0
+      }
+    },
+    "assymetric_vf_nets": {
+      "model.value_mean_std.running_mean": {
+        "shape": [
+          1
+        ],
+        "finite": true,
+        "value": 4.003977537543077
+      },
+      "model.value_mean_std.running_var": {
+        "shape": [
+          1
+        ],
+        "finite": true,
+        "value": 6.618388340413316
+      },
+      "model.value_mean_std.count": {
+        "shape": [],
+        "finite": true,
+        "value": 3073.0
+      },
+      "model.running_mean_std.running_mean": {
+        "shape": [
+          43
+        ],
+        "finite": true
+      },
+      "model.running_mean_std.running_var": {
+        "shape": [
+          43
+        ],
+        "finite": true
+      },
+      "model.running_mean_std.count": {
+        "shape": [],
+        "finite": true,
+        "value": 6145.0
+      }
+    }
+  },
+  "checks": {
+    "strict_official_actor_model_restore_equal": true,
+    "strict_official_central_critic_model_restore_equal": true,
+    "actor_optimizer_restore_equal": true,
+    "amp_scaler_restore_equal": true,
+    "epoch_frame_restore_equal": true,
+    "fresh_critic_optimizer_empty_after_real_restore": true,
+    "controlled_critic_optimizer_omitted_by_actual_save": true,
+    "controlled_critic_optimizer_still_empty_after_restore": true,
+    "controlled_last_lr_omitted_by_actual_save": true,
+    "controlled_last_lr_remains_config_after_restore": true
+  },
+  "all_checks_passed": true
+}

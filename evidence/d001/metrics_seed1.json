@@ -1,0 +1,115 @@
+{
+  "aggregate": {
+    "episodes_completed": 4,
+    "episodes_requested": 4,
+    "ever_success_count": 0,
+    "ever_success_rate": 0.0,
+    "first_success_count": 0,
+    "first_success_rate": 0.0,
+    "mean_first_success_step": null,
+    "terminal_success_count": 0,
+    "terminal_success_rate": 0.0,
+    "transient_only_count": 0
+  },
+  "auto_reset_order_verified": true,
+  "capture_calls": 149,
+  "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g01_peg4_pinned/nn/last_Factory_ep_3_rew__35.64205_.pth",
+  "checkpoint_sha256": "6dd7f429bef5aede4c9d55fa1da54858f47569b182a044c5b634fb94952de442",
+  "deterministic": true,
+  "elapsed_seconds": 31.92480644399984,
+  "episodes": [
+    {
+      "env_id": 0,
+      "episode_id": 0,
+      "ever_success": false,
+      "first_success_step": null,
+      "first_success_time_seconds": null,
+      "seed": 1,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": false
+    },
+    {
+      "env_id": 1,
+      "episode_id": 0,
+      "ever_success": false,
+      "first_success_step": null,
+      "first_success_time_seconds": null,
+      "seed": 1,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": false
+    },
+    {
+      "env_id": 2,
+      "episode_id": 0,
+      "ever_success": false,
+      "first_success_step": null,
+      "first_success_time_seconds": null,
+      "seed": 1,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": false
+    },
+    {
+      "env_id": 3,
+      "episode_id": 0,
+      "ever_success": false,
+      "first_success_step": null,
+      "first_success_time_seconds": null,
+      "seed": 1,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": false
+    }
+  ],
+  "episodes_completed": 4,
+  "episodes_per_env_requested": 1,
+  "max_steps": 160,
+  "num_envs": 4,
+  "official_predicate_source_sha256": "4c7080dc798a2ecb88aa4ef7e8e14ff9d7eb3af8736691a6f55adc3e91793024",
+  "official_rotation_check": false,
+  "official_success_capture": "pre_reset_factory_get_curr_successes",
+  "official_success_threshold": 0.04,
+  "policy_observation_shape": [
+    4,
+    19
+  ],
+  "runtime_packages": {
+    "gymnasium": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/gymnasium/__init__.py",
+      "version": "1.2.0"
+    },
+    "numpy": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/numpy/__init__.py",
+      "version": "1.26.4"
+    },
+    "torch": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/torch/__init__.py",
+      "version": "2.7.0+cu128"
+    }
+  },
+  "seed": 1,
+  "step_dt_seconds": 0.06666666666666667,
+  "steps_executed": 149,
+  "task": "Isaac-Factory-PegInsert-Direct-v0",
+  "terminal_consistency_checks": [
+    {
+      "captured_rate": 0.0,
+      "official_rate": 0.0,
+      "policy_step": 149,
+      "pre_reset_episode_steps": [
+        149,
+        149,
+        149,
+        149
+      ],
+      "returned_episode_steps_after_reset": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

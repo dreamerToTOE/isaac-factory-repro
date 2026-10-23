@@ -1,0 +1,1076 @@
+{
+  "configurations": {
+    "16": {
+      "train": {
+        "result": {
+          "started_utc": "2026-10-23T03:41:51.912805+00:00",
+          "command": [
+            "bash",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/train_audited.py",
+            "--upstream",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py",
+            "--headless",
+            "--device",
+            "cuda:0",
+            "--task",
+            "Isaac-Factory-PegInsert-Direct-v0",
+            "--num_envs",
+            "16",
+            "--seed",
+            "0",
+            "--max_iterations",
+            "3",
+            "agent.params.config.full_experiment_name=d001_peg16",
+            "agent.params.config.save_frequency=1",
+            "agent.params.config.save_best_after=0"
+          ],
+          "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs",
+          "returncode": 0,
+          "stop_reason": null,
+          "duration_seconds": 110.20197382999868,
+          "sample_count": 1102,
+          "requested_interval_seconds": 0.1,
+          "median_actual_interval_seconds": 0.09999997500017344,
+          "max_actual_interval_seconds": 0.10028658900046139,
+          "peak_total_gpu_used_MiB": 5669.25,
+          "min_free_MiB": 2148.375,
+          "peak_test_compute_used_MiB": 4238.67578125,
+          "min_free_mib_guard": 1024,
+          "monitor_errors": [],
+          "measurement_note": "NVML v2 sampled at requested 10 Hz; used excludes driver-reserved memory (like nvidia-smi), and includes desktop and other apps. Free is reported separately; used+free+reserved=total. Compute usage belongs only to the launched process group. Sampling can miss shorter peaks; PyTorch allocator peaks are recorded separately."
+        },
+        "actual_num_envs": 16,
+        "actor_attempts": 48,
+        "critic_attempts": 48,
+        "optimizer_steps": {
+          "actor": 47,
+          "central_value": 48
+        },
+        "amp_skips": [
+          {
+            "attempt": 1,
+            "epoch": 1,
+            "scale_before": 65536.0,
+            "scale_after": 32768.0
+          }
+        ],
+        "all_observed_losses_finite": true,
+        "all_applied_gradients_finite": true,
+        "gradient_groups": [
+          {
+            "role": "central_value",
+            "phase": "optimizer_pre_step_post_clip",
+            "finite": true,
+            "count": 48
+          },
+          {
+            "role": "actor",
+            "phase": "before_unscale_scaled_amp",
+            "finite": false,
+            "count": 1
+          },
+          {
+            "role": "actor",
+            "phase": "after_unscale_before_clip",
+            "finite": false,
+            "count": 1
+          },
+          {
+            "role": "actor",
+            "phase": "before_unscale_scaled_amp",
+            "finite": true,
+            "count": 47
+          },
+          {
+            "role": "actor",
+            "phase": "after_unscale_before_clip",
+            "finite": true,
+            "count": 47
+          },
+          {
+            "role": "actor",
+            "phase": "optimizer_pre_step_post_clip",
+            "finite": true,
+            "count": 47
+          }
+        ],
+        "epochs": [
+          {
+            "epoch": 1,
+            "environment_transitions": 2048,
+            "env_step_seconds": 27.126063346862793,
+            "rollout_seconds": 27.50967311859131,
+            "optimization_seconds": 1.26347017288208,
+            "official_total_seconds": 28.773143529891968,
+            "observed_epoch_seconds": 28.773298991998672,
+            "env_step_fps": 75.49934444272604,
+            "rollout_fps": 74.4465407193785,
+            "total_fps": 71.17748527797684,
+            "cuda_allocator": {
+              "device": 0,
+              "max_memory_allocated_bytes": 517087744,
+              "max_memory_reserved_bytes": 635437056,
+              "memory_allocated_bytes": 446230528,
+              "memory_reserved_bytes": 635437056
+            }
+          },
+          {
+            "epoch": 2,
+            "environment_transitions": 2048,
+            "env_step_seconds": 28.775926113128662,
+            "rollout_seconds": 29.132099390029907,
+            "optimization_seconds": 1.200974702835083,
+            "official_total_seconds": 30.33307433128357,
+            "observed_epoch_seconds": 30.33322302600027,
+            "env_step_fps": 71.17060253590327,
+            "rollout_fps": 70.3004604158704,
+            "total_fps": 67.51706001286607,
+            "cuda_allocator": {
+              "device": 0,
+              "max_memory_allocated_bytes": 590865920,
+              "max_memory_reserved_bytes": 803209216,
+              "memory_allocated_bytes": 497351168,
+              "memory_reserved_bytes": 803209216
+            }
+          },
+          {
+            "epoch": 3,
+            "environment_transitions": 2048,
+            "env_step_seconds": 28.98422145843506,
+            "rollout_seconds": 29.324184894561768,
+            "optimization_seconds": 1.1986286640167236,
+            "official_total_seconds": 30.52281379699707,
+            "observed_epoch_seconds": 30.522961712000324,
+            "env_step_fps": 70.65913441687377,
+            "rollout_fps": 69.83996340780834,
+            "total_fps": 67.09735261044277,
+            "cuda_allocator": {
+              "device": 0,
+              "max_memory_allocated_bytes": 591266304,
+              "max_memory_reserved_bytes": 805306368,
+              "memory_allocated_bytes": 498174464,
+              "memory_reserved_bytes": 805306368
+            }
+          }
+        ],
+        "checkpoint_events": [
+          {
+            "operation": "save",
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg16/nn/last_Factory_ep_2_rew_34.425575",
+            "epoch": 2,
+            "frame": 4096,
+            "success": true
+          },
+          {
+            "operation": "save",
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg16/nn/Factory",
+            "epoch": 2,
+            "frame": 4096,
+            "success": true
+          },
+          {
+            "operation": "save",
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg16/nn/last_Factory_ep_3_rew_34.643364",
+            "epoch": 3,
+            "frame": 6144,
+            "success": true
+          },
+          {
+            "operation": "save",
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg16/nn/Factory",
+            "epoch": 3,
+            "frame": 6144,
+            "success": true
+          },
+          {
+            "operation": "save",
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg16/nn/last_Factory_ep_3_rew__34.643364_",
+            "epoch": 3,
+            "frame": 6144,
+            "success": true
+          }
+        ],
+        "cuda_allocator": {
+          "device": 0,
+          "max_memory_allocated_bytes": 591266304,
+          "max_memory_reserved_bytes": 805306368,
+          "memory_allocated_bytes": 497877504,
+          "memory_reserved_bytes": 805306368
+        },
+        "instrumentation_errors": [],
+        "warning_error_lines": [
+          "2026-10-23 03:41:53 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.",
+          "2026-10-23 03:41:53 [2ms] [Warning] [omni.ext.plugin] [ext: rendering_modes] Extensions config 'extension.toml' doesn't exist '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/apps/rendering_modes' or '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/apps/rendering_modes/config'",
+          "2026-10-23 03:41:54 [399ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX",
+          "2026-10-23 03:41:54 [665ms] [Warning] [omni.datastore] OmniHub is inaccessible",
+          "2026-10-23 03:41:54 [769ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.",
+          "2026-10-23 03:41:59 [5,976ms] [Warning] [isaaclab.envs.direct_rl_env] The render interval (1) is smaller than the decimation (8). Multiple render calls will happen for each environment step.If this is not intended, set the render interval to be equal to the decimation.",
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/a2c_common.py:254: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.",
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/a2c_continuous.py:106: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead."
+        ],
+        "exit_error": null,
+        "read_only_audit_overhead_included": true,
+        "passed": true,
+        "epochs_2_3_mean_seconds": 30.42794406414032,
+        "epochs_2_3_aggregate_total_fps": 67.30655201951654,
+        "extrapolated_200_epoch_hours": 1.6904413368966844,
+        "transitions_at_200_epochs": 409600
+      },
+      "resume": {
+        "result": {
+          "started_utc": "2026-10-23T03:54:52.630543+00:00",
+          "command": [
+            "bash",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/train_audited.py",
+            "--upstream",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py",
+            "--headless",
+            "--device",
+            "cuda:0",
+            "--task",
+            "Isaac-Factory-PegInsert-Direct-v0",
+            "--num_envs",
+            "16",
+            "--seed",
+            "0",
+            "--max_iterations",
+            "4",
+            "--checkpoint",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg16/nn/last_Factory_ep_3_rew__34.643364_.pth",
+            "agent.params.config.full_experiment_name=d001_peg16_resume",
+            "agent.params.config.save_frequency=1",
+            "agent.params.config.save_best_after=0"
+          ],
+          "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs",
+          "returncode": 0,
+          "stop_reason": null,
+          "duration_seconds": 46.20186832299987,
+          "sample_count": 462,
+          "requested_interval_seconds": 0.1,
+          "median_actual_interval_seconds": 0.09999985700051184,
+          "max_actual_interval_seconds": 0.10301092400004563,
+          "peak_total_gpu_used_MiB": 5542.5,
+          "min_free_MiB": 2275.125,
+          "peak_test_compute_used_MiB": 4162.67578125,
+          "min_free_mib_guard": 1024,
+          "monitor_errors": [],
+          "measurement_note": "NVML v2 sampled at requested 10 Hz; used excludes driver-reserved memory (like nvidia-smi), and includes desktop and other apps. Free is reported separately; used+free+reserved=total. Compute usage belongs only to the launched process group. Sampling can miss shorter peaks; PyTorch allocator peaks are recorded separately."
+        },
+        "actual_num_envs": 16,
+        "actor_attempts": 16,
+        "critic_attempts": 16,
+        "optimizer_steps": {
+          "actor": 16,
+          "central_value": 16
+        },
+        "amp_skips": [],
+        "all_observed_losses_finite": true,
+        "all_applied_gradients_finite": true,
+        "gradient_groups": [
+          {
+            "role": "central_value",
+            "phase": "optimizer_pre_step_post_clip",
+            "finite": true,
+            "count": 16
+          },
+          {
+            "role": "actor",
+            "phase": "before_unscale_scaled_amp",
+            "finite": true,
+            "count": 16
+          },
+          {
+            "role": "actor",
+            "phase": "after_unscale_before_clip",
+            "finite": true,
+            "count": 16
+          },
+          {
+            "role": "actor",
+            "phase": "optimizer_pre_step_post_clip",
+            "finite": true,
+            "count": 16
+          }
+        ],
+        "epochs": [
+          {
+            "epoch": 4,
+            "environment_transitions": 2048,
+            "env_step_seconds": 27.6082706451416,
+            "rollout_seconds": 27.993769645690918,
+            "optimization_seconds": 1.2783794403076172,
+            "official_total_seconds": 29.272149324417114,
+            "observed_epoch_seconds": 29.272317064000163,
+            "env_step_fps": 74.18066949298033,
+            "rollout_fps": 73.15913597635996,
+            "total_fps": 69.96411426104875,
+            "cuda_allocator": {
+              "device": 0,
+              "max_memory_allocated_bytes": 622885376,
+              "max_memory_reserved_bytes": 725614592,
+              "memory_allocated_bytes": 552860160,
+              "memory_reserved_bytes": 725614592
+            }
+          }
+        ],
+        "checkpoint_events": [
+          {
+            "operation": "restore",
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg16/nn/last_Factory_ep_3_rew__34.643364_.pth",
+            "epoch": 3,
+            "frame": 6144,
+            "success": true
+          },
+          {
+            "operation": "save",
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg16_resume/nn/last_Factory_ep_4_rew_-inf",
+            "epoch": 4,
+            "frame": 8192,
+            "success": true
+          }
+        ],
+        "cuda_allocator": {
+          "device": 0,
+          "max_memory_allocated_bytes": 622885376,
+          "max_memory_reserved_bytes": 725614592,
+          "memory_allocated_bytes": 552598016,
+          "memory_reserved_bytes": 725614592
+        },
+        "instrumentation_errors": [],
+        "warning_error_lines": [
+          "2026-10-23 03:54:54 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.",
+          "2026-10-23 03:54:54 [2ms] [Warning] [omni.ext.plugin] [ext: rendering_modes] Extensions config 'extension.toml' doesn't exist '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/apps/rendering_modes' or '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/apps/rendering_modes/config'",
+          "2026-10-23 03:54:55 [396ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX",
+          "2026-10-23 03:54:55 [661ms] [Warning] [omni.datastore] OmniHub is inaccessible",
+          "2026-10-23 03:54:55 [776ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.",
+          "2026-10-23 03:54:59 [4,853ms] [Warning] [isaaclab.envs.direct_rl_env] The render interval (1) is smaller than the decimation (8). Multiple render calls will happen for each environment step.If this is not intended, set the render interval to be equal to the decimation.",
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/a2c_common.py:254: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.",
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/torch_ext.py:62: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.",
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/a2c_continuous.py:106: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.",
+          "WARNING: Max epochs reached before any env terminated at least once"
+        ],
+        "exit_error": null,
+        "read_only_audit_overhead_included": true,
+        "passed": true
+      }
+    },
+    "32": {
+      "train": {
+        "result": {
+          "started_utc": "2026-10-23T03:45:24.116555+00:00",
+          "command": [
+            "bash",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/train_audited.py",
+            "--upstream",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py",
+            "--headless",
+            "--device",
+            "cuda:0",
+            "--task",
+            "Isaac-Factory-PegInsert-Direct-v0",
+            "--num_envs",
+            "32",
+            "--seed",
+            "0",
+            "--max_iterations",
+            "3",
+            "agent.params.config.full_experiment_name=d001_peg32",
+            "agent.params.config.save_frequency=1",
+            "agent.params.config.save_best_after=0"
+          ],
+          "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs",
+          "returncode": 0,
+          "stop_reason": null,
+          "duration_seconds": 114.60223593499904,
+          "sample_count": 1146,
+          "requested_interval_seconds": 0.1,
+          "median_actual_interval_seconds": 0.10000004800167517,
+          "max_actual_interval_seconds": 0.1000669069999276,
+          "peak_total_gpu_used_MiB": 5679.25,
+          "min_free_MiB": 2138.375,
+          "peak_test_compute_used_MiB": 4294.67578125,
+          "min_free_mib_guard": 1024,
+          "monitor_errors": [],
+          "measurement_note": "NVML v2 sampled at requested 10 Hz; used excludes driver-reserved memory (like nvidia-smi), and includes desktop and other apps. Free is reported separately; used+free+reserved=total. Compute usage belongs only to the launched process group. Sampling can miss shorter peaks; PyTorch allocator peaks are recorded separately."
+        },
+        "actual_num_envs": 32,
+        "actor_attempts": 96,
+        "critic_attempts": 96,
+        "optimizer_steps": {
+          "actor": 95,
+          "central_value": 96
+        },
+        "amp_skips": [
+          {
+            "attempt": 1,
+            "epoch": 1,
+            "scale_before": 65536.0,
+            "scale_after": 32768.0
+          }
+        ],
+        "all_observed_losses_finite": true,
+        "all_applied_gradients_finite": true,
+        "gradient_groups": [
+          {
+            "role": "central_value",
+            "phase": "optimizer_pre_step_post_clip",
+            "finite": true,
+            "count": 96
+          },
+          {
+            "role": "actor",
+            "phase": "before_unscale_scaled_amp",
+            "finite": false,
+            "count": 1
+          },
+          {
+            "role": "actor",
+            "phase": "after_unscale_before_clip",
+            "finite": false,
+            "count": 1
+          },
+          {
+            "role": "actor",
+            "phase": "before_unscale_scaled_amp",
+            "finite": true,
+            "count": 95
+          },
+          {
+            "role": "actor",
+            "phase": "after_unscale_before_clip",
+            "finite": true,
+            "count": 95
+          },
+          {
+            "role": "actor",
+            "phase": "optimizer_pre_step_post_clip",
+            "finite": true,
+            "count": 95
+          }
+        ],
+        "epochs": [
+          {
+            "epoch": 1,
+            "environment_transitions": 4096,
+            "env_step_seconds": 28.13532304763794,
+            "rollout_seconds": 28.53018093109131,
+            "optimization_seconds": 2.417597770690918,
+            "official_total_seconds": 30.947779178619385,
+            "observed_epoch_seconds": 30.94793402799951,
+            "env_step_fps": 145.58212084733373,
+            "rollout_fps": 143.56726337954296,
+            "total_fps": 132.3519848180178,
+            "cuda_allocator": {
+              "device": 0,
+              "max_memory_allocated_bytes": 518810112,
+              "max_memory_reserved_bytes": 679477248,
+              "memory_allocated_bytes": 448827392,
+              "memory_reserved_bytes": 679477248
+            }
+          },
+          {
+            "epoch": 2,
+            "environment_transitions": 4096,
+            "env_step_seconds": 30.177146911621094,
+            "rollout_seconds": 30.534052848815918,
+            "optimization_seconds": 2.412259578704834,
+            "official_total_seconds": 32.94631290435791,
+            "observed_epoch_seconds": 32.946459674001744,
+            "env_step_fps": 135.73185072783164,
+            "rollout_fps": 134.14531049253878,
+            "total_fps": 124.32347170047697,
+            "cuda_allocator": {
+              "device": 0,
+              "max_memory_allocated_bytes": 593571328,
+              "max_memory_reserved_bytes": 796917760,
+              "memory_allocated_bytes": 499980800,
+              "memory_reserved_bytes": 796917760
+            }
+          },
+          {
+            "epoch": 3,
+            "environment_transitions": 4096,
+            "env_step_seconds": 29.784209728240967,
+            "rollout_seconds": 30.131967067718506,
+            "optimization_seconds": 2.405538558959961,
+            "official_total_seconds": 32.537505865097046,
+            "observed_epoch_seconds": 32.53765639000085,
+            "env_step_fps": 137.52253416736556,
+            "rollout_fps": 135.93536694085256,
+            "total_fps": 125.88549401980364,
+            "cuda_allocator": {
+              "device": 0,
+              "max_memory_allocated_bytes": 593571328,
+              "max_memory_reserved_bytes": 796917760,
+              "memory_allocated_bytes": 499985408,
+              "memory_reserved_bytes": 796917760
+            }
+          }
+        ],
+        "checkpoint_events": [
+          {
+            "operation": "save",
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg32/nn/last_Factory_ep_2_rew_35.205788",
+            "epoch": 2,
+            "frame": 8192,
+            "success": true
+          },
+          {
+            "operation": "save",
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg32/nn/Factory",
+            "epoch": 2,
+            "frame": 8192,
+            "success": true
+          },
+          {
+            "operation": "save",
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg32/nn/last_Factory_ep_3_rew_35.98186",
+            "epoch": 3,
+            "frame": 12288,
+            "success": true
+          },
+          {
+            "operation": "save",
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg32/nn/Factory",
+            "epoch": 3,
+            "frame": 12288,
+            "success": true
+          },
+          {
+            "operation": "save",
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg32/nn/last_Factory_ep_3_rew__35.98186_",
+            "epoch": 3,
+            "frame": 12288,
+            "success": true
+          }
+        ],
+        "cuda_allocator": {
+          "device": 0,
+          "max_memory_allocated_bytes": 593571328,
+          "max_memory_reserved_bytes": 796917760,
+          "memory_allocated_bytes": 499393536,
+          "memory_reserved_bytes": 796917760
+        },
+        "instrumentation_errors": [],
+        "warning_error_lines": [
+          "2026-10-23 03:45:26 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.",
+          "2026-10-23 03:45:26 [2ms] [Warning] [omni.ext.plugin] [ext: rendering_modes] Extensions config 'extension.toml' doesn't exist '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/apps/rendering_modes' or '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/apps/rendering_modes/config'",
+          "2026-10-23 03:45:26 [408ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX",
+          "2026-10-23 03:45:26 [675ms] [Warning] [omni.datastore] OmniHub is inaccessible",
+          "2026-10-23 03:45:26 [784ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.",
+          "2026-10-23 03:45:31 [4,966ms] [Warning] [isaaclab.envs.direct_rl_env] The render interval (1) is smaller than the decimation (8). Multiple render calls will happen for each environment step.If this is not intended, set the render interval to be equal to the decimation.",
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/a2c_common.py:254: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.",
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/a2c_continuous.py:106: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead."
+        ],
+        "exit_error": null,
+        "read_only_audit_overhead_included": true,
+        "passed": true,
+        "epochs_2_3_mean_seconds": 32.74190938472748,
+        "epochs_2_3_aggregate_total_fps": 125.09960710814826,
+        "extrapolated_200_epoch_hours": 1.8189949658181932,
+        "transitions_at_200_epochs": 819200
+      },
+      "resume": {
+        "result": {
+          "started_utc": "2026-10-23T03:57:47.262227+00:00",
+          "command": [
+            "bash",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/train_audited.py",
+            "--upstream",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py",
+            "--headless",
+            "--device",
+            "cuda:0",
+            "--task",
+            "Isaac-Factory-PegInsert-Direct-v0",
+            "--num_envs",
+            "32",
+            "--seed",
+            "0",
+            "--max_iterations",
+            "4",
+            "--checkpoint",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg32/nn/last_Factory_ep_3_rew__35.98186_.pth",
+            "agent.params.config.full_experiment_name=d001_peg32_resume",
+            "agent.params.config.save_frequency=1",
+            "agent.params.config.save_best_after=0"
+          ],
+          "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs",
+          "returncode": 0,
+          "stop_reason": null,
+          "duration_seconds": 53.10178462899967,
+          "sample_count": 531,
+          "requested_interval_seconds": 0.1,
+          "median_actual_interval_seconds": 0.0999998785000571,
+          "max_actual_interval_seconds": 0.10011531500094861,
+          "peak_total_gpu_used_MiB": 5620.375,
+          "min_free_MiB": 2197.25,
+          "peak_test_compute_used_MiB": 4238.67578125,
+          "min_free_mib_guard": 1024,
+          "monitor_errors": [],
+          "measurement_note": "NVML v2 sampled at requested 10 Hz; used excludes driver-reserved memory (like nvidia-smi), and includes desktop and other apps. Free is reported separately; used+free+reserved=total. Compute usage belongs only to the launched process group. Sampling can miss shorter peaks; PyTorch allocator peaks are recorded separately."
+        },
+        "actual_num_envs": 32,
+        "actor_attempts": 32,
+        "critic_attempts": 32,
+        "optimizer_steps": {
+          "actor": 32,
+          "central_value": 32
+        },
+        "amp_skips": [],
+        "all_observed_losses_finite": true,
+        "all_applied_gradients_finite": true,
+        "gradient_groups": [
+          {
+            "role": "central_value",
+            "phase": "optimizer_pre_step_post_clip",
+            "finite": true,
+            "count": 32
+          },
+          {
+            "role": "actor",
+            "phase": "before_unscale_scaled_amp",
+            "finite": true,
+            "count": 32
+          },
+          {
+            "role": "actor",
+            "phase": "after_unscale_before_clip",
+            "finite": true,
+            "count": 32
+          },
+          {
+            "role": "actor",
+            "phase": "optimizer_pre_step_post_clip",
+            "finite": true,
+            "count": 32
+          }
+        ],
+        "epochs": [
+          {
+            "epoch": 4,
+            "environment_transitions": 4096,
+            "env_step_seconds": 28.046178579330444,
+            "rollout_seconds": 28.42725706100464,
+            "optimization_seconds": 2.394587993621826,
+            "official_total_seconds": 30.821845293045044,
+            "observed_epoch_seconds": 30.82200820199978,
+            "env_step_fps": 146.04485200770569,
+            "rollout_fps": 144.08706373639993,
+            "total_fps": 132.89275710316616,
+            "cuda_allocator": {
+              "device": 0,
+              "max_memory_allocated_bytes": 624730624,
+              "max_memory_reserved_bytes": 738197504,
+              "memory_allocated_bytes": 555457024,
+              "memory_reserved_bytes": 738197504
+            }
+          }
+        ],
+        "checkpoint_events": [
+          {
+            "operation": "restore",
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg32/nn/last_Factory_ep_3_rew__35.98186_.pth",
+            "epoch": 3,
+            "frame": 12288,
+            "success": true
+          },
+          {
+            "operation": "save",
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg32_resume/nn/last_Factory_ep_4_rew_-inf",
+            "epoch": 4,
+            "frame": 16384,
+            "success": true
+          }
+        ],
+        "cuda_allocator": {
+          "device": 0,
+          "max_memory_allocated_bytes": 624730624,
+          "max_memory_reserved_bytes": 738197504,
+          "memory_allocated_bytes": 554932736,
+          "memory_reserved_bytes": 738197504
+        },
+        "instrumentation_errors": [],
+        "warning_error_lines": [
+          "2026-10-23 03:57:49 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.",
+          "2026-10-23 03:57:49 [2ms] [Warning] [omni.ext.plugin] [ext: rendering_modes] Extensions config 'extension.toml' doesn't exist '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/apps/rendering_modes' or '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/apps/rendering_modes/config'",
+          "2026-10-23 03:57:49 [391ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX",
+          "2026-10-23 03:57:49 [653ms] [Warning] [omni.datastore] OmniHub is inaccessible",
+          "2026-10-23 03:57:50 [765ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.",
+          "2026-10-23 03:57:53 [4,640ms] [Warning] [isaaclab.envs.direct_rl_env] The render interval (1) is smaller than the decimation (8). Multiple render calls will happen for each environment step.If this is not intended, set the render interval to be equal to the decimation.",
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/a2c_common.py:254: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.",
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/torch_ext.py:62: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.",
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/a2c_continuous.py:106: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.",
+          "WARNING: Max epochs reached before any env terminated at least once"
+        ],
+        "exit_error": null,
+        "read_only_audit_overhead_included": true,
+        "passed": true
+      }
+    },
+    "64": {
+      "train": {
+        "result": {
+          "started_utc": "2026-10-23T03:48:31.240118+00:00",
+          "command": [
+            "bash",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/train_audited.py",
+            "--upstream",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py",
+            "--headless",
+            "--device",
+            "cuda:0",
+            "--task",
+            "Isaac-Factory-PegInsert-Direct-v0",
+            "--num_envs",
+            "64",
+            "--seed",
+            "0",
+            "--max_iterations",
+            "3",
+            "agent.params.config.full_experiment_name=d001_peg64",
+            "agent.params.config.save_frequency=1",
+            "agent.params.config.save_best_after=0"
+          ],
+          "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs",
+          "returncode": 0,
+          "stop_reason": null,
+          "duration_seconds": 123.40191137799957,
+          "sample_count": 1234,
+          "requested_interval_seconds": 0.1,
+          "median_actual_interval_seconds": 0.09999999799947545,
+          "max_actual_interval_seconds": 0.10012046500014549,
+          "peak_total_gpu_used_MiB": 5724.9375,
+          "min_free_MiB": 2092.6875,
+          "peak_test_compute_used_MiB": 4306.67578125,
+          "min_free_mib_guard": 1024,
+          "monitor_errors": [],
+          "measurement_note": "NVML v2 sampled at requested 10 Hz; used excludes driver-reserved memory (like nvidia-smi), and includes desktop and other apps. Free is reported separately; used+free+reserved=total. Compute usage belongs only to the launched process group. Sampling can miss shorter peaks; PyTorch allocator peaks are recorded separately."
+        },
+        "actual_num_envs": 64,
+        "actor_attempts": 192,
+        "critic_attempts": 192,
+        "optimizer_steps": {
+          "actor": 191,
+          "central_value": 192
+        },
+        "amp_skips": [
+          {
+            "attempt": 1,
+            "epoch": 1,
+            "scale_before": 65536.0,
+            "scale_after": 32768.0
+          }
+        ],
+        "all_observed_losses_finite": true,
+        "all_applied_gradients_finite": true,
+        "gradient_groups": [
+          {
+            "role": "central_value",
+            "phase": "optimizer_pre_step_post_clip",
+            "finite": true,
+            "count": 192
+          },
+          {
+            "role": "actor",
+            "phase": "before_unscale_scaled_amp",
+            "finite": false,
+            "count": 1
+          },
+          {
+            "role": "actor",
+            "phase": "after_unscale_before_clip",
+            "finite": false,
+            "count": 1
+          },
+          {
+            "role": "actor",
+            "phase": "before_unscale_scaled_amp",
+            "finite": true,
+            "count": 191
+          },
+          {
+            "role": "actor",
+            "phase": "after_unscale_before_clip",
+            "finite": true,
+            "count": 191
+          },
+          {
+            "role": "actor",
+            "phase": "optimizer_pre_step_post_clip",
+            "finite": true,
+            "count": 191
+          }
+        ],
+        "epochs": [
+          {
+            "epoch": 1,
+            "environment_transitions": 8192,
+            "env_step_seconds": 29.01157283782959,
+            "rollout_seconds": 29.399893760681152,
+            "optimization_seconds": 4.607460260391235,
+            "official_total_seconds": 34.00735402107239,
+            "observed_epoch_seconds": 34.007513509001,
+            "env_step_fps": 282.370075065977,
+            "rollout_fps": 278.6404626725496,
+            "total_fps": 240.88907343170223,
+            "cuda_allocator": {
+              "device": 0,
+              "max_memory_allocated_bytes": 524378624,
+              "max_memory_reserved_bytes": 685768704,
+              "memory_allocated_bytes": 454359040,
+              "memory_reserved_bytes": 685768704
+            }
+          },
+          {
+            "epoch": 2,
+            "environment_transitions": 8192,
+            "env_step_seconds": 30.82561182975769,
+            "rollout_seconds": 31.17920470237732,
+            "optimization_seconds": 4.820444822311401,
+            "official_total_seconds": 35.9996497631073,
+            "observed_epoch_seconds": 35.99980189600137,
+            "env_step_fps": 265.7530382606,
+            "rollout_fps": 262.73922244640784,
+            "total_fps": 227.55776942016865,
+            "cuda_allocator": {
+              "device": 0,
+              "max_memory_allocated_bytes": 600736768,
+              "max_memory_reserved_bytes": 807403520,
+              "memory_allocated_bytes": 506978304,
+              "memory_reserved_bytes": 807403520
+            }
+          },
+          {
+            "epoch": 3,
+            "environment_transitions": 8192,
+            "env_step_seconds": 30.870685338974,
+            "rollout_seconds": 31.21939730644226,
+            "optimization_seconds": 4.7989342212677,
+            "official_total_seconds": 36.01833176612854,
+            "observed_epoch_seconds": 36.01848969799903,
+            "env_step_fps": 265.36501895076697,
+            "rollout_fps": 262.4009656429064,
+            "total_fps": 227.4397396634487,
+            "cuda_allocator": {
+              "device": 0,
+              "max_memory_allocated_bytes": 600736768,
+              "max_memory_reserved_bytes": 807403520,
+              "memory_allocated_bytes": 506270720,
+              "memory_reserved_bytes": 807403520
+            }
+          }
+        ],
+        "checkpoint_events": [
+          {
+            "operation": "save",
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg64/nn/last_Factory_ep_2_rew_35.101456",
+            "epoch": 2,
+            "frame": 16384,
+            "success": true
+          },
+          {
+            "operation": "save",
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg64/nn/Factory",
+            "epoch": 2,
+            "frame": 16384,
+            "success": true
+          },
+          {
+            "operation": "save",
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg64/nn/last_Factory_ep_3_rew_36.351517",
+            "epoch": 3,
+            "frame": 24576,
+            "success": true
+          },
+          {
+            "operation": "save",
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg64/nn/Factory",
+            "epoch": 3,
+            "frame": 24576,
+            "success": true
+          },
+          {
+            "operation": "save",
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg64/nn/last_Factory_ep_3_rew__36.351517_",
+            "epoch": 3,
+            "frame": 24576,
+            "success": true
+          }
+        ],
+        "cuda_allocator": {
+          "device": 0,
+          "max_memory_allocated_bytes": 600736768,
+          "max_memory_reserved_bytes": 807403520,
+          "memory_allocated_bytes": 505089024,
+          "memory_reserved_bytes": 807403520
+        },
+        "instrumentation_errors": [],
+        "warning_error_lines": [
+          "2026-10-23 03:48:33 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.",
+          "2026-10-23 03:48:33 [2ms] [Warning] [omni.ext.plugin] [ext: rendering_modes] Extensions config 'extension.toml' doesn't exist '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/apps/rendering_modes' or '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/apps/rendering_modes/config'",
+          "2026-10-23 03:48:33 [402ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX",
+          "2026-10-23 03:48:33 [670ms] [Warning] [omni.datastore] OmniHub is inaccessible",
+          "2026-10-23 03:48:34 [786ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.",
+          "2026-10-23 03:48:38 [5,288ms] [Warning] [isaaclab.envs.direct_rl_env] The render interval (1) is smaller than the decimation (8). Multiple render calls will happen for each environment step.If this is not intended, set the render interval to be equal to the decimation.",
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/a2c_common.py:254: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.",
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/a2c_continuous.py:106: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead."
+        ],
+        "exit_error": null,
+        "read_only_audit_overhead_included": true,
+        "passed": true,
+        "epochs_2_3_mean_seconds": 36.00899076461792,
+        "epochs_2_3_aggregate_total_fps": 227.49873923290787,
+        "extrapolated_200_epoch_hours": 2.0004994869232178,
+        "transitions_at_200_epochs": 1638400
+      },
+      "resume": {
+        "result": {
+          "started_utc": "2026-10-23T03:58:40.856092+00:00",
+          "command": [
+            "bash",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/train_audited.py",
+            "--upstream",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py",
+            "--headless",
+            "--device",
+            "cuda:0",
+            "--task",
+            "Isaac-Factory-PegInsert-Direct-v0",
+            "--num_envs",
+            "64",
+            "--seed",
+            "0",
+            "--max_iterations",
+            "4",
+            "--checkpoint",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg64/nn/last_Factory_ep_3_rew__36.351517_.pth",
+            "agent.params.config.full_experiment_name=d001_peg64_resume",
+            "agent.params.config.save_frequency=1",
+            "agent.params.config.save_best_after=0"
+          ],
+          "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs",
+          "returncode": 0,
+          "stop_reason": null,
+          "duration_seconds": 54.701956707000136,
+          "sample_count": 547,
+          "requested_interval_seconds": 0.1,
+          "median_actual_interval_seconds": 0.0999999490004484,
+          "max_actual_interval_seconds": 0.10072864199901232,
+          "peak_total_gpu_used_MiB": 5627.375,
+          "min_free_MiB": 2190.25,
+          "peak_test_compute_used_MiB": 4246.67578125,
+          "min_free_mib_guard": 1024,
+          "monitor_errors": [],
+          "measurement_note": "NVML v2 sampled at requested 10 Hz; used excludes driver-reserved memory (like nvidia-smi), and includes desktop and other apps. Free is reported separately; used+free+reserved=total. Compute usage belongs only to the launched process group. Sampling can miss shorter peaks; PyTorch allocator peaks are recorded separately."
+        },
+        "actual_num_envs": 64,
+        "actor_attempts": 64,
+        "critic_attempts": 64,
+        "optimizer_steps": {
+          "actor": 64,
+          "central_value": 64
+        },
+        "amp_skips": [],
+        "all_observed_losses_finite": true,
+        "all_applied_gradients_finite": true,
+        "gradient_groups": [
+          {
+            "role": "central_value",
+            "phase": "optimizer_pre_step_post_clip",
+            "finite": true,
+            "count": 64
+          },
+          {
+            "role": "actor",
+            "phase": "before_unscale_scaled_amp",
+            "finite": true,
+            "count": 64
+          },
+          {
+            "role": "actor",
+            "phase": "after_unscale_before_clip",
+            "finite": true,
+            "count": 64
+          },
+          {
+            "role": "actor",
+            "phase": "optimizer_pre_step_post_clip",
+            "finite": true,
+            "count": 64
+          }
+        ],
+        "epochs": [
+          {
+            "epoch": 4,
+            "environment_transitions": 8192,
+            "env_step_seconds": 29.73571515083313,
+            "rollout_seconds": 30.12628936767578,
+            "optimization_seconds": 4.634933233261108,
+            "official_total_seconds": 34.76122283935547,
+            "observed_epoch_seconds": 34.7615024379993,
+            "env_step_fps": 275.49362638317035,
+            "rollout_fps": 271.9219715385747,
+            "total_fps": 235.66489699911529,
+            "cuda_allocator": {
+              "device": 0,
+              "max_memory_allocated_bytes": 630610432,
+              "max_memory_reserved_bytes": 744488960,
+              "memory_allocated_bytes": 561299968,
+              "memory_reserved_bytes": 744488960
+            }
+          }
+        ],
+        "checkpoint_events": [
+          {
+            "operation": "restore",
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg64/nn/last_Factory_ep_3_rew__36.351517_.pth",
+            "epoch": 3,
+            "frame": 24576,
+            "success": true
+          },
+          {
+            "operation": "save",
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg64_resume/nn/last_Factory_ep_4_rew_-inf",
+            "epoch": 4,
+            "frame": 32768,
+            "success": true
+          }
+        ],
+        "cuda_allocator": {
+          "device": 0,
+          "max_memory_allocated_bytes": 630610432,
+          "max_memory_reserved_bytes": 744488960,
+          "memory_allocated_bytes": 560251392,
+          "memory_reserved_bytes": 744488960
+        },
+        "instrumentation_errors": [],
+        "warning_error_lines": [
+          "2026-10-23 03:58:42 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.",
+          "2026-10-23 03:58:42 [2ms] [Warning] [omni.ext.plugin] [ext: rendering_modes] Extensions config 'extension.toml' doesn't exist '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/apps/rendering_modes' or '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/apps/rendering_modes/config'",
+          "2026-10-23 03:58:43 [409ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX",
+          "2026-10-23 03:58:43 [678ms] [Warning] [omni.datastore] OmniHub is inaccessible",
+          "2026-10-23 03:58:43 [786ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.",
+          "2026-10-23 03:58:47 [4,500ms] [Warning] [isaaclab.envs.direct_rl_env] The render interval (1) is smaller than the decimation (8). Multiple render calls will happen for each environment step.If this is not intended, set the render interval to be equal to the decimation.",
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/a2c_common.py:254: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.",
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/torch_ext.py:62: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.",
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/a2c_continuous.py:106: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.",
+          "WARNING: Max epochs reached before any env terminated at least once"
+        ],
+        "exit_error": null,
+        "read_only_audit_overhead_included": true,
+        "passed": true
+      }
+    }
+  },
+  "all_six_runs_passed": true,
+  "timing_note": "200-epoch extrapolation uses epochs 2/3, includes synchronized read-only audit overhead, excludes cold startup and checkpoint I/O; only a short-run estimate, no convergence or long-duration memory guarantee.",
+  "memory_note": "NVML v2 used excludes driver reserved memory. Total includes desktop. Sampled maxima can miss sub-100ms transients; allocator peaks cover PyTorch only.",
+  "amp_note": "Fresh runs have one initial skipped overflow with scale 65536 to 32768; all applied optimizer gradients must be finite. Raw or unscaled pre-clip gradients are not all finite."
+}

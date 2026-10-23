@@ -1,0 +1,110 @@
+{
+  "seeds": [
+    0,
+    1
+  ],
+  "episodes_completed": 8,
+  "ever_success_rate": 0.0,
+  "terminal_success_rate": 0.0,
+  "first_success_steps": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "episodes": [
+    {
+      "env_id": 0,
+      "episode_id": 0,
+      "ever_success": false,
+      "first_success_step": null,
+      "first_success_time_seconds": null,
+      "seed": 0,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": false
+    },
+    {
+      "env_id": 1,
+      "episode_id": 0,
+      "ever_success": false,
+      "first_success_step": null,
+      "first_success_time_seconds": null,
+      "seed": 0,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": false
+    },
+    {
+      "env_id": 2,
+      "episode_id": 0,
+      "ever_success": false,
+      "first_success_step": null,
+      "first_success_time_seconds": null,
+      "seed": 0,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": false
+    },
+    {
+      "env_id": 3,
+      "episode_id": 0,
+      "ever_success": false,
+      "first_success_step": null,
+      "first_success_time_seconds": null,
+      "seed": 0,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": false
+    },
+    {
+      "env_id": 0,
+      "episode_id": 0,
+      "ever_success": false,
+      "first_success_step": null,
+      "first_success_time_seconds": null,
+      "seed": 1,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": false
+    },
+    {
+      "env_id": 1,
+      "episode_id": 0,
+      "ever_success": false,
+      "first_success_step": null,
+      "first_success_time_seconds": null,
+      "seed": 1,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": false
+    },
+    {
+      "env_id": 2,
+      "episode_id": 0,
+      "ever_success": false,
+      "first_success_step": null,
+      "first_success_time_seconds": null,
+      "seed": 1,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": false
+    },
+    {
+      "env_id": 3,
+      "episode_id": 0,
+      "ever_success": false,
+      "first_success_step": null,
+      "first_success_time_seconds": null,
+      "seed": 1,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": false
+    }
+  ],
+  "note": "Smoke checkpoint evaluator validation only; no reliable policy-performance inference."
+}

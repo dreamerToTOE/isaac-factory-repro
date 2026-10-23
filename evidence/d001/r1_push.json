@@ -1,0 +1,68 @@
+{
+  "timestamp_utc": "2026-10-23T03:39:46.480880+00:00",
+  "force_push": false,
+  "operations": [
+    {
+      "command": [
+        "git",
+        "push",
+        "origin",
+        "HEAD:refs/heads/main"
+      ],
+      "returncode": 128,
+      "stderr": "client_loop: send disconnect: Broken pipe; send-pack: unexpected disconnect while reading sideband packet; fatal: remote disconnected",
+      "phase": "first_attempt"
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "returncode": 0,
+      "stdout": "a77d215b1244b120605eac5c0af59bf0f32c20c5\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "ls-remote",
+        "git@github.com:dreamerToTOE/isaac-factory-repro.git",
+        "refs/heads/main"
+      ],
+      "returncode": 0,
+      "stdout": "a77d215b1244b120605eac5c0af59bf0f32c20c5\trefs/heads/main\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "a77d215b1244b120605eac5c0af59bf0f32c20c5",
+        "a77d215b1244b120605eac5c0af59bf0f32c20c5"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "ls-remote",
+        "git@github.com:dreamerToTOE/isaac-factory-repro.git",
+        "refs/heads/main"
+      ],
+      "returncode": 0,
+      "stdout": "a77d215b1244b120605eac5c0af59bf0f32c20c5\trefs/heads/main\n",
+      "stderr": ""
+    }
+  ],
+  "local_sha": "a77d215b1244b120605eac5c0af59bf0f32c20c5",
+  "remote_before": "a77d215b1244b120605eac5c0af59bf0f32c20c5",
+  "remote_was_ancestor": true,
+  "verified_remote_sha": "a77d215b1244b120605eac5c0af59bf0f32c20c5",
+  "initial_remote_main_before_push": "c54da28f61569ec6cc8249b46ffcea498ff27600",
+  "initial_remote_ancestor_of_pushed_commit_verified_now": true,
+  "note": "First push returned disconnect error; subsequent independent ls-remote confirmed server had accepted a77d215. No second push was needed."
+}

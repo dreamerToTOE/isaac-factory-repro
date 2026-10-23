@@ -1,0 +1,3949 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-10-23T03:57:49.205491+00:00",
+  "upstream_script": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py",
+  "upstream_arguments": [
+    "--headless",
+    "--device",
+    "cuda:0",
+    "--task",
+    "Isaac-Factory-PegInsert-Direct-v0",
+    "--num_envs",
+    "32",
+    "--seed",
+    "0",
+    "--max_iterations",
+    "4",
+    "--checkpoint",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg32/nn/last_Factory_ep_3_rew__35.98186_.pth",
+    "agent.params.config.full_experiment_name=d001_peg32_resume",
+    "agent.params.config.save_frequency=1",
+    "agent.params.config.save_best_after=0"
+  ],
+  "note": "Read-only tensor inspections synchronize CUDA; timings include audit overhead. Post-unscale gradients precede official clipping; optimizer gradients follow clipping. An AMP-skipped attempt is not an applied nonfinite optimizer update.",
+  "instrumentation_errors": [],
+  "runtime": {
+    "num_actors": 32,
+    "num_agents": 1,
+    "horizon_length": 128,
+    "batch_size": 4096,
+    "minibatch_size": 512,
+    "mini_epochs": 4,
+    "seq_length": 128,
+    "observation_shape": [
+      19
+    ],
+    "state_shape": [
+      43
+    ],
+    "actions_num": 6,
+    "mixed_precision": true,
+    "config": {
+      "name": "Factory",
+      "device": "cuda:0",
+      "full_experiment_name": "d001_peg32_resume",
+      "env_name": "rlgpu",
+      "multi_gpu": false,
+      "ppo": true,
+      "mixed_precision": true,
+      "normalize_input": true,
+      "normalize_value": true,
+      "value_bootstrap": true,
+      "num_actors": 32,
+      "reward_shaper": "<rl_games.common.tr_helpers.DefaultRewardsShaper object at 0x7b790b3d90f0>",
+      "normalize_advantage": true,
+      "gamma": 0.995,
+      "tau": 0.95,
+      "learning_rate": 0.0001,
+      "lr_schedule": "adaptive",
+      "schedule_type": "standard",
+      "kl_threshold": 0.008,
+      "score_to_win": 20000,
+      "max_epochs": 4,
+      "save_best_after": 0,
+      "save_frequency": 1,
+      "print_stats": true,
+      "grad_norm": 1.0,
+      "entropy_coef": 0.0,
+      "truncate_grads": true,
+      "e_clip": 0.2,
+      "horizon_length": 128,
+      "minibatch_size": 512,
+      "mini_epochs": 4,
+      "critic_coef": 2,
+      "clip_value": true,
+      "seq_length": 128,
+      "bounds_loss_coef": 0.0001,
+      "central_value_config": {
+        "minibatch_size": 512,
+        "mini_epochs": 4,
+        "learning_rate": "1e-4",
+        "lr_schedule": "adaptive",
+        "kl_threshold": 0.008,
+        "clip_value": true,
+        "normalize_input": true,
+        "truncate_grads": true,
+        "network": "<rl_games.algos_torch.models.ModelCentralValue object at 0x7b790b3d94e0>",
+        "model": {
+          "name": "central_value"
+        }
+      },
+      "player": {
+        "deterministic": false
+      },
+      "train_dir": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory",
+      "features": {
+        "observer": "<rl_games.common.algo_observer.IsaacAlgoObserver object at 0x7b790b3d90c0>"
+      },
+      "network": "<rl_games.algos_torch.models.ModelA2CContinuousLogStd object at 0x7b790b3d8d90>"
+    },
+    "actor_model": "Network(\n  (value_mean_std): RunningMeanStd()\n  (running_mean_std): RunningMeanStd()\n  (a2c_network): Network(\n    (actor_cnn): Sequential()\n    (critic_cnn): Sequential()\n    (actor_mlp): Sequential(\n      (0): Linear(in_features=1024, out_features=512, bias=True)\n      (1): ELU(alpha=1.0)\n      (2): Linear(in_features=512, out_features=128, bias=True)\n      (3): ELU(alpha=1.0)\n      (4): Linear(in_features=128, out_features=64, bias=True)\n      (5): ELU(alpha=1.0)\n    )\n    (critic_mlp): Sequential()\n    (rnn): LSTMWithDones(\n      (rnn): LSTM(19, 1024, num_layers=2)\n    )\n    (layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)\n    (value): Linear(in_features=64, out_features=1, bias=True)\n    (value_act): Identity()\n    (mu): Linear(in_features=64, out_features=6, bias=True)\n    (mu_act): Identity()\n    (sigma_act): Identity()\n    (sigma): Linear(in_features=64, out_features=6, bias=True)\n  )\n)",
+    "actor_parameter_shapes": {
+      "a2c_network.actor_mlp.0.weight": [
+        512,
+        1024
+      ],
+      "a2c_network.actor_mlp.0.bias": [
+        512
+      ],
+      "a2c_network.actor_mlp.2.weight": [
+        128,
+        512
+      ],
+      "a2c_network.actor_mlp.2.bias": [
+        128
+      ],
+      "a2c_network.actor_mlp.4.weight": [
+        64,
+        128
+      ],
+      "a2c_network.actor_mlp.4.bias": [
+        64
+      ],
+      "a2c_network.rnn.rnn.weight_ih_l0": [
+        4096,
+        19
+      ],
+      "a2c_network.rnn.rnn.weight_hh_l0": [
+        4096,
+        1024
+      ],
+      "a2c_network.rnn.rnn.bias_ih_l0": [
+        4096
+      ],
+      "a2c_network.rnn.rnn.bias_hh_l0": [
+        4096
+      ],
+      "a2c_network.rnn.rnn.weight_ih_l1": [
+        4096,
+        1024
+      ],
+      "a2c_network.rnn.rnn.weight_hh_l1": [
+        4096,
+        1024
+      ],
+      "a2c_network.rnn.rnn.bias_ih_l1": [
+        4096
+      ],
+      "a2c_network.rnn.rnn.bias_hh_l1": [
+        4096
+      ],
+      "a2c_network.layer_norm.weight": [
+        1024
+      ],
+      "a2c_network.layer_norm.bias": [
+        1024
+      ],
+      "a2c_network.value.weight": [
+        1,
+        64
+      ],
+      "a2c_network.value.bias": [
+        1
+      ],
+      "a2c_network.mu.weight": [
+        6,
+        64
+      ],
+      "a2c_network.mu.bias": [
+        6
+      ],
+      "a2c_network.sigma.weight": [
+        6,
+        64
+      ],
+      "a2c_network.sigma.bias": [
+        6
+      ]
+    },
+    "actor_parameter_count": 13278733,
+    "central_value_model": "Network(\n  (value_mean_std): RunningMeanStd()\n  (running_mean_std): RunningMeanStd()\n  (a2c_network): Network(\n    (actor_cnn): Sequential()\n    (critic_cnn): Sequential()\n    (actor_mlp): Sequential(\n      (0): Linear(in_features=1024, out_features=512, bias=True)\n      (1): ELU(alpha=1.0)\n      (2): Linear(in_features=512, out_features=128, bias=True)\n      (3): ELU(alpha=1.0)\n      (4): Linear(in_features=128, out_features=64, bias=True)\n      (5): ELU(alpha=1.0)\n    )\n    (critic_mlp): Sequential()\n    (rnn): LSTMWithDones(\n      (rnn): LSTM(43, 1024, num_layers=2)\n    )\n    (layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)\n    (value): Linear(in_features=64, out_features=1, bias=True)\n    (value_act): Identity()\n  )\n)",
+    "central_value_parameter_shapes": {
+      "a2c_network.actor_mlp.0.weight": [
+        512,
+        1024
+      ],
+      "a2c_network.actor_mlp.0.bias": [
+        512
+      ],
+      "a2c_network.actor_mlp.2.weight": [
+        128,
+        512
+      ],
+      "a2c_network.actor_mlp.2.bias": [
+        128
+      ],
+      "a2c_network.actor_mlp.4.weight": [
+        64,
+        128
+      ],
+      "a2c_network.actor_mlp.4.bias": [
+        64
+      ],
+      "a2c_network.rnn.rnn.weight_ih_l0": [
+        4096,
+        43
+      ],
+      "a2c_network.rnn.rnn.weight_hh_l0": [
+        4096,
+        1024
+      ],
+      "a2c_network.rnn.rnn.bias_ih_l0": [
+        4096
+      ],
+      "a2c_network.rnn.rnn.bias_hh_l0": [
+        4096
+      ],
+      "a2c_network.rnn.rnn.weight_ih_l1": [
+        4096,
+        1024
+      ],
+      "a2c_network.rnn.rnn.weight_hh_l1": [
+        4096,
+        1024
+      ],
+      "a2c_network.rnn.rnn.bias_ih_l1": [
+        4096
+      ],
+      "a2c_network.rnn.rnn.bias_hh_l1": [
+        4096
+      ],
+      "a2c_network.layer_norm.weight": [
+        1024
+      ],
+      "a2c_network.layer_norm.bias": [
+        1024
+      ],
+      "a2c_network.value.weight": [
+        1,
+        64
+      ],
+      "a2c_network.value.bias": [
+        1
+      ]
+    }
+  },
+  "actor_attempts": [
+    {
+      "attempt": 1,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 0.0001,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": -0.03016802668571472
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.49123671650886536
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.479667663574219
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 3.6079203709959984e-05
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.46106868982315063
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.2998046875,
+        "maximum": 0.34375
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9682871699333191,
+        "maximum": 1.012513518333435
+      }
+    },
+    {
+      "attempt": 2,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 0.0001,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": -0.18174418807029724
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.629108726978302
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.48275089263916
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.00020931102335453033
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.44736453890800476
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.325927734375,
+        "maximum": 0.351318359375
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9679622054100037,
+        "maximum": 1.0121427774429321
+      }
+    },
+    {
+      "attempt": 3,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 0.0001,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.14666667580604553
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.4017626643180847
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.487754821777344
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0008230925304815173
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.5484293699264526
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.33984375,
+        "maximum": 0.355224609375
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9671059250831604,
+        "maximum": 1.0124517679214478
+      }
+    },
+    {
+      "attempt": 4,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 0.0001,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.17209041118621826
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.452603816986084
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.482413291931152
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0022496269084513187
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.6246942281723022
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.312255859375,
+        "maximum": 0.35107421875
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.966515839099884,
+        "maximum": 1.0128380060195923
+      }
+    },
+    {
+      "attempt": 5,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 0.0001,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.002391323447227478
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.5901783108711243
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.482999801635742
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.004755351692438126
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.5925696492195129
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.3193359375,
+        "maximum": 0.360107421875
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9672535061836243,
+        "maximum": 1.0127066373825073
+      }
+    },
+    {
+      "attempt": 6,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 0.0001,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": -0.18002700805664062
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.6710870265960693
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.475356101989746
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.005897749215364456
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.4910600185394287
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.329833984375,
+        "maximum": 0.405517578125
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9644238948822021,
+        "maximum": 1.013185739517212
+      }
+    },
+    {
+      "attempt": 7,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 0.0001,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": -0.16516925394535065
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.543630838394165
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.477677345275879
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.009217532351613045
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.3784615993499756
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.37109375,
+        "maximum": 0.4130859375
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9647477269172668,
+        "maximum": 1.013162612915039
+      }
+    },
+    {
+      "attempt": 8,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 0.0001,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.22934071719646454
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.40760016441345215
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.479328155517578
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.010580509901046753
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.6369408965110779
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.299072265625,
+        "maximum": 0.357421875
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9640414118766785,
+        "maximum": 1.013000249862671
+      }
+    },
+    {
+      "attempt": 9,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 0.0001,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": -0.03142920136451721
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.4488295018672943
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.474308013916016
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.012911494821310043
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.4174003005027771
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.334228515625,
+        "maximum": 0.382080078125
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9635119438171387,
+        "maximum": 1.0125598907470703
+      }
+    },
+    {
+      "attempt": 10,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 0.0001,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": -0.18695217370986938
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.6319798827171326
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.47484016418457
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.013816793449223042
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.4450277090072632
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.3271484375,
+        "maximum": 0.407470703125
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9631298184394836,
+        "maximum": 1.0114171504974365
+      }
+    },
+    {
+      "attempt": 11,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 0.0001,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.14338932931423187
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.38588401675224304
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.477483749389648
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.014109944924712181
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.5292733311653137
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.346435546875,
+        "maximum": 0.36865234375
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9599313735961914,
+        "maximum": 1.0109235048294067
+      }
+    },
+    {
+      "attempt": 12,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 0.0001,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.166886106133461
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.47709187865257263
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.471517562866211
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.015382478013634682
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.6439779996871948
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.2744140625,
+        "maximum": 0.383056640625
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9589065313339233,
+        "maximum": 1.0099059343338013
+      }
+    },
+    {
+      "attempt": 13,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 0.0001,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0006579607725143433
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.5958888530731201
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.473241806030273
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.017921082675457
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.5965468287467957
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.3359375,
+        "maximum": 0.368896484375
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9574445486068726,
+        "maximum": 1.0086815357208252
+      }
+    },
+    {
+      "attempt": 14,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 0.0001,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": -0.17131927609443665
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.6446610689163208
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.469051361083984
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.031221648678183556
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.47334179282188416
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.350341796875,
+        "maximum": 0.488037109375
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9578244090080261,
+        "maximum": 1.008812427520752
+      }
+    },
+    {
+      "attempt": 15,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 0.0001,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": -0.17978540062904358
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.5457745790481567
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.471071243286133
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.03237901255488396
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.36598917841911316
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.347900390625,
+        "maximum": 0.44970703125
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9565683603286743,
+        "maximum": 1.0073126554489136
+      }
+    },
+    {
+      "attempt": 16,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 0.0001,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.22846773266792297
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.41743505001068115
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.475964546203613
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.02962852269411087
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.6459027528762817
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.308837890625,
+        "maximum": 0.389404296875
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9547892808914185,
+        "maximum": 1.0075817108154297
+      }
+    },
+    {
+      "attempt": 17,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 6.666666666666667e-05,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": -0.036024659872055054
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.44760289788246155
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.46970272064209
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0333433672785759
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.4115782380104065
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.36181640625,
+        "maximum": 0.39501953125
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9544396996498108,
+        "maximum": 1.005995512008667
+      }
+    },
+    {
+      "attempt": 18,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 6.666666666666667e-05,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": -0.18974310159683228
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.619403064250946
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.471450805664062
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.02693728357553482
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.42965996265411377
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.369873046875,
+        "maximum": 0.425537109375
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9551390409469604,
+        "maximum": 1.005592703819275
+      }
+    },
+    {
+      "attempt": 19,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 6.666666666666667e-05,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.15073949098587036
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.3908914029598236
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.477574348449707
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.018973305821418762
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.5416308641433716
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.40380859375,
+        "maximum": 0.365234375
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9530425667762756,
+        "maximum": 1.0053740739822388
+      }
+    },
+    {
+      "attempt": 20,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 6.666666666666667e-05,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.1670832335948944
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.4312911331653595
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.469857215881348
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.020899243652820587
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.5983743667602539
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.396240234375,
+        "maximum": 0.37744140625
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9547309875488281,
+        "maximum": 1.0046111345291138
+      }
+    },
+    {
+      "attempt": 21,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 6.666666666666667e-05,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": -0.000239446759223938
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.5802249908447266
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.470830917358398
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.024728039279580116
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.5799855589866638
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.36474609375,
+        "maximum": 0.424560546875
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9523738622665405,
+        "maximum": 1.0040900707244873
+      }
+    },
+    {
+      "attempt": 22,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 6.666666666666667e-05,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": -0.17740380764007568
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.6330689191818237
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.462358474731445
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.04060550779104233
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.45566511154174805
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.460693359375,
+        "maximum": 0.49560546875
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9517056345939636,
+        "maximum": 1.0041667222976685
+      }
+    },
+    {
+      "attempt": 23,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 6.666666666666667e-05,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": -0.18528811633586884
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.5396232604980469
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.463340759277344
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.029953457415103912
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.35433512926101685
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.48046875,
+        "maximum": 0.4287109375
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9512990713119507,
+        "maximum": 1.0048065185546875
+      }
+    },
+    {
+      "attempt": 24,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 6.666666666666667e-05,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.22634786367416382
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.4135540723800659
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.469457626342773
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.018697714433073997
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.6399019360542297
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.400146484375,
+        "maximum": 0.4228515625
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9491821527481079,
+        "maximum": 1.0053166151046753
+      }
+    },
+    {
+      "attempt": 25,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 4.4444444444444447e-05,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": -0.03989472985267639
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.44219058752059937
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.461641311645508
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.017066966742277145
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.402295857667923
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.408203125,
+        "maximum": 0.489501953125
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9496456980705261,
+        "maximum": 1.0055581331253052
+      }
+    },
+    {
+      "attempt": 26,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 4.4444444444444447e-05,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": -0.19773682951927185
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.6158831119537354
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.463741302490234
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0156480111181736
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.4181462824344635
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.431396484375,
+        "maximum": 0.5234375
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9510959386825562,
+        "maximum": 1.0058690309524536
+      }
+    },
+    {
+      "attempt": 27,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 4.4444444444444447e-05,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.14467667043209076
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.3798232078552246
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.471231460571289
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.012473447248339653
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.5244998931884766
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.409912109375,
+        "maximum": 0.49560546875
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9480242133140564,
+        "maximum": 1.0063947439193726
+      }
+    },
+    {
+      "attempt": 28,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 4.4444444444444447e-05,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.15924489498138428
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.43481671810150146
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.464292526245117
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.014400537125766277
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.5940616130828857
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.341552734375,
+        "maximum": 0.466552734375
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9501385688781738,
+        "maximum": 1.0058151483535767
+      }
+    },
+    {
+      "attempt": 29,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 4.4444444444444447e-05,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": -0.011293545365333557
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.5707639455795288
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.465471267700195
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.015238398686051369
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.5594704151153564
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.325439453125,
+        "maximum": 0.427001953125
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9481978416442871,
+        "maximum": 1.0059494972229004
+      }
+    },
+    {
+      "attempt": 30,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 4.4444444444444447e-05,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": -0.1956792175769806
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.6317695379257202
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.456558227539062
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.012324061244726181
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.4360903203487396
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.412109375,
+        "maximum": 0.483642578125
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9477927684783936,
+        "maximum": 1.0051976442337036
+      }
+    },
+    {
+      "attempt": 31,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 4.4444444444444447e-05,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": -0.19853903353214264
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.5379006862640381
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.45922565460205
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.008548352867364883
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.33936166763305664
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.410400390625,
+        "maximum": 0.4453125
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.947359025478363,
+        "maximum": 1.0061144828796387
+      }
+    },
+    {
+      "attempt": 32,
+      "epoch": 4,
+      "optimizer_steps_applied": 1,
+      "amp_skipped": false,
+      "scale_before": 32768.0,
+      "scale_after": 32768.0,
+      "learning_rate": 4.4444444444444447e-05,
+      "scalars": {
+        "actor_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.21638453006744385
+        },
+        "actor_value_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.4112739562988281
+        },
+        "entropy": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 8.465907096862793
+        },
+        "kl": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.006592245772480965
+        },
+        "bounds_loss": {
+          "count": 1,
+          "finite": true,
+          "nonfinite_count": 0,
+          "value": 0.0
+        }
+      },
+      "total_objective": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.627658486366272
+      },
+      "policy_mean": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": -0.3544921875,
+        "maximum": 0.379638671875
+      },
+      "policy_sigma": {
+        "count": 3072,
+        "finite": true,
+        "nonfinite_count": 0,
+        "minimum": 0.9463187456130981,
+        "maximum": 1.0065906047821045
+      }
+    }
+  ],
+  "central_value_attempts": [
+    {
+      "attempt": 1,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.5563606023788452
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 2,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.5945166349411011
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 3,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.36169758439064026
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 4,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.4154481887817383
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 5,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.5145095586776733
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 6,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.6073278188705444
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 7,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.5515260696411133
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 8,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.3759487271308899
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 9,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.42944392561912537
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 10,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.6208506226539612
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 11,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.4615120589733124
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 12,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.3995981812477112
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 13,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.5235396027565002
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 14,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.7528356313705444
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 15,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.5440298318862915
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 16,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.3849678635597229
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 17,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.44175010919570923
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 18,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.6164290904998779
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 19,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.3765655755996704
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 20,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.45009779930114746
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 21,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.5319639444351196
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 22,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.6282196640968323
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 23,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.5479655265808105
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 24,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.3695044219493866
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 25,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.4326651990413666
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 26,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.5966274738311768
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 27,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.35986995697021484
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 28,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.40198254585266113
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 29,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.5117804408073425
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 30,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.6651835441589355
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 31,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.5508091449737549
+      },
+      "optimizer_steps_applied": 1
+    },
+    {
+      "attempt": 32,
+      "epoch": 0,
+      "loss": {
+        "count": 1,
+        "finite": true,
+        "nonfinite_count": 0,
+        "value": 0.3823411166667938
+      },
+      "optimizer_steps_applied": 1
+    }
+  ],
+  "gradient_events": [
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 1,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.21644672751426697
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 2,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.05018742382526398
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 3,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.04195927083492279
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 4,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.06001193821430206
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 5,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.06183170527219772
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 6,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.0621606670320034
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 7,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.10174740105867386
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 8,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.1401255875825882
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 9,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.050811003893613815
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 10,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.19591623544692993
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 11,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.19199375808238983
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 12,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.02493348717689514
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 13,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.20308546721935272
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 14,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.1703292429447174
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 15,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.17023207247257233
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 16,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.18559041619300842
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 17,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.09840070456266403
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 18,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.1278327852487564
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 19,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.09125927090644836
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 20,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.17775046825408936
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 21,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.1186743751168251
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 22,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.12704819440841675
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 23,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.09325894713401794
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 24,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.12437331676483154
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 25,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.06735937297344208
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 26,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.05911331996321678
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 27,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.07638199627399445
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 28,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.010444790124893188
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 29,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.08757460117340088
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 30,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.17756997048854828
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 31,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.19470873475074768
+    },
+    {
+      "role": "central_value",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 32,
+      "gradient_tensors": 18,
+      "gradient_elements": 13376257,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.19132277369499207
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 1,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 16344.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 1,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.498779296875
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 1,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.14570876955986023
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 2,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 3712.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 2,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.11328125
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 2,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.08045514672994614
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 3,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 10144.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 3,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.3095703125
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 3,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.1406959742307663
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 4,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 3254.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 4,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.09930419921875
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 4,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.07295098155736923
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 5,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 4044.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 5,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.1234130859375
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 5,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.12181777507066727
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 6,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 4108.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 6,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.1253662109375
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 6,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.08674561977386475
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 7,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 4046.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 7,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.12347412109375
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 7,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.08234195411205292
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 8,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 10512.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 8,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.32080078125
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 8,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.14389219880104065
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 9,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 4508.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 9,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.1375732421875
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 9,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.10200434923171997
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 10,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 5292.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 10,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.1614990234375
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 10,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.09032231569290161
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 11,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 3580.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 11,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.1092529296875
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 11,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.10909290611743927
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 12,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 9568.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 12,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.2919921875
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 12,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.12246501445770264
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 13,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 7872.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 13,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.240234375
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 13,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.12990304827690125
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 14,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 5064.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 14,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.154541015625
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 14,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.09025803208351135
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 15,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 3816.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 15,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.116455078125
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 15,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.09931445121765137
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 16,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 14856.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 16,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.453369140625
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 16,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.13150084018707275
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 17,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 3266.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 17,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.09967041015625
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 17,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.06884200870990753
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 18,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 3578.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 18,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.10919189453125
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 18,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.0888739675283432
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 19,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 5132.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 19,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.1566162109375
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 19,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.10832376778125763
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 20,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 5204.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 20,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.1588134765625
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 20,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.0955461636185646
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 21,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 2628.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 21,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.0802001953125
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 21,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.06341028213500977
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 22,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 4556.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 22,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.1390380859375
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 22,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.07005622982978821
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 23,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 4392.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 23,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.134033203125
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 23,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.08929502218961716
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 24,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 13048.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 24,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.398193359375
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 24,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.14974363148212433
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 25,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 4204.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 25,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.1282958984375
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 25,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.11609268188476562
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 26,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 4792.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 26,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.146240234375
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 26,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.10547615587711334
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 27,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 2296.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 27,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.070068359375
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 27,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.070068359375
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 28,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 5900.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 28,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.1800537109375
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 28,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.12126313894987106
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 29,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 2398.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 29,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.07318115234375
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 29,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.07318115234375
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 30,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 2552.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 30,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.077880859375
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 30,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.07198312878608704
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 31,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 1826.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 31,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.05572509765625
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 31,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.05572509765625
+    },
+    {
+      "role": "actor",
+      "phase": "before_unscale_scaled_amp",
+      "attempt": 32,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 13000.0
+    },
+    {
+      "role": "actor",
+      "phase": "after_unscale_before_clip",
+      "attempt": 32,
+      "scale": 32768.0,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.396728515625
+    },
+    {
+      "role": "actor",
+      "phase": "optimizer_pre_step_post_clip",
+      "actual_step": 32,
+      "gradient_tensors": 22,
+      "gradient_elements": 13278733,
+      "finite": true,
+      "nonfinite_elements": 0,
+      "maximum_absolute_gradient": 0.14374707639217377
+    }
+  ],
+  "epochs": [
+    {
+      "epoch": 4,
+      "environment_transitions": 4096,
+      "env_step_seconds": 28.046178579330444,
+      "rollout_seconds": 28.42725706100464,
+      "optimization_seconds": 2.394587993621826,
+      "official_total_seconds": 30.821845293045044,
+      "observed_epoch_seconds": 30.82200820199978,
+      "env_step_fps": 146.04485200770569,
+      "rollout_fps": 144.08706373639993,
+      "total_fps": 132.89275710316616,
+      "cuda_allocator": {
+        "device": 0,
+        "max_memory_allocated_bytes": 624730624,
+        "max_memory_reserved_bytes": 738197504,
+        "memory_allocated_bytes": 555457024,
+        "memory_reserved_bytes": 738197504
+      }
+    }
+  ],
+  "checkpoint_events": [
+    {
+      "operation": "restore",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg32/nn/last_Factory_ep_3_rew__35.98186_.pth",
+      "epoch": 3,
+      "frame": 12288,
+      "success": true
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/d001_peg32_resume/nn/last_Factory_ep_4_rew_-inf",
+      "epoch": 4,
+      "frame": 16384,
+      "success": true
+    }
+  ],
+  "optimizer_steps": {
+    "actor": 32,
+    "central_value": 32
+  },
+  "observers_installed": true,
+  "cuda_allocator": {
+    "device": 0,
+    "max_memory_allocated_bytes": 624730624,
+    "max_memory_reserved_bytes": 738197504,
+    "memory_allocated_bytes": 554932736,
+    "memory_reserved_bytes": 738197504
+  }
+}

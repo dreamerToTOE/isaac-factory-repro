@@ -1,0 +1,54 @@
+{
+  "scripts/audit_checkpoint_state.py": {
+    "bytes": 7301,
+    "sha256": "70c55e06c50973eb51d9b842e87311ef9bfaa978b16ce72d051e243c675de31f"
+  },
+  "scripts/evaluate_checkpoint.py": {
+    "bytes": 10147,
+    "sha256": "1c1dae741d1af0cd06f60dd0e25727f075ae7d47ccb4d94f0cf0fbb53a54f7e5"
+  },
+  "scripts/evaluation_runtime.py": {
+    "bytes": 1179,
+    "sha256": "c42644f7c1572922c34d925b6bdc1bc45b7f2d1156362aeec71c9b79cd868e69"
+  },
+  "scripts/factory_probe.py": {
+    "bytes": 3782,
+    "sha256": "b795755dae16df18c9a47d047b4af5c0adf4b36f5e7d36ef6e8ef48f85167283"
+  },
+  "scripts/gpu_probe.py": {
+    "bytes": 1863,
+    "sha256": "6df57b0515ffd88efdbf575ae3cf5b2f0bee47e17b0828dcbdbb8836cebce734"
+  },
+  "scripts/inspect_checkpoint.py": {
+    "bytes": 2644,
+    "sha256": "350dd8279ca43c48a59afd4e89eeb2f6f3bdbac231f68ed36b271ff510f6eff7"
+  },
+  "scripts/inspect_events.py": {
+    "bytes": 1019,
+    "sha256": "2f7605d619f88603c539646d6a09ad0deaa16425875fc6fba2b39afa60e682d5"
+  },
+  "scripts/python_entry.py": {
+    "bytes": 1373,
+    "sha256": "86be13fbd0fcb9ac9ca0b47cf47f85439e63e2459c158bd0ac4aa8a527eabd60"
+  },
+  "scripts/run_bounded.py": {
+    "bytes": 6606,
+    "sha256": "8a366dfcd67b12caa60ae692d05ba6c3456ed93a80769126fb0138764091bd1b"
+  },
+  "scripts/run_logged.py": {
+    "bytes": 3950,
+    "sha256": "bd9bf9f5b7ce5c93a8b21e3242ac49dbd7d55e338df90f8346260ff46cac1b11"
+  },
+  "scripts/success_metrics.py": {
+    "bytes": 7541,
+    "sha256": "0b3a9f72bf21079c9022add3afda5f7c3e4a7108c7c61160fbf448415ded4ceb"
+  },
+  "scripts/summarize_scaling.py": {
+    "bytes": 4673,
+    "sha256": "c520d79b6ec8e1a9de0a40aec4de7c35812de46a196bbac35698940634288b5e"
+  },
+  "scripts/train_audited.py": {
+    "bytes": 12094,
+    "sha256": "b3bd31c09cc854b88e84167be869a132523f9483ed1feb359f9b511e66209a82"
+  }
+}

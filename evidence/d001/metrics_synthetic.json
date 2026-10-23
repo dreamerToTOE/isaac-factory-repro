@@ -1,0 +1,76 @@
+{
+  "evidence_type": "CPU deterministic synthetic accounting control; not robotics data",
+  "input_success_masks": [
+    [
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      false,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
+      true
+    ]
+  ],
+  "done_step": 3,
+  "episodes": [
+    {
+      "env_id": 0,
+      "episode_id": 0,
+      "steps": 3,
+      "first_success_step": 2,
+      "ever_success": true,
+      "terminal_success": false,
+      "terminal_kind": "timeout"
+    },
+    {
+      "env_id": 1,
+      "episode_id": 0,
+      "steps": 3,
+      "first_success_step": 3,
+      "ever_success": true,
+      "terminal_success": true,
+      "terminal_kind": "timeout"
+    },
+    {
+      "env_id": 2,
+      "episode_id": 0,
+      "steps": 3,
+      "first_success_step": null,
+      "ever_success": false,
+      "terminal_success": false,
+      "terminal_kind": "timeout"
+    },
+    {
+      "env_id": 3,
+      "episode_id": 0,
+      "steps": 3,
+      "first_success_step": 1,
+      "ever_success": true,
+      "terminal_success": true,
+      "terminal_kind": "timeout"
+    }
+  ],
+  "aggregate": {
+    "episodes_completed": 4,
+    "episodes_requested": 4,
+    "ever_success_count": 3,
+    "ever_success_rate": 0.75,
+    "terminal_success_count": 2,
+    "terminal_success_rate": 0.5,
+    "transient_only_count": 1,
+    "first_success_count": 3,
+    "first_success_rate": 0.75,
+    "mean_first_success_step": 2.0
+  },
+  "pytest_result": "10 passed",
+  "gpu_executed": false
+}
