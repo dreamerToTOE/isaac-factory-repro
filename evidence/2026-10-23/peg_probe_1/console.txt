@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/factory_probe.py", line 5, in <module>
+    from isaaclab.app import AppLauncher
+  File "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/app/__init__.py", line 15, in <module>
+    from .app_launcher import AppLauncher  # noqa: F401, F403
+  File "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/app/app_launcher.py", line 25, in <module>
+    import flatdict
+ModuleNotFoundError: No module named 'flatdict'

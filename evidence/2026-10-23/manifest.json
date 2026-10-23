@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-23",
+  "timezone": "Asia/Seoul",
+  "upstream_tag": "v2.1.1",
+  "upstream_sha": "90b79bb2d44feb8d833f260f2bf37da3487180ba",
+  "upstream_worktree_clean": true,
+  "reproduction_parent_sha": "c54da28f61569ec6cc8249b46ffcea498ff27600",
+  "scope": "G0/G1 only; no full training",
+  "canonical_runs": [
+    "gpu_gate_retry",
+    "peg_probe_1_pinned",
+    "peg_probe_16_pinned",
+    "gear_probe_1_pinned",
+    "nut_probe_1_pinned",
+    "train_peg4_pinned",
+    "resume_peg4_pinned_compat",
+    "train_peg16_pinned"
+  ],
+  "hashes": {
+    "scripts/factory_probe.py": "b795755dae16df18c9a47d047b4af5c0adf4b36f5e7d36ef6e8ef48f85167283",
+    "scripts/gpu_probe.py": "6df57b0515ffd88efdbf575ae3cf5b2f0bee47e17b0828dcbdbb8836cebce734",
+    "scripts/inspect_checkpoint.py": "350dd8279ca43c48a59afd4e89eeb2f6f3bdbac231f68ed36b271ff510f6eff7",
+    "scripts/inspect_events.py": "2f7605d619f88603c539646d6a09ad0deaa16425875fc6fba2b39afa60e682d5",
+    "scripts/python_entry.py": "86be13fbd0fcb9ac9ca0b47cf47f85439e63e2459c158bd0ac4aa8a527eabd60",
+    "scripts/run_logged.py": "bd9bf9f5b7ce5c93a8b21e3242ac49dbd7d55e338df90f8346260ff46cac1b11",
+    "scripts/run_sim.sh": "10d11ff9b3d44c252c895ac3ca6ca2aa5301c78cbcacd1b5dc01702a494409d8"
+  },
+  "rl_games_1_6_1_source_sha256": {
+    "common/a2c_common.py": "b2ff92d888212227620138a6ca09d41ea2b8de6af044163ca3699f4ed48de661",
+    "algos_torch/central_value.py": "6e62bcce9fe892e9245ce2cd46f06fb50f85ee9843572a4dedaf5e797f1ee7b6",
+    "algos_torch/torch_ext.py": "3e9cf37042a89a7a5af6a28ec5599d1cb36ce2af4a77fbf60415ea9a8ef5aede"
+  }
+}

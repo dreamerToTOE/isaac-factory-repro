@@ -1,0 +1,39 @@
+{
+  "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/logs/rl_games/Factory/g01_peg4_pinned/nn/last_Factory_ep_3_rew__35.64205_.pth",
+  "size_bytes": 212889005,
+  "sha256": "6dd7f429bef5aede4c9d55fa1da54858f47569b182a044c5b634fb94952de442",
+  "epoch": 3,
+  "frame": 1536,
+  "all_tensors_finite": true,
+  "optimizer_states": 22,
+  "optimizer_step_min": 11,
+  "optimizer_step_max": 11,
+  "nonzero_adam_exp_avg_states": 22,
+  "central_value_present": true,
+  "comparison": {
+    "previous": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/logs/rl_games/Factory/g01_peg4_pinned/nn/last_Factory_ep_2_rew_36.58393.pth",
+      "size_bytes": 212888593,
+      "sha256": "78eb7e9a5e44b29cc733d4decf620331fdcb1d00e73154ac8df2b90c62653da8",
+      "epoch": 2,
+      "frame": 1024,
+      "all_tensors_finite": true,
+      "optimizer_states": 22,
+      "optimizer_step_min": 7,
+      "optimizer_step_max": 7,
+      "nonzero_adam_exp_avg_states": 22,
+      "central_value_present": true
+    },
+    "parameter_differences": {
+      "model": {
+        "changed_parameter_tensors": 22,
+        "max_abs_parameter_change": 0.0012757251970469952
+      },
+      "assymetric_vf_nets": {
+        "changed_parameter_tensors": 18,
+        "max_abs_parameter_change": 0.0004154518246650696
+      }
+    }
+  },
+  "optimization_evidence_passed": true
+}

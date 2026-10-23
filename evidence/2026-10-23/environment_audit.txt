@@ -1,0 +1,329 @@
+G0/G1 只读环境审计原始证据
+采集时间 UTC: 2026-10-23T02:15:42.298788+00:00
+用户时区 Asia/Seoul; 未修改驱动、设备权限或已有项目。
+
+$ uname -a
+Linux ubuntu2004 6.8.0-138-generic #138~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Aug  7 13:43:15 UTC  x86_64 x86_64 x86_64 GNU/Linux
+
+[exit=0]
+
+$ cat /etc/os-release
+PRETTY_NAME="Ubuntu 22.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+VERSION="22.04.5 LTS (Jammy Jellyfish)"
+VERSION_CODENAME=jammy
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=jammy
+
+[exit=0]
+
+$ lscpu
+架构：                                   x86_64
+CPU 运行模式：                           32-bit, 64-bit
+Address sizes:                           39 bits physical, 48 bits virtual
+字节序：                                 Little Endian
+CPU:                                     16
+在线 CPU 列表：                          0-15
+厂商 ID：                                GenuineIntel
+型号名称：                               Intel(R) Core(TM) i7-10700F CPU @ 2.90GHz
+CPU 系列：                               6
+型号：                                   165
+每个核的线程数：                         2
+每个座的核数：                           8
+座：                                     1
+步进：                                   5
+CPU 最大 MHz：                           4800.0000
+CPU 最小 MHz：                           800.0000
+BogoMIPS：                               5799.77
+标记：                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp vnmi pku ospke md_clear flush_l1d arch_capabilities ibpb_exit_to_user
+虚拟化：                                 VT-x
+L1d 缓存：                               256 KiB (8 instances)
+L1i 缓存：                               256 KiB (8 instances)
+L2 缓存：                                2 MiB (8 instances)
+L3 缓存：                                16 MiB (1 instance)
+NUMA 节点：                              1
+NUMA 节点0 CPU：                         0-15
+Vulnerability Gather data sampling:      Mitigation; Microcode
+Vulnerability Indirect target selection: Mitigation; Aligned branch/return thunks
+Vulnerability Itlb multihit:             KVM: Mitigation: VMX disabled
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Mitigation; Clear CPU buffers; SMT vulnerable
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Mitigation; Enhanced IBRS
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop
+Vulnerability Srbds:                     Mitigation; Microcode
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Not affected
+Vulnerability Vmscape:                   Mitigation; IBPB before exit to userspace
+
+[exit=0]
+
+$ free -h
+               total        used        free      shared  buff/cache   available
+内存：       46Gi       9.7Gi        15Gi       205Mi        21Gi        36Gi
+交换：      2.0Gi          0B       2.0Gi
+
+[exit=0]
+
+$ df -h / /home /tmp
+文件系统        大小  已用  可用 已用% 挂载点
+/dev/sdb3       724G  297G  390G   44% /
+/dev/sdb3       724G  297G  390G   44% /
+/dev/sdb3       724G  297G  390G   44% /
+
+[exit=0]
+
+$ df -ih / /home
+文件系统       Inodes 已用I 可用I 已用I% 挂载点
+/dev/sdb3         46M  2.4M   44M     6% /
+/dev/sdb3         46M  2.4M   44M     6% /
+
+[exit=0]
+
+$ lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINTS
+NAME     SIZE TYPE FSTYPE   MOUNTPOINTS
+loop0      4K loop squashfs /snap/bare/5
+loop1     74M loop squashfs /snap/core22/2955
+loop2   66.8M loop squashfs /snap/core24/2124
+loop3  262.3M loop squashfs /snap/firefox/9036
+loop4  283.8M loop squashfs /snap/firefox/9057
+loop5  531.5M loop squashfs /snap/gnome-42-2204/263
+loop6  614.5M loop squashfs /snap/gnome-46-2404/164
+loop7   91.7M loop squashfs /snap/gtk-common-themes/1535
+loop8    402M loop squashfs /snap/mesa-2404/1839
+loop9     12M loop squashfs /snap/snap-store/1447
+loop10  44.7M loop squashfs /snap/snapd/28254
+loop11   828K loop squashfs /snap/snapd-desktop-integration/391
+sda    111.8G disk          
+├─sda1    99M part vfat     /boot/efi
+├─sda2   128M part          
+└─sda3 111.6G part ntfs     
+sdb    931.5G disk          
+├─sdb1     1M part          
+├─sdb2   513M part vfat     
+├─sdb3 735.7G part ext4     /
+└─sdb4 195.3G part ntfs     
+
+[exit=0]
+
+$ nvidia-smi
+Fri Oct 23 11:15:42 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.178.04             Driver Version: 580.178.04     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 3070        Off |   00000000:01:00.0  On |                  N/A |
+|  0%   46C    P5             28W /  280W |    1475MiB /   8192MiB |     31%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A            2984      G   /usr/lib/xorg/Xorg                      660MiB |
+|    0   N/A  N/A            3118    C+G   ...c/gnome-remote-desktop-daemon        157MiB |
+|    0   N/A  N/A            3172      G   /usr/bin/gnome-shell                    109MiB |
+|    0   N/A  N/A            7145      G   /opt/WorkBuddy/workbuddy                125MiB |
+|    0   N/A  N/A           10900      G   .../9057/usr/lib/firefox/firefox        106MiB |
+|    0   N/A  N/A           11065      G   ...rack-uuid=3190708988185955192         67MiB |
+|    0   N/A  N/A           26193      G   ...rack-uuid=3190708988185955192        142MiB |
++-----------------------------------------------------------------------------------------+
+
+[exit=0]
+
+$ nvidia-smi --query-gpu=name,driver_version,memory.total,memory.used,memory.free,compute_cap,temperature.gpu,power.draw --format=csv
+name, driver_version, memory.total [MiB], memory.used [MiB], memory.free [MiB], compute_cap, temperature.gpu, power.draw [W]
+NVIDIA GeForce RTX 3070, 580.178.04, 8192 MiB, 1475 MiB, 6343 MiB, 8.6, 46, 28.81 W
+
+[exit=0]
+
+$ cat /proc/driver/nvidia/version
+NVRM version: NVIDIA UNIX x86_64 Kernel Module  580.178.04  Tue Jul  7 12:38:21 UTC 2026
+GCC version:  gcc version 12.3.0 (Ubuntu 12.3.0-1ubuntu1~22.04.3) 
+
+[exit=0]
+
+$ id
+uid=1000(ubuntu2004) gid=1000(ubuntu2004) 组=1000(ubuntu2004),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),122(lpadmin),135(lxd),136(sambashare),139(docker)
+
+[exit=0]
+
+$ getfacl -p /dev/dri/card1 /dev/dri/renderD128 /dev/nvidia0
+# file: /dev/dri/card1
+# owner: root
+# group: video
+user::rw-
+user:ubuntu2004:rw-
+group::rw-
+mask::rw-
+other::---
+
+# file: /dev/dri/renderD128
+# owner: root
+# group: render
+user::rw-
+user:ubuntu2004:rw-
+group::rw-
+mask::rw-
+other::---
+
+# file: /dev/nvidia0
+# owner: root
+# group: root
+user::rw-
+group::rw-
+other::rw-
+
+
+[exit=0]
+
+$ ls -l /dev/nvidia0 /dev/nvidiactl /dev/nvidia-uvm /dev/nvidia-uvm-tools /dev/nvidia-modeset /usr/share/vulkan/icd.d /etc/vulkan/icd.d
+crw-rw-rw- 1 root root 195, 254 Oct 23 09:43 /dev/nvidia-modeset
+crw-rw-rw- 1 root root 235,   0 Oct 23 09:43 /dev/nvidia-uvm
+crw-rw-rw- 1 root root 235,   1 Oct 23 09:43 /dev/nvidia-uvm-tools
+crw-rw-rw- 1 root root 195,   0 Oct 23 09:43 /dev/nvidia0
+crw-rw-rw- 1 root root 195, 255 Oct 23 09:43 /dev/nvidiactl
+
+/etc/vulkan/icd.d:
+总计 0
+
+/usr/share/vulkan/icd.d:
+总计 24
+-rw-r--r-- 1 root root 169 May 13 15:54 intel_hasvk_icd.x86_64.json
+-rw-r--r-- 1 root root 163 May 13 15:54 intel_icd.x86_64.json
+-rw-r--r-- 1 root root 161 May 13 15:54 lvp_icd.x86_64.json
+-rw-r--r-- 1 root root 140 Jul  7 21:00 nvidia_icd.json
+-rw-r--r-- 1 root root 164 May 13 15:54 radeon_icd.x86_64.json
+-rw-r--r-- 1 root root 164 May 13 15:54 virtio_icd.x86_64.json
+
+[exit=0]
+
+$ cat /usr/share/vulkan/icd.d/nvidia_icd.json
+{
+    "file_format_version" : "1.0.1",
+    "ICD": {
+        "library_path": "libGLX_nvidia.so.0",
+        "api_version" : "1.4.312"
+    }
+}
+
+[exit=0]
+
+$ cat /home/ubuntu2004/isaacsim-4.5.0/VERSION
+4.5.0-rc.36+release.19112.f59b3005.gl
+[exit=0]
+
+$ /home/ubuntu2004/isaacsim-4.5.0/python.sh --version
+Python 3.10.15
+
+[exit=0]
+
+$ python3 --version
+Python 3.10.12
+
+[exit=0]
+
+$ /home/ubuntu2004/miniconda3/bin/conda env list
+# conda environments:
+#
+base                     /home/ubuntu2004/miniconda3
+isaac_env                /home/ubuntu2004/miniconda3/envs/isaac_env
+isaaclab                 /home/ubuntu2004/miniconda3/envs/isaaclab
+unitree_rl_mjlab         /home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab
+
+
+[exit=0]
+
+$ git -C /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab rev-parse HEAD
+90b79bb2d44feb8d833f260f2bf37da3487180ba
+
+[exit=0]
+
+$ git -C /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab describe --tags --exact-match
+v2.1.1
+
+[exit=0]
+
+$ /home/ubuntu2004/isaacsim-4.5.0/python.sh -c import sys, importlib.metadata as m
+print("python=" + sys.version.replace("\n", " "))
+wanted={"torch","torchvision","numpy","gymnasium","rl-games","isaacsim","isaaclab","isaaclab-assets","isaaclab-tasks","isaaclab-rl"}
+for d in sorted(m.distributions(),key=lambda d:(d.metadata["Name"] or "").lower()):
+    name=d.metadata["Name"] or ""
+    if name.lower().replace("_","-") in wanted:
+        print(name+"=="+d.version+" ["+str(d.locate_file(""))+"]")
+
+python=3.10.15 (tags/v3.10.15-dirty:ffee63f, Oct  8 2024, 18:53:10) [GCC 7.3.1 20180303 (Red Hat 7.3.1-5)]
+gymnasium==0.29.1 [/home/ubuntu2004/isaacsim-4.5.0/exts/omni.isaac.ml_archive/pip_prebundle]
+numpy==1.26.0 [/home/ubuntu2004/isaacsim-4.5.0/extscache/omni.kit.pip_archive-0.0.0+d02c707b.lx64.cp310/pip_prebundle]
+numpy==1.24.4 [/home/ubuntu2004/.local/lib/python3.10/site-packages]
+torch==2.5.1+cu118 [/home/ubuntu2004/isaacsim-4.5.0/exts/omni.isaac.ml_archive/pip_prebundle]
+torchvision==0.20.1+cu118 [/home/ubuntu2004/isaacsim-4.5.0/exts/omni.isaac.ml_archive/pip_prebundle]
+
+[exit=0]
+
+$ /home/ubuntu2004/miniconda3/envs/isaaclab/bin/python -c import sys, importlib.metadata as m
+print("python=" + sys.version.replace("\n", " "))
+wanted={"torch","torchvision","numpy","gymnasium","rl-games","isaacsim","isaaclab","isaaclab-assets","isaaclab-tasks","isaaclab-rl"}
+for d in sorted(m.distributions(),key=lambda d:(d.metadata["Name"] or "").lower()):
+    name=d.metadata["Name"] or ""
+    if name.lower().replace("_","-") in wanted:
+        print(name+"=="+d.version+" ["+str(d.locate_file(""))+"]")
+
+python=3.11.15 (main, Mar 11 2026, 17:20:07) [GCC 14.3.0]
+gymnasium==1.2.1 [/home/ubuntu2004/miniconda3/envs/isaaclab/lib/python3.11/site-packages]
+isaaclab==0.54.3 [/home/ubuntu2004/miniconda3/envs/isaaclab/lib/python3.11/site-packages]
+isaaclab_assets==0.2.4 [/home/ubuntu2004/miniconda3/envs/isaaclab/lib/python3.11/site-packages]
+isaaclab_rl==0.5.1 [/home/ubuntu2004/miniconda3/envs/isaaclab/lib/python3.11/site-packages]
+isaaclab_tasks==0.11.16 [/home/ubuntu2004/miniconda3/envs/isaaclab/lib/python3.11/site-packages]
+numpy==1.26.4 [/home/ubuntu2004/miniconda3/envs/isaaclab/lib/python3.11/site-packages]
+rl_games==1.6.1 [/home/ubuntu2004/miniconda3/envs/isaaclab/lib/python3.11/site-packages]
+torch==2.7.0+cu128 [/home/ubuntu2004/miniconda3/envs/isaaclab/lib/python3.11/site-packages]
+torchvision==0.22.0+cu128 [/home/ubuntu2004/miniconda3/envs/isaaclab/lib/python3.11/site-packages]
+
+[exit=0]
+
+$ /home/ubuntu2004/miniconda3/envs/isaac_env/bin/python -c import sys, importlib.metadata as m
+print("python=" + sys.version.replace("\n", " "))
+wanted={"torch","torchvision","numpy","gymnasium","rl-games","isaacsim","isaaclab","isaaclab-assets","isaaclab-tasks","isaaclab-rl"}
+for d in sorted(m.distributions(),key=lambda d:(d.metadata["Name"] or "").lower()):
+    name=d.metadata["Name"] or ""
+    if name.lower().replace("_","-") in wanted:
+        print(name+"=="+d.version+" ["+str(d.locate_file(""))+"]")
+
+python=3.10.20 (main, Mar 11 2026, 17:46:40) [GCC 14.3.0]
+gymnasium==1.3.0 [/home/ubuntu2004/miniconda3/envs/isaac_env/lib/python3.10/site-packages]
+isaacsim==4.5.0.0 [/home/ubuntu2004/miniconda3/envs/isaac_env/lib/python3.10/site-packages]
+numpy==1.24.4 [/home/ubuntu2004/.local/lib/python3.10/site-packages]
+numpy==1.26.4 [/home/ubuntu2004/miniconda3/envs/isaac_env/lib/python3.10/site-packages]
+torch==2.11.0 [/home/ubuntu2004/miniconda3/envs/isaac_env/lib/python3.10/site-packages]
+
+[exit=0]
+
+Vulkan tooling: vulkaninfo=None; vulkaninfoSDK=None
+v2.1.1 checkout status entry count=0; exit=0
+
+Earlier read-only CUDA driver queries (no CUDA tensor allocation, no SimulationApp):
+conda isaaclab: Python 3.11.15; torch 2.7.0+cu128; torch.version.cuda=12.8; torch.cuda.is_available()=True; device_count=1
+conda isaac_env: Python 3.10.20; torch 2.11.0+cu130; torch.version.cuda=13.0; torch.cuda.is_available()=True; device_count=1
+Neither query proves Vulkan/RTX/PhysX GPU support.
+
+Existing conda isaaclab editable package locations point to missing /home/ubuntu2004/isaacsim-5.1.0/isaac-sim-standalone-5.1.0-linux-x86_64/IsaacLab/source; preserved.
+Existing /home/ubuntu2004/lmy/IsaacLab-main is not a Git repository (git rev-parse failed); preserved.
+Official v2.1.1 source SHA: 90b79bb2d44feb8d833f260f2bf37da3487180ba. Binary installation docs lines 31-32 record Isaac Sim 4.5 + Ubuntu 22.04 LTS + driver 535.129.
+Official docs retrieval: https://docs.isaacsim.omniverse.nvidia.com/4.5.0/installation/requirements.html and installation/index.html returned HTTP 404 via web tool on 2026-10-23.

@@ -1,0 +1,12 @@
+Using Python 3.10.12 environment at: work/envs/factory-g01
+Resolved 56 packages in 78ms
+Uninstalled 8 packages in 21ms
+Installed 4 packages in 9ms
+ - markupsafe==3.0.3
+ ~ markupsafe==3.0.4
+ - numpy==2.2.6
+ ~ numpy==1.26.4
+ - pillow==12.3.0
+ ~ pillow==11.2.1
+ - setuptools==78.1.0
+ ~ setuptools==80.10.2

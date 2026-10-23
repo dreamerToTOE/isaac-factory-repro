@@ -1,0 +1,16 @@
+Using Python 3.10.12 environment at: work/envs/factory-g01
+Resolved 4 packages in 1.40s
+   Building isaaclab-assets @ file:///home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_assets
+   Building isaaclab @ file:///home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab
+   Building isaaclab-rl @ file:///home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_rl
+   Building isaaclab-tasks @ file:///home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks
+      Built isaaclab-rl @ file:///home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_rl
+      Built isaaclab-assets @ file:///home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_assets
+      Built isaaclab @ file:///home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab
+      Built isaaclab-tasks @ file:///home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks
+Prepared 4 packages in 405ms
+Installed 4 packages in 0.54ms
+ + isaaclab==0.41.3 (from file:///home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab)
+ + isaaclab-assets==0.2.2 (from file:///home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_assets)
+ + isaaclab-rl==0.1.8 (from file:///home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_rl)
+ + isaaclab-tasks==0.10.36 (from file:///home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks)

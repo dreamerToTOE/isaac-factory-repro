@@ -1,0 +1,23 @@
+{
+  "started_utc": "2026-10-23T02:14:37.190805+00:00",
+  "command": [
+    "env",
+    "FACTORY_VENV=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01",
+    "bash",
+    "outputs/isaac-factory-repro/scripts/run_sim.sh",
+    "outputs/isaac-factory-repro/scripts/factory_probe.py",
+    "--headless",
+    "--device",
+    "cuda:0",
+    "--num_envs",
+    "1",
+    "--steps",
+    "64"
+  ],
+  "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been",
+  "returncode": 1,
+  "timeout": false,
+  "duration_seconds": 1.023,
+  "peak_total_gpu_used_MiB": 1602,
+  "sample_interval_seconds": 1
+}

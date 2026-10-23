@@ -1,0 +1,2 @@
+elapsed_seconds,gpu_index,total_used_MiB,total_MiB,utilization_percent
+0.024,0,1435,8192,46

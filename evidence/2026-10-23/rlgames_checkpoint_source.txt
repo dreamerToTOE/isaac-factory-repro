@@ -1,0 +1,158 @@
+RL-Games 1.6.1 common/a2c_common.py; SHA256=b2ff92d888212227620138a6ca09d41ea2b8de6af044163ca3699f4ed48de661
+600:     def get_full_state_weights(self):
+601:         state = self.get_weights()
+602:         state['epoch'] = self.epoch_num
+603:         state['frame'] = self.frame
+604:         state['optimizer'] = self.optimizer.state_dict()
+605: 
+606:         if self.has_central_value:
+607:             state['assymetric_vf_nets'] = self.central_value_net.state_dict()
+608: 
+609:         # This is actually the best reward ever achieved. last_mean_rewards is perhaps not the best variable name
+610:         # We save it to the checkpoint to prevent overriding the "best ever" checkpoint upon experiment restart
+611:         state['last_mean_rewards'] = self.last_mean_rewards
+612: 
+613:         if self.vec_env is not None:
+614:             env_state = self.vec_env.get_env_state()
+615:             state['env_state'] = env_state
+616: 
+617:         return state
+618: 
+619:     def set_full_state_weights(self, weights, set_epoch=True):
+620: 
+621:         self.set_weights(weights)
+622:         if set_epoch:
+623:             self.epoch_num = weights['epoch']
+624:             self.frame = weights['frame']
+625: 
+626:         if self.has_central_value:
+627:             self.central_value_net.load_state_dict(weights['assymetric_vf_nets'])
+628: 
+629:         self.optimizer.load_state_dict(weights['optimizer'])
+630: 
+631:         self.last_mean_rewards = weights.get('last_mean_rewards', -1000000000)
+632: 
+633:         if self.vec_env is not None:
+634:             env_state = weights.get('env_state', None)
+635:             self.vec_env.set_env_state(env_state)
+636: 
+637:     def get_weights(self):
+638:         state = self.get_stats_weights()
+639:         state['model'] = self.model.state_dict()
+640:         return state
+641: 
+642:     def get_stats_weights(self, model_stats=False):
+643:         state = {}
+644:         if self.mixed_precision:
+645:             state['scaler'] = self.scaler.state_dict()
+646:         if self.has_central_value:
+647:             state['central_val_stats'] = self.central_value_net.get_stats_weights(model_stats)
+648:         if model_stats:
+649:             if self.normalize_input:
+650:                 state['running_mean_std'] = self.model.running_mean_std.state_dict()
+651:             if self.normalize_value:
+652:                 state['reward_mean_std'] = self.model.value_mean_std.state_dict()
+653: 
+654:         return state
+655: 
+RL-Games 1.6.1 algos_torch/central_value.py; SHA256=6e62bcce9fe892e9245ce2cd46f06fb50f85ee9843572a4dedaf5e797f1ee7b6
+12: class CentralValueTrain(nn.Module):
+13: 
+14:     def __init__(self, state_shape, value_size, ppo_device, num_agents, horizon_length, num_actors, num_actions, 
+15:                 seq_length, normalize_value, network, config, writter, max_epochs, multi_gpu, zero_rnn_on_done):
+16:         nn.Module.__init__(self)
+17: 
+18:         self.ppo_device = ppo_device
+19:         self.num_agents, self.horizon_length, self.num_actors, self.seq_length = num_agents, horizon_length, num_actors, seq_length
+20:         self.normalize_value = normalize_value
+21:         self.num_actions = num_actions
+22:         self.state_shape = state_shape
+23:         self.value_size = value_size
+24:         self.max_epochs = max_epochs
+25:         self.multi_gpu = multi_gpu
+26:         self.truncate_grads = config.get('truncate_grads', False)
+27:         self.config = config
+28:         self.normalize_input = config['normalize_input']
+29:         self.zero_rnn_on_done = zero_rnn_on_done
+30: 
+31:         state_config = {
+32:             'value_size' : value_size,
+33:             'input_shape' : state_shape,
+34:             'actions_num' : num_actions,
+35:             'num_agents' : num_agents,
+36:             'num_seqs' : num_actors,
+37:             'normalize_input' : self.normalize_input,
+38:             'normalize_value': self.normalize_value,
+39:         }
+40: 
+41:         self.model = network.build(state_config)
+42:         self.lr = float(config['learning_rate'])
+43:         self.linear_lr = config.get('lr_schedule') == 'linear'
+44: 
+45:         # todo: support max frames as well
+46:         if self.linear_lr:
+47:             self.scheduler = schedulers.LinearScheduler(self.lr, 
+48:                 max_steps = self.max_epochs, 
+49:                 apply_to_entropy = False,
+50:                 start_entropy_coef = 0)
+51:         else:
+52:             self.scheduler = schedulers.IdentityScheduler()
+53:         
+54:         self.mini_epoch = config['mini_epochs']
+55:         assert(('minibatch_size_per_env' in self.config) or ('minibatch_size' in self.config))
+56: 
+57:         self.minibatch_size_per_env = self.config.get('minibatch_size_per_env', 0)
+58:         self.minibatch_size = self.config.get('minibatch_size', self.num_actors * self.minibatch_size_per_env)
+59:         self.num_minibatches = self.horizon_length * self.num_actors // self.minibatch_size
+60:         self.clip_value = config['clip_value']
+61: 
+62:         self.writter = writter
+63:         self.weight_decay = config.get('weight_decay', 0.0)
+64:         self.optimizer = torch.optim.Adam(self.model.parameters(), float(self.lr), eps=1e-08, weight_decay=self.weight_decay)
+65:         self.frame = 0
+66:         self.epoch_num = 0
+67:         self.running_mean_std = None
+68:         self.grad_norm = config.get('grad_norm', 1)
+69:         self.truncate_grads = config.get('truncate_grads', False)
+70:         self.e_clip = config.get('e_clip', 0.2)
+RL-Games 1.6.1 algos_torch/central_value.py; SHA256=6e62bcce9fe892e9245ce2cd46f06fb50f85ee9843572a4dedaf5e797f1ee7b6
+114:     def get_stats_weights(self, model_stats=False):
+115:         state = {}
+116:         if model_stats:
+117:             if self.normalize_input:
+118:                 state['running_mean_std'] = self.model.running_mean_std.state_dict()
+119:             if self.normalize_value:
+120:                 state['reward_mean_std'] = self.model.value_mean_std.state_dict()
+121:         return state
+122: 
+123:     def set_stats_weights(self, weights): 
+124:         pass
+125:         
+RL-Games 1.6.1 algos_torch/torch_ext.py; SHA256=3e9cf37042a89a7a5af6a28ec5599d1cb36ce2af4a77fbf60415ea9a8ef5aede
+58:     """
+59:     num_attempts = 5
+60:     for attempt in range(num_attempts):
+61:         try:
+62:             return func(*args, **kwargs)
+63:         except Exception as exc:
+64:             print(f'Exception {exc} when trying to execute {func} with args:{args} and kwargs:{kwargs}...')
+65:             wait_sec = 2 ** attempt
+66:             print(f'Waiting {wait_sec} before trying again...')
+67:             time.sleep(wait_sec)
+68: 
+69:     raise RuntimeError(f'Could not execute {func}, give up after {num_attempts} attempts...')
+70: 
+71: def safe_save(state, filename):
+72:     return safe_filesystem_op(torch.save, state, filename)
+73: 
+74: def safe_load(filename):
+75:     return safe_filesystem_op(torch.load, filename)
+76: 
+77: def save_checkpoint(filename, state):
+78:     print("=> saving checkpoint '{}'".format(filename + '.pth'))
+79:     safe_save(state, filename + '.pth')
+80: 
+81: def load_checkpoint(filename):
+82:     print("=> loading checkpoint '{}'".format(filename))
+83:     state = safe_load(filename)
+84:     return state

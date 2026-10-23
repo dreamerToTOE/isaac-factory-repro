@@ -1,0 +1,14 @@
+{
+  "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/logs/rl_games/Factory/g01_peg16_pinned/nn/last_Factory_ep_1_rew_-inf.pth",
+  "size_bytes": 212888153,
+  "sha256": "6e672dad70bbe1442e993e1541e5af3f3b723d0624f397abc8de39ed62f3be05",
+  "epoch": 1,
+  "frame": 2048,
+  "all_tensors_finite": true,
+  "optimizer_states": 22,
+  "optimizer_step_min": 15,
+  "optimizer_step_max": 15,
+  "nonzero_adam_exp_avg_states": 22,
+  "central_value_present": true,
+  "optimization_evidence_passed": true
+}

@@ -1,0 +1,8 @@
+{
+  "directory": "logs/rl_games/Factory/g01_peg4_pinned_resume_compat/summaries",
+  "scalar_tags": 0,
+  "all_logged_scalars_finite": null,
+  "passed": false,
+  "nonfinite": {},
+  "scalars": {}
+}

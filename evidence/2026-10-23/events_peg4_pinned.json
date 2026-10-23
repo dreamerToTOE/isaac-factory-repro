@@ -1,0 +1,649 @@
+{
+  "directory": "logs/rl_games/Factory/g01_peg4_pinned/summaries",
+  "scalar_tags": 50,
+  "all_logged_scalars_finite": true,
+  "passed": true,
+  "nonfinite": {},
+  "scalars": {
+    "losses/cval_loss": [
+      {
+        "step": 512,
+        "value": 1.067482829093933
+      },
+      {
+        "step": 1024,
+        "value": 0.7592917680740356
+      },
+      {
+        "step": 1536,
+        "value": 0.5356667637825012
+      }
+    ],
+    "info/cval_lr": [
+      {
+        "step": 512,
+        "value": 9.999999747378752e-05
+      },
+      {
+        "step": 1024,
+        "value": 9.999999747378752e-05
+      },
+      {
+        "step": 1536,
+        "value": 9.999999747378752e-05
+      }
+    ],
+    "performance/step_inference_rl_update_fps": [
+      {
+        "step": 0,
+        "value": 19.21892547607422
+      },
+      {
+        "step": 512,
+        "value": 18.380334854125977
+      },
+      {
+        "step": 1024,
+        "value": 18.455690383911133
+      }
+    ],
+    "performance/step_inference_fps": [
+      {
+        "step": 0,
+        "value": 19.490249633789062
+      },
+      {
+        "step": 512,
+        "value": 18.540523529052734
+      },
+      {
+        "step": 1024,
+        "value": 18.61472511291504
+      }
+    ],
+    "performance/step_fps": [
+      {
+        "step": 0,
+        "value": 19.78171157836914
+      },
+      {
+        "step": 512,
+        "value": 18.77234649658203
+      },
+      {
+        "step": 1024,
+        "value": 18.8477725982666
+      }
+    ],
+    "performance/rl_update_time": [
+      {
+        "step": 0,
+        "value": 0.37085938453674316
+      },
+      {
+        "step": 512,
+        "value": 0.24067306518554688
+      },
+      {
+        "step": 1024,
+        "value": 0.2370152473449707
+      }
+    ],
+    "performance/step_inference_time": [
+      {
+        "step": 0,
+        "value": 26.269546508789062
+      },
+      {
+        "step": 512,
+        "value": 27.615184783935547
+      },
+      {
+        "step": 1024,
+        "value": 27.50510597229004
+      }
+    ],
+    "performance/step_time": [
+      {
+        "step": 0,
+        "value": 25.882492065429688
+      },
+      {
+        "step": 512,
+        "value": 27.274160385131836
+      },
+      {
+        "step": 1024,
+        "value": 27.165014266967773
+      }
+    ],
+    "losses/a_loss": [
+      {
+        "step": 0,
+        "value": 0.004427164793014526
+      },
+      {
+        "step": 512,
+        "value": 0.00039857812225818634
+      },
+      {
+        "step": 1024,
+        "value": -0.012178887613117695
+      }
+    ],
+    "losses/c_loss": [
+      {
+        "step": 0,
+        "value": 1.1684188842773438
+      },
+      {
+        "step": 512,
+        "value": 0.8939576148986816
+      },
+      {
+        "step": 1024,
+        "value": 0.596699595451355
+      }
+    ],
+    "losses/entropy": [
+      {
+        "step": 0,
+        "value": 8.515222549438477
+      },
+      {
+        "step": 512,
+        "value": 8.524757385253906
+      },
+      {
+        "step": 1024,
+        "value": 8.537200927734375
+      }
+    ],
+    "info/last_lr": [
+      {
+        "step": 0,
+        "value": 0.0001500000071246177
+      },
+      {
+        "step": 512,
+        "value": 0.00022499999613501132
+      },
+      {
+        "step": 1024,
+        "value": 0.0003375000087544322
+      }
+    ],
+    "info/lr_mul": [
+      {
+        "step": 0,
+        "value": 1.0
+      },
+      {
+        "step": 512,
+        "value": 1.0
+      },
+      {
+        "step": 1024,
+        "value": 1.0
+      }
+    ],
+    "info/e_clip": [
+      {
+        "step": 0,
+        "value": 0.20000000298023224
+      },
+      {
+        "step": 512,
+        "value": 0.20000000298023224
+      },
+      {
+        "step": 1024,
+        "value": 0.20000000298023224
+      }
+    ],
+    "info/kl": [
+      {
+        "step": 0,
+        "value": 0.035050615668296814
+      },
+      {
+        "step": 512,
+        "value": 0.005967019125819206
+      },
+      {
+        "step": 1024,
+        "value": 0.007007277570664883
+      }
+    ],
+    "info/epochs": [
+      {
+        "step": 0,
+        "value": 1.0
+      },
+      {
+        "step": 512,
+        "value": 2.0
+      },
+      {
+        "step": 1024,
+        "value": 3.0
+      }
+    ],
+    "logs_rew_kp_baseline/frame": [
+      {
+        "step": 0,
+        "value": 0.1640961617231369
+      },
+      {
+        "step": 512,
+        "value": 0.16406625509262085
+      },
+      {
+        "step": 1024,
+        "value": 0.1637861132621765
+      }
+    ],
+    "logs_rew_kp_baseline/iter": [
+      {
+        "step": 1,
+        "value": 0.1640961617231369
+      },
+      {
+        "step": 2,
+        "value": 0.16406625509262085
+      },
+      {
+        "step": 3,
+        "value": 0.1637861132621765
+      }
+    ],
+    "logs_rew_kp_baseline/time": [
+      {
+        "step": 26,
+        "value": 0.1640961617231369
+      },
+      {
+        "step": 54,
+        "value": 0.16406625509262085
+      },
+      {
+        "step": 82,
+        "value": 0.1637861132621765
+      }
+    ],
+    "logs_rew_kp_coarse/frame": [
+      {
+        "step": 0,
+        "value": 0.04567524045705795
+      },
+      {
+        "step": 512,
+        "value": 0.0425112247467041
+      },
+      {
+        "step": 1024,
+        "value": 0.0402890108525753
+      }
+    ],
+    "logs_rew_kp_coarse/iter": [
+      {
+        "step": 1,
+        "value": 0.04567524045705795
+      },
+      {
+        "step": 2,
+        "value": 0.0425112247467041
+      },
+      {
+        "step": 3,
+        "value": 0.0402890108525753
+      }
+    ],
+    "logs_rew_kp_coarse/time": [
+      {
+        "step": 26,
+        "value": 0.04567524045705795
+      },
+      {
+        "step": 54,
+        "value": 0.0425112247467041
+      },
+      {
+        "step": 82,
+        "value": 0.0402890108525753
+      }
+    ],
+    "logs_rew_kp_fine/frame": [
+      {
+        "step": 0,
+        "value": 0.002964820945635438
+      },
+      {
+        "step": 512,
+        "value": 0.0021898015402257442
+      },
+      {
+        "step": 1024,
+        "value": 0.0024046332109719515
+      }
+    ],
+    "logs_rew_kp_fine/iter": [
+      {
+        "step": 1,
+        "value": 0.002964820945635438
+      },
+      {
+        "step": 2,
+        "value": 0.0021898015402257442
+      },
+      {
+        "step": 3,
+        "value": 0.0024046332109719515
+      }
+    ],
+    "logs_rew_kp_fine/time": [
+      {
+        "step": 26,
+        "value": 0.002964820945635438
+      },
+      {
+        "step": 54,
+        "value": 0.0021898015402257442
+      },
+      {
+        "step": 82,
+        "value": 0.0024046332109719515
+      }
+    ],
+    "logs_rew_action_penalty/frame": [
+      {
+        "step": 0,
+        "value": 1.2286717891693115
+      },
+      {
+        "step": 512,
+        "value": 1.135762333869934
+      },
+      {
+        "step": 1024,
+        "value": 1.0562597513198853
+      }
+    ],
+    "logs_rew_action_penalty/iter": [
+      {
+        "step": 1,
+        "value": 1.2286717891693115
+      },
+      {
+        "step": 2,
+        "value": 1.135762333869934
+      },
+      {
+        "step": 3,
+        "value": 1.0562597513198853
+      }
+    ],
+    "logs_rew_action_penalty/time": [
+      {
+        "step": 26,
+        "value": 1.2286717891693115
+      },
+      {
+        "step": 54,
+        "value": 1.135762333869934
+      },
+      {
+        "step": 82,
+        "value": 1.0562597513198853
+      }
+    ],
+    "logs_rew_action_grad_penalty/frame": [
+      {
+        "step": 0,
+        "value": 0.4031730890274048
+      },
+      {
+        "step": 512,
+        "value": 0.3763820230960846
+      },
+      {
+        "step": 1024,
+        "value": 0.31385165452957153
+      }
+    ],
+    "logs_rew_action_grad_penalty/iter": [
+      {
+        "step": 1,
+        "value": 0.4031730890274048
+      },
+      {
+        "step": 2,
+        "value": 0.3763820230960846
+      },
+      {
+        "step": 3,
+        "value": 0.31385165452957153
+      }
+    ],
+    "logs_rew_action_grad_penalty/time": [
+      {
+        "step": 26,
+        "value": 0.4031730890274048
+      },
+      {
+        "step": 54,
+        "value": 0.3763820230960846
+      },
+      {
+        "step": 82,
+        "value": 0.31385165452957153
+      }
+    ],
+    "logs_rew_curr_engaged/frame": [
+      {
+        "step": 0,
+        "value": 0.0
+      },
+      {
+        "step": 512,
+        "value": 0.0
+      },
+      {
+        "step": 1024,
+        "value": 0.0
+      }
+    ],
+    "logs_rew_curr_engaged/iter": [
+      {
+        "step": 1,
+        "value": 0.0
+      },
+      {
+        "step": 2,
+        "value": 0.0
+      },
+      {
+        "step": 3,
+        "value": 0.0
+      }
+    ],
+    "logs_rew_curr_engaged/time": [
+      {
+        "step": 26,
+        "value": 0.0
+      },
+      {
+        "step": 54,
+        "value": 0.0
+      },
+      {
+        "step": 82,
+        "value": 0.0
+      }
+    ],
+    "logs_rew_curr_successes/frame": [
+      {
+        "step": 0,
+        "value": 0.0
+      },
+      {
+        "step": 512,
+        "value": 0.0
+      },
+      {
+        "step": 1024,
+        "value": 0.0
+      }
+    ],
+    "logs_rew_curr_successes/iter": [
+      {
+        "step": 1,
+        "value": 0.0
+      },
+      {
+        "step": 2,
+        "value": 0.0
+      },
+      {
+        "step": 3,
+        "value": 0.0
+      }
+    ],
+    "logs_rew_curr_successes/time": [
+      {
+        "step": 26,
+        "value": 0.0
+      },
+      {
+        "step": 54,
+        "value": 0.0
+      },
+      {
+        "step": 82,
+        "value": 0.0
+      }
+    ],
+    "losses/bounds_loss": [
+      {
+        "step": 0,
+        "value": 0.0
+      },
+      {
+        "step": 512,
+        "value": 0.0
+      },
+      {
+        "step": 1024,
+        "value": 0.0
+      }
+    ],
+    "successes/frame": [
+      {
+        "step": 512,
+        "value": 0.0
+      },
+      {
+        "step": 1024,
+        "value": 0.0
+      }
+    ],
+    "successes/iter": [
+      {
+        "step": 2,
+        "value": 0.0
+      },
+      {
+        "step": 3,
+        "value": 0.0
+      }
+    ],
+    "successes/time": [
+      {
+        "step": 54,
+        "value": 0.0
+      },
+      {
+        "step": 82,
+        "value": 0.0
+      }
+    ],
+    "rewards/step": [
+      {
+        "step": 512,
+        "value": 36.58393096923828
+      },
+      {
+        "step": 1024,
+        "value": 35.642051696777344
+      }
+    ],
+    "rewards/iter": [
+      {
+        "step": 2,
+        "value": 36.58393096923828
+      },
+      {
+        "step": 3,
+        "value": 35.642051696777344
+      }
+    ],
+    "rewards/time": [
+      {
+        "step": 54,
+        "value": 36.58393096923828
+      },
+      {
+        "step": 82,
+        "value": 35.642051696777344
+      }
+    ],
+    "shaped_rewards/step": [
+      {
+        "step": 512,
+        "value": 39.22645568847656
+      },
+      {
+        "step": 1024,
+        "value": 39.33782196044922
+      }
+    ],
+    "shaped_rewards/iter": [
+      {
+        "step": 2,
+        "value": 39.22645568847656
+      },
+      {
+        "step": 3,
+        "value": 39.33782196044922
+      }
+    ],
+    "shaped_rewards/time": [
+      {
+        "step": 54,
+        "value": 39.22645568847656
+      },
+      {
+        "step": 82,
+        "value": 39.33782196044922
+      }
+    ],
+    "episode_lengths/step": [
+      {
+        "step": 512,
+        "value": 149.0
+      }
+    ],
+    "episode_lengths/iter": [
+      {
+        "step": 2,
+        "value": 149.0
+      }
+    ],
+    "episode_lengths/time": [
+      {
+        "step": 54,
+        "value": 149.0
+      }
+    ]
+  }
+}

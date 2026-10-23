@@ -1,0 +1,2 @@
+# Preserve captured console whitespace and the CSV writer's CRLF bytes exactly.
+evidence/** -text -whitespace

@@ -1,0 +1,33 @@
+{
+  "started_utc": "2026-10-23T02:50:24.449662+00:00",
+  "command": [
+    "env",
+    "FACTORY_VENV=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01",
+    "OMP_NUM_THREADS=4",
+    "bash",
+    "outputs/isaac-factory-repro/scripts/run_sim.sh",
+    "work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py",
+    "--headless",
+    "--device",
+    "cuda:0",
+    "--task",
+    "Isaac-Factory-PegInsert-Direct-v0",
+    "--num_envs",
+    "16",
+    "--seed",
+    "0",
+    "--max_iterations",
+    "1",
+    "agent.params.config.full_experiment_name=g01_peg16_pinned",
+    "agent.params.config.save_frequency=1",
+    "agent.params.config.save_best_after=0"
+  ],
+  "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been",
+  "returncode": 0,
+  "timeout": false,
+  "duration_seconds": 46.832,
+  "peak_total_gpu_used_MiB": 5659,
+  "peak_test_process_gpu_used_MiB": 4042,
+  "sample_interval_seconds": 1,
+  "measurement_note": "Sampled maxima, total GPU includes desktop; actual interval includes nvidia-smi latency"
+}

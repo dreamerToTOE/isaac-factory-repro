@@ -218,3 +218,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# G0/G1 generated simulation and learning artifacts
+logs/
+checkpoints/
+*.pth
+*.pkl
+core
+core.*

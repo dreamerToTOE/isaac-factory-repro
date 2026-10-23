@@ -1,0 +1,26 @@
+{
+  "started_utc": "2026-10-23T02:49:16.268024+00:00",
+  "command": [
+    "env",
+    "FACTORY_VENV=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01",
+    "OMP_NUM_THREADS=4",
+    "bash",
+    "outputs/isaac-factory-repro/scripts/run_sim.sh",
+    "outputs/isaac-factory-repro/scripts/factory_probe.py",
+    "--headless",
+    "--device",
+    "cuda:0",
+    "--num_envs",
+    "1",
+    "--steps",
+    "160"
+  ],
+  "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been",
+  "returncode": 0,
+  "timeout": false,
+  "duration_seconds": 47.863,
+  "peak_total_gpu_used_MiB": 5131,
+  "peak_test_process_gpu_used_MiB": 3470,
+  "sample_interval_seconds": 1,
+  "measurement_note": "Sampled maxima, total GPU includes desktop; actual interval includes nvidia-smi latency"
+}

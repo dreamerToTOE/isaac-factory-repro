@@ -1,0 +1,38 @@
+[
+  {
+    "run": "g01_peg4_pinned",
+    "current_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g01_peg4_pinned/nn/Factory.pth",
+    "size_bytes": 212885999,
+    "sha256": "8cc8b09a6268ebbf853649c44129e4e5d422c6a4255d974c3336595ff96c806c"
+  },
+  {
+    "run": "g01_peg4_pinned",
+    "current_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g01_peg4_pinned/nn/last_Factory_ep_2_rew_36.58393.pth",
+    "size_bytes": 212888593,
+    "sha256": "78eb7e9a5e44b29cc733d4decf620331fdcb1d00e73154ac8df2b90c62653da8"
+  },
+  {
+    "run": "g01_peg4_pinned",
+    "current_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g01_peg4_pinned/nn/last_Factory_ep_3_rew_35.64205.pth",
+    "size_bytes": 212888785,
+    "sha256": "4f56ed35a2673f0a286e977e98550487714f2dcf5d7bc67ba5d7b423fca5afa9"
+  },
+  {
+    "run": "g01_peg4_pinned",
+    "current_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g01_peg4_pinned/nn/last_Factory_ep_3_rew__35.64205_.pth",
+    "size_bytes": 212889005,
+    "sha256": "6dd7f429bef5aede4c9d55fa1da54858f47569b182a044c5b634fb94952de442"
+  },
+  {
+    "run": "g01_peg4_pinned_resume_compat",
+    "current_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g01_peg4_pinned_resume_compat/nn/last_Factory_ep_4_rew_-inf.pth",
+    "size_bytes": 212888153,
+    "sha256": "5952151b497ed38c5775703b967ee743a4aa293dcc06cb7f9e16ee4b75e77208"
+  },
+  {
+    "run": "g01_peg16_pinned",
+    "current_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g01_peg16_pinned/nn/last_Factory_ep_1_rew_-inf.pth",
+    "size_bytes": 212888153,
+    "sha256": "6e672dad70bbe1442e993e1541e5af3f3b723d0624f397abc8de39ed62f3be05"
+  }
+]

@@ -1,0 +1,29 @@
+Git transport audit; 2026-10-23T03:03:26.029541+00:00
+No credentials read or changed; no actual push.
+
+$ git ls-remote origin refs/heads/main
+fatal: 无法访问 'https://github.com/dreamerToTOE/isaac-factory-repro.git/'：gnutls_handshake() failed: The TLS connection was non-properly terminated.
+[exit=128]
+
+$ git config --get-all credential.helper
+[exit=1]
+
+$ git push --dry-run origin main
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+[exit=128]
+
+$ ssh -G git@github.com
+user git
+hostname ssh.github.com
+port 443
+[exit=0]
+
+$ ssh -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=10 -T git@github.com
+Hi dreamerToTOE! You've successfully authenticated, but GitHub does not provide shell access.
+[exit=1]
+
+Initial HTTPS clone/read worked; final HTTPS read had a transient TLS failure. HTTPS push still lacks credentials. Earlier SSH handshakes failed, but this final ssh -T authenticated as dreamerToTOE successfully (exit 1 is expected because GitHub provides no shell). No credential or SSH configuration was changed.
+
+$ git -c core.sshCommand=ssh -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=10 push --dry-run git@github.com:dreamerToTOE/isaac-factory-repro.git main
+Everything up-to-date
+[exit=0]

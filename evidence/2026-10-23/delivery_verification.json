@@ -1,0 +1,98 @@
+{
+  "local_link_errors": [],
+  "original_files_preserved": true,
+  "script_hashes_match": true,
+  "agent_config_differences": {
+    "g01_peg4_pinned_resume_compat": [
+      [
+        ".params.load_path",
+        "",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/logs/rl_games/Factory/g01_peg4_pinned/nn/last_Factory_ep_3_rew__35.64205_.pth"
+      ],
+      [
+        ".params.config.train_dir",
+        null,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/logs/rl_games/Factory"
+      ],
+      [
+        ".params.config.full_experiment_name",
+        "test",
+        "g01_peg4_pinned_resume_compat"
+      ],
+      [
+        ".params.config.save_best_after",
+        10,
+        0
+      ],
+      [
+        ".params.config.max_epochs",
+        200,
+        4
+      ],
+      [
+        ".params.config.save_frequency",
+        100,
+        1
+      ],
+      [
+        ".params.load_checkpoint",
+        false,
+        true
+      ]
+    ],
+    "g01_peg16_pinned": [
+      [
+        ".params.config.train_dir",
+        null,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/logs/rl_games/Factory"
+      ],
+      [
+        ".params.config.full_experiment_name",
+        "test",
+        "g01_peg16_pinned"
+      ],
+      [
+        ".params.config.save_best_after",
+        10,
+        0
+      ],
+      [
+        ".params.config.max_epochs",
+        200,
+        1
+      ],
+      [
+        ".params.config.save_frequency",
+        100,
+        1
+      ]
+    ],
+    "g01_peg4_pinned": [
+      [
+        ".params.config.train_dir",
+        null,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/logs/rl_games/Factory"
+      ],
+      [
+        ".params.config.full_experiment_name",
+        "test",
+        "g01_peg4_pinned"
+      ],
+      [
+        ".params.config.save_best_after",
+        10,
+        0
+      ],
+      [
+        ".params.config.max_epochs",
+        200,
+        3
+      ],
+      [
+        ".params.config.save_frequency",
+        100,
+        1
+      ]
+    ]
+  }
+}

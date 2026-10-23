@@ -1,0 +1,26 @@
+Using Python 3.10.12 environment at: work/envs/factory-g01
+WARN Retry attempt #0. Sleeping 1.113224578s before the next attempt
+error: Failed to build `flatdict==4.0.1`
+  cause: The build backend returned an error
+  cause: Call to `setuptools.build_meta:__legacy__.build_wheel` failed (exit status: 1)
+
+         [stderr]
+         Traceback (most recent call last):
+           File "<string>", line 14, in <module>
+           File "/home/ubuntu2004/.cache/uv/builds-v0/.tmpsiYuRB/lib/python3.10/site-packages/setuptools/build_meta.py", line 333, in get_requires_for_build_wheel
+             return self._get_build_requires(config_settings, requirements=[])
+           File "/home/ubuntu2004/.cache/uv/builds-v0/.tmpsiYuRB/lib/python3.10/site-packages/setuptools/build_meta.py", line 301, in _get_build_requires
+             self.run_setup()
+           File "/home/ubuntu2004/.cache/uv/builds-v0/.tmpsiYuRB/lib/python3.10/site-packages/setuptools/build_meta.py", line 520, in run_setup
+             super().run_setup(setup_script=setup_script)
+           File "/home/ubuntu2004/.cache/uv/builds-v0/.tmpsiYuRB/lib/python3.10/site-packages/setuptools/build_meta.py", line 317, in run_setup
+             exec(code, locals())  # noqa: S102 # exec is intentional here
+           File "<string>", line 1, in <module>
+         ModuleNotFoundError: No module named 'pkg_resources'
+
+hint: This error likely indicates that `flatdict@4.0.1` depends on `pkg_resources`, but doesn't declare it as a build dependency. If `flatdict` is a first-party package, consider adding `pkg_resources` to its `build-system.requires`. Otherwise, either add it to your `pyproject.toml` under:
+
+[tool.uv.extra-build-dependencies]
+flatdict = ["pkg_resources"]
+
+or `uv pip install pkg_resources` into the environment and re-run with `--no-build-isolation`.

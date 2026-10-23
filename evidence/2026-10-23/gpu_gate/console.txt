@@ -1,0 +1,140 @@
+[Info] [carb] Logging to file: /home/ubuntu2004/isaacsim-4.5.0/kit/logs/Kit/Isaac-Sim Python/4.5/kit_20261023_110023.log
+2026-10-23 02:00:23 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+[8.316s] [ext: omni.kit.async_engine-0.0.1] startup
+[8.950s] [ext: omni.metrics.core-0.0.1] startup
+[8.983s] [ext: omni.client.lib-1.0.0] startup
+[14.330s] [ext: omni.blobkey-1.1.2] startup
+[14.573s] [ext: omni.stats-1.0.1] startup
+[14.603s] [ext: omni.datastore-0.0.0] startup
+[15.080s] [ext: omni.client-1.2.2] startup
+[16.529s] [ext: omni.ujitso.default-1.0.0] startup
+[16.724s] [ext: omni.hsscclient-1.1.1] startup
+2026-10-23 02:00:38 [14,841ms] [Warning] [omni.datastore] OmniHub is inaccessible
+[18.989s] [ext: omni.gpu_foundation.shadercache.vulkan-1.0.0] startup
+[19.931s] [ext: omni.assets.plugins-0.0.0] startup
+[23.374s] [ext: omni.gpu_foundation-0.0.0] startup
+[42.900s] [ext: carb.windowing.plugins-1.0.0] startup
+[43.911s] [ext: omni.kit.renderer.init-0.0.0] startup
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 580.178.04    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 3070          | Yes: 0 |     | 8438    MB | 10de      | 0          |
+|     |                                  |        |     |            | 2488      | ba060710.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 22.04.5 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.5, Kernel: 6.8.0-138-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12101004 (1.21.1.4)
+| Processor: Intel(R) Core(TM) i7-10700F CPU @ 2.90GHz
+| Cores: 8 | Logical Cores: 16
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 48107 | Free Memory: 37629
+| Total Page/Swap (MB): 2047 | Free Page/Swap: 2047
+|---------------------------------------------------------------------------------------------|
+[69.910s] [ext: omni.kit.pipapi-0.0.0] startup
+[69.957s] [ext: omni.kit.pip_archive-0.0.0] startup
+[69.958s] [ext: omni.pip.compute-1.4.5] startup
+[69.958s] [ext: omni.materialx.libs-1.0.6] startup
+[70.114s] [ext: omni.kit.telemetry-0.5.1] startup
+[70.246s] [ext: omni.pip.cloud-1.1.7] startup
+[70.250s] [ext: omni.isaac.core_archive-2.3.3] startup
+[70.251s] [ext: omni.usd.config-1.0.5] startup
+[70.255s] [ext: omni.gpucompute.plugins-0.0.0] startup
+[70.403s] [ext: omni.usd.libs-1.0.1] startup
+[79.406s] [ext: omni.isaac.ml_archive-2.1.2] startup
+[79.433s] [ext: omni.mdl-55.0.1] startup
+[80.706s] [ext: omni.iray.libs-0.0.0] startup
+[83.086s] [ext: omni.mdl.neuraylib-0.2.10] startup
+[83.158s] [ext: omni.kit.usd.mdl-1.0.7] startup
+[96.428s] [ext: omni.kit.loop-isaac-1.2.1] startup
+[96.622s] [ext: omni.kit.test-1.1.2] startup
+[103.058s] [ext: omni.appwindow-1.1.9] startup
+[103.476s] [ext: omni.kit.renderer.core-1.0.2] startup
+[104.569s] [ext: omni.kit.renderer.capture-0.0.0] startup
+[105.038s] [ext: omni.kit.renderer.imgui-1.0.2] startup
+[108.748s] [ext: omni.ui-2.26.5] startup
+[113.558s] [ext: omni.kit.mainwindow-1.0.3] startup
+[114.086s] [ext: carb.audio-0.1.0] startup
+[115.157s] [ext: omni.uiaudio-1.0.0] startup
+[115.890s] [ext: omni.kit.uiapp-0.0.0] startup
+[115.890s] [ext: omni.usd.schema.metrics.assembler-106.5.0] startup
+[116.241s] [ext: omni.usd.schema.anim-0.0.0] startup
+[118.253s] [ext: omni.usd.schema.isaac-3.0.2] startup
+[118.253s] [ext: omni.usd.schema.geospatial-0.0.0] startup
+[118.459s] [ext: omni.usd.schema.physx-106.5.7] startup
+[128.798s] [ext: omni.usd.schema.audio-0.0.0] startup
+[129.325s] [ext: omni.usd.schema.semantics-0.0.0] startup
+[129.734s] [ext: omni.usd_resolver-1.0.0] startup
+[130.192s] [ext: usdrt.scenegraph-7.5.1] startup
+[139.565s] [ext: omni.kit.actions.core-1.0.0] startup
+[141.334s] [ext: omni.timeline-1.0.11] startup
+[141.580s] [ext: omni.usd.core-1.4.2] startup
+[141.825s] [ext: omni.resourcemonitor-107.0.0] startup
+[142.259s] [ext: omni.activity.core-1.0.1] startup
+[142.370s] [ext: omni.kit.audiodeviceenum-1.0.1] startup
+[142.859s] [ext: omni.hydra.usdrt_delegate-7.5.1] startup
+[144.541s] [ext: omni.graph.exec-0.9.4] startup
+[144.567s] [ext: omni.kit.window.popup_dialog-2.0.24] startup
+[144.709s] [ext: omni.kit.exec.core-0.13.4] startup
+[144.882s] [ext: omni.kit.widget.nucleus_connector-1.1.10] startup
+[144.903s] [ext: omni.kit.usd_undo-0.1.8] startup
+[144.904s] [ext: omni.kit.commands-1.4.9] startup
+[145.173s] [ext: omni.hydra.scene_delegate-0.3.3] startup
+[147.565s] [ext: omni.usd-1.12.4] startup
+[151.284s] [ext: omni.kit.asset_converter-2.8.3] startup
+[157.533s] [ext: omni.usd.schema.omniscripting-1.0.0] startup
+[159.301s] [ext: omni.usd.schema.omnigraph-1.0.0] startup
+[162.872s] [ext: omni.usd.schema.forcefield-106.5.7] startup
+[164.699s] [ext: isaacsim.robot.schema-3.1.2] startup
+[165.735s] [ext: omni.inspect-1.0.1] startup
+[165.860s] [ext: omni.kit.notification_manager-1.0.9] startup
+[165.891s] [ext: omni.graph.core-2.181.8] startup
+[168.134s] [ext: isaacsim.core.deprecation_manager-0.2.2] startup
+[168.445s] [ext: omni.index.libs-380600.1777.0] startup
+[168.445s] [ext: omni.ujitso.processor.texture-1.0.0] startup
+[168.558s] [ext: omni.index-1.0.1] startup
+[168.748s] [ext: omni.kit.widget.path_field-2.0.11] startup
+[169.278s] [ext: omni.volume-0.5.0] startup
+[172.652s] [ext: omni.ujitso.client-0.0.0] startup
+[172.854s] [ext: omni.hydra.rtx.shadercache.vulkan-1.0.0] startup
+[172.856s] [ext: omni.kit.widget.browser_bar-2.0.10] startup
+[173.830s] [ext: omni.kit.clipboard-1.0.5] startup
+[174.593s] [ext: omni.hydra.rtx-1.0.0] startup
+2026-10-23 02:03:19 [175,599ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+[184.895s] [ext: omni.kit.viewport.registry-104.0.6] startup
+[185.275s] [ext: omni.kit.helper.file_utils-0.1.9] startup
+[185.952s] [ext: omni.kit.widget.options_menu-1.1.6] startup
+[188.199s] [ext: omni.kit.menu.core-1.1.2] startup
+[188.315s] [ext: omni.kit.widget.filebrowser-2.10.52] startup
+[189.047s] [ext: omni.ui.scene-1.11.2] startup
+[190.009s] [ext: omni.kit.widget.options_button-1.0.3] startup
+[190.139s] [ext: omni.kit.widget.context_menu-1.2.4] startup
+[190.201s] [ext: omni.kit.viewport.legacy_gizmos-1.0.16] startup
+[190.315s] [ext: omni.kit.usd.layers-2.2.0] startup
+[191.767s] [ext: omni.kit.window.filepicker-2.11.7] startup
+[192.508s] [ext: omni.kit.hydra_texture-1.4.0] startup
+[193.443s] [ext: omni.kit.viewport.scene_camera_model-1.0.5] startup
+[194.337s] [ext: omni.kit.context_menu-1.8.3] startup
+[194.630s] [ext: omni.kit.window.file_importer-1.1.14] startup
+[195.099s] [ext: omni.kit.menu.utils-1.7.7] startup
+[197.109s] [ext: omni.kit.widget.viewport-107.0.7] startup
+[198.785s] [ext: omni.kit.window.drop_support-1.0.4] startup
+[198.786s] [ext: omni.kit.raycast.query-1.0.5] startup
+[199.403s] [ext: omni.kit.material.library-1.5.15] startup
+[200.644s] [ext: omni.hydra.engine.stats-1.0.3] startup
+[200.845s] [ext: omni.kit.viewport.window-107.0.8] startup
+[202.408s] [ext: omni.warp.core-1.5.0] startup
+[204.352s] [ext: omni.kit.viewport.utility-1.0.18] startup
+[204.873s] [ext: omni.kit.hotkeys.core-1.3.10] startup
+[204.874s] [ext: omni.kit.widget.prompt-1.0.7] startup
+[204.912s] [ext: omni.kit.usd.collect-2.2.22] startup
+[205.145s] [ext: omni.kit.window.content_browser_registry-0.0.6] startup
+[205.201s] [ext: omni.graph.tools-1.79.1] startup
+[210.058s] [ext: omni.kit.window.file_exporter-1.0.31] startup
+[210.360s] [ext: omni.kit.stage_template.core-1.1.22] startup
+[210.361s] [ext: omni.graph.image.core-0.6.0] startup
+[210.423s] [ext: omni.graph.acti
