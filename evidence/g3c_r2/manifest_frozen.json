@@ -29,11 +29,15 @@
       "experiment_name": "g3cr2_peginsert_32env_seed0_baseline_400ep",
       "horizon_length": 128,
       "label": "PegInsert 32-env / 400-epoch baseline",
+      "launch_root": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep",
       "num_envs": 32,
       "planned_transitions": 1638400,
       "restore": false,
+      "run_dir": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_peginsert_32env_seed0_baseline_400ep",
       "run_root": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep",
-      "seed": 0
+      "save_frequency": 50,
+      "seed": 0,
+      "status": "FROZEN_BEFORE_FULL_32ENV_SEED0"
     },
     "phase_c_authorization": "Approved fallback by user; stop after seed0 baseline and request review before seed1/2.",
     "smoke": {
@@ -92,6 +96,7 @@
     },
     "status": "FROZEN_BEFORE_32_SMOKE"
   },
+  "full_training_frozen": true,
   "phase_a": {
     "active_training_processes": false,
     "compute_process": "gnome-remote-desktop pid2882 157MiB",
@@ -180,6 +185,85 @@
     "schema_version": "g3c_r2_64smoke_receipt_v1",
     "status": "MARGIN_FAIL_NO_GO"
   },
+  "phase_c_smoke_result": {
+    "artifacts": {
+      "guard/samples.csv": {
+        "bytes": 105312,
+        "sha256": "317086628018255013fdc8201f9d3c22cd5596f5b4f0ce5b016ecf5c20291fa7"
+      },
+      "guard/status.json": {
+        "bytes": 1685,
+        "sha256": "09a031317bf71ee29df5c7fa9bc586f99b2903722a0059b9e8944765e308a2c3"
+      },
+      "launch.json": {
+        "bytes": 5940,
+        "sha256": "5177be922a1b1091a277e7dca9f365f7c0ab6507d6f119d0b102a7f14944c937"
+      },
+      "supervisor/child_exit.json": {
+        "bytes": 368,
+        "sha256": "e396379cbfefda05b1dca05aecccb3f68c4bf4f60363a5c15008cd960761230c"
+      },
+      "supervisor/command.json": {
+        "bytes": 2089,
+        "sha256": "73d7900fb6dc1f4963eddb332a8a9666e48e2ec8901baa2cc03527b6182966a6"
+      },
+      "supervisor/console.txt": {
+        "bytes": 8436,
+        "sha256": "96e9db2562e53268dcd83df554c31eda01f39e3fee70c10fe9ac524334e5bfc5"
+      },
+      "supervisor/exec_release.json": {
+        "bytes": 341,
+        "sha256": "78cc6f7cdf063b3c5527d14a73352843275ada93aad7390cda7b2e1708de8089"
+      },
+      "supervisor/status.json": {
+        "bytes": 1879,
+        "sha256": "db0f558717e9c4c7163b30896869151632e45a75ba249b0c81d4f5ab10a70f39"
+      },
+      "supervisor/tensorboard_finalizer.json": {
+        "bytes": 335,
+        "sha256": "9d4892221bbcb720f5e258363052401aac4e411518d0167b1a631cc7d449277a"
+      },
+      "supervisor/training_audit.json": {
+        "bytes": 6390,
+        "sha256": "afb47f0ad5e35034bf6776f8898801baea26daa798afa773be0bc9dc875d1b97"
+      }
+    },
+    "checkpoint_hashes": {
+      "nn/last_Factory_ep_2_rew_35.205788.pth": {
+        "bytes": 212888703,
+        "sha256": "422d00ef8a4214f57812488fb9424cdb8fc9932a1462e12eeba9314b574f4c8e"
+      },
+      "nn/last_Factory_ep_2_rew__35.205788_.pth": {
+        "bytes": 212888923,
+        "sha256": "78bc227f38a13998493a989ad63b6017d0eb1c1ab3daca0998a5c2c60da76e23"
+      }
+    },
+    "experiment_name": "g3cr2_32env_seed0_capacity_smoke",
+    "gates": {
+      "amp_skips": 1,
+      "checkpoint_created": true,
+      "child_exit0": true,
+      "epochs": 2,
+      "finite_optimizer_values": true,
+      "guard_no_trigger": true,
+      "monitoring_gaps": [],
+      "optimizer_steps": {
+        "actor": 63,
+        "central_value": 64
+      },
+      "tensorboard_finalizer_complete": true,
+      "transitions": 8192
+    },
+    "memory": {
+      "min_free_MiB": 1604.4375,
+      "peak_used_MiB": 6213.1875,
+      "required_approx_margin_MiB": 1536
+    },
+    "recorded_utc": "2026-10-25T13:29:10.265073+00:00",
+    "run_root": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_32env_seed0_2ep",
+    "schema_version": "g3c_r2_32smoke_receipt_v1",
+    "status": "PASS_CAPACITY_SMOKE"
+  },
   "prohibited": [
     "no long training before smoke passes",
     "no seed2",
@@ -252,5 +336,5 @@
     "seed": 1
   },
   "starting_commit": "32f784b43011470615dec251984aca26716a4b86",
-  "status": "64_SMOKE_MARGIN_NO_GO_FALLBACK_32_PENDING"
+  "status": "32_SMOKE_PASS_FULL_BASELINE_PENDING"
 }
