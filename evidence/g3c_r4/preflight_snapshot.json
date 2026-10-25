@@ -1,0 +1,103 @@
+{
+  "schema_version": "g3cr4_readonly_preflight_v1",
+  "recorded_utc": "2026-10-25T13:59:16.876430+00:00",
+  "starting_commit": "3bdbadd6b6289c778ccf805d8cd8009e3a9dc7b1",
+  "repository": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+  "repo_head": {
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "returncode": 0,
+    "stdout": "3bdbadd6b6289c778ccf805d8cd8009e3a9dc7b1",
+    "stderr": ""
+  },
+  "repo_status": {
+    "argv": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "returncode": 0,
+    "stdout": "?? docs/DEMO_G3V.md\n?? evidence/g3v/\n?? scripts/complete_g3cr4.py\n?? scripts/g3cr4_launch.py\n?? scripts/g3v_playback.sh\n?? tests/test_g3cr4_supervision.py",
+    "stderr": ""
+  },
+  "upstream_head": {
+    "argv": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "returncode": 0,
+    "stdout": "90b79bb2d44feb8d833f260f2bf37da3487180ba",
+    "stderr": ""
+  },
+  "upstream_status": {
+    "argv": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "gpu_snapshot_informational_only": {
+    "argv": [
+      "nvidia-smi",
+      "--query-gpu=timestamp,index,name,uuid,memory.total,memory.used,memory.free,driver_version",
+      "--format=csv,noheader"
+    ],
+    "returncode": 0,
+    "stdout": "2026/10/25 23:00:16.626, 0, NVIDIA GeForce RTX 3070, GPU-ba060710-df91-35b6-8625-caf10dc0f3c4, 8192 MiB, 2406 MiB, 5413 MiB, 580.178.04",
+    "stderr": ""
+  },
+  "ram": {
+    "argv": [
+      "free",
+      "-m"
+    ],
+    "returncode": 0,
+    "stdout": "total        used        free      shared  buff/cache   available\n内存：      48107       12933        8749         442       26424       35030\n交换：       2047           0        2047",
+    "stderr": ""
+  },
+  "disk": {
+    "argv": [
+      "df",
+      "-h",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been"
+    ],
+    "returncode": 0,
+    "stdout": "文件系统        大小  已用  可用 已用% 挂载点\n/dev/sdb3       724G  310G  377G   46% /",
+    "stderr": ""
+  },
+  "processes": {
+    "argv": [
+      "ps",
+      "-eo",
+      "pid,ppid,stat,args"
+    ],
+    "returncode": 0,
+    "stdout": " 124137  112084 Ss   python3 work/g3cr4_manifest/build_preflight.py\n 125259  112084 Ss   /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python -m pytest -q tests/test_g3cr4_supervision.py\n 125278  125259 D    /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g3cr4_launch.py --output /tmp/pytest-of-ubuntu2004/pytest-44/test_nonzero_child_exit_is_exa0/run --unit-prefix g3cr4-cpu-test --cwd /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro --lock-file /tmp/pytest-of-ubuntu2004/pytest-44/test_nonzero_child_exit_is_exa0/lock --timeout 10 --monitoring-policy user-authorized-no-gpu-guard --wait -- /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python -c print('single attempt');raise SystemExit(7)",
+    "stderr": ""
+  },
+  "user_units": {
+    "argv": [
+      "systemctl",
+      "--user",
+      "list-units",
+      "--all",
+      "--no-legend",
+      "--plain"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "global_gpu0_lock": {
+    "path": "/run/user/1000/isaac-factory-gpu0.lock",
+    "available": true
+  },
+  "note": "Read-only inventory, not a GPU free-memory, telemetry-availability, or monitoring-gap gate. No process termination, driver changes or GPU job performed."
+}

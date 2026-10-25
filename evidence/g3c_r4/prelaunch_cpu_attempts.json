@@ -1,0 +1,31 @@
+{
+  "attempt01": {
+    "tests": 140,
+    "passed": 139,
+    "failed": 1,
+    "duration_seconds": 29.22,
+    "failure": "legacy test_supervisor_crash_is_detected_independently expected supervisor_lost_or_stale but actual monitoring_gap",
+    "single_test_recheck": {
+      "passed": 1,
+      "duration_seconds": 0.89
+    },
+    "changes_to_existing_guard_or_test": false
+  },
+  "attempt02": {
+    "tests": 154,
+    "passed": 153,
+    "failed": 1,
+    "duration_seconds": 30.77,
+    "failure": "legacy test_monitor_exception_stops_child_and_records_failure expected monitor_failed but actual monitoring_gap",
+    "changes_to_existing_guard_or_test": false
+  },
+  "attempt03": {
+    "tests": 164,
+    "passed": 164,
+    "failed": 0,
+    "duration_seconds": 12.8,
+    "temporary_base": "/dev/shm/g3cr4-cpu-prelaunch-20261025t1406",
+    "existing_guard_or_test_modified": false,
+    "interpretation": "Using memory-backed temporary test artifacts removed test-time filesystem scheduling interference; actual GPU policy unchanged."
+  }
+}

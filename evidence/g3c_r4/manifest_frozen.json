@@ -1,0 +1,311 @@
+{
+  "checkpoint_directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn",
+  "comparison": {
+    "historical_g2_protocol": "64 environments / seed0 / 200 epochs / horizon128 / 1638400 planned transitions",
+    "limitations": "Equal transitions with 32 versus 64 environments change per-rollout batch size and optimizer-update ordering; one training seed per protocol cannot establish seed-level robustness or causal environment-count effect.",
+    "matched_transition_epochs": {
+      "100": 50,
+      "200": 100,
+      "300": 150,
+      "400": 200
+    }
+  },
+  "completion_output": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z",
+  "completion_service_argv": [
+    "systemd-run",
+    "--user",
+    "--unit=factory-g3cr4-20261025t140016z-completion",
+    "--property=WorkingDirectory=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs",
+    "--property=Restart=no",
+    "--property=KillMode=control-group",
+    "--property=TimeoutStopSec=10",
+    "/usr/bin/python3",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/complete_g3cr4.py",
+    "--manifest",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r4/manifest_frozen.json"
+  ],
+  "cpu_prelaunch_validation": {
+    "artifact": "prelaunch_cpu_regression.xml",
+    "only_cpu_sacrificial_children": true,
+    "pytest_plugin_autoload": false,
+    "temporary_base": "/dev/shm/g3cr4-cpu-prelaunch-20261025t1406",
+    "tests": 164
+  },
+  "created_utc": "2026-10-25T13:59:16.876430+00:00",
+  "evaluation_cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs",
+  "evaluation_if_full_training_complete": {
+    "checkpoint_epochs": [
+      100,
+      200,
+      300,
+      400
+    ],
+    "checkpoint_observation_rms": "restore checkpoint state; inference eval mode",
+    "deterministic_actions": true,
+    "episodes_per_env": {
+      "100": 1,
+      "200": 1,
+      "300": 1,
+      "400": 3
+    },
+    "evaluation_seeds": [
+      1001,
+      1002,
+      1003
+    ],
+    "gpu_launches": "Sequential only; no concurrent training/evaluation",
+    "max_steps": {
+      "100": 160,
+      "200": 160,
+      "300": 160,
+      "400": 480
+    },
+    "num_envs": 32,
+    "official_success_predicate": "Unchanged upstream success predicate recorded before automatic environment reset.",
+    "pooling": "Separate epoch/checkpoint denominator; never mix historical G2/G3B or previous incomplete runs into new sample.",
+    "primary_metrics": [
+      "ever_success",
+      "terminal_success",
+      "first_success_step",
+      "first_success_time_s"
+    ],
+    "rnn_state": "reset at episode boundaries"
+  },
+  "evaluation_unit_prefix": "factory-g3cr4-20261025t140016z-eval",
+  "frozen_source_sha256": {
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/complete_g3cr4.py": "c4fa64ab82a20056f6f3d17a33d9a6c32ea9dd432b966332c33105541d3b0175",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/durable_supervisor.py": "2f02e42128dea3bfdda5146802ea097f6b25be805296e6a16f093f6d2b31a889",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/evaluate_checkpoint.py": "415dff9b59ece8a21e6bbe0a6c9fff08e2ea594cb8dc2ef8fe73e299c94af707",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/evaluation_reporting.py": "8cfb68a200a9f81b430444e94b7c2c7ae54c7b4e0d39feb4a68625efc3514dcd",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g2_training_observer.py": "953b5cfd20615a5d8f6b9a200ce03124828a39e6da8f8423a4989c0dc25e3d6a",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g3a_launch_smoke.py": "2af94bacd94d005fa6177eed7eec9e11d4d3b163ae7a2b69ef7db8a7996202cd",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g3cr4_launch.py": "727e8806b39a1cb5001b4ffd5ea1e8f90a45b50f9e793897f7576edd7ac0a1bc",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/gpu_guard.py": "bbbe15c007acd052db176743f42e0a831fd7b6b7a92a6d41dc311ca74b8146f2",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/python_entry.py": "df5ad392a16259f0be72c632643c24a20a57c8ff07e551881b0d52fefe6e011f",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh": "10d11ff9b3d44c252c895ac3ca6ca2aa5301c78cbcacd1b5dc01702a494409d8",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/success_metrics.py": "bd3233876429dcce64bee52be11b9f03a69b1e35279b4e285dab4e81151bbfa2",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/supervised_exec.py": "0d9fa854306b38833c7f1f4d66d0ec04d3c8b3c1397b95991f25b00e2ffa6b89",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/supervision_common.py": "850f8fdf3c18147c8b94c109d978efc0d8c2c26bf6d8d9e6b6600c9e6d40f1e1",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/tensorboard_finalizer.py": "e4d14b64d1989a899a732174132a1aa1d92fc0f394115ff7ba4db6f74b586028",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/tensorboard_tail.py": "edb09c2acb1284fff0998532cee2dd1aeb5e8586e054679c32f178ecc6fa87fb",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/a2c_continuous.py": "998755d3365d8160930a8a8a0cfe8e7e1cd647b6cd2b7edc4e38895828c5a720",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/central_value.py": "6e62bcce9fe892e9245ce2cd46f06fb50f85ee9843572a4dedaf5e797f1ee7b6",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/models.py": "78a806701b3099ea45de5c9c1e00c761d0a9443b4b39d6cce087680fc4e62f37",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/players.py": "e22d083c540b479b31fefc2bbd05d132a54e3f97d14bf21421498e011942c043",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/running_mean_std.py": "c7ad469e2bbc89de8419b55c768d1076f5d394d72102cc38c7e49002fc1db788",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/a2c_common.py": "b2ff92d888212227620138a6ca09d41ea2b8de6af044163ca3699f4ed48de661",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py": "668fb1251c83d6e13271457d53a1b7079f3c2964d3284a13ac3bc2ff58194110",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/envs/direct_rl_env.py": "0c919fdc93e9198562edaaa3c29627a8dc0e123f581f41cdffc75641f9033fc1",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/agents/rl_games_ppo_cfg.yaml": "a64fef462770f9ba4a3acd0fdd21eef47f0d97529182b24f255ec9ab8fd27ebb",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_control.py": "7ef611d530a86fa2aba9db222361b0fe8b64d34037f204ad622a17051ad5e163",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env_cfg.py": "5f804ba3f6e3d96f352490a9b5e2e1e239d308ff7eeab7ae3aad0ca6aa8daed8",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_tasks_cfg.py": "7510b6cbed1e5bdd297723cabf7d25cef6a00b94bb3804b7578f2925a6a43971"
+  },
+  "frozen_utc": "2026-10-25T14:07:07.002698+00:00",
+  "isaacsim_path": "/home/ubuntu2004/isaacsim-4.5.0",
+  "launch_argv": [
+    "/usr/bin/python3",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g3cr4_launch.py",
+    "--monitoring-policy",
+    "user-authorized-no-gpu-guard",
+    "--output",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/train_32env_seed0_400ep_20261025t140016z",
+    "--unit-prefix",
+    "factory-g3cr4-s0-20261025t140016z",
+    "--cwd",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs",
+    "--timeout",
+    "43200",
+    "--setenv",
+    "FACTORY_VENV=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01",
+    "--setenv",
+    "ISAACSIM_PATH=/home/ubuntu2004/isaacsim-4.5.0",
+    "--setenv",
+    "OMP_NUM_THREADS=4",
+    "--setenv",
+    "FACTORY_G2_AUDIT_OUTPUT=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/train_32env_seed0_400ep_20261025t140016z/supervisor/training_audit.json",
+    "--setenv",
+    "FACTORY_G3A_FINALIZE_TENSORBOARD=1",
+    "--setenv",
+    "FACTORY_G3A_FINALIZER_OUTPUT=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/train_32env_seed0_400ep_20261025t140016z/supervisor/tensorboard_finalizer.json",
+    "--",
+    "bash",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py",
+    "--headless",
+    "--device",
+    "cuda:0",
+    "--task",
+    "Isaac-Factory-PegInsert-Direct-v0",
+    "--num_envs",
+    "32",
+    "--seed",
+    "0",
+    "--max_iterations",
+    "400",
+    "agent.params.config.full_experiment_name=g3cr4_peginsert_32env_seed0_400ep_20261025t140016z",
+    "agent.params.config.save_frequency=25"
+  ],
+  "launcher": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g3cr4_launch.py",
+  "launcher_arguments": [
+    "--monitoring-policy",
+    "user-authorized-no-gpu-guard",
+    "--timeout",
+    "1800"
+  ],
+  "preflight_files": {
+    "historical": {
+      "bytes": 463813,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3cr4_manifest/historical_fingerprints.json",
+      "sha256": "9177c4369149808a3494a8d63593e8533d89060a99957c74174823c6c7c0c7be"
+    },
+    "snapshot": {
+      "bytes": 3828,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3cr4_manifest/preflight_snapshot.json",
+      "sha256": "0572575c69bc94162040a548c81c46992698c3eeb73c62bc60ef35190486b0df"
+    }
+  },
+  "prohibited": [
+    "seed1",
+    "seed2",
+    "GearMesh",
+    "NutThread",
+    "external GPU rental",
+    "GPU driver changes",
+    "terminating unrelated user processes",
+    "automatic retry/resume/stitching"
+  ],
+  "python": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+  "read_only_preflight": {
+    "active_training_or_evaluation_found": false,
+    "fresh_launch_root_exists": false,
+    "fresh_run_dir_exists": false,
+    "gpu0_lock_available": true,
+    "preservation": "historical_fingerprints.json",
+    "prior_checkpoints_count": 40,
+    "prior_raw_artifacts_count": 302,
+    "snapshot": "preflight_snapshot.json",
+    "sources_count": 26,
+    "sources_match_count": 26,
+    "tracked_count": 645,
+    "tracked_match_count": 645
+  },
+  "repository": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+  "safe_environment": [
+    "FACTORY_VENV=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01",
+    "ISAACSIM_PATH=/home/ubuntu2004/isaacsim-4.5.0",
+    "OMP_NUM_THREADS=4",
+    "FACTORY_G2_AUDIT_OUTPUT=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/train_32env_seed0_400ep_20261025t140016z/supervisor/training_audit.json",
+    "FACTORY_G3A_FINALIZE_TENSORBOARD=1",
+    "FACTORY_G3A_FINALIZER_OUTPUT=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/train_32env_seed0_400ep_20261025t140016z/supervisor/tensorboard_finalizer.json"
+  ],
+  "schema_version": "g3cr4_experiment_manifest_v1",
+  "scientific_invariants": [
+    "Official PPO implementation unchanged",
+    "Reward unchanged",
+    "Physics unchanged",
+    "Success predicate unchanged",
+    "Observation/action spaces unchanged",
+    "Network architecture unchanged",
+    "Task controller/randomization unchanged"
+  ],
+  "starting_commit": "3bdbadd6b6289c778ccf805d8cd8009e3a9dc7b1",
+  "status": "FROZEN_BEFORE_FRESH_TRAINING_LAUNCH",
+  "stop_policy": {
+    "on_cuda_oom_or_runtime_error": "Record actual traceback/exit status; terminate normally; no automatic retry or settings changes.",
+    "on_incomplete_training": "Preserve partial checkpoints/raw evidence. Do not evaluate as final 400-epoch baseline and do not resume or stitch."
+  },
+  "supervision": {
+    "automatic_concatenation": false,
+    "automatic_resume": false,
+    "automatic_retry": false,
+    "cuda_normal_error_handling": true,
+    "exclusive_gpu0_lock": true,
+    "gpu_telemetry_required": false,
+    "independent_gpu_guard": false,
+    "mode": "supervised_no_gpu_guard",
+    "note": "Explicit authorized no-GPU-guard mode; CUDA exceptions remain visible; no retry/resume; telemetry is not sampled or used as a stop condition.",
+    "persist_console": true,
+    "record_actual_child_wait_status": true,
+    "systemd_restart": "no",
+    "tensorboard_finalizer": true,
+    "terminate_on_telemetry_gap": false,
+    "wall_timeout_seconds": 43200
+  },
+  "system_python": "/usr/bin/python3",
+  "task": "G3C-R4 \u2014 Simplified 32-Environment Training",
+  "training": {
+    "device": "cuda:0",
+    "engineering_differences": [
+      "explicit no-independent-GPU-guard supervision mode",
+      "unique experiment/output directories",
+      "periodic save_frequency=25",
+      "unchanged existing optimizer audit and TensorBoard finalizer"
+    ],
+    "experiment_name": "g3cr4_peginsert_32env_seed0_400ep_20261025t140016z",
+    "horizon_length": 128,
+    "initialize_policy_and_optimizer": "fresh",
+    "max_epochs": 400,
+    "num_envs": 32,
+    "periodic_save_reason": "Preserve progress without changing PPO optimization; checkpoint/logging policy only.",
+    "planned_transitions": 1638400,
+    "ppo_hyperparameters_unchanged": true,
+    "restore": false,
+    "resume": false,
+    "run_dir": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z",
+    "run_root": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/train_32env_seed0_400ep_20261025t140016z",
+    "save_frequency": 25,
+    "scientific_differences_from_g2": {
+      "agent.params.config.max_epochs": [
+        200,
+        400
+      ],
+      "scene.num_envs": [
+        64,
+        32
+      ]
+    },
+    "seed": 0,
+    "source_hashes_pending_root_finalization": false,
+    "task": "Isaac-Factory-PegInsert-Direct-v0",
+    "transitions_per_completed_epoch": 4096,
+    "upstream_sha": "90b79bb2d44feb8d833f260f2bf37da3487180ba"
+  },
+  "training_audit": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/train_32env_seed0_400ep_20261025t140016z/supervisor/training_audit.json",
+  "training_command": [
+    "bash",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py",
+    "--headless",
+    "--device",
+    "cuda:0",
+    "--task",
+    "Isaac-Factory-PegInsert-Direct-v0",
+    "--num_envs",
+    "32",
+    "--seed",
+    "0",
+    "--max_iterations",
+    "400",
+    "agent.params.config.full_experiment_name=g3cr4_peginsert_32env_seed0_400ep_20261025t140016z",
+    "agent.params.config.save_frequency=25"
+  ],
+  "training_cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs",
+  "training_event_directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/summaries",
+  "training_finalizer": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/train_32env_seed0_400ep_20261025t140016z/supervisor/tensorboard_finalizer.json",
+  "training_supervisor_directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/train_32env_seed0_400ep_20261025t140016z/supervisor",
+  "user_authorization": {
+    "accepted_risks": [
+      "CUDA OOM",
+      "training failure",
+      "desktop slowdown",
+      "machine restart may be necessary"
+    ],
+    "monitoring_policy_change": "Explicitly selected training mode without independent GPU guard. GPU telemetry missing/stale/gaps MUST NOT terminate child. Normal CUDA error handling remains enabled.",
+    "source": "Human user G3C-R4 message in this chat on 2026-10-25 Asia/Seoul",
+    "supersedes_for_this_run": "G3C-R2 independent guard availability requirements only; historical reports/evidence remain immutable."
+  },
+  "working_directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs",
+  "workspace": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been"
+}
