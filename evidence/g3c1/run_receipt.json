@@ -1,0 +1,133 @@
+{
+  "artifacts": {
+    "guard/samples.csv": {
+      "bytes": 56694,
+      "sha256": "ce4d70479581e727c4d4d8cf5b987f5c5477a5f8aeee4c8f97ee2f37029ebe72"
+    },
+    "guard/status.json": {
+      "bytes": 1851,
+      "sha256": "e996d227457bbdcba7d4409b01cd82cda07682b54d99262358e31f9969830591"
+    },
+    "launch.json": {
+      "bytes": 5993,
+      "sha256": "ff6990ce26d3e02dda9554a3c980c7ca39e9a65236b6a6dfddaf4f80589a7b1f"
+    },
+    "supervisor/child_exit.json": {
+      "bytes": 366,
+      "sha256": "ca1d51b616bbd15c0f56005d58d4dfbf177adc048b9749457b4b1abf0c567f8f"
+    },
+    "supervisor/child_identity.json": {
+      "bytes": 337,
+      "sha256": "6d145409ba3ce3b6aa42668f5b9ab9a1fc68fdca961c0cd8239680ef30fae915"
+    },
+    "supervisor/command.json": {
+      "bytes": 2121,
+      "sha256": "5babf4a910240c65b7e63866c6f5750688aee57b1e565fb9f182d72f05c7fa56"
+    },
+    "supervisor/console.txt": {
+      "bytes": 7189,
+      "sha256": "0118371c19d5f7cda392729434997ed097e80cf6618598a46d853ce61bcba5f4"
+    },
+    "supervisor/exec_release.json": {
+      "bytes": 339,
+      "sha256": "fae5670d5a4ca4aa743a831569e53c2cd987e8265886ccfc5dadbcb3380d7272"
+    },
+    "supervisor/status.json": {
+      "bytes": 2067,
+      "sha256": "a544bba9c472f6a9af8683b6d0c26e8c39fb6cad4b002408b5e229fdad60b3df"
+    },
+    "train/training_audit.json": {
+      "bytes": 4338,
+      "sha256": "2f7f5f12517e1db932db6d7fcd88147df9c67745ec3677801ca534bf37a501c2"
+    }
+  },
+  "checkpoint_status": {
+    "available_epochs": [],
+    "reason": "guard terminated before epoch 1 completed; run directory contains params only, no nn checkpoint"
+  },
+  "engineering_status": "INCOMPLETE",
+  "evaluation": {
+    "reason": "no available checkpoint at epochs 50/100/150/200; no evaluation denominator exists",
+    "status": "NOT_RUN"
+  },
+  "guard": {
+    "continuous_monitoring": false,
+    "low_memory_stop_condition_observed": true,
+    "max_low_consecutive": 3,
+    "min_free_MiB": 917.9375,
+    "monitoring_gaps": [],
+    "peak_used_MiB": 6899.6875,
+    "policy": {
+      "consecutive_samples": 3,
+      "floor_MiB": 1024,
+      "gap_limit_seconds": 0.5,
+      "interval_seconds": 0.1,
+      "stale_seconds": 2
+    },
+    "sample_count": 441,
+    "stop_reason": "gpu_headroom_floor"
+  },
+  "manifest_sha256": "b5ce9f55c2151e538ad5dc41791e56e961e3dc69611893b6f4b347f5088ca0f0",
+  "recorded_utc": "2026-10-25T12:09:22.262028+00:00",
+  "run_root": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c1/g3c_peginsert_64env_seed1_baseline",
+  "runtime_observed": {
+    "actions_num": 6,
+    "amp_skips": [],
+    "epochs_recorded": 0,
+    "horizon_length": 128,
+    "instrumentation_errors": [],
+    "mixed_precision": true,
+    "num_actors": 64,
+    "obs_shape": [
+      19
+    ],
+    "optimizer_steps": {
+      "actor": 0,
+      "central_value": 0
+    },
+    "seed": 1,
+    "state_shape": [
+      43
+    ]
+  },
+  "schema_version": "g3c1_run_receipt_v1",
+  "scientific_status": "NOT_ASSESSED",
+  "tensorboard_status": {
+    "event_file_bytes": 0,
+    "finalizer_exists": false,
+    "reason": "no agent training completion; finalizer record absent"
+  },
+  "training": {
+    "child_exit_code": 0,
+    "child_signal": null,
+    "command": [
+      "bash",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py",
+      "--headless",
+      "--device",
+      "cuda:0",
+      "--task",
+      "Isaac-Factory-PegInsert-Direct-v0",
+      "--num_envs",
+      "64",
+      "--seed",
+      "1",
+      "--max_iterations",
+      "200",
+      "agent.params.config.full_experiment_name=g3c_peginsert_64env_seed1_baseline",
+      "agent.params.config.save_frequency=50"
+    ],
+    "raw_wait_returncode": 0,
+    "supervisor_stop_signals": [
+      {
+        "monotonic_seconds": 27283.458255962,
+        "signal": "SIGTERM",
+        "unix_seconds": 1792929959.3863907,
+        "utc": "2026-10-25T12:05:59.386385+00:00"
+      }
+    ],
+    "supervisor_termination_reason": "guard_missing_or_stale",
+    "supervisor_wall_seconds": 46.256400096001016
+  }
+}

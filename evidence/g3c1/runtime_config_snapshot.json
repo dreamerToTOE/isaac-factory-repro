@@ -1,0 +1,24 @@
+{
+  "actions_num": 6,
+  "amp_skips": [],
+  "checkpoint_restore_requested": false,
+  "epochs_recorded": 0,
+  "horizon_length": 128,
+  "instrumentation_errors": [],
+  "max_epochs": 200,
+  "mixed_precision": true,
+  "num_actors": 64,
+  "obs_shape": [
+    19
+  ],
+  "optimizer_steps": {
+    "actor": 0,
+    "central_value": 0
+  },
+  "save_frequency": 50,
+  "seed": 1,
+  "state_shape": [
+    43
+  ],
+  "task": "Isaac-Factory-PegInsert-Direct-v0"
+}

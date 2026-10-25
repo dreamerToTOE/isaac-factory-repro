@@ -68,3 +68,10 @@
 G3B bounded diagnostic 已完成并通过：保留 checkpoint SHA256 `f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f`，三 seed 共 288/288 完整 episode，官方 ever/terminal 280/288。原始 8 个 seed/env/episode 标识全部复现为失败，但没有历史完整轨迹，因此不宣称 exact replay。A/B/C/D/E/F 重叠计数为 3/8/0/0/0/0；A/B 是观察到的几何条件，D 因无独立 measured contact 保持 unsupported。
 
 完整诊断回执和边界在 [`REVIEW_G3B`](REVIEW_G3B.md) 与 [`evidence/g3b`](../evidence/g3b/README.md)。G3B 不改变 G2/G3A 证据、PPO、奖励、物理或 success criterion，也没有启动 seed1/seed2 训练。下一步建议停止并单独预注册 G3C 的接触传感器和对照协议。
+
+
+## G3C-1 状态（2026-10-25）
+
+G3C-1 的 seed 1 PPO 训练按冻结配置启动，但在第一个 epoch 前由独立 GPU guard 依据 1024 MiB free、连续 3 次低值规则停止：最低 free 917.9375 MiB，child 原始 wait code=0，supervisor 记录 guard 触发和 SIGTERM。运行标记 **工程 INCOMPLETE**；没有 epoch、optimizer step、AMP skip、checkpoint 或可评估分母，因此科学结果 **NOT ASSESSED**，不能报告 seed 1 成功率。
+
+回执和资源曲线见 [`RESULTS_G3C1`](RESULTS_G3C1.md) 与 [`evidence/g3c1`](../evidence/g3c1/README.md)。不恢复、不重启、不拼接本次运行；不启动 seed 2。G3C-2 应先解决资源余量并重新预注册 fresh seed 1 运行。
