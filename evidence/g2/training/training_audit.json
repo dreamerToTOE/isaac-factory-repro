@@ -1,0 +1,4392 @@
+{
+  "engineering": "Read-only epoch summaries and actual optimizer/AMP call counters",
+  "started_utc": "2026-10-23T12:12:05.068149+00:00",
+  "epochs": [
+    {
+      "epoch": 1,
+      "environment_transitions": 8192,
+      "env_step_seconds": 28.059203624725342,
+      "rollout_seconds": 28.446279048919678,
+      "optimization_seconds": 3.5895168781280518,
+      "official_total_seconds": 32.03579664230347,
+      "observed_epoch_seconds": 32.03700717499305,
+      "env_step_fps": 291.9541163592161,
+      "rollout_fps": 287.9814258276818,
+      "total_fps": 255.7139468535149,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 63,
+        "central_value": 64
+      },
+      "cuda_peak_allocated_bytes": 524378624,
+      "cuda_peak_reserved_bytes": 652214272
+    },
+    {
+      "epoch": 2,
+      "environment_transitions": 8192,
+      "env_step_seconds": 30.232641458511353,
+      "rollout_seconds": 30.582642078399658,
+      "optimization_seconds": 3.7852847576141357,
+      "official_total_seconds": 34.36792707443237,
+      "observed_epoch_seconds": 34.36910409999837,
+      "env_step_fps": 270.9654070830029,
+      "rollout_fps": 267.8643649884639,
+      "total_fps": 238.36177207482336,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 127,
+        "central_value": 128
+      },
+      "cuda_peak_allocated_bytes": 600736768,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 3,
+      "environment_transitions": 8192,
+      "env_step_seconds": 31.244245767593384,
+      "rollout_seconds": 31.605747938156128,
+      "optimization_seconds": 3.9077868461608887,
+      "official_total_seconds": 35.513535022735596,
+      "observed_epoch_seconds": 35.51477389699721,
+      "env_step_fps": 262.1922788898545,
+      "rollout_fps": 259.1933598923057,
+      "total_fps": 230.67261523685323,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 191,
+        "central_value": 192
+      },
+      "cuda_peak_allocated_bytes": 600736768,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 4,
+      "environment_transitions": 8192,
+      "env_step_seconds": 31.717859745025635,
+      "rollout_seconds": 32.069459438323975,
+      "optimization_seconds": 3.8556597232818604,
+      "official_total_seconds": 35.925119400024414,
+      "observed_epoch_seconds": 35.92630022900266,
+      "env_step_fps": 258.2771998443169,
+      "rollout_fps": 255.44552803438626,
+      "total_fps": 228.02986146775152,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 255,
+        "central_value": 256
+      },
+      "cuda_peak_allocated_bytes": 600736768,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 5,
+      "environment_transitions": 8192,
+      "env_step_seconds": 31.473729133605957,
+      "rollout_seconds": 31.821850061416626,
+      "optimization_seconds": 3.8711788654327393,
+      "official_total_seconds": 35.69302940368652,
+      "observed_epoch_seconds": 35.69420204900234,
+      "env_step_fps": 260.2805649506916,
+      "rollout_fps": 257.4331782781115,
+      "total_fps": 229.512600551465,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 319,
+        "central_value": 320
+      },
+      "cuda_peak_allocated_bytes": 600736768,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 6,
+      "environment_transitions": 8192,
+      "env_step_seconds": 31.94126033782959,
+      "rollout_seconds": 32.29644441604614,
+      "optimization_seconds": 3.690176486968994,
+      "official_total_seconds": 35.986621141433716,
+      "observed_epoch_seconds": 35.98785847399995,
+      "env_step_fps": 256.4707814706302,
+      "rollout_fps": 253.65021283673855,
+      "total_fps": 227.64015459534272,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 383,
+        "central_value": 384
+      },
+      "cuda_peak_allocated_bytes": 600736768,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 7,
+      "environment_transitions": 8192,
+      "env_step_seconds": 32.81353211402893,
+      "rollout_seconds": 33.16541409492493,
+      "optimization_seconds": 3.603243589401245,
+      "official_total_seconds": 36.76865792274475,
+      "observed_epoch_seconds": 36.76982540899917,
+      "env_step_fps": 249.6530995667374,
+      "rollout_fps": 247.004303234482,
+      "total_fps": 222.79845016949898,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 447,
+        "central_value": 448
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 8,
+      "environment_transitions": 8192,
+      "env_step_seconds": 30.64738392829895,
+      "rollout_seconds": 30.986492395401,
+      "optimization_seconds": 3.3600013256073,
+      "official_total_seconds": 34.34649395942688,
+      "observed_epoch_seconds": 34.34764247699786,
+      "env_step_fps": 267.2985080607723,
+      "rollout_fps": 264.3732596599366,
+      "total_fps": 238.5105160857791,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 511,
+        "central_value": 512
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 9,
+      "environment_transitions": 8192,
+      "env_step_seconds": 33.243868589401245,
+      "rollout_seconds": 33.58927941322327,
+      "optimization_seconds": 3.6855227947235107,
+      "official_total_seconds": 37.274802446365356,
+      "observed_epoch_seconds": 37.276357467002526,
+      "env_step_fps": 246.4213807719045,
+      "rollout_fps": 243.8873397437342,
+      "total_fps": 219.77312989887616,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 574,
+        "central_value": 576
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 10,
+      "environment_transitions": 8192,
+      "env_step_seconds": 33.8624484539032,
+      "rollout_seconds": 34.20539331436157,
+      "optimization_seconds": 3.79022216796875,
+      "official_total_seconds": 37.99561595916748,
+      "observed_epoch_seconds": 37.99685368200153,
+      "env_step_fps": 241.9198957556697,
+      "rollout_fps": 239.49439565603487,
+      "total_fps": 215.60382147255217,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 638,
+        "central_value": 640
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 11,
+      "environment_transitions": 8192,
+      "env_step_seconds": 36.65981388092041,
+      "rollout_seconds": 37.02805137634277,
+      "optimization_seconds": 3.8825454711914062,
+      "official_total_seconds": 40.91059684753418,
+      "observed_epoch_seconds": 40.91178592200595,
+      "env_step_fps": 223.45994517619533,
+      "rollout_fps": 221.2376751003935,
+      "total_fps": 200.24151763246053,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 702,
+        "central_value": 704
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 12,
+      "environment_transitions": 8192,
+      "env_step_seconds": 38.39822268486023,
+      "rollout_seconds": 38.772849321365356,
+      "optimization_seconds": 3.921595335006714,
+      "official_total_seconds": 42.69444489479065,
+      "observed_epoch_seconds": 42.69607852500485,
+      "env_step_fps": 213.34320776336264,
+      "rollout_fps": 211.28186716692724,
+      "total_fps": 191.87507930333916,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 766,
+        "central_value": 768
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 13,
+      "environment_transitions": 8192,
+      "env_step_seconds": 39.110164642333984,
+      "rollout_seconds": 39.489219665527344,
+      "optimization_seconds": 3.965489625930786,
+      "official_total_seconds": 43.45470952987671,
+      "observed_epoch_seconds": 43.455958372003806,
+      "env_step_fps": 209.4596142695022,
+      "rollout_fps": 207.4490220213523,
+      "total_fps": 188.51811664665942,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 830,
+        "central_value": 832
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 14,
+      "environment_transitions": 8192,
+      "env_step_seconds": 40.67216444015503,
+      "rollout_seconds": 41.03536343574524,
+      "optimization_seconds": 3.8731086254119873,
+      "official_total_seconds": 44.908472299575806,
+      "observed_epoch_seconds": 44.90987654699711,
+      "env_step_fps": 201.41539337188948,
+      "rollout_fps": 199.6326902971714,
+      "total_fps": 182.415468184995,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 894,
+        "central_value": 896
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 15,
+      "environment_transitions": 8192,
+      "env_step_seconds": 38.311352014541626,
+      "rollout_seconds": 38.68411636352539,
+      "optimization_seconds": 3.579226493835449,
+      "official_total_seconds": 42.26334309577942,
+      "observed_epoch_seconds": 42.264623652998125,
+      "env_step_fps": 213.82696170290748,
+      "rollout_fps": 211.76650186390455,
+      "total_fps": 193.83227638747974,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 958,
+        "central_value": 960
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 16,
+      "environment_transitions": 8192,
+      "env_step_seconds": 37.38621759414673,
+      "rollout_seconds": 37.74392485618591,
+      "optimization_seconds": 3.5112974643707275,
+      "official_total_seconds": 41.25522255897522,
+      "observed_epoch_seconds": 41.25636541300628,
+      "env_step_fps": 219.11818116852126,
+      "rollout_fps": 217.04155122218032,
+      "total_fps": 198.56879909663223,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 1022,
+        "central_value": 1024
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 17,
+      "environment_transitions": 8192,
+      "env_step_seconds": 35.86389923095703,
+      "rollout_seconds": 36.200897455215454,
+      "optimization_seconds": 3.5222842693328857,
+      "official_total_seconds": 39.72318172454834,
+      "observed_epoch_seconds": 39.72433902200282,
+      "env_step_fps": 228.41911157637935,
+      "rollout_fps": 226.29273238693645,
+      "total_fps": 206.22718635192973,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 1086,
+        "central_value": 1088
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 18,
+      "environment_transitions": 8192,
+      "env_step_seconds": 36.33799600601196,
+      "rollout_seconds": 36.675649642944336,
+      "optimization_seconds": 3.5276057720184326,
+      "official_total_seconds": 40.20325565338135,
+      "observed_epoch_seconds": 40.2043984539996,
+      "env_step_fps": 225.43895922726915,
+      "rollout_fps": 223.36345994558212,
+      "total_fps": 203.76459236606627,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 1150,
+        "central_value": 1152
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 19,
+      "environment_transitions": 8192,
+      "env_step_seconds": 36.480021715164185,
+      "rollout_seconds": 36.81271743774414,
+      "optimization_seconds": 3.506849527359009,
+      "official_total_seconds": 40.31956696510315,
+      "observed_epoch_seconds": 40.32072756999696,
+      "env_step_fps": 224.56126983594177,
+      "rollout_fps": 222.53179254842863,
+      "total_fps": 203.17678528368694,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 1214,
+        "central_value": 1216
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 20,
+      "environment_transitions": 8192,
+      "env_step_seconds": 37.738351345062256,
+      "rollout_seconds": 38.07308506965637,
+      "optimization_seconds": 3.5182180404663086,
+      "official_total_seconds": 41.59130334854126,
+      "observed_epoch_seconds": 41.592522493003344,
+      "env_step_fps": 217.0736057093775,
+      "rollout_fps": 215.1651221594567,
+      "total_fps": 196.96425311199872,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 1278,
+        "central_value": 1280
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 21,
+      "environment_transitions": 8192,
+      "env_step_seconds": 39.73931121826172,
+      "rollout_seconds": 40.109678983688354,
+      "optimization_seconds": 3.5241847038269043,
+      "official_total_seconds": 43.63386392593384,
+      "observed_epoch_seconds": 43.635047755000414,
+      "env_step_fps": 206.14348233180917,
+      "rollout_fps": 204.23997916641244,
+      "total_fps": 187.7440882591898,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 1342,
+        "central_value": 1344
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 22,
+      "environment_transitions": 8192,
+      "env_step_seconds": 37.494938373565674,
+      "rollout_seconds": 37.84692859649658,
+      "optimization_seconds": 3.3413171768188477,
+      "official_total_seconds": 41.18824601173401,
+      "observed_epoch_seconds": 41.19018331600091,
+      "env_step_fps": 218.48282342491984,
+      "rollout_fps": 216.45085357754283,
+      "total_fps": 198.89169346192122,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 1406,
+        "central_value": 1408
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 23,
+      "environment_transitions": 8192,
+      "env_step_seconds": 39.99966502189636,
+      "rollout_seconds": 40.347527265548706,
+      "optimization_seconds": 3.6432859897613525,
+      "official_total_seconds": 43.99081349372864,
+      "observed_epoch_seconds": 43.99202614399837,
+      "env_step_fps": 204.80171510225367,
+      "rollout_fps": 203.03598647034937,
+      "total_fps": 186.2206981275274,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 1470,
+        "central_value": 1472
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 24,
+      "environment_transitions": 8192,
+      "env_step_seconds": 38.582804918289185,
+      "rollout_seconds": 38.92188334465027,
+      "optimization_seconds": 3.7180919647216797,
+      "official_total_seconds": 42.63997554779053,
+      "observed_epoch_seconds": 42.64115148199926,
+      "env_step_fps": 212.3225622748022,
+      "rollout_fps": 210.4728573245152,
+      "total_fps": 192.12018521958285,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 1534,
+        "central_value": 1536
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 25,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.28855347633362,
+      "rollout_seconds": 41.650282859802246,
+      "optimization_seconds": 3.9683282375335693,
+      "official_total_seconds": 45.618611335754395,
+      "observed_epoch_seconds": 45.61980122300156,
+      "env_step_fps": 198.40850091044268,
+      "rollout_fps": 196.68533891053855,
+      "total_fps": 179.57583013008937,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 1598,
+        "central_value": 1600
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 26,
+      "environment_transitions": 8192,
+      "env_step_seconds": 44.63994216918945,
+      "rollout_seconds": 45.016517639160156,
+      "optimization_seconds": 4.0308966636657715,
+      "official_total_seconds": 49.04741454124451,
+      "observed_epoch_seconds": 49.0485997930009,
+      "env_step_fps": 183.51278254240503,
+      "rollout_fps": 181.97764797501188,
+      "total_fps": 167.02205562968578,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 1662,
+        "central_value": 1664
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 27,
+      "environment_transitions": 8192,
+      "env_step_seconds": 44.19572424888611,
+      "rollout_seconds": 44.557905197143555,
+      "optimization_seconds": 3.948178768157959,
+      "official_total_seconds": 48.50608420372009,
+      "observed_epoch_seconds": 48.50732066699857,
+      "env_step_fps": 185.3572973228619,
+      "rollout_fps": 183.8506537449422,
+      "total_fps": 168.88603016468042,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 1726,
+        "central_value": 1728
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 28,
+      "environment_transitions": 8192,
+      "env_step_seconds": 44.07323718070984,
+      "rollout_seconds": 44.42274522781372,
+      "optimization_seconds": 3.9400548934936523,
+      "official_total_seconds": 48.36280035972595,
+      "observed_epoch_seconds": 48.36399015500501,
+      "env_step_fps": 185.87243697146687,
+      "rollout_fps": 184.41003494918795,
+      "total_fps": 169.38638662499525,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 1790,
+        "central_value": 1792
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 29,
+      "environment_transitions": 8192,
+      "env_step_seconds": 44.225181102752686,
+      "rollout_seconds": 44.59556531906128,
+      "optimization_seconds": 3.8619937896728516,
+      "official_total_seconds": 48.45755934715271,
+      "observed_epoch_seconds": 48.46048606200202,
+      "env_step_fps": 185.23383727851166,
+      "rollout_fps": 183.6953953019748,
+      "total_fps": 169.05515074153953,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 1854,
+        "central_value": 1856
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 30,
+      "environment_transitions": 8192,
+      "env_step_seconds": 46.98155164718628,
+      "rollout_seconds": 47.353333711624146,
+      "optimization_seconds": 4.340170621871948,
+      "official_total_seconds": 51.693509578704834,
+      "observed_epoch_seconds": 51.69494980900345,
+      "env_step_fps": 174.3663142826535,
+      "rollout_fps": 172.9973236918915,
+      "total_fps": 158.47250586705567,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 1918,
+        "central_value": 1920
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 31,
+      "environment_transitions": 8192,
+      "env_step_seconds": 45.08551907539368,
+      "rollout_seconds": 45.46260452270508,
+      "optimization_seconds": 3.6770544052124023,
+      "official_total_seconds": 49.13965916633606,
+      "observed_epoch_seconds": 49.141799255005026,
+      "env_step_fps": 181.69913905839775,
+      "rollout_fps": 180.19205203935743,
+      "total_fps": 166.70852299301387,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 1982,
+        "central_value": 1984
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 32,
+      "environment_transitions": 8192,
+      "env_step_seconds": 44.16927909851074,
+      "rollout_seconds": 44.53318738937378,
+      "optimization_seconds": 4.107118368148804,
+      "official_total_seconds": 48.64030599594116,
+      "observed_epoch_seconds": 48.642013912998664,
+      "env_step_fps": 185.46827494579168,
+      "rollout_fps": 183.95269865535656,
+      "total_fps": 168.41999309551198,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 2046,
+        "central_value": 2048
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 33,
+      "environment_transitions": 8192,
+      "env_step_seconds": 45.44713377952576,
+      "rollout_seconds": 45.82690906524658,
+      "optimization_seconds": 3.983130693435669,
+      "official_total_seconds": 49.81003999710083,
+      "observed_epoch_seconds": 49.81130671300343,
+      "env_step_fps": 180.25339155030613,
+      "rollout_fps": 178.7596014458786,
+      "total_fps": 164.46483480994618,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 2110,
+        "central_value": 2112
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 34,
+      "environment_transitions": 8192,
+      "env_step_seconds": 45.82001185417175,
+      "rollout_seconds": 46.194361209869385,
+      "optimization_seconds": 4.002542972564697,
+      "official_total_seconds": 50.19690489768982,
+      "observed_epoch_seconds": 50.198192711002775,
+      "env_step_fps": 178.78650983487572,
+      "rollout_fps": 177.33766168520557,
+      "total_fps": 163.19731299562685,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 2174,
+        "central_value": 2176
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 35,
+      "environment_transitions": 8192,
+      "env_step_seconds": 46.66263556480408,
+      "rollout_seconds": 47.03573799133301,
+      "optimization_seconds": 3.9637863636016846,
+      "official_total_seconds": 50.99952459335327,
+      "observed_epoch_seconds": 51.00094544500462,
+      "env_step_fps": 175.5580219772011,
+      "rollout_fps": 174.16543993653275,
+      "total_fps": 160.6289483150919,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 2238,
+        "central_value": 2240
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 36,
+      "environment_transitions": 8192,
+      "env_step_seconds": 45.09947466850281,
+      "rollout_seconds": 45.46926426887512,
+      "optimization_seconds": 3.6045470237731934,
+      "official_total_seconds": 49.073811531066895,
+      "observed_epoch_seconds": 49.07504963300016,
+      "env_step_fps": 181.64291402980004,
+      "rollout_fps": 180.16565985228914,
+      "total_fps": 166.9322138308726,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 2302,
+        "central_value": 2304
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 37,
+      "environment_transitions": 8192,
+      "env_step_seconds": 44.64347505569458,
+      "rollout_seconds": 44.99347996711731,
+      "optimization_seconds": 3.836641550064087,
+      "official_total_seconds": 48.830121755599976,
+      "observed_epoch_seconds": 48.83147616600036,
+      "env_step_fps": 183.4982601551546,
+      "rollout_fps": 182.07082461696623,
+      "total_fps": 167.76529948055102,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 2366,
+        "central_value": 2368
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 38,
+      "environment_transitions": 8192,
+      "env_step_seconds": 44.63139843940735,
+      "rollout_seconds": 44.98521089553833,
+      "optimization_seconds": 3.888502836227417,
+      "official_total_seconds": 48.873713970184326,
+      "observed_epoch_seconds": 48.87489564200223,
+      "env_step_fps": 183.54791215250972,
+      "rollout_fps": 182.10429243119296,
+      "total_fps": 167.6156636059534,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 2430,
+        "central_value": 2432
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 39,
+      "environment_transitions": 8192,
+      "env_step_seconds": 44.48586678504944,
+      "rollout_seconds": 44.84266257286072,
+      "optimization_seconds": 3.9187939167022705,
+      "official_total_seconds": 48.761457204818726,
+      "observed_epoch_seconds": 48.762663629997405,
+      "env_step_fps": 184.1483732256538,
+      "rollout_fps": 182.68317557392078,
+      "total_fps": 168.001541988176,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 2494,
+        "central_value": 2496
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 40,
+      "environment_transitions": 8192,
+      "env_step_seconds": 44.05660700798035,
+      "rollout_seconds": 44.41093945503235,
+      "optimization_seconds": 3.880232334136963,
+      "official_total_seconds": 48.29117178916931,
+      "observed_epoch_seconds": 48.29239881900139,
+      "env_step_fps": 185.94259876880926,
+      "rollout_fps": 184.45905672170457,
+      "total_fps": 169.63763140320592,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 2558,
+        "central_value": 2560
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 41,
+      "environment_transitions": 8192,
+      "env_step_seconds": 44.82629704475403,
+      "rollout_seconds": 45.17733550071716,
+      "optimization_seconds": 3.8605387210845947,
+      "official_total_seconds": 49.03787446022034,
+      "observed_epoch_seconds": 49.0390720189971,
+      "env_step_fps": 182.749870947877,
+      "rollout_fps": 181.3298617371969,
+      "total_fps": 167.0545489618514,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 2622,
+        "central_value": 2624
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 42,
+      "environment_transitions": 8192,
+      "env_step_seconds": 44.87063193321228,
+      "rollout_seconds": 45.220521688461304,
+      "optimization_seconds": 3.8490724563598633,
+      "official_total_seconds": 49.069594383239746,
+      "observed_epoch_seconds": 49.07073176799895,
+      "env_step_fps": 182.56930306204262,
+      "rollout_fps": 181.15668935527367,
+      "total_fps": 166.94656034894933,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 2686,
+        "central_value": 2688
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 43,
+      "environment_transitions": 8192,
+      "env_step_seconds": 43.72367835044861,
+      "rollout_seconds": 44.07402729988098,
+      "optimization_seconds": 3.547240734100342,
+      "official_total_seconds": 47.62126803398132,
+      "observed_epoch_seconds": 47.62247039900103,
+      "env_step_fps": 187.35843618509168,
+      "rollout_fps": 185.86910481906702,
+      "total_fps": 172.0239787431615,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 2750,
+        "central_value": 2752
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 773849088
+    },
+    {
+      "epoch": 44,
+      "environment_transitions": 8192,
+      "env_step_seconds": 44.77735471725464,
+      "rollout_seconds": 45.125367403030396,
+      "optimization_seconds": 3.8243930339813232,
+      "official_total_seconds": 48.949761390686035,
+      "observed_epoch_seconds": 48.95092908100196,
+      "env_step_fps": 182.94961932718348,
+      "rollout_fps": 181.5386881359744,
+      "total_fps": 167.3552590913904,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 2814,
+        "central_value": 2816
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 45,
+      "environment_transitions": 8192,
+      "env_step_seconds": 44.756508588790894,
+      "rollout_seconds": 45.10735201835632,
+      "optimization_seconds": 3.8701512813568115,
+      "official_total_seconds": 48.977503538131714,
+      "observed_epoch_seconds": 48.97868044999632,
+      "env_step_fps": 183.03483131952024,
+      "rollout_fps": 181.61119270903524,
+      "total_fps": 167.26046466664172,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 2878,
+        "central_value": 2880
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 46,
+      "environment_transitions": 8192,
+      "env_step_seconds": 44.89280152320862,
+      "rollout_seconds": 45.24639916419983,
+      "optimization_seconds": 3.8899736404418945,
+      "official_total_seconds": 49.13637328147888,
+      "observed_epoch_seconds": 49.137636947998544,
+      "env_step_fps": 182.4791441399555,
+      "rollout_fps": 181.05308160039687,
+      "total_fps": 166.71967125192438,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 2942,
+        "central_value": 2944
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 47,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.36930823326111,
+      "rollout_seconds": 42.709617376327515,
+      "optimization_seconds": 3.5871312618255615,
+      "official_total_seconds": 46.296748876571655,
+      "observed_epoch_seconds": 46.29793557700032,
+      "env_step_fps": 193.34750416267235,
+      "rollout_fps": 191.8069161757592,
+      "total_fps": 176.9454702281598,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 3006,
+        "central_value": 3008
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 48,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.18058443069458,
+      "rollout_seconds": 41.51663661003113,
+      "optimization_seconds": 3.5937488079071045,
+      "official_total_seconds": 45.11038565635681,
+      "observed_epoch_seconds": 45.11160695199942,
+      "env_step_fps": 198.92869693937533,
+      "rollout_fps": 197.31848889754892,
+      "total_fps": 181.59897949898394,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 3070,
+        "central_value": 3072
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 49,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.926538944244385,
+      "rollout_seconds": 42.257044315338135,
+      "optimization_seconds": 3.5871529579162598,
+      "official_total_seconds": 45.844197511672974,
+      "observed_epoch_seconds": 45.84555910700146,
+      "env_step_fps": 195.38936927023846,
+      "rollout_fps": 193.8611687762206,
+      "total_fps": 178.6921888623774,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 3134,
+        "central_value": 3136
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 50,
+      "environment_transitions": 8192,
+      "env_step_seconds": 43.26672720909119,
+      "rollout_seconds": 43.597808837890625,
+      "optimization_seconds": 3.5689194202423096,
+      "official_total_seconds": 47.166728496551514,
+      "observed_epoch_seconds": 47.167912534001516,
+      "env_step_fps": 189.33717728200853,
+      "rollout_fps": 187.89935132887632,
+      "total_fps": 173.68175112248753,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 3198,
+        "central_value": 3200
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 51,
+      "environment_transitions": 8192,
+      "env_step_seconds": 44.197174072265625,
+      "rollout_seconds": 44.549601316452026,
+      "optimization_seconds": 3.8254408836364746,
+      "official_total_seconds": 48.37504291534424,
+      "observed_epoch_seconds": 48.37659671599977,
+      "env_step_fps": 185.3512169489723,
+      "rollout_fps": 183.88492282589115,
+      "total_fps": 169.34351901942298,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 3262,
+        "central_value": 3264
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 52,
+      "environment_transitions": 8192,
+      "env_step_seconds": 43.9599244594574,
+      "rollout_seconds": 44.30409049987793,
+      "optimization_seconds": 3.9047162532806396,
+      "official_total_seconds": 48.20880699157715,
+      "observed_epoch_seconds": 48.20999380199646,
+      "env_step_fps": 186.35154861458363,
+      "rollout_fps": 184.9039198767114,
+      "total_fps": 169.9274574753794,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 3326,
+        "central_value": 3328
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 53,
+      "environment_transitions": 8192,
+      "env_step_seconds": 44.27357006072998,
+      "rollout_seconds": 44.6273398399353,
+      "optimization_seconds": 3.895378589630127,
+      "official_total_seconds": 48.52271866798401,
+      "observed_epoch_seconds": 48.52391071299644,
+      "env_step_fps": 185.03138528840225,
+      "rollout_fps": 183.56460477774863,
+      "total_fps": 168.82813298351314,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 3390,
+        "central_value": 3392
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 54,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.628679037094116,
+      "rollout_seconds": 42.9716112613678,
+      "optimization_seconds": 3.572110891342163,
+      "official_total_seconds": 46.54372239112854,
+      "observed_epoch_seconds": 46.54487682299805,
+      "env_step_fps": 192.17109666643864,
+      "rollout_fps": 190.63748739076829,
+      "total_fps": 176.00654995229678,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 3454,
+        "central_value": 3456
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 55,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.42247247695923,
+      "rollout_seconds": 41.75516223907471,
+      "optimization_seconds": 3.582228660583496,
+      "official_total_seconds": 45.3373908996582,
+      "observed_epoch_seconds": 45.33854586599773,
+      "env_step_fps": 197.7670455223721,
+      "rollout_fps": 196.19131050421072,
+      "total_fps": 180.6897096952652,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 3518,
+        "central_value": 3520
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 56,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.81178092956543,
+      "rollout_seconds": 42.13946890830994,
+      "optimization_seconds": 3.5841493606567383,
+      "official_total_seconds": 45.723618268966675,
+      "observed_epoch_seconds": 45.72477652099769,
+      "env_step_fps": 195.92564147889175,
+      "rollout_fps": 194.40207036839354,
+      "total_fps": 179.1634238526577,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 3582,
+        "central_value": 3584
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 57,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.41536211967468,
+      "rollout_seconds": 41.743183612823486,
+      "optimization_seconds": 3.2656190395355225,
+      "official_total_seconds": 45.00880289077759,
+      "observed_epoch_seconds": 45.0099415500008,
+      "env_step_fps": 197.80099897058074,
+      "rollout_fps": 196.24760957339683,
+      "total_fps": 182.0088399124821,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 3646,
+        "central_value": 3648
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 58,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.35988450050354,
+      "rollout_seconds": 41.68972444534302,
+      "optimization_seconds": 3.497208833694458,
+      "official_total_seconds": 45.186933517456055,
+      "observed_epoch_seconds": 45.18807141800062,
+      "env_step_fps": 198.0663171315255,
+      "rollout_fps": 196.49925992530981,
+      "total_fps": 181.29134602230462,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 3710,
+        "central_value": 3712
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 59,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.95328950881958,
+      "rollout_seconds": 42.293981075286865,
+      "optimization_seconds": 3.583030939102173,
+      "official_total_seconds": 45.87701225280762,
+      "observed_epoch_seconds": 45.878163336004945,
+      "env_step_fps": 195.26478366560139,
+      "rollout_fps": 193.69186327996758,
+      "total_fps": 178.5643745686307,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 3774,
+        "central_value": 3776
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 60,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.272828817367554,
+      "rollout_seconds": 41.60698127746582,
+      "optimization_seconds": 3.5772929191589355,
+      "official_total_seconds": 45.184274196624756,
+      "observed_epoch_seconds": 45.185438827000326,
+      "env_step_fps": 198.4840931608937,
+      "rollout_fps": 196.89003500085107,
+      "total_fps": 181.30201592597317,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 3838,
+        "central_value": 3840
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 61,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.837034702301025,
+      "rollout_seconds": 42.16926598548889,
+      "optimization_seconds": 3.5784943103790283,
+      "official_total_seconds": 45.7477605342865,
+      "observed_epoch_seconds": 45.74893714299833,
+      "env_step_fps": 195.80737636621848,
+      "rollout_fps": 194.2647046030869,
+      "total_fps": 179.06887472361308,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 3902,
+        "central_value": 3904
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 62,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.64116668701172,
+      "rollout_seconds": 41.97401785850525,
+      "optimization_seconds": 3.591456890106201,
+      "official_total_seconds": 45.56547498703003,
+      "observed_epoch_seconds": 45.56665701100428,
+      "env_step_fps": 196.7283976833234,
+      "rollout_fps": 195.1683545667536,
+      "total_fps": 179.78524315464307,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 3966,
+        "central_value": 3968
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 63,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.0261607170105,
+      "rollout_seconds": 42.35802745819092,
+      "optimization_seconds": 3.6014528274536133,
+      "official_total_seconds": 45.95948052406311,
+      "observed_epoch_seconds": 45.9606145650032,
+      "env_step_fps": 194.9262045410731,
+      "rollout_fps": 193.39899640241356,
+      "total_fps": 178.24396417428818,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 4030,
+        "central_value": 4032
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 64,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.99714946746826,
+      "rollout_seconds": 42.3237726688385,
+      "optimization_seconds": 3.2658979892730713,
+      "official_total_seconds": 45.58967089653015,
+      "observed_epoch_seconds": 45.590818413002125,
+      "env_step_fps": 195.0608577933526,
+      "rollout_fps": 193.55552408094943,
+      "total_fps": 179.68982532452316,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 4094,
+        "central_value": 4096
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 65,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.60444712638855,
+      "rollout_seconds": 41.93554401397705,
+      "optimization_seconds": 3.5012528896331787,
+      "official_total_seconds": 45.43679714202881,
+      "observed_epoch_seconds": 45.43801584699395,
+      "env_step_fps": 196.90202768742097,
+      "rollout_fps": 195.34741214444767,
+      "total_fps": 180.2943982691606,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 4158,
+        "central_value": 4160
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 66,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.85397148132324,
+      "rollout_seconds": 42.18818664550781,
+      "optimization_seconds": 3.5703811645507812,
+      "official_total_seconds": 45.75856804847717,
+      "observed_epoch_seconds": 45.75997849100531,
+      "env_step_fps": 195.72814024723,
+      "rollout_fps": 194.17758029835306,
+      "total_fps": 179.02658123657403,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 4222,
+        "central_value": 4224
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 67,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.81847357749939,
+      "rollout_seconds": 42.150980949401855,
+      "optimization_seconds": 3.5848991870880127,
+      "official_total_seconds": 45.73588037490845,
+      "observed_epoch_seconds": 45.73703882800328,
+      "env_step_fps": 195.8942854482317,
+      "rollout_fps": 194.34897635795707,
+      "total_fps": 179.11538889922153,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 4286,
+        "central_value": 4288
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 68,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.78276872634888,
+      "rollout_seconds": 42.11915373802185,
+      "optimization_seconds": 3.5817196369171143,
+      "official_total_seconds": 45.700873613357544,
+      "observed_epoch_seconds": 45.7020099270012,
+      "env_step_fps": 196.06168403181942,
+      "rollout_fps": 194.49583557527436,
+      "total_fps": 179.25259086525702,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 4350,
+        "central_value": 4352
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 69,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.26466226577759,
+      "rollout_seconds": 41.60452485084534,
+      "optimization_seconds": 3.578935146331787,
+      "official_total_seconds": 45.1834602355957,
+      "observed_epoch_seconds": 45.18460652700014,
+      "env_step_fps": 198.52337448533896,
+      "rollout_fps": 196.9016598403371,
+      "total_fps": 181.30528200552268,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 4414,
+        "central_value": 4416
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 70,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.75583791732788,
+      "rollout_seconds": 42.088255643844604,
+      "optimization_seconds": 3.595090389251709,
+      "official_total_seconds": 45.68334627151489,
+      "observed_epoch_seconds": 45.68451003800146,
+      "env_step_fps": 196.1881358055678,
+      "rollout_fps": 194.6386200778097,
+      "total_fps": 179.32136475536575,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 4478,
+        "central_value": 4480
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 71,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.271164417266846,
+      "rollout_seconds": 42.599666118621826,
+      "optimization_seconds": 3.275608539581299,
+      "official_total_seconds": 45.875274896621704,
+      "observed_epoch_seconds": 45.87640430000465,
+      "env_step_fps": 193.79641211524677,
+      "rollout_fps": 192.3019766678168,
+      "total_fps": 178.5711370331923,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 65536.0,
+      "optimizer_steps_cumulative": {
+        "actor": 4542,
+        "central_value": 4544
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 72,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.5030677318573,
+      "rollout_seconds": 41.831820011138916,
+      "optimization_seconds": 3.467973232269287,
+      "official_total_seconds": 45.2997932434082,
+      "observed_epoch_seconds": 45.30093512900203,
+      "env_step_fps": 197.38299956347348,
+      "rollout_fps": 195.83178541642812,
+      "total_fps": 180.83967747892666,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 65536.0,
+      "optimizer_steps_cumulative": {
+        "actor": 4606,
+        "central_value": 4608
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 73,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.785414695739746,
+      "rollout_seconds": 42.114083766937256,
+      "optimization_seconds": 3.5869522094726562,
+      "official_total_seconds": 45.70103621482849,
+      "observed_epoch_seconds": 45.7022202090011,
+      "env_step_fps": 196.04926885732738,
+      "rollout_fps": 194.51925026637622,
+      "total_fps": 179.2519530955835,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 65536.0,
+      "optimizer_steps_cumulative": {
+        "actor": 4670,
+        "central_value": 4672
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 74,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.90262222290039,
+      "rollout_seconds": 42.231162548065186,
+      "optimization_seconds": 3.5815393924713135,
+      "official_total_seconds": 45.81270241737366,
+      "observed_epoch_seconds": 45.81384841099498,
+      "env_step_fps": 195.50089148174965,
+      "rollout_fps": 193.9799784265071,
+      "total_fps": 178.81503530106812,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 65536.0,
+      "optimizer_steps_cumulative": {
+        "actor": 4734,
+        "central_value": 4736
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 75,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.97400403022766,
+      "rollout_seconds": 42.305591344833374,
+      "optimization_seconds": 3.5738089084625244,
+      "official_total_seconds": 45.87940049171448,
+      "observed_epoch_seconds": 45.880542949998926,
+      "env_step_fps": 195.16841886469814,
+      "rollout_fps": 193.63870683728095,
+      "total_fps": 178.55507945182114,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 65536.0,
+      "optimizer_steps_cumulative": {
+        "actor": 4798,
+        "central_value": 4800
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 76,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.68219780921936,
+      "rollout_seconds": 42.01849389076233,
+      "optimization_seconds": 3.5956521034240723,
+      "official_total_seconds": 45.61414623260498,
+      "observed_epoch_seconds": 45.615317365998635,
+      "env_step_fps": 196.53474218166286,
+      "rollout_fps": 194.96177138802665,
+      "total_fps": 179.59340854974417,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 65536.0,
+      "optimizer_steps_cumulative": {
+        "actor": 4862,
+        "central_value": 4864
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 77,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.31724548339844,
+      "rollout_seconds": 42.65321445465088,
+      "optimization_seconds": 3.599292278289795,
+      "official_total_seconds": 46.25250697135925,
+      "observed_epoch_seconds": 46.25365822399908,
+      "env_step_fps": 193.58537887854303,
+      "rollout_fps": 192.06055404592723,
+      "total_fps": 177.11472385859426,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 65536.0,
+      "optimizer_steps_cumulative": {
+        "actor": 4926,
+        "central_value": 4928
+      },
+      "cuda_peak_allocated_bytes": 602127872,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 78,
+      "environment_transitions": 8192,
+      "env_step_seconds": 43.81365418434143,
+      "rollout_seconds": 44.14350986480713,
+      "optimization_seconds": 3.4515929222106934,
+      "official_total_seconds": 47.5951030254364,
+      "observed_epoch_seconds": 47.59630014400318,
+      "env_step_fps": 186.97367641450322,
+      "rollout_fps": 185.57654398321804,
+      "total_fps": 172.11854748212068,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 65536.0,
+      "optimizer_steps_cumulative": {
+        "actor": 4990,
+        "central_value": 4992
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 79,
+      "environment_transitions": 8192,
+      "env_step_seconds": 40.38234829902649,
+      "rollout_seconds": 40.709704637527466,
+      "optimization_seconds": 3.2778022289276123,
+      "official_total_seconds": 43.98750710487366,
+      "observed_epoch_seconds": 43.988652995998564,
+      "env_step_fps": 202.86091188504477,
+      "rollout_fps": 201.22965943723307,
+      "total_fps": 186.2346956936861,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 65536.0,
+      "optimizer_steps_cumulative": {
+        "actor": 5054,
+        "central_value": 5056
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 80,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.81592130661011,
+      "rollout_seconds": 42.15136504173279,
+      "optimization_seconds": 3.579397678375244,
+      "official_total_seconds": 45.73076319694519,
+      "observed_epoch_seconds": 45.73201124899788,
+      "env_step_fps": 195.9062420252125,
+      "rollout_fps": 194.34720540816056,
+      "total_fps": 179.13543154134862,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 5117,
+        "central_value": 5120
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 81,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.78624773025513,
+      "rollout_seconds": 42.12514519691467,
+      "optimization_seconds": 3.585599184036255,
+      "official_total_seconds": 45.71074461936951,
+      "observed_epoch_seconds": 45.71188450699992,
+      "env_step_fps": 196.04536049473097,
+      "rollout_fps": 194.46817243492845,
+      "total_fps": 179.21388216740436,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 5181,
+        "central_value": 5184
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 82,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.71350431442261,
+      "rollout_seconds": 42.04648542404175,
+      "optimization_seconds": 3.580226182937622,
+      "official_total_seconds": 45.62671184539795,
+      "observed_epoch_seconds": 45.62782696800423,
+      "env_step_fps": 196.38724040664175,
+      "rollout_fps": 194.83197982858988,
+      "total_fps": 179.54394846067063,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 5245,
+        "central_value": 5248
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 83,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.58649182319641,
+      "rollout_seconds": 41.921523332595825,
+      "optimization_seconds": 3.585357666015625,
+      "official_total_seconds": 45.50688099861145,
+      "observed_epoch_seconds": 45.50805469999614,
+      "env_step_fps": 196.98704172566457,
+      "rollout_fps": 195.41274621646107,
+      "total_fps": 180.01673198059788,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 5309,
+        "central_value": 5312
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 84,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.446362018585205,
+      "rollout_seconds": 41.77598857879639,
+      "optimization_seconds": 3.589705467224121,
+      "official_total_seconds": 45.36569428443909,
+      "observed_epoch_seconds": 45.36687285899825,
+      "env_step_fps": 197.6530532722408,
+      "rollout_fps": 196.09350439543854,
+      "total_fps": 180.57697846828594,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 5373,
+        "central_value": 5376
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 85,
+      "environment_transitions": 8192,
+      "env_step_seconds": 43.86311483383179,
+      "rollout_seconds": 44.20083808898926,
+      "optimization_seconds": 3.5031561851501465,
+      "official_total_seconds": 47.70399451255798,
+      "observed_epoch_seconds": 47.705139226003666,
+      "env_step_fps": 186.76284233424934,
+      "rollout_fps": 185.33585230911459,
+      "total_fps": 171.72566120942915,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 5437,
+        "central_value": 5440
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 86,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.12054252624512,
+      "rollout_seconds": 41.45452117919922,
+      "optimization_seconds": 3.27235746383667,
+      "official_total_seconds": 44.72687888145447,
+      "observed_epoch_seconds": 44.7280342640006,
+      "env_step_fps": 199.21916143911452,
+      "rollout_fps": 197.6141508084896,
+      "total_fps": 183.15608432487176,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 5501,
+        "central_value": 5504
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 87,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.75344705581665,
+      "rollout_seconds": 42.08832812309265,
+      "optimization_seconds": 3.5851385593414307,
+      "official_total_seconds": 45.67346692085266,
+      "observed_epoch_seconds": 45.674628281994956,
+      "env_step_fps": 196.1993698160731,
+      "rollout_fps": 194.63828489555246,
+      "total_fps": 179.36015267235743,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 5565,
+        "central_value": 5568
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 88,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.62171769142151,
+      "rollout_seconds": 41.957188844680786,
+      "optimization_seconds": 3.5802717208862305,
+      "official_total_seconds": 45.537461042404175,
+      "observed_epoch_seconds": 45.538593928999035,
+      "env_step_fps": 196.82032492590812,
+      "rollout_fps": 195.24663652575853,
+      "total_fps": 179.8958442670237,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 5629,
+        "central_value": 5632
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 89,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.737592935562134,
+      "rollout_seconds": 42.07708549499512,
+      "optimization_seconds": 3.5760440826416016,
+      "official_total_seconds": 45.65312957763672,
+      "observed_epoch_seconds": 45.65429053999833,
+      "env_step_fps": 196.27389659598893,
+      "rollout_fps": 194.69029053769427,
+      "total_fps": 179.4400531965473,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 5693,
+        "central_value": 5696
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 90,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.86568284034729,
+      "rollout_seconds": 42.200987815856934,
+      "optimization_seconds": 3.5922718048095703,
+      "official_total_seconds": 45.79325985908508,
+      "observed_epoch_seconds": 45.79438782000216,
+      "env_step_fps": 195.67338794496166,
+      "rollout_fps": 194.11867882679923,
+      "total_fps": 178.89095524556242,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 5757,
+        "central_value": 5760
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 91,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.109490156173706,
+      "rollout_seconds": 42.44525599479675,
+      "optimization_seconds": 3.6030988693237305,
+      "official_total_seconds": 46.04835510253906,
+      "observed_epoch_seconds": 46.049502811998536,
+      "env_step_fps": 194.5404698470082,
+      "rollout_fps": 193.00154535536868,
+      "total_fps": 177.89994847282398,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 5821,
+        "central_value": 5824
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 92,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.75413393974304,
+      "rollout_seconds": 43.09011101722717,
+      "optimization_seconds": 3.503626823425293,
+      "official_total_seconds": 46.593738079071045,
+      "observed_epoch_seconds": 46.594936186003906,
+      "env_step_fps": 191.6072025115903,
+      "rollout_fps": 190.11322567084792,
+      "total_fps": 175.8176170818902,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 5885,
+        "central_value": 5888
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 93,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.44903087615967,
+      "rollout_seconds": 41.78672766685486,
+      "optimization_seconds": 3.270909547805786,
+      "official_total_seconds": 45.05763792991638,
+      "observed_epoch_seconds": 45.05877557200438,
+      "env_step_fps": 197.64032660922385,
+      "rollout_fps": 196.0431088385482,
+      "total_fps": 181.81157238517503,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 5949,
+        "central_value": 5952
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 94,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.778359174728394,
+      "rollout_seconds": 42.11146283149719,
+      "optimization_seconds": 3.5755879878997803,
+      "official_total_seconds": 45.68705105781555,
+      "observed_epoch_seconds": 45.68821169700095,
+      "env_step_fps": 196.08237761896874,
+      "rollout_fps": 194.531356765712,
+      "total_fps": 179.30682349432615,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 6013,
+        "central_value": 6016
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 95,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.8281786441803,
+      "rollout_seconds": 42.16311860084534,
+      "optimization_seconds": 3.5880093574523926,
+      "official_total_seconds": 45.75112819671631,
+      "observed_epoch_seconds": 45.75226579699665,
+      "env_step_fps": 195.8488336221109,
+      "rollout_fps": 194.2930284060097,
+      "total_fps": 179.05569376949185,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 6077,
+        "central_value": 6080
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 96,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.678203105926514,
+      "rollout_seconds": 42.00804543495178,
+      "optimization_seconds": 3.5778324604034424,
+      "official_total_seconds": 45.585878133773804,
+      "observed_epoch_seconds": 45.58704191599827,
+      "env_step_fps": 196.5535793177015,
+      "rollout_fps": 195.01026327647332,
+      "total_fps": 179.70477558774252,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 6141,
+        "central_value": 6144
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 97,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.58466172218323,
+      "rollout_seconds": 41.91872692108154,
+      "optimization_seconds": 3.580334424972534,
+      "official_total_seconds": 45.499061584472656,
+      "observed_epoch_seconds": 45.500260625995,
+      "env_step_fps": 196.99571093613105,
+      "rollout_fps": 195.42578226248858,
+      "total_fps": 180.04766944019045,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 6205,
+        "central_value": 6208
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 98,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.54000210762024,
+      "rollout_seconds": 41.86817193031311,
+      "optimization_seconds": 3.582948684692383,
+      "official_total_seconds": 45.45112085342407,
+      "observed_epoch_seconds": 45.45243809299427,
+      "env_step_fps": 197.2075008271902,
+      "rollout_fps": 195.66175503518662,
+      "total_fps": 180.2375793199576,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 6269,
+        "central_value": 6272
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 99,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.577396392822266,
+      "rollout_seconds": 42.90517783164978,
+      "optimization_seconds": 3.5474538803100586,
+      "official_total_seconds": 46.45263195037842,
+      "observed_epoch_seconds": 46.45375537200016,
+      "env_step_fps": 192.40255849418295,
+      "rollout_fps": 190.93266626567907,
+      "total_fps": 176.35168678388018,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 6333,
+        "central_value": 6336
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 100,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.27495241165161,
+      "rollout_seconds": 41.60983896255493,
+      "optimization_seconds": 3.270442485809326,
+      "official_total_seconds": 44.88028168678284,
+      "observed_epoch_seconds": 44.88141528300184,
+      "env_step_fps": 198.4738811640025,
+      "rollout_fps": 196.87651296540835,
+      "total_fps": 182.5300486563686,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 6397,
+        "central_value": 6400
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 101,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.54167056083679,
+      "rollout_seconds": 41.876219034194946,
+      "optimization_seconds": 3.5736753940582275,
+      "official_total_seconds": 45.44989466667175,
+      "observed_epoch_seconds": 45.45105229500041,
+      "env_step_fps": 197.19958031064277,
+      "rollout_fps": 195.62415587975224,
+      "total_fps": 180.2424419259912,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 6461,
+        "central_value": 6464
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 102,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.43889832496643,
+      "rollout_seconds": 41.76995801925659,
+      "optimization_seconds": 3.5807886123657227,
+      "official_total_seconds": 45.350746631622314,
+      "observed_epoch_seconds": 45.351896050000505,
+      "env_step_fps": 197.68865320110163,
+      "rollout_fps": 196.12181549771637,
+      "total_fps": 180.63649682644598,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 6525,
+        "central_value": 6528
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 103,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.41530227661133,
+      "rollout_seconds": 41.74439334869385,
+      "optimization_seconds": 3.572453498840332,
+      "official_total_seconds": 45.31684708595276,
+      "observed_epoch_seconds": 45.31801051899674,
+      "env_step_fps": 197.80128478324085,
+      "rollout_fps": 196.24192239594066,
+      "total_fps": 180.7716230668515,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 6589,
+        "central_value": 6592
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 104,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.362526655197144,
+      "rollout_seconds": 41.69405817985535,
+      "optimization_seconds": 3.578228712081909,
+      "official_total_seconds": 45.272287130355835,
+      "observed_epoch_seconds": 45.273428104999766,
+      "env_step_fps": 198.05366505507436,
+      "rollout_fps": 196.47883553724205,
+      "total_fps": 180.94955035985194,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 6653,
+        "central_value": 6656
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 105,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.90095829963684,
+      "rollout_seconds": 42.23639106750488,
+      "optimization_seconds": 3.581054925918579,
+      "official_total_seconds": 45.81744623184204,
+      "observed_epoch_seconds": 45.81858906200068,
+      "env_step_fps": 195.50865499109602,
+      "rollout_fps": 193.9559652932237,
+      "total_fps": 178.7965212759229,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 6717,
+        "central_value": 6720
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 106,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.67905879020691,
+      "rollout_seconds": 43.00631237030029,
+      "optimization_seconds": 3.5516974925994873,
+      "official_total_seconds": 46.55801010131836,
+      "observed_epoch_seconds": 46.55914381400362,
+      "env_step_fps": 191.9442516356459,
+      "rollout_fps": 190.4836650365147,
+      "total_fps": 175.95253710742313,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 6781,
+        "central_value": 6784
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 107,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.13993549346924,
+      "rollout_seconds": 41.47378635406494,
+      "optimization_seconds": 3.2729218006134033,
+      "official_total_seconds": 44.746708393096924,
+      "observed_epoch_seconds": 44.747843037002895,
+      "env_step_fps": 199.12525145549728,
+      "rollout_fps": 197.52235617129958,
+      "total_fps": 183.07491867410252,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 6845,
+        "central_value": 6848
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 108,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.88560199737549,
+      "rollout_seconds": 42.21745800971985,
+      "optimization_seconds": 3.5549564361572266,
+      "official_total_seconds": 45.77241492271423,
+      "observed_epoch_seconds": 45.773604371002875,
+      "env_step_fps": 195.5803333210611,
+      "rollout_fps": 194.04294778036925,
+      "total_fps": 178.97242288465708,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 6909,
+        "central_value": 6912
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 109,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.56482672691345,
+      "rollout_seconds": 41.89520025253296,
+      "optimization_seconds": 3.5880630016326904,
+      "official_total_seconds": 45.48326349258423,
+      "observed_epoch_seconds": 45.48439004000102,
+      "env_step_fps": 197.08971852144484,
+      "rollout_fps": 195.53552556428505,
+      "total_fps": 180.11020694096976,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 6973,
+        "central_value": 6976
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 110,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.53906202316284,
+      "rollout_seconds": 41.868417263031006,
+      "optimization_seconds": 3.579815626144409,
+      "official_total_seconds": 45.448233127593994,
+      "observed_epoch_seconds": 45.44939667900326,
+      "env_step_fps": 197.21196389634437,
+      "rollout_fps": 195.6606085330428,
+      "total_fps": 180.2490313980151,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 7037,
+        "central_value": 7040
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 111,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.29878878593445,
+      "rollout_seconds": 41.632959842681885,
+      "optimization_seconds": 3.582376003265381,
+      "official_total_seconds": 45.215336561203,
+      "observed_epoch_seconds": 45.21649482599605,
+      "env_step_fps": 198.35932822296311,
+      "rollout_fps": 196.76717751884664,
+      "total_fps": 181.17746373316044,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 7100,
+        "central_value": 7104
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 112,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.32729506492615,
+      "rollout_seconds": 41.660240173339844,
+      "optimization_seconds": 3.578686475753784,
+      "official_total_seconds": 45.23892688751221,
+      "observed_epoch_seconds": 45.24006812599691,
+      "env_step_fps": 198.22250614588194,
+      "rollout_fps": 196.6383286777691,
+      "total_fps": 181.08298679077038,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 7164,
+        "central_value": 7168
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 113,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.38412380218506,
+      "rollout_seconds": 42.720213174819946,
+      "optimization_seconds": 3.5706918239593506,
+      "official_total_seconds": 46.290905237197876,
+      "observed_epoch_seconds": 46.29205438899953,
+      "env_step_fps": 193.27991863730995,
+      "rollout_fps": 191.75934273728086,
+      "total_fps": 176.96780734841136,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 7228,
+        "central_value": 7232
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 114,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.26402306556702,
+      "rollout_seconds": 41.59266471862793,
+      "optimization_seconds": 3.2661993503570557,
+      "official_total_seconds": 44.858864307403564,
+      "observed_epoch_seconds": 44.859987051000644,
+      "env_step_fps": 198.526449711004,
+      "rollout_fps": 196.95780627229405,
+      "total_fps": 182.61719565307814,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 7292,
+        "central_value": 7296
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 115,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.52834391593933,
+      "rollout_seconds": 41.856544494628906,
+      "optimization_seconds": 3.5438222885131836,
+      "official_total_seconds": 45.40036702156067,
+      "observed_epoch_seconds": 45.40151729099307,
+      "env_step_fps": 197.2628626025167,
+      "rollout_fps": 195.716108410507,
+      "total_fps": 180.4390699332808,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 7356,
+        "central_value": 7360
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 116,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.478654861450195,
+      "rollout_seconds": 41.809425830841064,
+      "optimization_seconds": 3.590343475341797,
+      "official_total_seconds": 45.39976954460144,
+      "observed_epoch_seconds": 45.4008984050015,
+      "env_step_fps": 197.4991722215552,
+      "rollout_fps": 195.93667784734572,
+      "total_fps": 180.4414445750006,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 7420,
+        "central_value": 7424
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 117,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.75953722000122,
+      "rollout_seconds": 42.09686851501465,
+      "optimization_seconds": 3.573744535446167,
+      "official_total_seconds": 45.670613288879395,
+      "observed_epoch_seconds": 45.671756381001614,
+      "env_step_fps": 196.1707563195012,
+      "rollout_fps": 194.59879770102538,
+      "total_fps": 179.37135961330998,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 7484,
+        "central_value": 7488
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 118,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.85626792907715,
+      "rollout_seconds": 42.19056057929993,
+      "optimization_seconds": 3.5824525356292725,
+      "official_total_seconds": 45.77301335334778,
+      "observed_epoch_seconds": 45.77418967799895,
+      "env_step_fps": 195.71740160591565,
+      "rollout_fps": 194.16665451985637,
+      "total_fps": 178.97008302165554,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 7548,
+        "central_value": 7552
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 119,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.533756256103516,
+      "rollout_seconds": 41.863301038742065,
+      "optimization_seconds": 3.5882813930511475,
+      "official_total_seconds": 45.45158267021179,
+      "observed_epoch_seconds": 45.45273039300082,
+      "env_step_fps": 197.23715691609664,
+      "rollout_fps": 195.6845207313866,
+      "total_fps": 180.2357479923114,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 7612,
+        "central_value": 7616
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 120,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.18163800239563,
+      "rollout_seconds": 42.51117753982544,
+      "optimization_seconds": 3.572112798690796,
+      "official_total_seconds": 46.083290576934814,
+      "observed_epoch_seconds": 46.08449879500404,
+      "env_step_fps": 194.2077261090418,
+      "rollout_fps": 192.70226030143596,
+      "total_fps": 177.7650835572099,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 7676,
+        "central_value": 7680
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 121,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.27009677886963,
+      "rollout_seconds": 42.60813069343567,
+      "optimization_seconds": 3.2749288082122803,
+      "official_total_seconds": 45.88305950164795,
+      "observed_epoch_seconds": 45.88417699300044,
+      "env_step_fps": 193.8013069346719,
+      "rollout_fps": 192.26377376048754,
+      "total_fps": 178.5408403226854,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 7740,
+        "central_value": 7744
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 122,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.633400678634644,
+      "rollout_seconds": 41.962908029556274,
+      "optimization_seconds": 3.5053157806396484,
+      "official_total_seconds": 45.4682240486145,
+      "observed_epoch_seconds": 45.46937246499874,
+      "env_step_fps": 196.76509404632796,
+      "rollout_fps": 195.22002608184408,
+      "total_fps": 180.16978167524502,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 7804,
+        "central_value": 7808
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 123,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.75816464424133,
+      "rollout_seconds": 42.09437942504883,
+      "optimization_seconds": 3.5776453018188477,
+      "official_total_seconds": 45.672024965286255,
+      "observed_epoch_seconds": 45.673141741004656,
+      "env_step_fps": 196.1772043812687,
+      "rollout_fps": 194.61030455589136,
+      "total_fps": 179.3658154247914,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 7868,
+        "central_value": 7872
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 124,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.912588119506836,
+      "rollout_seconds": 42.2456841468811,
+      "optimization_seconds": 3.580904960632324,
+      "official_total_seconds": 45.82658934593201,
+      "observed_epoch_seconds": 45.82771403499646,
+      "env_step_fps": 195.4544056463863,
+      "rollout_fps": 193.91329943948358,
+      "total_fps": 178.7608486016906,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 7932,
+        "central_value": 7936
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 125,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.77790451049805,
+      "rollout_seconds": 42.111469984054565,
+      "optimization_seconds": 3.5740966796875,
+      "official_total_seconds": 45.685566902160645,
+      "observed_epoch_seconds": 45.686733138994896,
+      "env_step_fps": 196.08451156140433,
+      "rollout_fps": 194.5313237249112,
+      "total_fps": 179.31264851203082,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 7996,
+        "central_value": 8000
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 126,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.757335901260376,
+      "rollout_seconds": 42.085471391677856,
+      "optimization_seconds": 3.581089973449707,
+      "official_total_seconds": 45.66656160354614,
+      "observed_epoch_seconds": 45.6676963409991,
+      "env_step_fps": 196.18109784040936,
+      "rollout_fps": 194.6514968018136,
+      "total_fps": 179.38727402160856,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 8059,
+        "central_value": 8064
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 127,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.944681882858276,
+      "rollout_seconds": 42.27147102355957,
+      "optimization_seconds": 3.582397699356079,
+      "official_total_seconds": 45.85386872291565,
+      "observed_epoch_seconds": 45.85510572500061,
+      "env_step_fps": 195.30485468642598,
+      "rollout_fps": 193.7950064580027,
+      "total_fps": 178.6545002233588,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 8123,
+        "central_value": 8128
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 128,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.68282914161682,
+      "rollout_seconds": 42.02253794670105,
+      "optimization_seconds": 3.2653114795684814,
+      "official_total_seconds": 45.28784942626953,
+      "observed_epoch_seconds": 45.28898733799724,
+      "env_step_fps": 196.53176544633754,
+      "rollout_fps": 194.94300916308904,
+      "total_fps": 180.88737053714397,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 8187,
+        "central_value": 8192
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 129,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.89681005477905,
+      "rollout_seconds": 42.23336410522461,
+      "optimization_seconds": 3.5159268379211426,
+      "official_total_seconds": 45.74929118156433,
+      "observed_epoch_seconds": 45.750447885999165,
+      "env_step_fps": 195.52801249759017,
+      "rollout_fps": 193.96986656307075,
+      "total_fps": 179.06288356443747,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 8251,
+        "central_value": 8256
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 130,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.82537841796875,
+      "rollout_seconds": 42.16515922546387,
+      "optimization_seconds": 3.5901172161102295,
+      "official_total_seconds": 45.755276918411255,
+      "observed_epoch_seconds": 45.756422682003176,
+      "env_step_fps": 195.8619457817172,
+      "rollout_fps": 194.28362540257615,
+      "total_fps": 179.03945843465453,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 8315,
+        "central_value": 8320
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 131,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.80120348930359,
+      "rollout_seconds": 42.1406455039978,
+      "optimization_seconds": 3.5706729888916016,
+      "official_total_seconds": 45.71131873130798,
+      "observed_epoch_seconds": 45.71248405699589,
+      "env_step_fps": 195.97521880192352,
+      "rollout_fps": 194.3966425294278,
+      "total_fps": 179.21163132817793,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 8379,
+        "central_value": 8384
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 132,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.89992928504944,
+      "rollout_seconds": 42.23273158073425,
+      "optimization_seconds": 3.5856008529663086,
+      "official_total_seconds": 45.81833267211914,
+      "observed_epoch_seconds": 45.8194768789981,
+      "env_step_fps": 195.51345646120305,
+      "rollout_fps": 193.97277167212718,
+      "total_fps": 178.7930621269618,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 8443,
+        "central_value": 8448
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 133,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.50757169723511,
+      "rollout_seconds": 41.83629369735718,
+      "optimization_seconds": 3.585965394973755,
+      "official_total_seconds": 45.42225933074951,
+      "observed_epoch_seconds": 45.42338865700003,
+      "env_step_fps": 197.36158163513295,
+      "rollout_fps": 195.81084450885507,
+      "total_fps": 180.35210314723955,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 8507,
+        "central_value": 8512
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 134,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.30643081665039,
+      "rollout_seconds": 42.64233708381653,
+      "optimization_seconds": 3.59908127784729,
+      "official_total_seconds": 46.2414186000824,
+      "observed_epoch_seconds": 46.242571378999855,
+      "env_step_fps": 193.63486453165658,
+      "rollout_fps": 192.10954558841473,
+      "total_fps": 177.15719474024533,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 8571,
+        "central_value": 8576
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 135,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.15406084060669,
+      "rollout_seconds": 42.487937450408936,
+      "optimization_seconds": 3.2771401405334473,
+      "official_total_seconds": 45.76507806777954,
+      "observed_epoch_seconds": 45.766229964996455,
+      "env_step_fps": 194.3347766891466,
+      "rollout_fps": 192.80766475335588,
+      "total_fps": 179.00111495204678,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 8635,
+        "central_value": 8640
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 136,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.8525710105896,
+      "rollout_seconds": 42.192657709121704,
+      "optimization_seconds": 3.501397132873535,
+      "official_total_seconds": 45.69405508041382,
+      "observed_epoch_seconds": 45.69522630800202,
+      "env_step_fps": 195.73468970227057,
+      "rollout_fps": 194.15700372505705,
+      "total_fps": 179.2793391959515,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 8699,
+        "central_value": 8704
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 137,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.12391924858093,
+      "rollout_seconds": 42.45715665817261,
+      "optimization_seconds": 3.585268020629883,
+      "official_total_seconds": 46.04242467880249,
+      "observed_epoch_seconds": 46.04364401099883,
+      "env_step_fps": 194.47383211560904,
+      "rollout_fps": 192.94744737512036,
+      "total_fps": 177.92286260222784,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 8763,
+        "central_value": 8768
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 138,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.03532004356384,
+      "rollout_seconds": 42.36925911903381,
+      "optimization_seconds": 3.579972505569458,
+      "official_total_seconds": 45.94923162460327,
+      "observed_epoch_seconds": 45.95038102599938,
+      "env_step_fps": 194.883730907963,
+      "rollout_fps": 193.34772829010493,
+      "total_fps": 178.28372119314477,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 8827,
+        "central_value": 8832
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 139,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.266578912734985,
+      "rollout_seconds": 42.60585403442383,
+      "optimization_seconds": 3.5840303897857666,
+      "official_total_seconds": 46.189884662628174,
+      "observed_epoch_seconds": 46.1910308890001,
+      "env_step_fps": 193.81743710352052,
+      "rollout_fps": 192.27404744383696,
+      "total_fps": 177.35484857419604,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 8891,
+        "central_value": 8896
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 140,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.28809905052185,
+      "rollout_seconds": 42.627299070358276,
+      "optimization_seconds": 3.575627326965332,
+      "official_total_seconds": 46.20292663574219,
+      "observed_epoch_seconds": 46.204070617997786,
+      "env_step_fps": 193.71880467393362,
+      "rollout_fps": 192.17731779061899,
+      "total_fps": 177.30478557310133,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 8955,
+        "central_value": 8960
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 141,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.68575310707092,
+      "rollout_seconds": 43.01956367492676,
+      "optimization_seconds": 3.606934070587158,
+      "official_total_seconds": 46.626498222351074,
+      "observed_epoch_seconds": 46.62763284700486,
+      "env_step_fps": 191.9141494224449,
+      "rollout_fps": 190.42499040441388,
+      "total_fps": 175.69408624542703,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 9019,
+        "central_value": 9024
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 142,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.25679683685303,
+      "rollout_seconds": 42.59538984298706,
+      "optimization_seconds": 3.271176815032959,
+      "official_total_seconds": 45.8665668964386,
+      "observed_epoch_seconds": 45.867749762997846,
+      "env_step_fps": 193.8623041312868,
+      "rollout_fps": 192.32128242509177,
+      "total_fps": 178.60503966858013,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 9083,
+        "central_value": 9088
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 143,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.03952693939209,
+      "rollout_seconds": 42.37238430976868,
+      "optimization_seconds": 3.4933969974517822,
+      "official_total_seconds": 45.86578154563904,
+      "observed_epoch_seconds": 45.86702374199376,
+      "env_step_fps": 194.8642288913078,
+      "rollout_fps": 193.3334678575401,
+      "total_fps": 178.6080978877139,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 9147,
+        "central_value": 9152
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 144,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.391480684280396,
+      "rollout_seconds": 42.72631478309631,
+      "optimization_seconds": 3.5903263092041016,
+      "official_total_seconds": 46.316641330718994,
+      "observed_epoch_seconds": 46.31783040900336,
+      "env_step_fps": 193.2463756340966,
+      "rollout_fps": 191.7319581992355,
+      "total_fps": 176.86947422430538,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 9211,
+        "central_value": 9216
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 145,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.210373401641846,
+      "rollout_seconds": 42.54864239692688,
+      "optimization_seconds": 3.5792016983032227,
+      "official_total_seconds": 46.12784433364868,
+      "observed_epoch_seconds": 46.12898984999629,
+      "env_step_fps": 194.07551603609738,
+      "rollout_fps": 192.53258244008452,
+      "total_fps": 177.59338461052292,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 9275,
+        "central_value": 9280
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 146,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.277806520462036,
+      "rollout_seconds": 42.60939335823059,
+      "optimization_seconds": 3.5895960330963135,
+      "official_total_seconds": 46.19898962974548,
+      "observed_epoch_seconds": 46.2001565410028,
+      "env_step_fps": 193.76596550805334,
+      "rollout_fps": 192.25807631494013,
+      "total_fps": 177.31989521098822,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 9339,
+        "central_value": 9344
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 147,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.402143239974976,
+      "rollout_seconds": 42.73211050033569,
+      "optimization_seconds": 3.5820469856262207,
+      "official_total_seconds": 46.31415772438049,
+      "observed_epoch_seconds": 46.31530017100158,
+      "env_step_fps": 193.19778138660038,
+      "rollout_fps": 191.70595376831776,
+      "total_fps": 176.87895888663874,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 9403,
+        "central_value": 9408
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 148,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.62722373008728,
+      "rollout_seconds": 42.95561194419861,
+      "optimization_seconds": 3.5973172187805176,
+      "official_total_seconds": 46.552929401397705,
+      "observed_epoch_seconds": 46.5540843810013,
+      "env_step_fps": 192.17765744893907,
+      "rollout_fps": 190.7084925397361,
+      "total_fps": 175.9717402392736,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 9467,
+        "central_value": 9472
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 149,
+      "environment_transitions": 8192,
+      "env_step_seconds": 44.32110381126404,
+      "rollout_seconds": 44.65031409263611,
+      "optimization_seconds": 3.267526388168335,
+      "official_total_seconds": 47.91784071922302,
+      "observed_epoch_seconds": 47.9190149030037,
+      "env_step_fps": 184.83294177159087,
+      "rollout_fps": 183.47015393898548,
+      "total_fps": 170.95928942210548,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 9531,
+        "central_value": 9536
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 150,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.019081592559814,
+      "rollout_seconds": 41.35047173500061,
+      "optimization_seconds": 3.267089605331421,
+      "official_total_seconds": 44.61756157875061,
+      "observed_epoch_seconds": 44.618697976002295,
+      "env_step_fps": 199.711931178047,
+      "rollout_fps": 198.1114037222937,
+      "total_fps": 183.60483428797443,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 9595,
+        "central_value": 9600
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 151,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.39104461669922,
+      "rollout_seconds": 42.72447896003723,
+      "optimization_seconds": 3.5865445137023926,
+      "official_total_seconds": 46.3110237121582,
+      "observed_epoch_seconds": 46.31215555700328,
+      "env_step_fps": 193.24836351810268,
+      "rollout_fps": 191.74019670696205,
+      "total_fps": 176.89092884054136,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 9659,
+        "central_value": 9664
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 152,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.30060052871704,
+      "rollout_seconds": 42.63583707809448,
+      "optimization_seconds": 3.5858347415924072,
+      "official_total_seconds": 46.22167205810547,
+      "observed_epoch_seconds": 46.22279120400344,
+      "env_step_fps": 193.66155320746836,
+      "rollout_fps": 192.1388334652611,
+      "total_fps": 177.2328787608938,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 9723,
+        "central_value": 9728
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 153,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.228196144104004,
+      "rollout_seconds": 42.563626766204834,
+      "optimization_seconds": 3.5842339992523193,
+      "official_total_seconds": 46.14786100387573,
+      "observed_epoch_seconds": 46.149037596995186,
+      "env_step_fps": 193.99360493743907,
+      "rollout_fps": 192.46480204793968,
+      "total_fps": 177.5163533432675,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 9787,
+        "central_value": 9792
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 154,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.20901441574097,
+      "rollout_seconds": 42.546987533569336,
+      "optimization_seconds": 3.577072858810425,
+      "official_total_seconds": 46.12406039237976,
+      "observed_epoch_seconds": 46.12522447900119,
+      "env_step_fps": 194.08176460393648,
+      "rollout_fps": 192.54007098708357,
+      "total_fps": 177.60795407668434,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 9851,
+        "central_value": 9856
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 155,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.22190737724304,
+      "rollout_seconds": 42.555771589279175,
+      "optimization_seconds": 3.595818042755127,
+      "official_total_seconds": 46.1515896320343,
+      "observed_epoch_seconds": 46.15272338199429,
+      "env_step_fps": 194.0224994291793,
+      "rollout_fps": 192.50032825309557,
+      "total_fps": 177.50201163848638,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 16384.0,
+      "optimizer_steps_cumulative": {
+        "actor": 9915,
+        "central_value": 9920
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 156,
+      "environment_transitions": 8192,
+      "env_step_seconds": 43.988274335861206,
+      "rollout_seconds": 44.3221971988678,
+      "optimization_seconds": 3.487363338470459,
+      "official_total_seconds": 47.809560775756836,
+      "observed_epoch_seconds": 47.810698717003106,
+      "env_step_fps": 186.23144744101762,
+      "rollout_fps": 184.82838211390077,
+      "total_fps": 171.34648106104294,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 8192.0,
+      "optimizer_steps_cumulative": {
+        "actor": 9978,
+        "central_value": 9984
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 157,
+      "environment_transitions": 8192,
+      "env_step_seconds": 40.714112997055054,
+      "rollout_seconds": 41.04480004310608,
+      "optimization_seconds": 3.2739675045013428,
+      "official_total_seconds": 44.318767786026,
+      "observed_epoch_seconds": 44.3199004449998,
+      "env_step_fps": 201.20787110338242,
+      "rollout_fps": 199.586792758074,
+      "total_fps": 184.84268424500266,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 8192.0,
+      "optimizer_steps_cumulative": {
+        "actor": 10042,
+        "central_value": 10048
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 158,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.47068548202515,
+      "rollout_seconds": 42.80409097671509,
+      "optimization_seconds": 3.584233522415161,
+      "official_total_seconds": 46.38832473754883,
+      "observed_epoch_seconds": 46.389502284997434,
+      "env_step_fps": 192.88598493346893,
+      "rollout_fps": 191.38357603380362,
+      "total_fps": 176.596159623092,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 8192.0,
+      "optimizer_steps_cumulative": {
+        "actor": 10106,
+        "central_value": 10112
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 159,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.38730072975159,
+      "rollout_seconds": 42.72460627555847,
+      "optimization_seconds": 3.5753140449523926,
+      "official_total_seconds": 46.29992055892944,
+      "observed_epoch_seconds": 46.30109888200241,
+      "env_step_fps": 193.26543231024962,
+      "rollout_fps": 191.73962533825406,
+      "total_fps": 176.93334893681765,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 8192.0,
+      "optimizer_steps_cumulative": {
+        "actor": 10170,
+        "central_value": 10176
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 160,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.041898250579834,
+      "rollout_seconds": 42.377564668655396,
+      "optimization_seconds": 3.5814125537872314,
+      "official_total_seconds": 45.958977460861206,
+      "observed_epoch_seconds": 45.960135236004135,
+      "env_step_fps": 194.85323786223228,
+      "rollout_fps": 193.3098342024175,
+      "total_fps": 178.24591521811664,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 8192.0,
+      "optimizer_steps_cumulative": {
+        "actor": 10234,
+        "central_value": 10240
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 161,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.0187246799469,
+      "rollout_seconds": 42.35757780075073,
+      "optimization_seconds": 3.582723379135132,
+      "official_total_seconds": 45.940301179885864,
+      "observed_epoch_seconds": 45.94144161999429,
+      "env_step_fps": 194.96070055428328,
+      "rollout_fps": 193.40104947773494,
+      "total_fps": 178.3183781909275,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 8192.0,
+      "optimizer_steps_cumulative": {
+        "actor": 10298,
+        "central_value": 10304
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 162,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.32405686378479,
+      "rollout_seconds": 42.65269136428833,
+      "optimization_seconds": 3.597999334335327,
+      "official_total_seconds": 46.250691175460815,
+      "observed_epoch_seconds": 46.251898910995806,
+      "env_step_fps": 193.55422440634717,
+      "rollout_fps": 192.062909466456,
+      "total_fps": 177.12167735876824,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 8192.0,
+      "optimizer_steps_cumulative": {
+        "actor": 10362,
+        "central_value": 10368
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 163,
+      "environment_transitions": 8192,
+      "env_step_seconds": 43.51684093475342,
+      "rollout_seconds": 43.84762263298035,
+      "optimization_seconds": 3.5271103382110596,
+      "official_total_seconds": 47.374733209609985,
+      "observed_epoch_seconds": 47.37588517599943,
+      "env_step_fps": 188.24895888657454,
+      "rollout_fps": 186.82882920631414,
+      "total_fps": 172.91917959209212,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 8192.0,
+      "optimizer_steps_cumulative": {
+        "actor": 10426,
+        "central_value": 10432
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 164,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.12246918678284,
+      "rollout_seconds": 41.45797777175903,
+      "optimization_seconds": 3.277190923690796,
+      "official_total_seconds": 44.73516893386841,
+      "observed_epoch_seconds": 44.73632449300203,
+      "env_step_fps": 199.20982766844625,
+      "rollout_fps": 197.59767456820697,
+      "total_fps": 183.1221429410529,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 8192.0,
+      "optimizer_steps_cumulative": {
+        "actor": 10490,
+        "central_value": 10496
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 165,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.6254506111145,
+      "rollout_seconds": 42.965415477752686,
+      "optimization_seconds": 3.5989997386932373,
+      "official_total_seconds": 46.5644154548645,
+      "observed_epoch_seconds": 46.56555717300216,
+      "env_step_fps": 192.1856515896621,
+      "rollout_fps": 190.66497807385997,
+      "total_fps": 175.9283332556942,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 8192.0,
+      "optimizer_steps_cumulative": {
+        "actor": 10554,
+        "central_value": 10560
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 166,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.478066205978394,
+      "rollout_seconds": 42.81533718109131,
+      "optimization_seconds": 3.5917129516601562,
+      "official_total_seconds": 46.407050371170044,
+      "observed_epoch_seconds": 46.408205346000614,
+      "env_step_fps": 192.85247026728,
+      "rollout_fps": 191.33330575796242,
+      "total_fps": 176.52490159316838,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 8192.0,
+      "optimizer_steps_cumulative": {
+        "actor": 10618,
+        "central_value": 10624
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 167,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.29432725906372,
+      "rollout_seconds": 42.629350423812866,
+      "optimization_seconds": 3.5782833099365234,
+      "official_total_seconds": 46.20763397216797,
+      "observed_epoch_seconds": 46.20877986399864,
+      "env_step_fps": 193.6902778905047,
+      "rollout_fps": 192.16807008684626,
+      "total_fps": 177.28672290241585,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 8192.0,
+      "optimizer_steps_cumulative": {
+        "actor": 10682,
+        "central_value": 10688
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 168,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.771968364715576,
+      "rollout_seconds": 42.09854292869568,
+      "optimization_seconds": 3.5745019912719727,
+      "official_total_seconds": 45.67304515838623,
+      "observed_epoch_seconds": 45.674165131000336,
+      "env_step_fps": 196.1123768091262,
+      "rollout_fps": 194.59105779207567,
+      "total_fps": 179.36180895299535,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 8192.0,
+      "optimizer_steps_cumulative": {
+        "actor": 10746,
+        "central_value": 10752
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 169,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.13102436065674,
+      "rollout_seconds": 42.46189999580383,
+      "optimization_seconds": 3.5998666286468506,
+      "official_total_seconds": 46.06176686286926,
+      "observed_epoch_seconds": 46.06288303199835,
+      "env_step_fps": 194.44103542020557,
+      "rollout_fps": 192.9258935848266,
+      "total_fps": 177.8481495160281,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 8192.0,
+      "optimizer_steps_cumulative": {
+        "actor": 10810,
+        "central_value": 10816
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 170,
+      "environment_transitions": 8192,
+      "env_step_seconds": 43.26847052574158,
+      "rollout_seconds": 43.59613561630249,
+      "optimization_seconds": 3.526918411254883,
+      "official_total_seconds": 47.12305402755737,
+      "observed_epoch_seconds": 47.124203928004135,
+      "env_step_fps": 189.3295487559783,
+      "rollout_fps": 187.90656291418304,
+      "total_fps": 173.8427224010004,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 10872,
+        "central_value": 10880
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 171,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.63629484176636,
+      "rollout_seconds": 41.968281745910645,
+      "optimization_seconds": 3.2696831226348877,
+      "official_total_seconds": 45.23796486854553,
+      "observed_epoch_seconds": 45.23909709900181,
+      "env_step_fps": 196.75141678991113,
+      "rollout_fps": 195.19502965589535,
+      "total_fps": 181.08683765515698,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 10936,
+        "central_value": 10944
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 172,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.9153995513916,
+      "rollout_seconds": 42.24686288833618,
+      "optimization_seconds": 3.587151288986206,
+      "official_total_seconds": 45.83401417732239,
+      "observed_epoch_seconds": 45.8351521059958,
+      "env_step_fps": 195.44129574515827,
+      "rollout_fps": 193.9078890106585,
+      "total_fps": 178.73189043200176,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 11000,
+        "central_value": 11008
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 173,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.140509843826294,
+      "rollout_seconds": 42.47808361053467,
+      "optimization_seconds": 3.583635091781616,
+      "official_total_seconds": 46.06171917915344,
+      "observed_epoch_seconds": 46.062837398996635,
+      "env_step_fps": 194.39726833775248,
+      "rollout_fps": 192.85239124978708,
+      "total_fps": 177.84833362684225,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 11064,
+        "central_value": 11072
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 174,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.74672508239746,
+      "rollout_seconds": 42.07847189903259,
+      "optimization_seconds": 3.5787339210510254,
+      "official_total_seconds": 45.6572060585022,
+      "observed_epoch_seconds": 45.65833494300023,
+      "env_step_fps": 196.23096144262973,
+      "rollout_fps": 194.6838758702247,
+      "total_fps": 179.42403198091665,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 11128,
+        "central_value": 11136
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 175,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.592111349105835,
+      "rollout_seconds": 41.92112064361572,
+      "optimization_seconds": 3.5866847038269043,
+      "official_total_seconds": 45.507805585861206,
+      "observed_epoch_seconds": 45.50893001299846,
+      "env_step_fps": 196.96042673188592,
+      "rollout_fps": 195.41462332657323,
+      "total_fps": 180.01307456022815,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 11192,
+        "central_value": 11200
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 176,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.428908348083496,
+      "rollout_seconds": 42.761558532714844,
+      "optimization_seconds": 3.5915160179138184,
+      "official_total_seconds": 46.35307550430298,
+      "observed_epoch_seconds": 46.35421900199435,
+      "env_step_fps": 193.07590788793016,
+      "rollout_fps": 191.5739341851324,
+      "total_fps": 176.73045231355863,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 11256,
+        "central_value": 11264
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 177,
+      "environment_transitions": 8192,
+      "env_step_seconds": 43.54748725891113,
+      "rollout_seconds": 43.88599181175232,
+      "optimization_seconds": 3.541832447052002,
+      "official_total_seconds": 47.4278244972229,
+      "observed_epoch_seconds": 47.428971216999344,
+      "env_step_fps": 188.11647963278682,
+      "rollout_fps": 186.66548622483788,
+      "total_fps": 172.72561174463476,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 11320,
+        "central_value": 11328
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 178,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.75997185707092,
+      "rollout_seconds": 42.09206748008728,
+      "optimization_seconds": 3.2714085578918457,
+      "official_total_seconds": 45.363476276397705,
+      "observed_epoch_seconds": 45.36462401699828,
+      "env_step_fps": 196.1687145776394,
+      "rollout_fps": 194.62099370327755,
+      "total_fps": 180.58580762388,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 11384,
+        "central_value": 11392
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 179,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.20146036148071,
+      "rollout_seconds": 42.53832173347473,
+      "optimization_seconds": 3.570189952850342,
+      "official_total_seconds": 46.10851192474365,
+      "observed_epoch_seconds": 46.1096425289943,
+      "env_step_fps": 194.1165052069437,
+      "rollout_fps": 192.5792947668986,
+      "total_fps": 177.66784608817204,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 11448,
+        "central_value": 11456
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 180,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.242863178253174,
+      "rollout_seconds": 42.58217668533325,
+      "optimization_seconds": 3.582554578781128,
+      "official_total_seconds": 46.16473150253296,
+      "observed_epoch_seconds": 46.16588145199785,
+      "env_step_fps": 193.92624892474808,
+      "rollout_fps": 192.38095930454404,
+      "total_fps": 177.4514815395498,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 11512,
+        "central_value": 11520
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 181,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.11645245552063,
+      "rollout_seconds": 42.44840097427368,
+      "optimization_seconds": 3.588050603866577,
+      "official_total_seconds": 46.03645181655884,
+      "observed_epoch_seconds": 46.037631283994415,
+      "env_step_fps": 194.50831022987055,
+      "rollout_fps": 192.98724597340785,
+      "total_fps": 177.94594667379258,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 11576,
+        "central_value": 11584
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 182,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.762290239334106,
+      "rollout_seconds": 42.09247350692749,
+      "optimization_seconds": 3.5791525840759277,
+      "official_total_seconds": 45.671626329422,
+      "observed_epoch_seconds": 45.67281117699895,
+      "env_step_fps": 196.157824512323,
+      "rollout_fps": 194.6191163760376,
+      "total_fps": 179.36738098425573,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 11640,
+        "central_value": 11648
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 183,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.873268842697144,
+      "rollout_seconds": 42.202255725860596,
+      "optimization_seconds": 3.5915396213531494,
+      "official_total_seconds": 45.793795585632324,
+      "observed_epoch_seconds": 45.79494851999334,
+      "env_step_fps": 195.63793862796828,
+      "rollout_fps": 194.11284679221842,
+      "total_fps": 178.88886245913665,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 11704,
+        "central_value": 11712
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 184,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.51873230934143,
+      "rollout_seconds": 42.84696173667908,
+      "optimization_seconds": 3.5519704818725586,
+      "official_total_seconds": 46.398932456970215,
+      "observed_epoch_seconds": 46.400077032994886,
+      "env_step_fps": 192.66802077728468,
+      "rollout_fps": 191.19208615875442,
+      "total_fps": 176.55578622627056,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 11768,
+        "central_value": 11776
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 185,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.01593637466431,
+      "rollout_seconds": 42.34912657737732,
+      "optimization_seconds": 3.269557476043701,
+      "official_total_seconds": 45.6186842918396,
+      "observed_epoch_seconds": 45.61986211399926,
+      "env_step_fps": 194.97363873912835,
+      "rollout_fps": 193.43964473581667,
+      "total_fps": 179.57554294185132,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 11832,
+        "central_value": 11840
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 186,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.04728698730469,
+      "rollout_seconds": 42.38428974151611,
+      "optimization_seconds": 3.558546781539917,
+      "official_total_seconds": 45.94283676147461,
+      "observed_epoch_seconds": 45.943978535004135,
+      "env_step_fps": 194.8282656732028,
+      "rollout_fps": 193.2791619243722,
+      "total_fps": 178.30853681349964,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 11896,
+        "central_value": 11904
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 187,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.0775887966156,
+      "rollout_seconds": 42.410929441452026,
+      "optimization_seconds": 3.5772926807403564,
+      "official_total_seconds": 45.98822236061096,
+      "observed_epoch_seconds": 45.98936181099998,
+      "env_step_fps": 194.68796179354513,
+      "rollout_fps": 193.15775692463885,
+      "total_fps": 178.13256480677694,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 11960,
+        "central_value": 11968
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 188,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.95927357673645,
+      "rollout_seconds": 42.28634572029114,
+      "optimization_seconds": 3.578519105911255,
+      "official_total_seconds": 45.86486530303955,
+      "observed_epoch_seconds": 45.866009739998844,
+      "env_step_fps": 195.23693576387137,
+      "rollout_fps": 193.72683688931443,
+      "total_fps": 178.61166594240714,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 12024,
+        "central_value": 12032
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 189,
+      "environment_transitions": 8192,
+      "env_step_seconds": 41.91094517707825,
+      "rollout_seconds": 42.244678258895874,
+      "optimization_seconds": 3.5864686965942383,
+      "official_total_seconds": 45.83114719390869,
+      "observed_epoch_seconds": 45.83228844800033,
+      "env_step_fps": 195.46206761474645,
+      "rollout_fps": 193.91791670883256,
+      "total_fps": 178.74307106780822,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 12088,
+        "central_value": 12096
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 190,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.43463325500488,
+      "rollout_seconds": 42.76712203025818,
+      "optimization_seconds": 3.5880515575408936,
+      "official_total_seconds": 46.35517358779907,
+      "observed_epoch_seconds": 46.356303588996525,
+      "env_step_fps": 193.04985978720126,
+      "rollout_fps": 191.54901267857295,
+      "total_fps": 176.72245330899113,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 12152,
+        "central_value": 12160
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 191,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.70969247817993,
+      "rollout_seconds": 43.04738998413086,
+      "optimization_seconds": 3.5755679607391357,
+      "official_total_seconds": 46.622958183288574,
+      "observed_epoch_seconds": 46.624121569002455,
+      "env_step_fps": 191.80657889740678,
+      "rollout_fps": 190.30189758356843,
+      "total_fps": 175.7074265385486,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 12216,
+        "central_value": 12224
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 192,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.363080978393555,
+      "rollout_seconds": 42.69726037979126,
+      "optimization_seconds": 3.266101121902466,
+      "official_total_seconds": 45.963361740112305,
+      "observed_epoch_seconds": 45.96450717799598,
+      "env_step_fps": 193.37592570706002,
+      "rollout_fps": 191.86242693634972,
+      "total_fps": 178.22891298333445,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 12280,
+        "central_value": 12288
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 193,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.387168407440186,
+      "rollout_seconds": 42.719196796417236,
+      "optimization_seconds": 3.5445334911346436,
+      "official_total_seconds": 46.26373052597046,
+      "observed_epoch_seconds": 46.26488440599496,
+      "env_step_fps": 193.2660356373809,
+      "rollout_fps": 191.76390509025313,
+      "total_fps": 177.07175592771026,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 12344,
+        "central_value": 12352
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 194,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.45149230957031,
+      "rollout_seconds": 42.78974270820618,
+      "optimization_seconds": 3.577075481414795,
+      "official_total_seconds": 46.36681842803955,
+      "observed_epoch_seconds": 46.367969175000326,
+      "env_step_fps": 192.97319256202417,
+      "rollout_fps": 191.44775082811952,
+      "total_fps": 176.67807017455453,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 12408,
+        "central_value": 12416
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 195,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.552244424819946,
+      "rollout_seconds": 42.89135932922363,
+      "optimization_seconds": 3.592132329940796,
+      "official_total_seconds": 46.48349213600159,
+      "observed_epoch_seconds": 46.48466578999796,
+      "env_step_fps": 192.51628464565212,
+      "rollout_fps": 190.99417990276788,
+      "total_fps": 176.2346076760286,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 12472,
+        "central_value": 12480
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 196,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.012903928756714,
+      "rollout_seconds": 42.347535848617554,
+      "optimization_seconds": 3.573051929473877,
+      "official_total_seconds": 45.92058801651001,
+      "observed_epoch_seconds": 45.921726368003874,
+      "env_step_fps": 194.98771172522532,
+      "rollout_fps": 193.44691103832974,
+      "total_fps": 178.3949281541146,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 12536,
+        "central_value": 12544
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 197,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.3075110912323,
+      "rollout_seconds": 42.64343810081482,
+      "optimization_seconds": 3.584456205368042,
+      "official_total_seconds": 46.22789454460144,
+      "observed_epoch_seconds": 46.22906587499892,
+      "env_step_fps": 193.6299202837694,
+      "rollout_fps": 192.1045854847119,
+      "total_fps": 177.20902240304764,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 12600,
+        "central_value": 12608
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 198,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.52637434005737,
+      "rollout_seconds": 42.865986824035645,
+      "optimization_seconds": 3.585846424102783,
+      "official_total_seconds": 46.451834201812744,
+      "observed_epoch_seconds": 46.453000335997785,
+      "env_step_fps": 192.6333981470791,
+      "rollout_fps": 191.10722992632972,
+      "total_fps": 176.35471538991058,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 12664,
+        "central_value": 12672
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 199,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.28956413269043,
+      "rollout_seconds": 42.629544258117676,
+      "optimization_seconds": 3.267407178878784,
+      "official_total_seconds": 45.89695167541504,
+      "observed_epoch_seconds": 45.89810437900451,
+      "env_step_fps": 193.7120934681724,
+      "rollout_fps": 192.16719630869733,
+      "total_fps": 178.48679925268524,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 12728,
+        "central_value": 12736
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    },
+    {
+      "epoch": 200,
+      "environment_transitions": 8192,
+      "env_step_seconds": 42.23969483375549,
+      "rollout_seconds": 42.57708978652954,
+      "optimization_seconds": 3.5335702896118164,
+      "official_total_seconds": 46.11066031455994,
+      "observed_epoch_seconds": 46.111829184999806,
+      "env_step_fps": 193.9407950801158,
+      "rollout_fps": 192.40394402418198,
+      "total_fps": 177.65956818044717,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 2048.0,
+      "optimizer_steps_cumulative": {
+        "actor": 12792,
+        "central_value": 12800
+      },
+      "cuda_peak_allocated_bytes": 602504704,
+      "cuda_peak_reserved_bytes": 775946240
+    }
+  ],
+  "amp_skips": [
+    {
+      "epoch": 1,
+      "attempt": 1,
+      "scale_before": 65536.0,
+      "scale_after": 32768.0
+    },
+    {
+      "epoch": 9,
+      "attempt": 526,
+      "scale_before": 32768.0,
+      "scale_after": 16384.0
+    },
+    {
+      "epoch": 80,
+      "attempt": 5064,
+      "scale_before": 65536.0,
+      "scale_after": 32768.0
+    },
+    {
+      "epoch": 111,
+      "attempt": 7085,
+      "scale_before": 65536.0,
+      "scale_after": 32768.0
+    },
+    {
+      "epoch": 126,
+      "attempt": 8011,
+      "scale_before": 32768.0,
+      "scale_after": 16384.0
+    },
+    {
+      "epoch": 156,
+      "attempt": 9953,
+      "scale_before": 16384.0,
+      "scale_after": 8192.0
+    },
+    {
+      "epoch": 170,
+      "attempt": 10848,
+      "scale_before": 8192.0,
+      "scale_after": 4096.0
+    },
+    {
+      "epoch": 170,
+      "attempt": 10880,
+      "scale_before": 4096.0,
+      "scale_after": 2048.0
+    }
+  ],
+  "checkpoint_events": [
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 10,
+      "frame": 81920
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 11,
+      "frame": 90112
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 12,
+      "frame": 98304
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 13,
+      "frame": 106496
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 14,
+      "frame": 114688
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 16,
+      "frame": 131072
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 18,
+      "frame": 147456
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 19,
+      "frame": 155648
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 20,
+      "frame": 163840
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 23,
+      "frame": 188416
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 24,
+      "frame": 196608
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 25,
+      "frame": 204800
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 26,
+      "frame": 212992
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 27,
+      "frame": 221184
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 28,
+      "frame": 229376
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 30,
+      "frame": 245760
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 31,
+      "frame": 253952
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 32,
+      "frame": 262144
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 34,
+      "frame": 278528
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 35,
+      "frame": 286720
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 37,
+      "frame": 303104
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 38,
+      "frame": 311296
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 39,
+      "frame": 319488
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 49,
+      "frame": 401408
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_50_rew_301.46692",
+      "epoch": 50,
+      "frame": 409600
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 51,
+      "frame": 417792
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 52,
+      "frame": 425984
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 55,
+      "frame": 450560
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 56,
+      "frame": 458752
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 58,
+      "frame": 475136
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 60,
+      "frame": 491520
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 72,
+      "frame": 589824
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 94,
+      "frame": 770048
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 96,
+      "frame": 786432
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 98,
+      "frame": 802816
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_100_rew_346.65335",
+      "epoch": 100,
+      "frame": 819200
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 134,
+      "frame": 1097728
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_150_rew_350.71515",
+      "epoch": 150,
+      "frame": 1228800
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 176,
+      "frame": 1441792
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory",
+      "epoch": 180,
+      "frame": 1474560
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew_350.4961",
+      "epoch": 200,
+      "frame": 1638400
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_",
+      "epoch": 200,
+      "frame": 1638400
+    }
+  ],
+  "optimizer_steps": {
+    "actor": 12792,
+    "central_value": 12800
+  },
+  "actor_attempts": 12800,
+  "instrumentation_errors": [],
+  "runtime": {
+    "num_actors": 64,
+    "horizon_length": 128,
+    "minibatch_size": 512,
+    "mini_epochs": 4,
+    "obs_shape": [
+      19
+    ],
+    "state_shape": [
+      43
+    ],
+    "actions_num": 6,
+    "mixed_precision": true,
+    "config": {
+      "name": "Factory",
+      "device": "cuda:0",
+      "full_experiment_name": "g2_peginsert_64env_seed0_baseline_rerun",
+      "env_name": "rlgpu",
+      "multi_gpu": false,
+      "ppo": true,
+      "mixed_precision": true,
+      "normalize_input": true,
+      "normalize_value": true,
+      "value_bootstrap": true,
+      "num_actors": 64,
+      "reward_shaper": "<rl_games.common.tr_helpers.DefaultRewardsShaper object at 0x795faf5796c0>",
+      "normalize_advantage": true,
+      "gamma": 0.995,
+      "tau": 0.95,
+      "learning_rate": 0.0001,
+      "lr_schedule": "adaptive",
+      "schedule_type": "standard",
+      "kl_threshold": 0.008,
+      "score_to_win": 20000,
+      "max_epochs": 200,
+      "save_best_after": 10,
+      "save_frequency": 50,
+      "print_stats": true,
+      "grad_norm": 1.0,
+      "entropy_coef": 0.0,
+      "truncate_grads": true,
+      "e_clip": 0.2,
+      "horizon_length": 128,
+      "minibatch_size": 512,
+      "mini_epochs": 4,
+      "critic_coef": 2,
+      "clip_value": true,
+      "seq_length": 128,
+      "bounds_loss_coef": 0.0001,
+      "central_value_config": {
+        "minibatch_size": 512,
+        "mini_epochs": 4,
+        "learning_rate": "1e-4",
+        "lr_schedule": "adaptive",
+        "kl_threshold": 0.008,
+        "clip_value": true,
+        "normalize_input": true,
+        "truncate_grads": true,
+        "network": "<rl_games.algos_torch.models.ModelCentralValue object at 0x795faf579c30>",
+        "model": {
+          "name": "central_value"
+        }
+      },
+      "player": {
+        "deterministic": false
+      },
+      "train_dir": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory",
+      "features": {
+        "observer": "<rl_games.common.algo_observer.IsaacAlgoObserver object at 0x795faf579720>"
+      },
+      "network": "<rl_games.algos_torch.models.ModelA2CContinuousLogStd object at 0x795faf579990>"
+    },
+    "actor_model": "Network(\n  (value_mean_std): RunningMeanStd()\n  (running_mean_std): RunningMeanStd()\n  (a2c_network): Network(\n    (actor_cnn): Sequential()\n    (critic_cnn): Sequential()\n    (actor_mlp): Sequential(\n      (0): Linear(in_features=1024, out_features=512, bias=True)\n      (1): ELU(alpha=1.0)\n      (2): Linear(in_features=512, out_features=128, bias=True)\n      (3): ELU(alpha=1.0)\n      (4): Linear(in_features=128, out_features=64, bias=True)\n      (5): ELU(alpha=1.0)\n    )\n    (critic_mlp): Sequential()\n    (rnn): LSTMWithDones(\n      (rnn): LSTM(19, 1024, num_layers=2)\n    )\n    (layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)\n    (value): Linear(in_features=64, out_features=1, bias=True)\n    (value_act): Identity()\n    (mu): Linear(in_features=64, out_features=6, bias=True)\n    (mu_act): Identity()\n    (sigma_act): Identity()\n    (sigma): Linear(in_features=64, out_features=6, bias=True)\n  )\n)",
+    "central_value_model": "Network(\n  (value_mean_std): RunningMeanStd()\n  (running_mean_std): RunningMeanStd()\n  (a2c_network): Network(\n    (actor_cnn): Sequential()\n    (critic_cnn): Sequential()\n    (actor_mlp): Sequential(\n      (0): Linear(in_features=1024, out_features=512, bias=True)\n      (1): ELU(alpha=1.0)\n      (2): Linear(in_features=512, out_features=128, bias=True)\n      (3): ELU(alpha=1.0)\n      (4): Linear(in_features=128, out_features=64, bias=True)\n      (5): ELU(alpha=1.0)\n    )\n    (critic_mlp): Sequential()\n    (rnn): LSTMWithDones(\n      (rnn): LSTM(43, 1024, num_layers=2)\n    )\n    (layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)\n    (value): Linear(in_features=64, out_features=1, bias=True)\n    (value_act): Identity()\n  )\n)"
+  },
+  "observers_installed": true
+}

@@ -1,0 +1,35 @@
+{
+  "recorded_utc": "2026-10-23T12:19:50.018841+00:00",
+  "initial_launch": {
+    "pipeline_started_utc": "2026-10-23T12:10:16.123330+00:00",
+    "training_directory_created": false,
+    "training_epochs_observed": 0,
+    "end_reason": "unknown; detached supervisor and monitor disappeared before monitor output creation",
+    "original_manifest_retained": false,
+    "original_manifest_hash_from_status": "c5ff583fcdb1f1a0b82856387443002bb88e68deda05a3fb98f9f5e7a0f809a2",
+    "limitation": "Run manifest was overwritten to assign rerun name before initial manifest copy. Original command/status preserved; no baseline data produced."
+  },
+  "active_training": {
+    "run": "g2_peginsert_64env_seed0_baseline_rerun",
+    "training_pid": 230594,
+    "birth_ticks": "4135139",
+    "pipeline_started_utc": "2026-10-23T12:12:02.991694+00:00",
+    "monitor_last_sample_elapsed_seconds": 54.1,
+    "monitor_origin_uncertainty_seconds": 1.0,
+    "reattached_guard": {
+      "pid": 230594,
+      "pid_start_ticks": "4135139",
+      "attached_utc": "2026-10-23T12:14:59.838041+00:00",
+      "start_unix": 1792757699.8380275,
+      "training_not_restarted": true,
+      "min_free_MiB_guard": 1024,
+      "interval_seconds": 0.1,
+      "note": "Parent monitor disappeared. This observer cannot recover missing samples or child exit code."
+    },
+    "training_restarted": false,
+    "checkpoint_resumed": false,
+    "exit_status_unavailable": true,
+    "cause": "Original pipeline/monitor processes absent at inspection; exact termination cause not established. Previous claim that host terminated them was an inference, not verified."
+  },
+  "scientific_limit": "No GPU samples/free-memory guard during the gap; sampled extrema cannot establish whole-run maxima or minimum headroom. Continuous training evidence remains distinct from monitoring continuity."
+}

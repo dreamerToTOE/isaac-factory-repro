@@ -1,0 +1,328 @@
+{
+  "captured_at": "2026-10-23T17:23:36.704484+09:00",
+  "phase": "G2 preflight static read-only audit",
+  "expected_repository_head": "0efe7fc5f5ab96b15008e8195fa936755b182a84",
+  "expected_isaaclab_head": "90b79bb2d44feb8d833f260f2bf37da3487180ba",
+  "checks": {
+    "repository_head_matches_expected": true,
+    "upstream_head_matches_expected": true,
+    "upstream_tag_matches_expected": true,
+    "upstream_working_tree_clean": true,
+    "rlgames_audited_sources_match_d001_official_hashes": true,
+    "commands_succeeded": true
+  },
+  "commands": {
+    "repository_head": {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+      "returncode": 0,
+      "stdout": "0efe7fc5f5ab96b15008e8195fa936755b182a84\n",
+      "stderr": ""
+    },
+    "repository_status": {
+      "command": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+      "returncode": 0,
+      "stdout": " M scripts/evaluate_checkpoint.py\n M scripts/python_entry.py\n M scripts/success_metrics.py\n M tests/test_success_metrics.py\n?? docs/G2_ANALYSIS_PROTOCOL.md\n?? scripts/analyze_g2.py\n?? scripts/evaluation_reporting.py\n?? scripts/g2_training_observer.py\n?? tests/test_analyze_g2.py\n?? tests/test_evaluation_reporting.py\n",
+      "stderr": ""
+    },
+    "repository_remotes": {
+      "command": [
+        "git",
+        "remote",
+        "-v"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+      "returncode": 0,
+      "stdout": "origin\thttps://github.com/dreamerToTOE/isaac-factory-repro.git (fetch)\norigin\tgit@github.com:dreamerToTOE/isaac-factory-repro.git (push)\n",
+      "stderr": ""
+    },
+    "repository_history": {
+      "command": [
+        "git",
+        "log",
+        "-3",
+        "--format=%H %s"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+      "returncode": 0,
+      "stdout": "0efe7fc5f5ab96b15008e8195fa936755b182a84 Complete D001 success metrics, scaling and checkpoint review\na77d215b1244b120605eac5c0af59bf0f32c20c5 Complete G0/G1 Factory environment audit and bounded PPO smoke tests\nc54da28f61569ec6cc8249b46ffcea498ff27600 Initial commit\n",
+      "stderr": ""
+    },
+    "upstream_head": {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab",
+      "returncode": 0,
+      "stdout": "90b79bb2d44feb8d833f260f2bf37da3487180ba\n",
+      "stderr": ""
+    },
+    "upstream_tag": {
+      "command": [
+        "git",
+        "describe",
+        "--tags",
+        "--exact-match"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab",
+      "returncode": 0,
+      "stdout": "v2.1.1\n",
+      "stderr": ""
+    },
+    "upstream_status": {
+      "command": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "os_release": {
+      "command": [
+        "cat",
+        "/etc/os-release"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been",
+      "returncode": 0,
+      "stdout": "PRETTY_NAME=\"Ubuntu 22.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"22.04\"\nVERSION=\"22.04.5 LTS (Jammy Jellyfish)\"\nVERSION_CODENAME=jammy\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=jammy\n",
+      "stderr": ""
+    },
+    "kernel": {
+      "command": [
+        "uname",
+        "-a"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been",
+      "returncode": 0,
+      "stdout": "Linux ubuntu2004 6.8.0-138-generic #138~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Aug  7 13:43:15 UTC  x86_64 x86_64 x86_64 GNU/Linux\n",
+      "stderr": ""
+    },
+    "gpu": {
+      "command": [
+        "nvidia-smi",
+        "--query-gpu=name,driver_version,memory.total,memory.used,memory.free,utilization.gpu,temperature.gpu,power.draw",
+        "--format=csv"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been",
+      "returncode": 0,
+      "stdout": "name, driver_version, memory.total [MiB], memory.used [MiB], memory.free [MiB], utilization.gpu [%], temperature.gpu, power.draw [W]\nNVIDIA GeForce RTX 3070, 580.178.04, 8192 MiB, 1836 MiB, 5983 MiB, 14 %, 52, 38.35 W\n",
+      "stderr": ""
+    },
+    "compute_processes": {
+      "command": [
+        "nvidia-smi",
+        "--query-compute-apps=pid,process_name,used_memory",
+        "--format=csv"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been",
+      "returncode": 0,
+      "stdout": "pid, process_name, used_gpu_memory [MiB]\n3118, /usr/libexec/gnome-remote-desktop-daemon, 157 MiB\n",
+      "stderr": ""
+    },
+    "memory": {
+      "command": [
+        "free",
+        "-b"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been",
+      "returncode": 0,
+      "stdout": "               total        used        free      shared  buff/cache   available\n内存：50443857920 13542924288 15086911488   463806464 21814022144 36868886528\n交换： 2147479552           0  2147479552\n",
+      "stderr": ""
+    },
+    "disk": {
+      "command": [
+        "df",
+        "-B1",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been",
+      "returncode": 0,
+      "stdout": "文件系统             1B的块         已用         可用 已用% 挂载点\n/dev/sdb3      776400773120 328135512064 408751038464   45% /\n",
+      "stderr": ""
+    },
+    "sim_version": {
+      "command": [
+        "cat",
+        "/home/ubuntu2004/isaacsim-4.5.0/VERSION"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been",
+      "returncode": 0,
+      "stdout": "4.5.0-rc.36+release.19112.f59b3005.gl",
+      "stderr": ""
+    },
+    "packages": {
+      "command": [
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+        "-c",
+        "import sys,importlib.metadata as m,json;print(json.dumps({\"python\":sys.version,\"executable\":sys.executable,\"packages\":{x:m.version(x) for x in [\"torch\",\"torchvision\",\"numpy\",\"gymnasium\",\"rl-games\",\"isaaclab\",\"isaaclab_tasks\",\"isaaclab_rl\"]}}))"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been",
+      "returncode": 0,
+      "stdout": "{\"python\": \"3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]\", \"executable\": \"/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python\", \"packages\": {\"torch\": \"2.7.0+cu128\", \"torchvision\": \"0.22.0+cu128\", \"numpy\": \"1.26.4\", \"gymnasium\": \"1.2.0\", \"rl-games\": \"1.6.1\", \"isaaclab\": \"0.41.3\", \"isaaclab_tasks\": \"0.10.36\", \"isaaclab_rl\": \"0.1.8\"}}\n",
+      "stderr": ""
+    }
+  },
+  "repository_working_tree_note": "Nonempty status is expected: G2 agents are concurrently editing only reproduction scripts/tests/reports; no reset or overwrite was performed. Upstream status is checked independently.",
+  "isaaclab_source_hashes": [
+    {
+      "file": "scripts/reinforcement_learning/rl_games/train.py",
+      "sha256": "668fb1251c83d6e13271457d53a1b7079f3c2964d3284a13ac3bc2ff58194110"
+    },
+    {
+      "file": "source/isaaclab_tasks/isaaclab_tasks/direct/factory/agents/rl_games_ppo_cfg.yaml",
+      "sha256": "a64fef462770f9ba4a3acd0fdd21eef47f0d97529182b24f255ec9ab8fd27ebb"
+    },
+    {
+      "file": "source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py",
+      "sha256": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81"
+    },
+    {
+      "file": "source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env_cfg.py",
+      "sha256": "5f804ba3f6e3d96f352490a9b5e2e1e239d308ff7eeab7ae3aad0ca6aa8daed8"
+    },
+    {
+      "file": "source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_tasks_cfg.py",
+      "sha256": "7510b6cbed1e5bdd297723cabf7d25cef6a00b94bb3804b7578f2925a6a43971"
+    },
+    {
+      "file": "source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_control.py",
+      "sha256": "7ef611d530a86fa2aba9db222361b0fe8b64d34037f204ad622a17051ad5e163"
+    },
+    {
+      "file": "source/isaaclab/isaaclab/envs/direct_rl_env.py",
+      "sha256": "0c919fdc93e9198562edaaa3c29627a8dc0e123f581f41cdffc75641f9033fc1"
+    }
+  ],
+  "rlgames_version": "1.6.1",
+  "rlgames_official_sha": "f5bd8f2a0022220a1109200a3da47d2e96cb9aa1",
+  "rlgames_source_hashes": [
+    {
+      "file": "common/a2c_common.py",
+      "sha256": "b2ff92d888212227620138a6ca09d41ea2b8de6af044163ca3699f4ed48de661",
+      "d001_upstream_sha256": "b2ff92d888212227620138a6ca09d41ea2b8de6af044163ca3699f4ed48de661",
+      "unchanged_since_d001": true
+    },
+    {
+      "file": "algos_torch/central_value.py",
+      "sha256": "6e62bcce9fe892e9245ce2cd46f06fb50f85ee9843572a4dedaf5e797f1ee7b6",
+      "d001_upstream_sha256": "6e62bcce9fe892e9245ce2cd46f06fb50f85ee9843572a4dedaf5e797f1ee7b6",
+      "unchanged_since_d001": true
+    },
+    {
+      "file": "algos_torch/a2c_continuous.py",
+      "sha256": "998755d3365d8160930a8a8a0cfe8e7e1cd647b6cd2b7edc4e38895828c5a720",
+      "d001_upstream_sha256": "998755d3365d8160930a8a8a0cfe8e7e1cd647b6cd2b7edc4e38895828c5a720",
+      "unchanged_since_d001": true
+    },
+    {
+      "file": "algos_torch/models.py",
+      "sha256": "78a806701b3099ea45de5c9c1e00c761d0a9443b4b39d6cce087680fc4e62f37",
+      "d001_upstream_sha256": "78a806701b3099ea45de5c9c1e00c761d0a9443b4b39d6cce087680fc4e62f37",
+      "unchanged_since_d001": true
+    },
+    {
+      "file": "algos_torch/running_mean_std.py",
+      "sha256": "c7ad469e2bbc89de8419b55c768d1076f5d394d72102cc38c7e49002fc1db788",
+      "d001_upstream_sha256": "c7ad469e2bbc89de8419b55c768d1076f5d394d72102cc38c7e49002fc1db788",
+      "unchanged_since_d001": true
+    },
+    {
+      "file": "algos_torch/players.py",
+      "sha256": "e22d083c540b479b31fefc2bbd05d132a54e3f97d14bf21421498e011942c043",
+      "d001_upstream_sha256": "e22d083c540b479b31fefc2bbd05d132a54e3f97d14bf21421498e011942c043",
+      "unchanged_since_d001": true
+    },
+    {
+      "file": "common/ivecenv.py",
+      "sha256": "b27b45c3a566219625e09ca21346b21960c05e1a8b800a804427c80104f7aa36",
+      "d001_upstream_sha256": "b27b45c3a566219625e09ca21346b21960c05e1a8b800a804427c80104f7aa36",
+      "unchanged_since_d001": true
+    },
+    {
+      "file": "common/schedulers.py",
+      "sha256": "5c75d9851accf305f6417976169bb8eaffd5a77687282a3d1b3a2e90e35c8f94",
+      "d001_upstream_sha256": "5c75d9851accf305f6417976169bb8eaffd5a77687282a3d1b3a2e90e35c8f94",
+      "unchanged_since_d001": true
+    },
+    {
+      "file": "algos_torch/torch_ext.py",
+      "sha256": "3e9cf37042a89a7a5af6a28ec5599d1cb36ce2af4a77fbf60415ea9a8ef5aede",
+      "d001_upstream_sha256": "3e9cf37042a89a7a5af6a28ec5599d1cb36ce2af4a77fbf60415ea9a8ef5aede",
+      "unchanged_since_d001": true
+    }
+  ],
+  "additional_sources": [
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/torch_runner.py",
+      "sha256": "363c484360ac01ee72f88c4eaf61158348a824b868c894c7c0db77c7aebbb6ad"
+    },
+    {
+      "path": "/home/ubuntu2004/isaacsim-4.5.0/exts/isaacsim.core.utils/isaacsim/core/utils/torch/maths.py",
+      "sha256": "25eb6af449529061369ccb627714557ee133dde2d03d3e2bd1eef85c49d7a21c",
+      "lines_103_129": "def set_seed(seed, torch_deterministic=False):\n    \"\"\"set seed across modules\"\"\"\n    if seed == -1 and torch_deterministic:\n        seed = 42\n    elif seed == -1:\n        seed = np.random.randint(0, 10000)\n    print(\"Setting seed: {}\".format(seed))\n\n    random.seed(seed)\n    np.random.seed(seed)\n    torch.manual_seed(seed)\n    os.environ[\"PYTHONHASHSEED\"] = str(seed)\n    torch.cuda.manual_seed(seed)\n    torch.cuda.manual_seed_all(seed)\n    wp.rand_init(seed)\n\n    if torch_deterministic:\n        # refer to https://docs.nvidia.com/cuda/cublas/index.html#cublasApi_reproducibility\n        os.environ[\"CUBLAS_WORKSPACE_CONFIG\"] = \":4096:8\"\n        torch.backends.cudnn.benchmark = False\n        torch.backends.cudnn.deterministic = True\n        torch.use_deterministic_algorithms(True)\n    else:\n        torch.backends.cudnn.benchmark = True\n        torch.backends.cudnn.deterministic = False\n\n    return seed"
+    }
+  ],
+  "configuration_plan": {
+    "task": "Isaac-Factory-PegInsert-Direct-v0",
+    "num_envs": 64,
+    "seed": 0,
+    "max_iterations": 200,
+    "max_epochs": 200,
+    "load_checkpoint": false,
+    "load_path": "",
+    "checkpoint_cli_omitted": true,
+    "save_frequency": 50,
+    "save_best_after": 10,
+    "horizon_length": 128,
+    "minibatch_size": 512,
+    "mini_epochs": 4,
+    "transitions_per_epoch": 8192,
+    "expected_total_transitions": 1638400,
+    "allowed_overrides": [
+      "num_envs",
+      "seed",
+      "max_iterations",
+      "full_experiment_name",
+      "save_frequency"
+    ],
+    "official_ppo_modified": false
+  },
+  "save_behavior": {
+    "milestones": [
+      50,
+      100,
+      150,
+      200
+    ],
+    "periodic_requires_completed_episode": true,
+    "max_epochs_save_independent_of_completed_episode": true,
+    "epoch200_may_have_two_filename_variants": true,
+    "best_reward_alias_is_not_a_milestone_selection_rule": true
+  },
+  "gpu_safety_guard": {
+    "sample_interval_seconds": 0.1,
+    "min_free_mib": 1024,
+    "consecutive_low_samples": 3,
+    "timeout_requirement": "must allow initialization/checkpoint I/O and normal performance variation, not 2-hour estimate"
+  },
+  "limitations": [
+    "Static device/package checks are not a new GPU PhysX pass; separate root-owned dynamic preflight evidence is required.",
+    "No simulation or training was launched by this audit.",
+    "Package versions come from metadata; startup marker must independently verify imported modules after Kit launch.",
+    "Fixed seed does not imply bitwise deterministic PhysX/CUDA."
+  ]
+}

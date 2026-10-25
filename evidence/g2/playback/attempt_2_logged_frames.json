@@ -1,0 +1,174 @@
+{
+  "source": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_playback/seed1001_retry_guard/console.txt",
+  "frames": [
+    {
+      "episode_id": 0,
+      "env_id": 0,
+      "seed": 1001,
+      "episode_step": 1,
+      "held_base_pos_m": [
+        0.5554715991020203,
+        0.035791341215372086,
+        0.10926733911037445
+      ],
+      "target_held_base_pos_m": [
+        0.552349328994751,
+        0.019317125901579857,
+        0.06380024552345276
+      ],
+      "held_quaternion_wxyz": [
+        -0.3128824234008789,
+        -0.0004364654887467623,
+        0.0007435590378008783,
+        0.949791431427002
+      ],
+      "fixed_quaternion_wxyz": [
+        0.7303935885429382,
+        0.0,
+        0.0,
+        0.6830265522003174
+      ],
+      "xy_dist_m": 0.016767477616667747,
+      "z_disp_m": 0.04546709358692169,
+      "official_xy_threshold_m": 0.0025,
+      "official_height_threshold_m": 0.001,
+      "official_success": false,
+      "independent_geometry_success": false,
+      "terminal_pre_reset": false,
+      "triggers": [
+        "start"
+      ],
+      "file": "episode_00_step_001_start.png",
+      "sha256": "1d046f1af0f28d3c4d5c86d02257bcca3a3775929de874781c069c9d178dcb4c",
+      "camera": {
+        "eye_world_m": [
+          0.772349328994751,
+          0.23931712590157986,
+          0.22380024552345276
+        ],
+        "lookat_world_m": [
+          0.552349328994751,
+          0.019317125901579857,
+          0.09380024552345276
+        ]
+      },
+      "physics_state_unchanged_by_render": true,
+      "sim_time_seconds": 0.6416667001321912,
+      "sim_step_counter": 8,
+      "capture_precedes_auto_reset": true
+    },
+    {
+      "episode_id": 0,
+      "env_id": 0,
+      "seed": 1001,
+      "episode_step": 37,
+      "held_base_pos_m": [
+        0.551939070224762,
+        0.019047275185585022,
+        0.06383512169122696
+      ],
+      "target_held_base_pos_m": [
+        0.552349328994751,
+        0.019317125901579857,
+        0.06380024552345276
+      ],
+      "held_quaternion_wxyz": [
+        -0.21001036465168,
+        0.007384085562080145,
+        0.00035324631608091295,
+        0.9776712656021118
+      ],
+      "fixed_quaternion_wxyz": [
+        0.7303935885429382,
+        0.0,
+        0.0,
+        0.6830265522003174
+      ],
+      "xy_dist_m": 0.0004910515854135156,
+      "z_disp_m": 3.487616777420044e-05,
+      "official_xy_threshold_m": 0.0025,
+      "official_height_threshold_m": 0.001,
+      "official_success": true,
+      "independent_geometry_success": true,
+      "terminal_pre_reset": false,
+      "triggers": [
+        "first_success"
+      ],
+      "file": "episode_00_step_037_first_success.png",
+      "sha256": "659f6953bc95835794fdd61f59821273409be58d2320e7ac548946eae7ec743d",
+      "camera": {
+        "eye_world_m": [
+          0.772349328994751,
+          0.23931712590157986,
+          0.22380024552345276
+        ],
+        "lookat_world_m": [
+          0.552349328994751,
+          0.019317125901579857,
+          0.09380024552345276
+        ]
+      },
+      "physics_state_unchanged_by_render": true,
+      "sim_time_seconds": 3.041666825301945,
+      "sim_step_counter": 296,
+      "capture_precedes_auto_reset": true
+    },
+    {
+      "episode_id": 0,
+      "env_id": 0,
+      "seed": 1001,
+      "episode_step": 149,
+      "held_base_pos_m": [
+        0.5524972677230835,
+        0.018948672339320183,
+        0.06384463608264923
+      ],
+      "target_held_base_pos_m": [
+        0.552349328994751,
+        0.019317125901579857,
+        0.06380024552345276
+      ],
+      "held_quaternion_wxyz": [
+        -0.19111791253089905,
+        0.006744324695318937,
+        0.0012353949714452028,
+        0.9815431237220764
+      ],
+      "fixed_quaternion_wxyz": [
+        0.7303935885429382,
+        0.0,
+        0.0,
+        0.6830265522003174
+      ],
+      "xy_dist_m": 0.0003970439429394901,
+      "z_disp_m": 4.439055919647217e-05,
+      "official_xy_threshold_m": 0.0025,
+      "official_height_threshold_m": 0.001,
+      "official_success": true,
+      "independent_geometry_success": true,
+      "terminal_pre_reset": true,
+      "triggers": [
+        "terminal_success"
+      ],
+      "file": "episode_00_step_149_terminal_success.png",
+      "sha256": "c5ca8495db1d292640640b6022240df1414774bfd1310d29efec82217e4b8c63",
+      "camera": {
+        "eye_world_m": [
+          0.772349328994751,
+          0.23931712590157986,
+          0.22380024552345276
+        ],
+        "lookat_world_m": [
+          0.552349328994751,
+          0.019317125901579857,
+          0.09380024552345276
+        ]
+      },
+      "physics_state_unchanged_by_render": true,
+      "sim_time_seconds": 10.508333881385624,
+      "sim_step_counter": 1192,
+      "capture_precedes_auto_reset": true
+    }
+  ],
+  "note": "Recovered verbatim frame records from console; terminal frame was saved but loop completion accounting did not finish before guard termination."
+}

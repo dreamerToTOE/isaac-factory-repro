@@ -119,3 +119,21 @@ def test_threshold_and_task_rotation_selection_are_not_changed():
         env._get_curr_successes(success_threshold=0.9, check_rot=False)
         assert capture.consume()["check_rot"] is True
     assert env.predicate_calls == [(0.04, True), (0.9, False)]
+
+
+def test_optional_geometry_callback_runs_before_reset_and_does_not_change_result():
+    env = AutoResetControl([True])
+    calls = []
+
+    def snapshot(instance, record):
+        calls.append((instance.episode_length_buf[:], record["success"][:]))
+        return [{"episode_step": instance.episode_length_buf[0], "synthetic": True}]
+
+    with PreResetSuccessCapture(env, snapshot=snapshot) as capture:
+        returned, done, original_identity = env.step()
+        result = capture.consume()
+    assert original_identity and done
+    assert returned == [False]
+    assert calls == [([1], [True])]
+    assert result["success"] == [True]
+    assert result["geometric_snapshots"] == [{"episode_step": 1, "synthetic": True}]

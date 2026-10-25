@@ -1,8 +1,16 @@
 # isaac-factory-repro
 Reproduction and evaluation of contact-rich robotic assembly tasks using NVIDIA Isaac Lab, Franka, and PPO.
 
+## G2 当前结果（训练 2026-10-23，审阅 2026-10-25）
 
-## D001 审阅跟进（2026-10-23）
+**PASS：64环境、seed0、官方PPO全新连续200epochs完成，1,638,400 transitions。** 独立确定性评估最终ever/terminal均280/288（97.222%）；50/100/150里程碑分别69/96、81/96、92/96。约2小时32分53秒，PPO聚合180.18FPS，观测全卡显存峰值6909.69MiB。属于资源受限初步基线，样本量为官方128环境同200epochs的一半。
+
+监督进程消失造成约123秒显存采样/guard缺口及原训练退出码未知，TensorBoard尾端未持久化epoch200；完成由连续逐轮audit、最终checkpoint和官方结束标记交叉确认。上述限制随结果一并保留。
+
+见[完整中文报告](docs/RESULTS_G2.md)、[复现命令](docs/G2_COMMANDS.md)、[证据索引](evidence/g2/README.md)、[未决问题与G3提案](docs/OPEN_ISSUES.md)。大checkpoint和长原始日志留在仓库外，文件路径及SHA256有清单。未追加训练、调参或启动其它Factory任务。
+
+
+## D001 审阅跟进（2026-10-23，历史记录）
 
 R1–R4已完成；建议后续使用64环境、seed0全新训练（GO），当前停止等待审阅，未启动200 epochs。原G0/G1提交`a77d215b1244b120605eac5c0af59bf0f32c20c5`已通过既有SSH推送并独立核验，D001增量接续提交，保留全部历史。
 

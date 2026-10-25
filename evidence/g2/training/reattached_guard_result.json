@@ -1,0 +1,17 @@
+{
+  "pid": 230594,
+  "pid_start_ticks": "4135139",
+  "attached_utc": "2026-10-23T12:14:59.838041+00:00",
+  "start_unix": 1792757699.8380275,
+  "training_not_restarted": true,
+  "min_free_MiB_guard": 1024,
+  "interval_seconds": 0.1,
+  "note": "Parent monitor disappeared. This observer cannot recover missing samples or child exit code.",
+  "finished_utc": "2026-10-23T14:44:55.718230+00:00",
+  "duration_seconds": 8995.880211261,
+  "sample_count": 89702,
+  "peak_total_gpu_used_MiB": 6909.6875,
+  "min_free_MiB": 907.9375,
+  "stop_reason": null,
+  "process_exit_code": null
+}

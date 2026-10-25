@@ -1,0 +1,345 @@
+{
+  "schema_version": 1,
+  "verified_utc": "2026-10-25T04:53:21.167572+00:00",
+  "method": "CPU-only file hashing, Git identity/status, safe YAML comparison, and read-only prior audit inspection; no simulation or checkpoint loading.",
+  "checks": {
+    "upstream_head_matches_pin": true,
+    "upstream_tag_matches_pin": true,
+    "upstream_working_tree_clean": true,
+    "all_source_commands_succeeded": true,
+    "all_audited_source_hashes_unchanged": true,
+    "original_manifest_matches_amendment": true,
+    "only_allowed_agent_dump_differences": true,
+    "resolved_environment_identical_to_d001_64": true,
+    "runtime_num_actors_64": true,
+    "runtime_dimensions_19_43_6": true
+  },
+  "commands": {
+    "upstream_head": {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab",
+      "returncode": 0,
+      "stdout": "90b79bb2d44feb8d833f260f2bf37da3487180ba\n",
+      "stderr": ""
+    },
+    "upstream_tag": {
+      "command": [
+        "git",
+        "describe",
+        "--tags",
+        "--exact-match"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab",
+      "returncode": 0,
+      "stdout": "v2.1.1\n",
+      "stderr": ""
+    },
+    "upstream_status": {
+      "command": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "repository_head_at_packaging": {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+      "returncode": 0,
+      "stdout": "0efe7fc5f5ab96b15008e8195fa936755b182a84\n",
+      "stderr": ""
+    }
+  },
+  "isaaclab_sources": [
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py",
+      "expected_sha256": "668fb1251c83d6e13271457d53a1b7079f3c2964d3284a13ac3bc2ff58194110",
+      "actual_sha256": "668fb1251c83d6e13271457d53a1b7079f3c2964d3284a13ac3bc2ff58194110",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/agents/rl_games_ppo_cfg.yaml",
+      "expected_sha256": "a64fef462770f9ba4a3acd0fdd21eef47f0d97529182b24f255ec9ab8fd27ebb",
+      "actual_sha256": "a64fef462770f9ba4a3acd0fdd21eef47f0d97529182b24f255ec9ab8fd27ebb",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py",
+      "expected_sha256": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81",
+      "actual_sha256": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env_cfg.py",
+      "expected_sha256": "5f804ba3f6e3d96f352490a9b5e2e1e239d308ff7eeab7ae3aad0ca6aa8daed8",
+      "actual_sha256": "5f804ba3f6e3d96f352490a9b5e2e1e239d308ff7eeab7ae3aad0ca6aa8daed8",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_tasks_cfg.py",
+      "expected_sha256": "7510b6cbed1e5bdd297723cabf7d25cef6a00b94bb3804b7578f2925a6a43971",
+      "actual_sha256": "7510b6cbed1e5bdd297723cabf7d25cef6a00b94bb3804b7578f2925a6a43971",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_control.py",
+      "expected_sha256": "7ef611d530a86fa2aba9db222361b0fe8b64d34037f204ad622a17051ad5e163",
+      "actual_sha256": "7ef611d530a86fa2aba9db222361b0fe8b64d34037f204ad622a17051ad5e163",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/envs/direct_rl_env.py",
+      "expected_sha256": "0c919fdc93e9198562edaaa3c29627a8dc0e123f581f41cdffc75641f9033fc1",
+      "actual_sha256": "0c919fdc93e9198562edaaa3c29627a8dc0e123f581f41cdffc75641f9033fc1",
+      "matches": true
+    }
+  ],
+  "rlgames_sources": [
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/a2c_common.py",
+      "expected_sha256": "b2ff92d888212227620138a6ca09d41ea2b8de6af044163ca3699f4ed48de661",
+      "actual_sha256": "b2ff92d888212227620138a6ca09d41ea2b8de6af044163ca3699f4ed48de661",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/central_value.py",
+      "expected_sha256": "6e62bcce9fe892e9245ce2cd46f06fb50f85ee9843572a4dedaf5e797f1ee7b6",
+      "actual_sha256": "6e62bcce9fe892e9245ce2cd46f06fb50f85ee9843572a4dedaf5e797f1ee7b6",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/a2c_continuous.py",
+      "expected_sha256": "998755d3365d8160930a8a8a0cfe8e7e1cd647b6cd2b7edc4e38895828c5a720",
+      "actual_sha256": "998755d3365d8160930a8a8a0cfe8e7e1cd647b6cd2b7edc4e38895828c5a720",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/models.py",
+      "expected_sha256": "78a806701b3099ea45de5c9c1e00c761d0a9443b4b39d6cce087680fc4e62f37",
+      "actual_sha256": "78a806701b3099ea45de5c9c1e00c761d0a9443b4b39d6cce087680fc4e62f37",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/running_mean_std.py",
+      "expected_sha256": "c7ad469e2bbc89de8419b55c768d1076f5d394d72102cc38c7e49002fc1db788",
+      "actual_sha256": "c7ad469e2bbc89de8419b55c768d1076f5d394d72102cc38c7e49002fc1db788",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/players.py",
+      "expected_sha256": "e22d083c540b479b31fefc2bbd05d132a54e3f97d14bf21421498e011942c043",
+      "actual_sha256": "e22d083c540b479b31fefc2bbd05d132a54e3f97d14bf21421498e011942c043",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/ivecenv.py",
+      "expected_sha256": "b27b45c3a566219625e09ca21346b21960c05e1a8b800a804427c80104f7aa36",
+      "actual_sha256": "b27b45c3a566219625e09ca21346b21960c05e1a8b800a804427c80104f7aa36",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/schedulers.py",
+      "expected_sha256": "5c75d9851accf305f6417976169bb8eaffd5a77687282a3d1b3a2e90e35c8f94",
+      "actual_sha256": "5c75d9851accf305f6417976169bb8eaffd5a77687282a3d1b3a2e90e35c8f94",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/torch_ext.py",
+      "expected_sha256": "3e9cf37042a89a7a5af6a28ec5599d1cb36ce2af4a77fbf60415ea9a8ef5aede",
+      "actual_sha256": "3e9cf37042a89a7a5af6a28ec5599d1cb36ce2af4a77fbf60415ea9a8ef5aede",
+      "matches": true
+    }
+  ],
+  "additional_sources": [
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/torch_runner.py",
+      "expected_sha256": "363c484360ac01ee72f88c4eaf61158348a824b868c894c7c0db77c7aebbb6ad",
+      "actual_sha256": "363c484360ac01ee72f88c4eaf61158348a824b868c894c7c0db77c7aebbb6ad",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/isaacsim-4.5.0/exts/isaacsim.core.utils/isaacsim/core/utils/torch/maths.py",
+      "expected_sha256": "25eb6af449529061369ccb627714557ee133dde2d03d3e2bd1eef85c49d7a21c",
+      "actual_sha256": "25eb6af449529061369ccb627714557ee133dde2d03d3e2bd1eef85c49d7a21c",
+      "matches": true
+    }
+  ],
+  "frozen_training_scripts": [
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+      "expected_sha256": "10d11ff9b3d44c252c895ac3ca6ca2aa5301c78cbcacd1b5dc01702a494409d8",
+      "actual_sha256": "10d11ff9b3d44c252c895ac3ca6ca2aa5301c78cbcacd1b5dc01702a494409d8",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/python_entry.py",
+      "expected_sha256": "eebcdb3087adb3a55c4cf8835383dc1ac4168d802c4b91327aafcc32c52c5abb",
+      "actual_sha256": "eebcdb3087adb3a55c4cf8835383dc1ac4168d802c4b91327aafcc32c52c5abb",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g2_training_observer.py",
+      "expected_sha256": "953b5cfd20615a5d8f6b9a200ce03124828a39e6da8f8423a4989c0dc25e3d6a",
+      "actual_sha256": "953b5cfd20615a5d8f6b9a200ce03124828a39e6da8f8423a4989c0dc25e3d6a",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_bounded.py",
+      "expected_sha256": "8a366dfcd67b12caa60ae692d05ba6c3456ed93a80769126fb0138764091bd1b",
+      "actual_sha256": "8a366dfcd67b12caa60ae692d05ba6c3456ed93a80769126fb0138764091bd1b",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_g2_pipeline.py",
+      "expected_sha256": "1a6dc7e5cd3023545ff62fa8b0caae58c60558aa8b56d0f085336137f0d3ef5f",
+      "actual_sha256": "1a6dc7e5cd3023545ff62fa8b0caae58c60558aa8b56d0f085336137f0d3ef5f",
+      "matches": true
+    }
+  ],
+  "original_evaluation_scripts": [
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/source_snapshots/evaluator_before_partial_metadata_fix.py",
+      "expected_sha256": "b903b4114444d3a19176332c3239b8f9fe2bd0686b27ed8a4597fc42a4d3555a",
+      "actual_sha256": "b903b4114444d3a19176332c3239b8f9fe2bd0686b27ed8a4597fc42a4d3555a",
+      "matches": true,
+      "original_script": "scripts/evaluate_checkpoint.py"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/success_metrics.py",
+      "expected_sha256": "bd3233876429dcce64bee52be11b9f03a69b1e35279b4e285dab4e81151bbfa2",
+      "actual_sha256": "bd3233876429dcce64bee52be11b9f03a69b1e35279b4e285dab4e81151bbfa2",
+      "matches": true,
+      "original_script": "scripts/success_metrics.py"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/evaluation_reporting.py",
+      "expected_sha256": "8cfb68a200a9f81b430444e94b7c2c7ae54c7b4e0d39feb4a68625efc3514dcd",
+      "actual_sha256": "8cfb68a200a9f81b430444e94b7c2c7ae54c7b4e0d39feb4a68625efc3514dcd",
+      "matches": true,
+      "original_script": "scripts/evaluation_reporting.py"
+    }
+  ],
+  "amended_evaluation_scripts": [
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/evaluate_checkpoint.py",
+      "expected_sha256": "415dff9b59ece8a21e6bbe0a6c9fff08e2ea594cb8dc2ef8fe73e299c94af707",
+      "actual_sha256": "415dff9b59ece8a21e6bbe0a6c9fff08e2ea594cb8dc2ef8fe73e299c94af707",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/evaluation_reporting.py",
+      "expected_sha256": "8cfb68a200a9f81b430444e94b7c2c7ae54c7b4e0d39feb4a68625efc3514dcd",
+      "actual_sha256": "8cfb68a200a9f81b430444e94b7c2c7ae54c7b4e0d39feb4a68625efc3514dcd",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/evaluation_runtime.py",
+      "expected_sha256": "c42644f7c1572922c34d925b6bdc1bc45b7f2d1156362aeec71c9b79cd868e69",
+      "actual_sha256": "c42644f7c1572922c34d925b6bdc1bc45b7f2d1156362aeec71c9b79cd868e69",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/success_metrics.py",
+      "expected_sha256": "bd3233876429dcce64bee52be11b9f03a69b1e35279b4e285dab4e81151bbfa2",
+      "actual_sha256": "bd3233876429dcce64bee52be11b9f03a69b1e35279b4e285dab4e81151bbfa2",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+      "expected_sha256": "10d11ff9b3d44c252c895ac3ca6ca2aa5301c78cbcacd1b5dc01702a494409d8",
+      "actual_sha256": "10d11ff9b3d44c252c895ac3ca6ca2aa5301c78cbcacd1b5dc01702a494409d8",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/python_entry.py",
+      "expected_sha256": "eebcdb3087adb3a55c4cf8835383dc1ac4168d802c4b91327aafcc32c52c5abb",
+      "actual_sha256": "eebcdb3087adb3a55c4cf8835383dc1ac4168d802c4b91327aafcc32c52c5abb",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_bounded.py",
+      "expected_sha256": "8a366dfcd67b12caa60ae692d05ba6c3456ed93a80769126fb0138764091bd1b",
+      "actual_sha256": "8a366dfcd67b12caa60ae692d05ba6c3456ed93a80769126fb0138764091bd1b",
+      "matches": true
+    }
+  ],
+  "manifest": {
+    "path": "evidence/g2/g2_manifest.json",
+    "sha256": "6affa4caf1c0553141dac616c2f85db0ba5796e0cbb3f3f3202b03b98851b8bb",
+    "amendment_path": "evidence/g2/evaluation_amendment.json",
+    "amendment_sha256": "1192784a3c977edbb4de77659c7cb1b8c2e13a8dfae8a2c2a30df0e5f09838c8"
+  },
+  "configuration": {
+    "official_agent_yaml": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/agents/rl_games_ppo_cfg.yaml",
+      "sha256": "a64fef462770f9ba4a3acd0fdd21eef47f0d97529182b24f255ec9ab8fd27ebb"
+    },
+    "resolved_agent_yaml": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/configs/resolved/g2_peginsert_64env_seed0_baseline_rerun/agent.yaml",
+      "sha256": "e72507a2984840f9620c6210a882842341882a2ef1f031860a78978942d36ace"
+    },
+    "agent_dump_differences": [
+      {
+        "key": "params.config.full_experiment_name",
+        "official_value": "test",
+        "resolved_value": "g2_peginsert_64env_seed0_baseline_rerun",
+        "classification": "[ENGINEERING] unique output identity"
+      },
+      {
+        "key": "params.config.save_frequency",
+        "official_value": 100,
+        "resolved_value": 50,
+        "classification": "[ENGINEERING] preregistered milestone persistence, 100 -> 50"
+      },
+      {
+        "key": "params.config.train_dir",
+        "official_value": {
+          "__missing__": true
+        },
+        "resolved_value": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory",
+        "classification": "[ENGINEERING] path inserted by official train.py"
+      }
+    ],
+    "resolved_environment": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/configs/resolved/g2_peginsert_64env_seed0_baseline_rerun/env.yaml",
+      "sha256": "9b07adc49a4ec46b41e7ae789510e47f5c20dd001ae32b22e18b5f7cc29bc876",
+      "comparison_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/configs/resolved/d001_peg64/env.yaml",
+      "byte_identical_to_d001_64": true
+    },
+    "runtime": {
+      "num_actors": 64,
+      "obs_shape": [
+        19
+      ],
+      "state_shape": [
+        43
+      ],
+      "actions_num": 6,
+      "horizon_length": 128,
+      "minibatch_size": 512,
+      "mini_epochs": 4
+    },
+    "note": "Official dump precedes runtime num_actors assignment and observation construction; dumped 128 actors / environment placeholders are not runtime values. Environment byte equality is against the prior resolved D001 64-env config, not a substitute for source verification."
+  },
+  "test_result_reported_by_primary_agent": {
+    "result": "42 passed in 14.87s",
+    "executed_by_this_packaging_agent": false,
+    "source": "Primary agent reported completion of the repository CPU test suite in this session; see its final test artifact for exact invocation/output."
+  },
+  "limitations": [
+    "This source verification does not restore missing telemetry or the unavailable original child exit code.",
+    "Repository source snapshot is pre-commit; final commit and remote fast-forward verification are recorded separately.",
+    "Simulator/CUDA fixed-seed execution is not claimed bitwise reproducible."
+  ]
+}

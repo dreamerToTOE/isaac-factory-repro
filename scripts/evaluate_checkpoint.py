@@ -29,6 +29,11 @@ parser.add_argument("--max_steps", type=int, default=10000)
 parser.add_argument("--seed", type=int, default=0)
 parser.add_argument("--stochastic", action="store_true", help="Sample policy actions; default is deterministic mu.")
 parser.add_argument("--output", type=Path, default=None)
+parser.add_argument("--progress-output", type=Path, default=None,
+                    help="Atomic partial result; default: OUTPUT.partial.json when --output is given.")
+parser.add_argument("--progress-interval", type=int, default=10, help="Write partial evidence every N policy steps.")
+parser.add_argument("--snapshot-limit", type=int, default=0,
+                    help="Optional total cap of successful pre-reset geometry records; zero disables.")
 AppLauncher.add_app_launcher_args(parser)
 args_cli = parser.parse_args()
 sys.argv = [sys.argv[0]]
@@ -38,6 +43,23 @@ if args_cli.num_envs < 1 or args_cli.episodes < 1 or args_cli.max_steps < 1:
     parser.error("num_envs, episodes and max_steps must be positive")
 if args_cli.output is not None and args_cli.output.exists():
     parser.error("--output already exists; use a new path to preserve previous evidence")
+if args_cli.progress_interval < 1 or args_cli.snapshot_limit < 0 or args_cli.snapshot_limit == 1:
+    parser.error("progress-interval must be positive; snapshot-limit must be zero or at least two")
+progress_path = args_cli.progress_output
+if progress_path is None and args_cli.output is not None:
+    progress_path = args_cli.output.with_name(args_cli.output.name + ".partial.json")
+if progress_path is not None and (progress_path.exists() or progress_path == args_cli.output):
+    parser.error("progress output must be a new path distinct from --output")
+try:
+    from evaluation_reporting import add_intervals, atomic_write_json
+except ImportError:
+    from scripts.evaluation_reporting import add_intervals, atomic_write_json
+if progress_path is not None:
+    atomic_write_json(progress_path, {"status": "initializing", "seed": args_cli.seed,
+                                    "checkpoint": str(args_cli.checkpoint.resolve()),
+                                    "episodes_completed": 0,
+                                    "episodes_requested": args_cli.episodes * args_cli.num_envs,
+                                    "episodes": [], "aggregate": None})
 
 app_launcher = AppLauncher(args_cli)
 simulation_app = app_launcher.app
@@ -52,6 +74,11 @@ def main():
         raise FileNotFoundError(args_cli.checkpoint)
     if args_cli.num_envs < 1 or args_cli.episodes < 1 or args_cli.max_steps < 1:
         raise ValueError("num_envs, episodes and max_steps must be positive")
+    checkpoint_digest = hashlib.sha256()
+    with args_cli.checkpoint.open("rb") as stream:
+        for block in iter(lambda: stream.read(1024 * 1024), b""):
+            checkpoint_digest.update(block)
+    checkpoint_sha256 = checkpoint_digest.hexdigest()
 
     import gymnasium as gym
     import numpy as np
@@ -110,11 +137,109 @@ def main():
     if agent.is_rnn:
         agent.init_rnn()
 
+    # Shared provenance makes completed episodes in partial snapshots usable by
+    # the same strict analysis checks as the final output. This is logging only.
+    initialized_metadata = {
+        "checkpoint_sha256": checkpoint_sha256,
+        "deterministic": not args_cli.stochastic,
+        "inference_settings": {
+            "action_selection": "sample" if args_cli.stochastic else "policy_mean",
+            "model_training": bool(agent.model.training),
+            "player_clip_actions": bool(agent.clip_actions),
+            "normalization": "checkpoint buffers in eval mode",
+            "rnn_reset": "zero hidden/cell states at completed episode boundaries",
+            "torch_inference_mode": True,
+        },
+        "official_success_capture": "pre_reset_factory_get_curr_successes",
+        "official_predicate_source_sha256": hashlib.sha256(predicate_source.encode()).hexdigest(),
+        "official_success_threshold": float(base_env.cfg_task.success_threshold),
+        "official_rotation_check": base_env.cfg_task.name == "nut_thread",
+        "step_dt_seconds": float(base_env.step_dt),
+    }
+
     tracker = SuccessTracker(args_cli.num_envs)
     steps = 0
     started = time.monotonic()
     terminal_checks = []
-    with PreResetSuccessCapture(base_env, convert=_tensor_list) as capture:
+    geometric_snapshots = []
+    seen_success = [False] * args_cli.num_envs
+    snapshot_episode_ids = [0] * args_cli.num_envs
+    snapshot_counts = {"first_success": 0, "terminal_success": 0}
+    snapshot_limits = {"first_success": (args_cli.snapshot_limit + 1) // 2,
+                       "terminal_success": args_cli.snapshot_limit // 2}
+
+    def snapshot_geometry(instance, record):
+        """Read original tensors before reset; never add a success criterion."""
+        snapshots = []
+        done = _tensor_list(instance.reset_buf)
+        for env_id, success in enumerate(record["success"]):
+            triggers = []
+            if success and not seen_success[env_id]:
+                triggers.append("first_success")
+            if success and done[env_id]:
+                triggers.append("terminal_success")
+            for trigger in triggers:
+                if snapshot_counts[trigger] >= snapshot_limits[trigger]:
+                    continue
+                held = instance.held_base_pos[env_id]
+                target = instance.target_held_base_pos[env_id]
+                xy_dist = float(torch.linalg.vector_norm(target[:2] - held[:2]).item())
+                z_disp = float((held[2] - target[2]).item())
+                fixed = instance.cfg_task.fixed_asset_cfg
+                height = float(fixed.thread_pitch if instance.cfg_task.name == "nut_thread" else fixed.height)
+                height_threshold = height * float(instance.cfg_task.success_threshold)
+                yaw = float(instance.curr_yaw[env_id].item()) if record["check_rot"] else None
+                yaw_threshold = float(instance.cfg_task.ee_success_yaw) if record["check_rot"] else None
+                geometry_success = xy_dist < 0.0025 and z_disp < height_threshold
+                if record["check_rot"]:
+                    geometry_success = geometry_success and yaw < yaw_threshold
+                snapshots.append({"trigger": trigger, "seed": args_cli.seed, "env_id": env_id,
+                                  "episode_id": snapshot_episode_ids[env_id],
+                                  "episode_step": record["step_numbers"][env_id],
+                                  "held_base_pos": _tensor_list(held),
+                                  "target_held_base_pos": _tensor_list(target),
+                                  "xy_dist_m": xy_dist, "z_disp_m": z_disp,
+                                  "official_xy_threshold_m": 0.0025,
+                                  "official_height_threshold_m": height_threshold,
+                                  "official_success_threshold": float(instance.cfg_task.success_threshold),
+                                  "official_check_rot": record["check_rot"],
+                                  "curr_yaw_rad": yaw, "official_yaw_threshold_rad": yaw_threshold,
+                                  "official_predicate_result": bool(success),
+                                  "geometry_recheck_result": bool(geometry_success)})
+                if not geometry_success:
+                    raise RuntimeError("recorded successful geometry disagrees with official predicate")
+                snapshot_counts[trigger] += 1
+            seen_success[env_id] = seen_success[env_id] or bool(success)
+            if done[env_id]:
+                seen_success[env_id] = False
+                snapshot_episode_ids[env_id] += 1
+        return snapshots
+
+    def write_progress(status, capture_count):
+        if progress_path is None:
+            return
+        atomic_write_json(progress_path, {
+            **initialized_metadata,
+            "status": status, "task": args_cli.task, "seed": args_cli.seed,
+            "checkpoint": str(args_cli.checkpoint.resolve()), "num_envs": args_cli.num_envs,
+            "episodes_requested": args_cli.episodes * args_cli.num_envs,
+            "episodes_completed": len(tracker.completed),
+            "episodes": [dict(item.to_dict(), seed=args_cli.seed,
+                              first_success_time_seconds=(None if item.first_success_step is None
+                                                          else item.first_success_step * base_env.step_dt))
+                         for item in tracker.completed],
+            "aggregate": add_intervals(tracker.aggregate(args_cli.episodes * args_cli.num_envs)),
+            "steps_executed": steps, "capture_calls": capture_count,
+            "elapsed_seconds": time.monotonic() - started,
+            "geometric_snapshots": geometric_snapshots,
+            "auto_reset_order_verified": bool(terminal_checks),
+            "terminal_consistency_checks": terminal_checks,
+            "partial_denominator_rule": "completed environment episodes only; unfinished episodes excluded",
+        })
+
+    write_progress("running", 0)
+    with PreResetSuccessCapture(base_env, convert=_tensor_list,
+                               snapshot=snapshot_geometry if args_cli.snapshot_limit else None) as capture:
         while len(tracker.completed) < args_cli.episodes * args_cli.num_envs and steps < args_cli.max_steps:
             with torch.inference_mode():
                 model_obs = agent.obs_to_torch(obs)
@@ -123,6 +248,7 @@ def main():
                     raise RuntimeError(f"nonfinite policy action at policy step {steps + 1}")
                 obs, rew, dones, extras = env.step(actions)
             cap = capture.consume()
+            geometric_snapshots.extend(cap.get("geometric_snapshots", []))
             if not tensor_tree_is_finite(rew) or not tensor_tree_is_finite(obs):
                 raise RuntimeError(f"nonfinite observation/reward at policy step {steps + 1}")
             done_list = [bool(x) for x in _tensor_list(dones)]
@@ -147,10 +273,13 @@ def main():
             if agent.is_rnn and agent.states is not None and any(done_list):
                 reset_player_rnn_states(agent, done_list)
             steps += 1
+            if any(done_list) or steps % args_cli.progress_interval == 0:
+                write_progress("running", capture.captures_consumed)
         capture_count = capture.captures_consumed
 
     completed = tracker.completed[: args_cli.episodes * args_cli.num_envs]
     if len(completed) < args_cli.episodes * args_cli.num_envs:
+        write_progress("incomplete_max_steps", capture_count)
         raise RuntimeError(
             f"evaluation stopped after {steps} steps with {len(completed)} completed episodes; "
             f"requested {args_cli.episodes * args_cli.num_envs}"
@@ -159,31 +288,28 @@ def main():
     aggregate = SuccessTracker(args_cli.num_envs)
     aggregate.completed = completed
     result = {
+        **initialized_metadata,
+        "status": "complete",
         "task": args_cli.task,
         "checkpoint": str(args_cli.checkpoint.resolve()),
-        "checkpoint_sha256": hashlib.sha256(args_cli.checkpoint.read_bytes()).hexdigest(),
         "num_envs": args_cli.num_envs,
         "episodes_per_env_requested": args_cli.episodes,
         "episodes_completed": len(completed),
         "max_steps": args_cli.max_steps,
         "seed": args_cli.seed,
-        "deterministic": not args_cli.stochastic,
-        "official_success_capture": "pre_reset_factory_get_curr_successes",
-        "official_predicate_source_sha256": hashlib.sha256(predicate_source.encode()).hexdigest(),
-        "official_success_threshold": float(base_env.cfg_task.success_threshold),
-        "official_rotation_check": base_env.cfg_task.name == "nut_thread",
         "capture_calls": capture_count,
         "auto_reset_order_verified": bool(terminal_checks),
         "terminal_consistency_checks": terminal_checks,
+        "geometric_snapshot_limit": args_cli.snapshot_limit,
+        "geometric_snapshots": geometric_snapshots,
         "runtime_packages": {name: {"version": module.__version__, "path": module.__file__}
                              for name, module in {"torch": torch, "numpy": np, "gymnasium": gym}.items()},
-        "step_dt_seconds": float(base_env.step_dt),
         "policy_observation_shape": list(obs["obs"].shape) if isinstance(obs, dict) and "obs" in obs else None,
         "episodes": [dict(episode.to_dict(), seed=args_cli.seed,
                           first_success_time_seconds=(None if episode.first_success_step is None
                                                       else episode.first_success_step * base_env.step_dt))
                      for episode in completed],
-        "aggregate": aggregate.aggregate(args_cli.episodes * args_cli.num_envs),
+        "aggregate": add_intervals(aggregate.aggregate(args_cli.episodes * args_cli.num_envs)),
         "steps_executed": steps,
         "elapsed_seconds": time.monotonic() - started,
     }
@@ -191,14 +317,24 @@ def main():
     if args_cli.output is None:
         print("FACTORY_EVALUATION_RESULT=" + text, flush=True)
     else:
-        args_cli.output.parent.mkdir(parents=True, exist_ok=True)
-        args_cli.output.write_text(text)
+        atomic_write_json(args_cli.output, result)
         print("FACTORY_EVALUATION_OUTPUT=" + str(args_cli.output.resolve()), flush=True)
+    if progress_path is not None:
+        atomic_write_json(progress_path, result)
 
     env.close()
 
 
 try:
     main()
+except (Exception, KeyboardInterrupt) as exc:
+    if progress_path is not None and progress_path.exists():
+        partial = json.loads(progress_path.read_text())
+        if partial.get("status") != "incomplete_max_steps":
+            partial["status"] = "incomplete_interrupted" if isinstance(exc, KeyboardInterrupt) else "incomplete_error"
+        partial["error_type"] = type(exc).__name__
+        partial["error"] = str(exc)
+        atomic_write_json(progress_path, partial)
+    raise
 finally:
     simulation_app.close()

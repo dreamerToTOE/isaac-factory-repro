@@ -1,0 +1,34 @@
+{
+  "wall_evidence": {
+    "start_utc": "2026-10-23T12:12:02.991694+00:00",
+    "end_utc": "2026-10-23T14:44:55.718230+00:00",
+    "start_source": "Original pipeline status.json before monitor launch (approximate process start)",
+    "end_source": "Reattached guard observed original PID/birth cease running",
+    "start_uncertainty_seconds": 1.0,
+    "end_uncertainty_seconds": 0.2,
+    "returncode": null,
+    "returncode_source": "Original parent disappeared; training child exit status unavailable"
+  },
+  "segments": [
+    {
+      "name": "original_monitor",
+      "directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/train",
+      "elapsed_origin_utc": "2026-10-23T12:12:02.991694+00:00",
+      "elapsed_origin_source": "Pipeline start used as approximate original monitor origin because result.json was not written",
+      "elapsed_origin_uncertainty_seconds": 1.0
+    },
+    {
+      "name": "reattached_guard",
+      "directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/reattached_guard",
+      "elapsed_origin_utc": "2026-10-23T12:14:59.838041+00:00",
+      "elapsed_origin_source": "reattached_guard/identity.json attached_utc, captured adjacent to monotonic origin",
+      "elapsed_origin_uncertainty_seconds": 0.001
+    }
+  ],
+  "notes": [
+    "CSV files remain unchanged outside Git; hashes and exact paths are recorded in analysis summary.",
+    "Original monitoring/guard gap was approximately123s. No samples were reconstructed.",
+    "Observed-only peak/minimum must not be described as complete-run extrema.",
+    "Pipeline start-to-process-disappearance wall time is approximate; child exit code is null."
+  ]
+}

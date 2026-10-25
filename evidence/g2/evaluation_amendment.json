@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-10-23T12:19:50.017848+00:00",
+  "before_first_g2_evaluation": true,
+  "protocol_unchanged": true,
+  "reason": "[ENGINEERING] Ensure partial evaluation snapshots retain checkpoint SHA256, pre-reset capture identity, policy dt and inference settings. Previously completed partial episodes would be rejected by strict analysis. Also supervise final checkpoint evaluation via systemd after original pipeline parent disappeared. Training configuration/process is unchanged.",
+  "original_manifest_sha256": "6affa4caf1c0553141dac616c2f85db0ba5796e0cbb3f3f3202b03b98851b8bb",
+  "evaluation": {
+    "seeds": [
+      1001,
+      1002,
+      1003
+    ],
+    "num_envs": 32,
+    "milestones": [
+      50,
+      100,
+      150,
+      200
+    ],
+    "episodes_per_env": {
+      "50": 1,
+      "100": 1,
+      "150": 1,
+      "200": 3
+    },
+    "deterministic": true,
+    "target_episodes": {
+      "50": 96,
+      "100": 96,
+      "150": 96,
+      "200": 288
+    }
+  },
+  "frozen_evaluation_sha256": {
+    "scripts/evaluate_checkpoint.py": "415dff9b59ece8a21e6bbe0a6c9fff08e2ea594cb8dc2ef8fe73e299c94af707",
+    "scripts/evaluation_reporting.py": "8cfb68a200a9f81b430444e94b7c2c7ae54c7b4e0d39feb4a68625efc3514dcd",
+    "scripts/evaluation_runtime.py": "c42644f7c1572922c34d925b6bdc1bc45b7f2d1156362aeec71c9b79cd868e69",
+    "scripts/success_metrics.py": "bd3233876429dcce64bee52be11b9f03a69b1e35279b4e285dab4e81151bbfa2",
+    "scripts/run_sim.sh": "10d11ff9b3d44c252c895ac3ca6ca2aa5301c78cbcacd1b5dc01702a494409d8",
+    "scripts/python_entry.py": "eebcdb3087adb3a55c4cf8835383dc1ac4168d802c4b91327aafcc32c52c5abb",
+    "scripts/run_bounded.py": "8a366dfcd67b12caa60ae692d05ba6c3456ed93a80769126fb0138764091bd1b"
+  },
+  "original_evaluator_sha256": "b903b4114444d3a19176332c3239b8f9fe2bd0686b27ed8a4597fc42a4d3555a",
+  "tests": "35 CPU tests passed; regression uses actual evaluator write_progress code to verify completed partial denominators."
+}

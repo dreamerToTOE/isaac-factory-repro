@@ -1,0 +1,85 @@
+{
+  "repo_head": {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "returncode": 0,
+    "stdout": "0efe7fc5f5ab96b15008e8195fa936755b182a84\n",
+    "stderr": ""
+  },
+  "repo_status": {
+    "command": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "returncode": 0,
+    "stdout": " M scripts/evaluate_checkpoint.py\n M scripts/python_entry.py\n M scripts/success_metrics.py\n M tests/test_success_metrics.py\n?? docs/G2_ANALYSIS_PROTOCOL.md\n?? docs/G2_PREFLIGHT.md\n?? evidence/g2/\n?? scripts/analyze_g2.py\n?? scripts/evaluation_reporting.py\n?? scripts/g2_training_observer.py\n?? scripts/run_g2_pipeline.py\n?? tests/test_analyze_g2.py\n?? tests/test_evaluation_reporting.py\n",
+    "stderr": ""
+  },
+  "upstream_head": {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "returncode": 0,
+    "stdout": "90b79bb2d44feb8d833f260f2bf37da3487180ba\n",
+    "stderr": ""
+  },
+  "upstream_status": {
+    "command": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "remote_main": {
+    "command": [
+      "git",
+      "ls-remote",
+      "origin",
+      "refs/heads/main"
+    ],
+    "returncode": 0,
+    "stdout": "0efe7fc5f5ab96b15008e8195fa936755b182a84\trefs/heads/main\n",
+    "stderr": ""
+  },
+  "gpu": {
+    "command": [
+      "nvidia-smi",
+      "--query-gpu=name,memory.used,memory.free,utilization.gpu",
+      "--format=csv"
+    ],
+    "returncode": 0,
+    "stdout": "name, memory.used [MiB], memory.free [MiB], utilization.gpu [%]\nNVIDIA GeForce RTX 3070, 6243 MiB, 1575 MiB, 82 %\n",
+    "stderr": ""
+  },
+  "compute_apps": {
+    "command": [
+      "nvidia-smi",
+      "--query-compute-apps=pid,process_name,used_memory",
+      "--format=csv"
+    ],
+    "returncode": 0,
+    "stdout": "pid, process_name, used_gpu_memory [MiB]\n3118, /usr/libexec/gnome-remote-desktop-daemon, 157 MiB\n230594, /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python, 4272 MiB\n",
+    "stderr": ""
+  },
+  "disk": {
+    "command": [
+      "df",
+      "-B1",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been"
+    ],
+    "returncode": 0,
+    "stdout": "\u6587\u4ef6\u7cfb\u7edf             1B\u7684\u5757         \u5df2\u7528         \u53ef\u7528 \u5df2\u7528% \u6302\u8f7d\u70b9\n/dev/sdb3      776400773120 328652361728 408234188800   45% /\n",
+    "stderr": ""
+  },
+  "captured_utc": "2026-10-23T12:17:26.743257+00:00",
+  "note": "Reverification during active training. Compute process is the authorized G2 training; dynamic preflight was completed earlier same day and copied unchanged."
+}

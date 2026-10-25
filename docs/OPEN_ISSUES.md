@@ -1,8 +1,25 @@
 # 未决问题、失败及解决状态
 
-日期：2026-10-23（Asia/Seoul）。GPU仿真、Factory初始化与有限PPO已通过；当前停止G0/G1。
+更新：2026-10-25（Asia/Seoul）。G2已完成64环境、seed0、200epochs及全部主要评估；下方G0/G1、D001的“未启动/等待审阅”等语句保留为历史状态。
 
-## D001当前状态
+## G2 当前状态与未决项
+
+**PASS（资源受限初步基线）**：1,638,400 transitions，最终独立确定性ever/terminal均280/288=97.222%，42项CPU测试通过；里程碑、回放、几何和日志见[RESULTS_G2](RESULTS_G2.md)及[证据索引](../evidence/g2/README.md)。上游保持pinned且干净，没有参数调优或追加训练。
+
+| 问题 | 已确认事实及当前边界 | G3建议 |
+| --- | --- | --- |
+| 原父监督/monitor消失 | 原因未知；训练原PID/birth继续，未restore。约122.747秒无NVML/guard；训练OS退出码null。预算完成由epoch1…200、final checkpoint和MAX EPOCHS标记佐证 | 持久化监督、独立liveness/guard、退出状态落盘；短smoke故障验证 |
+| 首次无数据launch manifest未完整保留 | 启动未产生epoch/checkpoint，原hash/status仍在，不能恢复原manifest全文 | 新实验manifest只读/唯一命名；不得覆盖历史 |
+| TensorBoard缺末epoch | actor/cval各199点，reward198点；epoch200没有落盘scalar，与异步flush遗漏相容但原因未证实 | 显式flush/close及末epoch校验作为工程改动；不补造G2事件 |
+| 长跑显存余量较紧 | 观测used峰值6909.6875MiB、free最低907.9375MiB；仅1次低于1024，未达连续3次停止条件；未知区间不保证安全余量 | 新GPU运行继续guard，先测资源再考虑128环境 |
+| 8次AMP actor skip | 12800尝试、12792实际Adam；central value12800。保留官方GradScaler，没有逐梯度有限性证据 | 多训练seed复测，分开记录loss、skip和参数有限性 |
+| 单训练seed/相关episodes | 3个评估seed不是3次训练重复；Wilson区间只描述episode计数；150/200差异无显著性结论 | 预注册训练seeds1、2，同64env/200epochs及固定评估协议 |
+| final8次失败未获完整轨迹 | seed1001有1次，seed1003有7次；不能臆测卡滞等机制 | 对具体env/episode诊断几何与动作，额外诊断不改主要分母 |
+| 官方成功语义有限 | XY<2.5mm且单侧z<1mm，没有保持时长/力/旋转/下界约束 | 如需更严格质量指标，未来独立定义并保留原官方指标 |
+
+保留D001精确续训、依赖最小安装、其它Factory任务等限制。G3只提案，尚未启动；不会自动400epochs、128环境、调PPO/奖励或转Gear/Nut。
+
+## D001状态（历史，2026-10-23）
 
 - **推送已解决**：原提交a77d215通过既有SSH写入并独立ls-remote核验；首次push返回Broken pipe但服务端已接受。保留HTTPS fetch地址，origin push URL改为SSH，没有请求/读取令牌或修改SSH配置。原始HTTPS无credential helper，历史失败见[git_access.txt](../evidence/2026-10-23/git_access.txt)，本轮见[r1_push.json](../evidence/d001/r1_push.json)。
 - **容量短测已扩展**：16/32/64各3epochs+加载后1epoch，10Hz NVML记录，未OOM，最小空闲均超过2GiB。128及长期内存增长仍未验证。

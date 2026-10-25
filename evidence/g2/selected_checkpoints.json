@@ -1,0 +1,133 @@
+{
+  "50": {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_50_rew_301.46692.pth",
+    "size_bytes": 212889005,
+    "sha256": "fdc0637d49844bc8463a9da3428039604fbd0e51e752eb28a00a91b5e6296cca",
+    "epoch": 50,
+    "frame": 409600,
+    "all_tensors_finite": true,
+    "optimizer_states": 22,
+    "optimizer_step_min": 3198,
+    "optimizer_step_max": 3198,
+    "nonzero_adam_exp_avg_states": 22,
+    "central_value_present": true,
+    "optimization_evidence_passed": true
+  },
+  "100": {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_100_rew_346.65335.pth",
+    "size_bytes": 212889115,
+    "sha256": "fd5b63985441f2286b5700e57edbd5d74668492e2d7936fb1e250a76e272114f",
+    "epoch": 100,
+    "frame": 819200,
+    "all_tensors_finite": true,
+    "optimizer_states": 22,
+    "optimizer_step_min": 6397,
+    "optimizer_step_max": 6397,
+    "nonzero_adam_exp_avg_states": 22,
+    "central_value_present": true,
+    "comparison": {
+      "previous": {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_50_rew_301.46692.pth",
+        "size_bytes": 212889005,
+        "sha256": "fdc0637d49844bc8463a9da3428039604fbd0e51e752eb28a00a91b5e6296cca",
+        "epoch": 50,
+        "frame": 409600,
+        "all_tensors_finite": true,
+        "optimizer_states": 22,
+        "optimizer_step_min": 3198,
+        "optimizer_step_max": 3198,
+        "nonzero_adam_exp_avg_states": 22,
+        "central_value_present": true
+      },
+      "parameter_differences": {
+        "model": {
+          "changed_parameter_tensors": 22,
+          "max_abs_parameter_change": 0.017865683883428574
+        },
+        "assymetric_vf_nets": {
+          "changed_parameter_tensors": 18,
+          "max_abs_parameter_change": 0.032548466813750565
+        }
+      }
+    },
+    "optimization_evidence_passed": true
+  },
+  "150": {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_150_rew_350.71515.pth",
+    "size_bytes": 212889115,
+    "sha256": "b24fa2215b04466bd42f4b3374e1cce2f9c6a01cf633ed59295ce995c6b01487",
+    "epoch": 150,
+    "frame": 1228800,
+    "all_tensors_finite": true,
+    "optimizer_states": 22,
+    "optimizer_step_min": 9595,
+    "optimizer_step_max": 9595,
+    "nonzero_adam_exp_avg_states": 22,
+    "central_value_present": true,
+    "comparison": {
+      "previous": {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_100_rew_346.65335.pth",
+        "size_bytes": 212889115,
+        "sha256": "fd5b63985441f2286b5700e57edbd5d74668492e2d7936fb1e250a76e272114f",
+        "epoch": 100,
+        "frame": 819200,
+        "all_tensors_finite": true,
+        "optimizer_states": 22,
+        "optimizer_step_min": 6397,
+        "optimizer_step_max": 6397,
+        "nonzero_adam_exp_avg_states": 22,
+        "central_value_present": true
+      },
+      "parameter_differences": {
+        "model": {
+          "changed_parameter_tensors": 22,
+          "max_abs_parameter_change": 0.010960122803226113
+        },
+        "assymetric_vf_nets": {
+          "changed_parameter_tensors": 18,
+          "max_abs_parameter_change": 0.038521286100149155
+        }
+      }
+    },
+    "optimization_evidence_passed": true
+  },
+  "200": {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+    "size_bytes": 212889225,
+    "sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+    "epoch": 200,
+    "frame": 1638400,
+    "all_tensors_finite": true,
+    "optimizer_states": 22,
+    "optimizer_step_min": 12792,
+    "optimizer_step_max": 12792,
+    "nonzero_adam_exp_avg_states": 22,
+    "central_value_present": true,
+    "comparison": {
+      "previous": {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_150_rew_350.71515.pth",
+        "size_bytes": 212889115,
+        "sha256": "b24fa2215b04466bd42f4b3374e1cce2f9c6a01cf633ed59295ce995c6b01487",
+        "epoch": 150,
+        "frame": 1228800,
+        "all_tensors_finite": true,
+        "optimizer_states": 22,
+        "optimizer_step_min": 9595,
+        "optimizer_step_max": 9595,
+        "nonzero_adam_exp_avg_states": 22,
+        "central_value_present": true
+      },
+      "parameter_differences": {
+        "model": {
+          "changed_parameter_tensors": 22,
+          "max_abs_parameter_change": 0.0065011747647076845
+        },
+        "assymetric_vf_nets": {
+          "changed_parameter_tensors": 18,
+          "max_abs_parameter_change": 0.04025189206004143
+        }
+      }
+    },
+    "optimization_evidence_passed": true
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "scope": "All supplemental playback attempts, separate from primary evaluation",
+  "created_utc": "2026-10-25T04:58:08.773520+00:00",
+  "files": [
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_playback/seed1001/playback.json",
+      "bytes": 567,
+      "sha256": "e20219604053e1b6806925425d9efdbcfbef2f8777935bef98febe3e09f289a3"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_playback/seed1001_guard/console.txt",
+      "bytes": 15974,
+      "sha256": "cc9825582b39994ea31c25d95df3e03f1d9e1ad07420d6a0d2d244e62f588f3f"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_playback/seed1001_guard/gpu.csv",
+      "bytes": 196696,
+      "sha256": "b1d70de650aeb79de6039f3b306750afff3837115472a09cea8480fe9c0a2394"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_playback/seed1001_guard/result.json",
+      "bytes": 1551,
+      "sha256": "77407f873be479a4644c4e65567a7fa8c419cb2d3c04cff73da3308f8c8f3217"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_playback/seed1001_performance/episode_00_step_001_start.png",
+      "bytes": 295600,
+      "sha256": "be72158c5938e204930f06a8c3ae9ccd6346350809130e45b2119077ef9f5895"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_playback/seed1001_performance/episode_00_step_037_first_success.png",
+      "bytes": 320011,
+      "sha256": "bac08a7f1084097b7bb92a2f5fd4c69e75904ef818f9a684ab710419cf2a071b"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_playback/seed1001_performance/episode_00_step_149_terminal_success.png",
+      "bytes": 324236,
+      "sha256": "0cdfb75207dc3fde3da068b69bab5efafbb81037c3d0605b490260b8a21231e5"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_playback/seed1001_performance/playback.json",
+      "bytes": 142410,
+      "sha256": "3dfce4506c06a59ee6eb7b378fae958b368c19e8456ac3052a1327b9e0fb364f"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_playback/seed1001_performance_guard/console.txt",
+      "bytes": 13349,
+      "sha256": "af0e824def4307bee473f7094f7604e5d0f1ef56755f874a66892d6e03dbecbb"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_playback/seed1001_performance_guard/gpu.csv",
+      "bytes": 28389,
+      "sha256": "23162b926b8e26db096886d2f8d5746d0816e5c9603e11eaa85b7475db754d68"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_playback/seed1001_performance_guard/result.json",
+      "bytes": 1665,
+      "sha256": "c881ed7b771ac89d9138d40a0eca0cc3a80ac51a2f56299328def5af0a2c2651"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_playback/seed1001_retry/episode_00_step_001_start.png",
+      "bytes": 238363,
+      "sha256": "1d046f1af0f28d3c4d5c86d02257bcca3a3775929de874781c069c9d178dcb4c"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_playback/seed1001_retry/episode_00_step_037_first_success.png",
+      "bytes": 248263,
+      "sha256": "659f6953bc95835794fdd61f59821273409be58d2320e7ac548946eae7ec743d"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_playback/seed1001_retry/episode_00_step_149_terminal_success.png",
+      "bytes": 279429,
+      "sha256": "c5ca8495db1d292640640b6022240df1414774bfd1310d29efec82217e4b8c63"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_playback/seed1001_retry/playback.json",
+      "bytes": 118163,
+      "sha256": "6a3fe8e9e833756d0e747c0cef98ba3a1ffd0cb1194eca1794f0905edc1eacab"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_playback/seed1001_retry_guard/console.txt",
+      "bytes": 12844,
+      "sha256": "5b40c87941fb25ad2d7fec4d7647a2cc882f64ef8b2de12ab6037f6f83ebd996"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_playback/seed1001_retry_guard/gpu.csv",
+      "bytes": 34532,
+      "sha256": "0942f102ef39856c269dfdbbdaed7c7bb82c5856b25613c7a52b2a0222ed2c74"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_playback/seed1001_retry_guard/result.json",
+      "bytes": 1580,
+      "sha256": "7060f53841f2c9b9e87210275309c8ad4ba3a05da885d13311c51504657e38f0"
+    }
+  ]
+}

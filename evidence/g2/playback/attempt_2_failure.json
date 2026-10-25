@@ -1,0 +1,9 @@
+{
+  "status": "gpu_guard_stopped",
+  "min_free_MiB": 931.8125,
+  "guard_floor_MiB": 1024,
+  "completed_episode_count_in_partial": 0,
+  "terminal_frame_captured": true,
+  "cause": "Balanced RTX rendering exceeded guard threshold. Guard stopped its own process group. Primary metrics unaffected.",
+  "retry": "Official performance rendering preset, 640x480 view and 1 supplemental episode; physics/policy settings unchanged."
+}

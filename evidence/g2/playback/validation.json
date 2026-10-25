@@ -1,0 +1,21 @@
+{
+  "checkpoint_matches_selected_epoch_200": true,
+  "status_complete": true,
+  "completed_episodes": 1,
+  "trace_rows": 149,
+  "all_geometry_rechecks_match": true,
+  "frame_checksums_match": true,
+  "all_capture_physics_unchanged": true,
+  "terminal_before_reset": true,
+  "official_terminal_and_post_reset_verified": true,
+  "attempt_2_persisted_trace_matches_completed_run": true,
+  "attempt_2_persisted_trace_rows_compared": 125,
+  "playback_script_sha256": "84829e4b679c651db53a148e5415a396420ca072253350f32e165e40c9be5cb3",
+  "images_visually_inspected": [
+    "attempt2 first_success",
+    "attempt2 terminal_success",
+    "completed start",
+    "completed first_success",
+    "completed terminal_success"
+  ]
+}

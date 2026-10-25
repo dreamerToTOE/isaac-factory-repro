@@ -1,0 +1,4 @@
+CPU verification: complete existing and G2 pytest suite
+.......................................... [100%]
+42 passed in 14.87s
+Captured from actual completed test session 36654; no simulator or GPU workload.

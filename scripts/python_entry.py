@@ -1,5 +1,6 @@
 """Pin learning modules before Kit prepends its bundled archive paths; run upstream unchanged."""
 import json
+import os
 import runpy
 import sys
 import gymnasium
@@ -27,6 +28,11 @@ def audited_init(self, *args, **kwargs):
     original_init(self, *args, **kwargs)
     report("PACKAGES_AFTER_APP_LAUNCH")
 AppLauncher.__init__ = audited_init
+
+# Optional read-only G2 logging; the target remains the official training script.
+if os.environ.get("FACTORY_G2_AUDIT_OUTPUT"):
+    from g2_training_observer import install
+    install(AppLauncher)
 
 target = sys.argv[1]
 sys.argv = sys.argv[1:]

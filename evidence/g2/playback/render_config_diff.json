@@ -1,0 +1,88 @@
+{
+  "official_isaac_lab_commit": "90b79bb2d44feb8d833f260f2bf37da3487180ba",
+  "preset_sources": {
+    "balanced.kit": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/apps/rendering_modes/balanced.kit",
+      "sha256": "e4018ffa5f6c42293ba86b09f3036d4078585962233d5001a8580c7eb7a782ad"
+    },
+    "performance.kit": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/apps/rendering_modes/performance.kit",
+      "sha256": "07488d242117cbb18e1dd8cd99594e10a2f4b4a469f4ac8d84cd0c8ed15b4eca"
+    }
+  },
+  "preset_setting_diff": {
+    "rtx-transient.dldenoiser.enabled": {
+      "balanced": "true",
+      "performance": "false"
+    },
+    "rtx.directLighting.sampledLighting.denoisingTechnique": {
+      "balanced": "not set by preset",
+      "performance": "0"
+    },
+    "rtx.directLighting.sampledLighting.enabled": {
+      "balanced": "true",
+      "performance": "false"
+    },
+    "rtx.domeLight.upperLowerStrategy": {
+      "balanced": "not set by preset",
+      "performance": "3"
+    },
+    "rtx.indirectDiffuse.denoiser.enabled": {
+      "balanced": "true",
+      "performance": "false"
+    },
+    "rtx.post.dlss.execMode": {
+      "balanced": "1",
+      "performance": "0"
+    },
+    "rtx.raytracing.cached.enabled": {
+      "balanced": "true",
+      "performance": "false"
+    },
+    "rtx.reflections.denoiser.enabled": {
+      "balanced": "true",
+      "performance": "false"
+    }
+  },
+  "image_resolution": {
+    "attempt_2": [
+      800,
+      600
+    ],
+    "completed": [
+      640,
+      480
+    ]
+  },
+  "simulation_app_resolution": {
+    "attempt_2": "SimulationApp default",
+    "completed": [
+      640,
+      480
+    ]
+  },
+  "camera": {
+    "eye_world_m": [
+      0.772349328994751,
+      0.23931712590157986,
+      0.22380024552345276
+    ],
+    "lookat_world_m": [
+      0.552349328994751,
+      0.019317125901579857,
+      0.09380024552345276
+    ]
+  },
+  "scientific_parameters_changed": [],
+  "supplemental_scope_changes": {
+    "num_envs": 1,
+    "seed": 1001,
+    "completed_run_requested_episodes": 1,
+    "max_steps": 200,
+    "separate_from_primary_denominator": true
+  },
+  "notes": [
+    "Camera geometry and rendering settings only; official task reward/success/physics and policy mean unchanged.",
+    "After attempt2 memory guard termination, requested episodes changed2 to1 and step cap650 to200; complete timeout remains149 steps."
+  ]
+}

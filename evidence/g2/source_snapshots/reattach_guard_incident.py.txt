@@ -1,0 +1,45 @@
+"""[ENGINEERING] Read-only NVML guard for an already-running training process.
+Does not restart, pause, or attach a debugger to training. PID birth is verified.
+"""
+import ctypes as C, csv, datetime, json, os, signal, time
+from pathlib import Path
+pid=230594
+out=Path('/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/reattached_guard')
+out.mkdir(exist_ok=False)
+proc=Path(f'/proc/{pid}/stat')
+birth=proc.read_text().split()[21]
+assert os.getpgid(pid)==pid
+class Mem(C.Structure):
+ _fields_=[('version',C.c_uint)]+[(x,C.c_ulonglong) for x in ('total','reserved','free','used')]
+nv=C.CDLL('libnvidia-ml.so.1'); assert nv.nvmlInit_v2()==0
+dev=C.c_void_p(); assert nv.nvmlDeviceGetHandleByIndex_v2(0,C.byref(dev))==0
+start=time.time(); mono=time.monotonic(); count=0; low=0; peak=0; free_min=float('inf'); reason=None
+meta={'pid':pid,'pid_start_ticks':birth,'attached_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'start_unix':start,'training_not_restarted':True,'min_free_MiB_guard':1024,'interval_seconds':.1,'note':'Parent monitor disappeared. This observer cannot recover missing samples or child exit code.'}
+(out/'identity.json').write_text(json.dumps(meta,indent=2)+'\n')
+def alive():
+ try:
+  fields=proc.read_text().split(); return fields[21]==birth and fields[2]!='Z'
+ except FileNotFoundError: return False
+try:
+ with (out/'gpu.csv').open('x') as f:
+  w=csv.writer(f);w.writerow(['elapsed_seconds','unix_seconds','total_used_MiB','free_MiB','total_MiB','driver_reserved_MiB']);f.flush()
+  while alive():
+   mem=Mem();mem.version=C.sizeof(mem)|(2<<24)
+   code=nv.nvmlDeviceGetMemoryInfo_v2(dev,C.byref(mem))
+   if code: reason='nvml_failed'; break
+   used,free=mem.used/2**20,mem.free/2**20
+   peak=max(peak,used);free_min=min(free_min,free);count+=1
+   w.writerow([time.monotonic()-mono,time.time(),used,free,mem.total/2**20,mem.reserved/2**20]);f.flush()
+   low=low+1 if free<1024 else 0
+   if low>=3: reason='gpu_headroom_floor'; break
+   time.sleep(.1)
+ if reason and alive():
+  os.killpg(pid,signal.SIGTERM)
+  for _ in range(100):
+   if not alive(): break
+   time.sleep(.1)
+  if alive(): os.killpg(pid,signal.SIGKILL)
+finally:
+ nv.nvmlShutdown()
+ meta.update(finished_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),duration_seconds=time.monotonic()-mono,sample_count=count,peak_total_gpu_used_MiB=peak,min_free_MiB=None if count==0 else free_min,stop_reason=reason,process_exit_code=None)
+ (out/'result.json').write_text(json.dumps(meta,indent=2)+'\n')

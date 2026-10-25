@@ -1,0 +1,359 @@
+{
+  "phase": "training_and_evaluation_complete",
+  "started_utc": "2026-10-23T12:19:50.069904+00:00",
+  "pid": 234788,
+  "training_pid": 230594,
+  "training_birth_ticks": "4135139",
+  "manifest_sha256": "6affa4caf1c0553141dac616c2f85db0ba5796e0cbb3f3f3202b03b98851b8bb",
+  "evaluation_amendment_sha256": "1192784a3c977edbb4de77659c7cb1b8c2e13a8dfae8a2c2a30df0e5f09838c8",
+  "training_exit_code": null,
+  "training_exit_code_note": "Original parent monitor disappeared; exit status is unavailable.",
+  "training_restarted": false,
+  "evaluations": [
+    {
+      "epoch": 50,
+      "seed": 1001,
+      "output": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1001/metrics.json",
+      "aggregate": {
+        "episodes_completed": 32,
+        "episodes_requested": 32,
+        "ever_success_count": 22,
+        "ever_success_rate": 0.6875,
+        "ever_success_wilson95": [
+          0.5143332169904459,
+          0.8204745836639026
+        ],
+        "first_success_count": 22,
+        "first_success_rate": 0.6875,
+        "mean_first_success_step": 39.18181818181818,
+        "terminal_success_count": 22,
+        "terminal_success_rate": 0.6875,
+        "terminal_success_wilson95": [
+          0.5143332169904459,
+          0.8204745836639026
+        ],
+        "transient_only_count": 0
+      }
+    },
+    {
+      "epoch": 50,
+      "seed": 1002,
+      "output": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1002/metrics.json",
+      "aggregate": {
+        "episodes_completed": 32,
+        "episodes_requested": 32,
+        "ever_success_count": 25,
+        "ever_success_rate": 0.78125,
+        "ever_success_wilson95": [
+          0.6124500635075647,
+          0.8897616374739581
+        ],
+        "first_success_count": 25,
+        "first_success_rate": 0.78125,
+        "mean_first_success_step": 30.44,
+        "terminal_success_count": 25,
+        "terminal_success_rate": 0.78125,
+        "terminal_success_wilson95": [
+          0.6124500635075647,
+          0.8897616374739581
+        ],
+        "transient_only_count": 0
+      }
+    },
+    {
+      "epoch": 50,
+      "seed": 1003,
+      "output": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1003/metrics.json",
+      "aggregate": {
+        "episodes_completed": 32,
+        "episodes_requested": 32,
+        "ever_success_count": 22,
+        "ever_success_rate": 0.6875,
+        "ever_success_wilson95": [
+          0.5143332169904459,
+          0.8204745836639026
+        ],
+        "first_success_count": 22,
+        "first_success_rate": 0.6875,
+        "mean_first_success_step": 36.77272727272727,
+        "terminal_success_count": 22,
+        "terminal_success_rate": 0.6875,
+        "terminal_success_wilson95": [
+          0.5143332169904459,
+          0.8204745836639026
+        ],
+        "transient_only_count": 0
+      }
+    },
+    {
+      "epoch": 100,
+      "seed": 1001,
+      "output": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1001/metrics.json",
+      "aggregate": {
+        "episodes_completed": 32,
+        "episodes_requested": 32,
+        "ever_success_count": 27,
+        "ever_success_rate": 0.84375,
+        "ever_success_wilson95": [
+          0.682458504024696,
+          0.9313557971749429
+        ],
+        "first_success_count": 27,
+        "first_success_rate": 0.84375,
+        "mean_first_success_step": 39.44444444444444,
+        "terminal_success_count": 27,
+        "terminal_success_rate": 0.84375,
+        "terminal_success_wilson95": [
+          0.682458504024696,
+          0.9313557971749429
+        ],
+        "transient_only_count": 0
+      }
+    },
+    {
+      "epoch": 100,
+      "seed": 1002,
+      "output": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1002/metrics.json",
+      "aggregate": {
+        "episodes_completed": 32,
+        "episodes_requested": 32,
+        "ever_success_count": 31,
+        "ever_success_rate": 0.96875,
+        "ever_success_wilson95": [
+          0.8425573617998744,
+          0.9944621398359969
+        ],
+        "first_success_count": 31,
+        "first_success_rate": 0.96875,
+        "mean_first_success_step": 31.677419354838708,
+        "terminal_success_count": 31,
+        "terminal_success_rate": 0.96875,
+        "terminal_success_wilson95": [
+          0.8425573617998744,
+          0.9944621398359969
+        ],
+        "transient_only_count": 0
+      }
+    },
+    {
+      "epoch": 100,
+      "seed": 1003,
+      "output": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1003/metrics.json",
+      "aggregate": {
+        "episodes_completed": 32,
+        "episodes_requested": 32,
+        "ever_success_count": 23,
+        "ever_success_rate": 0.71875,
+        "ever_success_wilson95": [
+          0.5462549057408342,
+          0.8443541950225723
+        ],
+        "first_success_count": 23,
+        "first_success_rate": 0.71875,
+        "mean_first_success_step": 29.52173913043478,
+        "terminal_success_count": 23,
+        "terminal_success_rate": 0.71875,
+        "terminal_success_wilson95": [
+          0.5462549057408342,
+          0.8443541950225723
+        ],
+        "transient_only_count": 0
+      }
+    },
+    {
+      "epoch": 150,
+      "seed": 1001,
+      "output": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1001/metrics.json",
+      "aggregate": {
+        "episodes_completed": 32,
+        "episodes_requested": 32,
+        "ever_success_count": 32,
+        "ever_success_rate": 1.0,
+        "ever_success_wilson95": [
+          0.8928208017449293,
+          1.0
+        ],
+        "first_success_count": 32,
+        "first_success_rate": 1.0,
+        "mean_first_success_step": 39.375,
+        "terminal_success_count": 32,
+        "terminal_success_rate": 1.0,
+        "terminal_success_wilson95": [
+          0.8928208017449293,
+          1.0
+        ],
+        "transient_only_count": 0
+      }
+    },
+    {
+      "epoch": 150,
+      "seed": 1002,
+      "output": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1002/metrics.json",
+      "aggregate": {
+        "episodes_completed": 32,
+        "episodes_requested": 32,
+        "ever_success_count": 32,
+        "ever_success_rate": 1.0,
+        "ever_success_wilson95": [
+          0.8928208017449293,
+          1.0
+        ],
+        "first_success_count": 32,
+        "first_success_rate": 1.0,
+        "mean_first_success_step": 28.125,
+        "terminal_success_count": 32,
+        "terminal_success_rate": 1.0,
+        "terminal_success_wilson95": [
+          0.8928208017449293,
+          1.0
+        ],
+        "transient_only_count": 0
+      }
+    },
+    {
+      "epoch": 150,
+      "seed": 1003,
+      "output": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1003/metrics.json",
+      "aggregate": {
+        "episodes_completed": 32,
+        "episodes_requested": 32,
+        "ever_success_count": 28,
+        "ever_success_rate": 0.875,
+        "ever_success_wilson95": [
+          0.7193169451834978,
+          0.9502986561251991
+        ],
+        "first_success_count": 28,
+        "first_success_rate": 0.875,
+        "mean_first_success_step": 39.67857142857143,
+        "terminal_success_count": 28,
+        "terminal_success_rate": 0.875,
+        "terminal_success_wilson95": [
+          0.7193169451834978,
+          0.9502986561251991
+        ],
+        "transient_only_count": 0
+      }
+    },
+    {
+      "epoch": 200,
+      "seed": 1001,
+      "output": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1001/metrics.json",
+      "aggregate": {
+        "episodes_completed": 96,
+        "episodes_requested": 96,
+        "ever_success_count": 95,
+        "ever_success_rate": 0.9895833333333334,
+        "ever_success_wilson95": [
+          0.9433338237728424,
+          0.9981588297831838
+        ],
+        "first_success_count": 95,
+        "first_success_rate": 0.9895833333333334,
+        "mean_first_success_step": 34.17894736842105,
+        "terminal_success_count": 95,
+        "terminal_success_rate": 0.9895833333333334,
+        "terminal_success_wilson95": [
+          0.9433338237728424,
+          0.9981588297831838
+        ],
+        "transient_only_count": 0
+      }
+    },
+    {
+      "epoch": 200,
+      "seed": 1002,
+      "output": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1002/metrics.json",
+      "aggregate": {
+        "episodes_completed": 96,
+        "episodes_requested": 96,
+        "ever_success_count": 96,
+        "ever_success_rate": 1.0,
+        "ever_success_wilson95": [
+          0.9615244121423243,
+          1.0
+        ],
+        "first_success_count": 96,
+        "first_success_rate": 1.0,
+        "mean_first_success_step": 31.625,
+        "terminal_success_count": 96,
+        "terminal_success_rate": 1.0,
+        "terminal_success_wilson95": [
+          0.9615244121423243,
+          1.0
+        ],
+        "transient_only_count": 0
+      }
+    },
+    {
+      "epoch": 200,
+      "seed": 1003,
+      "output": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1003/metrics.json",
+      "aggregate": {
+        "episodes_completed": 96,
+        "episodes_requested": 96,
+        "ever_success_count": 89,
+        "ever_success_rate": 0.9270833333333334,
+        "ever_success_wilson95": [
+          0.8570696833485983,
+          0.9642324186896375
+        ],
+        "first_success_count": 89,
+        "first_success_rate": 0.9270833333333334,
+        "mean_first_success_step": 34.91011235955056,
+        "terminal_success_count": 89,
+        "terminal_success_rate": 0.9270833333333334,
+        "terminal_success_wilson95": [
+          0.8570696833485983,
+          0.9642324186896375
+        ],
+        "transient_only_count": 0
+      }
+    }
+  ],
+  "training_disappearance_observed_utc": "2026-10-23T14:44:56.221899+00:00",
+  "training_completed_200_epochs": true,
+  "training_completion_basis": "Same PID/birth throughout observation; contiguous epoch 1..200 audit, 1,638,400 transitions, official MAX EPOCHS NUM marker, checkpoint epoch/frame verification. Exit code remains unknown.",
+  "training_end_observation": "2026-10-23T14:44:55.718230+00:00",
+  "current_evaluation": {
+    "epoch": 200,
+    "seed": 1003,
+    "episodes_requested": 96
+  },
+  "active_command": [
+    "/usr/bin/python3",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_bounded.py",
+    "--output",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1003",
+    "--timeout",
+    "1800",
+    "--min-free-mib",
+    "1024",
+    "--",
+    "bash",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/evaluate_checkpoint.py",
+    "--headless",
+    "--device",
+    "cuda:0",
+    "--task",
+    "Isaac-Factory-PegInsert-Direct-v0",
+    "--checkpoint",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+    "--num_envs",
+    "32",
+    "--episodes",
+    "3",
+    "--seed",
+    "1003",
+    "--max_steps",
+    "480",
+    "--snapshot-limit",
+    "12",
+    "--progress-interval",
+    "10",
+    "--output",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1003/metrics.json"
+  ],
+  "finished_utc": "2026-10-23T14:58:57.357960+00:00"
+}

@@ -1,0 +1,352 @@
+PINNED_PACKAGES={"torch": {"version": "2.7.0+cu128", "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/torch/__init__.py"}, "torchvision": {"version": "0.22.0+cu128", "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/torchvision/__init__.py"}, "numpy": {"version": "1.26.4", "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/numpy/__init__.py"}, "gymnasium": {"version": "1.2.0", "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/gymnasium/__init__.py"}}
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/apps/isaaclab.python.headless.kit
+Loading user config located at: '/home/ubuntu2004/isaacsim-4.5.0/kit/data/Kit/Isaac-Sim/4.5/user.config.json'
+[Info] [carb] Logging to file: /home/ubuntu2004/isaacsim-4.5.0/kit/logs/Kit/Isaac-Sim/4.5/kit_20261023_211205.log
+2026-10-23 12:12:05 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+2026-10-23 12:12:05 [2ms] [Warning] [omni.ext.plugin] [ext: rendering_modes] Extensions config 'extension.toml' doesn't exist '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/apps/rendering_modes' or '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/apps/rendering_modes/config'
+2026-10-23 12:12:05 [395ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX
+2026-10-23 12:12:05 [654ms] [Warning] [omni.datastore] OmniHub is inaccessible
+2026-10-23 12:12:05 [767ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 580.178.04    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 3070          | Yes: 0 |     | 8438    MB | 10de      | 0          |
+|     |                                  |        |     |            | 2488      | ba060710.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 22.04.5 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.5, Kernel: 6.8.0-138-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12101004 (1.21.1.4)
+| Processor: Intel(R) Core(TM) i7-10700F CPU @ 2.90GHz
+| Cores: 8 | Logical Cores: 16
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 48107 | Free Memory: 35728
+| Total Page/Swap (MB): 2047 | Free Page/Swap: 2047
+|---------------------------------------------------------------------------------------------|
+PACKAGES_AFTER_APP_LAUNCH={"torch": {"version": "2.7.0+cu128", "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/torch/__init__.py"}, "torchvision": {"version": "0.22.0+cu128", "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/torchvision/__init__.py"}, "numpy": {"version": "1.26.4", "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/numpy/__init__.py"}, "gymnasium": {"version": "1.2.0", "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/gymnasium/__init__.py"}}
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[ENGINEERING] G2 lightweight observation: /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/train/training_audit.json
+[INFO]: Parsing configuration from: <class 'isaaclab_tasks.direct.factory.factory_env_cfg.FactoryTaskPegInsertCfg'>
+[INFO]: Parsing configuration from: /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/agents/rl_games_ppo_cfg.yaml
+[INFO] Logging experiment in directory: /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory
+Setting seed: 0
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 0
+	Physics step-size     : 0.008333333333333333
+	Rendering step-size   : 0.008333333333333333
+	Environment step-size : 0.06666666666666667
+2026-10-23 12:12:09 [4,566ms] [Warning] [isaaclab.envs.direct_rl_env] The render interval (1) is smaller than the decimation (8). Multiple render calls will happen for each environment step.If this is not intended, set the render interval to be equal to the decimation.
+[INFO]: Time taken for scene creation : 1.660188 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 64
+	Environment spacing   : 2.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : []
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 0.987785 seconds
+[INFO]: Completed setting up the environment...
+self.seed = 0
+Started to train
+Exact experiment name requested from command line: g2_peginsert_64env_seed0_baseline_rerun
+Adding Central Value Network
+seq_length: 128
+current training device: cuda:0
+/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/a2c_common.py:254: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.scaler = torch.cuda.amp.GradScaler(enabled=self.mixed_precision)
+build mlp: 1024
+RunningMeanStd:  (1,)
+RunningMeanStd:  (19,)
+build mlp: 1024
+RunningMeanStd:  (1,)
+RunningMeanStd:  (43,)
+/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/a2c_continuous.py:106: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=self.mixed_precision):
+fps step: 292 fps step and policy inference: 288 fps total: 256 epoch: 1/200 frames: 0
+fps step: 271 fps step and policy inference: 268 fps total: 238 epoch: 2/200 frames: 8192
+fps step: 262 fps step and policy inference: 259 fps total: 231 epoch: 3/200 frames: 16384
+fps step: 258 fps step and policy inference: 255 fps total: 228 epoch: 4/200 frames: 24576
+fps step: 260 fps step and policy inference: 257 fps total: 230 epoch: 5/200 frames: 32768
+fps step: 256 fps step and policy inference: 254 fps total: 228 epoch: 6/200 frames: 40960
+fps step: 250 fps step and policy inference: 247 fps total: 223 epoch: 7/200 frames: 49152
+fps step: 267 fps step and policy inference: 264 fps total: 239 epoch: 8/200 frames: 57344
+fps step: 246 fps step and policy inference: 244 fps total: 220 epoch: 9/200 frames: 65536
+fps step: 242 fps step and policy inference: 239 fps total: 216 epoch: 10/200 frames: 73728
+saving next best rewards:  [59.446064]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 223 fps step and policy inference: 221 fps total: 200 epoch: 11/200 frames: 81920
+saving next best rewards:  [61.8599]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 213 fps step and policy inference: 211 fps total: 192 epoch: 12/200 frames: 90112
+saving next best rewards:  [66.859474]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 209 fps step and policy inference: 207 fps total: 189 epoch: 13/200 frames: 98304
+saving next best rewards:  [73.715385]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 201 fps step and policy inference: 200 fps total: 182 epoch: 14/200 frames: 106496
+saving next best rewards:  [82.22468]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 214 fps step and policy inference: 212 fps total: 194 epoch: 15/200 frames: 114688
+fps step: 219 fps step and policy inference: 217 fps total: 199 epoch: 16/200 frames: 122880
+saving next best rewards:  [90.804115]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 228 fps step and policy inference: 226 fps total: 206 epoch: 17/200 frames: 131072
+fps step: 225 fps step and policy inference: 223 fps total: 204 epoch: 18/200 frames: 139264
+saving next best rewards:  [103.75546]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 225 fps step and policy inference: 223 fps total: 203 epoch: 19/200 frames: 147456
+saving next best rewards:  [104.52588]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 217 fps step and policy inference: 215 fps total: 197 epoch: 20/200 frames: 155648
+saving next best rewards:  [119.04907]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 206 fps step and policy inference: 204 fps total: 188 epoch: 21/200 frames: 163840
+fps step: 218 fps step and policy inference: 216 fps total: 199 epoch: 22/200 frames: 172032
+fps step: 205 fps step and policy inference: 203 fps total: 186 epoch: 23/200 frames: 180224
+saving next best rewards:  [123.44564]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 212 fps step and policy inference: 210 fps total: 192 epoch: 24/200 frames: 188416
+saving next best rewards:  [146.48389]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 198 fps step and policy inference: 197 fps total: 180 epoch: 25/200 frames: 196608
+saving next best rewards:  [150.53078]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 184 fps step and policy inference: 182 fps total: 167 epoch: 26/200 frames: 204800
+saving next best rewards:  [193.29614]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 185 fps step and policy inference: 184 fps total: 169 epoch: 27/200 frames: 212992
+saving next best rewards:  [200.04617]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 186 fps step and policy inference: 184 fps total: 169 epoch: 28/200 frames: 221184
+saving next best rewards:  [221.02011]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 185 fps step and policy inference: 184 fps total: 169 epoch: 29/200 frames: 229376
+fps step: 174 fps step and policy inference: 173 fps total: 158 epoch: 30/200 frames: 237568
+saving next best rewards:  [227.68954]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 182 fps step and policy inference: 180 fps total: 167 epoch: 31/200 frames: 245760
+saving next best rewards:  [248.45233]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 185 fps step and policy inference: 184 fps total: 168 epoch: 32/200 frames: 253952
+saving next best rewards:  [264.65448]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 180 fps step and policy inference: 179 fps total: 164 epoch: 33/200 frames: 262144
+fps step: 179 fps step and policy inference: 177 fps total: 163 epoch: 34/200 frames: 270336
+saving next best rewards:  [274.8964]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 176 fps step and policy inference: 174 fps total: 161 epoch: 35/200 frames: 278528
+saving next best rewards:  [278.37012]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 182 fps step and policy inference: 180 fps total: 167 epoch: 36/200 frames: 286720
+fps step: 183 fps step and policy inference: 182 fps total: 168 epoch: 37/200 frames: 294912
+saving next best rewards:  [284.84875]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 184 fps step and policy inference: 182 fps total: 168 epoch: 38/200 frames: 303104
+saving next best rewards:  [284.85196]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 184 fps step and policy inference: 183 fps total: 168 epoch: 39/200 frames: 311296
+saving next best rewards:  [298.4668]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 186 fps step and policy inference: 184 fps total: 170 epoch: 40/200 frames: 319488
+fps step: 183 fps step and policy inference: 181 fps total: 167 epoch: 41/200 frames: 327680
+fps step: 183 fps step and policy inference: 181 fps total: 167 epoch: 42/200 frames: 335872
+fps step: 187 fps step and policy inference: 186 fps total: 172 epoch: 43/200 frames: 344064
+fps step: 183 fps step and policy inference: 182 fps total: 167 epoch: 44/200 frames: 352256
+fps step: 183 fps step and policy inference: 182 fps total: 167 epoch: 45/200 frames: 360448
+fps step: 182 fps step and policy inference: 181 fps total: 167 epoch: 46/200 frames: 368640
+fps step: 193 fps step and policy inference: 192 fps total: 177 epoch: 47/200 frames: 376832
+fps step: 199 fps step and policy inference: 197 fps total: 182 epoch: 48/200 frames: 385024
+fps step: 195 fps step and policy inference: 194 fps total: 179 epoch: 49/200 frames: 393216
+saving next best rewards:  [301.46692]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 189 fps step and policy inference: 188 fps total: 174 epoch: 50/200 frames: 401408
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_50_rew_301.46692.pth'
+fps step: 185 fps step and policy inference: 184 fps total: 169 epoch: 51/200 frames: 409600
+saving next best rewards:  [312.10385]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 186 fps step and policy inference: 185 fps total: 170 epoch: 52/200 frames: 417792
+saving next best rewards:  [315.51654]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 185 fps step and policy inference: 184 fps total: 169 epoch: 53/200 frames: 425984
+fps step: 192 fps step and policy inference: 191 fps total: 176 epoch: 54/200 frames: 434176
+fps step: 198 fps step and policy inference: 196 fps total: 181 epoch: 55/200 frames: 442368
+saving next best rewards:  [316.31955]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 196 fps step and policy inference: 194 fps total: 179 epoch: 56/200 frames: 450560
+saving next best rewards:  [322.57846]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 198 fps step and policy inference: 196 fps total: 182 epoch: 57/200 frames: 458752
+fps step: 198 fps step and policy inference: 196 fps total: 181 epoch: 58/200 frames: 466944
+saving next best rewards:  [326.82104]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 195 fps step and policy inference: 194 fps total: 179 epoch: 59/200 frames: 475136
+fps step: 198 fps step and policy inference: 197 fps total: 181 epoch: 60/200 frames: 483328
+saving next best rewards:  [335.75842]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 196 fps step and policy inference: 194 fps total: 179 epoch: 61/200 frames: 491520
+fps step: 197 fps step and policy inference: 195 fps total: 180 epoch: 62/200 frames: 499712
+fps step: 195 fps step and policy inference: 193 fps total: 178 epoch: 63/200 frames: 507904
+fps step: 195 fps step and policy inference: 194 fps total: 180 epoch: 64/200 frames: 516096
+fps step: 197 fps step and policy inference: 195 fps total: 180 epoch: 65/200 frames: 524288
+fps step: 196 fps step and policy inference: 194 fps total: 179 epoch: 66/200 frames: 532480
+fps step: 196 fps step and policy inference: 194 fps total: 179 epoch: 67/200 frames: 540672
+fps step: 196 fps step and policy inference: 194 fps total: 179 epoch: 68/200 frames: 548864
+fps step: 199 fps step and policy inference: 197 fps total: 181 epoch: 69/200 frames: 557056
+fps step: 196 fps step and policy inference: 195 fps total: 179 epoch: 70/200 frames: 565248
+fps step: 194 fps step and policy inference: 192 fps total: 179 epoch: 71/200 frames: 573440
+fps step: 197 fps step and policy inference: 196 fps total: 181 epoch: 72/200 frames: 581632
+saving next best rewards:  [338.87784]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 196 fps step and policy inference: 195 fps total: 179 epoch: 73/200 frames: 589824
+fps step: 196 fps step and policy inference: 194 fps total: 179 epoch: 74/200 frames: 598016
+fps step: 195 fps step and policy inference: 194 fps total: 179 epoch: 75/200 frames: 606208
+fps step: 197 fps step and policy inference: 195 fps total: 180 epoch: 76/200 frames: 614400
+fps step: 194 fps step and policy inference: 192 fps total: 177 epoch: 77/200 frames: 622592
+fps step: 187 fps step and policy inference: 186 fps total: 172 epoch: 78/200 frames: 630784
+fps step: 203 fps step and policy inference: 201 fps total: 186 epoch: 79/200 frames: 638976
+fps step: 196 fps step and policy inference: 194 fps total: 179 epoch: 80/200 frames: 647168
+fps step: 196 fps step and policy inference: 194 fps total: 179 epoch: 81/200 frames: 655360
+fps step: 196 fps step and policy inference: 195 fps total: 180 epoch: 82/200 frames: 663552
+fps step: 197 fps step and policy inference: 195 fps total: 180 epoch: 83/200 frames: 671744
+fps step: 198 fps step and policy inference: 196 fps total: 181 epoch: 84/200 frames: 679936
+fps step: 187 fps step and policy inference: 185 fps total: 172 epoch: 85/200 frames: 688128
+fps step: 199 fps step and policy inference: 198 fps total: 183 epoch: 86/200 frames: 696320
+fps step: 196 fps step and policy inference: 195 fps total: 179 epoch: 87/200 frames: 704512
+fps step: 197 fps step and policy inference: 195 fps total: 180 epoch: 88/200 frames: 712704
+fps step: 196 fps step and policy inference: 195 fps total: 179 epoch: 89/200 frames: 720896
+fps step: 196 fps step and policy inference: 194 fps total: 179 epoch: 90/200 frames: 729088
+fps step: 195 fps step and policy inference: 193 fps total: 178 epoch: 91/200 frames: 737280
+fps step: 192 fps step and policy inference: 190 fps total: 176 epoch: 92/200 frames: 745472
+fps step: 198 fps step and policy inference: 196 fps total: 182 epoch: 93/200 frames: 753664
+fps step: 196 fps step and policy inference: 195 fps total: 179 epoch: 94/200 frames: 761856
+saving next best rewards:  [344.16037]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 196 fps step and policy inference: 194 fps total: 179 epoch: 95/200 frames: 770048
+fps step: 197 fps step and policy inference: 195 fps total: 180 epoch: 96/200 frames: 778240
+saving next best rewards:  [348.40347]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 197 fps step and policy inference: 195 fps total: 180 epoch: 97/200 frames: 786432
+fps step: 197 fps step and policy inference: 196 fps total: 180 epoch: 98/200 frames: 794624
+saving next best rewards:  [353.23132]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 192 fps step and policy inference: 191 fps total: 176 epoch: 99/200 frames: 802816
+fps step: 198 fps step and policy inference: 197 fps total: 183 epoch: 100/200 frames: 811008
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_100_rew_346.65335.pth'
+fps step: 197 fps step and policy inference: 196 fps total: 180 epoch: 101/200 frames: 819200
+fps step: 198 fps step and policy inference: 196 fps total: 181 epoch: 102/200 frames: 827392
+fps step: 198 fps step and policy inference: 196 fps total: 181 epoch: 103/200 frames: 835584
+fps step: 198 fps step and policy inference: 196 fps total: 181 epoch: 104/200 frames: 843776
+fps step: 196 fps step and policy inference: 194 fps total: 179 epoch: 105/200 frames: 851968
+fps step: 192 fps step and policy inference: 190 fps total: 176 epoch: 106/200 frames: 860160
+fps step: 199 fps step and policy inference: 198 fps total: 183 epoch: 107/200 frames: 868352
+fps step: 196 fps step and policy inference: 194 fps total: 179 epoch: 108/200 frames: 876544
+fps step: 197 fps step and policy inference: 196 fps total: 180 epoch: 109/200 frames: 884736
+fps step: 197 fps step and policy inference: 196 fps total: 180 epoch: 110/200 frames: 892928
+fps step: 198 fps step and policy inference: 197 fps total: 181 epoch: 111/200 frames: 901120
+fps step: 198 fps step and policy inference: 197 fps total: 181 epoch: 112/200 frames: 909312
+fps step: 193 fps step and policy inference: 192 fps total: 177 epoch: 113/200 frames: 917504
+fps step: 199 fps step and policy inference: 197 fps total: 183 epoch: 114/200 frames: 925696
+fps step: 197 fps step and policy inference: 196 fps total: 180 epoch: 115/200 frames: 933888
+fps step: 197 fps step and policy inference: 196 fps total: 180 epoch: 116/200 frames: 942080
+fps step: 196 fps step and policy inference: 195 fps total: 179 epoch: 117/200 frames: 950272
+fps step: 196 fps step and policy inference: 194 fps total: 179 epoch: 118/200 frames: 958464
+fps step: 197 fps step and policy inference: 196 fps total: 180 epoch: 119/200 frames: 966656
+fps step: 194 fps step and policy inference: 193 fps total: 178 epoch: 120/200 frames: 974848
+fps step: 194 fps step and policy inference: 192 fps total: 179 epoch: 121/200 frames: 983040
+fps step: 197 fps step and policy inference: 195 fps total: 180 epoch: 122/200 frames: 991232
+fps step: 196 fps step and policy inference: 195 fps total: 179 epoch: 123/200 frames: 999424
+fps step: 195 fps step and policy inference: 194 fps total: 179 epoch: 124/200 frames: 1007616
+fps step: 196 fps step and policy inference: 195 fps total: 179 epoch: 125/200 frames: 1015808
+fps step: 196 fps step and policy inference: 195 fps total: 179 epoch: 126/200 frames: 1024000
+fps step: 195 fps step and policy inference: 194 fps total: 179 epoch: 127/200 frames: 1032192
+fps step: 197 fps step and policy inference: 195 fps total: 181 epoch: 128/200 frames: 1040384
+fps step: 196 fps step and policy inference: 194 fps total: 179 epoch: 129/200 frames: 1048576
+fps step: 196 fps step and policy inference: 194 fps total: 179 epoch: 130/200 frames: 1056768
+fps step: 196 fps step and policy inference: 194 fps total: 179 epoch: 131/200 frames: 1064960
+fps step: 196 fps step and policy inference: 194 fps total: 179 epoch: 132/200 frames: 1073152
+fps step: 197 fps step and policy inference: 196 fps total: 180 epoch: 133/200 frames: 1081344
+fps step: 194 fps step and policy inference: 192 fps total: 177 epoch: 134/200 frames: 1089536
+saving next best rewards:  [356.5464]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 194 fps step and policy inference: 193 fps total: 179 epoch: 135/200 frames: 1097728
+fps step: 196 fps step and policy inference: 194 fps total: 179 epoch: 136/200 frames: 1105920
+fps step: 194 fps step and policy inference: 193 fps total: 178 epoch: 137/200 frames: 1114112
+fps step: 195 fps step and policy inference: 193 fps total: 178 epoch: 138/200 frames: 1122304
+fps step: 194 fps step and policy inference: 192 fps total: 177 epoch: 139/200 frames: 1130496
+fps step: 194 fps step and policy inference: 192 fps total: 177 epoch: 140/200 frames: 1138688
+fps step: 192 fps step and policy inference: 190 fps total: 176 epoch: 141/200 frames: 1146880
+fps step: 194 fps step and policy inference: 192 fps total: 179 epoch: 142/200 frames: 1155072
+fps step: 195 fps step and policy inference: 193 fps total: 179 epoch: 143/200 frames: 1163264
+fps step: 193 fps step and policy inference: 192 fps total: 177 epoch: 144/200 frames: 1171456
+fps step: 194 fps step and policy inference: 193 fps total: 178 epoch: 145/200 frames: 1179648
+fps step: 194 fps step and policy inference: 192 fps total: 177 epoch: 146/200 frames: 1187840
+fps step: 193 fps step and policy inference: 192 fps total: 177 epoch: 147/200 frames: 1196032
+fps step: 192 fps step and policy inference: 191 fps total: 176 epoch: 148/200 frames: 1204224
+fps step: 185 fps step and policy inference: 183 fps total: 171 epoch: 149/200 frames: 1212416
+fps step: 200 fps step and policy inference: 198 fps total: 184 epoch: 150/200 frames: 1220608
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_150_rew_350.71515.pth'
+fps step: 193 fps step and policy inference: 192 fps total: 177 epoch: 151/200 frames: 1228800
+fps step: 194 fps step and policy inference: 192 fps total: 177 epoch: 152/200 frames: 1236992
+fps step: 194 fps step and policy inference: 192 fps total: 178 epoch: 153/200 frames: 1245184
+fps step: 194 fps step and policy inference: 193 fps total: 178 epoch: 154/200 frames: 1253376
+fps step: 194 fps step and policy inference: 193 fps total: 178 epoch: 155/200 frames: 1261568
+fps step: 186 fps step and policy inference: 185 fps total: 171 epoch: 156/200 frames: 1269760
+fps step: 201 fps step and policy inference: 200 fps total: 185 epoch: 157/200 frames: 1277952
+fps step: 193 fps step and policy inference: 191 fps total: 177 epoch: 158/200 frames: 1286144
+fps step: 193 fps step and policy inference: 192 fps total: 177 epoch: 159/200 frames: 1294336
+fps step: 195 fps step and policy inference: 193 fps total: 178 epoch: 160/200 frames: 1302528
+fps step: 195 fps step and policy inference: 193 fps total: 178 epoch: 161/200 frames: 1310720
+fps step: 194 fps step and policy inference: 192 fps total: 177 epoch: 162/200 frames: 1318912
+fps step: 188 fps step and policy inference: 187 fps total: 173 epoch: 163/200 frames: 1327104
+fps step: 199 fps step and policy inference: 198 fps total: 183 epoch: 164/200 frames: 1335296
+fps step: 192 fps step and policy inference: 191 fps total: 176 epoch: 165/200 frames: 1343488
+fps step: 193 fps step and policy inference: 191 fps total: 177 epoch: 166/200 frames: 1351680
+fps step: 194 fps step and policy inference: 192 fps total: 177 epoch: 167/200 frames: 1359872
+fps step: 196 fps step and policy inference: 195 fps total: 179 epoch: 168/200 frames: 1368064
+fps step: 194 fps step and policy inference: 193 fps total: 178 epoch: 169/200 frames: 1376256
+fps step: 189 fps step and policy inference: 188 fps total: 174 epoch: 170/200 frames: 1384448
+fps step: 197 fps step and policy inference: 195 fps total: 181 epoch: 171/200 frames: 1392640
+fps step: 195 fps step and policy inference: 194 fps total: 179 epoch: 172/200 frames: 1400832
+fps step: 194 fps step and policy inference: 193 fps total: 178 epoch: 173/200 frames: 1409024
+fps step: 196 fps step and policy inference: 195 fps total: 179 epoch: 174/200 frames: 1417216
+fps step: 197 fps step and policy inference: 195 fps total: 180 epoch: 175/200 frames: 1425408
+fps step: 193 fps step and policy inference: 192 fps total: 177 epoch: 176/200 frames: 1433600
+saving next best rewards:  [356.62512]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 188 fps step and policy inference: 187 fps total: 173 epoch: 177/200 frames: 1441792
+fps step: 196 fps step and policy inference: 195 fps total: 181 epoch: 178/200 frames: 1449984
+fps step: 194 fps step and policy inference: 193 fps total: 178 epoch: 179/200 frames: 1458176
+fps step: 194 fps step and policy inference: 192 fps total: 177 epoch: 180/200 frames: 1466368
+saving next best rewards:  [359.6721]
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth'
+fps step: 195 fps step and policy inference: 193 fps total: 178 epoch: 181/200 frames: 1474560
+fps step: 196 fps step and policy inference: 195 fps total: 179 epoch: 182/200 frames: 1482752
+fps step: 196 fps step and policy inference: 194 fps total: 179 epoch: 183/200 frames: 1490944
+fps step: 193 fps step and policy inference: 191 fps total: 177 epoch: 184/200 frames: 1499136
+fps step: 195 fps step and policy inference: 193 fps total: 180 epoch: 185/200 frames: 1507328
+fps step: 195 fps step and policy inference: 193 fps total: 178 epoch: 186/200 frames: 1515520
+fps step: 195 fps step and policy inference: 193 fps total: 178 epoch: 187/200 frames: 1523712
+fps step: 195 fps step and policy inference: 194 fps total: 179 epoch: 188/200 frames: 1531904
+fps step: 195 fps step and policy inference: 194 fps total: 179 epoch: 189/200 frames: 1540096
+fps step: 193 fps step and policy inference: 192 fps total: 177 epoch: 190/200 frames: 1548288
+fps step: 192 fps step and policy inference: 190 fps total: 176 epoch: 191/200 frames: 1556480
+fps step: 193 fps step and policy inference: 192 fps total: 178 epoch: 192/200 frames: 1564672
+fps step: 193 fps step and policy inference: 192 fps total: 177 epoch: 193/200 frames: 1572864
+fps step: 193 fps step and policy inference: 191 fps total: 177 epoch: 194/200 frames: 1581056
+fps step: 193 fps step and policy inference: 191 fps total: 176 epoch: 195/200 frames: 1589248
+fps step: 195 fps step and policy inference: 193 fps total: 178 epoch: 196/200 frames: 1597440
+fps step: 194 fps step and policy inference: 192 fps total: 177 epoch: 197/200 frames: 1605632
+fps step: 193 fps step and policy inference: 191 fps total: 176 epoch: 198/200 frames: 1613824
+fps step: 194 fps step and policy inference: 192 fps total: 178 epoch: 199/200 frames: 1622016
+fps step: 194 fps step and policy inference: 192 fps total: 178 epoch: 200/200 frames: 1630208
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew_350.4961.pth'
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth'
+MAX EPOCHS NUM!

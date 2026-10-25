@@ -1,0 +1,83 @@
+{
+  "manifest_version": 1,
+  "created_at": "2026-10-23T12:11:51.881066+00:00",
+  "workspace": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been",
+  "repository": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+  "run_name": "g2_peginsert_64env_seed0_baseline_rerun",
+  "preflight_passed": true,
+  "repository_head": "0efe7fc5f5ab96b15008e8195fa936755b182a84",
+  "isaac_lab_sha": "90b79bb2d44feb8d833f260f2bf37da3487180ba",
+  "isaac_lab_tag": "v2.1.1",
+  "training": {
+    "task": "Isaac-Factory-PegInsert-Direct-v0",
+    "num_envs": 64,
+    "seed": 0,
+    "max_iterations": 200,
+    "expected_epochs": 200,
+    "horizon_length": 128,
+    "transitions_per_epoch": 8192,
+    "expected_total_transitions": 1638400,
+    "fresh_initialization": true,
+    "checkpoint_cli_omitted": true,
+    "save_frequency": 50,
+    "engineering_overrides": [
+      "full_experiment_name=g2_peginsert_64env_seed0_baseline_rerun",
+      "agent.params.config.save_frequency=50"
+    ],
+    "ppo_changes": []
+  },
+  "evaluation": {
+    "seeds": [
+      1001,
+      1002,
+      1003
+    ],
+    "num_envs": 32,
+    "milestones": [
+      50,
+      100,
+      150,
+      200
+    ],
+    "episodes_per_env": {
+      "50": 1,
+      "100": 1,
+      "150": 1,
+      "200": 3
+    },
+    "deterministic": true,
+    "target_episodes": {
+      "50": 96,
+      "100": 96,
+      "150": 96,
+      "200": 288
+    }
+  },
+  "monitor_root": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun",
+  "preflight_evidence": {
+    "static_audit": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/preflight/static_audit.json",
+    "gpu_gate": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_preflight/gpu/result.json",
+    "factory_probe64": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_preflight/factory64/result.json",
+    "observer64": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_preflight/observer64/result.json",
+    "known_checkpoint_eval": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_preflight/known_checkpoint/metrics.json",
+    "unit_test_count": 34
+  },
+  "frozen_script_sha256": {
+    "scripts/run_sim.sh": "10d11ff9b3d44c252c895ac3ca6ca2aa5301c78cbcacd1b5dc01702a494409d8",
+    "scripts/python_entry.py": "eebcdb3087adb3a55c4cf8835383dc1ac4168d802c4b91327aafcc32c52c5abb",
+    "scripts/g2_training_observer.py": "953b5cfd20615a5d8f6b9a200ce03124828a39e6da8f8423a4989c0dc25e3d6a",
+    "scripts/run_bounded.py": "8a366dfcd67b12caa60ae692d05ba6c3456ed93a80769126fb0138764091bd1b",
+    "scripts/run_g2_pipeline.py": "1a6dc7e5cd3023545ff62fa8b0caae58c60558aa8b56d0f085336137f0d3ef5f"
+  },
+  "frozen_evaluation_sha256": {
+    "scripts/evaluate_checkpoint.py": "b903b4114444d3a19176332c3239b8f9fe2bd0686b27ed8a4597fc42a4d3555a",
+    "scripts/success_metrics.py": "bd3233876429dcce64bee52be11b9f03a69b1e35279b4e285dab4e81151bbfa2",
+    "scripts/evaluation_reporting.py": "8cfb68a200a9f81b430444e94b7c2c7ae54c7b4e0d39feb4a68625efc3514dcd"
+  },
+  "notes": [
+    "Fresh rerun after a host-detached launch ended before child startup; no epoch or checkpoint was produced by the abandoned attempt.",
+    "Read-only observer is installed via FACTORY_G2_AUDIT_OUTPUT and records timing/optimizer/AMP counters without changing training math.",
+    "GPU guard samples NVML at 10 Hz and terminates only the launched process group after three consecutive samples below 1024 MiB free.",
+    "Checkpoint files and raw logs remain outside Git."
+  ]
+}

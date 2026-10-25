@@ -1,0 +1,859 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-10-25T04:53:21.090238+00:00",
+  "scope": "All retained files under primary G2 logs, dynamic preflight logs, and official completed training directory. Supplemental playback is separately inventoried by its own evidence and is not primary evaluation.",
+  "workspace": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been",
+  "storage_note": "Large checkpoints and complete raw GPU/TensorBoard logs remain at these local paths outside Git. Paths do not imply remote hosting or public availability. Streaming SHA256 used 1 MiB chunks; no checkpoint was loaded for this inventory.",
+  "file_count": 102,
+  "total_bytes": 1285933873,
+  "checkpoint_count": 6,
+  "all_checkpoint_hashes_match_completion_inventory": true,
+  "all_existing_repository_copies_identical": true,
+  "files": [
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline/status.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline/status.json",
+      "bytes": 1333,
+      "sha256": "654f9b1d088815aad3453c58a8556dcbc5892c2b1f274f3052a7b33862bab9e4",
+      "kind": "raw_log_or_status"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/checkpoint_inspection_epoch100.stderr.txt",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/checkpoint_inspection_epoch100.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "raw_log_or_status"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/checkpoint_inspection_epoch150.stderr.txt",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/checkpoint_inspection_epoch150.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "raw_log_or_status"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/checkpoint_inspection_epoch200.stderr.txt",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/checkpoint_inspection_epoch200.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "raw_log_or_status"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/checkpoint_inspection_epoch50.stderr.txt",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/checkpoint_inspection_epoch50.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "raw_log_or_status"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/checkpoint_inventory.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/checkpoint_inventory.json",
+      "bytes": 1902,
+      "sha256": "f888ad76137ad68845a2663f6e5081b42d952938710245052cdcbf836b71329b",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/checkpoint_inventory.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/continuation_status.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/continuation_status.json",
+      "bytes": 12878,
+      "sha256": "7e2f0750b761ff1ca02a73b88b6c5ea8156110fabba08ebaaeca160fda8c2615",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/continuation_status.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1001/console.txt",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1001/console.txt",
+      "bytes": 7213,
+      "sha256": "0816f9248b996544ea0cfb49a23ae756cbe5a82fb22f4368aaf6e5798721d373",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch050/seed1001/console.txt",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1001/gpu.csv",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1001/gpu.csv",
+      "bytes": 22926,
+      "sha256": "1b56bc898913144263dbdbc4776f446fb739728ed278a245b2bb2a87ebbd0d57",
+      "kind": "gpu_samples"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1001/metrics.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1001/metrics.json",
+      "bytes": 21614,
+      "sha256": "1975993d699ce38452f4fbc4071d53f9941a4168f52b93be88234620c7bf168f",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch050/seed1001/metrics.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1001/metrics.json.partial.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1001/metrics.json.partial.json",
+      "bytes": 21614,
+      "sha256": "1975993d699ce38452f4fbc4071d53f9941a4168f52b93be88234620c7bf168f",
+      "kind": "raw_log_or_status"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1001/result.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1001/result.json",
+      "bytes": 1936,
+      "sha256": "92ff7175e1bd6c59009e6dc4d57be4bbaa8e361337deeafc4e7f236c96411ea6",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch050/seed1001/result.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1002/console.txt",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1002/console.txt",
+      "bytes": 7213,
+      "sha256": "dd87b5142e5f1d1cc6eda2a333c358b17bd9738ed78d9d99e6cd681cad1bca60",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch050/seed1002/console.txt",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1002/gpu.csv",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1002/gpu.csv",
+      "bytes": 22973,
+      "sha256": "f97bd406a85c1b30532e958649afabada901fd667c9babf65ae14bf3facc2c35",
+      "kind": "gpu_samples"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1002/metrics.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1002/metrics.json",
+      "bytes": 21637,
+      "sha256": "95ab663eea81a722590503f4ba797475cff264322552c962fee7558740e24fcd",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch050/seed1002/metrics.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1002/metrics.json.partial.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1002/metrics.json.partial.json",
+      "bytes": 21637,
+      "sha256": "95ab663eea81a722590503f4ba797475cff264322552c962fee7558740e24fcd",
+      "kind": "raw_log_or_status"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1002/result.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1002/result.json",
+      "bytes": 1935,
+      "sha256": "40b76f0b14e28aa764e138bed19e654e25e2b8af5fe645a779dd237736545bd5",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch050/seed1002/result.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1003/console.txt",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1003/console.txt",
+      "bytes": 7213,
+      "sha256": "fc3cfcf8b8d3208482b5a532c1e26cedd61af393a843fca3906abcfa9eca103e",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch050/seed1003/console.txt",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1003/gpu.csv",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1003/gpu.csv",
+      "bytes": 22789,
+      "sha256": "01a86960f0ccdb134b6b07a7daec1005d24e4e123eb94e99f3c2ca3043309855",
+      "kind": "gpu_samples"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1003/metrics.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1003/metrics.json",
+      "bytes": 21526,
+      "sha256": "165bc554c86985fa14ddeed8cbdd70a9bee28d7052578f80cbf73843c0eab706",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch050/seed1003/metrics.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1003/metrics.json.partial.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1003/metrics.json.partial.json",
+      "bytes": 21526,
+      "sha256": "165bc554c86985fa14ddeed8cbdd70a9bee28d7052578f80cbf73843c0eab706",
+      "kind": "raw_log_or_status"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1003/result.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch050/seed1003/result.json",
+      "bytes": 1935,
+      "sha256": "34595de30f98f34939fe724c80b75dfba44104ddbe910ec17ed894a351003e4c",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch050/seed1003/result.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1001/console.txt",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1001/console.txt",
+      "bytes": 7214,
+      "sha256": "412ac31bf7ef699782c250384e1fce9a4082e9969d2b90af1b082c2f3116e9cc",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch100/seed1001/console.txt",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1001/gpu.csv",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1001/gpu.csv",
+      "bytes": 22969,
+      "sha256": "0fd23f2f0d11361885da0fbad0096a523dc7a7ba7c14a714c0f76ed732b3a8c6",
+      "kind": "gpu_samples"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1001/metrics.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1001/metrics.json",
+      "bytes": 21652,
+      "sha256": "b04522695e0192f3e7f0c361588ae91d42b6086444bfbc2b17f8a94470703070",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch100/seed1001/metrics.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1001/metrics.json.partial.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1001/metrics.json.partial.json",
+      "bytes": 21652,
+      "sha256": "b04522695e0192f3e7f0c361588ae91d42b6086444bfbc2b17f8a94470703070",
+      "kind": "raw_log_or_status"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1001/result.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1001/result.json",
+      "bytes": 1934,
+      "sha256": "b28f99fd7ac0241f83c08e36d76066bc6d192f5d0ea636ab36cdb11bee598763",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch100/seed1001/result.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1002/console.txt",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1002/console.txt",
+      "bytes": 7214,
+      "sha256": "7b3b9d4bc2878fe18512cf506c9e68ef893e23aff533003c3156cd7423f718e3",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch100/seed1002/console.txt",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1002/gpu.csv",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1002/gpu.csv",
+      "bytes": 23059,
+      "sha256": "c0bcf969b67a9ed97255a2e4de0e91f2f13afad0d67e5b59fdb5069bc2866d7b",
+      "kind": "gpu_samples"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1002/metrics.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1002/metrics.json",
+      "bytes": 21677,
+      "sha256": "f7c6108df5d0ebe2ca501f0ff9791ea34c5514559e89c1fd286e448bac4cfbff",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch100/seed1002/metrics.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1002/metrics.json.partial.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1002/metrics.json.partial.json",
+      "bytes": 21677,
+      "sha256": "f7c6108df5d0ebe2ca501f0ff9791ea34c5514559e89c1fd286e448bac4cfbff",
+      "kind": "raw_log_or_status"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1002/result.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1002/result.json",
+      "bytes": 1937,
+      "sha256": "4fd1ed8aa930a10acd9a8bf188db78e036548ec80165cd989e92eb8a3c3e717f",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch100/seed1002/result.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1003/console.txt",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1003/console.txt",
+      "bytes": 7214,
+      "sha256": "dde881d43baf360ad1390aa74102362c16322813f32865d55d1008ae1557806c",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch100/seed1003/console.txt",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1003/gpu.csv",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1003/gpu.csv",
+      "bytes": 22920,
+      "sha256": "72ff308b139e886bdcc9d1496405b78ef1fe52e261009e33f8e11caf5ded656d",
+      "kind": "gpu_samples"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1003/metrics.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1003/metrics.json",
+      "bytes": 21655,
+      "sha256": "fc451e686c58dd87a11ffe05c362d7f3fcc8edd445d59d2de119380c3d2103c7",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch100/seed1003/metrics.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1003/metrics.json.partial.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1003/metrics.json.partial.json",
+      "bytes": 21655,
+      "sha256": "fc451e686c58dd87a11ffe05c362d7f3fcc8edd445d59d2de119380c3d2103c7",
+      "kind": "raw_log_or_status"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1003/result.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch100/seed1003/result.json",
+      "bytes": 1936,
+      "sha256": "b1d4822ad09bd7bb56d7938d236e3ac819bd830a13db690d51ae8f7aad1c96d7",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch100/seed1003/result.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1001/console.txt",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1001/console.txt",
+      "bytes": 7214,
+      "sha256": "dc7de8d8650d5950ec3206d5d54380abc35c2e0a23acebfa562eacdd65c2ae32",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch150/seed1001/console.txt",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1001/gpu.csv",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1001/gpu.csv",
+      "bytes": 22698,
+      "sha256": "6bfab9e628cec9374b49bfa56f7c1c884119c37f39b4375fbabf9ef156141d0d",
+      "kind": "gpu_samples"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1001/metrics.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1001/metrics.json",
+      "bytes": 21664,
+      "sha256": "1287a0a5ee8f934fd90e0420a66055490c84dee569d534e08485e92c80128061",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch150/seed1001/metrics.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1001/metrics.json.partial.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1001/metrics.json.partial.json",
+      "bytes": 21664,
+      "sha256": "1287a0a5ee8f934fd90e0420a66055490c84dee569d534e08485e92c80128061",
+      "kind": "raw_log_or_status"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1001/result.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1001/result.json",
+      "bytes": 1935,
+      "sha256": "814b852f4c1ec9522938647be3413f9a4f79250d2f071513856b8eeaab3bfeb3",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch150/seed1001/result.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1002/console.txt",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1002/console.txt",
+      "bytes": 7214,
+      "sha256": "6c86cf4949536d5b62fd4e23b43c897e69dadcc897e3f9d7d43af6c27600bee5",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch150/seed1002/console.txt",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1002/gpu.csv",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1002/gpu.csv",
+      "bytes": 23477,
+      "sha256": "87ab871affef9e64d9b3f331e3bfd83e7f99d7e918fe11c8d4512d4bf52d07a1",
+      "kind": "gpu_samples"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1002/metrics.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1002/metrics.json",
+      "bytes": 21624,
+      "sha256": "40d26ff0a8d152d0593050464b118efc3abe1f99da0209132f7d158487f75a52",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch150/seed1002/metrics.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1002/metrics.json.partial.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1002/metrics.json.partial.json",
+      "bytes": 21624,
+      "sha256": "40d26ff0a8d152d0593050464b118efc3abe1f99da0209132f7d158487f75a52",
+      "kind": "raw_log_or_status"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1002/result.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1002/result.json",
+      "bytes": 1936,
+      "sha256": "05bb1cf25f73ef8788b33ac388f4741e24e524ae133ce72d2cd2bf0ad4e10aee",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch150/seed1002/result.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1003/console.txt",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1003/console.txt",
+      "bytes": 7214,
+      "sha256": "984fd6fde1ca65d74073e716c36b0fd52731b4612473c5da80780adff2e51fe7",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch150/seed1003/console.txt",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1003/gpu.csv",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1003/gpu.csv",
+      "bytes": 23466,
+      "sha256": "28776c7fbcde585bcbb728c84e483f77f5945c890ff3055f11999346fe62259c",
+      "kind": "gpu_samples"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1003/metrics.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1003/metrics.json",
+      "bytes": 21534,
+      "sha256": "98b9e37b201e79552a714fb6bad14be4e68fa577a90778c766052ce02c28dbcd",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch150/seed1003/metrics.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1003/metrics.json.partial.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1003/metrics.json.partial.json",
+      "bytes": 21534,
+      "sha256": "98b9e37b201e79552a714fb6bad14be4e68fa577a90778c766052ce02c28dbcd",
+      "kind": "raw_log_or_status"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1003/result.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch150/seed1003/result.json",
+      "bytes": 1936,
+      "sha256": "98de0e7b09f4a397b5836937a1cc6f6fd183bbb9f64acb3a5a831cd4345513ab",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch150/seed1003/result.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1001/console.txt",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1001/console.txt",
+      "bytes": 7215,
+      "sha256": "3591aee1548e12297adddcb07e2ed0ac9ea149e97ab8d28b558ac196871f7a56",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch200/seed1001/console.txt",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1001/gpu.csv",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1001/gpu.csv",
+      "bytes": 56832,
+      "sha256": "564e97354722d2f0039871a2af0242fb33218b173592b8d5f431b4912aaaa7b0",
+      "kind": "gpu_samples"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1001/metrics.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1001/metrics.json",
+      "bytes": 40819,
+      "sha256": "0a6ab77092f50b5d3fbeb9c1220940e90b18df56122d4c78362e761fba198cea",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch200/seed1001/metrics.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1001/metrics.json.partial.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1001/metrics.json.partial.json",
+      "bytes": 40819,
+      "sha256": "0a6ab77092f50b5d3fbeb9c1220940e90b18df56122d4c78362e761fba198cea",
+      "kind": "raw_log_or_status"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1001/result.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1001/result.json",
+      "bytes": 1939,
+      "sha256": "68d95f96495303ca853baaf0f14938a2680559675e10dc4da7df84b474907cbb",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch200/seed1001/result.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1002/console.txt",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1002/console.txt",
+      "bytes": 7215,
+      "sha256": "be6bd919a2f0af0ee75328840d3ae44cf5b55069ea8ce08365f77e3d650ea92d",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch200/seed1002/console.txt",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1002/gpu.csv",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1002/gpu.csv",
+      "bytes": 57817,
+      "sha256": "778b5b671985d4dec421643d18258ee975cc8aff1becc25213ae00d5b7b60d5f",
+      "kind": "gpu_samples"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1002/metrics.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1002/metrics.json",
+      "bytes": 40925,
+      "sha256": "1c1fa341411611232c99cbe4900fd7883cac5465ff542c1b8fa8fb4e615fa196",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch200/seed1002/metrics.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1002/metrics.json.partial.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1002/metrics.json.partial.json",
+      "bytes": 40925,
+      "sha256": "1c1fa341411611232c99cbe4900fd7883cac5465ff542c1b8fa8fb4e615fa196",
+      "kind": "raw_log_or_status"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1002/result.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1002/result.json",
+      "bytes": 1939,
+      "sha256": "9d1226ab5ece5b4bfef5ef62d02f28d1e4da2201c3e318dff64fc0d927f1296a",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch200/seed1002/result.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1003/console.txt",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1003/console.txt",
+      "bytes": 7215,
+      "sha256": "2110cf50568d77332e9d44499d7cd5dc53cf0ba4247a72966e5fb1ceb4fc9992",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch200/seed1003/console.txt",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1003/gpu.csv",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1003/gpu.csv",
+      "bytes": 57207,
+      "sha256": "74ff398a57ffdeaee763316ff2d486177f0ed5fb88c3468f7c7cda5f5d898add",
+      "kind": "gpu_samples"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1003/metrics.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1003/metrics.json",
+      "bytes": 40916,
+      "sha256": "27daef215badafd17bf34dd412dc3b5fcd77fdbcb23aaf194ce15c3f1764b4e8",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch200/seed1003/metrics.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1003/metrics.json.partial.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1003/metrics.json.partial.json",
+      "bytes": 40916,
+      "sha256": "27daef215badafd17bf34dd412dc3b5fcd77fdbcb23aaf194ce15c3f1764b4e8",
+      "kind": "raw_log_or_status"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1003/result.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/evaluation/epoch200/seed1003/result.json",
+      "bytes": 1939,
+      "sha256": "60e8542426adb32d650790620cb6cd1f48f2cfa457ad06ddf9ef4af62263edc9",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/evaluation/epoch200/seed1003/result.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/reattached_guard/gpu.csv",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/reattached_guard/gpu.csv",
+      "bytes": 6278344,
+      "sha256": "58920d7163ab2459600f629b54a438f25b245e6367246a1ed45da336b23f405f",
+      "kind": "gpu_samples"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/reattached_guard/identity.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/reattached_guard/identity.json",
+      "bytes": 339,
+      "sha256": "5a9be3b261acd847a898bd54cfb6ad67cb4bfe82b78e07b1fb635cbbfa92d0a3",
+      "kind": "raw_log_or_status"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/reattached_guard/result.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/reattached_guard/result.json",
+      "bytes": 576,
+      "sha256": "b0cc45bbb900daeb2abd36941f86889d59fc985ca7176107cb4a22be26017e21",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/training/reattached_guard_result.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/selected_checkpoints.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/selected_checkpoints.json",
+      "bytes": 5365,
+      "sha256": "41fd885a094c40bf52694ace44f332e3a0ac96a6e8e8a05a15265e36688fbf50",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/selected_checkpoints.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/status.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/status.json",
+      "bytes": 1351,
+      "sha256": "659d6d6e1fc85581b0c815f11a7cf777e226a711119b7190704f53789d3620f8",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/orphaned_pipeline_status.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/train/console.txt",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/train/console.txt",
+      "bytes": 35826,
+      "sha256": "d0cf1a9b2845b83b40e23d6db837985f16acb9b17a91d279047f1e0078c8d03e",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/training/console.txt",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/train/gpu.csv",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/train/gpu.csv",
+      "bytes": 25299,
+      "sha256": "280e494dcaed7f15541a07ce2b5a0a7e8a50067841e918f3addca4a1948aec0d",
+      "kind": "gpu_samples"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/train/training_audit.json",
+      "relative_to_workspace": "work/logs/g2/g2_peginsert_64env_seed0_baseline_rerun/train/training_audit.json",
+      "bytes": 154879,
+      "sha256": "e39b03ad1d09fa3dbee07e585f3318c25d7f5e4ce35675d2754db958d910c890",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/training/training_audit.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2/pipeline.log",
+      "relative_to_workspace": "work/logs/g2/pipeline.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "raw_log_or_status"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_preflight/factory64/console.txt",
+      "relative_to_workspace": "work/logs/g2_preflight/factory64/console.txt",
+      "bytes": 6962,
+      "sha256": "3ff5e873f57a98e77d36f5e34d33cf7d1c305600368344a1d4f59a550f970d30",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/preflight/factory64/console.txt",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_preflight/factory64/gpu.csv",
+      "relative_to_workspace": "work/logs/g2_preflight/factory64/gpu.csv",
+      "bytes": 12721,
+      "sha256": "c3f5b7c6999c5d0e000acb571fe56f7fe152c8e8a869a430ff67d3fc4be34af0",
+      "kind": "gpu_samples",
+      "repository_copy": "evidence/g2/preflight/factory64/gpu.csv",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_preflight/factory64/result.json",
+      "relative_to_workspace": "work/logs/g2_preflight/factory64/result.json",
+      "bytes": 1334,
+      "sha256": "2c030eac74a2e58560cde744b58532fb5710d06e772d26e314882c9cbfe75f89",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/preflight/factory64/result.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_preflight/gpu/console.txt",
+      "relative_to_workspace": "work/logs/g2_preflight/gpu/console.txt",
+      "bytes": 39163,
+      "sha256": "ce0490eadec78aae38d7e4e61446f263e65c64f762842ca8ca8d5298d72dc115",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/preflight/gpu/console.txt",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_preflight/gpu/gpu.csv",
+      "relative_to_workspace": "work/logs/g2_preflight/gpu/gpu.csv",
+      "bytes": 161223,
+      "sha256": "8d8a5f72a73abb2da06a0abc4be513f07ea213487b06d79d9ad9060fea5f776b",
+      "kind": "gpu_samples",
+      "repository_copy": "evidence/g2/preflight/gpu/gpu.csv",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_preflight/gpu/result.json",
+      "relative_to_workspace": "work/logs/g2_preflight/gpu/result.json",
+      "bytes": 1220,
+      "sha256": "fccad92bf0928c7975c665ac04e58ac69bfd83d36f2dfbc6a44af461c42c415a",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/preflight/gpu/result.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_preflight/known_checkpoint/console.txt",
+      "relative_to_workspace": "work/logs/g2_preflight/known_checkpoint/console.txt",
+      "bytes": 7146,
+      "sha256": "c27821f686ba239c4ae30afb1b2418f8c3d505d072da241d1b18994add8b214c",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/preflight/known_checkpoint/console.txt",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_preflight/known_checkpoint/gpu.csv",
+      "relative_to_workspace": "work/logs/g2_preflight/known_checkpoint/gpu.csv",
+      "bytes": 23011,
+      "sha256": "f003fa9082cdcf33014983dd54c53483f9901edbb659e178ecf1470ec5ba26a8",
+      "kind": "gpu_samples",
+      "repository_copy": "evidence/g2/preflight/known_checkpoint/gpu.csv",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_preflight/known_checkpoint/metrics.json",
+      "relative_to_workspace": "work/logs/g2_preflight/known_checkpoint/metrics.json",
+      "bytes": 3895,
+      "sha256": "4868cc7a9409b5d0a3a9f46b2c28c31c70bde89107aceb5ca1618343b70a3ad4",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/preflight/known_checkpoint/metrics.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_preflight/known_checkpoint/metrics.json.partial.json",
+      "relative_to_workspace": "work/logs/g2_preflight/known_checkpoint/metrics.json.partial.json",
+      "bytes": 3895,
+      "sha256": "4868cc7a9409b5d0a3a9f46b2c28c31c70bde89107aceb5ca1618343b70a3ad4",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/preflight/known_checkpoint/metrics.json.partial.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_preflight/known_checkpoint/result.json",
+      "relative_to_workspace": "work/logs/g2_preflight/known_checkpoint/result.json",
+      "bytes": 1872,
+      "sha256": "bee0c01dd4b5b1dc935244444a73767745114a944f251fc4a3148f62cd2d2952",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/preflight/known_checkpoint/result.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_preflight/observer64/console.txt",
+      "relative_to_workspace": "work/logs/g2_preflight/observer64/console.txt",
+      "bytes": 7876,
+      "sha256": "8e7942f75b0332a37a659ad0d6f7639240b9f8462d648066c77041fd0b84d93c",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/preflight/observer64/console.txt",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_preflight/observer64/gpu.csv",
+      "relative_to_workspace": "work/logs/g2_preflight/observer64/gpu.csv",
+      "bytes": 22338,
+      "sha256": "7d2a8a5279f82c108f6f2a7e6d9943592f326b7ba3415adc681ec585889c61e5",
+      "kind": "gpu_samples",
+      "repository_copy": "evidence/g2/preflight/observer64/gpu.csv",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_preflight/observer64/result.json",
+      "relative_to_workspace": "work/logs/g2_preflight/observer64/result.json",
+      "bytes": 1556,
+      "sha256": "cd66ac5d19eb1885c473e03fc153a8bedee175eda73ad6f0ce274fe03f5ba060",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/preflight/observer64/result.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_preflight/observer64/training_audit.json",
+      "relative_to_workspace": "work/logs/g2_preflight/observer64/training_audit.json",
+      "bytes": 5396,
+      "sha256": "a0fe69fdf3f8deaa2a43571799477d9c2cbdc3e1a94ad985d2883e5dc37ff7ae",
+      "kind": "raw_log_or_status",
+      "repository_copy": "evidence/g2/preflight/observer64/training_audit.json",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth",
+      "relative_to_workspace": "work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/Factory.pth",
+      "bytes": 212885999,
+      "sha256": "8693a17b254d79016c79e0b56d91cd4d72301bc56e8e42747148ac938b4b80a1",
+      "kind": "checkpoint",
+      "matches_completion_inventory": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_100_rew_346.65335.pth",
+      "relative_to_workspace": "work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_100_rew_346.65335.pth",
+      "bytes": 212889115,
+      "sha256": "fd5b63985441f2286b5700e57edbd5d74668492e2d7936fb1e250a76e272114f",
+      "kind": "checkpoint",
+      "matches_completion_inventory": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_150_rew_350.71515.pth",
+      "relative_to_workspace": "work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_150_rew_350.71515.pth",
+      "bytes": 212889115,
+      "sha256": "b24fa2215b04466bd42f4b3374e1cce2f9c6a01cf633ed59295ce995c6b01487",
+      "kind": "checkpoint",
+      "matches_completion_inventory": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew_350.4961.pth",
+      "relative_to_workspace": "work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew_350.4961.pth",
+      "bytes": 212889005,
+      "sha256": "f90b3f1e320bad5b818923225bbd391dd6826f3c9e956f17555759b1b283b3c3",
+      "kind": "checkpoint",
+      "matches_completion_inventory": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+      "relative_to_workspace": "work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+      "bytes": 212889225,
+      "sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+      "kind": "checkpoint",
+      "matches_completion_inventory": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_50_rew_301.46692.pth",
+      "relative_to_workspace": "work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_50_rew_301.46692.pth",
+      "bytes": 212889005,
+      "sha256": "fdc0637d49844bc8463a9da3428039604fbd0e51e752eb28a00a91b5e6296cca",
+      "kind": "checkpoint",
+      "matches_completion_inventory": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/params/agent.pkl",
+      "relative_to_workspace": "work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/params/agent.pkl",
+      "bytes": 1954,
+      "sha256": "de5aa0a1ad533134a2e7e10e38274fd5681956e17888d0e8781e9990510936a8",
+      "kind": "resolved_config"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/params/agent.yaml",
+      "relative_to_workspace": "work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/params/agent.yaml",
+      "bytes": 2445,
+      "sha256": "e72507a2984840f9620c6210a882842341882a2ef1f031860a78978942d36ace",
+      "kind": "resolved_config",
+      "repository_copy": "configs/resolved/g2_peginsert_64env_seed0_baseline_rerun/agent.yaml",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/params/env.pkl",
+      "relative_to_workspace": "work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/params/env.pkl",
+      "bytes": 8945,
+      "sha256": "c24a6420fb07dc44f6ac00476cb5a96aab53387b427c37d60547e554612440fb",
+      "kind": "resolved_config"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/params/env.yaml",
+      "relative_to_workspace": "work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/params/env.yaml",
+      "bytes": 12078,
+      "sha256": "9b07adc49a4ec46b41e7ae789510e47f5c20dd001ae32b22e18b5f7cc29bc876",
+      "kind": "resolved_config",
+      "repository_copy": "configs/resolved/g2_peginsert_64env_seed0_baseline_rerun/env.yaml",
+      "repository_copy_identical": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/summaries/events.out.tfevents.1792757532.ubuntu2004",
+      "relative_to_workspace": "work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/summaries/events.out.tfevents.1792757532.ubuntu2004",
+      "bytes": 635863,
+      "sha256": "be1f3e256fbeeb887e10403f3d4091e615762d3e0263fe8d1ab2d0356864cc90",
+      "kind": "tensorboard_event"
+    }
+  ],
+  "missing_or_unavailable": [
+    "Initial launch manifest was overwritten before retention; only its hash and initial status survive.",
+    "Original training monitor result.json and child OS exit code were never recovered.",
+    "GPU samples for approximately 123 seconds between monitors do not exist."
+  ]
+}

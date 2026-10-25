@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "verified_utc": "2026-10-25T04:58:08.815927+00:00",
+  "base_commit": "0efe7fc5f5ab96b15008e8195fa936755b182a84",
+  "checks": {
+    "python_script_syntax": true,
+    "strict_json_file_count": 61,
+    "all_local_delivery_links_resolve": true,
+    "analysis_matches_current_script_hash": true,
+    "no_analysis_errors": true,
+    "epochs_1_through_200_once_each": true,
+    "transitions": 1638400,
+    "primary_episodes_per_milestone": [
+      96,
+      96,
+      96,
+      288
+    ],
+    "primary_ever_success_counts": [
+      69,
+      81,
+      92,
+      280
+    ],
+    "independent_rendered_completed_episode": true,
+    "supplemental_geometry_steps": 149,
+    "screenshot_state_invariance": true,
+    "playback_script_matches_validation": true
+  },
+  "tests": {
+    "result": "42 passed in 14.87s",
+    "source": "unit_tests_final.txt",
+    "note": "Actual earlier complete CPU pytest suite output; no repeated test claim."
+  },
+  "disclosed_limits": [
+    "Original training exit code unavailable",
+    "Approximately122.747seconds without NVML/guard",
+    "TensorBoard epoch200 scalar tail missing",
+    "One training seed; episode-binomial CI does not quantify training-seed variation"
+  ],
+  "push": "Not yet attempted at verification generation; final commit/remote receipt delivered separately to avoid self-referential commit hash."
+}

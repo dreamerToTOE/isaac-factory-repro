@@ -23,7 +23,7 @@ class PreResetSuccessCapture:
     Tensor-to-CPU converter. The original method's return value is unchanged.
     """
 
-    def __init__(self, env, convert: Callable = copy.deepcopy):
+    def __init__(self, env, convert: Callable = copy.deepcopy, snapshot: Callable | None = None):
         self.env = env
         self.convert = convert
         self.original = env._get_curr_successes
@@ -31,16 +31,20 @@ class PreResetSuccessCapture:
         self.check_rot = env.cfg_task.name == "nut_thread"
         self.pending: list[dict] = []
         self.captures_consumed = 0
+        self.snapshot = snapshot
         tap = self
 
         def instrumented(instance, success_threshold, check_rot=False):
             result = tap.original(success_threshold=success_threshold, check_rot=check_rot)
             if float(success_threshold) == tap.threshold and bool(check_rot) == tap.check_rot:
-                tap.pending.append({
+                record = {
                     "success": tap.convert(result),
                     "step_numbers": [int(x) for x in tap.convert(instance.episode_length_buf)],
                     "check_rot": bool(check_rot),
-                })
+                }
+                if tap.snapshot is not None:
+                    record["geometric_snapshots"] = tap.snapshot(instance, record)
+                tap.pending.append(record)
             return result
 
         self.instrumented = MethodType(instrumented, env)

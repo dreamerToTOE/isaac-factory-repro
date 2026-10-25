@@ -1,0 +1,9 @@
+{
+  "status": "checkpoint_restore_failed_before_rollout",
+  "raw_console": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_playback/seed1001_guard/console.txt",
+  "cause": "Initial launcher omitted the existing D001 TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1 environment setting. RL-Games torch.load rejected the local checkpoint numpy scalar under PyTorch 2.7 default weights_only=True.",
+  "termination": "Only this playback child PID 9909 received SIGTERM after repeated restore errors. Kit exited 0; guard return code alone is not evidence of completed playback.",
+  "completed_episodes": 0,
+  "primary_metrics_affected": false,
+  "retry": "Same checkpoint and seed with D001 compatibility environment restored; unique seed1001_retry output directory."
+}
