@@ -1,0 +1,16 @@
+{
+  "active_training_processes": false,
+  "compute_process": "gnome-remote-desktop pid2882 157MiB",
+  "criterion_idle_min_free_MiB": 5500,
+  "idle_max_reserved_MiB": 375.0,
+  "idle_min_free_MiB": 5730.0,
+  "idle_peak_used_MiB": 2088.0,
+  "inventory_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/inventory_idle_60s/inventory.json",
+  "inventory_sha256": "23148a5077d61c39c6d44a78b2d258177e71c7343c97c6c0dc84347ca9845887",
+  "no_process_termination": true,
+  "phase_a_passed": true,
+  "recorded_utc": "2026-10-25T13:22:14.325604+00:00",
+  "sample_count": 600,
+  "schema_version": "g3c_r2_phase_a_v1",
+  "starting_commit": "32f784b43011470615dec251984aca26716a4b86"
+}
