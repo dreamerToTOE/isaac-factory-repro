@@ -1,0 +1,326 @@
+{
+  "artifacts": [
+    {
+      "bytes": 266,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/supervisor_submission.json",
+      "sha256": "bbdfe01512676e3782f6d5582bef77f92424cddf5a2ea1157c6610afd48124a5"
+    },
+    {
+      "bytes": 5983,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/launch.json",
+      "sha256": "3540be1b02b755edfe401d691c2ae6d0d7e7c085ec8585f008b4c857b2848589"
+    },
+    {
+      "bytes": 257,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/guard_submission.json",
+      "sha256": "ee340c9b5e9c462e92cb370b0d059b6825887483495f0b410fad0081ad4c8c16"
+    },
+    {
+      "bytes": 340,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/supervisor/exec_release.json",
+      "sha256": "1f3170e273ccc7bedb49efef34a9a6c3e7c7b97dbf3dcebae734a8e8c0262136"
+    },
+    {
+      "bytes": 2079,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/supervisor/status.json",
+      "sha256": "daf379c802695fe0d231ee732db4dc9b2eb5c00c19a29073c71cec4e9061b931"
+    },
+    {
+      "bytes": 8688,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/supervisor/console.txt",
+      "sha256": "525059930d05029dfcec4715f9c4e97991ac2bf328cfb2f7b2fbba12b6fdc072"
+    },
+    {
+      "bytes": 855,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/supervisor/events.jsonl",
+      "sha256": "958e4f91a8aa16947080ca2d6e74ccea32e8daa5652b5e070963119477bed34b"
+    },
+    {
+      "bytes": 340,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/supervisor/child_identity.json",
+      "sha256": "87ebc770c660dd9f41513aa134ecf46e95588eb744c7edb8086400e74c7cd520"
+    },
+    {
+      "bytes": 11624,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/supervisor/training_audit.json",
+      "sha256": "3048223860ebb71ffe40e1c4a51af76afdeb09ebc656a9d4861f9f48b2ae6dd3"
+    },
+    {
+      "bytes": 340,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/supervisor/identity.json",
+      "sha256": "85ce393690e4ddbb7edcdc12f683e47d2f6864526f7165f00e14a158c9218563"
+    },
+    {
+      "bytes": 532,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/supervisor/heartbeat.json",
+      "sha256": "60c21a6f0d582e68946073fe5bfd1024312f83d7dd3d517b79f30dbe090d23e9"
+    },
+    {
+      "bytes": 369,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/supervisor/child_exit.json",
+      "sha256": "e856002aeaa6da2d25f8f3209db256a5bc27c3fb746a529272fc9e1f03407616"
+    },
+    {
+      "bytes": 2109,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/supervisor/command.json",
+      "sha256": "173599aeef530b9ac9fe417c1747ea92369d8bc8f492f641d45dc58cd15e62bb"
+    },
+    {
+      "bytes": 473487,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/guard/samples.csv",
+      "sha256": "0ee89fcf8824c4ee83904ed65a90a47ace16a2480b2541732b4e6a73cc9f4b4b"
+    },
+    {
+      "bytes": 2249,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/guard/status.json",
+      "sha256": "c42d3f7ceacf70f1d78c9291eb1d58b620b068ebb800dd1223079b33398d22a8"
+    },
+    {
+      "bytes": 726,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/guard/metadata.json",
+      "sha256": "055a85a9f03aad8d44cdbda4a43048aae52f55ae3b6a302cfcb54563ee8b8ce4"
+    },
+    {
+      "bytes": 467,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/guard/attached_identity.json",
+      "sha256": "21ec7d1b49257ba85f43120796576baa7e16c52b06fbb9b693ceb442e126690d"
+    },
+    {
+      "bytes": 774,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/guard/heartbeat.json",
+      "sha256": "dc9428ed4fd7ef804d69df098ffbd34f6d554dbae4a182d2f795fbdd0deb6cad"
+    },
+    {
+      "bytes": 267,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_64env_seed1_2ep/supervisor_submission.json",
+      "sha256": "3180e4a334a8584611f1d9c2ba3d6e01d098bc5bb03b7df9179568917a1e3ea3"
+    },
+    {
+      "bytes": 5937,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_64env_seed1_2ep/launch.json",
+      "sha256": "b4d2459b263632af9f7c424ae1764267ccc7d862b0f3f2e922d020802694ea84"
+    },
+    {
+      "bytes": 256,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_64env_seed1_2ep/guard_submission.json",
+      "sha256": "f9fc3c7d54cea230da6a91d16e001764813a97e5c686394772eb6a312f2ee96b"
+    },
+    {
+      "bytes": 335,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_64env_seed1_2ep/supervisor/tensorboard_finalizer.json",
+      "sha256": "9d4892221bbcb720f5e258363052401aac4e411518d0167b1a631cc7d449277a"
+    },
+    {
+      "bytes": 340,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_64env_seed1_2ep/supervisor/exec_release.json",
+      "sha256": "e6771e67f810d16cd7092159ce37b338fe6f0b692dbba97e98536c6523df23d2"
+    },
+    {
+      "bytes": 1879,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_64env_seed1_2ep/supervisor/status.json",
+      "sha256": "56e12d176de9cc2435765a749af149335a05769221553b00d78c79fa7126076e"
+    },
+    {
+      "bytes": 8436,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_64env_seed1_2ep/supervisor/console.txt",
+      "sha256": "c02491f7527d193940b4ce80f5b1cfd9447faec642e7f3435f67acf1979f0af3"
+    },
+    {
+      "bytes": 855,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_64env_seed1_2ep/supervisor/events.jsonl",
+      "sha256": "551b1094d37fd1194e8c146f5af5c1bc825ba71382db6d9cb896b9108ab32c73"
+    },
+    {
+      "bytes": 340,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_64env_seed1_2ep/supervisor/child_identity.json",
+      "sha256": "b24043975cf0961e5d8b6c4ca0039189b86bb8a237edb56dda21bf3295c3f71a"
+    },
+    {
+      "bytes": 6277,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_64env_seed1_2ep/supervisor/training_audit.json",
+      "sha256": "f1093ecb0df3282f8931b795af60a0a00ede41f4abc65cb399970df0964f2a42"
+    },
+    {
+      "bytes": 341,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_64env_seed1_2ep/supervisor/identity.json",
+      "sha256": "60deea9125ca476952e9b3a2741dd051c8c12400b686fa2c4f55b4772b4eda23"
+    },
+    {
+      "bytes": 532,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_64env_seed1_2ep/supervisor/heartbeat.json",
+      "sha256": "b0fab2e200f511b1e859c62f47b86d5b03c9c8d454453a58a38539cc24624fa5"
+    },
+    {
+      "bytes": 368,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_64env_seed1_2ep/supervisor/child_exit.json",
+      "sha256": "593822605d6a279754c08160ca505b4d1e94e24a47e18e50b274bc7eccd03b27"
+    },
+    {
+      "bytes": 2090,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_64env_seed1_2ep/supervisor/command.json",
+      "sha256": "552ad2343a4e1859f40b6717a45355472755ca3aed1a05320255b72b0f6c593f"
+    },
+    {
+      "bytes": 112074,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_64env_seed1_2ep/guard/samples.csv",
+      "sha256": "d9e7ace287a21c9fbb54474a72e47e2db58cf2bd14028c4a851d8a601d2c1273"
+    },
+    {
+      "bytes": 1683,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_64env_seed1_2ep/guard/status.json",
+      "sha256": "c6061695e65af3b9f404813a0a807123082b6b6948b9b3dcc454c8c87125eb22"
+    },
+    {
+      "bytes": 724,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_64env_seed1_2ep/guard/metadata.json",
+      "sha256": "9b8e587808c08d314c384490d7f959ffaae92e1dd8b66ac05d5c49a6fd5d51ab"
+    },
+    {
+      "bytes": 467,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_64env_seed1_2ep/guard/attached_identity.json",
+      "sha256": "05e5a4e7ae03a277259d76ff035c5f72f95a696decb0910adc464a12919e6d2e"
+    },
+    {
+      "bytes": 775,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_64env_seed1_2ep/guard/heartbeat.json",
+      "sha256": "c7cb687dbeedc9148618df4b0de57f92e0bf6fa3cae3a45e80498f92b0a43f73"
+    },
+    {
+      "bytes": 155062,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/inventory_idle_60s/inventory.json",
+      "sha256": "23148a5077d61c39c6d44a78b2d258177e71c7343c97c6c0dc84347ca9845887"
+    },
+    {
+      "bytes": 69373,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/inventory_idle_60s/gpu_samples.csv",
+      "sha256": "49f62bac33e039c2f0dd1451040ecf12268ed6b0c7f785fd534d1f7effd332f3"
+    },
+    {
+      "bytes": 267,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_32env_seed0_2ep/supervisor_submission.json",
+      "sha256": "f7ae72a370083996809f0e16474154467a3020a12b203ae72b00d122fbcf553b"
+    },
+    {
+      "bytes": 5940,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_32env_seed0_2ep/launch.json",
+      "sha256": "5177be922a1b1091a277e7dca9f365f7c0ab6507d6f119d0b102a7f14944c937"
+    },
+    {
+      "bytes": 257,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_32env_seed0_2ep/guard_submission.json",
+      "sha256": "ec3e78d1eef76f6cf79820214146afae0f358871fa9978d83b11ac33a8be5c4c"
+    },
+    {
+      "bytes": 335,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_32env_seed0_2ep/supervisor/tensorboard_finalizer.json",
+      "sha256": "9d4892221bbcb720f5e258363052401aac4e411518d0167b1a631cc7d449277a"
+    },
+    {
+      "bytes": 341,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_32env_seed0_2ep/supervisor/exec_release.json",
+      "sha256": "78cc6f7cdf063b3c5527d14a73352843275ada93aad7390cda7b2e1708de8089"
+    },
+    {
+      "bytes": 1879,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_32env_seed0_2ep/supervisor/status.json",
+      "sha256": "db0f558717e9c4c7163b30896869151632e45a75ba249b0c81d4f5ab10a70f39"
+    },
+    {
+      "bytes": 8436,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_32env_seed0_2ep/supervisor/console.txt",
+      "sha256": "96e9db2562e53268dcd83df554c31eda01f39e3fee70c10fe9ac524334e5bfc5"
+    },
+    {
+      "bytes": 856,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_32env_seed0_2ep/supervisor/events.jsonl",
+      "sha256": "d80e5bc4f527cd04de2ece9bf2be64662c97c5f3f51129939c26828146f49e24"
+    },
+    {
+      "bytes": 341,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_32env_seed0_2ep/supervisor/child_identity.json",
+      "sha256": "af03829622272692319b340efb42e361a11e26fb982359a3369c5e97939293eb"
+    },
+    {
+      "bytes": 6390,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_32env_seed0_2ep/supervisor/training_audit.json",
+      "sha256": "afb47f0ad5e35034bf6776f8898801baea26daa798afa773be0bc9dc875d1b97"
+    },
+    {
+      "bytes": 340,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_32env_seed0_2ep/supervisor/identity.json",
+      "sha256": "e67ddaa83a2c465ac84172097e121957229cb8fdbf80072c68bd71d81b6b59de"
+    },
+    {
+      "bytes": 532,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_32env_seed0_2ep/supervisor/heartbeat.json",
+      "sha256": "065253067b770761c12ed5a2c8f6aace6bd50c096a71c68e8290cdb2ff120581"
+    },
+    {
+      "bytes": 368,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_32env_seed0_2ep/supervisor/child_exit.json",
+      "sha256": "e396379cbfefda05b1dca05aecccb3f68c4bf4f60363a5c15008cd960761230c"
+    },
+    {
+      "bytes": 2089,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_32env_seed0_2ep/supervisor/command.json",
+      "sha256": "73d7900fb6dc1f4963eddb332a8a9666e48e2ec8901baa2cc03527b6182966a6"
+    },
+    {
+      "bytes": 105312,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_32env_seed0_2ep/guard/samples.csv",
+      "sha256": "317086628018255013fdc8201f9d3c22cd5596f5b4f0ce5b016ecf5c20291fa7"
+    },
+    {
+      "bytes": 1685,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_32env_seed0_2ep/guard/status.json",
+      "sha256": "09a031317bf71ee29df5c7fa9bc586f99b2903722a0059b9e8944765e308a2c3"
+    },
+    {
+      "bytes": 723,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_32env_seed0_2ep/guard/metadata.json",
+      "sha256": "ec870d509c843ea9917618c959f8c2887027bd129bfea0b9eab259f0230d31e6"
+    },
+    {
+      "bytes": 467,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_32env_seed0_2ep/guard/attached_identity.json",
+      "sha256": "0843cf21dcd243c3b9a6942b8eca0853f0f5a3f85ce2c7c4efdfb1d776114e31"
+    },
+    {
+      "bytes": 774,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_32env_seed0_2ep/guard/heartbeat.json",
+      "sha256": "60beff78d9d74e38ab06ce8eccd51651215dfc34bf608f73deaf40121a24c015"
+    },
+    {
+      "bytes": 28519,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_peginsert_32env_seed0_baseline_400ep/summaries/events.out.tfevents.1792934987.ubuntu2004",
+      "sha256": "00e3dc103672c632b82bd3d680fbc4a5a3f2ac22ad3fc88c9137389805d475dd"
+    },
+    {
+      "bytes": 212885999,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_peginsert_32env_seed0_baseline_400ep/nn/Factory.pth",
+      "sha256": "d24556a2189da37aaf0f07e1397167b711235e811f946872070ffa81937470c9"
+    },
+    {
+      "bytes": 8945,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_peginsert_32env_seed0_baseline_400ep/params/env.pkl",
+      "sha256": "15367d9e5cfeac4cd6efdf55919a3c321ed859cf3fb851ec220cb326620eb0df"
+    },
+    {
+      "bytes": 12078,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_peginsert_32env_seed0_baseline_400ep/params/env.yaml",
+      "sha256": "01c678dca9512a99ccbe93b1b27278fe991fbb9116b7b5db33e1ed389c5dc3d4"
+    },
+    {
+      "bytes": 1958,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_peginsert_32env_seed0_baseline_400ep/params/agent.pkl",
+      "sha256": "9b2e7fda2cc0412ee189830dd6fcb9e9e16a68193c1d56cb59d39b59b9fc5e2d"
+    },
+    {
+      "bytes": 2448,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_peginsert_32env_seed0_baseline_400ep/params/agent.yaml",
+      "sha256": "8c31c57af35deb5061e10a7730c5968687b3f2e7f94fb63104232805943349ce"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "G3C-R2 external inventory, guard, consoles, training artifacts; small artifacts may also be copied as direct receipts"
+}

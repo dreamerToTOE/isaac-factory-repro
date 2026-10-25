@@ -1,0 +1,74 @@
+{
+  "child_exit_code": 0,
+  "child_identity": {
+    "birth_ticks": "3229921",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 110903,
+    "pid": 110903,
+    "state": "R"
+  },
+  "child_signal": null,
+  "command": [
+    "bash",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py",
+    "--headless",
+    "--device",
+    "cuda:0",
+    "--task",
+    "Isaac-Factory-PegInsert-Direct-v0",
+    "--num_envs",
+    "32",
+    "--seed",
+    "0",
+    "--max_iterations",
+    "400",
+    "agent.params.config.full_experiment_name=g3cr2_peginsert_32env_seed0_baseline_400ep",
+    "agent.params.config.save_frequency=50"
+  ],
+  "ended": {
+    "monotonic_seconds": 32667.828504395,
+    "unix_seconds": 1792935343.7566392,
+    "utc": "2026-10-25T13:35:43.756632+00:00"
+  },
+  "error": null,
+  "exec_released": {
+    "monotonic_seconds": 32299.784079998,
+    "unix_seconds": 1792934975.712215,
+    "utc": "2026-10-25T13:29:35.712209+00:00"
+  },
+  "finalized": true,
+  "guard_identity": {
+    "birth_ticks": "3229876",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 110899,
+    "pid": 110899,
+    "state": "R"
+  },
+  "guard_required": true,
+  "identity": {
+    "birth_ticks": "3229890",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 110901,
+    "pid": 110901,
+    "state": "R"
+  },
+  "raw_wait_returncode": 0,
+  "received_supervisor_signals": [],
+  "schema_version": 2,
+  "started": {
+    "monotonic_seconds": 32298.942490174,
+    "unix_seconds": 1792934974.870625,
+    "utc": "2026-10-25T13:29:34.870611+00:00"
+  },
+  "stop_signals": [
+    {
+      "monotonic_seconds": 32667.494724207,
+      "signal": "SIGTERM",
+      "unix_seconds": 1792935343.422859,
+      "utc": "2026-10-25T13:35:43.422845+00:00"
+    }
+  ],
+  "termination_reason": "guard_missing_or_stale",
+  "wall_seconds": 368.88601485600157
+}

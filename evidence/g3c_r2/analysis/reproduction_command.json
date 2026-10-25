@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "scripts/analyze_g3cr2.py",
+    "--train-log",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_peginsert_32env_seed0_baseline_400ep",
+    "--audit",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/supervisor/training_audit.json",
+    "--supervised-run",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep",
+    "--eval-root",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/evaluation",
+    "--g2-root",
+    "evidence/g2",
+    "--manifest",
+    "evidence/g3c_r2/manifest_frozen.json",
+    "--tensorboard-python",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+    "--output",
+    "evidence/g3c_r2/analysis"
+  ],
+  "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+  "mode": "CPU-only; read-only posthoc analysis, no policy evaluation",
+  "fresh_output_required": true,
+  "expected_warning": "Evaluation directory missing because no registered milestone checkpoint was reached"
+}

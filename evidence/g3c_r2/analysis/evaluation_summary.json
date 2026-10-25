@@ -1,0 +1,532 @@
+{
+  "checkpoints": [
+    {
+      "aggregate": {
+        "episodes_completed": 0,
+        "ever_success_count": 0,
+        "ever_success_rate": null,
+        "ever_success_wilson95": null,
+        "first_success_step_conditional": {
+          "max": null,
+          "mean": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "q25": null,
+          "q75": null
+        },
+        "first_success_time_seconds_conditional": {
+          "max": null,
+          "mean": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "q25": null,
+          "q75": null
+        },
+        "terminal_success_count": 0,
+        "terminal_success_rate": null,
+        "terminal_success_wilson95": null,
+        "transient_only_count": 0
+      },
+      "checkpoint_epoch": 100,
+      "complete_preregistered_seeds": false,
+      "episodes_requested": 96,
+      "per_seed": [
+        {
+          "episodes_completed": 0,
+          "episodes_requested": 32,
+          "ever_success_count": 0,
+          "ever_success_rate": null,
+          "ever_success_wilson95": null,
+          "first_success_step_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "first_success_time_seconds_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "seed": 1001,
+          "status": "missing",
+          "terminal_success_count": 0,
+          "terminal_success_rate": null,
+          "terminal_success_wilson95": null,
+          "transient_only_count": 0
+        },
+        {
+          "episodes_completed": 0,
+          "episodes_requested": 32,
+          "ever_success_count": 0,
+          "ever_success_rate": null,
+          "ever_success_wilson95": null,
+          "first_success_step_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "first_success_time_seconds_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "seed": 1002,
+          "status": "missing",
+          "terminal_success_count": 0,
+          "terminal_success_rate": null,
+          "terminal_success_wilson95": null,
+          "transient_only_count": 0
+        },
+        {
+          "episodes_completed": 0,
+          "episodes_requested": 32,
+          "ever_success_count": 0,
+          "ever_success_rate": null,
+          "ever_success_wilson95": null,
+          "first_success_step_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "first_success_time_seconds_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "seed": 1003,
+          "status": "missing",
+          "terminal_success_count": 0,
+          "terminal_success_rate": null,
+          "terminal_success_wilson95": null,
+          "transient_only_count": 0
+        }
+      ]
+    },
+    {
+      "aggregate": {
+        "episodes_completed": 0,
+        "ever_success_count": 0,
+        "ever_success_rate": null,
+        "ever_success_wilson95": null,
+        "first_success_step_conditional": {
+          "max": null,
+          "mean": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "q25": null,
+          "q75": null
+        },
+        "first_success_time_seconds_conditional": {
+          "max": null,
+          "mean": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "q25": null,
+          "q75": null
+        },
+        "terminal_success_count": 0,
+        "terminal_success_rate": null,
+        "terminal_success_wilson95": null,
+        "transient_only_count": 0
+      },
+      "checkpoint_epoch": 200,
+      "complete_preregistered_seeds": false,
+      "episodes_requested": 96,
+      "per_seed": [
+        {
+          "episodes_completed": 0,
+          "episodes_requested": 32,
+          "ever_success_count": 0,
+          "ever_success_rate": null,
+          "ever_success_wilson95": null,
+          "first_success_step_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "first_success_time_seconds_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "seed": 1001,
+          "status": "missing",
+          "terminal_success_count": 0,
+          "terminal_success_rate": null,
+          "terminal_success_wilson95": null,
+          "transient_only_count": 0
+        },
+        {
+          "episodes_completed": 0,
+          "episodes_requested": 32,
+          "ever_success_count": 0,
+          "ever_success_rate": null,
+          "ever_success_wilson95": null,
+          "first_success_step_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "first_success_time_seconds_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "seed": 1002,
+          "status": "missing",
+          "terminal_success_count": 0,
+          "terminal_success_rate": null,
+          "terminal_success_wilson95": null,
+          "transient_only_count": 0
+        },
+        {
+          "episodes_completed": 0,
+          "episodes_requested": 32,
+          "ever_success_count": 0,
+          "ever_success_rate": null,
+          "ever_success_wilson95": null,
+          "first_success_step_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "first_success_time_seconds_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "seed": 1003,
+          "status": "missing",
+          "terminal_success_count": 0,
+          "terminal_success_rate": null,
+          "terminal_success_wilson95": null,
+          "transient_only_count": 0
+        }
+      ]
+    },
+    {
+      "aggregate": {
+        "episodes_completed": 0,
+        "ever_success_count": 0,
+        "ever_success_rate": null,
+        "ever_success_wilson95": null,
+        "first_success_step_conditional": {
+          "max": null,
+          "mean": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "q25": null,
+          "q75": null
+        },
+        "first_success_time_seconds_conditional": {
+          "max": null,
+          "mean": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "q25": null,
+          "q75": null
+        },
+        "terminal_success_count": 0,
+        "terminal_success_rate": null,
+        "terminal_success_wilson95": null,
+        "transient_only_count": 0
+      },
+      "checkpoint_epoch": 300,
+      "complete_preregistered_seeds": false,
+      "episodes_requested": 96,
+      "per_seed": [
+        {
+          "episodes_completed": 0,
+          "episodes_requested": 32,
+          "ever_success_count": 0,
+          "ever_success_rate": null,
+          "ever_success_wilson95": null,
+          "first_success_step_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "first_success_time_seconds_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "seed": 1001,
+          "status": "missing",
+          "terminal_success_count": 0,
+          "terminal_success_rate": null,
+          "terminal_success_wilson95": null,
+          "transient_only_count": 0
+        },
+        {
+          "episodes_completed": 0,
+          "episodes_requested": 32,
+          "ever_success_count": 0,
+          "ever_success_rate": null,
+          "ever_success_wilson95": null,
+          "first_success_step_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "first_success_time_seconds_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "seed": 1002,
+          "status": "missing",
+          "terminal_success_count": 0,
+          "terminal_success_rate": null,
+          "terminal_success_wilson95": null,
+          "transient_only_count": 0
+        },
+        {
+          "episodes_completed": 0,
+          "episodes_requested": 32,
+          "ever_success_count": 0,
+          "ever_success_rate": null,
+          "ever_success_wilson95": null,
+          "first_success_step_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "first_success_time_seconds_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "seed": 1003,
+          "status": "missing",
+          "terminal_success_count": 0,
+          "terminal_success_rate": null,
+          "terminal_success_wilson95": null,
+          "transient_only_count": 0
+        }
+      ]
+    },
+    {
+      "aggregate": {
+        "episodes_completed": 0,
+        "ever_success_count": 0,
+        "ever_success_rate": null,
+        "ever_success_wilson95": null,
+        "first_success_step_conditional": {
+          "max": null,
+          "mean": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "q25": null,
+          "q75": null
+        },
+        "first_success_time_seconds_conditional": {
+          "max": null,
+          "mean": null,
+          "median": null,
+          "min": null,
+          "n": 0,
+          "q25": null,
+          "q75": null
+        },
+        "terminal_success_count": 0,
+        "terminal_success_rate": null,
+        "terminal_success_wilson95": null,
+        "transient_only_count": 0
+      },
+      "checkpoint_epoch": 400,
+      "complete_preregistered_seeds": false,
+      "episodes_requested": 288,
+      "per_seed": [
+        {
+          "episodes_completed": 0,
+          "episodes_requested": 96,
+          "ever_success_count": 0,
+          "ever_success_rate": null,
+          "ever_success_wilson95": null,
+          "first_success_step_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "first_success_time_seconds_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "seed": 1001,
+          "status": "missing",
+          "terminal_success_count": 0,
+          "terminal_success_rate": null,
+          "terminal_success_wilson95": null,
+          "transient_only_count": 0
+        },
+        {
+          "episodes_completed": 0,
+          "episodes_requested": 96,
+          "ever_success_count": 0,
+          "ever_success_rate": null,
+          "ever_success_wilson95": null,
+          "first_success_step_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "first_success_time_seconds_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "seed": 1002,
+          "status": "missing",
+          "terminal_success_count": 0,
+          "terminal_success_rate": null,
+          "terminal_success_wilson95": null,
+          "transient_only_count": 0
+        },
+        {
+          "episodes_completed": 0,
+          "episodes_requested": 96,
+          "ever_success_count": 0,
+          "ever_success_rate": null,
+          "ever_success_wilson95": null,
+          "first_success_step_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "first_success_time_seconds_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "seed": 1003,
+          "status": "missing",
+          "terminal_success_count": 0,
+          "terminal_success_rate": null,
+          "terminal_success_wilson95": null,
+          "transient_only_count": 0
+        }
+      ]
+    }
+  ],
+  "denominator_rule": "Only actual completed episode records from preregistered seeds in each selected evaluator output; unfinished episodes excluded; complete and partial duplicate outputs are not pooled. Additional seeds remain separate per-seed rows.",
+  "expected_checkpoint_epochs": [
+    100,
+    200,
+    300,
+    400
+  ],
+  "final_episodes_per_env": 3,
+  "first_success_rule": "Conditional on ever-successful completed episodes; failed episodes are excluded, never encoded as zero seconds or timeout times.",
+  "interval_rule": "Two-sided 95% Wilson score intervals over episode counts. Descriptive only: vector environments and episodes share policy/seeds; intervals do not quantify training-seed variability.",
+  "num_envs_per_seed": 32,
+  "preregistered_seeds": [
+    1001,
+    1002,
+    1003
+  ]
+}

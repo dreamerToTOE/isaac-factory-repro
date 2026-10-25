@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "scope": "chronological experiment registration and actual execution; raw manifests remain historical, not retroactively rewritten",
+  "registrations": [
+    {
+      "commit": "65a325cd67fde073ed8490d8125471f06e1d2b08",
+      "meaning": "60s idle inventory passed and64env2epoch smoke registered"
+    },
+    {
+      "commit": "bcedef83ea59beeee71f2251cf9c8119c7915395",
+      "meaning": "64 smoke margin NO_GO;32env2epoch smoke and400epoch0 baseline registered"
+    },
+    {
+      "commit": "d269fe173ea17479cc894bc463feab855239a4a7",
+      "meaning": "32 smoke capacityPASS;32envseed0fullconfiguration frozenbeforelaunch"
+    }
+  ],
+  "actual_commands": "runs/<attempt>/launch.json has immutable systemd argv, safe environment and engineering source hashes",
+  "source_verification": "runtime_preservation_audit.json contains postrun verification against26 previously frozen scientific/engineering sources; no claim theR2prelaunchmanifest froze newsourcehashes",
+  "gradient_finiteness": "Existing lightweight observer reports loss arrays/AMP/Adam counts. Raw gradients were not measured. CPU checkpoint inspection does not replace rawgradientmeasurement."
+}

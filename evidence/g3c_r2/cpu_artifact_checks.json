@@ -1,0 +1,675 @@
+{
+  "checked_utc": "2026-10-25T13:39:32.356212+00:00",
+  "method": "Post-run CPU-only inspection using existing tools; no simulation/evaluation",
+  "raw_cpu_summary_sha256": "7778d8da1af123356979a441d9db6c71dcbf21c96f5235ddee353cae6a7a08ab",
+  "runs": [
+    {
+      "actor_attempts": 128,
+      "amp_skip_count": 0,
+      "artifacts": {
+        "checkpoint_last_Factory_ep_2_rew_34.954193": {
+          "command": [
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/inspect_checkpoint.py",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_64env_seed1_capacity_smoke/nn/last_Factory_ep_2_rew_34.954193.pth"
+          ],
+          "result": {
+            "all_tensors_finite": true,
+            "central_value_present": true,
+            "epoch": 2,
+            "frame": 16384,
+            "nonzero_adam_exp_avg_states": 22,
+            "optimization_evidence_passed": true,
+            "optimizer_states": 22,
+            "optimizer_step_max": 128,
+            "optimizer_step_min": 128,
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_64env_seed1_capacity_smoke/nn/last_Factory_ep_2_rew_34.954193.pth",
+            "sha256": "e2bb551240690a8dfa5f6c33f1360190795ce7ab793b3d3729fe09fc7421f309",
+            "size_bytes": 212888703
+          },
+          "returncode": 0,
+          "stdout_sha256": "e738ff4e0701c8e4977dfd00b7817a7dfda2384464213d08afdec7498bef3a47"
+        },
+        "checkpoint_last_Factory_ep_2_rew__34.954193_": {
+          "command": [
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/inspect_checkpoint.py",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_64env_seed1_capacity_smoke/nn/last_Factory_ep_2_rew__34.954193_.pth"
+          ],
+          "result": {
+            "all_tensors_finite": true,
+            "central_value_present": true,
+            "epoch": 2,
+            "frame": 16384,
+            "nonzero_adam_exp_avg_states": 22,
+            "optimization_evidence_passed": true,
+            "optimizer_states": 22,
+            "optimizer_step_max": 128,
+            "optimizer_step_min": 128,
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_64env_seed1_capacity_smoke/nn/last_Factory_ep_2_rew__34.954193_.pth",
+            "sha256": "a09cc4a61b8144d643aa20153d20daee295272e449590815416ecd0188d0aed8",
+            "size_bytes": 212888923
+          },
+          "returncode": 0,
+          "stdout_sha256": "11cc780611359f92ee69e1f179adae872142ae8dfce2b10a60f830eb432f75a2"
+        },
+        "tensorboard_planned_tail": {
+          "command": [
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/tensorboard_tail.py",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_64env_seed1_capacity_smoke/summaries",
+            "--expected-epochs",
+            "2",
+            "--transitions-per-epoch",
+            "8192"
+          ],
+          "result": {
+            "directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_64env_seed1_capacity_smoke/summaries",
+            "expected_epochs": 2,
+            "issues": [],
+            "missing_tags": [],
+            "nonfinite_count": 0,
+            "required_tags": [
+              "info/epochs",
+              "losses/a_loss",
+              "losses/c_loss",
+              "losses/entropy",
+              "losses/bounds_loss",
+              "performance/step_inference_rl_update_fps",
+              "performance/step_inference_time",
+              "performance/rl_update_time",
+              "losses/cval_loss",
+              "info/cval_lr",
+              "rewards/iter",
+              "shaped_rewards/iter",
+              "episode_lengths/iter"
+            ],
+            "reward_first_epoch": 2,
+            "scalar_tag_count": 53,
+            "status": "complete",
+            "summaries": {
+              "episode_lengths/iter": {
+                "count": 1,
+                "expected_count": 1,
+                "last_value": 149.0
+              },
+              "info/cval_lr": {
+                "count": 2,
+                "expected_count": 2,
+                "last_value": 9.999999747378752e-05
+              },
+              "info/epochs": {
+                "count": 2,
+                "expected_count": 2,
+                "last_value": 2.0
+              },
+              "losses/a_loss": {
+                "count": 2,
+                "expected_count": 2,
+                "last_value": -0.0032690316438674927
+              },
+              "losses/bounds_loss": {
+                "count": 2,
+                "expected_count": 2,
+                "last_value": 0.0
+              },
+              "losses/c_loss": {
+                "count": 2,
+                "expected_count": 2,
+                "last_value": 0.5113701820373535
+              },
+              "losses/cval_loss": {
+                "count": 2,
+                "expected_count": 2,
+                "last_value": 0.48395267128944397
+              },
+              "losses/entropy": {
+                "count": 2,
+                "expected_count": 2,
+                "last_value": 8.475715637207031
+              },
+              "performance/rl_update_time": {
+                "count": 2,
+                "expected_count": 2,
+                "last_value": 3.9169907569885254
+              },
+              "performance/step_inference_rl_update_fps": {
+                "count": 2,
+                "expected_count": 2,
+                "last_value": 214.62013244628906
+              },
+              "performance/step_inference_time": {
+                "count": 2,
+                "expected_count": 2,
+                "last_value": 34.25277328491211
+              },
+              "rewards/iter": {
+                "count": 1,
+                "expected_count": 1,
+                "last_value": 34.954193115234375
+              },
+              "shaped_rewards/iter": {
+                "count": 1,
+                "expected_count": 1,
+                "last_value": 37.47169494628906
+              }
+            },
+            "transitions_per_epoch": 8192
+          },
+          "returncode": 0,
+          "stdout_sha256": "ee67bfd4a42b5da2eff4475fecf61db8f5f9cf9d3513b59f0a47ead9caeec06f"
+        }
+      },
+      "checks": {
+        "audit_contiguous_planned_epochs": true,
+        "audit_losses_finite": true,
+        "audit_no_restore_or_observer_errors": true,
+        "audit_planned_frames": true,
+        "child_wait_exit_0": true,
+        "guard_continuous_no_gaps_or_stop": true,
+        "guard_policy_unchanged": true,
+        "normal_child_exit_without_supervisor_stop": true,
+        "planned_final_checkpoint_integrity": true,
+        "smoke_capacity_minimum_1536_MiB": false,
+        "tensorboard_finalizer_complete": true,
+        "tensorboard_planned_tail_complete": true
+      },
+      "completed_epochs": 2,
+      "evaluation_eligible": null,
+      "evaluation_exclusion_reason": "Full run stopped before registered milestones 100/200/300/400; no evaluation launched. Smoke checkpoints are capacity evidence only.",
+      "gradient_finiteness": "not measured by lightweight observer; finite logged loss and checkpoint tensors are separate evidence",
+      "guard_min_free_MiB": 1457.125,
+      "guard_peak_used_MiB": 6360.5,
+      "label": "smoke_64env_seed1_2ep",
+      "optimizer_steps": {
+        "actor": 128,
+        "central_value": 128
+      },
+      "planned_epochs": 2,
+      "planned_num_envs": 64,
+      "recorded_completed_transitions": 16384,
+      "run_name": "g3cr2_64env_seed1_capacity_smoke",
+      "supervisor_wall_seconds": 86.97467966699696
+    },
+    {
+      "actor_attempts": 64,
+      "amp_skip_count": 1,
+      "artifacts": {
+        "checkpoint_last_Factory_ep_2_rew_35.205788": {
+          "command": [
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/inspect_checkpoint.py",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_32env_seed0_capacity_smoke/nn/last_Factory_ep_2_rew_35.205788.pth"
+          ],
+          "result": {
+            "all_tensors_finite": true,
+            "central_value_present": true,
+            "epoch": 2,
+            "frame": 8192,
+            "nonzero_adam_exp_avg_states": 22,
+            "optimization_evidence_passed": true,
+            "optimizer_states": 22,
+            "optimizer_step_max": 63,
+            "optimizer_step_min": 63,
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_32env_seed0_capacity_smoke/nn/last_Factory_ep_2_rew_35.205788.pth",
+            "sha256": "422d00ef8a4214f57812488fb9424cdb8fc9932a1462e12eeba9314b574f4c8e",
+            "size_bytes": 212888703
+          },
+          "returncode": 0,
+          "stdout_sha256": "1c12239c1791fc24f71abf63b4809ed12f090fdb49211fdf5c745ac1bad1608b"
+        },
+        "checkpoint_last_Factory_ep_2_rew__35.205788_": {
+          "command": [
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/inspect_checkpoint.py",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_32env_seed0_capacity_smoke/nn/last_Factory_ep_2_rew__35.205788_.pth"
+          ],
+          "result": {
+            "all_tensors_finite": true,
+            "central_value_present": true,
+            "epoch": 2,
+            "frame": 8192,
+            "nonzero_adam_exp_avg_states": 22,
+            "optimization_evidence_passed": true,
+            "optimizer_states": 22,
+            "optimizer_step_max": 63,
+            "optimizer_step_min": 63,
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_32env_seed0_capacity_smoke/nn/last_Factory_ep_2_rew__35.205788_.pth",
+            "sha256": "78bc227f38a13998493a989ad63b6017d0eb1c1ab3daca0998a5c2c60da76e23",
+            "size_bytes": 212888923
+          },
+          "returncode": 0,
+          "stdout_sha256": "634e588bd11836ffb5d4e0ebfd9cd9f36f7c9bae2873951576b2e5457be76068"
+        },
+        "tensorboard_planned_tail": {
+          "command": [
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/tensorboard_tail.py",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_32env_seed0_capacity_smoke/summaries",
+            "--expected-epochs",
+            "2",
+            "--transitions-per-epoch",
+            "4096"
+          ],
+          "result": {
+            "directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_32env_seed0_capacity_smoke/summaries",
+            "expected_epochs": 2,
+            "issues": [],
+            "missing_tags": [],
+            "nonfinite_count": 0,
+            "required_tags": [
+              "info/epochs",
+              "losses/a_loss",
+              "losses/c_loss",
+              "losses/entropy",
+              "losses/bounds_loss",
+              "performance/step_inference_rl_update_fps",
+              "performance/step_inference_time",
+              "performance/rl_update_time",
+              "losses/cval_loss",
+              "info/cval_lr",
+              "rewards/iter",
+              "shaped_rewards/iter",
+              "episode_lengths/iter"
+            ],
+            "reward_first_epoch": 2,
+            "scalar_tag_count": 50,
+            "status": "complete",
+            "summaries": {
+              "episode_lengths/iter": {
+                "count": 1,
+                "expected_count": 1,
+                "last_value": 149.0
+              },
+              "info/cval_lr": {
+                "count": 2,
+                "expected_count": 2,
+                "last_value": 9.999999747378752e-05
+              },
+              "info/epochs": {
+                "count": 2,
+                "expected_count": 2,
+                "last_value": 2.0
+              },
+              "losses/a_loss": {
+                "count": 2,
+                "expected_count": 2,
+                "last_value": -0.0068215420469641685
+              },
+              "losses/bounds_loss": {
+                "count": 2,
+                "expected_count": 2,
+                "last_value": 0.0
+              },
+              "losses/c_loss": {
+                "count": 2,
+                "expected_count": 2,
+                "last_value": 0.8924939632415771
+              },
+              "losses/cval_loss": {
+                "count": 2,
+                "expected_count": 2,
+                "last_value": 0.8478828072547913
+              },
+              "losses/entropy": {
+                "count": 2,
+                "expected_count": 2,
+                "last_value": 8.505359649658203
+              },
+              "performance/rl_update_time": {
+                "count": 2,
+                "expected_count": 2,
+                "last_value": 1.9651005268096924
+              },
+              "performance/step_inference_rl_update_fps": {
+                "count": 2,
+                "expected_count": 2,
+                "last_value": 121.29437255859375
+              },
+              "performance/step_inference_time": {
+                "count": 2,
+                "expected_count": 2,
+                "last_value": 31.803985595703125
+              },
+              "rewards/iter": {
+                "count": 1,
+                "expected_count": 1,
+                "last_value": 35.205787658691406
+              },
+              "shaped_rewards/iter": {
+                "count": 1,
+                "expected_count": 1,
+                "last_value": 37.57115936279297
+              }
+            },
+            "transitions_per_epoch": 4096
+          },
+          "returncode": 0,
+          "stdout_sha256": "441aec0978e4d150c556b228fb4ddaaf4ee5f5350f78cf6a7d1a697cd1235bae"
+        }
+      },
+      "checks": {
+        "audit_contiguous_planned_epochs": true,
+        "audit_losses_finite": true,
+        "audit_no_restore_or_observer_errors": true,
+        "audit_planned_frames": true,
+        "child_wait_exit_0": true,
+        "guard_continuous_no_gaps_or_stop": true,
+        "guard_policy_unchanged": true,
+        "normal_child_exit_without_supervisor_stop": true,
+        "planned_final_checkpoint_integrity": true,
+        "smoke_capacity_minimum_1536_MiB": true,
+        "tensorboard_finalizer_complete": true,
+        "tensorboard_planned_tail_complete": true
+      },
+      "completed_epochs": 2,
+      "evaluation_eligible": null,
+      "evaluation_exclusion_reason": "Full run stopped before registered milestones 100/200/300/400; no evaluation launched. Smoke checkpoints are capacity evidence only.",
+      "gradient_finiteness": "not measured by lightweight observer; finite logged loss and checkpoint tensors are separate evidence",
+      "guard_min_free_MiB": 1604.4375,
+      "guard_peak_used_MiB": 6213.1875,
+      "label": "smoke_32env_seed0_2ep",
+      "optimizer_steps": {
+        "actor": 63,
+        "central_value": 64
+      },
+      "planned_epochs": 2,
+      "planned_num_envs": 32,
+      "recorded_completed_transitions": 8192,
+      "run_name": "g3cr2_32env_seed0_capacity_smoke",
+      "supervisor_wall_seconds": 81.50484531500115
+    },
+    {
+      "actor_attempts": 320,
+      "amp_skip_count": 1,
+      "artifacts": {
+        "checkpoint_Factory": {
+          "command": [
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/inspect_checkpoint.py",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_peginsert_32env_seed0_baseline_400ep/nn/Factory.pth"
+          ],
+          "result": {
+            "all_tensors_finite": true,
+            "central_value_present": true,
+            "epoch": 10,
+            "frame": 40960,
+            "nonzero_adam_exp_avg_states": 22,
+            "optimization_evidence_passed": true,
+            "optimizer_states": 22,
+            "optimizer_step_max": 319,
+            "optimizer_step_min": 319,
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_peginsert_32env_seed0_baseline_400ep/nn/Factory.pth",
+            "sha256": "d24556a2189da37aaf0f07e1397167b711235e811f946872070ffa81937470c9",
+            "size_bytes": 212885999
+          },
+          "returncode": 0,
+          "stdout_sha256": "e74d07cc277920aa73c902d57bcfddcc180e3b4171aecf1dc1a00758c3356df0"
+        },
+        "tensorboard_observed_prefix": {
+          "command": [
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/tensorboard_tail.py",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_peginsert_32env_seed0_baseline_400ep/summaries",
+            "--expected-epochs",
+            "10",
+            "--transitions-per-epoch",
+            "4096"
+          ],
+          "result": {
+            "directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_peginsert_32env_seed0_baseline_400ep/summaries",
+            "expected_epochs": 10,
+            "issues": [
+              "count/step mismatch: losses/bounds_loss",
+              "count/step mismatch: rewards/iter",
+              "count/step mismatch: shaped_rewards/iter",
+              "count/step mismatch: episode_lengths/iter"
+            ],
+            "missing_tags": [],
+            "nonfinite_count": 0,
+            "required_tags": [
+              "info/epochs",
+              "losses/a_loss",
+              "losses/c_loss",
+              "losses/entropy",
+              "losses/bounds_loss",
+              "performance/step_inference_rl_update_fps",
+              "performance/step_inference_time",
+              "performance/rl_update_time",
+              "losses/cval_loss",
+              "info/cval_lr",
+              "rewards/iter",
+              "shaped_rewards/iter",
+              "episode_lengths/iter"
+            ],
+            "reward_first_epoch": 2,
+            "scalar_tag_count": 53,
+            "status": "incomplete",
+            "summaries": {
+              "episode_lengths/iter": {
+                "count": 8,
+                "expected_count": 9,
+                "last_value": 149.0
+              },
+              "info/cval_lr": {
+                "count": 10,
+                "expected_count": 10,
+                "last_value": 9.999999747378752e-05
+              },
+              "info/epochs": {
+                "count": 10,
+                "expected_count": 10,
+                "last_value": 10.0
+              },
+              "losses/a_loss": {
+                "count": 10,
+                "expected_count": 10,
+                "last_value": -0.006662942469120026
+              },
+              "losses/bounds_loss": {
+                "count": 9,
+                "expected_count": 10,
+                "last_value": 0.0
+              },
+              "losses/c_loss": {
+                "count": 10,
+                "expected_count": 10,
+                "last_value": 0.18087619543075562
+              },
+              "losses/cval_loss": {
+                "count": 10,
+                "expected_count": 10,
+                "last_value": 0.14514587819576263
+              },
+              "losses/entropy": {
+                "count": 10,
+                "expected_count": 10,
+                "last_value": 8.333028793334961
+              },
+              "performance/rl_update_time": {
+                "count": 10,
+                "expected_count": 10,
+                "last_value": 2.0065841674804688
+              },
+              "performance/step_inference_rl_update_fps": {
+                "count": 10,
+                "expected_count": 10,
+                "last_value": 116.35545349121094
+              },
+              "performance/step_inference_time": {
+                "count": 10,
+                "expected_count": 10,
+                "last_value": 33.195892333984375
+              },
+              "rewards/iter": {
+                "count": 8,
+                "expected_count": 9,
+                "last_value": 43.41722106933594
+              },
+              "shaped_rewards/iter": {
+                "count": 8,
+                "expected_count": 9,
+                "last_value": 54.89429473876953
+              }
+            },
+            "transitions_per_epoch": 4096
+          },
+          "returncode": 1,
+          "stdout_sha256": "32bae598cea37381a038932b72a21d1a2fe3bad86fe9ebdffd61a0e751c11f39"
+        },
+        "tensorboard_planned_tail": {
+          "command": [
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/tensorboard_tail.py",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_peginsert_32env_seed0_baseline_400ep/summaries",
+            "--expected-epochs",
+            "400",
+            "--transitions-per-epoch",
+            "4096"
+          ],
+          "result": {
+            "directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_peginsert_32env_seed0_baseline_400ep/summaries",
+            "expected_epochs": 400,
+            "issues": [
+              "count/step mismatch: info/epochs",
+              "count/step mismatch: losses/a_loss",
+              "count/step mismatch: losses/c_loss",
+              "count/step mismatch: losses/entropy",
+              "count/step mismatch: losses/bounds_loss",
+              "count/step mismatch: performance/step_inference_rl_update_fps",
+              "count/step mismatch: performance/step_inference_time",
+              "count/step mismatch: performance/rl_update_time",
+              "count/step mismatch: losses/cval_loss",
+              "count/step mismatch: info/cval_lr",
+              "count/step mismatch: rewards/iter",
+              "count/step mismatch: shaped_rewards/iter",
+              "count/step mismatch: episode_lengths/iter",
+              "info/epochs values do not match every completed epoch"
+            ],
+            "missing_tags": [],
+            "nonfinite_count": 0,
+            "required_tags": [
+              "info/epochs",
+              "losses/a_loss",
+              "losses/c_loss",
+              "losses/entropy",
+              "losses/bounds_loss",
+              "performance/step_inference_rl_update_fps",
+              "performance/step_inference_time",
+              "performance/rl_update_time",
+              "losses/cval_loss",
+              "info/cval_lr",
+              "rewards/iter",
+              "shaped_rewards/iter",
+              "episode_lengths/iter"
+            ],
+            "reward_first_epoch": 2,
+            "scalar_tag_count": 53,
+            "status": "incomplete",
+            "summaries": {
+              "episode_lengths/iter": {
+                "count": 8,
+                "expected_count": 399,
+                "last_value": 149.0
+              },
+              "info/cval_lr": {
+                "count": 10,
+                "expected_count": 400,
+                "last_value": 9.999999747378752e-05
+              },
+              "info/epochs": {
+                "count": 10,
+                "expected_count": 400,
+                "last_value": 10.0
+              },
+              "losses/a_loss": {
+                "count": 10,
+                "expected_count": 400,
+                "last_value": -0.006662942469120026
+              },
+              "losses/bounds_loss": {
+                "count": 9,
+                "expected_count": 400,
+                "last_value": 0.0
+              },
+              "losses/c_loss": {
+                "count": 10,
+                "expected_count": 400,
+                "last_value": 0.18087619543075562
+              },
+              "losses/cval_loss": {
+                "count": 10,
+                "expected_count": 400,
+                "last_value": 0.14514587819576263
+              },
+              "losses/entropy": {
+                "count": 10,
+                "expected_count": 400,
+                "last_value": 8.333028793334961
+              },
+              "performance/rl_update_time": {
+                "count": 10,
+                "expected_count": 400,
+                "last_value": 2.0065841674804688
+              },
+              "performance/step_inference_rl_update_fps": {
+                "count": 10,
+                "expected_count": 400,
+                "last_value": 116.35545349121094
+              },
+              "performance/step_inference_time": {
+                "count": 10,
+                "expected_count": 400,
+                "last_value": 33.195892333984375
+              },
+              "rewards/iter": {
+                "count": 8,
+                "expected_count": 399,
+                "last_value": 43.41722106933594
+              },
+              "shaped_rewards/iter": {
+                "count": 8,
+                "expected_count": 399,
+                "last_value": 54.89429473876953
+              }
+            },
+            "transitions_per_epoch": 4096
+          },
+          "returncode": 1,
+          "stdout_sha256": "ab302f940181d1ef72ff26691a2006cf5b94cf4696a93c0230ca48c4e65a23e3"
+        }
+      },
+      "checks": {
+        "audit_contiguous_planned_epochs": false,
+        "audit_losses_finite": true,
+        "audit_no_restore_or_observer_errors": true,
+        "audit_planned_frames": false,
+        "child_wait_exit_0": true,
+        "guard_continuous_no_gaps_or_stop": false,
+        "guard_policy_unchanged": true,
+        "normal_child_exit_without_supervisor_stop": false,
+        "planned_final_checkpoint_integrity": false,
+        "smoke_capacity_minimum_1536_MiB": false,
+        "tensorboard_finalizer_complete": false,
+        "tensorboard_planned_tail_complete": false
+      },
+      "completed_epochs": 10,
+      "evaluation_eligible": false,
+      "evaluation_exclusion_reason": "Full run stopped before registered milestones 100/200/300/400; no evaluation launched. Smoke checkpoints are capacity evidence only.",
+      "gradient_finiteness": "not measured by lightweight observer; finite logged loss and checkpoint tensors are separate evidence",
+      "guard_min_free_MiB": 1408.6875,
+      "guard_peak_used_MiB": 6408.9375,
+      "label": "train_32env_seed0_400ep",
+      "optimizer_steps": {
+        "actor": 319,
+        "central_value": 320
+      },
+      "planned_epochs": 400,
+      "planned_num_envs": 32,
+      "recorded_completed_transitions": 40960,
+      "run_name": "g3cr2_peginsert_32env_seed0_baseline_400ep",
+      "supervisor_wall_seconds": 368.88601485600157
+    }
+  ],
+  "schema_version": 1
+}

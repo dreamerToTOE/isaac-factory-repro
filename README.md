@@ -67,3 +67,7 @@ evidence/2026-10-23/       # 包含成功和失败的原始证据
 **PASS（诊断）**：使用 G2 最终 checkpoint，32 环境、seed1001/1002/1003 顺序各 3 episodes，完成 288/288；G3B 官方 ever/terminal 均 280/288（97.222%），与原 G2 分母分开保存。原始 8 个失败标识全部再次失败，但由于历史没有完整轨迹，明确不称为 exact replay。8 个新失败的重叠条件为 A XY=3、B 轴向=8、C=0、D=0、E=0、F=0；D 没有独立接触传感器支持。
 
 轨迹、监督回执、图表及限制见 [G3B 审阅](docs/REVIEW_G3B.md)、[失败分析](docs/G3B_FAILURE_ANALYSIS.md) 和 [G3B evidence](evidence/g3b/README.md)。G2/G3A 基线未改写；G3B 后停止，下一步仅建议先预注册 G3C 的可测接触观测。
+
+## G3C-R2 当前状态（2026-10-25）
+
+64-env容量smoke因margin不足NO-GO；32-envsmoke通过后，新“PegInsert32-env/400-epoch baseline”seed0在10epochs后被监控gap保护停止，工程INCOMPLETE、科学NOT ASSESSED。已核实40,960 completed-epoch transitions，未启动独立评估。未改变官方PPO/任务或guard，未恢复、重试或启动额外seed；下一步先审阅监控可靠性。见[审阅](docs/REVIEW_G3C_R2.md)与[证据](evidence/g3c_r2/README.md)。

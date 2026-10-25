@@ -1,0 +1,304 @@
+{
+  "engineering": "Read-only epoch summaries and actual optimizer/AMP call counters",
+  "started_utc": "2026-10-25T13:29:37.856087+00:00",
+  "epochs": [
+    {
+      "epoch": 1,
+      "environment_transitions": 4096,
+      "env_step_seconds": 28.737712860107422,
+      "rollout_seconds": 29.12978720664978,
+      "optimization_seconds": 1.911874532699585,
+      "official_total_seconds": 31.041661977767944,
+      "observed_epoch_seconds": 31.042456218001462,
+      "env_step_fps": 142.53047971976602,
+      "rollout_fps": 140.61208106130485,
+      "total_fps": 131.95169778388663,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 31,
+        "central_value": 32
+      },
+      "cuda_peak_allocated_bytes": 518810112,
+      "cuda_peak_reserved_bytes": 645922816
+    },
+    {
+      "epoch": 2,
+      "environment_transitions": 4096,
+      "env_step_seconds": 30.882224559783936,
+      "rollout_seconds": 31.253365993499756,
+      "optimization_seconds": 1.9594902992248535,
+      "official_total_seconds": 33.21285653114319,
+      "observed_epoch_seconds": 33.213588632999745,
+      "env_step_fps": 132.63293232230345,
+      "rollout_fps": 131.0578835205113,
+      "total_fps": 123.32573671160273,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 63,
+        "central_value": 64
+      },
+      "cuda_peak_allocated_bytes": 593571328,
+      "cuda_peak_reserved_bytes": 763363328
+    },
+    {
+      "epoch": 3,
+      "environment_transitions": 4096,
+      "env_step_seconds": 30.531861543655396,
+      "rollout_seconds": 30.88914155960083,
+      "optimization_seconds": 1.9879863262176514,
+      "official_total_seconds": 32.87712812423706,
+      "observed_epoch_seconds": 32.87791248100257,
+      "env_step_fps": 134.15493824847243,
+      "rollout_fps": 132.60323185403962,
+      "total_fps": 124.58509102504071,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 95,
+        "central_value": 96
+      },
+      "cuda_peak_allocated_bytes": 593571328,
+      "cuda_peak_reserved_bytes": 763363328
+    },
+    {
+      "epoch": 4,
+      "environment_transitions": 4096,
+      "env_step_seconds": 32.11236119270325,
+      "rollout_seconds": 32.47975993156433,
+      "optimization_seconds": 2.087855100631714,
+      "official_total_seconds": 34.567615270614624,
+      "observed_epoch_seconds": 34.568365836999874,
+      "env_step_fps": 127.55212783701238,
+      "rollout_fps": 126.10930649211616,
+      "total_fps": 118.49240880327501,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 127,
+        "central_value": 128
+      },
+      "cuda_peak_allocated_bytes": 593571328,
+      "cuda_peak_reserved_bytes": 763363328
+    },
+    {
+      "epoch": 5,
+      "environment_transitions": 4096,
+      "env_step_seconds": 32.34609055519104,
+      "rollout_seconds": 32.70790100097656,
+      "optimization_seconds": 2.073046922683716,
+      "official_total_seconds": 34.78094792366028,
+      "observed_epoch_seconds": 34.781699277998996,
+      "env_step_fps": 126.63044991514921,
+      "rollout_fps": 125.2296807391494,
+      "total_fps": 117.76562297813719,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 159,
+        "central_value": 160
+      },
+      "cuda_peak_allocated_bytes": 593571328,
+      "cuda_peak_reserved_bytes": 763363328
+    },
+    {
+      "epoch": 6,
+      "environment_transitions": 4096,
+      "env_step_seconds": 32.84139013290405,
+      "rollout_seconds": 33.20152258872986,
+      "optimization_seconds": 2.084613561630249,
+      "official_total_seconds": 35.28613638877869,
+      "observed_epoch_seconds": 35.28686825100158,
+      "env_step_fps": 124.7206644853984,
+      "rollout_fps": 123.36783619045148,
+      "total_fps": 116.07958306544906,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 191,
+        "central_value": 192
+      },
+      "cuda_peak_allocated_bytes": 593571328,
+      "cuda_peak_reserved_bytes": 763363328
+    },
+    {
+      "epoch": 7,
+      "environment_transitions": 4096,
+      "env_step_seconds": 33.120123624801636,
+      "rollout_seconds": 33.48083853721619,
+      "optimization_seconds": 1.9423489570617676,
+      "official_total_seconds": 35.423187494277954,
+      "observed_epoch_seconds": 35.424069257001975,
+      "env_step_fps": 123.67103596596348,
+      "rollout_fps": 122.33863245232112,
+      "total_fps": 115.63047511355784,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 223,
+        "central_value": 224
+      },
+      "cuda_peak_allocated_bytes": 595868160,
+      "cuda_peak_reserved_bytes": 763363328
+    },
+    {
+      "epoch": 8,
+      "environment_transitions": 4096,
+      "env_step_seconds": 30.78544807434082,
+      "rollout_seconds": 31.1383535861969,
+      "optimization_seconds": 1.796485424041748,
+      "official_total_seconds": 32.93483924865723,
+      "observed_epoch_seconds": 32.935541535000084,
+      "env_step_fps": 133.04987441173387,
+      "rollout_fps": 131.5419580120539,
+      "total_fps": 124.36678281850112,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 255,
+        "central_value": 256
+      },
+      "cuda_peak_allocated_bytes": 595868160,
+      "cuda_peak_reserved_bytes": 763363328
+    },
+    {
+      "epoch": 9,
+      "environment_transitions": 4096,
+      "env_step_seconds": 33.94549107551575,
+      "rollout_seconds": 34.3401620388031,
+      "optimization_seconds": 1.9862229824066162,
+      "official_total_seconds": 36.326385259628296,
+      "observed_epoch_seconds": 36.327213522999955,
+      "env_step_fps": 120.66403726161937,
+      "rollout_fps": 119.27724730511385,
+      "total_fps": 112.7555073461199,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 287,
+        "central_value": 288
+      },
+      "cuda_peak_allocated_bytes": 595868160,
+      "cuda_peak_reserved_bytes": 763363328
+    },
+    {
+      "epoch": 10,
+      "environment_transitions": 4096,
+      "env_step_seconds": 32.827840089797974,
+      "rollout_seconds": 33.19589114189148,
+      "optimization_seconds": 2.0065841674804688,
+      "official_total_seconds": 35.20247554779053,
+      "observed_epoch_seconds": 35.20319364900206,
+      "env_step_fps": 124.77214427740948,
+      "rollout_fps": 123.3887646664518,
+      "total_fps": 116.35545331007506,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 319,
+        "central_value": 320
+      },
+      "cuda_peak_allocated_bytes": 595868160,
+      "cuda_peak_reserved_bytes": 763363328
+    }
+  ],
+  "amp_skips": [
+    {
+      "epoch": 1,
+      "attempt": 1,
+      "scale_before": 65536.0,
+      "scale_after": 32768.0
+    }
+  ],
+  "checkpoint_events": [
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_peginsert_32env_seed0_baseline_400ep/nn/Factory",
+      "epoch": 10,
+      "frame": 40960
+    }
+  ],
+  "optimizer_steps": {
+    "actor": 319,
+    "central_value": 320
+  },
+  "actor_attempts": 320,
+  "instrumentation_errors": [],
+  "runtime": {
+    "num_actors": 32,
+    "horizon_length": 128,
+    "minibatch_size": 512,
+    "mini_epochs": 4,
+    "obs_shape": [
+      19
+    ],
+    "state_shape": [
+      43
+    ],
+    "actions_num": 6,
+    "mixed_precision": true,
+    "config": {
+      "name": "Factory",
+      "device": "cuda:0",
+      "full_experiment_name": "g3cr2_peginsert_32env_seed0_baseline_400ep",
+      "env_name": "rlgpu",
+      "multi_gpu": false,
+      "ppo": true,
+      "mixed_precision": true,
+      "normalize_input": true,
+      "normalize_value": true,
+      "value_bootstrap": true,
+      "num_actors": 32,
+      "reward_shaper": "<rl_games.common.tr_helpers.DefaultRewardsShaper object at 0x76eccd1507c0>",
+      "normalize_advantage": true,
+      "gamma": 0.995,
+      "tau": 0.95,
+      "learning_rate": 0.0001,
+      "lr_schedule": "adaptive",
+      "schedule_type": "standard",
+      "kl_threshold": 0.008,
+      "score_to_win": 20000,
+      "max_epochs": 400,
+      "save_best_after": 10,
+      "save_frequency": 50,
+      "print_stats": true,
+      "grad_norm": 1.0,
+      "entropy_coef": 0.0,
+      "truncate_grads": true,
+      "e_clip": 0.2,
+      "horizon_length": 128,
+      "minibatch_size": 512,
+      "mini_epochs": 4,
+      "critic_coef": 2,
+      "clip_value": true,
+      "seq_length": 128,
+      "bounds_loss_coef": 0.0001,
+      "central_value_config": {
+        "minibatch_size": 512,
+        "mini_epochs": 4,
+        "learning_rate": "1e-4",
+        "lr_schedule": "adaptive",
+        "kl_threshold": 0.008,
+        "clip_value": true,
+        "normalize_input": true,
+        "truncate_grads": true,
+        "network": "<rl_games.algos_torch.models.ModelCentralValue object at 0x76eccd150b80>",
+        "model": {
+          "name": "central_value"
+        }
+      },
+      "player": {
+        "deterministic": false
+      },
+      "train_dir": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory",
+      "features": {
+        "observer": "<rl_games.common.algo_observer.IsaacAlgoObserver object at 0x76eccd150700>"
+      },
+      "network": "<rl_games.algos_torch.models.ModelA2CContinuousLogStd object at 0x76eccd150ac0>"
+    },
+    "actor_model": "Network(\n  (value_mean_std): RunningMeanStd()\n  (running_mean_std): RunningMeanStd()\n  (a2c_network): Network(\n    (actor_cnn): Sequential()\n    (critic_cnn): Sequential()\n    (actor_mlp): Sequential(\n      (0): Linear(in_features=1024, out_features=512, bias=True)\n      (1): ELU(alpha=1.0)\n      (2): Linear(in_features=512, out_features=128, bias=True)\n      (3): ELU(alpha=1.0)\n      (4): Linear(in_features=128, out_features=64, bias=True)\n      (5): ELU(alpha=1.0)\n    )\n    (critic_mlp): Sequential()\n    (rnn): LSTMWithDones(\n      (rnn): LSTM(19, 1024, num_layers=2)\n    )\n    (layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)\n    (value): Linear(in_features=64, out_features=1, bias=True)\n    (value_act): Identity()\n    (mu): Linear(in_features=64, out_features=6, bias=True)\n    (mu_act): Identity()\n    (sigma_act): Identity()\n    (sigma): Linear(in_features=64, out_features=6, bias=True)\n  )\n)",
+    "central_value_model": "Network(\n  (value_mean_std): RunningMeanStd()\n  (running_mean_std): RunningMeanStd()\n  (a2c_network): Network(\n    (actor_cnn): Sequential()\n    (critic_cnn): Sequential()\n    (actor_mlp): Sequential(\n      (0): Linear(in_features=1024, out_features=512, bias=True)\n      (1): ELU(alpha=1.0)\n      (2): Linear(in_features=512, out_features=128, bias=True)\n      (3): ELU(alpha=1.0)\n      (4): Linear(in_features=128, out_features=64, bias=True)\n      (5): ELU(alpha=1.0)\n    )\n    (critic_mlp): Sequential()\n    (rnn): LSTMWithDones(\n      (rnn): LSTM(43, 1024, num_layers=2)\n    )\n    (layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)\n    (value): Linear(in_features=64, out_features=1, bias=True)\n    (value_act): Identity()\n  )\n)"
+  },
+  "observers_installed": true
+}

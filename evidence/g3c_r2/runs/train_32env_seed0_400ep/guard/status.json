@@ -1,0 +1,84 @@
+{
+  "continuous_monitoring": false,
+  "coverage_note": "Sampled coverage: regular intervals are not continuous measurement.",
+  "ended": {
+    "monotonic_seconds": 32667.595557024,
+    "unix_seconds": 1792935343.5236912,
+    "utc": "2026-10-25T13:35:43.523680+00:00"
+  },
+  "error": null,
+  "finalized": true,
+  "first_sample": {
+    "monotonic_seconds": 32298.928349308,
+    "unix_seconds": 1792934974.8564844,
+    "utc": "2026-10-25T13:29:34.856472+00:00"
+  },
+  "identity": {
+    "birth_ticks": "3229876",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 110899,
+    "pid": 110899,
+    "state": "R"
+  },
+  "last_sample": {
+    "monotonic_seconds": 32665.452398374,
+    "unix_seconds": 1792935341.3805335,
+    "utc": "2026-10-25T13:35:41.380523+00:00"
+  },
+  "low_memory_stop_condition_observed": false,
+  "max_low_consecutive": 0,
+  "min_free_MiB": 1408.6875,
+  "monitoring_gaps": [
+    {
+      "duration_seconds": 0.5123187930003041,
+      "from": {
+        "monotonic_seconds": 32664.940079581,
+        "unix_seconds": 1792935340.8682146,
+        "utc": "2026-10-25T13:35:40.868205+00:00"
+      },
+      "to": {
+        "monotonic_seconds": 32665.452398374,
+        "unix_seconds": 1792935341.3805335,
+        "utc": "2026-10-25T13:35:41.380523+00:00"
+      }
+    }
+  ],
+  "peak_used_MiB": 6408.9375,
+  "policy": {
+    "consecutive_samples": 3,
+    "floor_MiB": 1024,
+    "gap_limit_seconds": 0.5,
+    "interval_seconds": 0.1,
+    "stale_seconds": 2
+  },
+  "sample_count": 3662,
+  "schema_version": 2,
+  "started": {
+    "monotonic_seconds": 32298.807443059,
+    "unix_seconds": 1792934974.7355778,
+    "utc": "2026-10-25T13:29:34.735563+00:00"
+  },
+  "stop_reason": "monitoring_gap",
+  "stop_signals": [
+    {
+      "monotonic_seconds": 32666.037984415,
+      "signal": "SIGTERM",
+      "unix_seconds": 1792935341.9661188,
+      "utc": "2026-10-25T13:35:41.966105+00:00"
+    }
+  ],
+  "supervisor_identity": {
+    "birth_ticks": "3229890",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 110901,
+    "pid": 110901,
+    "state": "R"
+  },
+  "target_identity": {
+    "birth_ticks": "3229921",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 110903,
+    "pid": 110903,
+    "state": "R"
+  }
+}

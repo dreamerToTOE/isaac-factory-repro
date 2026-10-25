@@ -1,0 +1,2284 @@
+{
+  "analysis_script_identity": {
+    "bytes": 23596,
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/analyze_g3cr2.py",
+    "sha256": "7ac2664ffdbf04a781a5e78286bcc8a40129ea04f04ebbfdb12e0f1807a22ca2"
+  },
+  "analysis_timing": "post hoc analysis; frozen launch protocol remains separate",
+  "audit_identity": {
+    "bytes": 11624,
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/supervisor/training_audit.json",
+    "sha256": "3048223860ebb71ffe40e1c4a51af76afdeb09ebc656a9d4861f9f48b2ae6dd3"
+  },
+  "budget": {
+    "audit_contiguous_from_epoch_1": true,
+    "completed_budget_fraction": 0.025,
+    "completed_epochs": 10,
+    "completed_transitions": 40960,
+    "horizon_length": 128,
+    "last_completed_epoch": 10,
+    "num_envs": 32,
+    "planned_epochs": 400,
+    "planned_transitions": 1638400,
+    "registered_transition_budget_completed": false,
+    "remaining_planned_transitions": 1597440,
+    "source": "sum of actual completed audit epochs; in-flight work is excluded"
+  },
+  "engineering_status": "INCOMPLETE",
+  "evaluation": {
+    "checkpoints": [
+      {
+        "aggregate": {
+          "episodes_completed": 0,
+          "ever_success_count": 0,
+          "ever_success_rate": null,
+          "ever_success_wilson95": null,
+          "first_success_step_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "first_success_time_seconds_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "terminal_success_count": 0,
+          "terminal_success_rate": null,
+          "terminal_success_wilson95": null,
+          "transient_only_count": 0
+        },
+        "checkpoint_epoch": 100,
+        "complete_preregistered_seeds": false,
+        "episodes_requested": 96,
+        "per_seed": [
+          {
+            "episodes_completed": 0,
+            "episodes_requested": 32,
+            "ever_success_count": 0,
+            "ever_success_rate": null,
+            "ever_success_wilson95": null,
+            "first_success_step_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "first_success_time_seconds_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "seed": 1001,
+            "status": "missing",
+            "terminal_success_count": 0,
+            "terminal_success_rate": null,
+            "terminal_success_wilson95": null,
+            "transient_only_count": 0
+          },
+          {
+            "episodes_completed": 0,
+            "episodes_requested": 32,
+            "ever_success_count": 0,
+            "ever_success_rate": null,
+            "ever_success_wilson95": null,
+            "first_success_step_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "first_success_time_seconds_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "seed": 1002,
+            "status": "missing",
+            "terminal_success_count": 0,
+            "terminal_success_rate": null,
+            "terminal_success_wilson95": null,
+            "transient_only_count": 0
+          },
+          {
+            "episodes_completed": 0,
+            "episodes_requested": 32,
+            "ever_success_count": 0,
+            "ever_success_rate": null,
+            "ever_success_wilson95": null,
+            "first_success_step_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "first_success_time_seconds_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "seed": 1003,
+            "status": "missing",
+            "terminal_success_count": 0,
+            "terminal_success_rate": null,
+            "terminal_success_wilson95": null,
+            "transient_only_count": 0
+          }
+        ]
+      },
+      {
+        "aggregate": {
+          "episodes_completed": 0,
+          "ever_success_count": 0,
+          "ever_success_rate": null,
+          "ever_success_wilson95": null,
+          "first_success_step_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "first_success_time_seconds_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "terminal_success_count": 0,
+          "terminal_success_rate": null,
+          "terminal_success_wilson95": null,
+          "transient_only_count": 0
+        },
+        "checkpoint_epoch": 200,
+        "complete_preregistered_seeds": false,
+        "episodes_requested": 96,
+        "per_seed": [
+          {
+            "episodes_completed": 0,
+            "episodes_requested": 32,
+            "ever_success_count": 0,
+            "ever_success_rate": null,
+            "ever_success_wilson95": null,
+            "first_success_step_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "first_success_time_seconds_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "seed": 1001,
+            "status": "missing",
+            "terminal_success_count": 0,
+            "terminal_success_rate": null,
+            "terminal_success_wilson95": null,
+            "transient_only_count": 0
+          },
+          {
+            "episodes_completed": 0,
+            "episodes_requested": 32,
+            "ever_success_count": 0,
+            "ever_success_rate": null,
+            "ever_success_wilson95": null,
+            "first_success_step_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "first_success_time_seconds_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "seed": 1002,
+            "status": "missing",
+            "terminal_success_count": 0,
+            "terminal_success_rate": null,
+            "terminal_success_wilson95": null,
+            "transient_only_count": 0
+          },
+          {
+            "episodes_completed": 0,
+            "episodes_requested": 32,
+            "ever_success_count": 0,
+            "ever_success_rate": null,
+            "ever_success_wilson95": null,
+            "first_success_step_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "first_success_time_seconds_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "seed": 1003,
+            "status": "missing",
+            "terminal_success_count": 0,
+            "terminal_success_rate": null,
+            "terminal_success_wilson95": null,
+            "transient_only_count": 0
+          }
+        ]
+      },
+      {
+        "aggregate": {
+          "episodes_completed": 0,
+          "ever_success_count": 0,
+          "ever_success_rate": null,
+          "ever_success_wilson95": null,
+          "first_success_step_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "first_success_time_seconds_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "terminal_success_count": 0,
+          "terminal_success_rate": null,
+          "terminal_success_wilson95": null,
+          "transient_only_count": 0
+        },
+        "checkpoint_epoch": 300,
+        "complete_preregistered_seeds": false,
+        "episodes_requested": 96,
+        "per_seed": [
+          {
+            "episodes_completed": 0,
+            "episodes_requested": 32,
+            "ever_success_count": 0,
+            "ever_success_rate": null,
+            "ever_success_wilson95": null,
+            "first_success_step_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "first_success_time_seconds_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "seed": 1001,
+            "status": "missing",
+            "terminal_success_count": 0,
+            "terminal_success_rate": null,
+            "terminal_success_wilson95": null,
+            "transient_only_count": 0
+          },
+          {
+            "episodes_completed": 0,
+            "episodes_requested": 32,
+            "ever_success_count": 0,
+            "ever_success_rate": null,
+            "ever_success_wilson95": null,
+            "first_success_step_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "first_success_time_seconds_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "seed": 1002,
+            "status": "missing",
+            "terminal_success_count": 0,
+            "terminal_success_rate": null,
+            "terminal_success_wilson95": null,
+            "transient_only_count": 0
+          },
+          {
+            "episodes_completed": 0,
+            "episodes_requested": 32,
+            "ever_success_count": 0,
+            "ever_success_rate": null,
+            "ever_success_wilson95": null,
+            "first_success_step_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "first_success_time_seconds_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "seed": 1003,
+            "status": "missing",
+            "terminal_success_count": 0,
+            "terminal_success_rate": null,
+            "terminal_success_wilson95": null,
+            "transient_only_count": 0
+          }
+        ]
+      },
+      {
+        "aggregate": {
+          "episodes_completed": 0,
+          "ever_success_count": 0,
+          "ever_success_rate": null,
+          "ever_success_wilson95": null,
+          "first_success_step_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "first_success_time_seconds_conditional": {
+            "max": null,
+            "mean": null,
+            "median": null,
+            "min": null,
+            "n": 0,
+            "q25": null,
+            "q75": null
+          },
+          "terminal_success_count": 0,
+          "terminal_success_rate": null,
+          "terminal_success_wilson95": null,
+          "transient_only_count": 0
+        },
+        "checkpoint_epoch": 400,
+        "complete_preregistered_seeds": false,
+        "episodes_requested": 288,
+        "per_seed": [
+          {
+            "episodes_completed": 0,
+            "episodes_requested": 96,
+            "ever_success_count": 0,
+            "ever_success_rate": null,
+            "ever_success_wilson95": null,
+            "first_success_step_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "first_success_time_seconds_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "seed": 1001,
+            "status": "missing",
+            "terminal_success_count": 0,
+            "terminal_success_rate": null,
+            "terminal_success_wilson95": null,
+            "transient_only_count": 0
+          },
+          {
+            "episodes_completed": 0,
+            "episodes_requested": 96,
+            "ever_success_count": 0,
+            "ever_success_rate": null,
+            "ever_success_wilson95": null,
+            "first_success_step_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "first_success_time_seconds_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "seed": 1002,
+            "status": "missing",
+            "terminal_success_count": 0,
+            "terminal_success_rate": null,
+            "terminal_success_wilson95": null,
+            "transient_only_count": 0
+          },
+          {
+            "episodes_completed": 0,
+            "episodes_requested": 96,
+            "ever_success_count": 0,
+            "ever_success_rate": null,
+            "ever_success_wilson95": null,
+            "first_success_step_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "first_success_time_seconds_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "seed": 1003,
+            "status": "missing",
+            "terminal_success_count": 0,
+            "terminal_success_rate": null,
+            "terminal_success_wilson95": null,
+            "transient_only_count": 0
+          }
+        ]
+      }
+    ],
+    "denominator_rule": "Only actual completed episode records from preregistered seeds in each selected evaluator output; unfinished episodes excluded; complete and partial duplicate outputs are not pooled. Additional seeds remain separate per-seed rows.",
+    "expected_checkpoint_epochs": [
+      100,
+      200,
+      300,
+      400
+    ],
+    "final_episodes_per_env": 3,
+    "first_success_rule": "Conditional on ever-successful completed episodes; failed episodes are excluded, never encoded as zero seconds or timeout times.",
+    "interval_rule": "Two-sided 95% Wilson score intervals over episode counts. Descriptive only: vector environments and episodes share policy/seeds; intervals do not quantify training-seed variability.",
+    "num_envs_per_seed": 32,
+    "preregistered_seeds": [
+      1001,
+      1002,
+      1003
+    ]
+  },
+  "issues": {
+    "errors": [],
+    "warnings": [
+      "Evaluation directory missing: /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/evaluation"
+    ]
+  },
+  "manifest_identity": {
+    "bytes": 13422,
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r2/manifest_frozen.json",
+    "sha256": "a6f70f253b48654cf4360863a63ec9ede7acae762dbcfab8660a46f4a7df0181"
+  },
+  "matched_transition_comparison": {
+    "historical_protocol": "G2 64-env / 200-epoch seed0 baseline",
+    "limits": [
+      "Equal environment transitions do not equal identical PPO batches or optimizer updates.",
+      "One training seed in each protocol cannot establish seed robustness.",
+      "Missing milestones have zero observed episodes and null rates, not zero success."
+    ],
+    "new_protocol": "32-env / 400-epoch seed0 baseline",
+    "pooling_rule": "No episode pooling across protocols, checkpoints or training runs.",
+    "rows": [
+      {
+        "between_protocol_delta_assessed": false,
+        "environment_transitions": 409600,
+        "ever_success_rate_delta": null,
+        "g2_checkpoint_epoch": 50,
+        "g2_evaluated": true,
+        "g2_historical": {
+          "aggregate": {
+            "episodes_completed": 96,
+            "ever_success_count": 69,
+            "ever_success_rate": 0.71875,
+            "ever_success_wilson95": [
+              0.6217410386959606,
+              0.7989258916163063
+            ],
+            "first_success_step_conditional": {
+              "max": 102,
+              "mean": 35.2463768115942,
+              "median": 33,
+              "min": 20,
+              "n": 69,
+              "q25": 26.0,
+              "q75": 38.0
+            },
+            "first_success_time_seconds_conditional": {
+              "max": 6.8,
+              "mean": 2.34975845410628,
+              "median": 2.2,
+              "min": 1.3333333333333333,
+              "n": 69,
+              "q25": 1.7333333333333334,
+              "q75": 2.533333333333333
+            },
+            "terminal_success_count": 69,
+            "terminal_success_rate": 0.71875,
+            "terminal_success_wilson95": [
+              0.6217410386959606,
+              0.7989258916163063
+            ],
+            "transient_only_count": 0
+          },
+          "checkpoint_epoch": 50,
+          "complete_preregistered_seeds": true,
+          "episodes_requested": 96,
+          "per_seed": [
+            {
+              "auto_reset_order_verified": true,
+              "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_50_rew_301.46692.pth",
+              "checkpoint_sha256": "fdc0637d49844bc8463a9da3428039604fbd0e51e752eb28a00a91b5e6296cca",
+              "deterministic": true,
+              "episodes_completed": 32,
+              "episodes_requested": 32,
+              "ever_success_count": 22,
+              "ever_success_rate": 0.6875,
+              "ever_success_wilson95": [
+                0.5143332169904459,
+                0.8204745836639026
+              ],
+              "first_success_step_conditional": {
+                "max": 102,
+                "mean": 39.18181818181818,
+                "median": 35.5,
+                "min": 21,
+                "n": 22,
+                "q25": 28.5,
+                "q75": 44.0
+              },
+              "first_success_time_seconds_conditional": {
+                "max": 6.8,
+                "mean": 2.6121212121212123,
+                "median": 2.3666666666666667,
+                "min": 1.4,
+                "n": 22,
+                "q25": 1.9,
+                "q75": 2.933333333333333
+              },
+              "input_identity": {
+                "bytes": 21614,
+                "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch050/seed1001/metrics.json",
+                "sha256": "1975993d699ce38452f4fbc4071d53f9941a4168f52b93be88234620c7bf168f"
+              },
+              "meets_preregistered_target": true,
+              "official_success_capture": "pre_reset_factory_get_curr_successes",
+              "seed": 1001,
+              "status": "complete",
+              "terminal_success_count": 22,
+              "terminal_success_rate": 0.6875,
+              "terminal_success_wilson95": [
+                0.5143332169904459,
+                0.8204745836639026
+              ],
+              "transient_only_count": 0
+            },
+            {
+              "auto_reset_order_verified": true,
+              "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_50_rew_301.46692.pth",
+              "checkpoint_sha256": "fdc0637d49844bc8463a9da3428039604fbd0e51e752eb28a00a91b5e6296cca",
+              "deterministic": true,
+              "episodes_completed": 32,
+              "episodes_requested": 32,
+              "ever_success_count": 25,
+              "ever_success_rate": 0.78125,
+              "ever_success_wilson95": [
+                0.6124500635075647,
+                0.8897616374739581
+              ],
+              "first_success_step_conditional": {
+                "max": 55,
+                "mean": 30.44,
+                "median": 28,
+                "min": 20,
+                "n": 25,
+                "q25": 23.0,
+                "q75": 34.0
+              },
+              "first_success_time_seconds_conditional": {
+                "max": 3.6666666666666665,
+                "mean": 2.029333333333333,
+                "median": 1.8666666666666667,
+                "min": 1.3333333333333333,
+                "n": 25,
+                "q25": 1.5333333333333332,
+                "q75": 2.2666666666666666
+              },
+              "input_identity": {
+                "bytes": 21637,
+                "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch050/seed1002/metrics.json",
+                "sha256": "95ab663eea81a722590503f4ba797475cff264322552c962fee7558740e24fcd"
+              },
+              "meets_preregistered_target": true,
+              "official_success_capture": "pre_reset_factory_get_curr_successes",
+              "seed": 1002,
+              "status": "complete",
+              "terminal_success_count": 25,
+              "terminal_success_rate": 0.78125,
+              "terminal_success_wilson95": [
+                0.6124500635075647,
+                0.8897616374739581
+              ],
+              "transient_only_count": 0
+            },
+            {
+              "auto_reset_order_verified": true,
+              "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_50_rew_301.46692.pth",
+              "checkpoint_sha256": "fdc0637d49844bc8463a9da3428039604fbd0e51e752eb28a00a91b5e6296cca",
+              "deterministic": true,
+              "episodes_completed": 32,
+              "episodes_requested": 32,
+              "ever_success_count": 22,
+              "ever_success_rate": 0.6875,
+              "ever_success_wilson95": [
+                0.5143332169904459,
+                0.8204745836639026
+              ],
+              "first_success_step_conditional": {
+                "max": 91,
+                "mean": 36.77272727272727,
+                "median": 33.5,
+                "min": 22,
+                "n": 22,
+                "q25": 26.5,
+                "q75": 40.5
+              },
+              "first_success_time_seconds_conditional": {
+                "max": 6.066666666666666,
+                "mean": 2.4515151515151516,
+                "median": 2.2333333333333334,
+                "min": 1.4666666666666666,
+                "n": 22,
+                "q25": 1.7666666666666666,
+                "q75": 2.6999999999999997
+              },
+              "input_identity": {
+                "bytes": 21526,
+                "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch050/seed1003/metrics.json",
+                "sha256": "165bc554c86985fa14ddeed8cbdd70a9bee28d7052578f80cbf73843c0eab706"
+              },
+              "meets_preregistered_target": true,
+              "official_success_capture": "pre_reset_factory_get_curr_successes",
+              "seed": 1003,
+              "status": "complete",
+              "terminal_success_count": 22,
+              "terminal_success_rate": 0.6875,
+              "terminal_success_wilson95": [
+                0.5143332169904459,
+                0.8204745836639026
+              ],
+              "transient_only_count": 0
+            }
+          ]
+        },
+        "g3cr2": {
+          "aggregate": {
+            "episodes_completed": 0,
+            "ever_success_count": 0,
+            "ever_success_rate": null,
+            "ever_success_wilson95": null,
+            "first_success_step_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "first_success_time_seconds_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "terminal_success_count": 0,
+            "terminal_success_rate": null,
+            "terminal_success_wilson95": null,
+            "transient_only_count": 0
+          },
+          "checkpoint_epoch": 100,
+          "complete_preregistered_seeds": false,
+          "episodes_requested": 96,
+          "per_seed": [
+            {
+              "episodes_completed": 0,
+              "episodes_requested": 32,
+              "ever_success_count": 0,
+              "ever_success_rate": null,
+              "ever_success_wilson95": null,
+              "first_success_step_conditional": {
+                "max": null,
+                "mean": null,
+                "median": null,
+                "min": null,
+                "n": 0,
+                "q25": null,
+                "q75": null
+              },
+              "first_success_time_seconds_conditional": {
+                "max": null,
+                "mean": null,
+                "median": null,
+                "min": null,
+                "n": 0,
+                "q25": null,
+                "q75": null
+              },
+              "seed": 1001,
+              "status": "missing",
+              "terminal_success_count": 0,
+              "terminal_success_rate": null,
+              "terminal_success_wilson95": null,
+              "transient_only_count": 0
+            },
+            {
+              "episodes_completed": 0,
+              "episodes_requested": 32,
+              "ever_success_count": 0,
+              "ever_success_rate": null,
+              "ever_success_wilson95": null,
+              "first_success_step_conditional": {
+                "max": null,
+                "mean": null,
+                "median": null,
+                "min": null,
+                "n": 0,
+                "q25": null,
+                "q75": null
+              },
+              "first_success_time_seconds_conditional": {
+                "max": null,
+                "mean": null,
+                "median": null,
+                "min": null,
+                "n": 0,
+                "q25": null,
+                "q75": null
+              },
+              "seed": 1002,
+              "status": "missing",
+              "terminal_success_count": 0,
+              "terminal_success_rate": null,
+              "terminal_success_wilson95": null,
+              "transient_only_count": 0
+            },
+            {
+              "episodes_completed": 0,
+              "episodes_requested": 32,
+              "ever_success_count": 0,
+              "ever_success_rate": null,
+              "ever_success_wilson95": null,
+              "first_success_step_conditional": {
+                "max": null,
+                "mean": null,
+                "median": null,
+                "min": null,
+                "n": 0,
+                "q25": null,
+                "q75": null
+              },
+              "first_success_time_seconds_conditional": {
+                "max": null,
+                "mean": null,
+                "median": null,
+                "min": null,
+                "n": 0,
+                "q25": null,
+                "q75": null
+              },
+              "seed": 1003,
+              "status": "missing",
+              "terminal_success_count": 0,
+              "terminal_success_rate": null,
+              "terminal_success_wilson95": null,
+              "transient_only_count": 0
+            }
+          ]
+        },
+        "g3cr2_checkpoint_epoch": 100,
+        "g3cr2_evaluated": false,
+        "terminal_success_rate_delta": null
+      },
+      {
+        "between_protocol_delta_assessed": false,
+        "environment_transitions": 819200,
+        "ever_success_rate_delta": null,
+        "g2_checkpoint_epoch": 100,
+        "g2_evaluated": true,
+        "g2_historical": {
+          "aggregate": {
+            "episodes_completed": 96,
+            "ever_success_count": 81,
+            "ever_success_rate": 0.84375,
+            "ever_success_wilson95": [
+              0.7580851332547138,
+              0.9029629000931343
+            ],
+            "first_success_step_conditional": {
+              "max": 141,
+              "mean": 33.65432098765432,
+              "median": 27,
+              "min": 19,
+              "n": 81,
+              "q25": 23.0,
+              "q75": 37.0
+            },
+            "first_success_time_seconds_conditional": {
+              "max": 9.4,
+              "mean": 2.2436213991769547,
+              "median": 1.8,
+              "min": 1.2666666666666666,
+              "n": 81,
+              "q25": 1.5333333333333332,
+              "q75": 2.466666666666667
+            },
+            "terminal_success_count": 81,
+            "terminal_success_rate": 0.84375,
+            "terminal_success_wilson95": [
+              0.7580851332547138,
+              0.9029629000931343
+            ],
+            "transient_only_count": 0
+          },
+          "checkpoint_epoch": 100,
+          "complete_preregistered_seeds": true,
+          "episodes_requested": 96,
+          "per_seed": [
+            {
+              "auto_reset_order_verified": true,
+              "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_100_rew_346.65335.pth",
+              "checkpoint_sha256": "fd5b63985441f2286b5700e57edbd5d74668492e2d7936fb1e250a76e272114f",
+              "deterministic": true,
+              "episodes_completed": 32,
+              "episodes_requested": 32,
+              "ever_success_count": 27,
+              "ever_success_rate": 0.84375,
+              "ever_success_wilson95": [
+                0.682458504024696,
+                0.9313557971749429
+              ],
+              "first_success_step_conditional": {
+                "max": 141,
+                "mean": 39.44444444444444,
+                "median": 35,
+                "min": 20,
+                "n": 27,
+                "q25": 25.0,
+                "q75": 40.0
+              },
+              "first_success_time_seconds_conditional": {
+                "max": 9.4,
+                "mean": 2.6296296296296298,
+                "median": 2.3333333333333335,
+                "min": 1.3333333333333333,
+                "n": 27,
+                "q25": 1.6666666666666667,
+                "q75": 2.6666666666666665
+              },
+              "input_identity": {
+                "bytes": 21652,
+                "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch100/seed1001/metrics.json",
+                "sha256": "b04522695e0192f3e7f0c361588ae91d42b6086444bfbc2b17f8a94470703070"
+              },
+              "meets_preregistered_target": true,
+              "official_success_capture": "pre_reset_factory_get_curr_successes",
+              "seed": 1001,
+              "status": "complete",
+              "terminal_success_count": 27,
+              "terminal_success_rate": 0.84375,
+              "terminal_success_wilson95": [
+                0.682458504024696,
+                0.9313557971749429
+              ],
+              "transient_only_count": 0
+            },
+            {
+              "auto_reset_order_verified": true,
+              "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_100_rew_346.65335.pth",
+              "checkpoint_sha256": "fd5b63985441f2286b5700e57edbd5d74668492e2d7936fb1e250a76e272114f",
+              "deterministic": true,
+              "episodes_completed": 32,
+              "episodes_requested": 32,
+              "ever_success_count": 31,
+              "ever_success_rate": 0.96875,
+              "ever_success_wilson95": [
+                0.8425573617998744,
+                0.9944621398359969
+              ],
+              "first_success_step_conditional": {
+                "max": 70,
+                "mean": 31.677419354838708,
+                "median": 27,
+                "min": 19,
+                "n": 31,
+                "q25": 23.5,
+                "q75": 30.0
+              },
+              "first_success_time_seconds_conditional": {
+                "max": 4.666666666666667,
+                "mean": 2.1118279569892473,
+                "median": 1.8,
+                "min": 1.2666666666666666,
+                "n": 31,
+                "q25": 1.5666666666666667,
+                "q75": 2.0
+              },
+              "input_identity": {
+                "bytes": 21677,
+                "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch100/seed1002/metrics.json",
+                "sha256": "f7c6108df5d0ebe2ca501f0ff9791ea34c5514559e89c1fd286e448bac4cfbff"
+              },
+              "meets_preregistered_target": true,
+              "official_success_capture": "pre_reset_factory_get_curr_successes",
+              "seed": 1002,
+              "status": "complete",
+              "terminal_success_count": 31,
+              "terminal_success_rate": 0.96875,
+              "terminal_success_wilson95": [
+                0.8425573617998744,
+                0.9944621398359969
+              ],
+              "transient_only_count": 0
+            },
+            {
+              "auto_reset_order_verified": true,
+              "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_100_rew_346.65335.pth",
+              "checkpoint_sha256": "fd5b63985441f2286b5700e57edbd5d74668492e2d7936fb1e250a76e272114f",
+              "deterministic": true,
+              "episodes_completed": 32,
+              "episodes_requested": 32,
+              "ever_success_count": 23,
+              "ever_success_rate": 0.71875,
+              "ever_success_wilson95": [
+                0.5462549057408342,
+                0.8443541950225723
+              ],
+              "first_success_step_conditional": {
+                "max": 58,
+                "mean": 29.52173913043478,
+                "median": 26,
+                "min": 19,
+                "n": 23,
+                "q25": 23.0,
+                "q75": 34.0
+              },
+              "first_success_time_seconds_conditional": {
+                "max": 3.8666666666666667,
+                "mean": 1.9681159420289855,
+                "median": 1.7333333333333334,
+                "min": 1.2666666666666666,
+                "n": 23,
+                "q25": 1.5333333333333332,
+                "q75": 2.2666666666666666
+              },
+              "input_identity": {
+                "bytes": 21655,
+                "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch100/seed1003/metrics.json",
+                "sha256": "fc451e686c58dd87a11ffe05c362d7f3fcc8edd445d59d2de119380c3d2103c7"
+              },
+              "meets_preregistered_target": true,
+              "official_success_capture": "pre_reset_factory_get_curr_successes",
+              "seed": 1003,
+              "status": "complete",
+              "terminal_success_count": 23,
+              "terminal_success_rate": 0.71875,
+              "terminal_success_wilson95": [
+                0.5462549057408342,
+                0.8443541950225723
+              ],
+              "transient_only_count": 0
+            }
+          ]
+        },
+        "g3cr2": {
+          "aggregate": {
+            "episodes_completed": 0,
+            "ever_success_count": 0,
+            "ever_success_rate": null,
+            "ever_success_wilson95": null,
+            "first_success_step_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "first_success_time_seconds_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "terminal_success_count": 0,
+            "terminal_success_rate": null,
+            "terminal_success_wilson95": null,
+            "transient_only_count": 0
+          },
+          "checkpoint_epoch": 200,
+          "complete_preregistered_seeds": false,
+          "episodes_requested": 96,
+          "per_seed": [
+            {
+              "episodes_completed": 0,
+              "episodes_requested": 32,
+              "ever_success_count": 0,
+              "ever_success_rate": null,
+              "ever_success_wilson95": null,
+              "first_success_step_conditional": {
+                "max": null,
+                "mean": null,
+                "median": null,
+                "min": null,
+                "n": 0,
+                "q25": null,
+                "q75": null
+              },
+              "first_success_time_seconds_conditional": {
+                "max": null,
+                "mean": null,
+                "median": null,
+                "min": null,
+                "n": 0,
+                "q25": null,
+                "q75": null
+              },
+              "seed": 1001,
+              "status": "missing",
+              "terminal_success_count": 0,
+              "terminal_success_rate": null,
+              "terminal_success_wilson95": null,
+              "transient_only_count": 0
+            },
+            {
+              "episodes_completed": 0,
+              "episodes_requested": 32,
+              "ever_success_count": 0,
+              "ever_success_rate": null,
+              "ever_success_wilson95": null,
+              "first_success_step_conditional": {
+                "max": null,
+                "mean": null,
+                "median": null,
+                "min": null,
+                "n": 0,
+                "q25": null,
+                "q75": null
+              },
+              "first_success_time_seconds_conditional": {
+                "max": null,
+                "mean": null,
+                "median": null,
+                "min": null,
+                "n": 0,
+                "q25": null,
+                "q75": null
+              },
+              "seed": 1002,
+              "status": "missing",
+              "terminal_success_count": 0,
+              "terminal_success_rate": null,
+              "terminal_success_wilson95": null,
+              "transient_only_count": 0
+            },
+            {
+              "episodes_completed": 0,
+              "episodes_requested": 32,
+              "ever_success_count": 0,
+              "ever_success_rate": null,
+              "ever_success_wilson95": null,
+              "first_success_step_conditional": {
+                "max": null,
+                "mean": null,
+                "median": null,
+                "min": null,
+                "n": 0,
+                "q25": null,
+                "q75": null
+              },
+              "first_success_time_seconds_conditional": {
+                "max": null,
+                "mean": null,
+                "median": null,
+                "min": null,
+                "n": 0,
+                "q25": null,
+                "q75": null
+              },
+              "seed": 1003,
+              "status": "missing",
+              "terminal_success_count": 0,
+              "terminal_success_rate": null,
+              "terminal_success_wilson95": null,
+              "transient_only_count": 0
+            }
+          ]
+        },
+        "g3cr2_checkpoint_epoch": 200,
+        "g3cr2_evaluated": false,
+        "terminal_success_rate_delta": null
+      },
+      {
+        "between_protocol_delta_assessed": false,
+        "environment_transitions": 1228800,
+        "ever_success_rate_delta": null,
+        "g2_checkpoint_epoch": 150,
+        "g2_evaluated": true,
+        "g2_historical": {
+          "aggregate": {
+            "episodes_completed": 96,
+            "ever_success_count": 92,
+            "ever_success_rate": 0.9583333333333334,
+            "ever_success_wilson95": [
+              0.8977180853334191,
+              0.9836792924637118
+            ],
+            "first_success_step_conditional": {
+              "max": 141,
+              "mean": 35.55434782608695,
+              "median": 28.0,
+              "min": 18,
+              "n": 92,
+              "q25": 23.0,
+              "q75": 43.25
+            },
+            "first_success_time_seconds_conditional": {
+              "max": 9.4,
+              "mean": 2.3702898550724636,
+              "median": 1.8666666666666667,
+              "min": 1.2,
+              "n": 92,
+              "q25": 1.5333333333333332,
+              "q75": 2.8833333333333333
+            },
+            "terminal_success_count": 92,
+            "terminal_success_rate": 0.9583333333333334,
+            "terminal_success_wilson95": [
+              0.8977180853334191,
+              0.9836792924637118
+            ],
+            "transient_only_count": 0
+          },
+          "checkpoint_epoch": 150,
+          "complete_preregistered_seeds": true,
+          "episodes_requested": 96,
+          "per_seed": [
+            {
+              "auto_reset_order_verified": true,
+              "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_150_rew_350.71515.pth",
+              "checkpoint_sha256": "b24fa2215b04466bd42f4b3374e1cce2f9c6a01cf633ed59295ce995c6b01487",
+              "deterministic": true,
+              "episodes_completed": 32,
+              "episodes_requested": 32,
+              "ever_success_count": 32,
+              "ever_success_rate": 1.0,
+              "ever_success_wilson95": [
+                0.8928208017449293,
+                1.0
+              ],
+              "first_success_step_conditional": {
+                "max": 136,
+                "mean": 39.375,
+                "median": 34.0,
+                "min": 19,
+                "n": 32,
+                "q25": 25.0,
+                "q75": 49.25
+              },
+              "first_success_time_seconds_conditional": {
+                "max": 9.066666666666666,
+                "mean": 2.625,
+                "median": 2.2666666666666666,
+                "min": 1.2666666666666666,
+                "n": 32,
+                "q25": 1.6666666666666667,
+                "q75": 3.2833333333333337
+              },
+              "input_identity": {
+                "bytes": 21664,
+                "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch150/seed1001/metrics.json",
+                "sha256": "1287a0a5ee8f934fd90e0420a66055490c84dee569d534e08485e92c80128061"
+              },
+              "meets_preregistered_target": true,
+              "official_success_capture": "pre_reset_factory_get_curr_successes",
+              "seed": 1001,
+              "status": "complete",
+              "terminal_success_count": 32,
+              "terminal_success_rate": 1.0,
+              "terminal_success_wilson95": [
+                0.8928208017449293,
+                1.0
+              ],
+              "transient_only_count": 0
+            },
+            {
+              "auto_reset_order_verified": true,
+              "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_150_rew_350.71515.pth",
+              "checkpoint_sha256": "b24fa2215b04466bd42f4b3374e1cce2f9c6a01cf633ed59295ce995c6b01487",
+              "deterministic": true,
+              "episodes_completed": 32,
+              "episodes_requested": 32,
+              "ever_success_count": 32,
+              "ever_success_rate": 1.0,
+              "ever_success_wilson95": [
+                0.8928208017449293,
+                1.0
+              ],
+              "first_success_step_conditional": {
+                "max": 58,
+                "mean": 28.125,
+                "median": 24.5,
+                "min": 18,
+                "n": 32,
+                "q25": 22.75,
+                "q75": 29.0
+              },
+              "first_success_time_seconds_conditional": {
+                "max": 3.8666666666666667,
+                "mean": 1.875,
+                "median": 1.6333333333333333,
+                "min": 1.2,
+                "n": 32,
+                "q25": 1.5166666666666666,
+                "q75": 1.9333333333333333
+              },
+              "input_identity": {
+                "bytes": 21624,
+                "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch150/seed1002/metrics.json",
+                "sha256": "40d26ff0a8d152d0593050464b118efc3abe1f99da0209132f7d158487f75a52"
+              },
+              "meets_preregistered_target": true,
+              "official_success_capture": "pre_reset_factory_get_curr_successes",
+              "seed": 1002,
+              "status": "complete",
+              "terminal_success_count": 32,
+              "terminal_success_rate": 1.0,
+              "terminal_success_wilson95": [
+                0.8928208017449293,
+                1.0
+              ],
+              "transient_only_count": 0
+            },
+            {
+              "auto_reset_order_verified": true,
+              "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_150_rew_350.71515.pth",
+              "checkpoint_sha256": "b24fa2215b04466bd42f4b3374e1cce2f9c6a01cf633ed59295ce995c6b01487",
+              "deterministic": true,
+              "episodes_completed": 32,
+              "episodes_requested": 32,
+              "ever_success_count": 28,
+              "ever_success_rate": 0.875,
+              "ever_success_wilson95": [
+                0.7193169451834978,
+                0.9502986561251991
+              ],
+              "first_success_step_conditional": {
+                "max": 141,
+                "mean": 39.67857142857143,
+                "median": 29.5,
+                "min": 19,
+                "n": 28,
+                "q25": 22.0,
+                "q75": 49.5
+              },
+              "first_success_time_seconds_conditional": {
+                "max": 9.4,
+                "mean": 2.645238095238095,
+                "median": 1.9666666666666668,
+                "min": 1.2666666666666666,
+                "n": 28,
+                "q25": 1.4666666666666666,
+                "q75": 3.3000000000000003
+              },
+              "input_identity": {
+                "bytes": 21534,
+                "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch150/seed1003/metrics.json",
+                "sha256": "98b9e37b201e79552a714fb6bad14be4e68fa577a90778c766052ce02c28dbcd"
+              },
+              "meets_preregistered_target": true,
+              "official_success_capture": "pre_reset_factory_get_curr_successes",
+              "seed": 1003,
+              "status": "complete",
+              "terminal_success_count": 28,
+              "terminal_success_rate": 0.875,
+              "terminal_success_wilson95": [
+                0.7193169451834978,
+                0.9502986561251991
+              ],
+              "transient_only_count": 0
+            }
+          ]
+        },
+        "g3cr2": {
+          "aggregate": {
+            "episodes_completed": 0,
+            "ever_success_count": 0,
+            "ever_success_rate": null,
+            "ever_success_wilson95": null,
+            "first_success_step_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "first_success_time_seconds_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "terminal_success_count": 0,
+            "terminal_success_rate": null,
+            "terminal_success_wilson95": null,
+            "transient_only_count": 0
+          },
+          "checkpoint_epoch": 300,
+          "complete_preregistered_seeds": false,
+          "episodes_requested": 96,
+          "per_seed": [
+            {
+              "episodes_completed": 0,
+              "episodes_requested": 32,
+              "ever_success_count": 0,
+              "ever_success_rate": null,
+              "ever_success_wilson95": null,
+              "first_success_step_conditional": {
+                "max": null,
+                "mean": null,
+                "median": null,
+                "min": null,
+                "n": 0,
+                "q25": null,
+                "q75": null
+              },
+              "first_success_time_seconds_conditional": {
+                "max": null,
+                "mean": null,
+                "median": null,
+                "min": null,
+                "n": 0,
+                "q25": null,
+                "q75": null
+              },
+              "seed": 1001,
+              "status": "missing",
+              "terminal_success_count": 0,
+              "terminal_success_rate": null,
+              "terminal_success_wilson95": null,
+              "transient_only_count": 0
+            },
+            {
+              "episodes_completed": 0,
+              "episodes_requested": 32,
+              "ever_success_count": 0,
+              "ever_success_rate": null,
+              "ever_success_wilson95": null,
+              "first_success_step_conditional": {
+                "max": null,
+                "mean": null,
+                "median": null,
+                "min": null,
+                "n": 0,
+                "q25": null,
+                "q75": null
+              },
+              "first_success_time_seconds_conditional": {
+                "max": null,
+                "mean": null,
+                "median": null,
+                "min": null,
+                "n": 0,
+                "q25": null,
+                "q75": null
+              },
+              "seed": 1002,
+              "status": "missing",
+              "terminal_success_count": 0,
+              "terminal_success_rate": null,
+              "terminal_success_wilson95": null,
+              "transient_only_count": 0
+            },
+            {
+              "episodes_completed": 0,
+              "episodes_requested": 32,
+              "ever_success_count": 0,
+              "ever_success_rate": null,
+              "ever_success_wilson95": null,
+              "first_success_step_conditional": {
+                "max": null,
+                "mean": null,
+                "median": null,
+                "min": null,
+                "n": 0,
+                "q25": null,
+                "q75": null
+              },
+              "first_success_time_seconds_conditional": {
+                "max": null,
+                "mean": null,
+                "median": null,
+                "min": null,
+                "n": 0,
+                "q25": null,
+                "q75": null
+              },
+              "seed": 1003,
+              "status": "missing",
+              "terminal_success_count": 0,
+              "terminal_success_rate": null,
+              "terminal_success_wilson95": null,
+              "transient_only_count": 0
+            }
+          ]
+        },
+        "g3cr2_checkpoint_epoch": 300,
+        "g3cr2_evaluated": false,
+        "terminal_success_rate_delta": null
+      },
+      {
+        "between_protocol_delta_assessed": false,
+        "environment_transitions": 1638400,
+        "ever_success_rate_delta": null,
+        "g2_checkpoint_epoch": 200,
+        "g2_evaluated": true,
+        "g2_historical": {
+          "aggregate": {
+            "episodes_completed": 288,
+            "ever_success_count": 280,
+            "ever_success_rate": 0.9722222222222222,
+            "ever_success_wilson95": [
+              0.9461541500457419,
+              0.9858587349608235
+            ],
+            "first_success_step_conditional": {
+              "max": 105,
+              "mean": 33.535714285714285,
+              "median": 29.0,
+              "min": 18,
+              "n": 280,
+              "q25": 24.0,
+              "q75": 40.0
+            },
+            "first_success_time_seconds_conditional": {
+              "max": 7.0,
+              "mean": 2.2357142857142858,
+              "median": 1.9333333333333333,
+              "min": 1.2,
+              "n": 280,
+              "q25": 1.6,
+              "q75": 2.6666666666666665
+            },
+            "terminal_success_count": 280,
+            "terminal_success_rate": 0.9722222222222222,
+            "terminal_success_wilson95": [
+              0.9461541500457419,
+              0.9858587349608235
+            ],
+            "transient_only_count": 0
+          },
+          "checkpoint_epoch": 200,
+          "complete_preregistered_seeds": true,
+          "episodes_requested": 288,
+          "per_seed": [
+            {
+              "auto_reset_order_verified": true,
+              "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+              "checkpoint_sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+              "deterministic": true,
+              "episodes_completed": 96,
+              "episodes_requested": 96,
+              "ever_success_count": 95,
+              "ever_success_rate": 0.9895833333333334,
+              "ever_success_wilson95": [
+                0.9433338237728424,
+                0.9981588297831838
+              ],
+              "first_success_step_conditional": {
+                "max": 72,
+                "mean": 34.17894736842105,
+                "median": 33,
+                "min": 18,
+                "n": 95,
+                "q25": 24.0,
+                "q75": 40.0
+              },
+              "first_success_time_seconds_conditional": {
+                "max": 4.8,
+                "mean": 2.27859649122807,
+                "median": 2.2,
+                "min": 1.2,
+                "n": 95,
+                "q25": 1.6,
+                "q75": 2.6666666666666665
+              },
+              "input_identity": {
+                "bytes": 40819,
+                "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch200/seed1001/metrics.json",
+                "sha256": "0a6ab77092f50b5d3fbeb9c1220940e90b18df56122d4c78362e761fba198cea"
+              },
+              "meets_preregistered_target": true,
+              "official_success_capture": "pre_reset_factory_get_curr_successes",
+              "seed": 1001,
+              "status": "complete",
+              "terminal_success_count": 95,
+              "terminal_success_rate": 0.9895833333333334,
+              "terminal_success_wilson95": [
+                0.9433338237728424,
+                0.9981588297831838
+              ],
+              "transient_only_count": 0
+            },
+            {
+              "auto_reset_order_verified": true,
+              "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+              "checkpoint_sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+              "deterministic": true,
+              "episodes_completed": 96,
+              "episodes_requested": 96,
+              "ever_success_count": 96,
+              "ever_success_rate": 1.0,
+              "ever_success_wilson95": [
+                0.9615244121423243,
+                1.0
+              ],
+              "first_success_step_conditional": {
+                "max": 98,
+                "mean": 31.625,
+                "median": 27.0,
+                "min": 18,
+                "n": 96,
+                "q25": 23.0,
+                "q75": 34.0
+              },
+              "first_success_time_seconds_conditional": {
+                "max": 6.533333333333333,
+                "mean": 2.1083333333333334,
+                "median": 1.8,
+                "min": 1.2,
+                "n": 96,
+                "q25": 1.5333333333333332,
+                "q75": 2.2666666666666666
+              },
+              "input_identity": {
+                "bytes": 40925,
+                "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch200/seed1002/metrics.json",
+                "sha256": "1c1fa341411611232c99cbe4900fd7883cac5465ff542c1b8fa8fb4e615fa196"
+              },
+              "meets_preregistered_target": true,
+              "official_success_capture": "pre_reset_factory_get_curr_successes",
+              "seed": 1002,
+              "status": "complete",
+              "terminal_success_count": 96,
+              "terminal_success_rate": 1.0,
+              "terminal_success_wilson95": [
+                0.9615244121423243,
+                1.0
+              ],
+              "transient_only_count": 0
+            },
+            {
+              "auto_reset_order_verified": true,
+              "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+              "checkpoint_sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+              "deterministic": true,
+              "episodes_completed": 96,
+              "episodes_requested": 96,
+              "ever_success_count": 89,
+              "ever_success_rate": 0.9270833333333334,
+              "ever_success_wilson95": [
+                0.8570696833485983,
+                0.9642324186896375
+              ],
+              "first_success_step_conditional": {
+                "max": 105,
+                "mean": 34.91011235955056,
+                "median": 31,
+                "min": 18,
+                "n": 89,
+                "q25": 25.0,
+                "q75": 42.0
+              },
+              "first_success_time_seconds_conditional": {
+                "max": 7.0,
+                "mean": 2.3273408239700375,
+                "median": 2.0666666666666664,
+                "min": 1.2,
+                "n": 89,
+                "q25": 1.6666666666666667,
+                "q75": 2.8
+              },
+              "input_identity": {
+                "bytes": 40916,
+                "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch200/seed1003/metrics.json",
+                "sha256": "27daef215badafd17bf34dd412dc3b5fcd77fdbcb23aaf194ce15c3f1764b4e8"
+              },
+              "meets_preregistered_target": true,
+              "official_success_capture": "pre_reset_factory_get_curr_successes",
+              "seed": 1003,
+              "status": "complete",
+              "terminal_success_count": 89,
+              "terminal_success_rate": 0.9270833333333334,
+              "terminal_success_wilson95": [
+                0.8570696833485983,
+                0.9642324186896375
+              ],
+              "transient_only_count": 0
+            }
+          ]
+        },
+        "g3cr2": {
+          "aggregate": {
+            "episodes_completed": 0,
+            "ever_success_count": 0,
+            "ever_success_rate": null,
+            "ever_success_wilson95": null,
+            "first_success_step_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "first_success_time_seconds_conditional": {
+              "max": null,
+              "mean": null,
+              "median": null,
+              "min": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "terminal_success_count": 0,
+            "terminal_success_rate": null,
+            "terminal_success_wilson95": null,
+            "transient_only_count": 0
+          },
+          "checkpoint_epoch": 400,
+          "complete_preregistered_seeds": false,
+          "episodes_requested": 288,
+          "per_seed": [
+            {
+              "episodes_completed": 0,
+              "episodes_requested": 96,
+              "ever_success_count": 0,
+              "ever_success_rate": null,
+              "ever_success_wilson95": null,
+              "first_success_step_conditional": {
+                "max": null,
+                "mean": null,
+                "median": null,
+                "min": null,
+                "n": 0,
+                "q25": null,
+                "q75": null
+              },
+              "first_success_time_seconds_conditional": {
+                "max": null,
+                "mean": null,
+                "median": null,
+                "min": null,
+                "n": 0,
+                "q25": null,
+                "q75": null
+              },
+              "seed": 1001,
+              "status": "missing",
+              "terminal_success_count": 0,
+              "terminal_success_rate": null,
+              "terminal_success_wilson95": null,
+              "transient_only_count": 0
+            },
+            {
+              "episodes_completed": 0,
+              "episodes_requested": 96,
+              "ever_success_count": 0,
+              "ever_success_rate": null,
+              "ever_success_wilson95": null,
+              "first_success_step_conditional": {
+                "max": null,
+                "mean": null,
+                "median": null,
+                "min": null,
+                "n": 0,
+                "q25": null,
+                "q75": null
+              },
+              "first_success_time_seconds_conditional": {
+                "max": null,
+                "mean": null,
+                "median": null,
+                "min": null,
+                "n": 0,
+                "q25": null,
+                "q75": null
+              },
+              "seed": 1002,
+              "status": "missing",
+              "terminal_success_count": 0,
+              "terminal_success_rate": null,
+              "terminal_success_wilson95": null,
+              "transient_only_count": 0
+            },
+            {
+              "episodes_completed": 0,
+              "episodes_requested": 96,
+              "ever_success_count": 0,
+              "ever_success_rate": null,
+              "ever_success_wilson95": null,
+              "first_success_step_conditional": {
+                "max": null,
+                "mean": null,
+                "median": null,
+                "min": null,
+                "n": 0,
+                "q25": null,
+                "q75": null
+              },
+              "first_success_time_seconds_conditional": {
+                "max": null,
+                "mean": null,
+                "median": null,
+                "min": null,
+                "n": 0,
+                "q25": null,
+                "q75": null
+              },
+              "seed": 1003,
+              "status": "missing",
+              "terminal_success_count": 0,
+              "terminal_success_rate": null,
+              "terminal_success_wilson95": null,
+              "transient_only_count": 0
+            }
+          ]
+        },
+        "g3cr2_checkpoint_epoch": 400,
+        "g3cr2_evaluated": false,
+        "terminal_success_rate_delta": null
+      }
+    ],
+    "schema_version": "g3cr2_matched_intended_transitions_v1",
+    "training_seed_replication": false
+  },
+  "numerical_observations": {
+    "actor_amp_step_attempts": 320,
+    "actual_optimizer_steps": {
+      "actor": 319,
+      "central_value": 320
+    },
+    "all_observed_epoch_loss_arrays_finite": true,
+    "amp_skip_events": [
+      {
+        "attempt": 1,
+        "epoch": 1,
+        "scale_after": 32768.0,
+        "scale_before": 65536.0
+      }
+    ],
+    "amp_skipped_actor_updates": 1,
+    "instrumentation_errors": [],
+    "limits": [
+      "Logged finite loss arrays do not prove all gradients or applied updates finite.",
+      "Actual Adam.step calls and GradScaler skips are observations, not inferred successful learning.",
+      "CUDA allocator peaks omit simulator/graphics memory; whole-GPU NVML is reported separately."
+    ],
+    "observed_epoch_count": 10,
+    "peak_cuda_allocated_MiB": 568.26416015625,
+    "peak_cuda_reserved_MiB": 728.0
+  },
+  "plots": [
+    "training_reward.png",
+    "training_reward.pdf",
+    "training_losses.png",
+    "training_losses.pdf",
+    "throughput_memory.png",
+    "throughput_memory.pdf",
+    "matched_transition_success.png",
+    "matched_transition_success.pdf",
+    "completed_budget_optimizer.png",
+    "completed_budget_optimizer.pdf"
+  ],
+  "schema_version": "g3cr2_analysis_v1",
+  "scientific_limits": [
+    "32-env/400-epoch protocol is not G2 seed-only replication.",
+    "Capacity/monitoring interruption is not scientific evidence of learning failure.",
+    "Unreached checkpoint evaluations remain missing with null rates.",
+    "G2 episodes are historical context only and are not added to any G3C-R2 denominator.",
+    "No training seed1/2 robustness assessment follows from seed0 observations."
+  ],
+  "scientific_status": "NOT_ASSESSED",
+  "supervision": {
+    "child_exit": {
+      "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+      "identity": {
+        "birth_ticks": "3229921",
+        "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+        "pgid": 110903,
+        "pid": 110903,
+        "state": "R"
+      },
+      "monotonic_seconds": 32667.828166105,
+      "raw_wait_returncode": 0,
+      "unix_seconds": 1792935343.7563004,
+      "utc": "2026-10-25T13:35:43.756275+00:00"
+    },
+    "child_raw_wait_returncode": 0,
+    "child_spawn_to_wait_wall_seconds": 368.6112278599976,
+    "coverage_note": "A gap remains an evidence gap even when free memory is above the floor; sampled intervals are not continuous measurement.",
+    "exec_release_to_wait_wall_seconds": 368.0440861069983,
+    "extrema_scope": "observed samples only; scheduling/measurement gaps may hide extrema",
+    "guard": {
+      "continuous_monitoring": false,
+      "coverage_note": "Sampled coverage: regular intervals are not continuous measurement.",
+      "ended": {
+        "monotonic_seconds": 32667.595557024,
+        "unix_seconds": 1792935343.5236912,
+        "utc": "2026-10-25T13:35:43.523680+00:00"
+      },
+      "error": null,
+      "finalized": true,
+      "first_sample": {
+        "monotonic_seconds": 32298.928349308,
+        "unix_seconds": 1792934974.8564844,
+        "utc": "2026-10-25T13:29:34.856472+00:00"
+      },
+      "identity": {
+        "birth_ticks": "3229876",
+        "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+        "pgid": 110899,
+        "pid": 110899,
+        "state": "R"
+      },
+      "last_sample": {
+        "monotonic_seconds": 32665.452398374,
+        "unix_seconds": 1792935341.3805335,
+        "utc": "2026-10-25T13:35:41.380523+00:00"
+      },
+      "low_memory_stop_condition_observed": false,
+      "max_low_consecutive": 0,
+      "min_free_MiB": 1408.6875,
+      "monitoring_gaps": [
+        {
+          "duration_seconds": 0.5123187930003041,
+          "from": {
+            "monotonic_seconds": 32664.940079581,
+            "unix_seconds": 1792935340.8682146,
+            "utc": "2026-10-25T13:35:40.868205+00:00"
+          },
+          "to": {
+            "monotonic_seconds": 32665.452398374,
+            "unix_seconds": 1792935341.3805335,
+            "utc": "2026-10-25T13:35:41.380523+00:00"
+          }
+        }
+      ],
+      "peak_used_MiB": 6408.9375,
+      "policy": {
+        "consecutive_samples": 3,
+        "floor_MiB": 1024,
+        "gap_limit_seconds": 0.5,
+        "interval_seconds": 0.1,
+        "stale_seconds": 2
+      },
+      "sample_count": 3662,
+      "schema_version": 2,
+      "started": {
+        "monotonic_seconds": 32298.807443059,
+        "unix_seconds": 1792934974.7355778,
+        "utc": "2026-10-25T13:29:34.735563+00:00"
+      },
+      "stop_reason": "monitoring_gap",
+      "stop_signals": [
+        {
+          "monotonic_seconds": 32666.037984415,
+          "signal": "SIGTERM",
+          "unix_seconds": 1792935341.9661188,
+          "utc": "2026-10-25T13:35:41.966105+00:00"
+        }
+      ],
+      "supervisor_identity": {
+        "birth_ticks": "3229890",
+        "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+        "pgid": 110901,
+        "pid": 110901,
+        "state": "R"
+      },
+      "target_identity": {
+        "birth_ticks": "3229921",
+        "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+        "pgid": 110903,
+        "pid": 110903,
+        "state": "R"
+      }
+    },
+    "input_identities": {
+      "guard/samples.csv": {
+        "bytes": 473487,
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/guard/samples.csv",
+        "sha256": "0ee89fcf8824c4ee83904ed65a90a47ace16a2480b2541732b4e6a73cc9f4b4b"
+      },
+      "guard/status.json": {
+        "bytes": 2249,
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/guard/status.json",
+        "sha256": "c42d3f7ceacf70f1d78c9291eb1d58b620b068ebb800dd1223079b33398d22a8"
+      },
+      "supervisor/child_exit.json": {
+        "bytes": 369,
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/supervisor/child_exit.json",
+        "sha256": "e856002aeaa6da2d25f8f3209db256a5bc27c3fb746a529272fc9e1f03407616"
+      },
+      "supervisor/child_identity.json": {
+        "bytes": 340,
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/supervisor/child_identity.json",
+        "sha256": "87ebc770c660dd9f41513aa134ecf46e95588eb744c7edb8086400e74c7cd520"
+      },
+      "supervisor/exec_release.json": {
+        "bytes": 340,
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/supervisor/exec_release.json",
+        "sha256": "1f3170e273ccc7bedb49efef34a9a6c3e7c7b97dbf3dcebae734a8e8c0262136"
+      },
+      "supervisor/status.json": {
+        "bytes": 2079,
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/supervisor/status.json",
+        "sha256": "daf379c802695fe0d231ee732db4dc9b2eb5c00c19a29073c71cec4e9061b931"
+      }
+    },
+    "max_sample_interval_seconds": 0.5123187930003041,
+    "min_free_MiB": 1408.6875,
+    "observed_gaps": [
+      {
+        "after_monotonic_seconds": 32664.940079581,
+        "duration_seconds": 0.5123187930003041
+      }
+    ],
+    "peak_total_gpu_used_MiB": 6408.9375,
+    "sample_count": 3662,
+    "sampled_coverage_complete": false,
+    "samples_bracket_child": false,
+    "supervisor": {
+      "child_exit_code": 0,
+      "child_identity": {
+        "birth_ticks": "3229921",
+        "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+        "pgid": 110903,
+        "pid": 110903,
+        "state": "R"
+      },
+      "child_signal": null,
+      "command": [
+        "bash",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py",
+        "--headless",
+        "--device",
+        "cuda:0",
+        "--task",
+        "Isaac-Factory-PegInsert-Direct-v0",
+        "--num_envs",
+        "32",
+        "--seed",
+        "0",
+        "--max_iterations",
+        "400",
+        "agent.params.config.full_experiment_name=g3cr2_peginsert_32env_seed0_baseline_400ep",
+        "agent.params.config.save_frequency=50"
+      ],
+      "ended": {
+        "monotonic_seconds": 32667.828504395,
+        "unix_seconds": 1792935343.7566392,
+        "utc": "2026-10-25T13:35:43.756632+00:00"
+      },
+      "error": null,
+      "exec_released": {
+        "monotonic_seconds": 32299.784079998,
+        "unix_seconds": 1792934975.712215,
+        "utc": "2026-10-25T13:29:35.712209+00:00"
+      },
+      "finalized": true,
+      "guard_identity": {
+        "birth_ticks": "3229876",
+        "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+        "pgid": 110899,
+        "pid": 110899,
+        "state": "R"
+      },
+      "guard_required": true,
+      "identity": {
+        "birth_ticks": "3229890",
+        "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+        "pgid": 110901,
+        "pid": 110901,
+        "state": "R"
+      },
+      "raw_wait_returncode": 0,
+      "received_supervisor_signals": [],
+      "schema_version": 2,
+      "started": {
+        "monotonic_seconds": 32298.942490174,
+        "unix_seconds": 1792934974.870625,
+        "utc": "2026-10-25T13:29:34.870611+00:00"
+      },
+      "stop_signals": [
+        {
+          "monotonic_seconds": 32667.494724207,
+          "signal": "SIGTERM",
+          "unix_seconds": 1792935343.422859,
+          "utc": "2026-10-25T13:35:43.422845+00:00"
+        }
+      ],
+      "termination_reason": "guard_missing_or_stale",
+      "wall_seconds": 368.88601485600157
+    },
+    "wall_duration_seconds": 368.6112278599976,
+    "wall_evidence": {
+      "end": {
+        "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+        "identity": {
+          "birth_ticks": "3229921",
+          "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+          "pgid": 110903,
+          "pid": 110903,
+          "state": "R"
+        },
+        "monotonic_seconds": 32667.828166105,
+        "raw_wait_returncode": 0,
+        "unix_seconds": 1792935343.7563004,
+        "utc": "2026-10-25T13:35:43.756275+00:00"
+      },
+      "exec_release": {
+        "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+        "identity": {
+          "birth_ticks": "3229921",
+          "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+          "pgid": 110903,
+          "pid": 110903,
+          "state": "R"
+        },
+        "monotonic_seconds": 32299.784079998,
+        "unix_seconds": 1792934975.712215,
+        "utc": "2026-10-25T13:29:35.712209+00:00"
+      },
+      "start": {
+        "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+        "identity": {
+          "birth_ticks": "3229921",
+          "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+          "pgid": 110903,
+          "pid": 110903,
+          "state": "R"
+        },
+        "monotonic_seconds": 32299.216938245,
+        "unix_seconds": 1792934975.145073,
+        "utc": "2026-10-25T13:29:35.145063+00:00"
+      }
+    }
+  },
+  "training": {
+    "all_logged_scalars_finite": true,
+    "audit_contiguous_from_epoch_1": true,
+    "audit_epoch_count": 10,
+    "end_to_end_transitions_per_wall_second": 111.11978394634532,
+    "environment_step_aggregate_fps": 128.75217677147174,
+    "environment_transitions": 40960,
+    "gradient_note": "Finite logged losses do not prove finite applied gradients. Report gradient/AMP observations separately from the observer evidence.",
+    "horizon_length": 128,
+    "last_observed_epoch": 10,
+    "launched_process_wall_seconds": 368.6112278599976,
+    "launched_process_wall_uncertainty_seconds": null,
+    "num_envs": 32,
+    "official_ppo_aggregate_fps": 119.88764030838085,
+    "official_ppo_timing_source": "audit_official_total_seconds_sum",
+    "official_ppo_total_seconds": 341.6532337665558,
+    "reward_summary": {
+      "rewards/iter": {
+        "max": 43.41722106933594,
+        "mean": 38.06357955932617,
+        "median": 36.94412803649902,
+        "min": 35.205787658691406,
+        "n": 8,
+        "q25": 35.971678733825684,
+        "q75": 40.03718948364258
+      },
+      "shaped_rewards/iter": {
+        "max": 54.89429473876953,
+        "mean": 44.41608905792236,
+        "median": 43.10965538024902,
+        "min": 37.57115936279297,
+        "n": 8,
+        "q25": 39.977885246276855,
+        "q75": 48.54680633544922
+      }
+    },
+    "scalar_tag_count": 53,
+    "stable_aggregate_total_fps": null,
+    "stable_epoch_range": null,
+    "stable_epoch_seconds": {
+      "max": null,
+      "mean": null,
+      "median": null,
+      "min": null,
+      "n": 0,
+      "q25": null,
+      "q75": null
+    },
+    "stable_timing_source": null,
+    "timing_note": "Total PPO time = rollout/inference + optimization. Process wall includes startup, initialization, checkpoint I/O, shutdown and monitoring overhead. Neither is the policy's simulated elapsed time.",
+    "transition_count_source": "audit_sum",
+    "wall_measurement_evidence": {
+      "end": {
+        "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+        "identity": {
+          "birth_ticks": "3229921",
+          "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+          "pgid": 110903,
+          "pid": 110903,
+          "state": "R"
+        },
+        "monotonic_seconds": 32667.828166105,
+        "raw_wait_returncode": 0,
+        "unix_seconds": 1792935343.7563004,
+        "utc": "2026-10-25T13:35:43.756275+00:00"
+      },
+      "exec_release": {
+        "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+        "identity": {
+          "birth_ticks": "3229921",
+          "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+          "pgid": 110903,
+          "pid": 110903,
+          "state": "R"
+        },
+        "monotonic_seconds": 32299.784079998,
+        "unix_seconds": 1792934975.712215,
+        "utc": "2026-10-25T13:29:35.712209+00:00"
+      },
+      "start": {
+        "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+        "identity": {
+          "birth_ticks": "3229921",
+          "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+          "pgid": 110903,
+          "pid": 110903,
+          "state": "R"
+        },
+        "monotonic_seconds": 32299.216938245,
+        "unix_seconds": 1792934975.145073,
+        "utc": "2026-10-25T13:29:35.145063+00:00"
+      }
+    }
+  }
+}

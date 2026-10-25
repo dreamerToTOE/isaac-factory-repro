@@ -1,0 +1,49 @@
+{
+  "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+  "command": [
+    "bash",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py",
+    "--headless",
+    "--device",
+    "cuda:0",
+    "--task",
+    "Isaac-Factory-PegInsert-Direct-v0",
+    "--num_envs",
+    "64",
+    "--seed",
+    "1",
+    "--max_iterations",
+    "2",
+    "agent.params.config.full_experiment_name=g3cr2_64env_seed1_capacity_smoke",
+    "agent.params.config.save_frequency=1"
+  ],
+  "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs",
+  "engineering": true,
+  "environment": {
+    "FACTORY_G2_AUDIT_OUTPUT": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_64env_seed1_2ep/supervisor/training_audit.json",
+    "FACTORY_G3A_FINALIZER_OUTPUT": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_64env_seed1_2ep/supervisor/tensorboard_finalizer.json",
+    "FACTORY_G3A_FINALIZE_TENSORBOARD": "1",
+    "FACTORY_VENV": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01",
+    "ISAACSIM_PATH": "/home/ubuntu2004/isaacsim-4.5.0",
+    "OMP_NUM_THREADS": "4"
+  },
+  "guard_directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_64env_seed1_2ep/guard",
+  "identity": {
+    "birth_ticks": "3188287",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 109860,
+    "pid": 109860,
+    "state": "R"
+  },
+  "lock_file": "/run/user/1000/isaac-factory-gpu0.lock",
+  "schema_version": 2,
+  "stale_seconds": 2,
+  "started": {
+    "monotonic_seconds": 31882.916699328,
+    "unix_seconds": 1792934558.8448322,
+    "utc": "2026-10-25T13:22:38.844819+00:00"
+  },
+  "startup_timeout_seconds": 30,
+  "timeout_seconds": 1200.0
+}

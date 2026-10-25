@@ -1,0 +1,102 @@
+{
+  "actor_attempts": 320,
+  "amp_skip_events": [
+    {
+      "attempt": 1,
+      "epoch": 1,
+      "scale_after": 32768.0,
+      "scale_before": 65536.0
+    }
+  ],
+  "checkpoint_best_reward_only": {
+    "epoch": 10,
+    "frame": 40960,
+    "not_eligible_for_preregistered_milestone_evaluation": true,
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_peginsert_32env_seed0_baseline_400ep/nn/Factory.pth",
+    "sha256": "d24556a2189da37aaf0f07e1397167b711235e811f946872070ffa81937470c9"
+  },
+  "child_exit_code": 0,
+  "child_signal": null,
+  "completed_epoch_loss_arrays_all_finite": true,
+  "completed_epochs": 10,
+  "engineering_status": "INCOMPLETE",
+  "evaluation": {
+    "completed_evaluation_episodes": 0,
+    "ever_success_rate": null,
+    "first_success_timing": null,
+    "interpretation": "No registered checkpoints available; no percentage assigned to aborted run or smoke.",
+    "registered_epochs": [
+      100,
+      200,
+      300,
+      400
+    ],
+    "status": "NOT_RUN",
+    "terminal_success_rate": null
+  },
+  "full_32env_attempt_count": 1,
+  "full_64env_training_launched": false,
+  "gradient_finiteness": "NOT_MEASURED; do not infer all per-step gradients finite from loss/checkpoint tensor inspection",
+  "guard_continuous_monitoring": false,
+  "guard_max_sample_gap_seconds": 0.5123187930003041,
+  "guard_min_free_MiB": 1408.6875,
+  "guard_monitoring_gaps": [
+    {
+      "duration_seconds": 0.5123187930003041,
+      "from": {
+        "monotonic_seconds": 32664.940079581,
+        "unix_seconds": 1792935340.8682146,
+        "utc": "2026-10-25T13:35:40.868205+00:00"
+      },
+      "to": {
+        "monotonic_seconds": 32665.452398374,
+        "unix_seconds": 1792935341.3805335,
+        "utc": "2026-10-25T13:35:41.380523+00:00"
+      }
+    }
+  ],
+  "guard_peak_used_MiB": 6408.9375,
+  "guard_reason": "monitoring_gap",
+  "guard_sample_count": 3662,
+  "instrumentation_errors": [],
+  "low_memory_stop_observed": false,
+  "official_completed_epoch_FPS": 119.88764030838085,
+  "official_completed_epoch_seconds_sum": 341.6532337665558,
+  "optimizer_steps": {
+    "actor": 319,
+    "central_value": 320
+  },
+  "partial_epoch_transitions": "not independently counted; 40960 is the verified completed-epoch budget, not an estimate of any partial rollout",
+  "planned_epochs": 400,
+  "planned_transitions": 1638400,
+  "protocol": "PegInsert 32-env / 400-epoch baseline, training seed 0",
+  "raw_wait_returncode": 0,
+  "recorded_utc": "2026-10-25T13:39:32.750862+00:00",
+  "schema_version": "g3cr2_result_v1",
+  "scientific_status": "NOT_ASSESSED",
+  "stop_decision": "No retry, restore, stitching, smaller env launch, additional seed, or GPU evaluation. Review engineering monitoring reliability first.",
+  "supervisor_reason": "guard_missing_or_stale",
+  "supervisor_signals_sent": [
+    {
+      "monotonic_seconds": 32667.494724207,
+      "signal": "SIGTERM",
+      "unix_seconds": 1792935343.422859,
+      "utc": "2026-10-25T13:35:43.422845+00:00"
+    }
+  ],
+  "tensorboard": {
+    "finalizer_enabled": true,
+    "finalizer_record_exists": false,
+    "missing_observed_tail": [
+      "losses/bounds_loss epoch10",
+      "rewards/iter epoch10",
+      "shaped_rewards/iter epoch10",
+      "episode_lengths/iter epoch10"
+    ],
+    "no_tail_fabrication": true,
+    "observed_epoch10_tail_complete": false,
+    "planned_epoch400_tail_complete": false
+  },
+  "verified_completed_epoch_transitions": 40960,
+  "wall_seconds_supervisor": 368.88601485600157
+}

@@ -1,0 +1,25 @@
+{
+  "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+  "identity": {
+    "birth_ticks": "3188275",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 109858,
+    "pid": 109858,
+    "state": "R"
+  },
+  "mock_source": null,
+  "policy": {
+    "consecutive_samples": 3,
+    "floor_MiB": 1024,
+    "gap_limit_seconds": 0.5,
+    "interval_seconds": 0.1,
+    "stale_seconds": 2
+  },
+  "schema_version": 2,
+  "started": {
+    "monotonic_seconds": 31882.803774338,
+    "unix_seconds": 1792934558.7319064,
+    "utc": "2026-10-25T13:22:38.731888+00:00"
+  },
+  "supervisor_directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_64env_seed1_2ep/supervisor"
+}

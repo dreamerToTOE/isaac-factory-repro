@@ -1,0 +1,2952 @@
+{
+  "all_logged_scalars_finite": true,
+  "directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_peginsert_32env_seed0_baseline_400ep/summaries",
+  "files": [
+    {
+      "bytes": 28519,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_peginsert_32env_seed0_baseline_400ep/summaries/events.out.tfevents.1792934987.ubuntu2004",
+      "sha256": "00e3dc103672c632b82bd3d680fbc4a5a3f2ac22ad3fc88c9137389805d475dd"
+    }
+  ],
+  "nonfinite": {},
+  "tags": {
+    "episode_lengths/iter": [
+      {
+        "finite": true,
+        "step": 2,
+        "value": 149.0,
+        "wall_time": 1792935054.5231867
+      },
+      {
+        "finite": true,
+        "step": 3,
+        "value": 149.0,
+        "wall_time": 1792935087.4092755
+      },
+      {
+        "finite": true,
+        "step": 4,
+        "value": 149.0,
+        "wall_time": 1792935121.9857585
+      },
+      {
+        "finite": true,
+        "step": 5,
+        "value": 149.0,
+        "wall_time": 1792935156.77482
+      },
+      {
+        "finite": true,
+        "step": 6,
+        "value": 149.0,
+        "wall_time": 1792935192.069014
+      },
+      {
+        "finite": true,
+        "step": 7,
+        "value": 149.0,
+        "wall_time": 1792935227.500292
+      },
+      {
+        "finite": true,
+        "step": 8,
+        "value": 149.0,
+        "wall_time": 1792935260.5811546
+      },
+      {
+        "finite": true,
+        "step": 9,
+        "value": 149.0,
+        "wall_time": 1792935296.91694
+      }
+    ],
+    "episode_lengths/step": [
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 149.0,
+        "wall_time": 1792935054.5231674
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 149.0,
+        "wall_time": 1792935087.4092565
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 149.0,
+        "wall_time": 1792935121.985739
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 149.0,
+        "wall_time": 1792935156.7748017
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 149.0,
+        "wall_time": 1792935192.0689955
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 149.0,
+        "wall_time": 1792935227.5002737
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 149.0,
+        "wall_time": 1792935260.581131
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 149.0,
+        "wall_time": 1792935296.916921
+      }
+    ],
+    "episode_lengths/time": [
+      {
+        "finite": true,
+        "step": 64,
+        "value": 149.0,
+        "wall_time": 1792935054.523206
+      },
+      {
+        "finite": true,
+        "step": 97,
+        "value": 149.0,
+        "wall_time": 1792935087.4092944
+      },
+      {
+        "finite": true,
+        "step": 131,
+        "value": 149.0,
+        "wall_time": 1792935121.9857774
+      },
+      {
+        "finite": true,
+        "step": 166,
+        "value": 149.0,
+        "wall_time": 1792935156.7748387
+      },
+      {
+        "finite": true,
+        "step": 201,
+        "value": 149.0,
+        "wall_time": 1792935192.0690324
+      },
+      {
+        "finite": true,
+        "step": 237,
+        "value": 149.0,
+        "wall_time": 1792935227.5003102
+      },
+      {
+        "finite": true,
+        "step": 270,
+        "value": 149.0,
+        "wall_time": 1792935260.581173
+      },
+      {
+        "finite": true,
+        "step": 306,
+        "value": 149.0,
+        "wall_time": 1792935296.9169588
+      }
+    ],
+    "info/cval_lr": [
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 9.999999747378752e-05,
+        "wall_time": 1792935020.503598
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 9.999999747378752e-05,
+        "wall_time": 1792935053.7419384
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 9.999999747378752e-05,
+        "wall_time": 1792935086.6513581
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 9.999999747378752e-05,
+        "wall_time": 1792935121.1549346
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 9.999999747378752e-05,
+        "wall_time": 1792935155.9665403
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 9.999999747378752e-05,
+        "wall_time": 1792935191.2586377
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 9.999999747378752e-05,
+        "wall_time": 1792935226.738571
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 9.999999747378752e-05,
+        "wall_time": 1792935259.7645824
+      },
+      {
+        "finite": true,
+        "step": 36864,
+        "value": 9.999999747378752e-05,
+        "wall_time": 1792935296.1523976
+      },
+      {
+        "finite": true,
+        "step": 40960,
+        "value": 9.999999747378752e-05,
+        "wall_time": 1792935331.3637261
+      }
+    ],
+    "info/e_clip": [
+      {
+        "finite": true,
+        "step": 0,
+        "value": 0.20000000298023224,
+        "wall_time": 1792935021.2987528
+      },
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 0.20000000298023224,
+        "wall_time": 1792935054.5191526
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 0.20000000298023224,
+        "wall_time": 1792935087.4051464
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 0.20000000298023224,
+        "wall_time": 1792935121.9813209
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 0.20000000298023224,
+        "wall_time": 1792935156.7712755
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 0.20000000298023224,
+        "wall_time": 1792935192.0653913
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 0.20000000298023224,
+        "wall_time": 1792935227.496994
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 0.20000000298023224,
+        "wall_time": 1792935260.5775812
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 0.20000000298023224,
+        "wall_time": 1792935296.913
+      },
+      {
+        "finite": true,
+        "step": 36864,
+        "value": 0.20000000298023224,
+        "wall_time": 1792935332.1241977
+      }
+    ],
+    "info/epochs": [
+      {
+        "finite": true,
+        "step": 0,
+        "value": 1.0,
+        "wall_time": 1792935021.299113
+      },
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 2.0,
+        "wall_time": 1792935054.519555
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 3.0,
+        "wall_time": 1792935087.4055367
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 4.0,
+        "wall_time": 1792935121.981739
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 5.0,
+        "wall_time": 1792935156.7715988
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 6.0,
+        "wall_time": 1792935192.0656567
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 7.0,
+        "wall_time": 1792935227.497272
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 8.0,
+        "wall_time": 1792935260.577959
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 9.0,
+        "wall_time": 1792935296.9132626
+      },
+      {
+        "finite": true,
+        "step": 36864,
+        "value": 10.0,
+        "wall_time": 1792935332.1245358
+      }
+    ],
+    "info/kl": [
+      {
+        "finite": true,
+        "step": 0,
+        "value": 0.029143571853637695,
+        "wall_time": 1792935021.2990725
+      },
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 0.010153625160455704,
+        "wall_time": 1792935054.519526
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 0.007798119448125362,
+        "wall_time": 1792935087.4055004
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 0.009263119660317898,
+        "wall_time": 1792935121.9816952
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 0.012507885694503784,
+        "wall_time": 1792935156.7715704
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 0.004525035619735718,
+        "wall_time": 1792935192.0656278
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 0.011900092475116253,
+        "wall_time": 1792935227.4972425
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 0.0073473211377859116,
+        "wall_time": 1792935260.5779285
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 0.009514844045042992,
+        "wall_time": 1792935296.9132316
+      },
+      {
+        "finite": true,
+        "step": 36864,
+        "value": 0.006482535041868687,
+        "wall_time": 1792935332.1245074
+      }
+    ],
+    "info/last_lr": [
+      {
+        "finite": true,
+        "step": 0,
+        "value": 2.9629629352712072e-05,
+        "wall_time": 1792935021.2987092
+      },
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 2.9629629352712072e-05,
+        "wall_time": 1792935054.5190818
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 2.9629629352712072e-05,
+        "wall_time": 1792935087.4050965
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 4.444444493856281e-05,
+        "wall_time": 1792935121.9812737
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 2.9629629352712072e-05,
+        "wall_time": 1792935156.7712314
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 4.444444493856281e-05,
+        "wall_time": 1792935192.0653477
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 4.444444493856281e-05,
+        "wall_time": 1792935227.4969473
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 6.666666740784422e-05,
+        "wall_time": 1792935260.577534
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 6.666666740784422e-05,
+        "wall_time": 1792935296.9129543
+      },
+      {
+        "finite": true,
+        "step": 36864,
+        "value": 6.666666740784422e-05,
+        "wall_time": 1792935332.1241505
+      }
+    ],
+    "info/lr_mul": [
+      {
+        "finite": true,
+        "step": 0,
+        "value": 1.0,
+        "wall_time": 1792935021.2987309
+      },
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 1.0,
+        "wall_time": 1792935054.5191178
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 1.0,
+        "wall_time": 1792935087.4051192
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 1.0,
+        "wall_time": 1792935121.9812968
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 1.0,
+        "wall_time": 1792935156.7712538
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 1.0,
+        "wall_time": 1792935192.0653698
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 1.0,
+        "wall_time": 1792935227.4969702
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 1.0,
+        "wall_time": 1792935260.5775554
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 1.0,
+        "wall_time": 1792935296.9129777
+      },
+      {
+        "finite": true,
+        "step": 36864,
+        "value": 1.0,
+        "wall_time": 1792935332.1241753
+      }
+    ],
+    "logs_rew_action_grad_penalty/frame": [
+      {
+        "finite": true,
+        "step": 0,
+        "value": 0.3767000436782837,
+        "wall_time": 1792935021.3007872
+      },
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 0.3657960295677185,
+        "wall_time": 1792935054.5214324
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 0.33694204688072205,
+        "wall_time": 1792935087.4073002
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 0.34879201650619507,
+        "wall_time": 1792935121.9837077
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 0.3803631365299225,
+        "wall_time": 1792935156.773175
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 0.3560678958892822,
+        "wall_time": 1792935192.0671496
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 0.40381377935409546,
+        "wall_time": 1792935227.4986916
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 0.3584889769554138,
+        "wall_time": 1792935260.5794485
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 0.3620358109474182,
+        "wall_time": 1792935296.9148428
+      },
+      {
+        "finite": true,
+        "step": 36864,
+        "value": 0.355915367603302,
+        "wall_time": 1792935332.1261659
+      }
+    ],
+    "logs_rew_action_grad_penalty/iter": [
+      {
+        "finite": true,
+        "step": 1,
+        "value": 0.3767000436782837,
+        "wall_time": 1792935021.3008955
+      },
+      {
+        "finite": true,
+        "step": 2,
+        "value": 0.3657960295677185,
+        "wall_time": 1792935054.5215406
+      },
+      {
+        "finite": true,
+        "step": 3,
+        "value": 0.33694204688072205,
+        "wall_time": 1792935087.4074264
+      },
+      {
+        "finite": true,
+        "step": 4,
+        "value": 0.34879201650619507,
+        "wall_time": 1792935121.9838226
+      },
+      {
+        "finite": true,
+        "step": 5,
+        "value": 0.3803631365299225,
+        "wall_time": 1792935156.7733154
+      },
+      {
+        "finite": true,
+        "step": 6,
+        "value": 0.3560678958892822,
+        "wall_time": 1792935192.0672588
+      },
+      {
+        "finite": true,
+        "step": 7,
+        "value": 0.40381377935409546,
+        "wall_time": 1792935227.4987948
+      },
+      {
+        "finite": true,
+        "step": 8,
+        "value": 0.3584889769554138,
+        "wall_time": 1792935260.5796068
+      },
+      {
+        "finite": true,
+        "step": 9,
+        "value": 0.3620358109474182,
+        "wall_time": 1792935296.9149961
+      },
+      {
+        "finite": true,
+        "step": 10,
+        "value": 0.355915367603302,
+        "wall_time": 1792935332.126275
+      }
+    ],
+    "logs_rew_action_grad_penalty/time": [
+      {
+        "finite": true,
+        "step": 31,
+        "value": 0.3767000436782837,
+        "wall_time": 1792935021.3010032
+      },
+      {
+        "finite": true,
+        "step": 64,
+        "value": 0.3657960295677185,
+        "wall_time": 1792935054.5216181
+      },
+      {
+        "finite": true,
+        "step": 97,
+        "value": 0.33694204688072205,
+        "wall_time": 1792935087.4075525
+      },
+      {
+        "finite": true,
+        "step": 131,
+        "value": 0.34879201650619507,
+        "wall_time": 1792935121.984002
+      },
+      {
+        "finite": true,
+        "step": 166,
+        "value": 0.3803631365299225,
+        "wall_time": 1792935156.773387
+      },
+      {
+        "finite": true,
+        "step": 201,
+        "value": 0.3560678958892822,
+        "wall_time": 1792935192.0673494
+      },
+      {
+        "finite": true,
+        "step": 237,
+        "value": 0.40381377935409546,
+        "wall_time": 1792935227.4988618
+      },
+      {
+        "finite": true,
+        "step": 270,
+        "value": 0.3584889769554138,
+        "wall_time": 1792935260.579746
+      },
+      {
+        "finite": true,
+        "step": 306,
+        "value": 0.3620358109474182,
+        "wall_time": 1792935296.9151006
+      },
+      {
+        "finite": true,
+        "step": 341,
+        "value": 0.355915367603302,
+        "wall_time": 1792935332.1264205
+      }
+    ],
+    "logs_rew_action_penalty/frame": [
+      {
+        "finite": true,
+        "step": 0,
+        "value": 3.3144915103912354,
+        "wall_time": 1792935021.300466
+      },
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 3.061398506164551,
+        "wall_time": 1792935054.5210967
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 3.429579019546509,
+        "wall_time": 1792935087.4069114
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 3.6369540691375732,
+        "wall_time": 1792935121.983208
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 3.389082908630371,
+        "wall_time": 1792935156.7728877
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 3.237595319747925,
+        "wall_time": 1792935192.066781
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 4.464875221252441,
+        "wall_time": 1792935227.4983437
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 3.7505366802215576,
+        "wall_time": 1792935260.5791998
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 3.829564094543457,
+        "wall_time": 1792935296.9145522
+      },
+      {
+        "finite": true,
+        "step": 36864,
+        "value": 3.71390700340271,
+        "wall_time": 1792935332.1258202
+      }
+    ],
+    "logs_rew_action_penalty/iter": [
+      {
+        "finite": true,
+        "step": 1,
+        "value": 3.3144915103912354,
+        "wall_time": 1792935021.3005729
+      },
+      {
+        "finite": true,
+        "step": 2,
+        "value": 3.061398506164551,
+        "wall_time": 1792935054.521177
+      },
+      {
+        "finite": true,
+        "step": 3,
+        "value": 3.429579019546509,
+        "wall_time": 1792935087.4070375
+      },
+      {
+        "finite": true,
+        "step": 4,
+        "value": 3.6369540691375732,
+        "wall_time": 1792935121.9833589
+      },
+      {
+        "finite": true,
+        "step": 5,
+        "value": 3.389082908630371,
+        "wall_time": 1792935156.7729604
+      },
+      {
+        "finite": true,
+        "step": 6,
+        "value": 3.237595319747925,
+        "wall_time": 1792935192.0669398
+      },
+      {
+        "finite": true,
+        "step": 7,
+        "value": 4.464875221252441,
+        "wall_time": 1792935227.4984865
+      },
+      {
+        "finite": true,
+        "step": 8,
+        "value": 3.7505366802215576,
+        "wall_time": 1792935260.5792732
+      },
+      {
+        "finite": true,
+        "step": 9,
+        "value": 3.829564094543457,
+        "wall_time": 1792935296.9146247
+      },
+      {
+        "finite": true,
+        "step": 10,
+        "value": 3.71390700340271,
+        "wall_time": 1792935332.125991
+      }
+    ],
+    "logs_rew_action_penalty/time": [
+      {
+        "finite": true,
+        "step": 31,
+        "value": 3.3144915103912354,
+        "wall_time": 1792935021.3006427
+      },
+      {
+        "finite": true,
+        "step": 64,
+        "value": 3.061398506164551,
+        "wall_time": 1792935054.5212831
+      },
+      {
+        "finite": true,
+        "step": 97,
+        "value": 3.429579019546509,
+        "wall_time": 1792935087.40717
+      },
+      {
+        "finite": true,
+        "step": 131,
+        "value": 3.6369540691375732,
+        "wall_time": 1792935121.9835386
+      },
+      {
+        "finite": true,
+        "step": 166,
+        "value": 3.389082908630371,
+        "wall_time": 1792935156.7730994
+      },
+      {
+        "finite": true,
+        "step": 201,
+        "value": 3.237595319747925,
+        "wall_time": 1792935192.067042
+      },
+      {
+        "finite": true,
+        "step": 237,
+        "value": 4.464875221252441,
+        "wall_time": 1792935227.498587
+      },
+      {
+        "finite": true,
+        "step": 270,
+        "value": 3.7505366802215576,
+        "wall_time": 1792935260.579356
+      },
+      {
+        "finite": true,
+        "step": 306,
+        "value": 3.829564094543457,
+        "wall_time": 1792935296.9147344
+      },
+      {
+        "finite": true,
+        "step": 341,
+        "value": 3.71390700340271,
+        "wall_time": 1792935332.1260524
+      }
+    ],
+    "logs_rew_curr_engaged/frame": [
+      {
+        "finite": true,
+        "step": 0,
+        "value": 0.0,
+        "wall_time": 1792935021.3010685
+      },
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 0.0,
+        "wall_time": 1792935054.5216842
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 0.0,
+        "wall_time": 1792935087.40768
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 0.0,
+        "wall_time": 1792935121.9842098
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 0.0,
+        "wall_time": 1792935156.7735243
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 0.0,
+        "wall_time": 1792935192.0674803
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 0.0,
+        "wall_time": 1792935227.4990056
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 0.0,
+        "wall_time": 1792935260.5798485
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 0.03125,
+        "wall_time": 1792935296.9151745
+      }
+    ],
+    "logs_rew_curr_engaged/iter": [
+      {
+        "finite": true,
+        "step": 1,
+        "value": 0.0,
+        "wall_time": 1792935021.3012202
+      },
+      {
+        "finite": true,
+        "step": 2,
+        "value": 0.0,
+        "wall_time": 1792935054.5218606
+      },
+      {
+        "finite": true,
+        "step": 3,
+        "value": 0.0,
+        "wall_time": 1792935087.4078062
+      },
+      {
+        "finite": true,
+        "step": 4,
+        "value": 0.0,
+        "wall_time": 1792935121.9842923
+      },
+      {
+        "finite": true,
+        "step": 5,
+        "value": 0.0,
+        "wall_time": 1792935156.773586
+      },
+      {
+        "finite": true,
+        "step": 6,
+        "value": 0.0,
+        "wall_time": 1792935192.0675564
+      },
+      {
+        "finite": true,
+        "step": 7,
+        "value": 0.0,
+        "wall_time": 1792935227.4991066
+      },
+      {
+        "finite": true,
+        "step": 8,
+        "value": 0.0,
+        "wall_time": 1792935260.5799127
+      },
+      {
+        "finite": true,
+        "step": 9,
+        "value": 0.03125,
+        "wall_time": 1792935296.9152873
+      }
+    ],
+    "logs_rew_curr_engaged/time": [
+      {
+        "finite": true,
+        "step": 31,
+        "value": 0.0,
+        "wall_time": 1792935021.3012846
+      },
+      {
+        "finite": true,
+        "step": 64,
+        "value": 0.0,
+        "wall_time": 1792935054.5219634
+      },
+      {
+        "finite": true,
+        "step": 97,
+        "value": 0.0,
+        "wall_time": 1792935087.4079318
+      },
+      {
+        "finite": true,
+        "step": 131,
+        "value": 0.0,
+        "wall_time": 1792935121.9844484
+      },
+      {
+        "finite": true,
+        "step": 166,
+        "value": 0.0,
+        "wall_time": 1792935156.7736926
+      },
+      {
+        "finite": true,
+        "step": 201,
+        "value": 0.0,
+        "wall_time": 1792935192.0676365
+      },
+      {
+        "finite": true,
+        "step": 237,
+        "value": 0.0,
+        "wall_time": 1792935227.499211
+      },
+      {
+        "finite": true,
+        "step": 270,
+        "value": 0.0,
+        "wall_time": 1792935260.5800176
+      },
+      {
+        "finite": true,
+        "step": 306,
+        "value": 0.03125,
+        "wall_time": 1792935296.9154003
+      }
+    ],
+    "logs_rew_curr_successes/frame": [
+      {
+        "finite": true,
+        "step": 0,
+        "value": 0.0,
+        "wall_time": 1792935021.301428
+      },
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 0.0,
+        "wall_time": 1792935054.5220678
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 0.0,
+        "wall_time": 1792935087.4080584
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 0.0,
+        "wall_time": 1792935121.9845297
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 0.0,
+        "wall_time": 1792935156.7738352
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 0.0,
+        "wall_time": 1792935192.067748
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 0.0,
+        "wall_time": 1792935227.4992738
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 0.0,
+        "wall_time": 1792935260.5801663
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 0.03125,
+        "wall_time": 1792935296.9155495
+      }
+    ],
+    "logs_rew_curr_successes/iter": [
+      {
+        "finite": true,
+        "step": 1,
+        "value": 0.0,
+        "wall_time": 1792935021.3015282
+      },
+      {
+        "finite": true,
+        "step": 2,
+        "value": 0.0,
+        "wall_time": 1792935054.5221777
+      },
+      {
+        "finite": true,
+        "step": 3,
+        "value": 0.0,
+        "wall_time": 1792935087.4081879
+      },
+      {
+        "finite": true,
+        "step": 4,
+        "value": 0.0,
+        "wall_time": 1792935121.984678
+      },
+      {
+        "finite": true,
+        "step": 5,
+        "value": 0.0,
+        "wall_time": 1792935156.773903
+      },
+      {
+        "finite": true,
+        "step": 6,
+        "value": 0.0,
+        "wall_time": 1792935192.0680053
+      },
+      {
+        "finite": true,
+        "step": 7,
+        "value": 0.0,
+        "wall_time": 1792935227.4993756
+      },
+      {
+        "finite": true,
+        "step": 8,
+        "value": 0.0,
+        "wall_time": 1792935260.580228
+      },
+      {
+        "finite": true,
+        "step": 9,
+        "value": 0.03125,
+        "wall_time": 1792935296.9156513
+      }
+    ],
+    "logs_rew_curr_successes/time": [
+      {
+        "finite": true,
+        "step": 31,
+        "value": 0.0,
+        "wall_time": 1792935021.301592
+      },
+      {
+        "finite": true,
+        "step": 64,
+        "value": 0.0,
+        "wall_time": 1792935054.5222874
+      },
+      {
+        "finite": true,
+        "step": 97,
+        "value": 0.0,
+        "wall_time": 1792935087.408315
+      },
+      {
+        "finite": true,
+        "step": 131,
+        "value": 0.0,
+        "wall_time": 1792935121.9847822
+      },
+      {
+        "finite": true,
+        "step": 166,
+        "value": 0.0,
+        "wall_time": 1792935156.774045
+      },
+      {
+        "finite": true,
+        "step": 201,
+        "value": 0.0,
+        "wall_time": 1792935192.068097
+      },
+      {
+        "finite": true,
+        "step": 237,
+        "value": 0.0,
+        "wall_time": 1792935227.499521
+      },
+      {
+        "finite": true,
+        "step": 270,
+        "value": 0.0,
+        "wall_time": 1792935260.580369
+      },
+      {
+        "finite": true,
+        "step": 306,
+        "value": 0.03125,
+        "wall_time": 1792935296.9157555
+      }
+    ],
+    "logs_rew_kp_baseline/frame": [
+      {
+        "finite": true,
+        "step": 0,
+        "value": 0.1641080379486084,
+        "wall_time": 1792935021.2992435
+      },
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 0.1645226627588272,
+        "wall_time": 1792935054.5197122
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 0.16446946561336517,
+        "wall_time": 1792935087.4056647
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 0.16484522819519043,
+        "wall_time": 1792935121.9818707
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 0.16490527987480164,
+        "wall_time": 1792935156.771792
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 0.16527700424194336,
+        "wall_time": 1792935192.0657585
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 0.16523493826389313,
+        "wall_time": 1792935227.49744
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 0.16586381196975708,
+        "wall_time": 1792935260.5780804
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 0.1660005748271942,
+        "wall_time": 1792935296.9134421
+      },
+      {
+        "finite": true,
+        "step": 36864,
+        "value": 0.16610819101333618,
+        "wall_time": 1792935332.124822
+      }
+    ],
+    "logs_rew_kp_baseline/iter": [
+      {
+        "finite": true,
+        "step": 1,
+        "value": 0.1641080379486084,
+        "wall_time": 1792935021.2993612
+      },
+      {
+        "finite": true,
+        "step": 2,
+        "value": 0.1645226627588272,
+        "wall_time": 1792935054.5198534
+      },
+      {
+        "finite": true,
+        "step": 3,
+        "value": 0.16446946561336517,
+        "wall_time": 1792935087.4057748
+      },
+      {
+        "finite": true,
+        "step": 4,
+        "value": 0.16484522819519043,
+        "wall_time": 1792935121.9820597
+      },
+      {
+        "finite": true,
+        "step": 5,
+        "value": 0.16490527987480164,
+        "wall_time": 1792935156.771912
+      },
+      {
+        "finite": true,
+        "step": 6,
+        "value": 0.16527700424194336,
+        "wall_time": 1792935192.0659392
+      },
+      {
+        "finite": true,
+        "step": 7,
+        "value": 0.16523493826389313,
+        "wall_time": 1792935227.4975448
+      },
+      {
+        "finite": true,
+        "step": 8,
+        "value": 0.16586381196975708,
+        "wall_time": 1792935260.5781791
+      },
+      {
+        "finite": true,
+        "step": 9,
+        "value": 0.1660005748271942,
+        "wall_time": 1792935296.9135487
+      },
+      {
+        "finite": true,
+        "step": 10,
+        "value": 0.16610819101333618,
+        "wall_time": 1792935332.1249259
+      }
+    ],
+    "logs_rew_kp_baseline/time": [
+      {
+        "finite": true,
+        "step": 31,
+        "value": 0.1641080379486084,
+        "wall_time": 1792935021.2995384
+      },
+      {
+        "finite": true,
+        "step": 64,
+        "value": 0.1645226627588272,
+        "wall_time": 1792935054.520157
+      },
+      {
+        "finite": true,
+        "step": 97,
+        "value": 0.16446946561336517,
+        "wall_time": 1792935087.4059968
+      },
+      {
+        "finite": true,
+        "step": 131,
+        "value": 0.16484522819519043,
+        "wall_time": 1792935121.9821932
+      },
+      {
+        "finite": true,
+        "step": 166,
+        "value": 0.16490527987480164,
+        "wall_time": 1792935156.7720249
+      },
+      {
+        "finite": true,
+        "step": 201,
+        "value": 0.16527700424194336,
+        "wall_time": 1792935192.0660112
+      },
+      {
+        "finite": true,
+        "step": 237,
+        "value": 0.16523493826389313,
+        "wall_time": 1792935227.497646
+      },
+      {
+        "finite": true,
+        "step": 270,
+        "value": 0.16586381196975708,
+        "wall_time": 1792935260.5782704
+      },
+      {
+        "finite": true,
+        "step": 306,
+        "value": 0.1660005748271942,
+        "wall_time": 1792935296.9137056
+      },
+      {
+        "finite": true,
+        "step": 341,
+        "value": 0.16610819101333618,
+        "wall_time": 1792935332.1250153
+      }
+    ],
+    "logs_rew_kp_coarse/frame": [
+      {
+        "finite": true,
+        "step": 0,
+        "value": 0.05173217132687569,
+        "wall_time": 1792935021.2996194
+      },
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 0.06494969129562378,
+        "wall_time": 1792935054.5202978
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 0.06310756504535675,
+        "wall_time": 1792935087.406128
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 0.07837201654911041,
+        "wall_time": 1792935121.9823346
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 0.08099457621574402,
+        "wall_time": 1792935156.7721388
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 0.0932183787226677,
+        "wall_time": 1792935192.0661547
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 0.08716973662376404,
+        "wall_time": 1792935227.497712
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 0.14068950712680817,
+        "wall_time": 1792935260.5784369
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 0.15396635234355927,
+        "wall_time": 1792935296.9138286
+      },
+      {
+        "finite": true,
+        "step": 36864,
+        "value": 0.16351830959320068,
+        "wall_time": 1792935332.1251953
+      }
+    ],
+    "logs_rew_kp_coarse/iter": [
+      {
+        "finite": true,
+        "step": 1,
+        "value": 0.05173217132687569,
+        "wall_time": 1792935021.2997577
+      },
+      {
+        "finite": true,
+        "step": 2,
+        "value": 0.06494969129562378,
+        "wall_time": 1792935054.520408
+      },
+      {
+        "finite": true,
+        "step": 3,
+        "value": 0.06310756504535675,
+        "wall_time": 1792935087.406296
+      },
+      {
+        "finite": true,
+        "step": 4,
+        "value": 0.07837201654911041,
+        "wall_time": 1792935121.982466
+      },
+      {
+        "finite": true,
+        "step": 5,
+        "value": 0.08099457621574402,
+        "wall_time": 1792935156.772231
+      },
+      {
+        "finite": true,
+        "step": 6,
+        "value": 0.0932183787226677,
+        "wall_time": 1792935192.0662642
+      },
+      {
+        "finite": true,
+        "step": 7,
+        "value": 0.08716973662376404,
+        "wall_time": 1792935227.4978561
+      },
+      {
+        "finite": true,
+        "step": 8,
+        "value": 0.14068950712680817,
+        "wall_time": 1792935260.5785234
+      },
+      {
+        "finite": true,
+        "step": 9,
+        "value": 0.15396635234355927,
+        "wall_time": 1792935296.9139955
+      },
+      {
+        "finite": true,
+        "step": 10,
+        "value": 0.16351830959320068,
+        "wall_time": 1792935332.1252947
+      }
+    ],
+    "logs_rew_kp_coarse/time": [
+      {
+        "finite": true,
+        "step": 31,
+        "value": 0.05173217132687569,
+        "wall_time": 1792935021.2999651
+      },
+      {
+        "finite": true,
+        "step": 64,
+        "value": 0.06494969129562378,
+        "wall_time": 1792935054.5205789
+      },
+      {
+        "finite": true,
+        "step": 97,
+        "value": 0.06310756504535675,
+        "wall_time": 1792935087.4063928
+      },
+      {
+        "finite": true,
+        "step": 131,
+        "value": 0.07837201654911041,
+        "wall_time": 1792935121.982596
+      },
+      {
+        "finite": true,
+        "step": 166,
+        "value": 0.08099457621574402,
+        "wall_time": 1792935156.772413
+      },
+      {
+        "finite": true,
+        "step": 201,
+        "value": 0.0932183787226677,
+        "wall_time": 1792935192.0663471
+      },
+      {
+        "finite": true,
+        "step": 237,
+        "value": 0.08716973662376404,
+        "wall_time": 1792935227.4979558
+      },
+      {
+        "finite": true,
+        "step": 270,
+        "value": 0.14068950712680817,
+        "wall_time": 1792935260.5787215
+      },
+      {
+        "finite": true,
+        "step": 306,
+        "value": 0.15396635234355927,
+        "wall_time": 1792935296.9140744
+      },
+      {
+        "finite": true,
+        "step": 341,
+        "value": 0.16351830959320068,
+        "wall_time": 1792935332.1254072
+      }
+    ],
+    "logs_rew_kp_fine/frame": [
+      {
+        "finite": true,
+        "step": 0,
+        "value": 0.006237545516341925,
+        "wall_time": 1792935021.3000524
+      },
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 0.01062657032161951,
+        "wall_time": 1792935054.5207107
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 0.01128639467060566,
+        "wall_time": 1792935087.406529
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 0.014079288579523563,
+        "wall_time": 1792935121.9827251
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 0.016176413744688034,
+        "wall_time": 1792935156.7725155
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 0.017855923622846603,
+        "wall_time": 1792935192.0664606
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 0.012624792754650116,
+        "wall_time": 1792935227.4980197
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 0.058898236602544785,
+        "wall_time": 1792935260.578812
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 0.08437006920576096,
+        "wall_time": 1792935296.9141834
+      },
+      {
+        "finite": true,
+        "step": 36864,
+        "value": 0.0874883234500885,
+        "wall_time": 1792935332.1255543
+      }
+    ],
+    "logs_rew_kp_fine/iter": [
+      {
+        "finite": true,
+        "step": 1,
+        "value": 0.006237545516341925,
+        "wall_time": 1792935021.3001685
+      },
+      {
+        "finite": true,
+        "step": 2,
+        "value": 0.01062657032161951,
+        "wall_time": 1792935054.520835
+      },
+      {
+        "finite": true,
+        "step": 3,
+        "value": 0.01128639467060566,
+        "wall_time": 1792935087.4066591
+      },
+      {
+        "finite": true,
+        "step": 4,
+        "value": 0.014079288579523563,
+        "wall_time": 1792935121.9829156
+      },
+      {
+        "finite": true,
+        "step": 5,
+        "value": 0.016176413744688034,
+        "wall_time": 1792935156.7726185
+      },
+      {
+        "finite": true,
+        "step": 6,
+        "value": 0.017855923622846603,
+        "wall_time": 1792935192.0666056
+      },
+      {
+        "finite": true,
+        "step": 7,
+        "value": 0.012624792754650116,
+        "wall_time": 1792935227.4981716
+      },
+      {
+        "finite": true,
+        "step": 8,
+        "value": 0.058898236602544785,
+        "wall_time": 1792935260.578933
+      },
+      {
+        "finite": true,
+        "step": 9,
+        "value": 0.08437006920576096,
+        "wall_time": 1792935296.9142969
+      },
+      {
+        "finite": true,
+        "step": 10,
+        "value": 0.0874883234500885,
+        "wall_time": 1792935332.1256568
+      }
+    ],
+    "logs_rew_kp_fine/time": [
+      {
+        "finite": true,
+        "step": 31,
+        "value": 0.006237545516341925,
+        "wall_time": 1792935021.3003185
+      },
+      {
+        "finite": true,
+        "step": 64,
+        "value": 0.01062657032161951,
+        "wall_time": 1792935054.5209877
+      },
+      {
+        "finite": true,
+        "step": 97,
+        "value": 0.01128639467060566,
+        "wall_time": 1792935087.4067852
+      },
+      {
+        "finite": true,
+        "step": 131,
+        "value": 0.014079288579523563,
+        "wall_time": 1792935121.9830856
+      },
+      {
+        "finite": true,
+        "step": 166,
+        "value": 0.016176413744688034,
+        "wall_time": 1792935156.7727852
+      },
+      {
+        "finite": true,
+        "step": 201,
+        "value": 0.017855923622846603,
+        "wall_time": 1792935192.0667098
+      },
+      {
+        "finite": true,
+        "step": 237,
+        "value": 0.012624792754650116,
+        "wall_time": 1792935227.4982786
+      },
+      {
+        "finite": true,
+        "step": 270,
+        "value": 0.058898236602544785,
+        "wall_time": 1792935260.5789952
+      },
+      {
+        "finite": true,
+        "step": 306,
+        "value": 0.08437006920576096,
+        "wall_time": 1792935296.914407
+      },
+      {
+        "finite": true,
+        "step": 341,
+        "value": 0.0874883234500885,
+        "wall_time": 1792935332.125759
+      }
+    ],
+    "losses/a_loss": [
+      {
+        "finite": true,
+        "step": 0,
+        "value": 0.0027312119491398335,
+        "wall_time": 1792935021.2982957
+      },
+      {
+        "finite": true,
+        "step": 4096,
+        "value": -0.0068215420469641685,
+        "wall_time": 1792935054.518632
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": -0.00541321374475956,
+        "wall_time": 1792935087.4046144
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": -0.008002230897545815,
+        "wall_time": 1792935121.9808674
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": -0.0071394313126802444,
+        "wall_time": 1792935156.7708573
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": -0.008373408578336239,
+        "wall_time": 1792935192.0650349
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": -0.009207351133227348,
+        "wall_time": 1792935227.4962568
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": -0.010296653024852276,
+        "wall_time": 1792935260.5771952
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": -0.008752229623496532,
+        "wall_time": 1792935296.9126177
+      },
+      {
+        "finite": true,
+        "step": 36864,
+        "value": -0.006662942469120026,
+        "wall_time": 1792935332.1237419
+      }
+    ],
+    "losses/bounds_loss": [
+      {
+        "finite": true,
+        "step": 0,
+        "value": 0.0,
+        "wall_time": 1792935021.301751
+      },
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 0.0,
+        "wall_time": 1792935054.522821
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 0.0,
+        "wall_time": 1792935087.4088788
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 0.0,
+        "wall_time": 1792935121.9853966
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 0.0,
+        "wall_time": 1792935156.7744942
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 0.0,
+        "wall_time": 1792935192.0686865
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 0.0,
+        "wall_time": 1792935227.4999487
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 0.0,
+        "wall_time": 1792935260.5808265
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 0.0,
+        "wall_time": 1792935296.9165747
+      }
+    ],
+    "losses/c_loss": [
+      {
+        "finite": true,
+        "step": 0,
+        "value": 1.3295421600341797,
+        "wall_time": 1792935021.2984865
+      },
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 0.8924939632415771,
+        "wall_time": 1792935054.5188465
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 0.5545440912246704,
+        "wall_time": 1792935087.4048622
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 0.4091404378414154,
+        "wall_time": 1792935121.9810648
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 0.2692851722240448,
+        "wall_time": 1792935156.7710288
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 0.2930489778518677,
+        "wall_time": 1792935192.0651798
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 0.3016470968723297,
+        "wall_time": 1792935227.4966817
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 0.17742669582366943,
+        "wall_time": 1792935260.577362
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 0.19886212050914764,
+        "wall_time": 1792935296.9127815
+      },
+      {
+        "finite": true,
+        "step": 36864,
+        "value": 0.18087619543075562,
+        "wall_time": 1792935332.123944
+      }
+    ],
+    "losses/cval_loss": [
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 1.2960821390151978,
+        "wall_time": 1792935020.5033076
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 0.8478828072547913,
+        "wall_time": 1792935053.7418895
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 0.5087437629699707,
+        "wall_time": 1792935086.6512992
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 0.3698424696922302,
+        "wall_time": 1792935121.1548762
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 0.23244188725948334,
+        "wall_time": 1792935155.9664903
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 0.2647703289985657,
+        "wall_time": 1792935191.2585628
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 0.2709059715270996,
+        "wall_time": 1792935226.7385237
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 0.1610894501209259,
+        "wall_time": 1792935259.7645288
+      },
+      {
+        "finite": true,
+        "step": 36864,
+        "value": 0.17647907137870789,
+        "wall_time": 1792935296.1523495
+      },
+      {
+        "finite": true,
+        "step": 40960,
+        "value": 0.14514587819576263,
+        "wall_time": 1792935331.3636756
+      }
+    ],
+    "losses/entropy": [
+      {
+        "finite": true,
+        "step": 0,
+        "value": 8.515938758850098,
+        "wall_time": 1792935021.2986822
+      },
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 8.505359649658203,
+        "wall_time": 1792935054.51905
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 8.485372543334961,
+        "wall_time": 1792935087.4050627
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 8.474316596984863,
+        "wall_time": 1792935121.9812386
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 8.44591236114502,
+        "wall_time": 1792935156.771202
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 8.431206703186035,
+        "wall_time": 1792935192.0653183
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 8.402623176574707,
+        "wall_time": 1792935227.4969168
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 8.364120483398438,
+        "wall_time": 1792935260.5775058
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 8.34817123413086,
+        "wall_time": 1792935296.9129236
+      },
+      {
+        "finite": true,
+        "step": 36864,
+        "value": 8.333028793334961,
+        "wall_time": 1792935332.124115
+      }
+    ],
+    "performance/rl_update_time": [
+      {
+        "finite": true,
+        "step": 0,
+        "value": 1.911874532699585,
+        "wall_time": 1792935021.297659
+      },
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 1.9594902992248535,
+        "wall_time": 1792935054.5179262
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 1.9879863262176514,
+        "wall_time": 1792935087.4035618
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 2.087855100631714,
+        "wall_time": 1792935121.9802475
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 2.073046922683716,
+        "wall_time": 1792935156.770131
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 2.084613561630249,
+        "wall_time": 1792935192.0643141
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 1.9423489570617676,
+        "wall_time": 1792935227.495865
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 1.796485424041748,
+        "wall_time": 1792935260.576379
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 1.9862229824066162,
+        "wall_time": 1792935296.9119008
+      },
+      {
+        "finite": true,
+        "step": 36864,
+        "value": 2.0065841674804688,
+        "wall_time": 1792935332.123042
+      }
+    ],
+    "performance/step_fps": [
+      {
+        "finite": true,
+        "step": 0,
+        "value": 142.53048706054688,
+        "wall_time": 1792935021.2976367
+      },
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 132.6329345703125,
+        "wall_time": 1792935054.5179026
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 134.15493774414062,
+        "wall_time": 1792935087.403539
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 127.5521240234375,
+        "wall_time": 1792935121.9802234
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 126.63044738769531,
+        "wall_time": 1792935156.7701075
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 124.72066497802734,
+        "wall_time": 1792935192.0642915
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 123.67103576660156,
+        "wall_time": 1792935227.4958353
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 133.0498809814453,
+        "wall_time": 1792935260.5763543
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 120.6640396118164,
+        "wall_time": 1792935296.911877
+      },
+      {
+        "finite": true,
+        "step": 36864,
+        "value": 124.77214050292969,
+        "wall_time": 1792935332.123019
+      }
+    ],
+    "performance/step_inference_fps": [
+      {
+        "finite": true,
+        "step": 0,
+        "value": 140.61207580566406,
+        "wall_time": 1792935021.2976112
+      },
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 131.05787658691406,
+        "wall_time": 1792935054.5178757
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 132.6032257080078,
+        "wall_time": 1792935087.4035132
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 126.10930633544922,
+        "wall_time": 1792935121.9801922
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 125.22968292236328,
+        "wall_time": 1792935156.7700753
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 123.36783599853516,
+        "wall_time": 1792935192.0642612
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 122.33863067626953,
+        "wall_time": 1792935227.4958096
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 131.54196166992188,
+        "wall_time": 1792935260.5763175
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 119.2772445678711,
+        "wall_time": 1792935296.9118419
+      },
+      {
+        "finite": true,
+        "step": 36864,
+        "value": 123.38876342773438,
+        "wall_time": 1792935332.1229901
+      }
+    ],
+    "performance/step_inference_rl_update_fps": [
+      {
+        "finite": true,
+        "step": 0,
+        "value": 131.95169067382812,
+        "wall_time": 1792935021.2975643
+      },
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 123.32573699951172,
+        "wall_time": 1792935054.5178165
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 124.58509063720703,
+        "wall_time": 1792935087.4034605
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 118.4924087524414,
+        "wall_time": 1792935121.9801335
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 117.765625,
+        "wall_time": 1792935156.7699215
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 116.07958221435547,
+        "wall_time": 1792935192.0642145
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 115.63047790527344,
+        "wall_time": 1792935227.4957635
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 124.36678314208984,
+        "wall_time": 1792935260.5762649
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 112.75550842285156,
+        "wall_time": 1792935296.9117916
+      },
+      {
+        "finite": true,
+        "step": 36864,
+        "value": 116.35545349121094,
+        "wall_time": 1792935332.1229424
+      }
+    ],
+    "performance/step_inference_time": [
+      {
+        "finite": true,
+        "step": 0,
+        "value": 29.12978744506836,
+        "wall_time": 1792935021.2976801
+      },
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 31.253366470336914,
+        "wall_time": 1792935054.5179482
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 30.889141082763672,
+        "wall_time": 1792935087.4035835
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 32.479759216308594,
+        "wall_time": 1792935121.9802704
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 32.70790100097656,
+        "wall_time": 1792935156.7701578
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 33.20152282714844,
+        "wall_time": 1792935192.0644326
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 33.480838775634766,
+        "wall_time": 1792935227.4958868
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 31.13835334777832,
+        "wall_time": 1792935260.5763998
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 34.34016036987305,
+        "wall_time": 1792935296.911923
+      },
+      {
+        "finite": true,
+        "step": 36864,
+        "value": 33.195892333984375,
+        "wall_time": 1792935332.123063
+      }
+    ],
+    "performance/step_time": [
+      {
+        "finite": true,
+        "step": 0,
+        "value": 28.737712860107422,
+        "wall_time": 1792935021.297701
+      },
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 30.882225036621094,
+        "wall_time": 1792935054.51797
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 30.531862258911133,
+        "wall_time": 1792935087.4036045
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 32.112361907958984,
+        "wall_time": 1792935121.9802952
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 32.346092224121094,
+        "wall_time": 1792935156.7701788
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 32.84138870239258,
+        "wall_time": 1792935192.0644567
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 33.12012481689453,
+        "wall_time": 1792935227.495907
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 30.78544807434082,
+        "wall_time": 1792935260.5764217
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 33.945491790771484,
+        "wall_time": 1792935296.9120302
+      },
+      {
+        "finite": true,
+        "step": 36864,
+        "value": 32.82783889770508,
+        "wall_time": 1792935332.1230836
+      }
+    ],
+    "rewards/iter": [
+      {
+        "finite": true,
+        "step": 2,
+        "value": 35.205787658691406,
+        "wall_time": 1792935054.523052
+      },
+      {
+        "finite": true,
+        "step": 3,
+        "value": 35.98186111450195,
+        "wall_time": 1792935087.4091117
+      },
+      {
+        "finite": true,
+        "step": 4,
+        "value": 35.941131591796875,
+        "wall_time": 1792935121.9856303
+      },
+      {
+        "finite": true,
+        "step": 5,
+        "value": 36.426185607910156,
+        "wall_time": 1792935156.7746964
+      },
+      {
+        "finite": true,
+        "step": 6,
+        "value": 37.46207046508789,
+        "wall_time": 1792935192.0688913
+      },
+      {
+        "finite": true,
+        "step": 7,
+        "value": 40.03718948364258,
+        "wall_time": 1792935227.5001678
+      },
+      {
+        "finite": true,
+        "step": 8,
+        "value": 40.03718948364258,
+        "wall_time": 1792935260.5810275
+      },
+      {
+        "finite": true,
+        "step": 9,
+        "value": 43.41722106933594,
+        "wall_time": 1792935296.9168086
+      }
+    ],
+    "rewards/step": [
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 35.205787658691406,
+        "wall_time": 1792935054.5230224
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 35.98186111450195,
+        "wall_time": 1792935087.4090772
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 35.941131591796875,
+        "wall_time": 1792935121.985601
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 36.426185607910156,
+        "wall_time": 1792935156.7746682
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 37.46207046508789,
+        "wall_time": 1792935192.0688634
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 40.03718948364258,
+        "wall_time": 1792935227.5001352
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 40.03718948364258,
+        "wall_time": 1792935260.5809996
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 43.41722106933594,
+        "wall_time": 1792935296.9167767
+      }
+    ],
+    "rewards/time": [
+      {
+        "finite": true,
+        "step": 64,
+        "value": 35.205787658691406,
+        "wall_time": 1792935054.5230758
+      },
+      {
+        "finite": true,
+        "step": 97,
+        "value": 35.98186111450195,
+        "wall_time": 1792935087.40914
+      },
+      {
+        "finite": true,
+        "step": 131,
+        "value": 35.941131591796875,
+        "wall_time": 1792935121.9856534
+      },
+      {
+        "finite": true,
+        "step": 166,
+        "value": 36.426185607910156,
+        "wall_time": 1792935156.774719
+      },
+      {
+        "finite": true,
+        "step": 201,
+        "value": 37.46207046508789,
+        "wall_time": 1792935192.0689135
+      },
+      {
+        "finite": true,
+        "step": 237,
+        "value": 40.03718948364258,
+        "wall_time": 1792935227.5001905
+      },
+      {
+        "finite": true,
+        "step": 270,
+        "value": 40.03718948364258,
+        "wall_time": 1792935260.5810497
+      },
+      {
+        "finite": true,
+        "step": 306,
+        "value": 43.41722106933594,
+        "wall_time": 1792935296.9168332
+      }
+    ],
+    "shaped_rewards/iter": [
+      {
+        "finite": true,
+        "step": 2,
+        "value": 37.57115936279297,
+        "wall_time": 1792935054.5231204
+      },
+      {
+        "finite": true,
+        "step": 3,
+        "value": 39.36973190307617,
+        "wall_time": 1792935087.409214
+      },
+      {
+        "finite": true,
+        "step": 4,
+        "value": 40.18060302734375,
+        "wall_time": 1792935121.9856973
+      },
+      {
+        "finite": true,
+        "step": 5,
+        "value": 41.91542053222656,
+        "wall_time": 1792935156.7747617
+      },
+      {
+        "finite": true,
+        "step": 6,
+        "value": 44.303890228271484,
+        "wall_time": 1792935192.0689557
+      },
+      {
+        "finite": true,
+        "step": 7,
+        "value": 48.54680633544922,
+        "wall_time": 1792935227.5002334
+      },
+      {
+        "finite": true,
+        "step": 8,
+        "value": 48.54680633544922,
+        "wall_time": 1792935260.5810912
+      },
+      {
+        "finite": true,
+        "step": 9,
+        "value": 54.89429473876953,
+        "wall_time": 1792935296.9168787
+      }
+    ],
+    "shaped_rewards/step": [
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 37.57115936279297,
+        "wall_time": 1792935054.523099
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 39.36973190307617,
+        "wall_time": 1792935087.4091911
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 40.18060302734375,
+        "wall_time": 1792935121.9856758
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 41.91542053222656,
+        "wall_time": 1792935156.7747412
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 44.303890228271484,
+        "wall_time": 1792935192.0689347
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 48.54680633544922,
+        "wall_time": 1792935227.5002122
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 48.54680633544922,
+        "wall_time": 1792935260.581071
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 54.89429473876953,
+        "wall_time": 1792935296.9168568
+      }
+    ],
+    "shaped_rewards/time": [
+      {
+        "finite": true,
+        "step": 64,
+        "value": 37.57115936279297,
+        "wall_time": 1792935054.5231462
+      },
+      {
+        "finite": true,
+        "step": 97,
+        "value": 39.36973190307617,
+        "wall_time": 1792935087.409236
+      },
+      {
+        "finite": true,
+        "step": 131,
+        "value": 40.18060302734375,
+        "wall_time": 1792935121.9857185
+      },
+      {
+        "finite": true,
+        "step": 166,
+        "value": 41.91542053222656,
+        "wall_time": 1792935156.7747822
+      },
+      {
+        "finite": true,
+        "step": 201,
+        "value": 44.303890228271484,
+        "wall_time": 1792935192.0689764
+      },
+      {
+        "finite": true,
+        "step": 237,
+        "value": 48.54680633544922,
+        "wall_time": 1792935227.5002542
+      },
+      {
+        "finite": true,
+        "step": 270,
+        "value": 48.54680633544922,
+        "wall_time": 1792935260.5811112
+      },
+      {
+        "finite": true,
+        "step": 306,
+        "value": 54.89429473876953,
+        "wall_time": 1792935296.9169006
+      }
+    ],
+    "success_times/frame": [
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 97.0,
+        "wall_time": 1792935296.9161465
+      }
+    ],
+    "success_times/iter": [
+      {
+        "finite": true,
+        "step": 9,
+        "value": 97.0,
+        "wall_time": 1792935296.9162505
+      }
+    ],
+    "success_times/time": [
+      {
+        "finite": true,
+        "step": 306,
+        "value": 97.0,
+        "wall_time": 1792935296.916364
+      }
+    ],
+    "successes/frame": [
+      {
+        "finite": true,
+        "step": 4096,
+        "value": 0.0,
+        "wall_time": 1792935054.5223591
+      },
+      {
+        "finite": true,
+        "step": 8192,
+        "value": 0.0,
+        "wall_time": 1792935087.4084408
+      },
+      {
+        "finite": true,
+        "step": 12288,
+        "value": 0.0,
+        "wall_time": 1792935121.9848502
+      },
+      {
+        "finite": true,
+        "step": 16384,
+        "value": 0.0,
+        "wall_time": 1792935156.7741497
+      },
+      {
+        "finite": true,
+        "step": 20480,
+        "value": 0.0,
+        "wall_time": 1792935192.0682843
+      },
+      {
+        "finite": true,
+        "step": 24576,
+        "value": 0.0,
+        "wall_time": 1792935227.4996216
+      },
+      {
+        "finite": true,
+        "step": 28672,
+        "value": 0.0,
+        "wall_time": 1792935260.58047
+      },
+      {
+        "finite": true,
+        "step": 32768,
+        "value": 0.0,
+        "wall_time": 1792935296.9158294
+      }
+    ],
+    "successes/iter": [
+      {
+        "finite": true,
+        "step": 2,
+        "value": 0.0,
+        "wall_time": 1792935054.5225031
+      },
+      {
+        "finite": true,
+        "step": 3,
+        "value": 0.0,
+        "wall_time": 1792935087.4085665
+      },
+      {
+        "finite": true,
+        "step": 4,
+        "value": 0.0,
+        "wall_time": 1792935121.9849963
+      },
+      {
+        "finite": true,
+        "step": 5,
+        "value": 0.0,
+        "wall_time": 1792935156.7742543
+      },
+      {
+        "finite": true,
+        "step": 6,
+        "value": 0.0,
+        "wall_time": 1792935192.0683894
+      },
+      {
+        "finite": true,
+        "step": 7,
+        "value": 0.0,
+        "wall_time": 1792935227.4997208
+      },
+      {
+        "finite": true,
+        "step": 8,
+        "value": 0.0,
+        "wall_time": 1792935260.5805678
+      },
+      {
+        "finite": true,
+        "step": 9,
+        "value": 0.0,
+        "wall_time": 1792935296.9159667
+      }
+    ],
+    "successes/time": [
+      {
+        "finite": true,
+        "step": 64,
+        "value": 0.0,
+        "wall_time": 1792935054.5226026
+      },
+      {
+        "finite": true,
+        "step": 97,
+        "value": 0.0,
+        "wall_time": 1792935087.4086895
+      },
+      {
+        "finite": true,
+        "step": 131,
+        "value": 0.0,
+        "wall_time": 1792935121.9850986
+      },
+      {
+        "finite": true,
+        "step": 166,
+        "value": 0.0,
+        "wall_time": 1792935156.7743247
+      },
+      {
+        "finite": true,
+        "step": 201,
+        "value": 0.0,
+        "wall_time": 1792935192.0684912
+      },
+      {
+        "finite": true,
+        "step": 237,
+        "value": 0.0,
+        "wall_time": 1792935227.4998176
+      },
+      {
+        "finite": true,
+        "step": 270,
+        "value": 0.0,
+        "wall_time": 1792935260.5806305
+      },
+      {
+        "finite": true,
+        "step": 306,
+        "value": 0.0,
+        "wall_time": 1792935296.9160693
+      }
+    ]
+  }
+}

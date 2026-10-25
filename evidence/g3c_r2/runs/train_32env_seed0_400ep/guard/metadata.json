@@ -1,0 +1,25 @@
+{
+  "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+  "identity": {
+    "birth_ticks": "3229876",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 110899,
+    "pid": 110899,
+    "state": "R"
+  },
+  "mock_source": null,
+  "policy": {
+    "consecutive_samples": 3,
+    "floor_MiB": 1024,
+    "gap_limit_seconds": 0.5,
+    "interval_seconds": 0.1,
+    "stale_seconds": 2
+  },
+  "schema_version": 2,
+  "started": {
+    "monotonic_seconds": 32298.807443059,
+    "unix_seconds": 1792934974.7355778,
+    "utc": "2026-10-25T13:29:34.735563+00:00"
+  },
+  "supervisor_directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep/supervisor"
+}

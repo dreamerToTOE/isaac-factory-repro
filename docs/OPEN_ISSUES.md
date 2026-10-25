@@ -82,3 +82,10 @@ G3C-1 的 seed 1 PPO 训练按冻结配置启动，但在第一个 epoch 前由�
 G3C-R1 对 RTX 3070 做了 60 秒只读 idle inventory 和一次新的 64-env、2-epoch supervised capacity smoke。idle minimum free 为 4780 MiB；smoke peak used 6798.75 MiB、minimum free 1018.875 MiB，按既定 1024 MiB×3 guard 停止。因此当前容量判定为 **CAPACITY_NO_GO**，不能安全支持另一次完整 64-env/200-epoch run。
 
 建议 idle preflight minimum free 约 5500 MiB，且 2-epoch smoke 实际保留约 1.5 GiB free 后再考虑 fresh seed1。没有终止桌面或 remote desktop、没有降低 guard、没有启动长训练或 seed2。详细比较见 [`REVIEW_G3C_R1`](REVIEW_G3C_R1.md) 与 [`evidence/g3c_r1`](../evidence/g3c_r1/README.md)。
+
+
+## G3C-R2（2026-10-25）：停止并审阅监控可靠性
+
+新60秒idle minimum free5730MiB通过5500门槛。64-env2epoch smoke正常完成，但minfree1457.125MiB未达到冻结1536MiB margin，故不启动64-envseed1长训练。授权fallback的32-envseed0 smoke minfree1604.4375MiB、全部工程gate通过；随后新32-env/400epoch baseline运行在epoch10后因0.512319s gap>0.5s被guard停止。已核实40,960 completed-epoch transitions（partial rollout交互未知），supervisorwall368.886015s；raw childwait0不抵消guard/SIGTERM终止。
+
+本轮正式训练**工程INCOMPLETE、科学NOT ASSESSED**。没有显存floor触发，不能称为32-env容量失败；没有计划100/200/300/400 checkpoint，未评估，不报告0%成功。epoch10Factory checkpoint有限但只作完整性证据，finalizer缺失且TensorBoard末尾不完整。下一步先单独调查监控延迟，不放宽guard，不自动重试/恢复/拼接或启动seed1/2。参见[REVIEW_G3C_R2](REVIEW_G3C_R2.md)及[证据](../evidence/g3c_r2/README.md)。
