@@ -75,3 +75,10 @@ G3B bounded diagnostic 已完成并通过：保留 checkpoint SHA256 `f5e9da7755
 G3C-1 的 seed 1 PPO 训练按冻结配置启动，但在第一个 epoch 前由独立 GPU guard 依据 1024 MiB free、连续 3 次低值规则停止：最低 free 917.9375 MiB，child 原始 wait code=0，supervisor 记录 guard 触发和 SIGTERM。运行标记 **工程 INCOMPLETE**；没有 epoch、optimizer step、AMP skip、checkpoint 或可评估分母，因此科学结果 **NOT ASSESSED**，不能报告 seed 1 成功率。
 
 回执和资源曲线见 [`RESULTS_G3C1`](RESULTS_G3C1.md) 与 [`evidence/g3c1`](../evidence/g3c1/README.md)。不恢复、不重启、不拼接本次运行；不启动 seed 2。G3C-2 应先解决资源余量并重新预注册 fresh seed 1 运行。
+
+
+## G3C-R1 状态（2026-10-25）
+
+G3C-R1 对 RTX 3070 做了 60 秒只读 idle inventory 和一次新的 64-env、2-epoch supervised capacity smoke。idle minimum free 为 4780 MiB；smoke peak used 6798.75 MiB、minimum free 1018.875 MiB，按既定 1024 MiB×3 guard 停止。因此当前容量判定为 **CAPACITY_NO_GO**，不能安全支持另一次完整 64-env/200-epoch run。
+
+建议 idle preflight minimum free 约 5500 MiB，且 2-epoch smoke 实际保留约 1.5 GiB free 后再考虑 fresh seed1。没有终止桌面或 remote desktop、没有降低 guard、没有启动长训练或 seed2。详细比较见 [`REVIEW_G3C_R1`](REVIEW_G3C_R1.md) 与 [`evidence/g3c_r1`](../evidence/g3c_r1/README.md)。

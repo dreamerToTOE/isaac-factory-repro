@@ -1,0 +1,11 @@
+experiment,envs,phase,peak_used_MiB,min_free_MiB,status,source
+D001 train16,16,3-epoch/short,5669.25,2148.375,complete,work/logs/d001_train16/result.json
+D001 train32,32,3-epoch/short,5679.25,2138.375,complete,work/logs/d001_train32/result.json
+D001 train64,64,3-epoch/short,5724.9375,2092.6875,complete,work/logs/d001_train64/result.json
+G2 preflight observer64,64,1-epoch observer,6134.4375,1683.1875,complete,work/logs/g2_preflight/observer64/result.json
+G2 long seed0,64,200-epoch training,6909.6875,907.9375,complete with monitor gap/exit unknown,evidence/g2/training/reattached_guard_result.json
+G3A smoke,64,2-epoch training,6458.0,1359.625,complete,evidence/g3a/gated_coverage.json
+G3B eval seed1001,32,diagnostic eval,6308.0,1509.625,complete,work/logs/g3b/diagnostic_20261025_01/seed1001/guard/status.json
+G3C-1 seed1,64,startup before epoch1,6899.6875,917.9375,guard stopped,evidence/g3c1/run_receipt.json
+G3C-R1 idle corrected,0,60-second read-only idle,3038.0,4780.0,inventory,work/logs/g3c_r1/inventory_idle_60s_corrected/inventory.json
+G3C-R1 smoke,64,2-epoch capacity attempt,6798.75,1018.875,guard stopped,work/logs/g3c_r1/smoke_64env_seed1_2ep/guard/status.json

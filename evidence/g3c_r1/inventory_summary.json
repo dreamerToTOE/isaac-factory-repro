@@ -1,0 +1,86 @@
+{
+  "capacity_estimate": {
+    "criterion_note": "Engineering preflight proposal based on observed runtime increment, not a replacement for the 1024 MiB runtime guard; variability and unobserved peaks remain.",
+    "current_idle_min_free_MiB": 4780.0,
+    "idle_peak_used_to_g3c1_peak_delta_MiB": 3861.6875,
+    "idle_peak_used_to_r1_smoke_peak_delta_MiB": 3760.75,
+    "recommended_idle_min_free_MiB_for_1p5GiB_runtime_margin": 5500
+  },
+  "compute_process_attribution": {
+    "end": "2882, /usr/libexec/gnome-remote-desktop-daemon, 157",
+    "known_allocation_MiB": 157,
+    "known_process": "gnome-remote-desktop-daemon pid2882",
+    "start": "2882, /usr/libexec/gnome-remote-desktop-daemon, 157",
+    "unattributed_or_graphics_MiB": "idle total used minus reported compute process; not assumed reclaimable"
+  },
+  "g3c1_failed_training": {
+    "child_exit_code": 0,
+    "min_free_MiB": 917.9375,
+    "peak_used_MiB": 6899.6875,
+    "sample_count": 441,
+    "stop_reason": "gpu_headroom_floor",
+    "supervisor_wall_seconds": 46.256400096001016
+  },
+  "gpu_identity": {
+    "cuda_banner": "13.0",
+    "driver": "580.178.04",
+    "name": "NVIDIA GeForce RTX 3070",
+    "total_MiB": 8192
+  },
+  "idle_observed": {
+    "max_reserved_MiB": 375.0,
+    "max_utilization_pct": 61.0,
+    "min_free_MiB": 4780.0,
+    "min_utilization_pct": 2.0,
+    "peak_used_MiB": 3038.0
+  },
+  "inventory_window": {
+    "ended_utc": "2026-10-25T12:27:08.297222+00:00",
+    "interval_s": 0.1,
+    "sample_count": 600,
+    "started_utc": "2026-10-25T12:26:08.210368+00:00"
+  },
+  "r1_capacity_smoke": {
+    "child_exit_code": 0,
+    "min_free_MiB": 1018.875,
+    "peak_used_MiB": 6798.75,
+    "sample_count": 433,
+    "stop_reason": "gpu_headroom_floor",
+    "supervisor_wall_seconds": 45.49822761900214
+  },
+  "ram_swap": {
+    "MemAvailable_start_bytes": 36660842496,
+    "MemTotal_bytes": 50443857920,
+    "SwapFree_start_bytes": 2147479552,
+    "SwapTotal_bytes": 2147479552
+  },
+  "raw_artifacts": {
+    "work/logs/g3c_r1/inventory_idle_60s_corrected/gpu_samples.csv": {
+      "bytes": 69339,
+      "sha256": "b1df1c027a89bf6ad344605cbde6e1007222cea1dde6f50c0039bdf978d6f88d"
+    },
+    "work/logs/g3c_r1/inventory_idle_60s_corrected/inventory.json": {
+      "bytes": 184097,
+      "sha256": "56f8aa64a054dc538ab35378663c6c3fb036471ef1fffe8bc003b05db3a764bf"
+    },
+    "work/logs/g3c_r1/smoke_64env_seed1_2ep/guard/samples.csv": {
+      "bytes": 56121,
+      "sha256": "0951e31321b11f8ceb24e76faa975b761d00c67a4660f6a577fd332530566dbf"
+    },
+    "work/logs/g3c_r1/smoke_64env_seed1_2ep/guard/status.json": {
+      "bytes": 1857,
+      "sha256": "5973ac9780b7650f2da0f966a6408e6f3c8c669a822cd6e714978d15e3a3e819"
+    },
+    "work/logs/g3c_r1/smoke_64env_seed1_2ep/supervisor/console.txt": {
+      "bytes": 7181,
+      "sha256": "729e3f12b6eafd0d242df48dae1ad35fb08adc3a573c6da8b29ce4d3582c6c1d"
+    },
+    "work/logs/g3c_r1/smoke_64env_seed1_2ep/supervisor/status.json": {
+      "bytes": 2063,
+      "sha256": "d676dc0a6dd1bd96f8567fa1d45dfd1ed9ecc357dcc0cde337d0a9bba41ffea1"
+    }
+  },
+  "recorded_utc": "2026-10-25T12:31:54.302771+00:00",
+  "schema_version": "g3c_r1_inventory_summary_v1",
+  "systemd_failed_units": "UNIT                                 LOAD   ACTIVE SUB    DESCRIPTION\ng2-playback-seed1001-retry.service   loaded failed failed /usr/bin/python3 scripts/run_bounded.py --output /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_playback/seed1001_retry_guard --timeout 900 --min-free-mib 1024 -- bash scripts/run_sim.sh scripts/playback_g2_checkpoint.py --checkpoint /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth --output-dir /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_playback/seed1001_retry --seed 1001 --episodes 2 --max-steps 650 --device cuda:0 --headless --enable_cameras\ng3v-playback-seed1001-window.service loaded failed failed /usr/bin/python3 scripts/run_bounded.py --output /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3v_playback_seed1001_window_guard --timeout 900 --min-free-mib 512 -- bash scripts/run_sim.sh scripts/playback_g2_checkpoint.py --checkpoint /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth --output-dir /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3v_playback_seed1001_window --seed 1001 --episodes 1 --max-steps 200 --width 640 --height 480 --rendering_mode performance --device cuda:0 --enable_cameras\ng3v-playback-seed1001.service        loaded failed failed /usr/bin/python3 scripts/run_bounded.py --output /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3v_playback_seed1001_guard --timeout 900 --min-free-mib 1024 -- bash scripts/run_sim.sh scripts/playback_g2_checkpoint.py --checkpoint /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth --output-dir /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3v_playback_seed1001 --seed 1001 --episodes 1 --max-steps 200 --width 640 --height 480 --rendering_mode performance --device cuda:0 --headless --enable_cameras\n\nLOAD   = Reflects whether the unit definition was properly loaded.\nACTIVE = The high-level unit activation state, i.e. generalization of SUB.\nSUB    = The low-level unit activation state, values depend on unit type.\n3 loaded units listed.\n"
+}
