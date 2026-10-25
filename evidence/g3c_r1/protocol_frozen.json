@@ -35,8 +35,13 @@
   "schema_version": "g3c_r1_frozen_protocol_v1",
   "scope": "read-only GPU/system inventory plus historical capacity comparison; no long training, no seed1/seed2 restart, no contact experiment",
   "source_sha256": {
-    "scripts/g3c_r1_inventory.py": "82a931ea46824f3a26e080fbb9efe280b659d65c791fe4ef66d635fb5ec7bc93"
+    "scripts/g3c_r1_inventory.py": "ce9e36363f5a16250df523e3ee6a04dd116b011a9f19b9f113c9f3169628d18a"
   },
   "starting_commit": "306f884d1bb55d4a4b2b84abfab4b096d2da8488",
-  "status": "FROZEN_BEFORE_INVENTORY"
+  "status": "FROZEN_BEFORE_CORRECTED_INVENTORY",
+  "tooling_correction": {
+    "first_inventory_preserved": "work/logs/g3c_r1/inventory_idle_60s",
+    "reason": "nvidia-smi on this host does not expose query field cuda_version; corrected identity collection to valid GPU fields plus full nvidia-smi driver/CUDA banner; memory sampling code unchanged",
+    "recorded_utc": "2026-10-25T12:25:46.933179+00:00"
+  }
 }
