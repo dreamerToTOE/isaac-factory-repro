@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "purpose": "Direct source audit for G3A [ENGINEERING] TensorBoard finalization; this evidence does not modify or backfill G2 events.",
+  "rl_games_package": {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games",
+    "version": "1.6.1"
+  },
+  "sources": {
+    "rl_games_a2c_common": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/a2c_common.py",
+      "sha256": "b2ff92d888212227620138a6ca09d41ea2b8de6af044163ca3699f4ed48de661"
+    },
+    "rl_games_torch_runner": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/torch_runner.py",
+      "sha256": "363c484360ac01ee72f88c4eaf61158348a824b868c894c7c0db77c7aebbb6ad"
+    },
+    "rl_games_interval_summary_writer": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/interval_summary_writer.py",
+      "sha256": "1f82b55613c086d90cde9d388dd3d97e35c3971b4d5a8d5c27c3aa532ac4d31a"
+    },
+    "isaaclab_rl_games_train": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py",
+      "sha256": "668fb1251c83d6e13271457d53a1b7079f3c2964d3284a13ac3bc2ff58194110"
+    }
+  },
+  "observed_facts": [
+    {
+      "source": "rl_games_a2c_common",
+      "lines": "20,280-287",
+      "fact": "RL-Games imports tensorboardX.SummaryWriter and constructs SummaryWriter(self.summaries_dir); nonzero rank has writer=None."
+    },
+    {
+      "source": "rl_games_a2c_common",
+      "lines": "1301-1413",
+      "fact": "ContinuousA2CBase.train writes per-epoch scalars and returns (last_mean_rewards, epoch_num) at max-epoch/max-frame; no flush or close appears in this method."
+    },
+    {
+      "source": "rl_games_torch_runner",
+      "lines": "111-117",
+      "fact": "Runner.run_train creates an agent, calls restore/sigma override, then agent.train(); it does not retain the agent or finalize writer."
+    },
+    {
+      "source": "isaaclab_rl_games_train",
+      "lines": "203-216",
+      "fact": "Official Isaac Lab entry calls runner.run then env.close and simulation_app.close; it does not expose or finalize the RL-Games writer."
+    },
+    {
+      "source": "rl_games_interval_summary_writer",
+      "lines": "1-70",
+      "fact": "Population based training may wrap writer; __getattr__ delegates flush/close to underlying writer."
+    }
+  ],
+  "tensorboardx_runtime_observation": {
+    "summary_writer_signature": "(logdir=None, comment='', purge_step=None, max_queue=10, flush_secs=120, filename_suffix='', write_to_disk=True, log_dir=None, comet_config={'disabled': True}, **kwargs)",
+    "close_behavior": "SummaryWriter.close() flushes each underlying writer before closing it.",
+    "interpretation": "A missing final epoch is compatible with the default asynchronous flush interval and an exit path without explicit close, but this audit does not establish the historical G2 process exit path."
+  },
+  "engineering_change": {
+    "module": "scripts/tensorboard_finalizer.py",
+    "entry_integration": "scripts/python_entry.py",
+    "scope": "Wrap only Runner.run_train; capture the new agent writer and call flush then close in finally. PPO/task/reward/physics/config are untouched.",
+    "activation": "Set FACTORY_G3A_FINALIZE_TENSORBOARD=1 for a G3A run; G2 runs did not set this flag and their event files are preserved.",
+    "finalizer_status_output": "Optional FACTORY_G3A_FINALIZER_OUTPUT receives an atomically replaced JSON record with training_error and per-writer flush/close status."
+  },
+  "repository_files": {
+    "scripts/python_entry.py": "df5ad392a16259f0be72c632643c24a20a57c8ff07e551881b0d52fefe6e011f",
+    "scripts/tensorboard_finalizer.py": "7b37ab21045a36e880cf2d4488859ed88f75204127562af625b432fb6efd3d0e",
+    "scripts/tensorboard_tail.py": "931f0bd5369ef90466042cb361f4c2f4a4aa9c408aaefedd60789a309e7b5638",
+    "tests/test_tensorboard_finalizer.py": "112547102e864ef5c6dfa38f54adba69dfbe2b47c1c115e474e21b1708f2fdf9"
+  },
+  "cpu_verification": {
+    "command": "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 work/envs/factory-g01/bin/python -m pytest -q tests/test_tensorboard_finalizer.py",
+    "result": "5 passed",
+    "full_suite_result": "58 passed in 8.24s",
+    "note": "Historical development logging tests; final all-suite result77passed/18.41s in cpu_final.txt"
+  },
+  "final_repository_files": {
+    "scripts/python_entry.py": "df5ad392a16259f0be72c632643c24a20a57c8ff07e551881b0d52fefe6e011f",
+    "scripts/tensorboard_finalizer.py": "e4d14b64d1989a899a732174132a1aa1d92fc0f394115ff7ba4db6f74b586028",
+    "scripts/tensorboard_tail.py": "edb09c2acb1284fff0998532cee2dd1aeb5e8586e054679c32f178ecc6fa87fb"
+  }
+}

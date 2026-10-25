@@ -1,0 +1,70 @@
+{
+  "created": {
+    "monotonic_seconds": 8555.112505158,
+    "unix_seconds": 1792911231.040638,
+    "utc": "2026-10-25T06:53:51.040622+00:00"
+  },
+  "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+  "safe_environment": [],
+  "schema_version": 2,
+  "source_sha256": {
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/durable_supervisor.py": "2f02e42128dea3bfdda5146802ea097f6b25be805296e6a16f093f6d2b31a889",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g3a_launch_smoke.py": "2af94bacd94d005fa6177eed7eec9e11d4d3b163ae7a2b69ef7db8a7996202cd",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/gpu_guard.py": "bbbe15c007acd052db176743f42e0a831fd7b6b7a92a6d41dc311ca74b8146f2",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/supervised_exec.py": "0d9fa854306b38833c7f1f4d66d0ec04d3c8b3c1397b95991f25b00e2ffa6b89",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/supervision_common.py": "850f8fdf3c18147c8b94c109d978efc0d8c2c26bf6d8d9e6b6600c9e6d40f1e1"
+  },
+  "training_command": [
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+    "-c",
+    "import time;time.sleep(.8)"
+  ],
+  "unit_commands": {
+    "guard": [
+      "systemd-run",
+      "--user",
+      "--collect",
+      "--unit=g3a-cpu-6b95acaf06-guard",
+      "--property=WorkingDirectory=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+      "--property=Restart=no",
+      "--property=KillMode=control-group",
+      "--property=TimeoutStopSec=10",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/gpu_guard.py",
+      "--output",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3a-final-cpu-03/test_systemd_units_survive_sub0/service/guard",
+      "--supervisor-directory",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3a-final-cpu-03/test_systemd_units_survive_sub0/service/supervisor",
+      "--mock-samples",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3a-final-cpu-03/test_systemd_units_survive_sub0/mock.json"
+    ],
+    "supervisor": [
+      "systemd-run",
+      "--user",
+      "--collect",
+      "--unit=g3a-cpu-6b95acaf06-supervisor",
+      "--property=WorkingDirectory=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+      "--property=Restart=no",
+      "--property=KillMode=control-group",
+      "--property=TimeoutStopSec=10",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/durable_supervisor.py",
+      "--output",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3a-final-cpu-03/test_systemd_units_survive_sub0/service/supervisor",
+      "--guard-directory",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3a-final-cpu-03/test_systemd_units_survive_sub0/service/guard",
+      "--lock-file",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3a-final-cpu-03/test_systemd_units_survive_sub0/lock",
+      "--timeout",
+      "1200",
+      "--",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+      "-c",
+      "import time;time.sleep(.8)"
+    ]
+  },
+  "units": {
+    "guard": "g3a-cpu-6b95acaf06-guard",
+    "supervisor": "g3a-cpu-6b95acaf06-supervisor"
+  }
+}

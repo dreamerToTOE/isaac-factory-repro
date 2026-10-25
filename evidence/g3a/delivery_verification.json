@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "verified_utc": "2026-10-25T07:03:30.702248+00:00",
+  "base_commit": "b89dc08f7421b24480c9a756780cc4f6fc058422",
+  "checks": {
+    "all_frozen_runtime_sources_match": true,
+    "cpu_tests": 77,
+    "cpu_failures": 0,
+    "cpu_errors": 0,
+    "g2_committed_evidence_unchanged": true,
+    "unrelated_g3v_unchanged": true,
+    "strict_tb_tail_complete": true,
+    "checkpoint_epoch2_frame16384_finite": true,
+    "child_exit0": true,
+    "sampled_coverage_complete": true
+  },
+  "test_requirements": {
+    "normal_exit": "test_normal_child_exit_zero",
+    "nonzero_exit": "test_nonzero_child_status_is_not_monitor_status",
+    "signal_exit": "test_signal_wait_status_preserved",
+    "launcher_disappearance": "test_systemd_units_survive_submitting_launcher_sigkill",
+    "monitor_guard_failure": "test_guard_crash_is_detected_and_child_is_stopped / test_monitor_exception_stops_child_and_records_failure",
+    "atomic_status": "test_atomic_status_visibility_and_failed_replace_keeps_old",
+    "duplicate_launch": "test_duplicate_lock_is_held_by_child_even_if_supervisor_dies",
+    "nonoverwrite": "test_existing_evidence_never_overwritten",
+    "mock_low_memory": "test_three_low_samples_trigger_without_real_gpu_pressure / test_nonconsecutive_low_samples_reset_counter",
+    "missing_tb_tail": "test_tensorboard_tail_rejects_missing_tail_without_backfill"
+  },
+  "final_commit_receipt": "Delivered separately after push, avoiding self-referential commit SHA."
+}

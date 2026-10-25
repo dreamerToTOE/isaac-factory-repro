@@ -1,0 +1,150 @@
+{
+  "engineering": "Read-only epoch summaries and actual optimizer/AMP call counters",
+  "started_utc": "2026-10-25T06:35:58.018535+00:00",
+  "epochs": [
+    {
+      "epoch": 1,
+      "environment_transitions": 8192,
+      "env_step_seconds": 30.520442008972168,
+      "rollout_seconds": 30.93236541748047,
+      "optimization_seconds": 15.928280353546143,
+      "official_total_seconds": 46.86064600944519,
+      "observed_epoch_seconds": 46.86191432299984,
+      "env_step_fps": 268.4102673739711,
+      "rollout_fps": 264.8358730228418,
+      "total_fps": 174.81619861469318,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 63,
+        "central_value": 64
+      },
+      "cuda_peak_allocated_bytes": 524378624,
+      "cuda_peak_reserved_bytes": 652214272
+    },
+    {
+      "epoch": 2,
+      "environment_transitions": 8192,
+      "env_step_seconds": 32.81842637062073,
+      "rollout_seconds": 34.0092990398407,
+      "optimization_seconds": 4.305834531784058,
+      "official_total_seconds": 38.315133810043335,
+      "observed_epoch_seconds": 38.316334838999865,
+      "env_step_fps": 249.61586846021152,
+      "rollout_fps": 240.87529679466078,
+      "total_fps": 213.8058564695049,
+      "epoch_loss_arrays_finite": true,
+      "amp_scale": 32768.0,
+      "optimizer_steps_cumulative": {
+        "actor": 127,
+        "central_value": 128
+      },
+      "cuda_peak_allocated_bytes": 600736768,
+      "cuda_peak_reserved_bytes": 773849088
+    }
+  ],
+  "amp_skips": [
+    {
+      "epoch": 1,
+      "attempt": 1,
+      "scale_before": 65536.0,
+      "scale_after": 32768.0
+    }
+  ],
+  "checkpoint_events": [
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/logs/rl_games/Factory/g3a_smoke_64env_seed0_20261025b/nn/last_Factory_ep_2_rew_35.101456",
+      "epoch": 2,
+      "frame": 16384
+    },
+    {
+      "operation": "save",
+      "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/logs/rl_games/Factory/g3a_smoke_64env_seed0_20261025b/nn/last_Factory_ep_2_rew__35.101456_",
+      "epoch": 2,
+      "frame": 16384
+    }
+  ],
+  "optimizer_steps": {
+    "actor": 127,
+    "central_value": 128
+  },
+  "actor_attempts": 128,
+  "instrumentation_errors": [],
+  "runtime": {
+    "num_actors": 64,
+    "horizon_length": 128,
+    "minibatch_size": 512,
+    "mini_epochs": 4,
+    "obs_shape": [
+      19
+    ],
+    "state_shape": [
+      43
+    ],
+    "actions_num": 6,
+    "mixed_precision": true,
+    "config": {
+      "name": "Factory",
+      "device": "cuda:0",
+      "full_experiment_name": "g3a_smoke_64env_seed0_20261025b",
+      "env_name": "rlgpu",
+      "multi_gpu": false,
+      "ppo": true,
+      "mixed_precision": true,
+      "normalize_input": true,
+      "normalize_value": true,
+      "value_bootstrap": true,
+      "num_actors": 64,
+      "reward_shaper": "<rl_games.common.tr_helpers.DefaultRewardsShaper object at 0x7c7fce558790>",
+      "normalize_advantage": true,
+      "gamma": 0.995,
+      "tau": 0.95,
+      "learning_rate": 0.0001,
+      "lr_schedule": "adaptive",
+      "schedule_type": "standard",
+      "kl_threshold": 0.008,
+      "score_to_win": 20000,
+      "max_epochs": 2,
+      "save_best_after": 10,
+      "save_frequency": 1,
+      "print_stats": true,
+      "grad_norm": 1.0,
+      "entropy_coef": 0.0,
+      "truncate_grads": true,
+      "e_clip": 0.2,
+      "horizon_length": 128,
+      "minibatch_size": 512,
+      "mini_epochs": 4,
+      "critic_coef": 2,
+      "clip_value": true,
+      "seq_length": 128,
+      "bounds_loss_coef": 0.0001,
+      "central_value_config": {
+        "minibatch_size": 512,
+        "mini_epochs": 4,
+        "learning_rate": "1e-4",
+        "lr_schedule": "adaptive",
+        "kl_threshold": 0.008,
+        "clip_value": true,
+        "normalize_input": true,
+        "truncate_grads": true,
+        "network": "<rl_games.algos_torch.models.ModelCentralValue object at 0x7c7fce558be0>",
+        "model": {
+          "name": "central_value"
+        }
+      },
+      "player": {
+        "deterministic": false
+      },
+      "train_dir": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/logs/rl_games/Factory",
+      "features": {
+        "observer": "<rl_games.common.algo_observer.IsaacAlgoObserver object at 0x7c7fce558760>"
+      },
+      "network": "<rl_games.algos_torch.models.ModelA2CContinuousLogStd object at 0x7c7fce558b20>"
+    },
+    "actor_model": "Network(\n  (value_mean_std): RunningMeanStd()\n  (running_mean_std): RunningMeanStd()\n  (a2c_network): Network(\n    (actor_cnn): Sequential()\n    (critic_cnn): Sequential()\n    (actor_mlp): Sequential(\n      (0): Linear(in_features=1024, out_features=512, bias=True)\n      (1): ELU(alpha=1.0)\n      (2): Linear(in_features=512, out_features=128, bias=True)\n      (3): ELU(alpha=1.0)\n      (4): Linear(in_features=128, out_features=64, bias=True)\n      (5): ELU(alpha=1.0)\n    )\n    (critic_mlp): Sequential()\n    (rnn): LSTMWithDones(\n      (rnn): LSTM(19, 1024, num_layers=2)\n    )\n    (layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)\n    (value): Linear(in_features=64, out_features=1, bias=True)\n    (value_act): Identity()\n    (mu): Linear(in_features=64, out_features=6, bias=True)\n    (mu_act): Identity()\n    (sigma_act): Identity()\n    (sigma): Linear(in_features=64, out_features=6, bias=True)\n  )\n)",
+    "central_value_model": "Network(\n  (value_mean_std): RunningMeanStd()\n  (running_mean_std): RunningMeanStd()\n  (a2c_network): Network(\n    (actor_cnn): Sequential()\n    (critic_cnn): Sequential()\n    (actor_mlp): Sequential(\n      (0): Linear(in_features=1024, out_features=512, bias=True)\n      (1): ELU(alpha=1.0)\n      (2): Linear(in_features=512, out_features=128, bias=True)\n      (3): ELU(alpha=1.0)\n      (4): Linear(in_features=128, out_features=64, bias=True)\n      (5): ELU(alpha=1.0)\n    )\n    (critic_mlp): Sequential()\n    (rnn): LSTMWithDones(\n      (rnn): LSTM(43, 1024, num_layers=2)\n    )\n    (layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)\n    (value): Linear(in_features=64, out_features=1, bias=True)\n    (value_act): Identity()\n  )\n)"
+  },
+  "observers_installed": true
+}

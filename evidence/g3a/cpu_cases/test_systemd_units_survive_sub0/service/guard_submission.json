@@ -1,0 +1,9 @@
+{
+  "monotonic_seconds": 8555.196857781,
+  "returncode": 0,
+  "role": "guard",
+  "stderr": "Running as unit: g3a-cpu-6b95acaf06-guard.service\n",
+  "stdout": "",
+  "unix_seconds": 1792911231.1249924,
+  "utc": "2026-10-25T06:53:51.124978+00:00"
+}

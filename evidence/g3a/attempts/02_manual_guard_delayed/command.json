@@ -1,0 +1,24 @@
+{
+  "command": [
+    "bash",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py",
+    "--headless",
+    "--device",
+    "cuda:0",
+    "--task",
+    "Isaac-Factory-PegInsert-Direct-v0",
+    "--num_envs",
+    "64",
+    "--seed",
+    "0",
+    "--max_iterations",
+    "2",
+    "agent.params.config.full_experiment_name=g3a_smoke_64env_seed0_20261025b",
+    "agent.params.config.save_frequency=1"
+  ],
+  "created_utc": "2026-10-25T06:35:55.576651+00:00",
+  "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+  "schema": "g3a.command.v1",
+  "supervisor_version": "g3a.supervisor.v1"
+}

@@ -2,6 +2,14 @@
 
 更新：2026-10-25（Asia/Seoul）。G2已完成64环境、seed0、200epochs及全部主要评估；下方G0/G1、D001的“未启动/等待审阅”等语句保留为历史状态。
 
+## G3A 当前工程验收
+
+**PASS（监督与日志可靠性短测）**：77项CPU测试通过；独立systemd guard在训练前采样，绑定boot/PID/birth后放行执行闸门。64环境2epoch smoke实际child exit0、16384transitions，829样本无>0.5秒gap，checkpoint及50tag末轮TensorBoard通过。见[REVIEW_G3A](REVIEW_G3A.md)、[协议](G3_SUPERVISION_PROTOCOL.md)、[证据](../evidence/g3a/README.md)。未启动G3B或长训练，G2科学PASS不变。
+
+已补正常writer显式flush/close、真实wait状态、双方liveness、身份/独占/非覆盖与原子最终记录。此前手工迟启guard的失败/部分完成smoke保留；G2约123秒缺口、原退出码、TensorBoard缺尾仍无法追回，根因未确证。
+
+剩余限制：Linger=no，不保证跨完整注销/重启；两服务同时SIGKILL、断电或文件系统故障可丢失最后状态；0.1秒采样不保证瞬时峰值；通用daemonize/PGID逃逸不在标准run_sim保证内。新长训练须重新preflight、新manifest/目录。G3B建议先诊断8例失败，再预注册额外训练seed，不自动启动。
+
 ## G2 当前状态与未决项
 
 **PASS（资源受限初步基线）**：1,638,400 transitions，最终独立确定性ever/terminal均280/288=97.222%，42项CPU测试通过；里程碑、回放、几何和日志见[RESULTS_G2](RESULTS_G2.md)及[证据索引](../evidence/g2/README.md)。上游保持pinned且干净，没有参数调优或追加训练。
@@ -17,7 +25,7 @@
 | final8次失败未获完整轨迹 | seed1001有1次，seed1003有7次；不能臆测卡滞等机制 | 对具体env/episode诊断几何与动作，额外诊断不改主要分母 |
 | 官方成功语义有限 | XY<2.5mm且单侧z<1mm，没有保持时长/力/旋转/下界约束 | 如需更严格质量指标，未来独立定义并保留原官方指标 |
 
-保留D001精确续训、依赖最小安装、其它Factory任务等限制。G3只提案，尚未启动；不会自动400epochs、128环境、调PPO/奖励或转Gear/Nut。
+保留D001精确续训、依赖最小安装、其它Factory任务等限制。后续科学实验/G3B只提案，尚未启动；G3A工程验收见上节。不会自动400epochs、128环境、调PPO/奖励或转Gear/Nut。
 
 ## D001状态（历史，2026-10-23）
 

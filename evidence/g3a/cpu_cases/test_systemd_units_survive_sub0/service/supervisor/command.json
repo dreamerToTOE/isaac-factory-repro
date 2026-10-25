@@ -1,0 +1,29 @@
+{
+  "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+  "command": [
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+    "-c",
+    "import time;time.sleep(.8)"
+  ],
+  "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+  "engineering": true,
+  "environment": {},
+  "guard_directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3a-final-cpu-03/test_systemd_units_survive_sub0/service/guard",
+  "identity": {
+    "birth_ticks": "855529",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 57640,
+    "pid": 57640,
+    "state": "R"
+  },
+  "lock_file": "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3a-final-cpu-03/test_systemd_units_survive_sub0/lock",
+  "schema_version": 2,
+  "stale_seconds": 2,
+  "started": {
+    "monotonic_seconds": 8555.336423451,
+    "unix_seconds": 1792911231.264558,
+    "utc": "2026-10-25T06:53:51.264544+00:00"
+  },
+  "startup_timeout_seconds": 30,
+  "timeout_seconds": 1200.0
+}

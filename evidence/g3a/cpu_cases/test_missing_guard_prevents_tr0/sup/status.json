@@ -1,0 +1,41 @@
+{
+  "child_exit_code": null,
+  "child_identity": null,
+  "child_signal": null,
+  "command": [
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+    "-c",
+    "open('/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3a-final-cpu-03/test_missing_guard_prevents_tr0/must_not_exist','w').close()"
+  ],
+  "ended": {
+    "monotonic_seconds": 8544.053074989,
+    "unix_seconds": 1792911219.98121,
+    "utc": "2026-10-25T06:53:39.981205+00:00"
+  },
+  "error": {
+    "message": "guard readiness timeout; child not launched",
+    "type": "RuntimeError"
+  },
+  "exec_released": null,
+  "finalized": true,
+  "guard_identity": null,
+  "guard_required": true,
+  "identity": {
+    "birth_ticks": "854367",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 57512,
+    "pid": 57552,
+    "state": "R"
+  },
+  "raw_wait_returncode": null,
+  "received_supervisor_signals": [],
+  "schema_version": 2,
+  "started": {
+    "monotonic_seconds": 8543.707402567,
+    "unix_seconds": 1792911219.635535,
+    "utc": "2026-10-25T06:53:39.635522+00:00"
+  },
+  "stop_signals": [],
+  "termination_reason": "supervisor_error",
+  "wall_seconds": 0.3456729519984947
+}

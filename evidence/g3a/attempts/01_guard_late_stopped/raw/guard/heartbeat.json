@@ -1,0 +1,12 @@
+{
+  "free_MiB": 4373.625,
+  "guard_birth_ticks": "741084",
+  "guard_pid": 49414,
+  "low_consecutive": 0,
+  "sample_count": 4,
+  "schema": "g3a.gpu_guard.heartbeat.v1",
+  "target_birth_ticks": "738236",
+  "target_pid": 49158,
+  "written_unix": 1792910088.0675218,
+  "written_utc": "2026-10-25T06:34:48.067502+00:00"
+}

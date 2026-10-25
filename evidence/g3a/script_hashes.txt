@@ -1,0 +1,4 @@
+HISTORICAL schema1 development evidence; not final acceptance. Final source/test evidence: gated_preflight.json and cpu_final*.
+c988e399681bafc7d60224b6f3625e0683663d9cf82b9ba7721b89ad10fd89ac  scripts/durable_supervisor.py
+8fa6573faa8839bf3fdc7533f169bbf4e0d0926adb0aeac7b2c7118f0e782a50  scripts/gpu_guard.py
+178608f107c3238b8f77757fa749aa72288afa17ee89dbcca68c9c7c6e639c72  tests/test_g3a_supervision.py

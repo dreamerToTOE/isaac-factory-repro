@@ -1,0 +1,54 @@
+{
+  "child_exit_code": 0,
+  "child_identity": {
+    "birth_ticks": "855562",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 57641,
+    "pid": 57641,
+    "state": "R"
+  },
+  "child_signal": null,
+  "command": [
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+    "-c",
+    "import time;time.sleep(.8)"
+  ],
+  "ended": {
+    "monotonic_seconds": 8557.220899881,
+    "unix_seconds": 1792911233.149035,
+    "utc": "2026-10-25T06:53:53.149030+00:00"
+  },
+  "error": null,
+  "exec_released": {
+    "monotonic_seconds": 8556.244349156,
+    "unix_seconds": 1792911232.1724842,
+    "utc": "2026-10-25T06:53:52.172479+00:00"
+  },
+  "finalized": true,
+  "guard_identity": {
+    "birth_ticks": "855518",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 57638,
+    "pid": 57638,
+    "state": "R"
+  },
+  "guard_required": true,
+  "identity": {
+    "birth_ticks": "855529",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 57640,
+    "pid": 57640,
+    "state": "R"
+  },
+  "raw_wait_returncode": 0,
+  "received_supervisor_signals": [],
+  "schema_version": 2,
+  "started": {
+    "monotonic_seconds": 8555.336423451,
+    "unix_seconds": 1792911231.264558,
+    "utc": "2026-10-25T06:53:51.264544+00:00"
+  },
+  "stop_signals": [],
+  "termination_reason": "child_exit",
+  "wall_seconds": 1.884476942999754
+}

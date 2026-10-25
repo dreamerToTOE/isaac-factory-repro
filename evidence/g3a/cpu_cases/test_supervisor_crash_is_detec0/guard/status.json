@@ -1,0 +1,63 @@
+{
+  "continuous_monitoring": false,
+  "coverage_note": "Sampled coverage: regular intervals are not continuous measurement.",
+  "ended": {
+    "monotonic_seconds": 8545.704989669,
+    "unix_seconds": 1792911221.6331244,
+    "utc": "2026-10-25T06:53:41.633114+00:00"
+  },
+  "error": null,
+  "finalized": true,
+  "first_sample": {
+    "monotonic_seconds": 8545.052222558,
+    "unix_seconds": 1792911220.9803576,
+    "utc": "2026-10-25T06:53:40.980346+00:00"
+  },
+  "identity": {
+    "birth_ticks": "854491",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 57512,
+    "pid": 57556,
+    "state": "R"
+  },
+  "last_sample": {
+    "monotonic_seconds": 8545.65244657,
+    "unix_seconds": 1792911221.5805814,
+    "utc": "2026-10-25T06:53:41.580567+00:00"
+  },
+  "low_memory_stop_condition_observed": false,
+  "max_low_consecutive": 0,
+  "min_free_MiB": 4096.0,
+  "monitoring_gaps": [],
+  "peak_used_MiB": 4096.0,
+  "policy": {
+    "consecutive_samples": 3,
+    "floor_MiB": 1024,
+    "gap_limit_seconds": 0.5,
+    "interval_seconds": 0.1,
+    "stale_seconds": 2
+  },
+  "sample_count": 7,
+  "schema_version": 2,
+  "started": {
+    "monotonic_seconds": 8544.945960867,
+    "unix_seconds": 1792911220.8740954,
+    "utc": "2026-10-25T06:53:40.874079+00:00"
+  },
+  "stop_reason": "supervisor_lost_or_stale",
+  "stop_signals": [],
+  "supervisor_identity": {
+    "birth_ticks": "854491",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 57512,
+    "pid": 57557,
+    "state": "R"
+  },
+  "target_identity": {
+    "birth_ticks": "854520",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 57566,
+    "pid": 57566,
+    "state": "R"
+  }
+}

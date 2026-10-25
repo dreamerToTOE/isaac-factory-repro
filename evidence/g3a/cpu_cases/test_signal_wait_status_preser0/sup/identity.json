@@ -1,0 +1,13 @@
+{
+  "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+  "identity": {
+    "birth_ticks": "854167",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 57512,
+    "pid": 57547,
+    "state": "R"
+  },
+  "monotonic_seconds": 8541.700981685,
+  "unix_seconds": 1792911217.6291165,
+  "utc": "2026-10-25T06:53:37.629102+00:00"
+}

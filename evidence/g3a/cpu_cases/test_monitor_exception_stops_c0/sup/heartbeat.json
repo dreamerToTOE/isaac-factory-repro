@@ -1,0 +1,21 @@
+{
+  "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+  "child_identity": {
+    "birth_ticks": "855000",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 57601,
+    "pid": 57601,
+    "state": "R"
+  },
+  "identity": {
+    "birth_ticks": "854967",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 57512,
+    "pid": 57600,
+    "state": "R"
+  },
+  "monotonic_seconds": 8550.606134949,
+  "state": "finished",
+  "unix_seconds": 1792911226.53427,
+  "utc": "2026-10-25T06:53:46.534267+00:00"
+}

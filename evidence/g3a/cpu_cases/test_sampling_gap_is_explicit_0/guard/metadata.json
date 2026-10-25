@@ -1,0 +1,25 @@
+{
+  "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+  "identity": {
+    "birth_ticks": "855144",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 57512,
+    "pid": 57602,
+    "state": "R"
+  },
+  "mock_source": "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3a-final-cpu-03/test_sampling_gap_is_explicit_0/mock.json",
+  "policy": {
+    "consecutive_samples": 3,
+    "floor_MiB": 1024,
+    "gap_limit_seconds": 0.5,
+    "interval_seconds": 0.1,
+    "stale_seconds": 2
+  },
+  "schema_version": 2,
+  "started": {
+    "monotonic_seconds": 8551.475957525,
+    "unix_seconds": 1792911227.4040916,
+    "utc": "2026-10-25T06:53:47.404076+00:00"
+  },
+  "supervisor_directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3a-final-cpu-03/test_sampling_gap_is_explicit_0/sup"
+}

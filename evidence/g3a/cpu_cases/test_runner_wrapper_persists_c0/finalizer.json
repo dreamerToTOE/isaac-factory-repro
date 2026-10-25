@@ -1,0 +1,17 @@
+{
+  "agents": [
+    {
+      "close_called": true,
+      "errors": [],
+      "flush_called": true,
+      "global_rank": 0,
+      "success": true,
+      "writer_class": "FakeWriter",
+      "writer_expected": true,
+      "writer_present": true
+    }
+  ],
+  "no_agent_created": false,
+  "status": "complete",
+  "training_error": null
+}

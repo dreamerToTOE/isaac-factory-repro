@@ -1,0 +1,12 @@
+{
+  "floor_MiB": 1024.0,
+  "guard_birth_ticks": "741084",
+  "guard_pid": 49414,
+  "immutable": true,
+  "interval_seconds": 0.1,
+  "mock": false,
+  "schema": "g3a.gpu_guard.v1",
+  "started_utc": "2026-10-25T06:34:46.823333+00:00",
+  "target_birth_ticks": "738236",
+  "target_pid": 49158
+}

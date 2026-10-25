@@ -1,0 +1,61 @@
+{
+  "child_exit_code": null,
+  "child_identity": {
+    "birth_ticks": "854437",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 57555,
+    "pid": 57555,
+    "state": "R"
+  },
+  "child_signal": "SIGTERM",
+  "command": [
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+    "-c",
+    "import time;time.sleep(20)"
+  ],
+  "ended": {
+    "monotonic_seconds": 8544.846697804,
+    "unix_seconds": 1792911220.7748325,
+    "utc": "2026-10-25T06:53:40.774827+00:00"
+  },
+  "error": null,
+  "exec_released": {
+    "monotonic_seconds": 8544.637153933,
+    "unix_seconds": 1792911220.565289,
+    "utc": "2026-10-25T06:53:40.565284+00:00"
+  },
+  "finalized": true,
+  "guard_identity": {
+    "birth_ticks": "854411",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 57512,
+    "pid": 57553,
+    "state": "R"
+  },
+  "guard_required": true,
+  "identity": {
+    "birth_ticks": "854411",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 57512,
+    "pid": 57554,
+    "state": "R"
+  },
+  "raw_wait_returncode": -15,
+  "received_supervisor_signals": [],
+  "schema_version": 2,
+  "started": {
+    "monotonic_seconds": 8544.143371183,
+    "unix_seconds": 1792911220.0715053,
+    "utc": "2026-10-25T06:53:40.071489+00:00"
+  },
+  "stop_signals": [
+    {
+      "monotonic_seconds": 8544.826188032,
+      "signal": "SIGTERM",
+      "unix_seconds": 1792911220.754323,
+      "utc": "2026-10-25T06:53:40.754316+00:00"
+    }
+  ],
+  "termination_reason": "guard_missing_or_stale",
+  "wall_seconds": 0.7033271290001721
+}

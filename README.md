@@ -1,6 +1,12 @@
 # isaac-factory-repro
 Reproduction and evaluation of contact-rich robotic assembly tasks using NVIDIA Isaac Lab, Franka, and PPO.
 
+## G3A 监督与日志工程验收（2026-10-25）
+
+**PASS**：先采样的独立systemd GPU guard、绑定身份后放行的闸门、真实child wait/exit、全局独占及writer flush/close已验证。77项CPU测试通过；64环境2epoch smoke实际exit0、16384transitions、829条采样无>0.5秒gap，checkpoint和末epoch TensorBoard完整。G2历史缺失不回填，未开始G3B或新长训练。
+
+见[工程审阅](docs/REVIEW_G3A.md)、[运行协议](docs/G3_SUPERVISION_PROTOCOL.md)、[证据](evidence/g3a/README.md)。短测不保证跨完整注销/断电或长时稳定；保留两次开发smoke失败/部分完成记录。
+
 ## G2 当前结果（训练 2026-10-23，审阅 2026-10-25）
 
 **PASS：64环境、seed0、官方PPO全新连续200epochs完成，1,638,400 transitions。** 独立确定性评估最终ever/terminal均280/288（97.222%）；50/100/150里程碑分别69/96、81/96、92/96。约2小时32分53秒，PPO聚合180.18FPS，观测全卡显存峰值6909.69MiB。属于资源受限初步基线，样本量为官方128环境同200epochs的一半。

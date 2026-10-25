@@ -34,6 +34,13 @@ if os.environ.get("FACTORY_G2_AUDIT_OUTPUT"):
     from g2_training_observer import install
     install(AppLauncher)
 
+# [ENGINEERING] Opt-in flush/close of the RL-Games TensorBoard writer. This
+# wraps only Runner.run_train; PPO/task/reward/physics code remains in the
+# pinned upstream entry unchanged. G2 runs did not set this flag.
+if os.environ.get("FACTORY_G3A_FINALIZE_TENSORBOARD"):
+    from tensorboard_finalizer import install_runner_finalizer
+    install_runner_finalizer()
+
 target = sys.argv[1]
 sys.argv = sys.argv[1:]
 if target == "-c":

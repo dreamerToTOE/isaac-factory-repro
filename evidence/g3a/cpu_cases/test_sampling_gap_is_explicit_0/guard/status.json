@@ -1,0 +1,84 @@
+{
+  "continuous_monitoring": false,
+  "coverage_note": "Sampled coverage: regular intervals are not continuous measurement.",
+  "ended": {
+    "monotonic_seconds": 8553.171729691,
+    "unix_seconds": 1792911229.0998647,
+    "utc": "2026-10-25T06:53:49.099855+00:00"
+  },
+  "error": null,
+  "finalized": true,
+  "first_sample": {
+    "monotonic_seconds": 8551.635594024,
+    "unix_seconds": 1792911227.563729,
+    "utc": "2026-10-25T06:53:47.563718+00:00"
+  },
+  "identity": {
+    "birth_ticks": "855144",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 57512,
+    "pid": 57602,
+    "state": "R"
+  },
+  "last_sample": {
+    "monotonic_seconds": 8553.086136782,
+    "unix_seconds": 1792911229.0142715,
+    "utc": "2026-10-25T06:53:49.014260+00:00"
+  },
+  "low_memory_stop_condition_observed": false,
+  "max_low_consecutive": 0,
+  "min_free_MiB": 4096.0,
+  "monitoring_gaps": [
+    {
+      "duration_seconds": 0.7504183839992038,
+      "from": {
+        "monotonic_seconds": 8552.335718398,
+        "unix_seconds": 1792911228.263853,
+        "utc": "2026-10-25T06:53:48.263838+00:00"
+      },
+      "to": {
+        "monotonic_seconds": 8553.086136782,
+        "unix_seconds": 1792911229.0142715,
+        "utc": "2026-10-25T06:53:49.014260+00:00"
+      }
+    }
+  ],
+  "peak_used_MiB": 4096.0,
+  "policy": {
+    "consecutive_samples": 3,
+    "floor_MiB": 1024,
+    "gap_limit_seconds": 0.5,
+    "interval_seconds": 0.1,
+    "stale_seconds": 2
+  },
+  "sample_count": 9,
+  "schema_version": 2,
+  "started": {
+    "monotonic_seconds": 8551.475957525,
+    "unix_seconds": 1792911227.4040916,
+    "utc": "2026-10-25T06:53:47.404076+00:00"
+  },
+  "stop_reason": "monitoring_gap",
+  "stop_signals": [
+    {
+      "monotonic_seconds": 8553.151463188,
+      "signal": "SIGTERM",
+      "unix_seconds": 1792911229.0795977,
+      "utc": "2026-10-25T06:53:49.079585+00:00"
+    }
+  ],
+  "supervisor_identity": {
+    "birth_ticks": "855144",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 57512,
+    "pid": 57603,
+    "state": "R"
+  },
+  "target_identity": {
+    "birth_ticks": "855174",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 57606,
+    "pid": 57606,
+    "state": "R"
+  }
+}

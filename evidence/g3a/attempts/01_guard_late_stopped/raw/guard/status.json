@@ -1,0 +1,45 @@
+{
+  "continuous_monitoring": false,
+  "duration_seconds": 1.486633342999994,
+  "ended_utc": "2026-10-25T06:34:48.309961+00:00",
+  "evidence_files": [
+    "metadata.json",
+    "samples.csv",
+    "heartbeat.json",
+    "status.json"
+  ],
+  "guard_birth_ticks": "741084",
+  "guard_health": "complete",
+  "guard_pid": 49414,
+  "max_low_consecutive": 0,
+  "min_free_MiB": 4366.375,
+  "monitor_errors": [],
+  "monitoring_gaps": [
+    {
+      "duration_seconds": 0.3243257150006684,
+      "from_elapsed_seconds": 0.13105027199981123,
+      "to_elapsed_seconds": 0.45537598700047965
+    },
+    {
+      "duration_seconds": 0.35804379299952416,
+      "from_elapsed_seconds": 0.45537598700047965,
+      "to_elapsed_seconds": 0.8134197800000038
+    },
+    {
+      "duration_seconds": 0.3539555470006235,
+      "from_elapsed_seconds": 0.8134197800000038,
+      "to_elapsed_seconds": 1.1673753270006273
+    }
+  ],
+  "policy": {
+    "consecutive_samples": 3,
+    "floor_MiB": 1024.0
+  },
+  "sample_count": 4,
+  "schema": "g3a.gpu_guard.status.v1",
+  "started_utc": "2026-10-25T06:34:46.823333+00:00",
+  "status": "finished",
+  "stop_reason": "target_ended",
+  "target_birth_ticks": "738236",
+  "target_pid": 49158
+}

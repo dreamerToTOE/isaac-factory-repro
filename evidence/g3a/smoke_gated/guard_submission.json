@@ -1,0 +1,9 @@
+{
+  "monotonic_seconds": 8604.531888915,
+  "returncode": 0,
+  "role": "guard",
+  "stderr": "Running as unit: g3a-gated-final-20261025-guard.service\n",
+  "stdout": "",
+  "unix_seconds": 1792911280.4600236,
+  "utc": "2026-10-25T06:54:40.460013+00:00"
+}

@@ -1,0 +1,191 @@
+{
+  "directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3a_smoke_gated_64env_20261025_final/summaries",
+  "expected_epochs": 2,
+  "issues": [],
+  "missing_tags": [],
+  "nonfinite_count": 0,
+  "required_tags": [
+    "info/epochs",
+    "losses/a_loss",
+    "losses/c_loss",
+    "losses/entropy",
+    "losses/bounds_loss",
+    "performance/step_inference_rl_update_fps",
+    "performance/step_inference_time",
+    "performance/rl_update_time",
+    "losses/cval_loss",
+    "info/cval_lr",
+    "rewards/iter",
+    "shaped_rewards/iter",
+    "episode_lengths/iter"
+  ],
+  "reward_first_epoch": 2,
+  "scalar_tag_count": 50,
+  "status": "complete",
+  "summaries": {
+    "episode_lengths/iter": {
+      "count": 1,
+      "expected_count": 1,
+      "expected_steps": [
+        2
+      ],
+      "last_value": 149.0,
+      "steps": [
+        2
+      ]
+    },
+    "info/cval_lr": {
+      "count": 2,
+      "expected_count": 2,
+      "expected_steps": [
+        8192,
+        16384
+      ],
+      "last_value": 9.999999747378752e-05,
+      "steps": [
+        8192,
+        16384
+      ]
+    },
+    "info/epochs": {
+      "count": 2,
+      "expected_count": 2,
+      "expected_steps": [
+        0,
+        8192
+      ],
+      "last_value": 2.0,
+      "steps": [
+        0,
+        8192
+      ]
+    },
+    "losses/a_loss": {
+      "count": 2,
+      "expected_count": 2,
+      "expected_steps": [
+        0,
+        8192
+      ],
+      "last_value": -0.006541721057146788,
+      "steps": [
+        0,
+        8192
+      ]
+    },
+    "losses/bounds_loss": {
+      "count": 2,
+      "expected_count": 2,
+      "expected_steps": [
+        0,
+        8192
+      ],
+      "last_value": 0.0,
+      "steps": [
+        0,
+        8192
+      ]
+    },
+    "losses/c_loss": {
+      "count": 2,
+      "expected_count": 2,
+      "expected_steps": [
+        0,
+        8192
+      ],
+      "last_value": 0.923799991607666,
+      "steps": [
+        0,
+        8192
+      ]
+    },
+    "losses/cval_loss": {
+      "count": 2,
+      "expected_count": 2,
+      "expected_steps": [
+        8192,
+        16384
+      ],
+      "last_value": 0.8652303814888,
+      "steps": [
+        8192,
+        16384
+      ]
+    },
+    "losses/entropy": {
+      "count": 2,
+      "expected_count": 2,
+      "expected_steps": [
+        0,
+        8192
+      ],
+      "last_value": 8.481653213500977,
+      "steps": [
+        0,
+        8192
+      ]
+    },
+    "performance/rl_update_time": {
+      "count": 2,
+      "expected_count": 2,
+      "expected_steps": [
+        0,
+        8192
+      ],
+      "last_value": 3.8155384063720703,
+      "steps": [
+        0,
+        8192
+      ]
+    },
+    "performance/step_inference_rl_update_fps": {
+      "count": 2,
+      "expected_count": 2,
+      "expected_steps": [
+        0,
+        8192
+      ],
+      "last_value": 233.659423828125,
+      "steps": [
+        0,
+        8192
+      ]
+    },
+    "performance/step_inference_time": {
+      "count": 2,
+      "expected_count": 2,
+      "expected_steps": [
+        0,
+        8192
+      ],
+      "last_value": 31.244035720825195,
+      "steps": [
+        0,
+        8192
+      ]
+    },
+    "rewards/iter": {
+      "count": 1,
+      "expected_count": 1,
+      "expected_steps": [
+        2
+      ],
+      "last_value": 35.10145568847656,
+      "steps": [
+        2
+      ]
+    },
+    "shaped_rewards/iter": {
+      "count": 1,
+      "expected_count": 1,
+      "expected_steps": [
+        2
+      ],
+      "last_value": 37.4423713684082,
+      "steps": [
+        2
+      ]
+    }
+  },
+  "transitions_per_epoch": 8192
+}

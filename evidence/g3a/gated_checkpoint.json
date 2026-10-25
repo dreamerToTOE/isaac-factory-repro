@@ -1,0 +1,14 @@
+{
+  "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3a_smoke_gated_64env_20261025_final/nn/last_Factory_ep_2_rew__35.101456_.pth",
+  "size_bytes": 212888923,
+  "sha256": "2744233f86225abb0103c99f7a13a1d888e36ead4d082e2bbfe13369c67671eb",
+  "epoch": 2,
+  "frame": 16384,
+  "all_tensors_finite": true,
+  "optimizer_states": 22,
+  "optimizer_step_min": 127,
+  "optimizer_step_max": 127,
+  "nonzero_adam_exp_avg_states": 22,
+  "central_value_present": true,
+  "optimization_evidence_passed": true
+}

@@ -1,0 +1,3 @@
+HISTORICAL schema1 development evidence; not final acceptance. Final source/test evidence: gated_preflight.json and cpu_final*.
+................                                                         [100%]
+16 passed in 8.08s

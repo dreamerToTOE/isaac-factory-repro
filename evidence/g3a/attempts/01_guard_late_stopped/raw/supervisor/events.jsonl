@@ -1,0 +1,2 @@
+{"child_birth_ticks": "738236", "child_pid": 49158, "child_started_utc": "2026-10-25T06:34:18.289451+00:00", "event": "child_started", "utc": "2026-10-25T06:34:18.414485+00:00"}
+{"age_seconds": Infinity, "event": "guard_liveness_failed", "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3a/smoke_20261025_0633/guard/heartbeat.json", "utc": "2026-10-25T06:34:37.903891+00:00"}

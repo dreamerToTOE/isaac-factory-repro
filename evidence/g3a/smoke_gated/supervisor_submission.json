@@ -1,0 +1,9 @@
+{
+  "monotonic_seconds": 8604.661785815,
+  "returncode": 0,
+  "role": "supervisor",
+  "stderr": "Running as unit: g3a-gated-final-20261025-supervisor.service\n",
+  "stdout": "",
+  "unix_seconds": 1792911280.5899205,
+  "utc": "2026-10-25T06:54:40.589910+00:00"
+}

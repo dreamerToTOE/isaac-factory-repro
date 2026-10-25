@@ -1,0 +1,73 @@
+{
+  "continuous_monitoring": false,
+  "coverage_note": "Sampled coverage: regular intervals are not continuous measurement.",
+  "ended": {
+    "monotonic_seconds": 8550.622439255,
+    "unix_seconds": 1792911226.5505743,
+    "utc": "2026-10-25T06:53:46.550565+00:00"
+  },
+  "error": {
+    "message": "mock NVML failure",
+    "type": "RuntimeError"
+  },
+  "finalized": true,
+  "first_sample": {
+    "monotonic_seconds": 8549.801856045,
+    "unix_seconds": 1792911225.7299912,
+    "utc": "2026-10-25T06:53:45.729980+00:00"
+  },
+  "identity": {
+    "birth_ticks": "854967",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 57512,
+    "pid": 57599,
+    "state": "R"
+  },
+  "last_sample": {
+    "monotonic_seconds": 8550.502084595,
+    "unix_seconds": 1792911226.4302192,
+    "utc": "2026-10-25T06:53:46.430203+00:00"
+  },
+  "low_memory_stop_condition_observed": false,
+  "max_low_consecutive": 0,
+  "min_free_MiB": 4096.0,
+  "monitoring_gaps": [],
+  "peak_used_MiB": 4096.0,
+  "policy": {
+    "consecutive_samples": 3,
+    "floor_MiB": 1024,
+    "gap_limit_seconds": 0.5,
+    "interval_seconds": 0.1,
+    "stale_seconds": 2
+  },
+  "sample_count": 8,
+  "schema_version": 2,
+  "started": {
+    "monotonic_seconds": 8549.703809825,
+    "unix_seconds": 1792911225.6319432,
+    "utc": "2026-10-25T06:53:45.631930+00:00"
+  },
+  "stop_reason": "monitor_failed",
+  "stop_signals": [
+    {
+      "monotonic_seconds": 8550.602192121,
+      "signal": "SIGTERM",
+      "unix_seconds": 1792911226.5303268,
+      "utc": "2026-10-25T06:53:46.530315+00:00"
+    }
+  ],
+  "supervisor_identity": {
+    "birth_ticks": "854967",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 57512,
+    "pid": 57600,
+    "state": "R"
+  },
+  "target_identity": {
+    "birth_ticks": "855000",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 57601,
+    "pid": 57601,
+    "state": "R"
+  }
+}

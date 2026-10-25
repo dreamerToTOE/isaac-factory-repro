@@ -1,0 +1,4 @@
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/logs/rl_games/Factory/g3a_smoke_64env_seed0_20261025b/nn/last_Factory_ep_2_rew_35.101456.pth'
+=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/logs/rl_games/Factory/g3a_smoke_64env_seed0_20261025b/nn/last_Factory_ep_2_rew__35.101456_.pth'
+MAX EPOCHS NUM!
+FACTORY_TENSORBOARD_FINALIZER={"agents": [{"close_called": true, "errors": [], "flush_called": true, "success": true, "writer_class": "SummaryWriter", "writer_present": true}], "status": "complete", "training_error": null}

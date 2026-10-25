@@ -1,0 +1,9 @@
+{
+  "child_birth_ticks": "748011",
+  "child_pid": 49731,
+  "schema": "g3a.supervisor.heartbeat.v1",
+  "supervisor_birth_ticks": "747960",
+  "supervisor_pid": 49729,
+  "written_unix": 1792910255.2379127,
+  "written_utc": "2026-10-25T06:37:35.237898+00:00"
+}

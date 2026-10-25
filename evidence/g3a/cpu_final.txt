@@ -1,0 +1,2 @@
+Command: PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python -m pytest -q tests --basetemp /home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3a-final-cpu-03 --junitxml evidence/g3a/cpu_final_junit.xml
+77 passed in18.41s; returncode0. Actual completed root session44269, before gated GPU smoke.

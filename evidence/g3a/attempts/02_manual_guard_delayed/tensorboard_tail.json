@@ -1,0 +1,466 @@
+{
+  "schema": "g3a.smoke.tensorboard.v1",
+  "run": "g3a_smoke_64env_seed0_20261025b",
+  "source_event_dir": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/logs/rl_games/Factory/g3a_smoke_64env_seed0_20261025b/summaries",
+  "event_file_sha256": [
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/logs/rl_games/Factory/g3a_smoke_64env_seed0_20261025b/summaries/events.out.tfevents.1792910165.ubuntu2004",
+      "size_bytes": 5298,
+      "sha256": "58c7aba9554986a4b15fa6d8c46423b2ecb0e252e70e5d28c1d7bfa1f935f213"
+    }
+  ],
+  "scalar_tag_count": 50,
+  "expected_final_epoch": 2,
+  "epoch_tag": {
+    "tag": "info/epochs",
+    "count": 2,
+    "last_step": 8192,
+    "last_value": 2.0,
+    "all_finite": true,
+    "last_wall_time": 1792910253.8083382
+  },
+  "scalar_rows": [
+    {
+      "tag": "episode_lengths/iter",
+      "count": 1,
+      "last_step": 2,
+      "last_value": 149.0,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8123415
+    },
+    {
+      "tag": "episode_lengths/step",
+      "count": 1,
+      "last_step": 8192,
+      "last_value": 149.0,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8123229
+    },
+    {
+      "tag": "episode_lengths/time",
+      "count": 1,
+      "last_step": 85,
+      "last_value": 149.0,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8123605
+    },
+    {
+      "tag": "info/cval_lr",
+      "count": 2,
+      "last_step": 16384,
+      "last_value": 9.999999747378752e-05,
+      "all_finite": true,
+      "last_wall_time": 1792910251.9492881
+    },
+    {
+      "tag": "info/e_clip",
+      "count": 2,
+      "last_step": 8192,
+      "last_value": 0.20000000298023224,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8080077
+    },
+    {
+      "tag": "info/epochs",
+      "count": 2,
+      "last_step": 8192,
+      "last_value": 2.0,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8083382
+    },
+    {
+      "tag": "info/kl",
+      "count": 2,
+      "last_step": 8192,
+      "last_value": 0.008954823017120361,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8083084
+    },
+    {
+      "tag": "info/last_lr",
+      "count": 2,
+      "last_step": 8192,
+      "last_value": 1.975308623514138e-05,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8079598
+    },
+    {
+      "tag": "info/lr_mul",
+      "count": 2,
+      "last_step": 8192,
+      "last_value": 1.0,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8079853
+    },
+    {
+      "tag": "logs_rew_action_grad_penalty/frame",
+      "count": 2,
+      "last_step": 8192,
+      "last_value": 0.3634841740131378,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8101141
+    },
+    {
+      "tag": "logs_rew_action_grad_penalty/iter",
+      "count": 2,
+      "last_step": 2,
+      "last_value": 0.3634841740131378,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8102534
+    },
+    {
+      "tag": "logs_rew_action_grad_penalty/time",
+      "count": 2,
+      "last_step": 85,
+      "last_value": 0.3634841740131378,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8103673
+    },
+    {
+      "tag": "logs_rew_action_penalty/frame",
+      "count": 2,
+      "last_step": 8192,
+      "last_value": 4.395647048950195,
+      "all_finite": true,
+      "last_wall_time": 1792910253.809827
+    },
+    {
+      "tag": "logs_rew_action_penalty/iter",
+      "count": 2,
+      "last_step": 2,
+      "last_value": 4.395647048950195,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8099518
+    },
+    {
+      "tag": "logs_rew_action_penalty/time",
+      "count": 2,
+      "last_step": 85,
+      "last_value": 4.395647048950195,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8100274
+    },
+    {
+      "tag": "logs_rew_curr_engaged/frame",
+      "count": 2,
+      "last_step": 8192,
+      "last_value": 0.0,
+      "all_finite": true,
+      "last_wall_time": 1792910253.810528
+    },
+    {
+      "tag": "logs_rew_curr_engaged/iter",
+      "count": 2,
+      "last_step": 2,
+      "last_value": 0.0,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8106642
+    },
+    {
+      "tag": "logs_rew_curr_engaged/time",
+      "count": 2,
+      "last_step": 85,
+      "last_value": 0.0,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8107805
+    },
+    {
+      "tag": "logs_rew_curr_successes/frame",
+      "count": 2,
+      "last_step": 8192,
+      "last_value": 0.0,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8110437
+    },
+    {
+      "tag": "logs_rew_curr_successes/iter",
+      "count": 2,
+      "last_step": 2,
+      "last_value": 0.0,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8111992
+    },
+    {
+      "tag": "logs_rew_curr_successes/time",
+      "count": 2,
+      "last_step": 85,
+      "last_value": 0.0,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8112998
+    },
+    {
+      "tag": "logs_rew_kp_baseline/frame",
+      "count": 2,
+      "last_step": 8192,
+      "last_value": 0.1644720435142517,
+      "all_finite": true,
+      "last_wall_time": 1792910253.808592
+    },
+    {
+      "tag": "logs_rew_kp_baseline/iter",
+      "count": 2,
+      "last_step": 2,
+      "last_value": 0.1644720435142517,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8087585
+    },
+    {
+      "tag": "logs_rew_kp_baseline/time",
+      "count": 2,
+      "last_step": 85,
+      "last_value": 0.1644720435142517,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8088422
+    },
+    {
+      "tag": "logs_rew_kp_coarse/frame",
+      "count": 2,
+      "last_step": 8192,
+      "last_value": 0.06618314236402512,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8089893
+    },
+    {
+      "tag": "logs_rew_kp_coarse/iter",
+      "count": 2,
+      "last_step": 2,
+      "last_value": 0.06618314236402512,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8091524
+    },
+    {
+      "tag": "logs_rew_kp_coarse/time",
+      "count": 2,
+      "last_step": 85,
+      "last_value": 0.06618314236402512,
+      "all_finite": true,
+      "last_wall_time": 1792910253.809274
+    },
+    {
+      "tag": "logs_rew_kp_fine/frame",
+      "count": 2,
+      "last_step": 8192,
+      "last_value": 0.013200707733631134,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8094487
+    },
+    {
+      "tag": "logs_rew_kp_fine/iter",
+      "count": 2,
+      "last_step": 2,
+      "last_value": 0.013200707733631134,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8095345
+    },
+    {
+      "tag": "logs_rew_kp_fine/time",
+      "count": 2,
+      "last_step": 85,
+      "last_value": 0.013200707733631134,
+      "all_finite": true,
+      "last_wall_time": 1792910253.809706
+    },
+    {
+      "tag": "losses/a_loss",
+      "count": 2,
+      "last_step": 8192,
+      "last_value": -0.006541721057146788,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8075993
+    },
+    {
+      "tag": "losses/bounds_loss",
+      "count": 2,
+      "last_step": 8192,
+      "last_value": 0.0,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8119698
+    },
+    {
+      "tag": "losses/c_loss",
+      "count": 2,
+      "last_step": 8192,
+      "last_value": 0.923799991607666,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8077679
+    },
+    {
+      "tag": "losses/cval_loss",
+      "count": 2,
+      "last_step": 16384,
+      "last_value": 0.8652303814888,
+      "all_finite": true,
+      "last_wall_time": 1792910251.9492388
+    },
+    {
+      "tag": "losses/entropy",
+      "count": 2,
+      "last_step": 8192,
+      "last_value": 8.481653213500977,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8079298
+    },
+    {
+      "tag": "performance/rl_update_time",
+      "count": 2,
+      "last_step": 8192,
+      "last_value": 4.305834770202637,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8066459
+    },
+    {
+      "tag": "performance/step_fps",
+      "count": 2,
+      "last_step": 8192,
+      "last_value": 249.61587524414062,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8066225
+    },
+    {
+      "tag": "performance/step_inference_fps",
+      "count": 2,
+      "last_step": 8192,
+      "last_value": 240.8752899169922,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8065958
+    },
+    {
+      "tag": "performance/step_inference_rl_update_fps",
+      "count": 2,
+      "last_step": 8192,
+      "last_value": 213.8058624267578,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8065412
+    },
+    {
+      "tag": "performance/step_inference_time",
+      "count": 2,
+      "last_step": 8192,
+      "last_value": 34.009300231933594,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8066673
+    },
+    {
+      "tag": "performance/step_time",
+      "count": 2,
+      "last_step": 8192,
+      "last_value": 32.81842803955078,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8066885
+    },
+    {
+      "tag": "rewards/iter",
+      "count": 1,
+      "last_step": 2,
+      "last_value": 35.10145568847656,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8122153
+    },
+    {
+      "tag": "rewards/step",
+      "count": 1,
+      "last_step": 8192,
+      "last_value": 35.10145568847656,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8121839
+    },
+    {
+      "tag": "rewards/time",
+      "count": 1,
+      "last_step": 85,
+      "last_value": 35.10145568847656,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8122387
+    },
+    {
+      "tag": "shaped_rewards/iter",
+      "count": 1,
+      "last_step": 2,
+      "last_value": 37.4423713684082,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8122823
+    },
+    {
+      "tag": "shaped_rewards/step",
+      "count": 1,
+      "last_step": 8192,
+      "last_value": 37.4423713684082,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8122613
+    },
+    {
+      "tag": "shaped_rewards/time",
+      "count": 1,
+      "last_step": 85,
+      "last_value": 37.4423713684082,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8123033
+    },
+    {
+      "tag": "successes/frame",
+      "count": 1,
+      "last_step": 8192,
+      "last_value": 0.0,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8114774
+    },
+    {
+      "tag": "successes/iter",
+      "count": 1,
+      "last_step": 2,
+      "last_value": 0.0,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8115637
+    },
+    {
+      "tag": "successes/time",
+      "count": 1,
+      "last_step": 85,
+      "last_value": 0.0,
+      "all_finite": true,
+      "last_wall_time": 1792910253.8117192
+    }
+  ],
+  "all_logged_scalars_finite": true,
+  "checkpoint_epoch2": [
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/logs/rl_games/Factory/g3a_smoke_64env_seed0_20261025b/nn/last_Factory_ep_2_rew_35.101456.pth",
+      "size_bytes": 212888703,
+      "sha256": "0382108da84efdf4fc608c8c8789d50bb8c95da8d30a230a8d5702d0f19fca54"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/logs/rl_games/Factory/g3a_smoke_64env_seed0_20261025b/nn/last_Factory_ep_2_rew__35.101456_.pth",
+      "size_bytes": 212888923,
+      "sha256": "2744233f86225abb0103c99f7a13a1d888e36ead4d082e2bbfe13369c67671eb"
+    }
+  ],
+  "finalizer_console_evidence": {
+    "status": "complete",
+    "flush_called": true,
+    "close_called": true,
+    "errors": [],
+    "source": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3a/smoke_20261025_0638/supervisor/console.txt",
+    "match": "FACTORY_TENSORBOARD_FINALIZER={...}"
+  },
+  "supervisor_status": {
+    "exit_code": 0,
+    "termination_reason": "child_exit",
+    "wall_seconds": 99.89027152700055,
+    "finalized": true
+  },
+  "guard": {
+    "floor_MiB": 1024.0,
+    "interval_seconds": 0.1,
+    "sample_count": 181,
+    "first_elapsed_seconds": 0.107047,
+    "last_elapsed_seconds": 71.398521,
+    "min_free_MiB": 1090.0625,
+    "max_free_MiB": 2631.875,
+    "low_consecutive_at_exit": 0,
+    "started_utc": "2026-10-25T06:36:23.583823+00:00",
+    "coverage_gap_before_guard_seconds": 28.007172,
+    "coverage_gap_after_last_sample_to_child_end_seconds": 0.48456,
+    "coverage_complete": false,
+    "coverage_note": "Guard launched after child and its samples stop before/near child end; this run is evidence of finalizer and exit persistence but does not satisfy full spawn-to-wait guard coverage."
+  }
+}

@@ -226,3 +226,6 @@ checkpoints/
 *.pkl
 core
 core.*
+
+# Hydra working-directory output from G3A engineering smoke tests
+/outputs/

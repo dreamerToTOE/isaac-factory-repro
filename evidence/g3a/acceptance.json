@@ -1,0 +1,58 @@
+{
+  "decision": "PASS",
+  "scope": "Engineering supervision and logging reliability;2epoch smoke only",
+  "cpu_tests": 77,
+  "wall_seconds": 82.726370331,
+  "epochs": 2,
+  "transitions": 16384,
+  "guard_samples": 829,
+  "min_free_MiB": 1359.625,
+  "peak_used_MiB": 6458.0,
+  "coverage": {
+    "schema_version": 2,
+    "first_sample_spawn_release_wait_last_monotonic": [
+      8604.683965967,
+      8605.22672664,
+      8605.583348916,
+      8687.415336563,
+      8687.484187956
+    ],
+    "order_verified": true,
+    "guard_started_before_child": true,
+    "guard_binds_before_exec": true,
+    "guard_samples_through_parent_wait": true,
+    "sample_count": 829,
+    "requested_interval_seconds": 0.1,
+    "max_interval_seconds": 0.28105280899944773,
+    "median_interval_seconds": 0.10000030300034268,
+    "gap_limit_seconds": 0.5,
+    "gap_count": 0,
+    "sampled_runtime_coverage_complete": true,
+    "pre_spawn_seconds": 0.5427606729990657,
+    "post_wait_seconds": 0.0688513929999317,
+    "note": "Coverage means no missing interval longer than0.5s;10Hz cannot establish instantaneous extrema. Regular sample intervals are not continuous measurement."
+  },
+  "tensorboard_tag_count": 50,
+  "amp_skips": [
+    {
+      "epoch": 1,
+      "attempt": 1,
+      "scale_before": 65536.0,
+      "scale_after": 32768.0
+    }
+  ],
+  "optimizer_steps": {
+    "actor": 127,
+    "central_value": 128
+  },
+  "scientific_configuration_preserved": true,
+  "known_limits": [
+    "User linger=no: not guaranteed across full logout/reboot",
+    "SIGKILL of both services or power/filesystem failure can prevent final status; absence must be treated as unknown",
+    "0.1s sampling and0.5s gap threshold are not hard realtime or instantaneous peak guarantees",
+    "Generic command daemonization/child group escape unsupported; official run_sim exec path verified",
+    "Smoke does not establish long run reliability or policy performance"
+  ],
+  "child_exit_code": 0,
+  "raw_wait_returncode": 0
+}

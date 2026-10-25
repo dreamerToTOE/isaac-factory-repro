@@ -1,0 +1,6 @@
+{
+  "status": "training_logging_complete_monitoring_partial",
+  "not_used_as_final_acceptance": true,
+  "raw_directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3a/smoke_20261025_0638",
+  "explanation": "guard submitted after child; start/coverage incomplete, preserved rather than backfilled"
+}

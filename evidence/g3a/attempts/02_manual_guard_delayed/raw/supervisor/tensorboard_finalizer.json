@@ -1,0 +1,14 @@
+{
+  "agents": [
+    {
+      "close_called": true,
+      "errors": [],
+      "flush_called": true,
+      "success": true,
+      "writer_class": "SummaryWriter",
+      "writer_present": true
+    }
+  ],
+  "status": "complete",
+  "training_error": null
+}

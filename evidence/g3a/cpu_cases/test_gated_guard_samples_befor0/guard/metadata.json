@@ -1,0 +1,25 @@
+{
+  "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+  "identity": {
+    "birth_ticks": "854234",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 57512,
+    "pid": 57549,
+    "state": "R"
+  },
+  "mock_source": "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3a-final-cpu-03/test_gated_guard_samples_befor0/mock.json",
+  "policy": {
+    "consecutive_samples": 3,
+    "floor_MiB": 1024,
+    "gap_limit_seconds": 0.5,
+    "interval_seconds": 0.1,
+    "stale_seconds": 2
+  },
+  "schema_version": 2,
+  "started": {
+    "monotonic_seconds": 8542.37868915,
+    "unix_seconds": 1792911218.3068223,
+    "utc": "2026-10-25T06:53:38.306810+00:00"
+  },
+  "supervisor_directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3a-final-cpu-03/test_gated_guard_samples_befor0/sup"
+}
