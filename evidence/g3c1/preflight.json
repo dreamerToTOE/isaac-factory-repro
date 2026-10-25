@@ -1,0 +1,171 @@
+{
+  "checks": {
+    "cpu_tests": {
+      "stdout_sha256": "6b1f86e0c0fb0a3354e4d395be3a59cd6dd19b1367d8466d5161c6bc613fbf94",
+      "summary": "........................................................................ [ 59%]\n.................................................                        [100%]\n121 passed in 18.27s\n"
+    },
+    "disk": {
+      "command": [
+        "df",
+        "-h",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been",
+        "/home/ubuntu2004"
+      ],
+      "cwd": null,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "\u6587\u4ef6\u7cfb\u7edf        \u5927\u5c0f  \u5df2\u7528  \u53ef\u7528 \u5df2\u7528% \u6302\u8f7d\u70b9\n/dev/sdb3       724G  309G  379G   45% /\n/dev/sdb3       724G  309G  379G   45% /\n"
+    },
+    "failed_historical_units": {
+      "command": [
+        "systemctl",
+        "--user",
+        "--no-pager",
+        "--plain",
+        "--failed",
+        "--type=service"
+      ],
+      "cwd": null,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "UNIT                                 LOAD   ACTIVE SUB    DESCRIPTION\ng2-playback-seed1001-retry.service   loaded failed failed /usr/bin/python3 scripts/run_bounded.py --output /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_playback/seed1001_retry_guard --timeout 900 --min-free-mib 1024 -- bash scripts/run_sim.sh scripts/playback_g2_checkpoint.py --checkpoint /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth --output-dir /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g2_playback/seed1001_retry --seed 1001 --episodes 2 --max-steps 650 --device cuda:0 --headless --enable_cameras\ng3v-playback-seed1001-window.service loaded failed failed /usr/bin/python3 scripts/run_bounded.py --output /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3v_playback_seed1001_window_guard --timeout 900 --min-free-mib 512 -- bash scripts/run_sim.sh scripts/playback_g2_checkpoint.py --checkpoint /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth --output-dir /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3v_playback_seed1001_window --seed 1001 --episodes 1 --max-steps 200 --width 640 --height 480 --rendering_mode performance --device cuda:0 --enable_cameras\ng3v-playback-seed1001.service        loaded failed failed /usr/bin/python3 scripts/run_bounded.py --output /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3v_playback_seed1001_guard --timeout 900 --min-free-mib 1024 -- bash scripts/run_sim.sh scripts/playback_g2_checkpoint.py --checkpoint /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth --output-dir /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3v_playback_seed1001 --seed 1001 --episodes 1 --max-steps 200 --width 640 --height 480 --rendering_mode performance --device cuda:0 --headless --enable_cameras\n\nLOAD   = Reflects whether the unit definition was properly loaded.\nACTIVE = The high-level unit activation state, i.e. generalization of SUB.\nSUB    = The low-level unit activation state, values depend on unit type.\n3 loaded units listed.\n"
+    },
+    "fresh_paths": {
+      "run_dir_exists": false,
+      "run_root_exists": false
+    },
+    "frozen_source_hashes": {
+      "count": 26,
+      "mismatches": []
+    },
+    "gpu": {
+      "command": [
+        "nvidia-smi",
+        "--query-gpu=name,driver_version,memory.total,memory.used,memory.free,utilization.gpu",
+        "--format=csv,noheader,nounits"
+      ],
+      "cwd": null,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "NVIDIA GeForce RTX 3070, 580.178.04, 8192, 2628, 5190, 25\n"
+    },
+    "gpu_compute_processes": {
+      "command": [
+        "nvidia-smi",
+        "--query-compute-apps=pid,process_name,used_memory",
+        "--format=csv,noheader,nounits"
+      ],
+      "cwd": null,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "2882, /usr/libexec/gnome-remote-desktop-daemon, 157\n"
+    },
+    "lock_probe": {
+      "command": [
+        "bash",
+        "-lc",
+        "python3 - <<'PY2'\nimport fcntl,os\np='/run/user/%d/isaac-factory-gpu0.lock'%os.getuid();fd=os.open(p,os.O_RDWR|os.O_CREAT,0o600)\ntry: fcntl.flock(fd,fcntl.LOCK_EX|fcntl.LOCK_NB); print('lock_available=True')\nexcept BlockingIOError: print('lock_available=False')\nfinally:\n try: fcntl.flock(fd,fcntl.LOCK_UN)\n except: pass\n os.close(fd)\nPY2"
+      ],
+      "cwd": null,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "lock_available=True\n"
+    },
+    "repository_head": {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "1a605d6abec4752d17948c96ac18f103bf159ffa\n"
+    },
+    "repository_status": {
+      "command": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "?? docs/DEMO_G3V.md\n?? evidence/g3c1/\n?? evidence/g3v/\n?? scripts/g3v_playback.sh\n"
+    },
+    "running_training_processes": {
+      "command": [
+        "bash",
+        "-lc",
+        "ps -eo pid,etimes,cmd | grep -Ei 'isaac|kit|python.*train|rl_games' | grep -v grep || true"
+      ],
+      "cwd": null,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "    906   27096 /usr/libexec/polkitd --no-debug\n   1438   27051 /usr/libexec/rtkit-daemon\n   2409   27001 /usr/libexec/packagekitd\n   4137   26927 /usr/lib/x86_64-linux-gnu/webkit2gtk-4.1/WebKitNetworkProcess 1 30 32\n   4149   26927 /usr/lib/x86_64-linux-gnu/webkit2gtk-4.1/WebKitWebProcess 4 35 37\n   5913   26792 /usr/lib/x86_64-linux-gnu/webkit2gtk-4.1/WebKitNetworkProcess 1 18 20\n   5925   26791 /usr/lib/x86_64-linux-gnu/webkit2gtk-4.1/WebKitWebProcess 4 23 25\n"
+    },
+    "upstream_head": {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "90b79bb2d44feb8d833f260f2bf37da3487180ba\n"
+    },
+    "upstream_status": {
+      "command": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    "upstream_tag": {
+      "command": [
+        "git",
+        "describe",
+        "--tags",
+        "--exact-match"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "v2.1.1\n"
+    },
+    "user_manager": {
+      "command": [
+        "systemctl",
+        "--user",
+        "is-system-running"
+      ],
+      "cwd": null,
+      "returncode": 1,
+      "stderr": "",
+      "stdout": "degraded\n"
+    }
+  },
+  "context": [
+    "systemd user manager reports degraded only because historical failed playback units remain; no active Isaac/training unit; unrelated units were not stopped or reset",
+    "GPU lock path exists as a file but nonblocking flock probe succeeded"
+  ],
+  "decision": "GO",
+  "manifest_sha256": "b5ce9f55c2151e538ad5dc41791e56e961e3dc69611893b6f4b347f5088ca0f0",
+  "recorded_utc": "2026-10-25T12:03:37.714523+00:00",
+  "required_conditions": [
+    "upstream pinned and clean",
+    "repository HEAD matches frozen manifest",
+    "no active Isaac/training process",
+    "GPU free headroom observed above 1024MiB",
+    "lock probe available",
+    "fresh run paths absent",
+    "source hashes match frozen manifest",
+    "CPU regression tests pass"
+  ],
+  "schema_version": "g3c1_preflight_v1"
+}
