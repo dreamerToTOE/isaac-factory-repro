@@ -1,0 +1,42 @@
+{
+  "created_utc": "2026-10-25T12:23:09.043639+00:00",
+  "guard_policy_unchanged": {
+    "consecutive_samples": 3,
+    "floor_MiB": 1024,
+    "gap_limit_seconds": 0.5,
+    "stale_seconds": 2
+  },
+  "historical_inputs": [
+    "evidence/g2/training/reattached_guard_result.json",
+    "evidence/g2/analysis/summary.json",
+    "evidence/g3a/gated_coverage.json",
+    "evidence/g3b/run_receipts.json",
+    "evidence/g3c1/run_receipt.json",
+    "work/logs/d001_train16/result.json",
+    "work/logs/d001_train32/result.json",
+    "work/logs/d001_train64/result.json"
+  ],
+  "inventory": {
+    "duration_seconds": 60,
+    "interval_seconds": 0.1,
+    "output_root": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r1/inventory_idle_60s",
+    "read_only": true,
+    "script": "scripts/g3c_r1_inventory.py"
+  },
+  "prohibited_actions": [
+    "terminate unrelated applications",
+    "stop desktop/remote desktop",
+    "modify driver/persistence/systemd global settings",
+    "lower guard floor",
+    "start 200-epoch training",
+    "start seed2",
+    "contact-sensor experiment"
+  ],
+  "schema_version": "g3c_r1_frozen_protocol_v1",
+  "scope": "read-only GPU/system inventory plus historical capacity comparison; no long training, no seed1/seed2 restart, no contact experiment",
+  "source_sha256": {
+    "scripts/g3c_r1_inventory.py": "82a931ea46824f3a26e080fbb9efe280b659d65c791fe4ef66d635fb5ec7bc93"
+  },
+  "starting_commit": "306f884d1bb55d4a4b2b84abfab4b096d2da8488",
+  "status": "FROZEN_BEFORE_INVENTORY"
+}
