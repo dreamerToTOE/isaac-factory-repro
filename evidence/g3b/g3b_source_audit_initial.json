@@ -1,0 +1,241 @@
+{
+  "1001": {
+    "source_sha256": "0a6ab77092f50b5d3fbeb9c1220940e90b18df56122d4c78362e761fba198cea",
+    "status": "complete",
+    "n": 96,
+    "ever": 95,
+    "terminal": 95,
+    "failure_records": [
+      {
+        "env_id": 11,
+        "episode_id": 0,
+        "ever_success": false,
+        "first_success_step": null,
+        "first_success_time_seconds": null,
+        "seed": 1001,
+        "steps": 149,
+        "terminal_kind": "timeout",
+        "terminal_success": false
+      }
+    ],
+    "steps": [
+      149
+    ],
+    "checkpoint_sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+    "geometric_snapshots_count": 12
+  },
+  "1002": {
+    "source_sha256": "1c1fa341411611232c99cbe4900fd7883cac5465ff542c1b8fa8fb4e615fa196",
+    "status": "complete",
+    "n": 96,
+    "ever": 96,
+    "terminal": 96,
+    "failure_records": [],
+    "steps": [
+      149
+    ],
+    "checkpoint_sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+    "geometric_snapshots_count": 12
+  },
+  "1003": {
+    "source_sha256": "27daef215badafd17bf34dd412dc3b5fcd77fdbcb23aaf194ce15c3f1764b4e8",
+    "status": "complete",
+    "n": 96,
+    "ever": 89,
+    "terminal": 89,
+    "failure_records": [
+      {
+        "env_id": 4,
+        "episode_id": 0,
+        "ever_success": false,
+        "first_success_step": null,
+        "first_success_time_seconds": null,
+        "seed": 1003,
+        "steps": 149,
+        "terminal_kind": "timeout",
+        "terminal_success": false
+      },
+      {
+        "env_id": 12,
+        "episode_id": 0,
+        "ever_success": false,
+        "first_success_step": null,
+        "first_success_time_seconds": null,
+        "seed": 1003,
+        "steps": 149,
+        "terminal_kind": "timeout",
+        "terminal_success": false
+      },
+      {
+        "env_id": 25,
+        "episode_id": 0,
+        "ever_success": false,
+        "first_success_step": null,
+        "first_success_time_seconds": null,
+        "seed": 1003,
+        "steps": 149,
+        "terminal_kind": "timeout",
+        "terminal_success": false
+      },
+      {
+        "env_id": 29,
+        "episode_id": 0,
+        "ever_success": false,
+        "first_success_step": null,
+        "first_success_time_seconds": null,
+        "seed": 1003,
+        "steps": 149,
+        "terminal_kind": "timeout",
+        "terminal_success": false
+      },
+      {
+        "env_id": 5,
+        "episode_id": 1,
+        "ever_success": false,
+        "first_success_step": null,
+        "first_success_time_seconds": null,
+        "seed": 1003,
+        "steps": 149,
+        "terminal_kind": "timeout",
+        "terminal_success": false
+      },
+      {
+        "env_id": 1,
+        "episode_id": 2,
+        "ever_success": false,
+        "first_success_step": null,
+        "first_success_time_seconds": null,
+        "seed": 1003,
+        "steps": 149,
+        "terminal_kind": "timeout",
+        "terminal_success": false
+      },
+      {
+        "env_id": 5,
+        "episode_id": 2,
+        "ever_success": false,
+        "first_success_step": null,
+        "first_success_time_seconds": null,
+        "seed": 1003,
+        "steps": 149,
+        "terminal_kind": "timeout",
+        "terminal_success": false
+      }
+    ],
+    "steps": [
+      149
+    ],
+    "checkpoint_sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+    "geometric_snapshots_count": 12
+  },
+  "actual_checkpoint": {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+    "bytes": 212889225,
+    "sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f"
+  },
+  "upstream": {
+    "head": "90b79bb2d44feb8d833f260f2bf37da3487180ba",
+    "status": ""
+  },
+  "upstream_source_recheck": [
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/agents/rl_games_ppo_cfg.yaml",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env_cfg.py",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_tasks_cfg.py",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_control.py",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/envs/direct_rl_env.py",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/a2c_common.py",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/central_value.py",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/a2c_continuous.py",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/models.py",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/running_mean_std.py",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/players.py",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/ivecenv.py",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/schedulers.py",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/torch_ext.py",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/torch_runner.py",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/isaacsim-4.5.0/exts/isaacsim.core.utils/isaacsim/core/utils/torch/maths.py",
+      "matches": true
+    }
+  ],
+  "existing_g3v": [
+    {
+      "path": "docs/DEMO_G3V.md",
+      "bytes": 7147,
+      "sha256": "f1d20d8111cf39a90a62b096fd15a1c581916dcbb559d7082ec8d662b906f0a2"
+    },
+    {
+      "path": "scripts/g3v_playback.sh",
+      "bytes": 3130,
+      "sha256": "d0f71a7c9ba147bf85b3ae39e62e0ba66ac90ffbbf5ff06779c49495b9642b90"
+    },
+    {
+      "path": "evidence/g3v/README.md",
+      "bytes": 2621,
+      "sha256": "b6523f2fd4b87ceea7f2f4109fb7c153d15d95029f9ef32e8d28fd750d99f84b"
+    },
+    {
+      "path": "evidence/g3v/checkpoint_identity.json",
+      "bytes": 1778,
+      "sha256": "e080a739122fd1505ea90f054e0a3edd6481b95fc135c13cec7a44569a0cf364"
+    },
+    {
+      "path": "evidence/g3v/playback_config.json",
+      "bytes": 2776,
+      "sha256": "8b2ec76c670187b11181640c295984bc2b8cc69b8c203bb42f8bfbd2acb63c6b"
+    }
+  ]
+}

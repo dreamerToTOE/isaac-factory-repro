@@ -4,11 +4,11 @@
 
 ## G3A 当前工程验收
 
-**PASS（监督与日志可靠性短测）**：77项CPU测试通过；独立systemd guard在训练前采样，绑定boot/PID/birth后放行执行闸门。64环境2epoch smoke实际child exit0、16384transitions，829样本无>0.5秒gap，checkpoint及50tag末轮TensorBoard通过。见[REVIEW_G3A](REVIEW_G3A.md)、[协议](G3_SUPERVISION_PROTOCOL.md)、[证据](../evidence/g3a/README.md)。未启动G3B或长训练，G2科学PASS不变。
+**PASS（监督与日志可靠性短测）**：77项CPU测试通过；独立systemd guard在训练前采样，绑定boot/PID/birth后放行执行闸门。64环境2epoch smoke实际child exit0、16384transitions，829样本无>0.5秒gap，checkpoint及50tag末轮TensorBoard通过。见[REVIEW_G3A](REVIEW_G3A.md)、[协议](G3_SUPERVISION_PROTOCOL.md)、[证据](../evidence/g3a/README.md)。截至 G3A 工程验收时未启动 G3B 或长训练；G2科学PASS不变，当前 G3B 状态见文末。
 
 已补正常writer显式flush/close、真实wait状态、双方liveness、身份/独占/非覆盖与原子最终记录。此前手工迟启guard的失败/部分完成smoke保留；G2约123秒缺口、原退出码、TensorBoard缺尾仍无法追回，根因未确证。
 
-剩余限制：Linger=no，不保证跨完整注销/重启；两服务同时SIGKILL、断电或文件系统故障可丢失最后状态；0.1秒采样不保证瞬时峰值；通用daemonize/PGID逃逸不在标准run_sim保证内。新长训练须重新preflight、新manifest/目录。G3B建议先诊断8例失败，再预注册额外训练seed，不自动启动。
+剩余限制：Linger=no，不保证跨完整注销/重启；两服务同时SIGKILL、断电或文件系统故障可丢失最后状态；0.1秒采样不保证瞬时峰值；通用daemonize/PGID逃逸不在标准run_sim保证内。新长训练须重新preflight、新manifest/目录。G3B bounded 诊断已完成；新长训练仍须重新 preflight、新 manifest/目录，并不会自动启动。
 
 ## G2 当前状态与未决项
 
@@ -25,7 +25,7 @@
 | final8次失败未获完整轨迹 | seed1001有1次，seed1003有7次；不能臆测卡滞等机制 | 对具体env/episode诊断几何与动作，额外诊断不改主要分母 |
 | 官方成功语义有限 | XY<2.5mm且单侧z<1mm，没有保持时长/力/旋转/下界约束 | 如需更严格质量指标，未来独立定义并保留原官方指标 |
 
-保留D001精确续训、依赖最小安装、其它Factory任务等限制。后续科学实验/G3B只提案，尚未启动；G3A工程验收见上节。不会自动400epochs、128环境、调PPO/奖励或转Gear/Nut。
+保留D001精确续训、依赖最小安装、其它Factory任务等限制。该段记录 G3A 审阅时的历史状态；G3B 后续状态见文末。G3A工程验收见上节。不会自动400epochs、128环境、调PPO/奖励或转Gear/Nut。
 
 ## D001状态（历史，2026-10-23）
 
@@ -61,3 +61,10 @@
 - 未进行200epoch正式训练、收敛或统计可靠的多seed性能实验。D001的8episode评估只验证工具，不能当作性能结论。
 
 已完成的最小测试没有剩余GPU权限阻塞。后续训练配置见[EXPERIMENT_PROTOCOL](EXPERIMENT_PROTOCOL.md)，等待审阅后再执行。
+
+
+## G3B 状态（2026-10-25）
+
+G3B bounded diagnostic 已完成并通过：保留 checkpoint SHA256 `f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f`，三 seed 共 288/288 完整 episode，官方 ever/terminal 280/288。原始 8 个 seed/env/episode 标识全部复现为失败，但没有历史完整轨迹，因此不宣称 exact replay。A/B/C/D/E/F 重叠计数为 3/8/0/0/0/0；A/B 是观察到的几何条件，D 因无独立 measured contact 保持 unsupported。
+
+完整诊断回执和边界在 [`REVIEW_G3B`](REVIEW_G3B.md) 与 [`evidence/g3b`](../evidence/g3b/README.md)。G3B 不改变 G2/G3A 证据、PPO、奖励、物理或 success criterion，也没有启动 seed1/seed2 训练。下一步建议停止并单独预注册 G3C 的接触传感器和对照协议。

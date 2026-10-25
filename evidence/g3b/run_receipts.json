@@ -1,0 +1,116 @@
+{
+  "first_1003_attempt_preserved": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3b/diagnostic_20261025_01/seed1003",
+  "first_1003_attempt_reason": "guard fail-closed on 0.8392135989997769 s monitoring gap before simulation startup",
+  "recovery_attempt": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3b/diagnostic_20261025_02/seed1003",
+  "runs": [
+    {
+      "artifacts": {
+        "metrics.json": {
+          "bytes": 31467,
+          "sha256": "66bc6230ca51c86980dd2a46eab38a5b8b645b401b9a5b4c37a1d870233744e7"
+        },
+        "trajectories.npz": {
+          "bytes": 2383999,
+          "sha256": "7752e5e4c4d727a446d928e70d4faf4f8541279448aa71bdc35552f3d784a8bb"
+        },
+        "trajectory_metadata.json": {
+          "bytes": 8050,
+          "sha256": "bdb1b19e3a75a5f49fa7c6a50dcd3a0e8edcdee111dc367b9e1d7511a59fc0ed"
+        }
+      },
+      "attempt_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3b/diagnostic_20261025_01/seed1001",
+      "child_exit_code": 0,
+      "guard_continuous_monitoring": true,
+      "guard_first_sample": {
+        "monotonic_seconds": 24362.367798265,
+        "unix_seconds": 1792927038.2959332,
+        "utc": "2026-10-25T11:17:18.295925+00:00"
+      },
+      "guard_last_sample": {
+        "monotonic_seconds": 24502.16791656,
+        "unix_seconds": 1792927178.0960512,
+        "utc": "2026-10-25T11:19:38.096036+00:00"
+      },
+      "guard_min_free_MiB": 1509.625,
+      "guard_peak_used_MiB": 6308.0,
+      "guard_sample_count": 1399,
+      "launcher_returncode": 0,
+      "monitoring_gaps": [],
+      "seed": 1001,
+      "termination_reason": "child_exit"
+    },
+    {
+      "artifacts": {
+        "metrics.json": {
+          "bytes": 31558,
+          "sha256": "8983bc32e452123753039ec2ad24960b366a267c0c9106a8f9e9844f3eb528ef"
+        },
+        "trajectories.npz": {
+          "bytes": 2384982,
+          "sha256": "34f852db293af1fb238786dc5079ed079e60a397e37529644e8ffbaa3a3eee6d"
+        },
+        "trajectory_metadata.json": {
+          "bytes": 7964,
+          "sha256": "035fda4d71fd024b04648209279ea2309fb3278cd29178a4ef0356c50028ce91"
+        }
+      },
+      "attempt_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3b/diagnostic_20261025_01/seed1002",
+      "child_exit_code": 0,
+      "guard_continuous_monitoring": true,
+      "guard_first_sample": {
+        "monotonic_seconds": 24502.809104424,
+        "unix_seconds": 1792927178.7372396,
+        "utc": "2026-10-25T11:19:38.737231+00:00"
+      },
+      "guard_last_sample": {
+        "monotonic_seconds": 24641.909175584,
+        "unix_seconds": 1792927317.8373103,
+        "utc": "2026-10-25T11:21:57.837297+00:00"
+      },
+      "guard_min_free_MiB": 1557.875,
+      "guard_peak_used_MiB": 6259.75,
+      "guard_sample_count": 1392,
+      "launcher_returncode": 0,
+      "monitoring_gaps": [],
+      "seed": 1002,
+      "termination_reason": "child_exit"
+    },
+    {
+      "artifacts": {
+        "metrics.json": {
+          "bytes": 31573,
+          "sha256": "ed88cdd6aaf689aa9e3cc48120fe62f3d4a0aecaaceaa37a8175555213efbd2a"
+        },
+        "trajectories.npz": {
+          "bytes": 2395201,
+          "sha256": "a1e114a7b4652ef48ab673ac25941245c7feaac6b10ce832618178616b5d5302"
+        },
+        "trajectory_metadata.json": {
+          "bytes": 8050,
+          "sha256": "182b649ed94bb0b3263a013a903d3b6b7de79f3a3cf7332c54288f8db54b2958"
+        }
+      },
+      "attempt_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3b/diagnostic_20261025_02/seed1003",
+      "child_exit_code": 0,
+      "guard_continuous_monitoring": true,
+      "guard_first_sample": {
+        "monotonic_seconds": 24749.396226473,
+        "unix_seconds": 1792927425.3243616,
+        "utc": "2026-10-25T11:23:45.324352+00:00"
+      },
+      "guard_last_sample": {
+        "monotonic_seconds": 24888.096330741,
+        "unix_seconds": 1792927564.0244634,
+        "utc": "2026-10-25T11:26:04.024448+00:00"
+      },
+      "guard_min_free_MiB": 1507.8125,
+      "guard_peak_used_MiB": 6309.8125,
+      "guard_sample_count": 1388,
+      "launcher_returncode": 0,
+      "monitoring_gaps": [],
+      "seed": 1003,
+      "termination_reason": "child_exit"
+    }
+  ],
+  "schema_version": "g3b_run_receipts_v1"
+}

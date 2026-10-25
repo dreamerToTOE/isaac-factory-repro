@@ -1,0 +1,319 @@
+{
+  "comparison": {
+    "exact_replay_verified": false,
+    "g3b_diagnostic": {
+      "checkpoint_sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+      "episodes_completed": 288,
+      "ever_success_count": 280,
+      "ever_success_rate": 0.9722222222222222,
+      "per_seed": [
+        {
+          "episodes_completed": 96,
+          "ever_success_count": 95,
+          "seed": 1001,
+          "terminal_success_count": 95
+        },
+        {
+          "episodes_completed": 96,
+          "ever_success_count": 96,
+          "seed": 1002,
+          "terminal_success_count": 96
+        },
+        {
+          "episodes_completed": 96,
+          "ever_success_count": 89,
+          "seed": 1003,
+          "terminal_success_count": 89
+        }
+      ],
+      "terminal_success_count": 280,
+      "terminal_success_rate": 0.9722222222222222
+    },
+    "historical_failure_trajectories_available": false,
+    "identifier_matched_original_failure_count": 8,
+    "identifier_matched_original_failures_again_failed": [
+      {
+        "env_id": 11,
+        "episode_id": 0,
+        "seed": 1001
+      },
+      {
+        "env_id": 1,
+        "episode_id": 2,
+        "seed": 1003
+      },
+      {
+        "env_id": 4,
+        "episode_id": 0,
+        "seed": 1003
+      },
+      {
+        "env_id": 5,
+        "episode_id": 1,
+        "seed": 1003
+      },
+      {
+        "env_id": 5,
+        "episode_id": 2,
+        "seed": 1003
+      },
+      {
+        "env_id": 12,
+        "episode_id": 0,
+        "seed": 1003
+      },
+      {
+        "env_id": 25,
+        "episode_id": 0,
+        "seed": 1003
+      },
+      {
+        "env_id": 29,
+        "episode_id": 0,
+        "seed": 1003
+      }
+    ],
+    "interpretation": "Identifier/outcome recurrence only; seed/env/episode equality does not prove exact replay. Pools are never added together.",
+    "new_failures_at_previously_successful_identifiers": [],
+    "original_failures_not_evaluated": [],
+    "original_failures_now_succeeded": [],
+    "original_primary": {
+      "checkpoint_sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+      "episodes_completed": 288,
+      "ever_success_count": 280,
+      "ever_success_rate": 0.9722222222222222,
+      "per_seed": [
+        {
+          "episodes_completed": 96,
+          "ever_success_count": 95,
+          "seed": 1001,
+          "terminal_success_count": 95
+        },
+        {
+          "episodes_completed": 96,
+          "ever_success_count": 96,
+          "seed": 1002,
+          "terminal_success_count": 96
+        },
+        {
+          "episodes_completed": 96,
+          "ever_success_count": 89,
+          "seed": 1003,
+          "terminal_success_count": 89
+        }
+      ],
+      "terminal_success_count": 280,
+      "terminal_success_rate": 0.9722222222222222
+    },
+    "outcome_mismatches": []
+  },
+  "failure_category_counts_overlapping": {
+    "A": 3,
+    "B": 8,
+    "C": 0,
+    "D": 0,
+    "E": 0,
+    "F": 0
+  },
+  "failures": [
+    {
+      "axis_tilt_final_deg": 3.7052415090047672,
+      "axis_tilt_max_deg": 3.837449131874647,
+      "axis_tilt_min_deg": 0.051946229730058205,
+      "categories": [
+        "B"
+      ],
+      "ee_path_mm": 104.15608647186927,
+      "ee_speed_mean_last20_m_s": 0.007406431250274181,
+      "ema_action_rms": 0.4680216279153288,
+      "ema_action_rms_last20": 0.5025653839111328,
+      "env_id": 11,
+      "episode_id": 0,
+      "ever_success": false,
+      "first_success_step": null,
+      "seed": 1001,
+      "xy_final_mm": 0.2849940792657435,
+      "xy_min_mm": 0.2849940792657435,
+      "z_final_mm": 20.508401095867157,
+      "z_min_mm": 20.508401095867157
+    },
+    {
+      "axis_tilt_final_deg": 2.984403635556055,
+      "axis_tilt_max_deg": 3.3443138412504907,
+      "axis_tilt_min_deg": 0.03564777962891298,
+      "categories": [
+        "B"
+      ],
+      "ee_path_mm": 64.81607447244276,
+      "ee_speed_mean_last20_m_s": 0.004316803999245167,
+      "ema_action_rms": 0.5180529238317287,
+      "ema_action_rms_last20": 0.5597975254058838,
+      "env_id": 1,
+      "episode_id": 2,
+      "ever_success": false,
+      "first_success_step": null,
+      "seed": 1003,
+      "xy_final_mm": 0.5639581358991563,
+      "xy_min_mm": 0.1788031222531572,
+      "z_final_mm": 2.941630780696869,
+      "z_min_mm": 2.926688641309738
+    },
+    {
+      "axis_tilt_final_deg": 3.02974320925691,
+      "axis_tilt_max_deg": 3.657230814989788,
+      "axis_tilt_min_deg": 0.09441099955149988,
+      "categories": [
+        "B"
+      ],
+      "ee_path_mm": 58.593222269821624,
+      "ee_speed_mean_last20_m_s": 0.0032399315387010574,
+      "ema_action_rms": 0.5160427006240816,
+      "ema_action_rms_last20": 0.5606953501701355,
+      "env_id": 4,
+      "episode_id": 0,
+      "ever_success": false,
+      "first_success_step": null,
+      "seed": 1003,
+      "xy_final_mm": 0.5826036795042455,
+      "xy_min_mm": 0.21209179249126464,
+      "z_final_mm": 3.166794776916504,
+      "z_min_mm": 3.164723515510559
+    },
+    {
+      "axis_tilt_final_deg": 2.155700370900916,
+      "axis_tilt_max_deg": 2.2596174641681777,
+      "axis_tilt_min_deg": 0.002703199723258506,
+      "categories": [
+        "A",
+        "B"
+      ],
+      "ee_path_mm": 95.88067947975146,
+      "ee_speed_mean_last20_m_s": 0.007847379893064499,
+      "ema_action_rms": 0.45862305046426033,
+      "ema_action_rms_last20": 0.4659726619720459,
+      "env_id": 5,
+      "episode_id": 1,
+      "ever_success": false,
+      "first_success_step": null,
+      "seed": 1003,
+      "xy_final_mm": 3.367520635947585,
+      "xy_min_mm": 2.569289179518819,
+      "z_final_mm": 25.004491209983826,
+      "z_min_mm": 25.003954768180847
+    },
+    {
+      "axis_tilt_final_deg": 3.2481729623765947,
+      "axis_tilt_max_deg": 3.39186509314252,
+      "axis_tilt_min_deg": 0.03802015609173062,
+      "categories": [
+        "A",
+        "B"
+      ],
+      "ee_path_mm": 102.57312617687542,
+      "ee_speed_mean_last20_m_s": 0.0076092504896223545,
+      "ema_action_rms": 0.4632102530858971,
+      "ema_action_rms_last20": 0.45879340171813965,
+      "env_id": 5,
+      "episode_id": 2,
+      "ever_success": false,
+      "first_success_step": null,
+      "seed": 1003,
+      "xy_final_mm": 7.8526632860302925,
+      "xy_min_mm": 2.8186871204525232,
+      "z_final_mm": 25.199448689818382,
+      "z_min_mm": 24.96482990682125
+    },
+    {
+      "axis_tilt_final_deg": 1.848863480258009,
+      "axis_tilt_max_deg": 2.0910119446875153,
+      "axis_tilt_min_deg": 0.021372926782991797,
+      "categories": [
+        "A",
+        "B"
+      ],
+      "ee_path_mm": 94.40352434137492,
+      "ee_speed_mean_last20_m_s": 0.007206674665212631,
+      "ema_action_rms": 0.4605919461401985,
+      "ema_action_rms_last20": 0.49515557289123535,
+      "env_id": 12,
+      "episode_id": 0,
+      "ever_success": false,
+      "first_success_step": null,
+      "seed": 1003,
+      "xy_final_mm": 5.603244993835688,
+      "xy_min_mm": 0.6274344632402062,
+      "z_final_mm": 25.106798857450485,
+      "z_min_mm": 25.02361312508583
+    },
+    {
+      "axis_tilt_final_deg": 2.8841382943967058,
+      "axis_tilt_max_deg": 3.2070526550605845,
+      "axis_tilt_min_deg": 0.006828892755820781,
+      "categories": [
+        "B"
+      ],
+      "ee_path_mm": 116.74212093142327,
+      "ee_speed_mean_last20_m_s": 0.004147115163505077,
+      "ema_action_rms": 0.46178990313363455,
+      "ema_action_rms_last20": 0.5078516602516174,
+      "env_id": 25,
+      "episode_id": 0,
+      "ever_success": false,
+      "first_success_step": null,
+      "seed": 1003,
+      "xy_final_mm": 0.561978667974472,
+      "xy_min_mm": 0.025621955501264893,
+      "z_final_mm": 2.5432035326957703,
+      "z_min_mm": 2.5432035326957703
+    },
+    {
+      "axis_tilt_final_deg": 2.0631776745277812,
+      "axis_tilt_max_deg": 2.3338771736590207,
+      "axis_tilt_min_deg": 0.02773934687485557,
+      "categories": [
+        "B"
+      ],
+      "ee_path_mm": 98.13621733648719,
+      "ee_speed_mean_last20_m_s": 0.008027364499866962,
+      "ema_action_rms": 0.45653217978074845,
+      "ema_action_rms_last20": 0.4859846830368042,
+      "env_id": 29,
+      "episode_id": 0,
+      "ever_success": false,
+      "first_success_step": null,
+      "seed": 1003,
+      "xy_final_mm": 0.9954620618373156,
+      "xy_min_mm": 0.9609333355911076,
+      "z_final_mm": 23.850485682487488,
+      "z_min_mm": 23.825205862522125
+    }
+  ],
+  "generated_utc": "2026-10-25T11:30:11.539370+00:00",
+  "schema_version": "g3b_compact_summary_v1",
+  "secondary": {
+    "interpretation": "Negative base-plane gap is a geometric observation, not independently measured collision penetration. No contact obstruction conclusion.",
+    "measurement_denominators": {
+      "sampled_success_duration": 280,
+      "terminal_axis_angle": 280,
+      "terminal_hole_axis_gap": 280,
+      "terminal_world_z": 280
+    },
+    "official_terminal_success_episodes": 280,
+    "sampled_success_duration_s": {
+      "max": 8.8,
+      "median": 8.066666666666666,
+      "min": 3.0
+    },
+    "scope": "SECONDARY, conditional on newly observed official terminal success only; not a replacement success rate",
+    "terminal_axis_angle_above5deg_count": 0,
+    "terminal_hole_axis_gap_below_minus1mm_count": 0,
+    "terminal_world_z_below0_count": 0
+  },
+  "validation": {
+    "all_episode_lengths149": true,
+    "engagement_disagreements": 0,
+    "official_predicate_disagreements": 0,
+    "pre_reset_records": 42912,
+    "trajectory_episode_outcomes_match_evaluator": true
+  }
+}

@@ -3,7 +3,7 @@ Reproduction and evaluation of contact-rich robotic assembly tasks using NVIDIA 
 
 ## G3A 监督与日志工程验收（2026-10-25）
 
-**PASS**：先采样的独立systemd GPU guard、绑定身份后放行的闸门、真实child wait/exit、全局独占及writer flush/close已验证。77项CPU测试通过；64环境2epoch smoke实际exit0、16384transitions、829条采样无>0.5秒gap，checkpoint和末epoch TensorBoard完整。G2历史缺失不回填，未开始G3B或新长训练。
+**PASS**：先采样的独立systemd GPU guard、绑定身份后放行的闸门、真实child wait/exit、全局独占及writer flush/close已验证。77项CPU测试通过；64环境2epoch smoke实际exit0、16384transitions、829条采样无>0.5秒gap，checkpoint和末epoch TensorBoard完整。G2历史缺失不回填；截至 G3A 审阅时未开始 G3B 或新长训练，当前 G3B 状态见下文。
 
 见[工程审阅](docs/REVIEW_G3A.md)、[运行协议](docs/G3_SUPERVISION_PROTOCOL.md)、[证据](evidence/g3a/README.md)。短测不保证跨完整注销/断电或长时稳定；保留两次开发smoke失败/部分完成记录。
 
@@ -61,3 +61,9 @@ evidence/2026-10-23/       # 包含成功和失败的原始证据
 ```
 
 从[SETUP](docs/SETUP.md)开始。上游Isaac Lab与Python环境均位于此仓库外，checkpoint大文件留在本地work/runs/logs，以SHA256追踪。README原始两行、原.gitignore全文与LICENSE均保留，Git历史从既有Initial commit延续。
+
+## G3B PegInsert 失败模式诊断（2026-10-25）
+
+**PASS（诊断）**：使用 G2 最终 checkpoint，32 环境、seed1001/1002/1003 顺序各 3 episodes，完成 288/288；G3B 官方 ever/terminal 均 280/288（97.222%），与原 G2 分母分开保存。原始 8 个失败标识全部再次失败，但由于历史没有完整轨迹，明确不称为 exact replay。8 个新失败的重叠条件为 A XY=3、B 轴向=8、C=0、D=0、E=0、F=0；D 没有独立接触传感器支持。
+
+轨迹、监督回执、图表及限制见 [G3B 审阅](docs/REVIEW_G3B.md)、[失败分析](docs/G3B_FAILURE_ANALYSIS.md) 和 [G3B evidence](evidence/g3b/README.md)。G2/G3A 基线未改写；G3B 后停止，下一步仅建议先预注册 G3C 的可测接触观测。
