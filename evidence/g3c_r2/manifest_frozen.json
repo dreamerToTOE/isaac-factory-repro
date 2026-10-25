@@ -4,6 +4,94 @@
     "if_smoke_passes": "fresh 64-env seed1 200-epoch run, new manifest/path"
   },
   "created_utc": "2026-10-25T13:22:14.326214+00:00",
+  "fallback_32env": {
+    "full_if_smoke_passes": {
+      "comparability_note": "New scientific protocol; not a seed-only replication of G2 64-env / 200-epoch.",
+      "episodes_per_env": {
+        "100": 1,
+        "200": 1,
+        "300": 1,
+        "400": 3
+      },
+      "epochs": 400,
+      "evaluation_milestones": [
+        100,
+        200,
+        300,
+        400
+      ],
+      "evaluation_num_envs": 32,
+      "evaluation_seeds": [
+        1001,
+        1002,
+        1003
+      ],
+      "experiment_name": "g3cr2_peginsert_32env_seed0_baseline_400ep",
+      "horizon_length": 128,
+      "label": "PegInsert 32-env / 400-epoch baseline",
+      "num_envs": 32,
+      "planned_transitions": 1638400,
+      "restore": false,
+      "run_root": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/train_32env_seed0_400ep",
+      "seed": 0
+    },
+    "phase_c_authorization": "Approved fallback by user; stop after seed0 baseline and request review before seed1/2.",
+    "smoke": {
+      "command": [
+        "/usr/bin/python3",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g3a_launch_smoke.py",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_32env_seed0_2ep",
+        "--unit-prefix",
+        "g3cr2-s0-32smoke-20261025-01",
+        "--cwd",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs",
+        "--timeout",
+        "1200",
+        "--wait",
+        "--setenv",
+        "FACTORY_VENV=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01",
+        "--setenv",
+        "ISAACSIM_PATH=/home/ubuntu2004/isaacsim-4.5.0",
+        "--setenv",
+        "OMP_NUM_THREADS=4",
+        "--setenv",
+        "FACTORY_G2_AUDIT_OUTPUT=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_32env_seed0_2ep/supervisor/training_audit.json",
+        "--setenv",
+        "FACTORY_G3A_FINALIZE_TENSORBOARD=1",
+        "--setenv",
+        "FACTORY_G3A_FINALIZER_OUTPUT=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_32env_seed0_2ep/supervisor/tensorboard_finalizer.json",
+        "--",
+        "bash",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py",
+        "--headless",
+        "--device",
+        "cuda:0",
+        "--task",
+        "Isaac-Factory-PegInsert-Direct-v0",
+        "--num_envs",
+        "32",
+        "--seed",
+        "0",
+        "--max_iterations",
+        "2",
+        "agent.params.config.full_experiment_name=g3cr2_32env_seed0_capacity_smoke",
+        "agent.params.config.save_frequency=1"
+      ],
+      "epochs": 2,
+      "experiment_name": "g3cr2_32env_seed0_capacity_smoke",
+      "guard_floor_MiB": 1024,
+      "horizon_length": 128,
+      "num_envs": 32,
+      "planned_transitions": 8192,
+      "required_min_free_MiB": 1536,
+      "restore": false,
+      "run_root": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_32env_seed0_2ep",
+      "seed": 0
+    },
+    "status": "FROZEN_BEFORE_32_SMOKE"
+  },
   "phase_a": {
     "active_training_processes": false,
     "compute_process": "gnome-remote-desktop pid2882 157MiB",
@@ -19,6 +107,78 @@
     "sample_count": 600,
     "schema_version": "g3c_r2_phase_a_v1",
     "starting_commit": "32f784b43011470615dec251984aca26716a4b86"
+  },
+  "phase_b_result": {
+    "artifacts": {
+      "guard/samples.csv": {
+        "bytes": 112074,
+        "sha256": "d9e7ace287a21c9fbb54474a72e47e2db58cf2bd14028c4a851d8a601d2c1273"
+      },
+      "guard/status.json": {
+        "bytes": 1683,
+        "sha256": "c6061695e65af3b9f404813a0a807123082b6b6948b9b3dcc454c8c87125eb22"
+      },
+      "launch.json": {
+        "bytes": 5937,
+        "sha256": "b4d2459b263632af9f7c424ae1764267ccc7d862b0f3f2e922d020802694ea84"
+      },
+      "supervisor/child_exit.json": {
+        "bytes": 368,
+        "sha256": "593822605d6a279754c08160ca505b4d1e94e24a47e18e50b274bc7eccd03b27"
+      },
+      "supervisor/command.json": {
+        "bytes": 2090,
+        "sha256": "552ad2343a4e1859f40b6717a45355472755ca3aed1a05320255b72b0f6c593f"
+      },
+      "supervisor/console.txt": {
+        "bytes": 8436,
+        "sha256": "c02491f7527d193940b4ce80f5b1cfd9447faec642e7f3435f67acf1979f0af3"
+      },
+      "supervisor/exec_release.json": {
+        "bytes": 340,
+        "sha256": "e6771e67f810d16cd7092159ce37b338fe6f0b692dbba97e98536c6523df23d2"
+      },
+      "supervisor/status.json": {
+        "bytes": 1879,
+        "sha256": "56e12d176de9cc2435765a749af149335a05769221553b00d78c79fa7126076e"
+      },
+      "supervisor/tensorboard_finalizer.json": {
+        "bytes": 335,
+        "sha256": "9d4892221bbcb720f5e258363052401aac4e411518d0167b1a631cc7d449277a"
+      },
+      "supervisor/training_audit.json": {
+        "bytes": 6277,
+        "sha256": "f1093ecb0df3282f8931b795af60a0a00ede41f4abc65cb399970df0964f2a42"
+      }
+    },
+    "decision": "64-env long training not launched; fallback required because approximate 1.5 GiB observed margin was not met; no retry",
+    "experiment_name": "g3cr2_64env_seed1_capacity_smoke",
+    "gates": {
+      "amp_skips": 0,
+      "checkpoint_created": true,
+      "child_exit0": true,
+      "epochs": 2,
+      "finite_optimizer_values": true,
+      "guard_no_trigger": true,
+      "monitoring_gaps": [],
+      "optimizer_steps": {
+        "actor": 128,
+        "central_value": 128
+      },
+      "tensorboard_finalizer_complete": true,
+      "transitions": 16384
+    },
+    "memory": {
+      "guard_floor_MiB": 1024,
+      "margin_shortfall_MiB": 78.875,
+      "min_free_MiB": 1457.125,
+      "peak_used_MiB": 6360.5,
+      "required_approx_margin_MiB": 1536
+    },
+    "recorded_utc": "2026-10-25T13:26:19.185969+00:00",
+    "run_root": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r2/smoke_64env_seed1_2ep",
+    "schema_version": "g3c_r2_64smoke_receipt_v1",
+    "status": "MARGIN_FAIL_NO_GO"
   },
   "prohibited": [
     "no long training before smoke passes",
@@ -92,5 +252,5 @@
     "seed": 1
   },
   "starting_commit": "32f784b43011470615dec251984aca26716a4b86",
-  "status": "FROZEN_BEFORE_64_SMOKE"
+  "status": "64_SMOKE_MARGIN_NO_GO_FALLBACK_32_PENDING"
 }
