@@ -66,7 +66,7 @@ def seed2_recommendation(report, seed0):
             '本任务到 seed 1 为止，不自动启动 seed 2。')
 
 
-def make_result(report, seed0, manifest, identities):
+def make_result(report, seed0, manifest, identities, provenance=None):
     train = report.get('training', {})
     progress = train.get('verified_progress', {})
     return {'schema_version': 'g3cr5_result_v1',
@@ -91,7 +91,8 @@ def make_result(report, seed0, manifest, identities):
             'seed2_launched': False, 'historical_64env_included_in_32env_statistics': False,
             'input_identities': identities, 'issues': report.get('issues'),
             'completion_gates': report.get('completion_gates'),
-            'monitoring_policy': report.get('monitoring_policy')}
+            'monitoring_policy': report.get('monitoring_policy'),
+            'evaluation_recovery_provenance': provenance or manifest.get('evaluation_recovery')}
 
 
 def render(report, seed0, manifest, result):
@@ -132,6 +133,19 @@ def render(report, seed0, manifest, result):
         f"完成 epoch 的 AMP scale：首次 `{scales.get('first')}`；末次 `{scales.get('last')}`；统计 `{scales.get('statistics')}`。",
         '计数来自只读训练 observer 的实际事件，未用预期 minibatch 数补齐。顶层优化器计数可能包含不完整 epoch 中已记录的工作；完成 epoch 的累计值单独保留在机器证据。未直接测量逐梯度有限性。有限 loss/参数只支持数值稳定性描述，不能证明收敛、任务成功或所有梯度有限。', '',
         '| TensorBoard 标量 | n | 最小值 | 中位数 | 最大值 |', '|---|---:|---:|---:|---:|']
+    recovery = result.get('evaluation_recovery_provenance')
+    if recovery:
+        # Keep the initial incomplete controller visible even when a later,
+        # explicitly selected evaluation-only recovery supplies final metrics.
+        boundary = lines.index('## 配置冻结与历史保留')
+        section = [
+            '## 评估基础设施故障与独立恢复的来源', '',
+            '这份最终报告保留并区分最初的评估控制器与随后人工选择的仅评估恢复。原始训练没有重新运行、恢复或拼接；完成的 training seed 1 checkpoint 及其 SHA 保持不变。',
+            '首个评估进程虽然 child wait 为 0，但没有产生 metrics，不能认定为科学评估完成。原始控制器因此记录为 INCOMPLETE。Kit/OmniClient 记录在解析官方 S3 的 `default_environment.usd` 时出现 libcurl SSL connect error 35；该故障不属于训练失败或 CUDA OOM。',
+            '随后在新的 completion/evaluation 输出目录中，显式执行仅评估恢复。训练 checkpoint、环境、task/reward/success、确定性推理、评估种子与 episode 分母沿用冻结协议。最初的失败 console、controller status、部分分析和 result 仍保留，不被最终结果覆盖；不存在选择表现更好的训练重跑。',
+            '最终工程/科学状态描述本次训练和登记的评估恢复所获得的完整证据；不回填或改写原始失败控制器状态。具体恢复 manifest、原始来源与身份由下列机器证据保留：', '',
+            '```json', json.dumps(recovery, ensure_ascii=False, indent=2, sort_keys=True), '```', '']
+        lines[boundary:boundary] = section
     for tag, stats in losses.get('scalar_statistics', {}).items():
         lines.append(f"| `{tag}` | {stats.get('n')} | {number(stats.get('min'), 6)} | {number(stats.get('median'), 6)} | {number(stats.get('max'), 6)} |")
     lines += ['', '## Checkpoint 完整性', '',
@@ -182,6 +196,8 @@ def main(argv=None):
     parser.add_argument('--manifest', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--result', type=Path, required=True)
+    parser.add_argument('--provenance', type=Path,
+                        help='Optional immutable JSON recording evaluation-only recovery provenance')
     args = parser.parse_args(argv)
     if args.output.exists() or args.result.exists():
         parser.error('报告和 result 必须使用全新路径；禁止覆盖历史证据')
@@ -190,10 +206,16 @@ def main(argv=None):
         parser.error('R5 manifest 必须明确 training_seed=1')
     identities = {'analysis_report': identity(args.report), 'seed0_analysis_report': identity(args.baseline),
                   'manifest': identity(args.manifest), 'report_generator': identity(__file__)}
+    provenance = None
+    if args.provenance:
+        provenance = load(args.provenance)
+        if not isinstance(provenance, dict):
+            parser.error('--provenance must contain a JSON object')
+        identities['evaluation_recovery_provenance'] = identity(args.provenance)
     expected_seed0 = manifest.get('seed0_baseline', {}).get('analysis_sha256')
     if expected_seed0 and identities['seed0_analysis_report']['sha256'] != expected_seed0:
         parser.error('seed-0 baseline SHA 与冻结 manifest 不一致')
-    result = make_result(report, seed0, manifest, identities)
+    result = make_result(report, seed0, manifest, identities, provenance)
     markdown = render(report, seed0, manifest, result)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.result.parent.mkdir(parents=True, exist_ok=True)

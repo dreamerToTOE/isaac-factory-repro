@@ -1,0 +1,13 @@
+checkpoint_epoch,seed,status,episodes_completed,ever_success_count,ever_success_rate,terminal_success_count,terminal_success_rate,conditional_first_success_n,conditional_first_success_step_median,conditional_first_success_seconds_median
+100,1001,incomplete_error,0,0,,0,,0,,
+100,1002,missing,0,0,,0,,0,,
+100,1003,missing,0,0,,0,,0,,
+200,1001,missing,0,0,,0,,0,,
+200,1002,missing,0,0,,0,,0,,
+200,1003,missing,0,0,,0,,0,,
+300,1001,missing,0,0,,0,,0,,
+300,1002,missing,0,0,,0,,0,,
+300,1003,missing,0,0,,0,,0,,
+400,1001,missing,0,0,,0,,0,,
+400,1002,missing,0,0,,0,,0,,
+400,1003,missing,0,0,,0,,0,,

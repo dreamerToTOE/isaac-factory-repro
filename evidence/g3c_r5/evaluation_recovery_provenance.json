@@ -1,0 +1,139 @@
+{
+  "schema_version": "g3cr5_evaluation_recovery_v1",
+  "selected_utc": "2026-10-26T06:28:42.039256+00:00",
+  "selection": "Manual evaluation-only recovery after investigating actual infrastructure failure; no automatic training retry",
+  "original_manifest": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r5/manifest_frozen.json",
+  "original_manifest_sha256": "f3163299d669e355c401cb825661bb99705a3b10b79b1f16fed4b090bfb77103",
+  "initial_controller_status": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_20261026t015040z/status.json",
+  "initial_controller_status_sha256": "c078f436e8bed705d249c4e501e953bd84ca7dc5e1ac4f460c0031692b41ce8a",
+  "initial_controller_phase": "incomplete",
+  "initial_evaluation_child_wait": 0,
+  "initial_valid_metrics_files": 0,
+  "initial_completed_evaluation_episodes": 0,
+  "actual_failure": "OmniClient libcurl SSL connect error35 loading unchanged official S3 default_environment.usd; child returned0 without metrics",
+  "network_diagnosis": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r5/evaluation_network_diagnosis.json",
+  "no_driver_proxy_or_user_process_changes": true,
+  "no_training_retry_resume_or_checkpoint_restore": true,
+  "completed_training_status": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/train_32env_seed1_400ep_20261026t015040z/supervisor/status.json",
+  "completed_training_status_sha256": "df4a2324d81b1192554b1666e8da1d8ff18fa26d63d1adcb63a788e5badb80df",
+  "completed_epochs": 400,
+  "completed_transitions": 1638400,
+  "scientific_configuration_unchanged": true,
+  "evaluator_source_unchanged": true,
+  "primary_evaluation_samples": "Only fresh complete outputs in this recovery, no episode concatenation or pooling with failed attempt",
+  "new_completion_output": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z",
+  "new_recovery_manifest": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r5/manifest_evaluation_recovery.json",
+  "initial_partial_report_preserved": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/docs/REVIEW_G3C_R5.md",
+  "initial_partial_result_preserved": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r5/result.json",
+  "checkpoint_identities": {
+    "100": {
+      "actor_model_present": true,
+      "all_tensors_and_numeric_arrays_finite": true,
+      "central_value_present": true,
+      "epoch": 100,
+      "frame": 409600,
+      "nonzero_adam_exp_avg_states": 22,
+      "optimizer_state_count": 22,
+      "optimizer_step_max": 3198,
+      "optimizer_step_min": 3198,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_100_rew_313.37598.pth",
+      "selection": {
+        "all_candidates_preserved": true,
+        "all_milestone_candidate_paths": [
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_100_rew_313.37598.pth"
+        ],
+        "basis": "last matching checkpoint save in chronological training audit",
+        "selected_save_event": {
+          "epoch": 100,
+          "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_100_rew_313.37598",
+          "frame": 409600,
+          "operation": "save"
+        }
+      },
+      "sha256": "d152a4fadf28b06807d9396d8979602984f4c736670122453fe2d801224a2fb6",
+      "size_bytes": 212889115
+    },
+    "200": {
+      "actor_model_present": true,
+      "all_tensors_and_numeric_arrays_finite": true,
+      "central_value_present": true,
+      "epoch": 200,
+      "frame": 819200,
+      "nonzero_adam_exp_avg_states": 22,
+      "optimizer_state_count": 22,
+      "optimizer_step_max": 6397,
+      "optimizer_step_min": 6397,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_200_rew_335.51993.pth",
+      "selection": {
+        "all_candidates_preserved": true,
+        "all_milestone_candidate_paths": [
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_200_rew_335.51993.pth"
+        ],
+        "basis": "last matching checkpoint save in chronological training audit",
+        "selected_save_event": {
+          "epoch": 200,
+          "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_200_rew_335.51993",
+          "frame": 819200,
+          "operation": "save"
+        }
+      },
+      "sha256": "b90b4667c3f205c67d79718a4f5556e7cc0a95ae0086246c7e9ece75e97fd1f3",
+      "size_bytes": 212889115
+    },
+    "300": {
+      "actor_model_present": true,
+      "all_tensors_and_numeric_arrays_finite": true,
+      "central_value_present": true,
+      "epoch": 300,
+      "frame": 1228800,
+      "nonzero_adam_exp_avg_states": 22,
+      "optimizer_state_count": 22,
+      "optimizer_step_max": 9593,
+      "optimizer_step_min": 9593,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_300_rew_342.33563.pth",
+      "selection": {
+        "all_candidates_preserved": true,
+        "all_milestone_candidate_paths": [
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_300_rew_342.33563.pth"
+        ],
+        "basis": "last matching checkpoint save in chronological training audit",
+        "selected_save_event": {
+          "epoch": 300,
+          "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_300_rew_342.33563",
+          "frame": 1228800,
+          "operation": "save"
+        }
+      },
+      "sha256": "2292bbac234384ebd48246e85797b0a08a7887db93e25c3cbbffe6e3e036826d",
+      "size_bytes": 212889115
+    },
+    "400": {
+      "actor_model_present": true,
+      "all_tensors_and_numeric_arrays_finite": true,
+      "central_value_present": true,
+      "epoch": 400,
+      "frame": 1638400,
+      "nonzero_adam_exp_avg_states": 22,
+      "optimizer_state_count": 22,
+      "optimizer_step_max": 12790,
+      "optimizer_step_min": 12790,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_400_rew__346.54318_.pth",
+      "selection": {
+        "all_candidates_preserved": true,
+        "all_milestone_candidate_paths": [
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_400_rew_346.54318.pth",
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_400_rew__346.54318_.pth"
+        ],
+        "basis": "last matching checkpoint save in chronological training audit",
+        "selected_save_event": {
+          "epoch": 400,
+          "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_400_rew__346.54318_",
+          "frame": 1638400,
+          "operation": "save"
+        }
+      },
+      "sha256": "2b266c9b64574dc075634e10e3c6b9856899870cbabe54b157a70b7a8c9de54e",
+      "size_bytes": 212889335
+    }
+  }
+}

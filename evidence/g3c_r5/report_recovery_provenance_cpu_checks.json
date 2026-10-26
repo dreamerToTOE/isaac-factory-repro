@@ -1,0 +1,15 @@
+{
+  "schema_version": "g3cr5_report_recovery_provenance_cpu_checks_v1",
+  "checked_utc": "2026-10-26T06:27:13.275839+00:00",
+  "status": "PASS",
+  "script_sha256": "3cbd91563904266f282ae4143a4dc954636f4ec0f470763bc0767bc99ca2caf2",
+  "checks": [
+    "original_controller_incomplete_retained",
+    "asset_error35_and_wait0_withoutmetrics_distinguished",
+    "training400ep1638400unchanged",
+    "recovery_json_verbatim_and_hashed",
+    "fresh_output_only"
+  ],
+  "gpu_used": false,
+  "frozen_or_historical_files_modified": false
+}

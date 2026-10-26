@@ -1,0 +1,11 @@
+{
+  "aggregate": null,
+  "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_100_rew_313.37598.pth",
+  "episodes": [],
+  "episodes_completed": 0,
+  "episodes_requested": 32,
+  "error": "'NoneType' object has no attribute 'GetPath'",
+  "error_type": "AttributeError",
+  "seed": 1001,
+  "status": "incomplete_error"
+}

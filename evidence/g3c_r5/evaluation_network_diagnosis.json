@@ -1,0 +1,28 @@
+{
+  "observed_failure": "OmniClient libcurl SSL connect error35 on officialS3 asset resolution, first evaluation exited0 without metrics; not a training or CUDA OOM failure",
+  "network_probes": [
+    {
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/.cloudfront.toml",
+      "returncode": 0,
+      "stdout": "HTTP/1.1 200 OK\nx-amz-id-2: NkQjyBYVFga3VmAlHguoO8gYQ3M3llR+JCWpINbK+v5gM+2I6UJ0pyl7Fo23dDAxY5J3k/KdYHKjjjYCaINDXiiumcEMYQ3B\nx-amz-request-id: PS06FPPSXN2CVMNZ\nServer: AmazonS3\nDate: Mon, 26 Oct 2026 06:25:00 GMT\nLast-Modified: Thu, 04 Nov 2021 15:43:16 GMT\nETag: \"40d2e138be3ae5cb54b4651543192985\"\nAccept-Ranges: bytes\nContent-Length: 70\nContent-Type: binary/octet-stream\n\n",
+      "stderr": "",
+      "recorded_utc": "2026-10-26T06:24:55.274289+00:00"
+    },
+    {
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/?delimiter=%2F&list-type=2&prefix=Assets%2FIsaac%2F4.5%2FIsaac%2FEnvironments%2FGrid%2F",
+      "returncode": 0,
+      "stdout": "HTTP/1.1 200 OK\nx-amz-id-2: xiPjLRU6/uSTbsP61R5u0NvryKc5s4gGNaijIW0rliVJDy917tnBFLuqJlZsjWpXnzPJ3DSOmK+PcbOvuGLCY0kVrEuNdJDd\nx-amz-request-id: WTNPA9Q2PM74S2MP\nServer: AmazonS3\nDate: Mon, 26 Oct 2026 06:25:01 GMT\nx-amz-bucket-region: us-west-2\nx-amz-access-point-alias: false\nx-amz-bucket-arn: arn:aws:s3:::omniverse-content-production\nContent-Type: application/xml\nTransfer-Encoding: chunked\n\n",
+      "stderr": "",
+      "recorded_utc": "2026-10-26T06:24:55.972231+00:00"
+    },
+    {
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Environments/Grid/default_environment.usd",
+      "returncode": 0,
+      "stdout": "HTTP/1.1 200 OK\nx-amz-id-2: weId//3ZxYJyyPkRwlPCpkXPo1VIetWwuAoVfH5kbGiLvFMNLlfw1tVcl/M8mPWPknqZyaoeZuJDoolxMixBEQIVPHb4eBov\nx-amz-request-id: K2YWN80GTXR9SMH1\nServer: AmazonS3\nDate: Mon, 26 Oct 2026 06:25:02 GMT\nLast-Modified: Thu, 30 Jan 2025 02:21:42 GMT\nETag: \"28efd0a78f207dfac507479e3a2d3fed\"\nx-amz-server-side-encryption: AES256\nAccept-Ranges: bytes\nContent-Length: 7892\nContent-Type: binary/octet-stream\n\n",
+      "stderr": "",
+      "recorded_utc": "2026-10-26T06:24:56.765142+00:00"
+    }
+  ],
+  "no_source_or_scientific_configuration_changes": true,
+  "no_driver_or_proxy_or_user_process_changes": true
+}

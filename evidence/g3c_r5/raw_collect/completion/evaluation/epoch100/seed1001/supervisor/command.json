@@ -1,0 +1,56 @@
+{
+  "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+  "command": [
+    "env",
+    "TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1",
+    "bash",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/evaluate_checkpoint.py",
+    "--headless",
+    "--device",
+    "cuda:0",
+    "--task",
+    "Isaac-Factory-PegInsert-Direct-v0",
+    "--checkpoint",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_100_rew_313.37598.pth",
+    "--num_envs",
+    "32",
+    "--episodes",
+    "1",
+    "--seed",
+    "1001",
+    "--max_steps",
+    "160",
+    "--snapshot-limit",
+    "12",
+    "--progress-interval",
+    "10",
+    "--output",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_20261026t015040z/evaluation/epoch100/seed1001/metrics.json"
+  ],
+  "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs",
+  "engineering": true,
+  "environment": {
+    "FACTORY_VENV": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01",
+    "ISAACSIM_PATH": "/home/ubuntu2004/isaacsim-4.5.0",
+    "OMP_NUM_THREADS": "4"
+  },
+  "guard_directory": null,
+  "identity": {
+    "birth_ticks": "1888524",
+    "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+    "pgid": 64533,
+    "pid": 64533,
+    "state": "R"
+  },
+  "lock_file": "/run/user/1000/isaac-factory-gpu0.lock",
+  "schema_version": 2,
+  "stale_seconds": 2,
+  "started": {
+    "monotonic_seconds": 18885.278127778,
+    "unix_seconds": 1792994255.8167648,
+    "utc": "2026-10-26T05:57:35.816751+00:00"
+  },
+  "startup_timeout_seconds": 30,
+  "timeout_seconds": 1800.0
+}

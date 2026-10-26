@@ -1,0 +1,139 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/collect_g3cr5.py",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r5/manifest_frozen.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r5/raw_collect"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+      "ended_utc": "2026-10-26T06:00:27.722957+00:00",
+      "returncode": 0,
+      "started_utc": "2026-10-26T05:59:56.481172+00:00"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/analyze_g3cr5.py",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r5/manifest_frozen.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r5/analysis",
+        "--tensorboard-python",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+      "ended_utc": "2026-10-26T06:00:38.875504+00:00",
+      "returncode": 0,
+      "started_utc": "2026-10-26T06:00:27.723349+00:00"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/report_g3cr5.py",
+        "--report",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r5/analysis/report.json",
+        "--baseline",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r4/analysis/report.json",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r5/manifest_frozen.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/docs/REVIEW_G3C_R5.md",
+        "--result",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r5/result.json"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+      "ended_utc": "2026-10-26T06:00:38.939336+00:00",
+      "returncode": 0,
+      "started_utc": "2026-10-26T06:00:38.875951+00:00"
+    },
+    {
+      "argv": [
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests",
+        "--basetemp=/dev/shm/g3cr5-cpu-final-20261026t015040z",
+        "--junitxml=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r5/final_cpu_regression.xml"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+      "ended_utc": "2026-10-26T06:00:53.408466+00:00",
+      "returncode": 0,
+      "started_utc": "2026-10-26T06:00:38.939803+00:00"
+    }
+  ],
+  "completion_phase": "incomplete",
+  "cpu_only": true,
+  "ended_utc": "2026-10-26T06:00:53.408913+00:00",
+  "exit_code": 0,
+  "manifest_sha256": "f3163299d669e355c401cb825661bb99705a3b10b79b1f16fed4b090bfb77103",
+  "phase": "artifacts_and_regression_complete",
+  "postprocess_sha256": "58e94796c3367c82dc5481f15656c6dd467a7ae9548dd2faaeed1dde07b1fc49",
+  "started_utc": "2026-10-26T02:08:05.655961+00:00",
+  "terminal_training_status": {
+    "child_exit_code": 0,
+    "child_identity": {
+      "birth_ticks": "461544",
+      "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+      "pgid": 34817,
+      "pid": 34817,
+      "state": "R"
+    },
+    "child_signal": null,
+    "command": [
+      "bash",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py",
+      "--headless",
+      "--device",
+      "cuda:0",
+      "--task",
+      "Isaac-Factory-PegInsert-Direct-v0",
+      "--num_envs",
+      "32",
+      "--seed",
+      "1",
+      "--max_iterations",
+      "400",
+      "agent.params.config.full_experiment_name=g3cr5_peginsert_32env_seed1_400ep_20261026t015040z",
+      "agent.params.config.save_frequency=25"
+    ],
+    "ended": {
+      "monotonic_seconds": 18863.456134389,
+      "unix_seconds": 1792994233.9947734,
+      "utc": "2026-10-26T05:57:13.994767+00:00"
+    },
+    "error": null,
+    "exec_released": {
+      "monotonic_seconds": 4615.59765665,
+      "unix_seconds": 1792979986.1362953,
+      "utc": "2026-10-26T01:59:46.136280+00:00"
+    },
+    "finalized": true,
+    "guard_identity": null,
+    "guard_required": false,
+    "identity": {
+      "birth_ticks": "461523",
+      "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+      "pgid": 34805,
+      "pid": 34805,
+      "state": "R"
+    },
+    "raw_wait_returncode": 0,
+    "received_supervisor_signals": [],
+    "schema_version": 2,
+    "started": {
+      "monotonic_seconds": 4615.260493558,
+      "unix_seconds": 1792979985.7991307,
+      "utc": "2026-10-26T01:59:45.799115+00:00"
+    },
+    "stop_signals": [],
+    "termination_reason": "child_exit",
+    "wall_seconds": 14248.195641359
+  },
+  "training_or_evaluation_control_actions": []
+}

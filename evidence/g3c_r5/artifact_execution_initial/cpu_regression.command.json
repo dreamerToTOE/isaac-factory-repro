@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests",
+    "--basetemp=/dev/shm/g3cr5-cpu-final-20261026t015040z",
+    "--junitxml=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r5/final_cpu_regression.xml"
+  ],
+  "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+  "ended_utc": "2026-10-26T06:00:53.408466+00:00",
+  "returncode": 0,
+  "started_utc": "2026-10-26T06:00:38.939803+00:00"
+}

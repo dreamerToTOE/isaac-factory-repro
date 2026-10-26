@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "systemd-run",
+    "--user",
+    "--unit=factory-g3cr5-r1-20261026t062700z-artifacts",
+    "--property=WorkingDirectory=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+    "--property=Restart=no",
+    "--property=KillMode=control-group",
+    "--property=TimeoutStopSec=10",
+    "/usr/bin/python3",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3cr5_manifest/postprocess_evaluation_recovery.py",
+    "--manifest",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r5/manifest_evaluation_recovery.json",
+    "--output",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3cr5_manifest/postprocess_evaluated_state"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "Running as unit: factory-g3cr5-r1-20261026t062700z-artifacts.service\n",
+  "cpu_only": true,
+  "no_training_or_eval_control_actions": true
+}

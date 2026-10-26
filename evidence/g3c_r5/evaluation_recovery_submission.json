@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "systemd-run",
+    "--user",
+    "--unit=factory-g3cr5-r1-20261026t062700z-completion",
+    "--property=WorkingDirectory=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs",
+    "--property=Restart=no",
+    "--property=KillMode=control-group",
+    "--property=TimeoutStopSec=10",
+    "/usr/bin/python3",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/complete_g3cr5.py",
+    "--manifest",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r5/manifest_evaluation_recovery.json"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "Running as unit: factory-g3cr5-r1-20261026t062700z-completion.service\n",
+  "manifest_sha256": "826fc269feab1f7eb1ed9a481a265bd98d0a4017637ce0756ba2db4d6bd13eb1",
+  "training_launch_performed": false
+}

@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/tensorboard_tail.py",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/summaries",
+    "--expected-epochs",
+    "400",
+    "--transitions-per-epoch",
+    "4096"
+  ],
+  "cwd": null,
+  "started": {
+    "monotonic_seconds": 18865.256450095,
+    "unix_seconds": 1792994235.795089,
+    "utc": "2026-10-26T05:57:15.795078+00:00"
+  }
+}
