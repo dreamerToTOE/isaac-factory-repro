@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g4i1_runtime.py",
+    "--headless",
+    "--device",
+    "cuda:0",
+    "--mode",
+    "episode",
+    "--validate",
+    "--output",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z/episode"
+  ],
+  "source_sha256": "a3295cec623275ab7fb2bae73780c7cd998355d0c4e248f27fae491341e3ca42",
+  "mode": "episode",
+  "validate": true,
+  "seed": 1001,
+  "num_envs": 1,
+  "dtype": "float32",
+  "status": "INITIALIZING"
+}

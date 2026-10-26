@@ -1,0 +1,16 @@
+{
+  "command": [
+    "../../work/envs/factory-g01/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests",
+    "--basetemp=/dev/shm/g4i1_cpu_c3b94875b3d045a0871c9fd75ff81c72",
+    "--junitxml=evidence/g4_i/i1/cpu_pre_gpu.xml"
+  ],
+  "exit_code": 0,
+  "duration_s": 15.011408885999117,
+  "all_tests_included": true,
+  "CUDA_VISIBLE_DEVICES": "",
+  "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"
+}

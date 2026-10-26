@@ -1,0 +1,33 @@
+{
+  "status": "G4_I1_PASS",
+  "checks": {
+    "cpu_full_suite": true,
+    "cpu_actual_primary_secondary_actor": true,
+    "cpu_source_edge_clip_ema": true,
+    "runtime_gate": true,
+    "independent_review_exists": true,
+    "pinned_sources": true,
+    "historical_audit_exists": true,
+    "real_error_exit_probe": true
+  },
+  "cpu_tests": 360,
+  "new_i1_tests": 88,
+  "numerical_comparisons": 832800,
+  "max_absolute_error": 0.0,
+  "max_relative_error": 0.0,
+  "violations": 0,
+  "ever_success": [
+    1,
+    1
+  ],
+  "terminal_success": [
+    1,
+    1
+  ],
+  "first_success_step": 37,
+  "first_success_sim_seconds": 2.466666666666667,
+  "learning": "PENDING",
+  "next_stage_started": false,
+  "cpu_junit_sha256": "3e85972c96a0c2f13434b0e9215a736be76e951fc8255fce30307042cde8b6c4",
+  "source_base_commit": "3f41e0618dcdb033c95b79ff77af3998e81a0436"
+}

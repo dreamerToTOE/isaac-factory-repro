@@ -1,0 +1,14 @@
+{
+  "reason": "First full episode completed but extra effort parity failed9values; inputs/wrench exact; controller reference clone packed noncontiguous massmatrix. Native Kit shutdown also returned0 despite saved RuntimeError. Preserve original raw failure; fix only validatorlayout, requestedexitstatus, edgecoverage assertions and commandlogging, not science/tolerances.",
+  "failed_attempt": "episode",
+  "failed_runtime_source_sha256": "a3295cec623275ab7fb2bae73780c7cd998355d0c4e248f27fae491341e3ca42",
+  "source_snapshot": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z/source_snapshots/g4i1_runtime_first_attempt.py",
+  "original_native_wait_returncode": 0,
+  "runtime_error_file": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z/episode/runtime_error.json",
+  "planned_additional_phases": [
+    "exit_probe (intentional error, expectedchild1, noenvironment/commands)",
+    "episode_verified (same scientific configuration, layout-preserving reference)"
+  ],
+  "gpu_floor_mib": 1024,
+  "gpu_guard_unchanged": true
+}

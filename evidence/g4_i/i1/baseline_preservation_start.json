@@ -1,0 +1,12 @@
+{
+  "base_commit": "3f41e0618dcdb033c95b79ff77af3998e81a0436",
+  "i0_manifest_sha256": "b774d5b4f620ace6d8ea6cd4b8e4086921d08f9688783b5ad01d548e87c275eb",
+  "i0_files_checked": 37,
+  "i0_files_unchanged": true,
+  "unrelated_files": [
+    "docs/DEMO_G3V.md",
+    "scripts/g3v_playback.sh",
+    "evidence/g3v/"
+  ],
+  "checkpoint_mutation_authorized": false
+}

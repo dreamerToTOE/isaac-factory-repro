@@ -1,0 +1,25 @@
+{
+  "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+  "identity": {
+    "birth_ticks": "2976398",
+    "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+    "pgid": 125223,
+    "pid": 125223,
+    "state": "R"
+  },
+  "mock_source": null,
+  "policy": {
+    "consecutive_samples": 3,
+    "floor_MiB": 1024,
+    "gap_limit_seconds": 0.5,
+    "interval_seconds": 0.1,
+    "stale_seconds": 2
+  },
+  "schema_version": 2,
+  "started": {
+    "monotonic_seconds": 29764.025591222,
+    "unix_seconds": 1793005134.5642302,
+    "utc": "2026-10-26T08:58:54.564216+00:00"
+  },
+  "supervisor_directory": "/dev/shm/g4i1_seed1001_20261026T084829Z_episode_supervision/supervisor"
+}

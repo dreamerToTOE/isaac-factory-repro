@@ -1,0 +1,503 @@
+{
+  "schema_version": "g4_i1_edge_cpu_v1",
+  "passed": true,
+  "scope": "Original Player clipping and original Factory pre-step EMA only; target/controller GPU fixtures are separate",
+  "actor_weights_loaded_or_mutated": false,
+  "gpu_used": false,
+  "source_identity": {
+    "factory_env": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py",
+      "sha256": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81"
+    },
+    "official_player": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/players.py",
+      "sha256": "e22d083c540b479b31fefc2bbd05d132a54e3f97d14bf21421498e011942c043"
+    }
+  },
+  "cases": [
+    {
+      "case": "normal",
+      "passed": true,
+      "parity": {
+        "schema_version": "g4_i1_parity_v1",
+        "passed": true,
+        "status": "PASS",
+        "device_kind": "cpu",
+        "tolerances": {
+          "atol": 1e-06,
+          "rtol": 1e-06,
+          "quaternion_angle_rad": 0.0001
+        },
+        "relative_error_reporting_denominator_floor": 1e-12,
+        "comparison_count": 12,
+        "violation_count": 0,
+        "orientation_violation_count": 0,
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "coverage": {
+          "passed": true,
+          "required_all_stages": false,
+          "missing_stages": [],
+          "cases": [
+            "normal"
+          ],
+          "required_cases": [],
+          "missing_cases": [],
+          "missing_in_actual": [],
+          "missing_in_reference": []
+        },
+        "stages": {
+          "clipped": {
+            "passed": true,
+            "comparison_count": 6,
+            "sample_count": 1,
+            "shape": [
+              1,
+              6
+            ],
+            "max_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "violation_count": 0
+          },
+          "ema": {
+            "passed": true,
+            "comparison_count": 6,
+            "sample_count": 1,
+            "shape": [
+              1,
+              6
+            ],
+            "max_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "violation_count": 0
+          }
+        }
+      },
+      "raw_mu": [
+        [
+          0.20000000298023224,
+          -0.10000000149011612,
+          0.30000001192092896,
+          0.10000000149011612,
+          0.20000000298023224,
+          -0.10000000149011612
+        ]
+      ],
+      "pose_derived_cache": [
+        [
+          1.5999999046325684,
+          -1.2999999523162842,
+          0.5,
+          0.0,
+          0.0,
+          -0.30000001192092896
+        ]
+      ],
+      "reference_clipped": [
+        [
+          0.20000000298023224,
+          -0.10000000149011612,
+          0.30000001192092896,
+          0.10000000149011612,
+          0.20000000298023224,
+          -0.10000000149011612
+        ]
+      ],
+      "actual_clipped": [
+        [
+          0.20000000298023224,
+          -0.10000000149011612,
+          0.30000001192092896,
+          0.10000000149011612,
+          0.20000000298023224,
+          -0.10000000149011612
+        ]
+      ],
+      "reference_ema": [
+        [
+          1.3199999332427979,
+          -1.059999942779541,
+          0.46000000834465027,
+          0.020000001415610313,
+          0.04000000283122063,
+          -0.2600000202655792
+        ]
+      ],
+      "actual_ema": [
+        [
+          1.3199999332427979,
+          -1.059999942779541,
+          0.46000000834465027,
+          0.020000001415610313,
+          0.04000000283122063,
+          -0.2600000202655792
+        ]
+      ],
+      "synthetic_injected_mu": true,
+      "simulator_commands_submitted": 0
+    },
+    {
+      "case": "action_clipping",
+      "passed": true,
+      "parity": {
+        "schema_version": "g4_i1_parity_v1",
+        "passed": true,
+        "status": "PASS",
+        "device_kind": "cpu",
+        "tolerances": {
+          "atol": 1e-06,
+          "rtol": 1e-06,
+          "quaternion_angle_rad": 0.0001
+        },
+        "relative_error_reporting_denominator_floor": 1e-12,
+        "comparison_count": 12,
+        "violation_count": 0,
+        "orientation_violation_count": 0,
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "coverage": {
+          "passed": true,
+          "required_all_stages": false,
+          "missing_stages": [],
+          "cases": [
+            "action_clipping"
+          ],
+          "required_cases": [],
+          "missing_cases": [],
+          "missing_in_actual": [],
+          "missing_in_reference": []
+        },
+        "stages": {
+          "clipped": {
+            "passed": true,
+            "comparison_count": 6,
+            "sample_count": 1,
+            "shape": [
+              1,
+              6
+            ],
+            "max_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "violation_count": 0
+          },
+          "ema": {
+            "passed": true,
+            "comparison_count": 6,
+            "sample_count": 1,
+            "shape": [
+              1,
+              6
+            ],
+            "max_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "violation_count": 0
+          }
+        }
+      },
+      "raw_mu": [
+        [
+          2.0,
+          -2.0,
+          3.0,
+          -3.0,
+          4.0,
+          -4.0
+        ]
+      ],
+      "pose_derived_cache": [
+        [
+          1.5999999046325684,
+          -1.2999999523162842,
+          0.5,
+          0.0,
+          0.0,
+          -0.30000001192092896
+        ]
+      ],
+      "reference_clipped": [
+        [
+          1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ]
+      ],
+      "actual_clipped": [
+        [
+          1.0,
+          -1.0,
+          1.0,
+          -1.0,
+          1.0,
+          -1.0
+        ]
+      ],
+      "reference_ema": [
+        [
+          1.4800000190734863,
+          -1.2400000095367432,
+          0.6000000238418579,
+          -0.20000000298023224,
+          0.20000000298023224,
+          -0.4399999976158142
+        ]
+      ],
+      "actual_ema": [
+        [
+          1.4800000190734863,
+          -1.2400000095367432,
+          0.6000000238418579,
+          -0.20000000298023224,
+          0.20000000298023224,
+          -0.4399999976158142
+        ]
+      ],
+      "synthetic_injected_mu": true,
+      "simulator_commands_submitted": 0
+    },
+    {
+      "case": "near_zero_rotation",
+      "passed": true,
+      "parity": {
+        "schema_version": "g4_i1_parity_v1",
+        "passed": true,
+        "status": "PASS",
+        "device_kind": "cpu",
+        "tolerances": {
+          "atol": 1e-06,
+          "rtol": 1e-06,
+          "quaternion_angle_rad": 0.0001
+        },
+        "relative_error_reporting_denominator_floor": 1e-12,
+        "comparison_count": 12,
+        "violation_count": 0,
+        "orientation_violation_count": 0,
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "coverage": {
+          "passed": true,
+          "required_all_stages": false,
+          "missing_stages": [],
+          "cases": [
+            "near_zero_rotation"
+          ],
+          "required_cases": [],
+          "missing_cases": [],
+          "missing_in_actual": [],
+          "missing_in_reference": []
+        },
+        "stages": {
+          "clipped": {
+            "passed": true,
+            "comparison_count": 6,
+            "sample_count": 1,
+            "shape": [
+              1,
+              6
+            ],
+            "max_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "violation_count": 0
+          },
+          "ema": {
+            "passed": true,
+            "comparison_count": 6,
+            "sample_count": 1,
+            "shape": [
+              1,
+              6
+            ],
+            "max_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "violation_count": 0
+          }
+        }
+      },
+      "raw_mu": [
+        [
+          0.20000000298023224,
+          0.10000000149011612,
+          -0.10000000149011612,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "pose_derived_cache": [
+        [
+          1.5999999046325684,
+          -1.2999999523162842,
+          0.5,
+          0.0,
+          0.0,
+          -0.30000001192092896
+        ]
+      ],
+      "reference_clipped": [
+        [
+          0.20000000298023224,
+          0.10000000149011612,
+          -0.10000000149011612,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "actual_clipped": [
+        [
+          0.20000000298023224,
+          0.10000000149011612,
+          -0.10000000149011612,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "reference_ema": [
+        [
+          1.3199999332427979,
+          -1.0199999809265137,
+          0.3799999952316284,
+          0.0,
+          0.0,
+          -0.24000000953674316
+        ]
+      ],
+      "actual_ema": [
+        [
+          1.3199999332427979,
+          -1.0199999809265137,
+          0.3799999952316284,
+          0.0,
+          0.0,
+          -0.24000000953674316
+        ]
+      ],
+      "synthetic_injected_mu": true,
+      "simulator_commands_submitted": 0
+    },
+    {
+      "case": "position_saturation",
+      "passed": true,
+      "parity": {
+        "schema_version": "g4_i1_parity_v1",
+        "passed": true,
+        "status": "PASS",
+        "device_kind": "cpu",
+        "tolerances": {
+          "atol": 1e-06,
+          "rtol": 1e-06,
+          "quaternion_angle_rad": 0.0001
+        },
+        "relative_error_reporting_denominator_floor": 1e-12,
+        "comparison_count": 12,
+        "violation_count": 0,
+        "orientation_violation_count": 0,
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "coverage": {
+          "passed": true,
+          "required_all_stages": false,
+          "missing_stages": [],
+          "cases": [
+            "position_saturation"
+          ],
+          "required_cases": [],
+          "missing_cases": [],
+          "missing_in_actual": [],
+          "missing_in_reference": []
+        },
+        "stages": {
+          "clipped": {
+            "passed": true,
+            "comparison_count": 6,
+            "sample_count": 1,
+            "shape": [
+              1,
+              6
+            ],
+            "max_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "violation_count": 0
+          },
+          "ema": {
+            "passed": true,
+            "comparison_count": 6,
+            "sample_count": 1,
+            "shape": [
+              1,
+              6
+            ],
+            "max_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "violation_count": 0
+          }
+        }
+      },
+      "raw_mu": [
+        [
+          1.0,
+          1.0,
+          1.0,
+          0.30000001192092896,
+          0.10000000149011612,
+          0.10000000149011612
+        ]
+      ],
+      "pose_derived_cache": [
+        [
+          1.5999999046325684,
+          -1.2999999523162842,
+          0.5,
+          0.0,
+          0.0,
+          -0.30000001192092896
+        ]
+      ],
+      "reference_clipped": [
+        [
+          1.0,
+          1.0,
+          1.0,
+          0.30000001192092896,
+          0.10000000149011612,
+          0.10000000149011612
+        ]
+      ],
+      "actual_clipped": [
+        [
+          1.0,
+          1.0,
+          1.0,
+          0.30000001192092896,
+          0.10000000149011612,
+          0.10000000149011612
+        ]
+      ],
+      "reference_ema": [
+        [
+          1.4800000190734863,
+          -0.8399999737739563,
+          0.6000000238418579,
+          0.06000000238418579,
+          0.020000001415610313,
+          -0.2200000137090683
+        ]
+      ],
+      "actual_ema": [
+        [
+          1.4800000190734863,
+          -0.8399999737739563,
+          0.6000000238418579,
+          0.06000000238418579,
+          0.020000001415610313,
+          -0.2200000137090683
+        ]
+      ],
+      "synthetic_injected_mu": true,
+      "simulator_commands_submitted": 0
+    }
+  ]
+}

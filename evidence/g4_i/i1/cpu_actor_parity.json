@@ -1,0 +1,268 @@
+{
+  "scope": "CPU actual frozen actor vs original evaluator Player, no simulator/controller",
+  "no_training_runner_module": true,
+  "results": {
+    "g2_epoch200_primary": {
+      "identity": {
+        "role": "g2_epoch200_primary",
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+        "sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+        "epoch": 200,
+        "frame": 1638400,
+        "strict_state_dict": true,
+        "frozen_rms_exact": true,
+        "fp32": true,
+        "optimizer_restored": false,
+        "rng_policy": "discard the same Normal.sample as official deterministic Player"
+      },
+      "parity": {
+        "schema_version": "g4_i1_parity_v1",
+        "passed": true,
+        "status": "PASS",
+        "device_kind": "cpu",
+        "tolerances": {
+          "atol": 1e-06,
+          "rtol": 1e-06,
+          "quaternion_angle_rad": 0.0001
+        },
+        "relative_error_reporting_denominator_floor": 1e-12,
+        "comparison_count": 41460,
+        "violation_count": 0,
+        "orientation_violation_count": 0,
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "coverage": {
+          "passed": true,
+          "required_all_stages": false,
+          "missing_stages": [],
+          "cases": [
+            "recurrent_reset",
+            "synthetic_observation"
+          ],
+          "required_cases": [],
+          "missing_cases": [],
+          "missing_in_actual": [],
+          "missing_in_reference": []
+        },
+        "stages": {
+          "c": {
+            "passed": true,
+            "comparison_count": 20480,
+            "sample_count": 20,
+            "shape": [
+              10,
+              2,
+              1,
+              1024
+            ],
+            "max_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "violation_count": 0
+          },
+          "clipped": {
+            "passed": true,
+            "comparison_count": 60,
+            "sample_count": 10,
+            "shape": [
+              10,
+              1,
+              6
+            ],
+            "max_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "violation_count": 0
+          },
+          "h": {
+            "passed": true,
+            "comparison_count": 20480,
+            "sample_count": 20,
+            "shape": [
+              10,
+              2,
+              1,
+              1024
+            ],
+            "max_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "violation_count": 0
+          },
+          "mu": {
+            "passed": true,
+            "comparison_count": 60,
+            "sample_count": 10,
+            "shape": [
+              10,
+              1,
+              6
+            ],
+            "max_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "violation_count": 0
+          },
+          "normalized": {
+            "passed": true,
+            "comparison_count": 190,
+            "sample_count": 10,
+            "shape": [
+              10,
+              1,
+              19
+            ],
+            "max_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "violation_count": 0
+          },
+          "observation": {
+            "passed": true,
+            "comparison_count": 190,
+            "sample_count": 10,
+            "shape": [
+              10,
+              1,
+              19
+            ],
+            "max_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "violation_count": 0
+          }
+        }
+      },
+      "rng_comparisons": 10,
+      "rng_all_equal": true,
+      "rms_unchanged": true,
+      "synthetic_observations": true,
+      "actor_calls": 10
+    },
+    "g3c_r4_epoch400_secondary": {
+      "identity": {
+        "role": "g3c_r4_epoch400_secondary",
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew__345.99203_.pth",
+        "sha256": "da72a148ebe2b1e2f11f79c4316c24f515510780a3975e2304a41077436b3c36",
+        "epoch": 400,
+        "frame": 1638400,
+        "strict_state_dict": true,
+        "frozen_rms_exact": true,
+        "fp32": true,
+        "optimizer_restored": false,
+        "rng_policy": "discard the same Normal.sample as official deterministic Player"
+      },
+      "parity": {
+        "schema_version": "g4_i1_parity_v1",
+        "passed": true,
+        "status": "PASS",
+        "device_kind": "cpu",
+        "tolerances": {
+          "atol": 1e-06,
+          "rtol": 1e-06,
+          "quaternion_angle_rad": 0.0001
+        },
+        "relative_error_reporting_denominator_floor": 1e-12,
+        "comparison_count": 41460,
+        "violation_count": 0,
+        "orientation_violation_count": 0,
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "coverage": {
+          "passed": true,
+          "required_all_stages": false,
+          "missing_stages": [],
+          "cases": [
+            "recurrent_reset",
+            "synthetic_observation"
+          ],
+          "required_cases": [],
+          "missing_cases": [],
+          "missing_in_actual": [],
+          "missing_in_reference": []
+        },
+        "stages": {
+          "c": {
+            "passed": true,
+            "comparison_count": 20480,
+            "sample_count": 20,
+            "shape": [
+              10,
+              2,
+              1,
+              1024
+            ],
+            "max_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "violation_count": 0
+          },
+          "clipped": {
+            "passed": true,
+            "comparison_count": 60,
+            "sample_count": 10,
+            "shape": [
+              10,
+              1,
+              6
+            ],
+            "max_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "violation_count": 0
+          },
+          "h": {
+            "passed": true,
+            "comparison_count": 20480,
+            "sample_count": 20,
+            "shape": [
+              10,
+              2,
+              1,
+              1024
+            ],
+            "max_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "violation_count": 0
+          },
+          "mu": {
+            "passed": true,
+            "comparison_count": 60,
+            "sample_count": 10,
+            "shape": [
+              10,
+              1,
+              6
+            ],
+            "max_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "violation_count": 0
+          },
+          "normalized": {
+            "passed": true,
+            "comparison_count": 190,
+            "sample_count": 10,
+            "shape": [
+              10,
+              1,
+              19
+            ],
+            "max_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "violation_count": 0
+          },
+          "observation": {
+            "passed": true,
+            "comparison_count": 190,
+            "sample_count": 10,
+            "shape": [
+              10,
+              1,
+              19
+            ],
+            "max_absolute_error": 0.0,
+            "max_relative_error": 0.0,
+            "violation_count": 0
+          }
+        }
+      },
+      "rng_comparisons": 10,
+      "rng_all_equal": true,
+      "rms_unchanged": true,
+      "synthetic_observations": true,
+      "actor_calls": 10
+    }
+  }
+}

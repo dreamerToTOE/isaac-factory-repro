@@ -1,0 +1,48 @@
+{
+  "run_id": "g4i1_seed1001_20261026T084829Z",
+  "created_utc": "2026-10-26T08:48:29.199799+00:00",
+  "base_commit": "3f41e0618dcdb033c95b79ff77af3998e81a0436",
+  "scope": "G4-I1 only; no training/I2/Sim2Sim/other tasks",
+  "learning_status": "PENDING; deferred by user, not engineering blocker",
+  "work_directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z",
+  "primary_sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+  "num_envs": 1,
+  "seed": 1001,
+  "torch_seed": 1001,
+  "dtype": "float32",
+  "headless": true,
+  "guard": {
+    "implementation": "unchanged g3a_launch_smoke.py + durable_supervisor.py + gpu_guard.py",
+    "free_floor_mib": 1024,
+    "consecutive_low_samples": 3,
+    "sample_interval_s": 0.1,
+    "gap_limit_s": 0.5,
+    "no_gpu_guard_exception": false,
+    "state_storage": "unique /dev/shm paths; immutable final receipts copied to work directory"
+  },
+  "phases": [
+    {
+      "name": "preflight",
+      "policy_steps": 2,
+      "timeout_s": 600
+    },
+    {
+      "name": "episode",
+      "policy_steps": 150,
+      "complete_episodes": 1,
+      "expected_timeout_step": 149,
+      "next_episode_first_action": true,
+      "timeout_s": 600
+    }
+  ],
+  "parity_tolerance": {
+    "cpu_atol": 1e-06,
+    "cpu_rtol": 1e-06,
+    "gpu_atol": 1e-05,
+    "gpu_rtol": 1e-05,
+    "quaternion_angle_rad": 0.0001
+  },
+  "rng": "standalone reproduces discardedNormal.sample; oracle executed under fork_rng and live afterstate checked",
+  "automatic_retry_with_changed_science": false,
+  "i0_frozen_spec_sha256": "8922f1aac1294398cbfa5a157b28b58a822a03906036e984cf8e8686163ea47b"
+}

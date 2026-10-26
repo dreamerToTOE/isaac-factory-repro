@@ -1,0 +1,347 @@
+{
+  "schema_version": "g4_i1_parity_v1",
+  "passed": true,
+  "status": "PASS",
+  "device_kind": "gpu",
+  "tolerances": {
+    "atol": 1e-05,
+    "rtol": 1e-05,
+    "quaternion_angle_rad": 0.0001
+  },
+  "relative_error_reporting_denominator_floor": 1e-12,
+  "comparison_count": 10912,
+  "violation_count": 0,
+  "orientation_violation_count": 0,
+  "max_absolute_error": 7.62939453125e-06,
+  "max_relative_error": 0.022646550685041584,
+  "coverage": {
+    "passed": true,
+    "required_all_stages": true,
+    "missing_stages": [],
+    "cases": [
+      "action_clipping",
+      "near_zero_rotation",
+      "normal",
+      "position_saturation"
+    ],
+    "required_cases": [
+      "action_clipping",
+      "near_zero_rotation",
+      "normal",
+      "position_saturation"
+    ],
+    "missing_cases": [],
+    "missing_in_actual": [],
+    "missing_in_reference": []
+  },
+  "stages": {
+    "c": {
+      "passed": true,
+      "comparison_count": 4096,
+      "sample_count": 4,
+      "shape": [
+        2,
+        2,
+        1,
+        1024
+      ],
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "violation_count": 0
+    },
+    "clipped": {
+      "passed": true,
+      "comparison_count": 12,
+      "sample_count": 2,
+      "shape": [
+        2,
+        1,
+        6
+      ],
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "violation_count": 0
+    },
+    "controller__applied_wrench": {
+      "passed": true,
+      "comparison_count": 96,
+      "sample_count": 16,
+      "shape": [
+        16,
+        1,
+        6
+      ],
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "violation_count": 0
+    },
+    "controller__arm_mass_matrix": {
+      "passed": true,
+      "comparison_count": 784,
+      "sample_count": 112,
+      "shape": [
+        16,
+        1,
+        7,
+        7
+      ],
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "violation_count": 0
+    },
+    "controller__ctrl_target_fingertip_midpoint_pos": {
+      "passed": true,
+      "comparison_count": 48,
+      "sample_count": 16,
+      "shape": [
+        16,
+        1,
+        3
+      ],
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "violation_count": 0
+    },
+    "controller__ctrl_target_fingertip_midpoint_quat": {
+      "passed": true,
+      "comparison_count": 64,
+      "sample_count": 16,
+      "shape": [
+        16,
+        1,
+        4
+      ],
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "violation_count": 0
+    },
+    "controller__dof_pos": {
+      "passed": true,
+      "comparison_count": 144,
+      "sample_count": 16,
+      "shape": [
+        16,
+        1,
+        9
+      ],
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "violation_count": 0
+    },
+    "controller__dof_vel": {
+      "passed": true,
+      "comparison_count": 144,
+      "sample_count": 16,
+      "shape": [
+        16,
+        1,
+        9
+      ],
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "violation_count": 0
+    },
+    "controller__fingertip_midpoint_angvel": {
+      "passed": true,
+      "comparison_count": 48,
+      "sample_count": 16,
+      "shape": [
+        16,
+        1,
+        3
+      ],
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "violation_count": 0
+    },
+    "controller__fingertip_midpoint_linvel": {
+      "passed": true,
+      "comparison_count": 48,
+      "sample_count": 16,
+      "shape": [
+        16,
+        1,
+        3
+      ],
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "violation_count": 0
+    },
+    "controller__fingertip_midpoint_pos": {
+      "passed": true,
+      "comparison_count": 48,
+      "sample_count": 16,
+      "shape": [
+        16,
+        1,
+        3
+      ],
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "violation_count": 0
+    },
+    "controller__fingertip_midpoint_quat": {
+      "passed": true,
+      "comparison_count": 64,
+      "sample_count": 16,
+      "shape": [
+        16,
+        1,
+        4
+      ],
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "violation_count": 0
+    },
+    "controller__jacobian": {
+      "passed": true,
+      "comparison_count": 672,
+      "sample_count": 96,
+      "shape": [
+        16,
+        1,
+        6,
+        7
+      ],
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "violation_count": 0
+    },
+    "controller__joint_effort": {
+      "passed": true,
+      "comparison_count": 144,
+      "sample_count": 16,
+      "shape": [
+        16,
+        1,
+        9
+      ],
+      "max_absolute_error": 7.62939453125e-06,
+      "max_relative_error": 0.022646550685041584,
+      "violation_count": 0
+    },
+    "controller__task_deriv_gains": {
+      "passed": true,
+      "comparison_count": 96,
+      "sample_count": 16,
+      "shape": [
+        16,
+        1,
+        6
+      ],
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "violation_count": 0
+    },
+    "controller__task_prop_gains": {
+      "passed": true,
+      "comparison_count": 96,
+      "sample_count": 16,
+      "shape": [
+        16,
+        1,
+        6
+      ],
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "violation_count": 0
+    },
+    "ema": {
+      "passed": true,
+      "comparison_count": 12,
+      "sample_count": 2,
+      "shape": [
+        2,
+        1,
+        6
+      ],
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "violation_count": 0
+    },
+    "h": {
+      "passed": true,
+      "comparison_count": 4096,
+      "sample_count": 4,
+      "shape": [
+        2,
+        2,
+        1,
+        1024
+      ],
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "violation_count": 0
+    },
+    "mu": {
+      "passed": true,
+      "comparison_count": 12,
+      "sample_count": 2,
+      "shape": [
+        2,
+        1,
+        6
+      ],
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "violation_count": 0
+    },
+    "normalized": {
+      "passed": true,
+      "comparison_count": 38,
+      "sample_count": 2,
+      "shape": [
+        2,
+        1,
+        19
+      ],
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "violation_count": 0
+    },
+    "observation": {
+      "passed": true,
+      "comparison_count": 38,
+      "sample_count": 2,
+      "shape": [
+        2,
+        1,
+        19
+      ],
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "violation_count": 0
+    },
+    "target_position": {
+      "passed": true,
+      "comparison_count": 48,
+      "sample_count": 16,
+      "shape": [
+        16,
+        1,
+        3
+      ],
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "violation_count": 0
+    },
+    "target_quaternion": {
+      "passed": true,
+      "comparison_count": 64,
+      "sample_count": 16,
+      "shape": [
+        16,
+        1,
+        4
+      ],
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "violation_count": 0,
+      "orientation_comparison_count": 16,
+      "max_orientation_error_rad": 0.0,
+      "orientation_tolerance_rad": 0.0001,
+      "orientation_violation_count": 0,
+      "orientation_passed": true
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "gpu": {
+    "command": [
+      "nvidia-smi",
+      "--query-gpu=timestamp,name,driver_version,memory.total,memory.used,memory.free",
+      "--format=csv"
+    ],
+    "stdout": "timestamp, name, driver_version, memory.total [MiB], memory.used [MiB], memory.free [MiB]\n2026/10/26 17:58:54.474, NVIDIA GeForce RTX 3070, 580.178.04, 8192 MiB, 1516 MiB, 6303 MiB\n",
+    "stderr": "",
+    "returncode": 0
+  },
+  "compute": {
+    "command": [
+      "nvidia-smi",
+      "--query-compute-apps=pid,process_name,used_gpu_memory",
+      "--format=csv"
+    ],
+    "stdout": "pid, process_name, used_gpu_memory [MiB]\n3088, /usr/libexec/gnome-remote-desktop-daemon, 157 MiB\n",
+    "stderr": "",
+    "returncode": 0
+  }
+}

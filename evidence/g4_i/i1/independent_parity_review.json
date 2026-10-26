@@ -1,0 +1,573 @@
+{
+  "schema_version": "g4_i1_independent_offline_review_v1",
+  "passed": true,
+  "reviewer": "i1_parity independent CPU replay",
+  "gpu_executed_for_review": false,
+  "comparison_tolerances": "Preregistered GPU tolerances applied to already-captured GPU tensors; analysis executes on CPU only",
+  "checks": {
+    "all_stages_and_required_cases": true,
+    "paired_actual_matches_jsonl": true,
+    "cpu_clip_ema_fixture_recheck": true,
+    "numpy_target_fixture_reconstruction": true,
+    "149_pre_reset_success_samples": true,
+    "success_matches_geometry": true,
+    "success_matches_result": true,
+    "reset_and_physics": true,
+    "rng_checks_150_recorded": true,
+    "actual_child_wait_zero": true,
+    "historical_failed_attempt_preserved": true
+  },
+  "parity": {
+    "schema_version": "g4_i1_parity_v1",
+    "passed": true,
+    "status": "PASS",
+    "device_kind": "gpu",
+    "tolerances": {
+      "atol": 1e-05,
+      "rtol": 1e-05,
+      "quaternion_angle_rad": 0.0001
+    },
+    "relative_error_reporting_denominator_floor": 1e-12,
+    "comparison_count": 832800,
+    "violation_count": 0,
+    "orientation_violation_count": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0,
+    "coverage": {
+      "passed": true,
+      "required_all_stages": true,
+      "missing_stages": [],
+      "cases": [
+        "action_clipping",
+        "near_zero_rotation",
+        "normal",
+        "position_saturation",
+        "post_reset_first_action",
+        "timeout"
+      ],
+      "required_cases": [
+        "action_clipping",
+        "near_zero_rotation",
+        "normal",
+        "position_saturation",
+        "post_reset_first_action",
+        "timeout"
+      ],
+      "missing_cases": [],
+      "missing_in_actual": [],
+      "missing_in_reference": []
+    },
+    "stages": {
+      "c": {
+        "passed": true,
+        "comparison_count": 307200,
+        "sample_count": 300,
+        "shape": [
+          150,
+          2,
+          1,
+          1024
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "clipped": {
+        "passed": true,
+        "comparison_count": 900,
+        "sample_count": 150,
+        "shape": [
+          150,
+          1,
+          6
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__applied_wrench": {
+        "passed": true,
+        "comparison_count": 7200,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          6
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__arm_mass_matrix": {
+        "passed": true,
+        "comparison_count": 58800,
+        "sample_count": 8400,
+        "shape": [
+          1200,
+          1,
+          7,
+          7
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__ctrl_target_fingertip_midpoint_pos": {
+        "passed": true,
+        "comparison_count": 3600,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          3
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__ctrl_target_fingertip_midpoint_quat": {
+        "passed": true,
+        "comparison_count": 4800,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          4
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__dof_pos": {
+        "passed": true,
+        "comparison_count": 10800,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          9
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__dof_vel": {
+        "passed": true,
+        "comparison_count": 10800,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          9
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__finger_position_target": {
+        "passed": true,
+        "comparison_count": 2400,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          2
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__fingertip_midpoint_angvel": {
+        "passed": true,
+        "comparison_count": 3600,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          3
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__fingertip_midpoint_linvel": {
+        "passed": true,
+        "comparison_count": 3600,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          3
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__fingertip_midpoint_pos": {
+        "passed": true,
+        "comparison_count": 3600,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          3
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__fingertip_midpoint_quat": {
+        "passed": true,
+        "comparison_count": 4800,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          4
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__gripper_target": {
+        "passed": true,
+        "comparison_count": 1200,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__jacobian": {
+        "passed": true,
+        "comparison_count": 50400,
+        "sample_count": 7200,
+        "shape": [
+          1200,
+          1,
+          6,
+          7
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__joint_effort": {
+        "passed": true,
+        "comparison_count": 10800,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          9
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__joint_position_target": {
+        "passed": true,
+        "comparison_count": 10800,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          9
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__task_deriv_gains": {
+        "passed": true,
+        "comparison_count": 7200,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          6
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__task_prop_gains": {
+        "passed": true,
+        "comparison_count": 7200,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          6
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "ema": {
+        "passed": true,
+        "comparison_count": 900,
+        "sample_count": 150,
+        "shape": [
+          150,
+          1,
+          6
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "h": {
+        "passed": true,
+        "comparison_count": 307200,
+        "sample_count": 300,
+        "shape": [
+          150,
+          2,
+          1,
+          1024
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "mu": {
+        "passed": true,
+        "comparison_count": 900,
+        "sample_count": 150,
+        "shape": [
+          150,
+          1,
+          6
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "normalized": {
+        "passed": true,
+        "comparison_count": 2850,
+        "sample_count": 150,
+        "shape": [
+          150,
+          1,
+          19
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "observation": {
+        "passed": true,
+        "comparison_count": 2850,
+        "sample_count": 150,
+        "shape": [
+          150,
+          1,
+          19
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "target_position": {
+        "passed": true,
+        "comparison_count": 3600,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          3
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "target_quaternion": {
+        "passed": true,
+        "comparison_count": 4800,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          4
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0,
+        "orientation_comparison_count": 1200,
+        "max_orientation_error_rad": 0.0,
+        "orientation_tolerance_rad": 0.0001,
+        "orientation_violation_count": 0,
+        "orientation_passed": true
+      }
+    }
+  },
+  "trace_row_counts": {
+    "initial_reset": 1,
+    "policy": 150,
+    "controller": 1200,
+    "pre_reset_success": 150,
+    "timeout_reset": 1
+  },
+  "actual_npz_vs_jsonl_checks": {
+    "observation": true,
+    "normalized": true,
+    "mu": true,
+    "h": true,
+    "c": true,
+    "clipped": true,
+    "ema": true,
+    "target_position": true,
+    "target_quaternion": true,
+    "controller__dof_pos": true,
+    "controller__dof_vel": true,
+    "controller__fingertip_midpoint_pos": true,
+    "controller__fingertip_midpoint_quat": true,
+    "controller__fingertip_midpoint_linvel": true,
+    "controller__fingertip_midpoint_angvel": true,
+    "controller__jacobian": true,
+    "controller__arm_mass_matrix": true,
+    "controller__task_prop_gains": true,
+    "controller__task_deriv_gains": true,
+    "controller__ctrl_target_fingertip_midpoint_pos": true,
+    "controller__ctrl_target_fingertip_midpoint_quat": true,
+    "controller__joint_effort": true,
+    "controller__joint_position_target": true,
+    "controller__gripper_target": true,
+    "controller__finger_position_target": true
+  },
+  "reset_checks": {
+    "one_timeout_at149": true,
+    "hidden_cell_zero": true,
+    "hidden_cell_pre_reset_nonzero": true,
+    "pose_cache_not_all_zero": true,
+    "pose_cache_matches_observation": true,
+    "pose_cache_reconstruction_error_zero": true,
+    "following_observation_equals_post_reset": true,
+    "following_cache_equals_pose_cache": true,
+    "all_eight_substeps": true,
+    "actor_cache_equals_pre_step": true
+  },
+  "success_from_pre_reset_trace": {
+    "completed_episode_denominator": 1,
+    "steps": 149,
+    "ever_success_count": 1,
+    "terminal_success_count": 1,
+    "first_success_step": 37,
+    "first_success_simulated_seconds": 2.466666666666667,
+    "not_population_success_estimate": true
+  },
+  "rng_evidence": {
+    "calls_recorded": 150,
+    "all_checked_equal": true,
+    "boundary": "Per-call RNG equality is enforced by runtime source assertions; individual full RNG states are not serialized"
+  },
+  "cpu_clip_ema_fixture_cases": {
+    "normal": {
+      "passed": true,
+      "comparison_count": 12,
+      "max_absolute_error": 0.0
+    },
+    "action_clipping": {
+      "passed": true,
+      "comparison_count": 12,
+      "max_absolute_error": 0.0
+    },
+    "near_zero_rotation": {
+      "passed": true,
+      "comparison_count": 12,
+      "max_absolute_error": 0.0
+    },
+    "position_saturation": {
+      "passed": true,
+      "comparison_count": 12,
+      "max_absolute_error": 0.0
+    }
+  },
+  "numpy_target_fixture_cases": {
+    "normal": {
+      "passed": true,
+      "comparison_count": 7,
+      "max_absolute_error": 6.03971351265109e-08,
+      "max_quaternion_angle_rad": 1.756706750686914e-07
+    },
+    "action_clipping": {
+      "passed": true,
+      "comparison_count": 7,
+      "max_absolute_error": 5.640393980941282e-08,
+      "max_quaternion_angle_rad": 1.1883347320786199e-07
+    },
+    "near_zero_rotation": {
+      "passed": true,
+      "comparison_count": 7,
+      "max_absolute_error": 5.622622862691264e-08,
+      "max_quaternion_angle_rad": 1.3906790250738232e-07
+    },
+    "position_saturation": {
+      "passed": true,
+      "comparison_count": 7,
+      "max_absolute_error": 5.620826195566428e-08,
+      "max_quaternion_angle_rad": 1.2938609672761713e-07
+    }
+  },
+  "preserved_failed_attempt": {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z/episode",
+    "failed_stage": "controller__joint_effort",
+    "violation_count": 9,
+    "max_absolute_error": 1.5020370483398438e-05,
+    "runtime_error": "intermediate parity tolerance violation",
+    "historical_raw_wait_returncode": 0,
+    "historical_false_zero_exit_retained": true
+  },
+  "artifact_sha256": [
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z/episode_verified/paired_trace.npz",
+      "sha256": "be3ae0d38d367c81ed641a31e1dda29e5049f28284768aa6396ff1e7697390b2",
+      "size_bytes": 5703966
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z/episode_verified/trace.jsonl",
+      "sha256": "080635153c873fd9ccebbaf4d3f0f2011d9ca6a99c18572d5660d514c3c3bf06",
+      "size_bytes": 19294210
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z/episode_verified/edge_fixtures.json",
+      "sha256": "dea5347a03c35ecb6573c0f738bb10021d1462ab37d27ca402e32be6efd3c83f",
+      "size_bytes": 10138
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z/episode_verified/result.json",
+      "sha256": "3f84798b985d1168c5bba4d3433dcae20e5d37a03b9f104bdfd4d65754cb40ee",
+      "size_bytes": 11537
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z/episode_verified_execution.json",
+      "sha256": "e0b136469619999dfd02c028593d49b9291396dcd421f505dab882429a127970",
+      "size_bytes": 5414
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g4_i/i1/cpu_edge_parity.json",
+      "sha256": "ee872f4ed9751e6ba2a14b5d82005c59278ecdaaa1e30ffa948a2e1cc59aa88c",
+      "size_bytes": 12343
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z/episode/parity.json",
+      "sha256": "3922686c26d18c29404f9dbfc8556c2b75ab9b456d391a374ec5422a84a58adc",
+      "size_bytes": 7578
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z/episode/runtime_error.json",
+      "sha256": "ffe31ed75f11e904a6709c5f416d8fe9a6d3a8aeb3dfcbd0e317bd22373b4055",
+      "size_bytes": 630
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z/episode_execution.json",
+      "sha256": "04fb21b94b7e9d6858a91d6f36f2656898ef32933cb1bb02ae4b34c8cf2c5d0c",
+      "size_bytes": 5371
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "child_exit_code": 0,
+  "child_identity": {
+    "birth_ticks": "2976406",
+    "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+    "pgid": 125227,
+    "pid": 125227,
+    "state": "R"
+  },
+  "child_signal": null,
+  "command": [
+    "bash",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g4i1_runtime.py",
+    "--headless",
+    "--device",
+    "cuda:0",
+    "--mode",
+    "episode",
+    "--validate",
+    "--output",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z/episode"
+  ],
+  "ended": {
+    "monotonic_seconds": 29819.280954789,
+    "unix_seconds": 1793005189.819594,
+    "utc": "2026-10-26T08:59:49.819588+00:00"
+  },
+  "error": null,
+  "exec_released": {
+    "monotonic_seconds": 29764.145395745,
+    "unix_seconds": 1793005134.684035,
+    "utc": "2026-10-26T08:58:54.684030+00:00"
+  },
+  "finalized": true,
+  "guard_identity": {
+    "birth_ticks": "2976398",
+    "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+    "pgid": 125223,
+    "pid": 125223,
+    "state": "R"
+  },
+  "guard_required": true,
+  "identity": {
+    "birth_ticks": "2976400",
+    "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+    "pgid": 125225,
+    "pid": 125225,
+    "state": "R"
+  },
+  "raw_wait_returncode": 0,
+  "received_supervisor_signals": [],
+  "schema_version": 2,
+  "started": {
+    "monotonic_seconds": 29764.031143402,
+    "unix_seconds": 1793005134.569782,
+    "utc": "2026-10-26T08:58:54.569763+00:00"
+  },
+  "stop_signals": [],
+  "termination_reason": "child_exit",
+  "wall_seconds": 55.24981188699894
+}

@@ -1,0 +1,5 @@
+{
+  "type": "RuntimeError",
+  "message": "intermediate parity tolerance violation",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g4i1_runtime.py\", line 318, in main\n    run(args, app)\n  File \"/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g4i1_runtime.py\", line 278, in run\n    if not parity['passed']: raise RuntimeError('intermediate parity tolerance violation')\nRuntimeError: intermediate parity tolerance violation\n"
+}

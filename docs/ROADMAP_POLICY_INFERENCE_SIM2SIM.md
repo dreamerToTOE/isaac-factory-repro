@@ -7,6 +7,14 @@
 
 **Current status (2026-10-26): G3C-R5 has completed and been archived. G4-I0 is now the active next stage.**
 
+## 2026-10-26 前瞻性更新：G4-I1 授权与学习安排
+
+用户在 G4-I1 任务中已确认 **G4-I0 PASS，并明确授权实现和执行 G4-I1**。本次范围到 G4-I1 结束即停止；G4-I2、Sim2Sim、GearMesh、NutThread、seed 2 及其他训练均未获本次授权。上面的状态行及下文原路线保留为制定时的记录；当前执行范围以本更新及 G4-I1 任务要求为准。
+
+用户同时改为**先完成工程项目，待 Sim2Sim 后在另一会话进行系统理论教学和知识评估**。从本更新起，工程交付不要求用户回答理论问题，学习门禁不阻塞已授权工程的实现、测试或验收；不得将学习状态误记为通过，当前学习状态仍为 **PENDING**。这只调整学习日程，不降低 checkpoint、数值 parity、真实 episode、错误处理、证据保存或独立工程验收要求，也不授权提前启动 Sim2Sim。
+
+下文涉及“每阶段结束先问 2–3 题”或“用户独立解释后才能工程 PASS”的原安排，作为历史决策保留；对本更新后的工作，其学习提问和理解验收时间统一推迟到上述独立会话。工程状态与学习状态继续分别记录，详见 [`ENGINEERING_LEARNING_GATE.md`](ENGINEERING_LEARNING_GATE.md)。既有实验结果、报告及原始证据不追溯修改。
+
 ## 0. 当前证据和冻结边界
 
 - 官方 Isaac Lab v2.1.1 固定于 `90b79bb2d44feb8d833f260f2bf37da3487180ba`；Isaac Sim 4.5.0，RL-Games PPO、双层 LSTM、Franka PegInsert；既有来源审计见 [`SOURCE_AUDIT.md`](SOURCE_AUDIT.md)。

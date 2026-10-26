@@ -1,0 +1,165 @@
+{
+  "launcher_exit_code": 0,
+  "wall_s": 55.1333217959982,
+  "supervision_copy": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z/episode_verified_supervision",
+  "command": [
+    "python3",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g3a_launch_smoke.py",
+    "--output",
+    "/dev/shm/g4i1_seed1001_20261026T084829Z_episode_verified_supervision",
+    "--unit-prefix",
+    "g4i1-seed1001-20261026t084829z-episode-verified",
+    "--cwd",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs",
+    "--timeout",
+    "600",
+    "--wait",
+    "--setenv",
+    "FACTORY_VENV=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01",
+    "--setenv",
+    "ISAACSIM_PATH=/home/ubuntu2004/isaacsim-4.5.0",
+    "--setenv",
+    "OMP_NUM_THREADS=4",
+    "--setenv",
+    "FACTORY_G2_AUDIT_OUTPUT=",
+    "--setenv",
+    "FACTORY_G3A_FINALIZE_TENSORBOARD=",
+    "--",
+    "bash",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g4i1_runtime.py",
+    "--headless",
+    "--device",
+    "cuda:0",
+    "--mode",
+    "episode",
+    "--validate",
+    "--output",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z/episode_verified"
+  ],
+  "supervisor": {
+    "child_exit_code": 0,
+    "child_identity": {
+      "birth_ticks": "3030278",
+      "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+      "pgid": 132260,
+      "pid": 132260,
+      "state": "R"
+    },
+    "child_signal": null,
+    "command": [
+      "bash",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g4i1_runtime.py",
+      "--headless",
+      "--device",
+      "cuda:0",
+      "--mode",
+      "episode",
+      "--validate",
+      "--output",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z/episode_verified"
+    ],
+    "ended": {
+      "monotonic_seconds": 30357.705418892,
+      "unix_seconds": 1793005728.2440581,
+      "utc": "2026-10-26T09:08:48.244052+00:00"
+    },
+    "error": null,
+    "exec_released": {
+      "monotonic_seconds": 30302.868825497,
+      "unix_seconds": 1793005673.4074647,
+      "utc": "2026-10-26T09:07:53.407460+00:00"
+    },
+    "finalized": true,
+    "guard_identity": {
+      "birth_ticks": "3030271",
+      "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+      "pgid": 132256,
+      "pid": 132256,
+      "state": "R"
+    },
+    "guard_required": true,
+    "identity": {
+      "birth_ticks": "3030272",
+      "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+      "pgid": 132258,
+      "pid": 132258,
+      "state": "R"
+    },
+    "raw_wait_returncode": 0,
+    "received_supervisor_signals": [],
+    "schema_version": 2,
+    "started": {
+      "monotonic_seconds": 30302.754960104,
+      "unix_seconds": 1793005673.2935987,
+      "utc": "2026-10-26T09:07:53.293581+00:00"
+    },
+    "stop_signals": [],
+    "termination_reason": "child_exit",
+    "wall_seconds": 54.95045938099793
+  },
+  "guard": {
+    "continuous_monitoring": true,
+    "coverage_note": "Sampled coverage: regular intervals are not continuous measurement.",
+    "ended": {
+      "monotonic_seconds": 30357.765522323,
+      "unix_seconds": 1793005728.304161,
+      "utc": "2026-10-26T09:08:48.304151+00:00"
+    },
+    "error": null,
+    "finalized": true,
+    "first_sample": {
+      "monotonic_seconds": 30302.763352873,
+      "unix_seconds": 1793005673.3019922,
+      "utc": "2026-10-26T09:07:53.301983+00:00"
+    },
+    "identity": {
+      "birth_ticks": "3030271",
+      "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+      "pgid": 132256,
+      "pid": 132256,
+      "state": "R"
+    },
+    "last_sample": {
+      "monotonic_seconds": 30357.763482555,
+      "unix_seconds": 1793005728.3021212,
+      "utc": "2026-10-26T09:08:48.302107+00:00"
+    },
+    "low_memory_stop_condition_observed": false,
+    "max_low_consecutive": 0,
+    "min_free_MiB": 2396.0,
+    "monitoring_gaps": [],
+    "peak_used_MiB": 5421.625,
+    "policy": {
+      "consecutive_samples": 3,
+      "floor_MiB": 1024,
+      "gap_limit_seconds": 0.5,
+      "interval_seconds": 0.1,
+      "stale_seconds": 2
+    },
+    "sample_count": 551,
+    "schema_version": 2,
+    "started": {
+      "monotonic_seconds": 30302.750084553,
+      "unix_seconds": 1793005673.2887235,
+      "utc": "2026-10-26T09:07:53.288707+00:00"
+    },
+    "stop_reason": "child_wait_observed",
+    "stop_signals": [],
+    "supervisor_identity": {
+      "birth_ticks": "3030272",
+      "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+      "pgid": 132258,
+      "pid": 132258,
+      "state": "R"
+    },
+    "target_identity": {
+      "birth_ticks": "3030278",
+      "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+      "pgid": 132260,
+      "pid": 132260,
+      "state": "R"
+    }
+  }
+}

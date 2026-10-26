@@ -1,0 +1,55 @@
+{
+  "executions": [
+    {
+      "phase": "preflight",
+      "actual_child_wait": 0,
+      "launcher_exit": 0,
+      "wall_s": 24.302371585999936,
+      "guard_continuous": true,
+      "raw_root": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z/preflight",
+      "launch_plan": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z/preflight_launch_plan.json",
+      "runtime_error_exists": false,
+      "completion_result_exists": true,
+      "interpretation": "PASS"
+    },
+    {
+      "phase": "episode",
+      "actual_child_wait": 0,
+      "launcher_exit": 0,
+      "wall_s": 55.53470211699823,
+      "guard_continuous": true,
+      "raw_root": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z/episode",
+      "launch_plan": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z/episode_launch_plan.json",
+      "runtime_error_exists": true,
+      "completion_result_exists": false,
+      "interpretation": "FAIL_RUNTIME_PARITY_AND_FALSE_ZERO_EXIT"
+    },
+    {
+      "phase": "exit_probe",
+      "actual_child_wait": 1,
+      "launcher_exit": 124,
+      "wall_s": 7.0661779469992325,
+      "guard_continuous": true,
+      "raw_root": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z/exit_probe",
+      "launch_plan": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z/exit_probe_launch_plan.json",
+      "runtime_error_exists": true,
+      "completion_result_exists": false,
+      "interpretation": "EXPECTED_NONZERO_PROBE_PASS"
+    },
+    {
+      "phase": "episode_verified",
+      "actual_child_wait": 0,
+      "launcher_exit": 0,
+      "wall_s": 55.1333217959982,
+      "guard_continuous": true,
+      "raw_root": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z/episode_verified",
+      "launch_plan": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i1/g4i1_seed1001_20261026T084829Z/episode_verified_launch_plan.json",
+      "runtime_error_exists": false,
+      "completion_result_exists": true,
+      "interpretation": "PASS"
+    }
+  ],
+  "scientific_parameters_changed": false,
+  "rented_gpu": false,
+  "unrelated_processes_terminated": false
+}
