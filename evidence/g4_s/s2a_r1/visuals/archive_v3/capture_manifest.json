@@ -1,0 +1,226 @@
+[
+  {
+    "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/initial_overview.png",
+    "sha256": "ae3a51055cf69c92b79345fac853475cbb64cc8e0047b0900cd7719f45e603e8",
+    "source_experiment": "S2A seed1001",
+    "mode": "ARCHIVED_STATE_PLAYBACK",
+    "physics_step": 0,
+    "episode_simulation_time_s": 0.0,
+    "recorded_absolute_time_s": 0.24999999999999997,
+    "model_xml_sha256": "c60c33ee11eb4806294aee259f97d987308b23e83da62f2219cbc9950fb195c9",
+    "new_physics_steps": 0,
+    "recorded_contact_forces_n": {
+      "left": 0.22672704354981857,
+      "right": 0.22660104280630045
+    },
+    "solver_internal_state": "UNKNOWN_NOT_RESTORED"
+  },
+  {
+    "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/initial_grasp.png",
+    "sha256": "bf34207d888f3ff68e1c07a80cd7d3791866728fa6793a83fdb1ace572cceb9d",
+    "source_experiment": "S2A seed1001",
+    "mode": "ARCHIVED_STATE_PLAYBACK",
+    "physics_step": 0,
+    "episode_simulation_time_s": 0.0,
+    "recorded_absolute_time_s": 0.24999999999999997,
+    "model_xml_sha256": "c60c33ee11eb4806294aee259f97d987308b23e83da62f2219cbc9950fb195c9",
+    "new_physics_steps": 0,
+    "recorded_contact_forces_n": {
+      "left": 0.22672704354981857,
+      "right": 0.22660104280630045
+    },
+    "solver_internal_state": "UNKNOWN_NOT_RESTORED"
+  },
+  {
+    "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/first_action.png",
+    "sha256": "6f4b1eda87933ab4fe9d40a975cdb4e88d06e3467bfcf86efd7ab3aa007d2f2f",
+    "source_experiment": "S2A seed1001",
+    "mode": "ARCHIVED_STATE_PLAYBACK",
+    "physics_step": 0,
+    "episode_simulation_time_s": 0.0,
+    "recorded_absolute_time_s": 0.24999999999999997,
+    "model_xml_sha256": "c60c33ee11eb4806294aee259f97d987308b23e83da62f2219cbc9950fb195c9",
+    "new_physics_steps": 0,
+    "recorded_contact_forces_n": {
+      "left": 0.22672704354981857,
+      "right": 0.22660104280630045
+    },
+    "solver_internal_state": "UNKNOWN_NOT_RESTORED"
+  },
+  {
+    "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/physics_1.png",
+    "sha256": "6f183dc5e2ad4bdd39f92cdb43daef91ab9539f774750600da37eb88a736a196",
+    "source_experiment": "S2A seed1001",
+    "mode": "ARCHIVED_STATE_PLAYBACK",
+    "physics_step": 1,
+    "episode_simulation_time_s": 0.008333333333333333,
+    "recorded_absolute_time_s": 0.2583333333333333,
+    "model_xml_sha256": "c60c33ee11eb4806294aee259f97d987308b23e83da62f2219cbc9950fb195c9",
+    "new_physics_steps": 0,
+    "recorded_contact_forces_n": {
+      "left": 0.22333829370179695,
+      "right": 0.23014157585197603
+    },
+    "solver_internal_state": "UNKNOWN_NOT_RESTORED"
+  },
+  {
+    "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/physics_2.png",
+    "sha256": "52d8d124d3ad688178ae0b28db223b2e2f52c79cdce7b3e9ae1f31df22847c27",
+    "source_experiment": "S2A seed1001",
+    "mode": "ARCHIVED_STATE_PLAYBACK",
+    "physics_step": 2,
+    "episode_simulation_time_s": 0.016666666666666666,
+    "recorded_absolute_time_s": 0.26666666666666666,
+    "model_xml_sha256": "c60c33ee11eb4806294aee259f97d987308b23e83da62f2219cbc9950fb195c9",
+    "new_physics_steps": 0,
+    "recorded_contact_forces_n": {
+      "left": 0.25652769237594747,
+      "right": 0.1935963887925623
+    },
+    "solver_internal_state": "UNKNOWN_NOT_RESTORED"
+  },
+  {
+    "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/first_slip.png",
+    "sha256": "1f77a6626a189626e99a07245f13cf0b76213628a887d11831e02cd98336537c",
+    "source_experiment": "S2A seed1001",
+    "mode": "ARCHIVED_STATE_PLAYBACK",
+    "physics_step": 3,
+    "episode_simulation_time_s": 0.025,
+    "recorded_absolute_time_s": 0.275,
+    "model_xml_sha256": "c60c33ee11eb4806294aee259f97d987308b23e83da62f2219cbc9950fb195c9",
+    "new_physics_steps": 0,
+    "recorded_contact_forces_n": {
+      "left": 0.13770891353940404,
+      "right": 0.5289651995056862
+    },
+    "solver_internal_state": "UNKNOWN_NOT_RESTORED"
+  },
+  {
+    "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/grasp_loss.png",
+    "sha256": "cda0d87c47db57bd5551c17a9ec6512d042c5e7878dde402ddfdf0c7b1d34f0c",
+    "source_experiment": "S2A seed1001",
+    "mode": "ARCHIVED_STATE_PLAYBACK",
+    "physics_step": 4,
+    "episode_simulation_time_s": 0.03333333333333333,
+    "recorded_absolute_time_s": 0.2833333333333334,
+    "model_xml_sha256": "c60c33ee11eb4806294aee259f97d987308b23e83da62f2219cbc9950fb195c9",
+    "new_physics_steps": 0,
+    "recorded_contact_forces_n": {
+      "left": 1.25202869244698,
+      "right": 0.0
+    },
+    "solver_internal_state": "UNKNOWN_NOT_RESTORED"
+  },
+  {
+    "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/physics_5.png",
+    "sha256": "2c9d9a01efaf939bbb288cb4c83fd283ba2ff039c57320aa5783769995d2ff03",
+    "source_experiment": "S2A seed1001",
+    "mode": "ARCHIVED_STATE_PLAYBACK",
+    "physics_step": 5,
+    "episode_simulation_time_s": 0.041666666666666664,
+    "recorded_absolute_time_s": 0.29166666666666674,
+    "model_xml_sha256": "c60c33ee11eb4806294aee259f97d987308b23e83da62f2219cbc9950fb195c9",
+    "new_physics_steps": 0,
+    "recorded_contact_forces_n": {
+      "left": 0.0,
+      "right": 0.8278302048294326
+    },
+    "solver_internal_state": "UNKNOWN_NOT_RESTORED"
+  },
+  {
+    "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/physics_6.png",
+    "sha256": "3e402ebeedec9125f969d3839df06a38e884a9554500eb39d2dbe6ff0ca45941",
+    "source_experiment": "S2A seed1001",
+    "mode": "ARCHIVED_STATE_PLAYBACK",
+    "physics_step": 6,
+    "episode_simulation_time_s": 0.05,
+    "recorded_absolute_time_s": 0.3000000000000001,
+    "model_xml_sha256": "c60c33ee11eb4806294aee259f97d987308b23e83da62f2219cbc9950fb195c9",
+    "new_physics_steps": 0,
+    "recorded_contact_forces_n": {
+      "left": 121.56633234944505,
+      "right": 0.0
+    },
+    "solver_internal_state": "UNKNOWN_NOT_RESTORED"
+  },
+  {
+    "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/physics_7.png",
+    "sha256": "ce1f9dba0cd2cb4c33d7e6f216aeb98796b0b9b0c60cf5d9abbc10108c1c5df0",
+    "source_experiment": "S2A seed1001",
+    "mode": "ARCHIVED_STATE_PLAYBACK",
+    "physics_step": 7,
+    "episode_simulation_time_s": 0.058333333333333334,
+    "recorded_absolute_time_s": 0.30833333333333346,
+    "model_xml_sha256": "c60c33ee11eb4806294aee259f97d987308b23e83da62f2219cbc9950fb195c9",
+    "new_physics_steps": 0,
+    "recorded_contact_forces_n": {
+      "left": 102.05386138171353,
+      "right": 0.5984511558798704
+    },
+    "solver_internal_state": "UNKNOWN_NOT_RESTORED"
+  },
+  {
+    "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/physics_8.png",
+    "sha256": "e838a5f336d85ace571e3d1dc87af3f0f09dbdf5d2fde647459a6cb35d753148",
+    "source_experiment": "S2A seed1001",
+    "mode": "ARCHIVED_STATE_PLAYBACK",
+    "physics_step": 8,
+    "episode_simulation_time_s": 0.06666666666666667,
+    "recorded_absolute_time_s": 0.3166666666666668,
+    "model_xml_sha256": "c60c33ee11eb4806294aee259f97d987308b23e83da62f2219cbc9950fb195c9",
+    "new_physics_steps": 0,
+    "recorded_contact_forces_n": {
+      "left": 82.12722568024967,
+      "right": 0.0
+    },
+    "solver_internal_state": "UNKNOWN_NOT_RESTORED"
+  },
+  {
+    "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/first_finger_limit.png",
+    "sha256": "9e9cb8af2c334bc237599dcb76d9bfe679e314e8b7e143aa637ce7a64857c6c2",
+    "source_experiment": "S2A seed1001",
+    "mode": "ARCHIVED_STATE_PLAYBACK",
+    "physics_step": 61,
+    "episode_simulation_time_s": 0.5083333333333333,
+    "recorded_absolute_time_s": 0.7583333333333331,
+    "model_xml_sha256": "c60c33ee11eb4806294aee259f97d987308b23e83da62f2219cbc9950fb195c9",
+    "new_physics_steps": 0,
+    "recorded_contact_forces_n": {
+      "left": 0.0,
+      "right": 0.0
+    },
+    "solver_internal_state": "UNKNOWN_NOT_RESTORED"
+  },
+  {
+    "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/first_arm_limit.png",
+    "sha256": "8ba905277b3fe4784841278b6cab99d5d72742b76d5b89f46711661a9cd5aca5",
+    "source_experiment": "S2A seed1001",
+    "mode": "ARCHIVED_STATE_PLAYBACK",
+    "physics_step": 76,
+    "episode_simulation_time_s": 0.6333333333333333,
+    "recorded_absolute_time_s": 0.8833333333333326,
+    "model_xml_sha256": "c60c33ee11eb4806294aee259f97d987308b23e83da62f2219cbc9950fb195c9",
+    "new_physics_steps": 0,
+    "recorded_contact_forces_n": {
+      "left": 0.0,
+      "right": 0.0
+    },
+    "solver_internal_state": "UNKNOWN_NOT_RESTORED"
+  },
+  {
+    "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/hand_support_collision.png",
+    "sha256": "0ce3c89a6e670b4441b318c633f524e6b8eb8ba0b2e721d8be0791e7f903a2fc",
+    "source_experiment": "S2A seed1001",
+    "mode": "ARCHIVED_STATE_PLAYBACK",
+    "physics_step": 685,
+    "episode_simulation_time_s": 5.708333333333333,
+    "recorded_absolute_time_s": 5.958333333333419,
+    "model_xml_sha256": "c60c33ee11eb4806294aee259f97d987308b23e83da62f2219cbc9950fb195c9",
+    "new_physics_steps": 0,
+    "recorded_contact_forces_n": {
+      "left": 0.0,
+      "right": 0.0
+    },
+    "solver_internal_state": "UNKNOWN_NOT_RESTORED"
+  }
+]

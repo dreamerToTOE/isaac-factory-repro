@@ -1,0 +1,11 @@
+{
+  "source_experiment": "D01",
+  "scope": "DIAGNOSTIC_ONLY",
+  "mode": "NEW_INTEGRATED_PHYSICS",
+  "physics_step": 16,
+  "simulation_time_s": 0.13333333333333333,
+  "absolute_simulation_time_s": 0.3833333333333337,
+  "model_configuration_sha256": "1d494fafccfb84f4b345bd8058d986c728cde1b1e55c5485ef747ba0b187c773",
+  "file": "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D01/physics_16.png",
+  "sha256": "3c8f2be6fff670146d8a6d82219fe47b1363f74188e0949cecb2587d16597000"
+}

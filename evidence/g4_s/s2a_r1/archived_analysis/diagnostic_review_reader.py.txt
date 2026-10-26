@@ -1,0 +1,188 @@
+"""Independent, read-only arithmetic review of the completed GUI diagnostics.
+
+No model/actor/checkpoint/GUI is loaded and no integration is performed. All
+measurements are read from existing per-step logs; matrix algebra is NumPy.
+"""
+import csv
+from datetime import datetime, timezone
+import gzip
+import hashlib
+import json
+import math
+from pathlib import Path
+import sys
+import numpy as np
+
+ROOT = Path(__file__).resolve().parents[4]
+sys.path.insert(0, str(ROOT))
+from scripts.analyze_g4s2a_r1 import orientation_error, pad_forces
+
+BASE = ROOT/'evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1'
+OUT = Path(__file__).resolve().parent
+SOURCE = ROOT/'scripts/g4s2a_r1_diagnostics.py'
+KP = np.array([100., 100., 100., 30., 30., 30.])
+KD = 2*np.sqrt(KP)
+QDEFAULT = np.array([-1.3003, -.4015, 1.1791, -2.1493, .4001, 1.9425, .4754])
+
+def read(path): return json.loads(path.read_text())
+def sha(path): return hashlib.sha256(path.read_bytes()).hexdigest()
+def write(path, value):
+    with path.open('x') as stream:
+        json.dump(value, stream, ensure_ascii=False, indent=2, allow_nan=False)
+        stream.write('\n')
+def rows(path): return [json.loads(line) for line in path.read_text().splitlines()]
+
+registered = read(BASE/'preregistered_matrix.json')
+summary = read(BASE/'summary.json')
+assert sha(SOURCE) == registered['source_sha256']
+assert len(registered['variants']) == len(summary['receipts']) == 10
+initial = read(ROOT/'evidence/g4_s/s2a/run_20261026T140338/seed_1001/interface_reset.json')['initial']['state']
+with gzip.open(ROOT/'evidence/g4_s/s2a/run_20261026T140338/seed_1001/physics.jsonl.gz', 'rt') as stream:
+    archived = [json.loads(line) for line in stream][:16]
+comparisons = []
+all_rows = {}
+identities = {}
+inputs = [SOURCE, BASE/'preregistered_matrix.json', BASE/'summary.json', Path(__file__),
+          ROOT/'scripts/analyze_g4s2a_r1.py', ROOT/'scripts/g4s1b_env.py', ROOT/'scripts/g4s1b_contract.py']
+max_error = {key: 0. for key in ('pose_error', 'wrench', 'task_torque', 'null_torque', 'requested_torque',
+                                'software_torque', 'integration_motor', 'integration_generalized_force')}
+for receipt in summary['receipts']:
+    variant = receipt['variant']
+    folder = BASE/variant
+    data = rows(folder/'physics.jsonl')
+    requests = [row for row in data if row['event'] == 'integration_request']
+    physics = [row for row in data if row['event'] == 'physics_result']
+    result = read(folder/'result.json')
+    identity = read(folder/'identity.json')
+    gui = read(folder/'gui_admission.json')
+    assert receipt['exact_child_exit_code'] == 0 and result['failure'] is None
+    assert len(requests) == len(physics) == result['actual_physics_steps'] == result['recorded_steps'] == 16
+    assert [row['step'] for row in physics] == list(range(1, 17))
+    assert all(not any(row['new_warning_counts']) for row in physics)
+    assert result['policy_inferences'] == identity['policy_inferences'] == gui['policy_inferences'] == 0
+    assert gui['status'] == 'GUI_OPEN_VISIBLE' and gui['window']['map_state'] == 'IsViewable'
+    assert result['graceful_close']['remaining_render_threads'] == []
+    assert np.array_equal(identity['initial_snapshot']['qpos'], initial['qpos'])
+    assert np.array_equal(identity['initial_snapshot']['qvel'], initial['qvel'])
+    assert identity['initial_snapshot']['time_s'] == initial['time_s']
+    limits = np.array([87., 87., 87., 87., 12., 12., 12.]) if variant != 'D08' else np.full(7, 100.)
+    for row in physics:
+        ci, saved = row['controller_input'], row['controller']
+        q = np.asarray(ci['q7']); qdot = np.asarray(ci['qdot7'])
+        j = np.asarray(ci['jacobian']); m = np.asarray(ci['mass_matrix'])
+        assert np.linalg.eigvalsh(m).min() > 0
+        e = np.r_[np.asarray(ci['target_position'])-ci['position'], orientation_error(ci['target_quaternion'], ci['quaternion'])]
+        wrench = KP*e-KD*np.r_[ci['linear_fd'], ci['angular_fd']]
+        inverse = np.linalg.inv(m)
+        task = j.T@wrench
+        projector = np.eye(7)-j.T@np.linalg.inv(j@inverse@j.T)@j@inverse
+        wrapped = (QDEFAULT-q+math.pi)%(2*math.pi)-math.pi
+        null = projector@(m@(10*wrapped-6.3246*qdot))
+        requested = task+null
+        independent = {'pose_error': e, 'wrench': wrench, 'task_torque': task, 'null_torque': null,
+                       'requested_torque': requested, 'software_torque': np.clip(requested, -100., 100.)}
+        saved_keys = {'pose_error': 'pose_error', 'wrench': 'wrench', 'task_torque': 'task_torque',
+                      'null_torque': 'null_torque', 'requested_torque': 'requested', 'software_torque': 'software_limited'}
+        for name, value in independent.items():
+            max_error[name] = max(max_error[name], float(max(abs(value-np.asarray(saved[saved_keys[name]])))))
+        selected = np.asarray(row['selected_arm_torque_nm'])
+        expected_motor = np.clip(np.clip(selected, -100., 100.), -limits, limits)
+        actual = np.asarray(row['state']['integration_actuation']['arm_actuator_force_nm'])
+        generalized = np.asarray(row['state']['integration_actuation']['arm_qfrc_actuator_nm'])
+        max_error['integration_motor'] = max(max_error['integration_motor'], float(max(abs(expected_motor-actual))))
+        max_error['integration_generalized_force'] = max(max_error['integration_generalized_force'], float(max(abs(actual-generalized))))
+        forces = pad_forces(row['state'])
+        assert forces['left_finger'] == row['pad_force_n']['left']
+        assert forces['right_finger'] == row['pad_force_n']['right']
+    slip = max(row['state']['s2a']['peg_hand_slip_m'] for row in physics)
+    velocity = max(max(abs(np.asarray(row['state']['qvel'][:7]))) for row in physics)
+    first_loss = next((row['step'] for row in physics if min(pad_forces(row['state']).values()) <= 1e-6), None)
+    penetration = max(max((max(0., -contact['distance_m']) for contact in row['state']['contacts']), default=0.) for row in physics)
+    assert slip == result['max_slip_m'] and velocity == result['max_arm_qvel_rad_s']
+    assert first_loss == result['first_bilateral_loss_step'] and penetration == result['max_all_penetration_m']
+    comparisons.append({'variant': variant, 'name': result['variant']['name'], 'scope': 'DIAGNOSTIC_ONLY',
+        'arm_mode': result['variant']['arm'], 'model_configuration_sha256': result['model_configuration_sha256'],
+        'steps': 16, 'exit_code': 0, 'GUI_visible': True, 'max_slip_m': slip, 'first_bilateral_loss_step': first_loss,
+        'max_arm_qvel_rad_s': velocity, 'max_all_contact_penetration_m': penetration,
+        'max_arm_limit_rad': result['max_arm_limit_rad'], 'max_finger_limit_m': result['max_finger_limit_m'],
+        'numerical_warning_count': 0, 'all_sampled_states_finite': all(np.isfinite(row['state']['qpos']).all() and np.isfinite(row['state']['qvel']).all() for row in physics)})
+    all_rows[variant] = physics
+    identities[variant] = identity
+    inputs += [folder/name for name in ('physics.jsonl', 'result.json', 'identity.json', 'gui_admission.json')]
+
+assert sum(row['steps'] for row in comparisons) == summary['actual_physics_steps'] == 160
+assert summary['actor_calls'] == 0 and summary['physics_call_wall_s'] < 600
+assert max(max_error.values()) < 1e-8
+base = comparisons[0]
+body = next(row for row in comparisons if row['variant'] == 'D06')
+armature = next(row for row in comparisons if row['variant'] == 'D07')
+body_model = identities['D06']['model']; base_model = identities['D01']['model']; armature_model = identities['D07']['model']
+assert np.array_equal(body_model['body_mass'], base_model['body_mass'])
+assert np.array_equal(body_model['armature'], base_model['armature'])
+armature_difference = np.asarray(armature_model['armature'])-base_model['armature']
+np.testing.assert_array_equal(armature_difference[:7], np.full(7, .01))
+np.testing.assert_array_equal(armature_difference[7:], np.zeros(len(armature_difference)-7))
+fresh = all_rows['D01']
+archived_comparison = {
+    'window_steps': 16,
+    'fresh_baseline_max_slip_m': base['max_slip_m'],
+    'archived_max_slip_m': max(row['state']['s2a']['peg_hand_slip_m'] for row in archived),
+    'qpos_pointwise_max_abs_difference_mixed_units': max(float(max(abs(np.asarray(a['state']['qpos'])-b['state']['qpos']))) for a, b in zip(fresh, archived)),
+    'qvel_pointwise_max_abs_difference_mixed_units': max(float(max(abs(np.asarray(a['state']['qvel'])-b['state']['qvel']))) for a, b in zip(fresh, archived)),
+    'requested_torque_pointwise_max_abs_difference_nm': max(float(max(abs(np.asarray(a['controller']['requested'])-b['state']['requested_arm_torque_nm']))) for a, b in zip(fresh, archived)),
+    'interpretation': 'Same archived qpos/qvel/initial clock but solver/constraint warmstarts were not archived. New 16-step D01 is a controlled fresh baseline, not certified exact trajectory replay.'}
+with (OUT/'diagnostic_comparison.csv').open('x', newline='') as stream:
+    writer = csv.DictWriter(stream, fieldnames=list(comparisons[0])); writer.writeheader(); writer.writerows(comparisons)
+review = {
+    'task': 'G4-S2A-R1', 'kind': 'INDEPENDENT_COMPLETED_GUI_DIAGNOSTIC_REVIEW',
+    'generated_utc': datetime.now(timezone.utc).isoformat(), 'new_actor_calls': 0, 'new_physics_steps': 0,
+    'new_GUI_launches': 0, 'reviewer_checkpoint_loads': 0,
+    'review_method': 'Existing per-step JSONL, full recorded J/M/controller inputs, contact pairs and saved GUI/process receipts only. Independently recompute source PD, J-transpose wrench, dynamic nullspace, software/motor clamps, contact-force sums and extrema. No model instantiation or replay.',
+    'execution_scope_checked': {'variants': 10, 'steps_each': 16, 'total_integration_steps': 160,
+        'actual_physics_call_wall_s': summary['physics_call_wall_s'], 'coordinator_wall_s': summary['wall_s'],
+        'all_child_exit_zero': True, 'all_GUI_visible_receipts': True, 'actor_calls': 0,
+        'all_initial_qpos_qvel_identical': True, 'graceful_owned_render_threads_joined': True},
+    'controller_and_actuator_max_abs_reconstruction_errors': max_error,
+    'comparisons': comparisons, 'fresh_vs_archived_baseline': archived_comparison,
+    'body_inertia_vs_armature': {'mass_unchanged_in_D06': True, 'joint_armature_unchanged_in_D06': True,
+        'D07_only_seven_rotational_arm_DOF_armatures_changed': True,
+        'D06_slip_ratio_to_D01': body['max_slip_m']/base['max_slip_m'],
+        'D06_velocity_ratio_to_D01': body['max_arm_qvel_rad_s']/base['max_arm_qvel_rad_s'],
+        'D07_slip_ratio_to_D01': armature['max_slip_m']/base['max_slip_m'],
+        'not_equivalent_modifications': True,
+        'scope': 'D06 alters body rotational inertia and recomputes corresponding controller M/nullspace as source-style dynamics dependence. It does not independently isolate plant inertia from controller mass dependence; source PhysX imported runtime inertia remains unknown.'},
+    'hypotheses': {
+        'H1_robot_inertia': {'status': 'SUPPORTED_BUT_NOT_PROVEN',
+            'support': 'D06 source-style body+.01I reduced 16-step slip and velocity and retained bilateral contact; D07 armature sensitivity did not reproduce that result.',
+            'limit': 'Shows a causal short-window effect of the coupled model/controller inertia intervention in this adapted engine; not exact Factory runtime inertia equality or unique final root cause.'},
+        'H2_saturation_acceleration': {'status': 'SUPPORTED_BUT_NOT_PROVEN',
+            'support': 'Archived reversals start before saturation. D08 100Nm force limits catastrophically worsened finite peg motion rather than restoring grasp.',
+            'contradicted_claim': 'The original12Nm cap alone causes failure, so raising the cap is a valid correction.',
+            'limit': 'Saturation/acceleration interacts with contact, feedback and inertia; cap removal is not an isolated PD stability proof.'},
+        'H3_task_space_PD_discretization': {'status': 'SUPPORTED_BUT_NOT_PROVEN',
+            'support': 'D04 task-only still loses contact at4; D05 null-only retains it. D03 fixed Cartesian target still fails, so moving-target/PPO changes are not necessary for short-window instability.',
+            'limit': 'Gains/timestep were not swept. Local linear damping model omits FD/contact/integrator nonlinearities.'},
+        'H4_Jacobian_nullspace': {'status': 'INCONCLUSIVE',
+            'support': 'All160 recorded source torque computations independently reconstruct from new full J/M logs; null-only remains comparatively stable.',
+            'contradicted_claim': 'An observed saved-torque arithmetic error or the null branch alone is established as the cause.',
+            'limit': 'Does not prove the source-design choice of finger-body Jacobian with centered-TCP feedback is dynamically equivalent to PhysX. Coupling remains.'},
+        'H5_finger_contact': {'status': 'SUPPORTED_BUT_NOT_PROVEN',
+            'support': 'D02 passive-arm preserves grasp; D09 naive affine PD fails despite passive arm; D10 modest passive contact-timeconstant sensitivity preserves grasp.',
+            'limit': 'Current finger/contact model is stable statically over16steps but acceleration robustness is not proven. Passive D10 cannot establish contact tuning solves driven instability.'},
+        'H6_reset': {'status': 'INCONCLUSIVE',
+            'support': 'Identical admitted initial qpos/qvel used across variants. Passive-arm preservation weakens a purely static initial-grasp failure explanation.',
+            'limit': 'One adapted initial condition and missing historical solver states; no source-randomization or multiple-reset test.'},
+        'H7_observation_quaternion_FD': {'status': 'INCONCLUSIVE',
+            'support': 'No actor called during diagnostics; archived actions suffice to reproduce short-window failure, with previously verified early FD/sign behavior.',
+            'contradicted_claim': 'A fresh PPO decision after the first action is necessary for the first-eight oscillation.',
+            'limit': 'Broader cross-engine frame and float precision effects are not globally ruled out.'}},
+    'scientific_boundary': {'ROOT_CAUSE_PENDING': True, 'SOLUTION_PENDING': True, 'VALIDATION_PENDING': True,
+        'official_configuration_modified': False, 'full_policy_task_success_claim': False,
+        'D06_is_diagnostic_only_not_official_fix': True,
+        'D08_finite_and_no_warning_is_not_physical_plausibility': True,
+        'independent_review_of_GUI_pixels': 'Not performed by this numeric reader; GUI visibility and native closure checked against saved window/process receipts. Root separately reviews actual screenshots.'},
+    'input_hashes': {str(path): {'sha256': sha(path), 'bytes': path.stat().st_size} for path in inputs}}
+write(OUT/'diagnostic_review.json', review)
+print(json.dumps({'output': str(OUT/'diagnostic_review.json'), 'total_steps': 160,
+    'errors': max_error, 'D06_to_D01_slip_ratio': body['max_slip_m']/base['max_slip_m'],
+    'fresh_vs_archived': archived_comparison, 'new_actor_calls': 0, 'new_physics_steps': 0}))

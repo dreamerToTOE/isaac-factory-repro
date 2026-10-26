@@ -1,0 +1,316 @@
+{
+  "command": [
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r1_dynamics_audit.py",
+    "--usd-readonly-probe"
+  ],
+  "returncode": 0,
+  "stderr": "",
+  "result": {
+    "status": "READONLY_LOCAL_USD_METADATA_VERIFIED",
+    "usd_version": [
+      0,
+      22,
+      11
+    ],
+    "usd_path": "/home/ubuntu2004/.cache/ov/client/http/600913b1e36513fb59ee5bb296fa3a02dc99cac8cd4659356b04bea1868f5ba8.usd",
+    "usd_sha256": "86d0017a093669b222a8c640bf581cc3e3715035aa7c596600f478da011f6c8e",
+    "bodies": [
+      {
+        "body": "panda_link0",
+        "path": "/panda/panda_link0",
+        "metadata": {
+          "physics:mass": 0.6297690272331238,
+          "physics:centerOfMass": [
+            -0.04101800173521042,
+            -0.00014000000373926014,
+            0.049973998218774796
+          ],
+          "physics:diagonalInertia": [
+            0.0031305106822401285,
+            0.003879839088767767,
+            0.004304650239646435
+          ],
+          "physics:principalAxes": [
+            0.9978668093681335,
+            -0.009703253395855427,
+            0.06455354392528534,
+            0.0007870105328038335
+          ]
+        }
+      },
+      {
+        "body": "panda_link1",
+        "path": "/panda/panda_link1",
+        "metadata": {
+          "physics:mass": 4.970684051513672,
+          "physics:centerOfMass": [
+            0.003874999936670065,
+            0.0020810000132769346,
+            -0.04761999845504761
+          ],
+          "physics:diagonalInertia": [
+            0.7034354209899902,
+            0.7071369886398315,
+            0.008524555712938309
+          ],
+          "physics:principalAxes": [
+            0.9998734593391418,
+            0.013757256790995598,
+            -0.004786139354109764,
+            -0.006409053690731525
+          ]
+        }
+      },
+      {
+        "body": "panda_link2",
+        "path": "/panda/panda_link2",
+        "metadata": {
+          "physics:mass": 0.6469259858131409,
+          "physics:centerOfMass": [
+            -0.003140999935567379,
+            -0.028720000758767128,
+            0.003495000069960952
+          ],
+          "physics:diagonalInertia": [
+            0.0027342496905475855,
+            0.028300104662775993,
+            0.031032642349600792
+          ],
+          "physics:principalAxes": [
+            0.9534579515457153,
+            0.20580515265464783,
+            0.21802836656570435,
+            0.03202998265624046
+          ]
+        }
+      },
+      {
+        "body": "panda_link3",
+        "path": "/panda/panda_link3",
+        "metadata": {
+          "physics:mass": 3.2286040782928467,
+          "physics:centerOfMass": [
+            0.027518000453710556,
+            0.03925200179219246,
+            -0.06650199741125107
+          ],
+          "physics:diagonalInertia": [
+            0.041479259729385376,
+            0.04150139167904854,
+            0.0012463537277653813
+          ],
+          "physics:principalAxes": [
+            0.9672269821166992,
+            -0.18302686512470245,
+            0.17343004047870636,
+            0.02991975098848343
+          ]
+        }
+      },
+      {
+        "body": "panda_link4",
+        "path": "/panda/panda_link4",
+        "metadata": {
+          "physics:mass": 3.587894916534424,
+          "physics:centerOfMass": [
+            -0.05316999927163124,
+            0.10441900044679642,
+            0.02745399996638298
+          ],
+          "physics:diagonalInertia": [
+            0.02814827673137188,
+            0.010620084591209888,
+            0.034959644079208374
+          ],
+          "physics:principalAxes": [
+            0.9060615301132202,
+            -0.28003641963005066,
+            0.2743406295776367,
+            0.1592777669429779
+          ]
+        }
+      },
+      {
+        "body": "panda_link5",
+        "path": "/panda/panda_link5",
+        "metadata": {
+          "physics:mass": 1.2259459495544434,
+          "physics:centerOfMass": [
+            -0.011952999979257584,
+            0.041064999997615814,
+            -0.038437001407146454
+          ],
+          "physics:diagonalInertia": [
+            0.0367625392973423,
+            0.028853092342615128,
+            0.008034370839595795
+          ],
+          "physics:principalAxes": [
+            0.9873132705688477,
+            -0.0121953459456563,
+            0.07191865891218185,
+            -0.1410372257232666
+          ]
+        }
+      },
+      {
+        "body": "panda_link6",
+        "path": "/panda/panda_link6",
+        "metadata": {
+          "physics:mass": 1.6665550470352173,
+          "physics:centerOfMass": [
+            0.060148999094963074,
+            -0.014116999693214893,
+            -0.010517000220716
+          ],
+          "physics:diagonalInertia": [
+            0.001597865018993616,
+            0.0043103741481900215,
+            0.0058427611365914345
+          ],
+          "physics:principalAxes": [
+            0.9838677644729614,
+            -0.09178108721971512,
+            -0.14478662610054016,
+            -0.05116107687354088
+          ]
+        }
+      },
+      {
+        "body": "panda_link7",
+        "path": "/panda/panda_link7",
+        "metadata": {
+          "physics:mass": 0.7355219721794128,
+          "physics:centerOfMass": [
+            0.010517000220716,
+            -0.004251999780535698,
+            0.06159700080752373
+          ],
+          "physics:diagonalInertia": [
+            0.012734493240714073,
+            0.010105476714670658,
+            0.00451803021132946
+          ],
+          "physics:principalAxes": [
+            0.9929385185241699,
+            -0.07620412856340408,
+            0.07335951179265976,
+            -0.05370665714144707
+          ]
+        }
+      },
+      {
+        "body": "force_sensor",
+        "path": "/panda/force_sensor",
+        "metadata": {
+          "physics:mass": 0.009999999776482582,
+          "physics:centerOfMass": [
+            0.010517000220716,
+            -0.004251999780535698,
+            0.06159700080752373
+          ],
+          "physics:diagonalInertia": null,
+          "physics:principalAxes": null
+        }
+      },
+      {
+        "body": "panda_hand",
+        "path": "/panda/panda_hand",
+        "metadata": {
+          "physics:mass": 0.7300000190734863,
+          "physics:centerOfMass": [
+            -0.009999999776482582,
+            0.0,
+            0.029999999329447746
+          ],
+          "physics:diagonalInertia": [
+            0.0010000000474974513,
+            0.0024999999441206455,
+            0.0017000000225380063
+          ],
+          "physics:principalAxes": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      {
+        "body": "panda_leftfinger",
+        "path": "/panda/panda_leftfinger",
+        "metadata": {
+          "physics:mass": 0.02969999983906746,
+          "physics:centerOfMass": [
+            0.0,
+            0.01140000019222498,
+            0.023099999874830246
+          ],
+          "physics:diagonalInertia": [
+            7.552000170107931e-06,
+            7.375549557764316e-06,
+            2.135450131390826e-06
+          ],
+          "physics:principalAxes": [
+            0.994766116142273,
+            0.1021781712770462,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      {
+        "body": "panda_rightfinger",
+        "path": "/panda/panda_rightfinger",
+        "metadata": {
+          "physics:mass": 0.02969999983906746,
+          "physics:centerOfMass": [
+            0.0,
+            0.01140000019222498,
+            0.023099999874830246
+          ],
+          "physics:diagonalInertia": [
+            7.552000170107931e-06,
+            7.375549557764316e-06,
+            2.135450131390826e-06
+          ],
+          "physics:principalAxes": [
+            0.994766116142273,
+            0.1021781712770462,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      {
+        "body": "panda_fingertip_centered",
+        "path": "/panda/panda_fingertip_centered",
+        "metadata": {
+          "physics:mass": 9.999999974752427e-07,
+          "physics:centerOfMass": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "physics:diagonalInertia": [
+            9.999999717180685e-10,
+            9.999999717180685e-10,
+            9.999999717180685e-10
+          ],
+          "physics:principalAxes": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "no_original_or_derived_asset_export": true,
+    "simulation_app": false,
+    "physics_steps": 0,
+    "policy_calls": 0,
+    "physx_runtime_values": "UNKNOWN"
+  }
+}

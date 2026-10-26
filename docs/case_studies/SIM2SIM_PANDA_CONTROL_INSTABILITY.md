@@ -4,7 +4,7 @@
 >
 > 首次记录：2026-10-26；仓库：`dreamerToTOE/isaac-factory-repro`。
 >
-> 本文是**正在推进的真实工程排障案例**，不是已解决的成功案例。下一阶段拟做 G4-S2A-R1 限定范围排障；**当前 G4-S2B NO-GO**，未运行后续完整评估，也未修复或微调 PPO。
+> 本文是**正在推进的真实工程排障案例**，不是已解决的成功案例。G4-S2A-R1 已完成可见 GUI、归档重建及10×16步无策略对照，阶段 **G4_S2A_R1_PASS**；**当前 G4-S2B NO-GO**。没有修复后的完整PPO任务评估，未修改或微调PPO。
 
 ## 1. 背景：为什么要做 Sim2Sim
 
@@ -37,11 +37,11 @@ S2A 使用 seed **1001** 完成首个 **149 次 PPO 决策 / 1192 次 MuJoCo 物
 ## 3. 为什么这是有价值的工程故障
 
 - **运行成功不等于迁移成功**：PPO actor 正确加载并连续控制 149 步，不能代替机械臂稳定性与接触插入成功。
-- **早于插孔的失效**：初始几毫秒内先出现动力学响应、振荡和脱抓，因此第一优先不是孔几何优化，而是控制、执行器和夹持接触。
+- **早于插孔的失效**：策略开始后最初几十毫秒内先出现动力学响应、振荡和脱抓，因此第一优先不是孔几何优化，而是控制、执行器和夹持接触。
 - **执行器命令与实际响应不同**：`requested`、软件限幅、MuJoCo `actuator_force` 和广义力分别保存；源 PhysX 的实际施加力矩仍 **UNKNOWN**。
 - **跨引擎不应要求逐位物理一致**，但观测含义、动作控制语义以及明确的任务有效性检查必须成立；物理差异需要可量化、可验证。
 
-## 4. 竞争假说（HYPOTHESIS；均未获得因果验证）
+## 4. 竞争假说（S2A起始判断；R1分级见下节）
 
 | 假说 | 现有支持 | 尚需反证/实验 |
 | --- | --- | --- |
@@ -53,17 +53,100 @@ S2A 使用 seed **1001** 完成首个 **149 次 PPO 决策 / 1192 次 MuJoCo 物
 
 [独立接口审阅](../../evidence/g4_s/s2a/independent_trace_review.json) 显示 RMS/推理请求响应匹配、EMA 原始 FP32 最大差约 `9.54e-8`，所有 1192 个 target 的最大差约 `2.42e-7`；这削弱部分纯映射错误的解释，但**不能证明**全量 Jacobian、质量矩阵、接触模型或闭环控制精确一致。
 
-## 5. 当前排障协议（G4-S2A-R1：尚未执行）
+## 5. G4-S2A-R1：可视化、动力学与隔离对照（已执行）
 
-拟进行**归档状态可视化**，优先展示初始夹持、物理步1–4、首次滑移、首次双侧接触丢失，再使用**严格受限的无策略对照**测试惯量、力矩限制、固定 target 与夹指/接触差异。每个变体最多 16 物理步，最多 12 个事先登记的变体；不重新调用 PPO、不额外跑完整策略回合。
+**G4_S2A_R1_PASS**仅表示诊断工程门完成，不表示Sim2Sim成功或根因已唯一证明。
+真实Ubuntu X11桌面MuJoCo3.5.0窗口已打开，实际窗口截图和`IsViewable`记录保留。
+只读归档viewer支持播放/暂停、0.1/0.25/1倍速、单步、初态和故障事件跳转。
+图上青色标记是记录的接触位置；可选新重算contact graphics另行标注。
+加载qpos/qvel再`mj_forward`不能恢复历史solver warmstart/接触冲量，不能称精确动力学重放。
 
-GUI 使用真正打开的 MuJoCo 桌面 viewer；若没有图形会话，标记 `GUI_BLOCKED`，不伪称 GUI 已打开。可视化归档状态与重新积分生成的动态结果必须分别标注，画面和数值证据必须互相引用。
+### A. 视觉故障重建
+
+![归档初始抓握（零积分）](../../evidence/g4_s/s2a_r1/visuals/archive_v3/initial_grasp.png)
+
+![归档physics4：右pad正接触丢失（零积分）](../../evidence/g4_s/s2a_r1/visuals/archive_v3/grasp_loss.png)
+
+step2/0.016667s时，J7速度已由+.505反转至−5.150rad/s，请求/实际力矩−4.605Nm，尚未饱和。
+step3才首次达到12Nm motor cap并超过1mm滑移，step4失去双侧接触。
+前8个物理步只有**一个不变的PPO/EMA动作**，J7直接nullspace torque≤8.9e−17Nm；
+PD阻尼项−Kdω的负号正确，但反馈D项快速反转放大。没有早期四元数sign jump。
+
+[首八步完整数值](../../evidence/g4_s/s2a_r1/archived_analysis/first_eight_steps.json)
+包括q/qvel/区间加速度、TCP误差/target、task/null/requested/software/实际积分force/qfrc、pad力与滑移。
+历史完整J/M和solver qacc未保存，明确UNKNOWN。部分截图曾被桌面通知或其他窗口遮挡，
+未作为公开证据冒充；完整原图私下保留及SHA可追溯，公开帧经过逐张检查。
+
+### B. 动力学调查
+
+只读核对Factory USD和源码，确认runtime给body旋转惯量加`0.01I kg·m²`。
+这不是关节armature。目标缺少源的额外sensor/TCP body，finger质量也不同，不能把以下敏感性模型称为精确PhysX重建。
+
+初态J7在7臂DOF子块中`1/(M7⁻¹)77`：冻结模型`.005711kg·m²`；11个映射robot body各+.01I后`.030589`；
+7个臂关节armature+.01后`.015982`。相同1Nm增量角加速度分别约175.10、32.69、62.57rad/s²。
+独立验证body惯量拉回`Σ.01 JωᵀJω`，与armature对角矩阵不等价。
+
+[静态动力学证据](../../evidence/g4_s/s2a_r1/dynamics/static_audit_20261026_v2/matched_dynamics.json)
+及[armature范围澄清](../../evidence/g4_s/s2a_r1/diagnostic_analysis/static_armature_scope_clarification.json)。
+局部理想显式阻尼指标13.81→1.96，仅提示惯量/离散反馈的关系，不是实际MuJoCo非线性稳定性证书。
+原PhysX实际施加力矩和完整runtime M仍UNKNOWN。
+
+### C. 预注册无策略对照与before/after
+
+10个预注册变体，每个**16步**，实际共160步，真实viewer中执行。
+全部子进程exit0，新增PPO调用0，实际physics调用累计`.126s`；协调器wall`45.802s`。
+使用同一归档初始q/qvel，输入同样的前两条**归档动作**，底层反馈重新计算。
+变体上的策略观测与μ没有重新推理，因此不能称修订后的PPO闭环任务表现。
+
+| 变体（均DIAGNOSTIC_ONLY） | 最大滑移mm | 双侧接触首次丢失 | 最大arm速度rad/s |
+|---|---:|---:|---:|
+| D01 冻结配置fresh-start对照 | 14.241 | step4 | 9.634 |
+| D02 零arm torque | .002791 | 未发生 | .0000125 |
+| D03 固定初始TCP target | 16.168 | step8 | 13.961 |
+| D04 仅task torque | 11.830 | step4 | 9.441 |
+| D05 仅nullspace torque | .102875 | 未发生 | 1.183 |
+| D06 11个body各+.01I | .088564 | 未发生 | 1.109 |
+| D07 仅arm7 armature+.01 | 5.069 | step3 | 3.969 |
+| D08 arm motor cap改为100Nm | 约34,982,549 | step3 | 78.293 |
+| D09 零臂力矩+affine finger PD | 25.211 | step3 | .382 |
+| D10 零臂力矩+solref .02 | .002053 | 未发生 | .00000962 |
+
+D08的数十公里物体位移是严重数值/物理失真，即使有限、无warning也不能算物理有效。
+D09仍可通过指接触反力带动臂，不等于机械固定。D10的实际positive solref仅从refsafe钳制后的`.016667`改到`.02s`。
+
+D06相对同样fresh-start的D01，最大滑移降低约**99.38%**、臂最大速度降低约**8.69倍**，
+仅是0.133333s窗口的局部干预结果。D01与历史前16步不精确一致（滑移14.241vs11.840mm），
+故所有对照都与D01比较，不以历史整回合极值作“修复后改善率”。
+
+下图来自**已保存诊断状态的零积分真实GUI回放**，不是额外积分或修复后PPO任务图；同为step16。
+
+![D01记录状态回放](../../evidence/g4_s/s2a_r1/visuals/comparison_playback_v2/D01_physics_16.png)
+
+![D06记录状态回放](../../evidence/g4_s/s2a_r1/visuals/comparison_playback_v2/D06_physics_16.png)
+
+每个积分变体都创建真实native窗口并sync，但mapped/IsViewable不等于持续未被遮挡；
+部分原积分截图被其他应用覆盖；公开只保留已核查的D01两张同期帧，其余18张原积分PNG统一私留并留SHA（并非声称每张都遮挡）。上面的单独回放图避免将被遮挡截图冒充可见实验。
+
+[完整对照与哈希](../../evidence/g4_s/s2a_r1/diagnostic_analysis/comparison.json)、
+[独立力矩/事件复核](../../evidence/g4_s/s2a_r1/archived_analysis/diagnostic_review.json)。
+
+### D. 根因分级
+
+- **SUPPORTED_BUT_NOT_PROVEN**：H1惯量失配、H3离散反馈/plant耦合。D06是同时影响plant与controller M的干预，尚未隔离两者。
+- **SUPPORTED_BUT_NOT_PROVEN**：H2过度加速度与H5指驱动/接触负载耦合；H5尚未分离指惯量、equality和solver反应。
+- **CONTRADICTED（具体子假说）**：饱和是最初且唯一原因；直接J7 null torque是初始唯一驱动；前8步四元数sign jump。
+- **INCONCLUSIVE**：H4广义动态失配、H6 reset分布、H7完整观测/FD跨状态影响。没有据此宣布不存在任何接口问题。
+
+根因仍为多机制候选，完整任务**ROOT_CAUSE_PENDING**。
 
 ## 6. 根因与修复状态
 
 **ROOT_CAUSE_PENDING**：控制器/惯量/执行器/夹持/观测多因素的贡献尚未通过隔离实验确定。
 
-**SOLUTION_PENDING**：没有取得可作为正式配置的经验证修复。任何参数改动只可作为 `DIAGNOSTIC_ONLY` 隔离分支，不能事后抹去冻结基线，也不能以“更好看”的 GUI 画面选择最优配置。
+**SOLUTION_PENDING**：D06仍是`DIAGNOSTIC_ONLY`。可提出源惯量规则启发的`TARGET_ENGINE_ADAPTATION`候选，
+明确映射body惯量/CoM并进一步分开plant/controller M效应；尚不能实施为正式S1B配置。
+未发现足以声称`SOURCE_SEMANTIC_BUG_FIX`的已证实策略接口bug。不能把body惯量改成关节armature，
+也不能以取消饱和作为修复。任何后续更长窗口/姿态/有限PPO验证均须另行授权。
 
 **VALIDATION_PENDING**：没有修复后的完整 PPO 任务回合，因此也没有恢复成功率可报告。
 
@@ -82,19 +165,30 @@ GUI 使用真正打开的 MuJoCo 桌面 viewer；若没有图形会话，标记 
 
 ## 8. 面试复盘（当前只可使用已验证事实）
 
-**约30秒，当前进行时版本：**
+**约30秒，R1已完成部分：**
 
-> 我做过 Isaac Factory PegInsert 策略的跨仿真器迁移：训练阶段使用 PhysX 和 Panda，原 PPO 在源环境按几何成功条件完成了 280/288 回合。将冻结权重接到 MuJoCo Panda 后，19维观测、6维动作及 LSTM 推理接口可以工作，但第一次完整闭环实验出现了控制振荡、力矩饱和、脱抓和关节越限。我们把每一个物理步的执行器实际力矩、关节状态和夹指接触完整记录下来，定位到策略开始后仅0.025秒就发生明显滑移，随后双侧接触丢失；目前正通过无策略短步对照试验隔离惯量、执行器与接触动力学的影响，还未宣称完成成功迁移。
+> 我迁移Factory冻结PPO到MuJoCo时遇到振荡脱抓。我用真实GUI和120Hz日志发现，速度放大先于力矩饱和，同一策略动作内阻尼反馈不断反转。10组16步无策略对照显示，按源规则增加刚体惯量能抑制短时失稳，关节armature不能等效替代。现在有可复核的局部证据，唯一根因和任务级修复仍未验证。
+
+**约2分钟，技术版本：**
+
+> 源PhysX独立评估的几何成功是280/288，但我没有把它当成物理插入质量证书。目标使用MuJoCo3.5和独立装配几何，观测19维、动作6维、LSTM/RMS和checkpoint均冻结。首回合能完整跑完，却在第3个物理步滑移超过1mm、第4步失去双侧接触。
+>
+> 我先审计归一化、动作、FD和四元数，再把日志还原为真实GUI中的只读状态回放。关键是看120Hz子步和实际积分时motor force：J7在尚未碰到12Nm cap的step2已经大幅速度反转，所以饱和不是最初的唯一解释。J7直接null torque几乎为零，D项在不变策略动作下交替放大。
+>
+> 接着核对原Factory的body惯量+.01I。它会通过各body旋转Jacobian形成稠密质量矩阵变化，不等于关节armature。我注册10组16步GUI对照，用相同初态和归档动作，分别比较被动臂、固定target、task/null、body惯量、armature、限幅和指驱动。body惯量变体的短窗口滑移比fresh-start基线低约99.38%，但armature不能等效替代，放宽力矩还出现灾难性物体响应。
+>
+> GUI让我确认几何与接触事件，数值日志才决定结论。我保留了反例、缺失solver状态以及新积分不精确等于历史轨迹的限制。现在只提出目标引擎适配候选；下一步应先单独验证更长窗口和多个固定姿态、分离plant和controller惯量，再申请有限策略重验。未验证前不说迁移成功或恢复成功率。
 
 **推荐技术追问：** 为什么 `tau=JᵀF` 还需要研究动态一致 nullspace？为什么请求力矩和实际输出不同？为什么高成功率原 PhysX PPO 到 MuJoCo 会失稳？如何区分观测问题、动力学问题与抓握接触问题？为什么不直接微调 PPO？怎样证明修复在新 seed 上也有效？
 
-待根因和修复真正验收后，再把此段改成已完成的“问题→定位→修复→对比验证”。
+R1诊断已完成；工程修正、独立任务验收仍PENDING。面试叙述不能把短窗口反事实说成已解决迁移。
 
 ## 9. 源数据与更新纪律
 
 - 源环境： [G2 训练结果](../RESULTS_G2.md)、[I2 独立推理](../REVIEW_G4_I2.md)。
 - MuJoCo 构建：[S1A NO-GO（严格资产重建）](../REVIEW_G4_S1A.md)、[S1B 工程 PASS](../REVIEW_G4_S1B.md)。
 - 首次失败：[S2A 报告](../REVIEW_G4_S2A.md)、[正式门禁](../../evidence/g4_s/s2a/completion_gate.json)。
+- R1完整报告：[可视化与有界诊断](../REVIEW_G4_S2A_R1.md)；[机器门禁](../../evidence/g4_s/s2a_r1/completion_gate.json)。
 - 原始轨迹校验：[collection.json](../../evidence/g4_s/s2a/run_20261026T140338/collection.json)；不覆盖失败数据。
 
 每轮 G4-S2A-R1/R2 等实验在新证据目录记录：命令、环境、入场门禁、变体哈希、可视化来源、正负结果、时序统计、结论强度。后续若确实解决，可追加 VERIFIED_FIX 与 before/after 章节；禁止直接改写历史为“最初就成功”。

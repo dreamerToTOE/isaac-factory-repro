@@ -1,0 +1,35 @@
+{
+  "task": "G4-S2A-R1",
+  "provenance": "Retrospective receipt from exact command/tool exits; no new GUI or physics execution",
+  "attempts": [
+    {
+      "id": "GUI_ARCHIVE_V1",
+      "process_exit_code": 1,
+      "new_physics_steps": 0,
+      "actor_calls": 0,
+      "error": "Exact-title lookup missed actual MuJoCo : g4_s1b_adapted_panda_peg_insert; no viewable-window match.",
+      "raw_error": "visuals/archive/viewer_failure.json"
+    },
+    {
+      "id": "GUI_STARTUP_DIAGNOSTIC",
+      "process_exit_code": 139,
+      "new_physics_steps": 0,
+      "actor_calls": 0,
+      "observed_window": "MuJoCo : g4_s1b_adapted_panda_peg_insert",
+      "observed_viewer_is_running": true,
+      "failure": "Native segmentation fault on process shutdown after context close; render thread was not explicitly joined.",
+      "window_metadata": "visuals/gui_startup_diagnostic/x11_tree_metadata.json",
+      "causal_certainty": "Native stack unavailable; render-thread lifetime gap was addressed; do not claim a complete native crash root-cause proof."
+    },
+    {
+      "id": "COMPARISON_PLAYBACK_V1",
+      "process_exit_code": 1,
+      "new_physics_steps": 0,
+      "actor_calls": 0,
+      "failure": "Mixed relative/absolute Path.relative_to after first capture; PNG retained.",
+      "raw_error": "visuals/comparison_playback_v1/failure.json"
+    }
+  ],
+  "recovery": "Only new viewer/capture software was corrected. Archive-only sessions used fresh output directories. All10registered physical diagnostics ran once each and were not repeated.",
+  "subsequent_gui_runs": "archive_v2, archive_v3 and comparison_playback_v2 exited0; all10physical diagnostic GUI children exited0 and joined render threads."
+}

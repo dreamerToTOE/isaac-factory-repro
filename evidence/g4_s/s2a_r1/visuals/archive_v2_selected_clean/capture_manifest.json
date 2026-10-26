@@ -1,0 +1,67 @@
+{
+  "selected_captures": [
+    {
+      "file": "evidence/g4_s/s2a_r1/visuals/archive_v2_selected_clean/first_finger_limit.png",
+      "sha256": "fd37c8434d7ae46d1dc0d7cb2518665f1c41442412e907eb09ed3484423a44d9",
+      "source_experiment": "S2A seed1001",
+      "mode": "ARCHIVED_STATE_PLAYBACK",
+      "physics_step": 61,
+      "episode_simulation_time_s": 0.5083333333333333,
+      "recorded_absolute_time_s": 0.7583333333333331,
+      "model_xml_sha256": "c60c33ee11eb4806294aee259f97d987308b23e83da62f2219cbc9950fb195c9",
+      "new_physics_steps": 0,
+      "recorded_contact_forces_n": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "solver_internal_state": "UNKNOWN_NOT_RESTORED",
+      "original_manifest_file": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v2_with_desktop_notification/capture_manifest.json",
+      "original_private_file": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v2_with_desktop_notification/first_finger_limit.png",
+      "visually_reviewed_clean": true,
+      "image_edited": false
+    },
+    {
+      "file": "evidence/g4_s/s2a_r1/visuals/archive_v2_selected_clean/first_arm_limit.png",
+      "sha256": "89fca2f5decd60d9b72b031390d55177c89187e783c8361a1d1f755805902493",
+      "source_experiment": "S2A seed1001",
+      "mode": "ARCHIVED_STATE_PLAYBACK",
+      "physics_step": 76,
+      "episode_simulation_time_s": 0.6333333333333333,
+      "recorded_absolute_time_s": 0.8833333333333326,
+      "model_xml_sha256": "c60c33ee11eb4806294aee259f97d987308b23e83da62f2219cbc9950fb195c9",
+      "new_physics_steps": 0,
+      "recorded_contact_forces_n": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "solver_internal_state": "UNKNOWN_NOT_RESTORED",
+      "original_manifest_file": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v2_with_desktop_notification/capture_manifest.json",
+      "original_private_file": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v2_with_desktop_notification/first_arm_limit.png",
+      "visually_reviewed_clean": true,
+      "image_edited": false
+    },
+    {
+      "file": "evidence/g4_s/s2a_r1/visuals/archive_v2_selected_clean/hand_support_collision.png",
+      "sha256": "f647b75dc60b22ad12db0dc5fc8625e5821f530e94fa64a9bc10a505fbf3677f",
+      "source_experiment": "S2A seed1001",
+      "mode": "ARCHIVED_STATE_PLAYBACK",
+      "physics_step": 685,
+      "episode_simulation_time_s": 5.708333333333333,
+      "recorded_absolute_time_s": 5.958333333333419,
+      "model_xml_sha256": "c60c33ee11eb4806294aee259f97d987308b23e83da62f2219cbc9950fb195c9",
+      "new_physics_steps": 0,
+      "recorded_contact_forces_n": {
+        "left": 0.0,
+        "right": 0.0
+      },
+      "solver_internal_state": "UNKNOWN_NOT_RESTORED",
+      "original_manifest_file": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v2_with_desktop_notification/capture_manifest.json",
+      "original_private_file": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v2_with_desktop_notification/hand_support_collision.png",
+      "visually_reviewed_clean": true,
+      "image_edited": false
+    }
+  ],
+  "reason": "Three latearchived-eventcapturesfromv2werevisuallyreviewedclean; originalentirev2retainedprivately. Noimageediting/newGUI/newphysics.",
+  "physics_steps": 0,
+  "actor_calls": 0
+}

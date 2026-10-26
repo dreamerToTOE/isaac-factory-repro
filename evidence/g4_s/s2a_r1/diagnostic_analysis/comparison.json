@@ -1,0 +1,379 @@
+{
+  "task": "G4-S2A-R1",
+  "scope": "READ_ONLY_ANALYSIS_OF_DIAGNOSTIC_ONLY_16_STEP_WINDOWS",
+  "new_physics_steps": 0,
+  "new_actor_calls": 0,
+  "model_compilations": 0,
+  "source_directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1",
+  "source_sha256": {
+    "diagnostic_preregistration": "8815b7157d5abd430a896cb70aed1564f8e2297e74a52cbbde90bb660f23d0ab",
+    "diagnostic_summary": "c0147e659b762b1bb91509ba178da3ef432e29df2a95a234b0cdbf8b61ebeba6",
+    "analysis_script": "d667068d180f3714640aee0674f313ddfd41ce3e9bc43fd652d62df515a39c80"
+  },
+  "checked_counts": {
+    "variants": 10,
+    "integration_requests": 160,
+    "physics_results": 160,
+    "exact_successful_child_exits": 10,
+    "actor_calls": 0,
+    "warning_count": 0
+  },
+  "independent_checks": {
+    "all_initial_qpos_qvel_exactly_equal": true,
+    "all_request_result_sequences_and_clocks_valid": true,
+    "slip_world_pose_reconstruction_max_abs_error_m": 2.9103830456733704e-11,
+    "pad_force_reconstruction_max_abs_error_N": 0.0,
+    "all_summary_extrema_match_reconstructed": true
+  },
+  "variant_results": [
+    {
+      "variant": "D01",
+      "name": "frozen_baseline",
+      "scope": "DIAGNOSTIC_ONLY",
+      "model_configuration_sha256": "1d494fafccfb84f4b345bd8058d986c728cde1b1e55c5485ef747ba0b187c773",
+      "max_slip_m": 0.014241097559348702,
+      "max_arm_qvel_rad_s": 9.634009822685538,
+      "first_bilateral_loss_step": 4,
+      "max_all_penetration_m": 0.004753668680625721,
+      "max_arm_limit_rad": 0.0,
+      "max_finger_limit_m": 0.0,
+      "recorded_new_warning_count": 0,
+      "exact_child_exit_code": 0,
+      "physical_steps": 16,
+      "time_horizon_s": 0.13333333333333333,
+      "policy_calls": 0
+    },
+    {
+      "variant": "D02",
+      "name": "passive_arm",
+      "scope": "DIAGNOSTIC_ONLY",
+      "model_configuration_sha256": "1d494fafccfb84f4b345bd8058d986c728cde1b1e55c5485ef747ba0b187c773",
+      "max_slip_m": 2.790785036701599e-06,
+      "max_arm_qvel_rad_s": 1.2470549581096907e-05,
+      "first_bilateral_loss_step": null,
+      "max_all_penetration_m": 7.812784468314952e-06,
+      "max_arm_limit_rad": 0.0,
+      "max_finger_limit_m": 0.0,
+      "recorded_new_warning_count": 0,
+      "exact_child_exit_code": 0,
+      "physical_steps": 16,
+      "time_horizon_s": 0.13333333333333333,
+      "policy_calls": 0
+    },
+    {
+      "variant": "D03",
+      "name": "fixed_initial_TCP_reference",
+      "scope": "DIAGNOSTIC_ONLY",
+      "model_configuration_sha256": "1d494fafccfb84f4b345bd8058d986c728cde1b1e55c5485ef747ba0b187c773",
+      "max_slip_m": 0.016167911134682505,
+      "max_arm_qvel_rad_s": 13.960966305325822,
+      "first_bilateral_loss_step": 8,
+      "max_all_penetration_m": 0.004703160063055251,
+      "max_arm_limit_rad": 0.0,
+      "max_finger_limit_m": 0.0,
+      "recorded_new_warning_count": 0,
+      "exact_child_exit_code": 0,
+      "physical_steps": 16,
+      "time_horizon_s": 0.13333333333333333,
+      "policy_calls": 0
+    },
+    {
+      "variant": "D04",
+      "name": "task_torque_only",
+      "scope": "DIAGNOSTIC_ONLY",
+      "model_configuration_sha256": "1d494fafccfb84f4b345bd8058d986c728cde1b1e55c5485ef747ba0b187c773",
+      "max_slip_m": 0.011829568096249004,
+      "max_arm_qvel_rad_s": 9.440763495597011,
+      "first_bilateral_loss_step": 4,
+      "max_all_penetration_m": 0.003311901487252153,
+      "max_arm_limit_rad": 0.0,
+      "max_finger_limit_m": 0.0,
+      "recorded_new_warning_count": 0,
+      "exact_child_exit_code": 0,
+      "physical_steps": 16,
+      "time_horizon_s": 0.13333333333333333,
+      "policy_calls": 0
+    },
+    {
+      "variant": "D05",
+      "name": "nullspace_torque_only",
+      "scope": "DIAGNOSTIC_ONLY",
+      "model_configuration_sha256": "1d494fafccfb84f4b345bd8058d986c728cde1b1e55c5485ef747ba0b187c773",
+      "max_slip_m": 0.00010287516229437513,
+      "max_arm_qvel_rad_s": 1.1831514921069957,
+      "first_bilateral_loss_step": null,
+      "max_all_penetration_m": 1.3425275740076752e-05,
+      "max_arm_limit_rad": 0.0,
+      "max_finger_limit_m": 0.0,
+      "recorded_new_warning_count": 0,
+      "exact_child_exit_code": 0,
+      "physical_steps": 16,
+      "time_horizon_s": 0.13333333333333333,
+      "policy_calls": 0
+    },
+    {
+      "variant": "D06",
+      "name": "robot_body_rotational_inertia_plus_0p01I",
+      "scope": "DIAGNOSTIC_ONLY",
+      "model_configuration_sha256": "251374dcf1f0c15889a2e4fe7df22adc37e9b3452de8bdfd2f05368567896c5b",
+      "max_slip_m": 8.856430766973577e-05,
+      "max_arm_qvel_rad_s": 1.1090563602790808,
+      "first_bilateral_loss_step": null,
+      "max_all_penetration_m": 1.3320253001587528e-05,
+      "max_arm_limit_rad": 0.0,
+      "max_finger_limit_m": 0.0,
+      "recorded_new_warning_count": 0,
+      "exact_child_exit_code": 0,
+      "physical_steps": 16,
+      "time_horizon_s": 0.13333333333333333,
+      "policy_calls": 0
+    },
+    {
+      "variant": "D07",
+      "name": "robot_joint_armature_plus_0p01",
+      "scope": "DIAGNOSTIC_ONLY",
+      "model_configuration_sha256": "e546405ab0f598ca1f884061c693b0b8ad5294a4b36deceda7466d22c826665b",
+      "max_slip_m": 0.005069042609256499,
+      "max_arm_qvel_rad_s": 3.9694332336320794,
+      "first_bilateral_loss_step": 3,
+      "max_all_penetration_m": 0.003493853898239341,
+      "max_arm_limit_rad": 0.0,
+      "max_finger_limit_m": 0.0,
+      "recorded_new_warning_count": 0,
+      "exact_child_exit_code": 0,
+      "physical_steps": 16,
+      "time_horizon_s": 0.13333333333333333,
+      "policy_calls": 0
+    },
+    {
+      "variant": "D08",
+      "name": "arm_motor_force_limits_100Nm",
+      "scope": "DIAGNOSTIC_ONLY",
+      "model_configuration_sha256": "0596b20b742a5098d7be26fa10b38f1b6fa32bbfb76d2859ef1f5e3ecdb71fec",
+      "max_slip_m": 34982.549058221106,
+      "max_arm_qvel_rad_s": 78.29290366166379,
+      "first_bilateral_loss_step": 3,
+      "max_all_penetration_m": 0.0009943240416816729,
+      "max_arm_limit_rad": 0.0,
+      "max_finger_limit_m": 0.0,
+      "recorded_new_warning_count": 0,
+      "exact_child_exit_code": 0,
+      "physical_steps": 16,
+      "time_horizon_s": 0.13333333333333333,
+      "policy_calls": 0
+    },
+    {
+      "variant": "D09",
+      "name": "passive_arm_affine_finger_PD",
+      "scope": "DIAGNOSTIC_ONLY",
+      "model_configuration_sha256": "be94a3bf0d4edc3cc617e086e5c694212f28022362b60f387e1be251711c964d",
+      "max_slip_m": 0.025210726209875665,
+      "max_arm_qvel_rad_s": 0.3821428011849879,
+      "first_bilateral_loss_step": 3,
+      "max_all_penetration_m": 0.0336076520540633,
+      "max_arm_limit_rad": 0.0,
+      "max_finger_limit_m": 7.94737012260516e-05,
+      "recorded_new_warning_count": 0,
+      "exact_child_exit_code": 0,
+      "physical_steps": 16,
+      "time_horizon_s": 0.13333333333333333,
+      "policy_calls": 0
+    },
+    {
+      "variant": "D10",
+      "name": "passive_arm_contact_solref_0p02",
+      "scope": "DIAGNOSTIC_ONLY",
+      "model_configuration_sha256": "14a7c4bec6047c54a0ed0a3c14180a8b39b220d1fa75860657b869fc221d8d78",
+      "max_slip_m": 2.053027101082569e-06,
+      "max_arm_qvel_rad_s": 9.618436308249883e-06,
+      "first_bilateral_loss_step": null,
+      "max_all_penetration_m": 8.19143464140056e-06,
+      "max_arm_limit_rad": 0.0,
+      "max_finger_limit_m": 0.0,
+      "recorded_new_warning_count": 0,
+      "exact_child_exit_code": 0,
+      "physical_steps": 16,
+      "time_horizon_s": 0.13333333333333333,
+      "policy_calls": 0
+    }
+  ],
+  "source_file_digests": {
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D01/identity.json": "1da589687a6e6175122e5705dd6d931a430e0b0f54f6200fffa9957f3cad40e3",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D01/result.json": "135d788e1db1ee51466400926b5c8cac62909fa94c0769626328b5fa391fdaa0",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D01/physics.jsonl": "ba4c841861cd9c9fb6a58a9056fe0e8e4ba7588edac557942e27b8ac8d253e07",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D02/identity.json": "524b32ff3f01148a550ad3265ccaa39106b418fdae82711ecc34fc99e16a982e",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D02/result.json": "2114ca198d5cf491d04c254854181b36db8c2bdcb62a5f8daae22d6331d18301",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D02/physics.jsonl": "227e21e88c6b0e6cd44b746b6a7c29b679356243d0bdd718986ffcbaf86c3efe",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D03/identity.json": "e29d67edbbd62d9bd6b8c10ce227b6089eb306a180c0d341b890b5cb0523a81e",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D03/result.json": "2ed36b2df9b3e3e8ef8d94b1a24edd0b8fa099d798badac7c6403472990e58a3",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D03/physics.jsonl": "6ba6009113c7e67bb205f82a7b93527b96c03b3122cd4cb352c85c7b552e45a6",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D04/identity.json": "5fb95e51c139ca76d4443dafa73518f58cf4b5ff66b15ece239873707dc78396",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D04/result.json": "c8d5e5f18078deb48d8958cffff0f67a798f4004cf14ffbe4e52e0f1549c2fa6",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D04/physics.jsonl": "d320c0b1362a6c47b462d55b4954f0c47dffd860260201ce72c83d481b551da6",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D05/identity.json": "08f8325b654be8edc87ddb29c425ef2fb26d264904c8995c4edcd65ec679f61a",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D05/result.json": "c426a4aeb4582cafb41e911ad3ae4fc8e7e12c096a0d765c13a22c9e0120d646",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D05/physics.jsonl": "8c6b8b3787deef1cd2e5f15066da74f464c57d4073a42f94c4a1082c1cd67c74",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D06/identity.json": "075ce9a37585bcb7b01efc2e44b1170f78f45f9c920e1a2fce57af0a97a58a22",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D06/result.json": "1200f102b2431265e8eda95306ad3c3955d2d1082a9850ffcc83b175f8d54c36",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D06/physics.jsonl": "42cd94227e036b3f88e6d31925107f0717d5115f689d73eab17d8d792209c3d0",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D07/identity.json": "75d4fd1d14401093054f088d906f514cf1176e43ca4fbc26dfc36980e0c34d3d",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D07/result.json": "6ce413ee021c5880f0e325d7e3fdf4db2c957dfabf7e4e9a1c1bb910eda644e3",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D07/physics.jsonl": "8c12d6593aed4f6835efb316e9216194ac485c328ff9241b5eaf046b9bb665f5",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D08/identity.json": "093cdb76d3bc3135d1ed8a7ea06216d35815f9e8d1a6503f29fe471a801d0942",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D08/result.json": "5cb881a005998303ed87871dc43f0b2f238ffb0f1cd331e6cfe81c8337b6bd6f",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D08/physics.jsonl": "5d82e1d51bdabdb50b611741fc1a87539dd76d8e26e8da2834a04af351db78cd",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D09/identity.json": "b04ebb2c1a192bee9c88d6bce6ec8af1448ef26a5a91841871501f15c9f7f7ee",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D09/result.json": "88aa9183b37b95eee37c5129f89e571e0e58b8b120ac0ae0d6801b3abaa2aa01",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D09/physics.jsonl": "9987ab74a120cea9e652c2c5088677947b26310d5b5d981cc1c939d59e00e097",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D10/identity.json": "20bd7f269715dca16944895801d9578d2af6a936df96e174cb433709706a7b49",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D10/result.json": "bbcbca06470fa8ddf16ac2358192c1906a6c4be1231cf465b1a38402a87a9bad",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D10/physics.jsonl": "980f65872418e77fe89571ce549b884b7053092bd525db21f271b03a962b475b"
+  },
+  "hypotheses": [
+    {
+      "id": "H1",
+      "hypothesis": "机器人惯量缺失或不匹配",
+      "assessment": "SUPPORTED_BUT_NOT_PROVEN",
+      "confidence": "HIGH_WITHIN_16_STEP_DIAGNOSTIC_SCOPE",
+      "verified_facts": [
+        "Factory源码明确对所有返回刚体转动惯量加0.01I；冻结S1B未实施这一数值增量。",
+        "映射11刚体+0.01I的D06在16步维持双侧正接触；最大滑移88.56µm，D01为14.241mm。"
+      ],
+      "controlled_experiments": [
+        "D01 vs D06",
+        "D06 vs D07"
+      ],
+      "quantitative": {
+        "D01_to_D06_max_slip_ratio": 160.79951319051722,
+        "D01_to_D06_max_arm_velocity_ratio": 8.686672893937738
+      },
+      "contradicting_or_limiting_evidence": [
+        "缺失source sensor和centered TCP刚体，原始PhysX cooked惯量及实际M均UNKNOWN。",
+        "惯量同时改变物理响应和质量相关nullspace运算；不是整机忠实重建或最终根因证明。",
+        "D06全接触峰值穿透13.32µm包含指垫接触；不能直接套用peg-hole接触的10µm判据。16步抓持保持不等于插入成功。"
+      ]
+    },
+    {
+      "id": "H2",
+      "hypothesis": "力矩饱和及过大加速度",
+      "assessment": "SUPPORTED_BUT_NOT_PROVEN",
+      "confidence": "HIGH_FOR_AMPLIFICATION_NOT_SOLE_CAUSE",
+      "verified_facts": [
+        "历史第2物理步已明显速度反向，早于第3步joint7首次达到12Nm限制。",
+        "D08放宽至100Nm后16步滑移约34982.55m；状态数值有限且无MuJoCo警告，仍明显物理失真。"
+      ],
+      "controlled_experiments": [
+        "D01 vs D08"
+      ],
+      "contradicting_or_limiting_evidence": [
+        "仅由饱和触发最早不稳定这一子假设被时间顺序反驳。",
+        "不能把configured PhysX effort limits当作实测PhysX施力。",
+        "D08无警告只说明引擎未发出该类警告，不表示物理有效。"
+      ]
+    },
+    {
+      "id": "H3",
+      "hypothesis": "任务空间PD与离散反馈/低惯量耦合",
+      "assessment": "SUPPORTED_BUT_NOT_PROVEN",
+      "confidence": "HIGH_WITHIN_LOCAL_WINDOW",
+      "verified_facts": [
+        "D04仅任务力矩仍在第4步失去双侧接触；D05仅nullspace力矩16步未失去。",
+        "D03固定初始TCP参考仍在第8步失去接触，故策略持续更新或每步重建目标不是唯一必要条件。",
+        "匹配初态理想阻尼指标max(dt λ(M^-1 JᵀKdJ))：D01=13.812，D06=1.958，D07=6.277。"
+      ],
+      "controlled_experiments": [
+        "D01 vs D03",
+        "D04 vs D05",
+        "D01 vs D06 vs D07"
+      ],
+      "contradicting_or_limiting_evidence": [
+        "局部显式Euler阻尼指标忽略FD延迟、饱和、接触及实际积分器，不能作为全系统稳定证明。",
+        "未改变dt/KP/KD进行额外因果分离；不自动调参。"
+      ]
+    },
+    {
+      "id": "H4",
+      "hypothesis": "Jacobian/nullspace实现或动态输入失配",
+      "assessment": "INCONCLUSIVE",
+      "confidence": "CHECKED_ALGEBRA_SUPPORTED; PRIMARY_IMPLEMENTATION_BUG_NOT_SUPPORTED",
+      "verified_facts": [
+        "两匹配q的source-authored FK Jacobian与MuJoCo均值finger-origin Jacobian最大差约1.35e-8。",
+        "动力学一致nullspace残差在已检查姿态小于4e-14；历史前8步joint7 nullspace力矩接近零。",
+        "D05保留nullspace驱动仍16步保持双侧抓持；D04去掉nullspace仍第4步失败。"
+      ],
+      "controlled_experiments": [
+        "D04 vs D05",
+        "matched static J/M/nullspace audit"
+      ],
+      "contradicting_or_limiting_evidence": [
+        "这些证据不支持nullspace实现错误是最初wrist振荡的主因。",
+        "原始PhysX Jacobian/M未测量，source-authored FK不是引擎运行时量；质量模型差异会改变投影。"
+      ]
+    },
+    {
+      "id": "H5",
+      "hypothesis": "手指执行器或接触求解响应",
+      "assessment": "SUPPORTED_BUT_NOT_PROVEN",
+      "confidence": "MODERATE; LOAD_DEPENDENT_GRASP_REMAINS_UNRESOLVED",
+      "verified_facts": [
+        "D02零臂驱动维持抓持，最大滑移2.79µm；D10小幅接触软化也维持，2.05µm。",
+        "D09零臂驱动但改为affine finger PD，第3步失去双侧接触，峰值穿透33.61mm。"
+      ],
+      "controlled_experiments": [
+        "D02 vs D09 vs D10",
+        "D01 vs D02"
+      ],
+      "contradicting_or_limiting_evidence": [
+        "冻结step-implicit PD并非在该初态无负载时必然失稳。",
+        "D09失败不能推出其他affine调参均失败；也不能把它作为修复。",
+        "未独立改变强臂加速度下的抓持力/摩擦，不能排除弱抓持与臂加速度共同作用。"
+      ]
+    },
+    {
+      "id": "H6",
+      "hypothesis": "初始抓持/reset分布失配",
+      "assessment": "INCONCLUSIVE",
+      "confidence": "LOW_FOR_CROSS_DISTRIBUTION_CAUSALITY",
+      "verified_facts": [
+        "十变体采用完全相同的归档初始qpos/qvel；D02/D06/D10在各自16步窗口可保持抓持。",
+        "S2A初始物理准入通过，使用本地NumPy噪声流及固定hole/support姿态，非配对PhysX reset。"
+      ],
+      "controlled_experiments": [
+        "same-state D01/D02/D06 comparisons"
+      ],
+      "contradicting_or_limiting_evidence": [
+        "初态本身不足以导致所有变体同样失败，但不排除原Factory分布差异。",
+        "只有一个种子/一个姿态，没有分布统计或复现率结论；warmstart与求解器内部状态未完整归档。"
+      ]
+    },
+    {
+      "id": "H7",
+      "hypothesis": "观测、四元数或有限差分速度因素",
+      "assessment": "INCONCLUSIVE",
+      "confidence": "NO_INTERFACE_BUG_EVIDENCE; FD_FEEDBACK_COUPLING_SUPPORTED",
+      "verified_facts": [
+        "本轮仅重用归档动作，无任何新策略推理；S2A独立审计已核对raw/RMS/action/EMA与源码。",
+        "历史前8步符号/速度变化对应真实关节运动；任务PD导数项随速度反向显著放大。"
+      ],
+      "controlled_experiments": [
+        "source parity audit",
+        "D03/D04 local feedback diagnostics"
+      ],
+      "contradicting_or_limiting_evidence": [
+        "未做独立FD替换/时间步变更或四元数输入扰动，所以不能把FD实现判为错误或排除其离散耦合。",
+        "目标引擎姿态与原PhysX原始四元数符号运行时对应关系仍未直接测量。"
+      ]
+    }
+  ],
+  "root_cause_status": "ROOT_CAUSE_PENDING",
+  "solution_status": "SOLUTION_PENDING",
+  "validation_status": "FULL_POLICY_TASK_VALIDATION_PENDING",
+  "bounded_verified_conclusion": "With identical archived initial qpos/qvel and archived action inputs, the mapped-body rotational inertia diagnostic D06 retained bilateral positive finger contact over16steps and greatly reduced slip/arm velocity compared with D01. This does not establish faithful Factory dynamics or successful zero-shot PPO insertion.",
+  "limitations": [
+    "One16step window per variant, not repeated-trial performance statistics.",
+    "Zero new policy inference; action sequence is open-loop archived input, not counterfactual closed-loop PPO behavior.",
+    "No original PhysX runtime mass matrix or applied actuator output measured.",
+    "D06 has13.32µm peak all-contact penetration including finger pads. The10µm insertion-contact criterion applies to peg-hole assembly contacts, not all gripper contacts; no insertion success is established.",
+    "D08 is physically invalid despite finite state and zero warnings; exit0 is process completion only."
+  ]
+}

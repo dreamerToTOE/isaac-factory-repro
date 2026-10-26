@@ -1,0 +1,473 @@
+{
+  "task": "G4-S2A-R1",
+  "kind": "INDEPENDENT_COMPLETED_GUI_DIAGNOSTIC_REVIEW",
+  "generated_utc": "2026-10-26T15:02:33.663391+00:00",
+  "new_actor_calls": 0,
+  "new_physics_steps": 0,
+  "new_GUI_launches": 0,
+  "reviewer_checkpoint_loads": 0,
+  "review_method": "Existing per-step JSONL, full recorded J/M/controller inputs, contact pairs and saved GUI/process receipts only. Independently recompute source PD, J-transpose wrench, dynamic nullspace, software/motor clamps, contact-force sums and extrema. No model instantiation or replay.",
+  "execution_scope_checked": {
+    "variants": 10,
+    "steps_each": 16,
+    "total_integration_steps": 160,
+    "actual_physics_call_wall_s": 0.1260478430049261,
+    "coordinator_wall_s": 45.80223455999658,
+    "all_child_exit_zero": true,
+    "all_GUI_visible_receipts": true,
+    "actor_calls": 0,
+    "all_initial_qpos_qvel_identical": true,
+    "graceful_owned_render_threads_joined": true
+  },
+  "controller_and_actuator_max_abs_reconstruction_errors": {
+    "pose_error": 0.0,
+    "wrench": 0.0,
+    "task_torque": 0.0,
+    "null_torque": 4.118927421359331e-14,
+    "requested_torque": 5.684341886080802e-14,
+    "software_torque": 4.263256414560601e-14,
+    "integration_motor": 0.0,
+    "integration_generalized_force": 0.0
+  },
+  "comparisons": [
+    {
+      "variant": "D01",
+      "name": "frozen_baseline",
+      "scope": "DIAGNOSTIC_ONLY",
+      "arm_mode": "full",
+      "model_configuration_sha256": "1d494fafccfb84f4b345bd8058d986c728cde1b1e55c5485ef747ba0b187c773",
+      "steps": 16,
+      "exit_code": 0,
+      "GUI_visible": true,
+      "max_slip_m": 0.014241097559348706,
+      "first_bilateral_loss_step": 4,
+      "max_arm_qvel_rad_s": 9.634009822685538,
+      "max_all_contact_penetration_m": 0.004753668680625721,
+      "max_arm_limit_rad": 0.0,
+      "max_finger_limit_m": 0.0,
+      "numerical_warning_count": 0,
+      "all_sampled_states_finite": true
+    },
+    {
+      "variant": "D02",
+      "name": "passive_arm",
+      "scope": "DIAGNOSTIC_ONLY",
+      "arm_mode": "zero",
+      "model_configuration_sha256": "1d494fafccfb84f4b345bd8058d986c728cde1b1e55c5485ef747ba0b187c773",
+      "steps": 16,
+      "exit_code": 0,
+      "GUI_visible": true,
+      "max_slip_m": 2.7907850367020243e-06,
+      "first_bilateral_loss_step": null,
+      "max_arm_qvel_rad_s": 1.2470549581096907e-05,
+      "max_all_contact_penetration_m": 7.812784468314952e-06,
+      "max_arm_limit_rad": 0.0,
+      "max_finger_limit_m": 0.0,
+      "numerical_warning_count": 0,
+      "all_sampled_states_finite": true
+    },
+    {
+      "variant": "D03",
+      "name": "fixed_initial_TCP_reference",
+      "scope": "DIAGNOSTIC_ONLY",
+      "arm_mode": "fixed",
+      "model_configuration_sha256": "1d494fafccfb84f4b345bd8058d986c728cde1b1e55c5485ef747ba0b187c773",
+      "steps": 16,
+      "exit_code": 0,
+      "GUI_visible": true,
+      "max_slip_m": 0.016167911134682522,
+      "first_bilateral_loss_step": 8,
+      "max_arm_qvel_rad_s": 13.960966305325822,
+      "max_all_contact_penetration_m": 0.004703160063055251,
+      "max_arm_limit_rad": 0.0,
+      "max_finger_limit_m": 0.0,
+      "numerical_warning_count": 0,
+      "all_sampled_states_finite": true
+    },
+    {
+      "variant": "D04",
+      "name": "task_torque_only",
+      "scope": "DIAGNOSTIC_ONLY",
+      "arm_mode": "task",
+      "model_configuration_sha256": "1d494fafccfb84f4b345bd8058d986c728cde1b1e55c5485ef747ba0b187c773",
+      "steps": 16,
+      "exit_code": 0,
+      "GUI_visible": true,
+      "max_slip_m": 0.011829568096249007,
+      "first_bilateral_loss_step": 4,
+      "max_arm_qvel_rad_s": 9.440763495597011,
+      "max_all_contact_penetration_m": 0.003311901487252153,
+      "max_arm_limit_rad": 0.0,
+      "max_finger_limit_m": 0.0,
+      "numerical_warning_count": 0,
+      "all_sampled_states_finite": true
+    },
+    {
+      "variant": "D05",
+      "name": "nullspace_torque_only",
+      "scope": "DIAGNOSTIC_ONLY",
+      "arm_mode": "null",
+      "model_configuration_sha256": "1d494fafccfb84f4b345bd8058d986c728cde1b1e55c5485ef747ba0b187c773",
+      "steps": 16,
+      "exit_code": 0,
+      "GUI_visible": true,
+      "max_slip_m": 0.00010287516229436875,
+      "first_bilateral_loss_step": null,
+      "max_arm_qvel_rad_s": 1.1831514921069957,
+      "max_all_contact_penetration_m": 1.3425275740076752e-05,
+      "max_arm_limit_rad": 0.0,
+      "max_finger_limit_m": 0.0,
+      "numerical_warning_count": 0,
+      "all_sampled_states_finite": true
+    },
+    {
+      "variant": "D06",
+      "name": "robot_body_rotational_inertia_plus_0p01I",
+      "scope": "DIAGNOSTIC_ONLY",
+      "arm_mode": "full",
+      "model_configuration_sha256": "251374dcf1f0c15889a2e4fe7df22adc37e9b3452de8bdfd2f05368567896c5b",
+      "steps": 16,
+      "exit_code": 0,
+      "GUI_visible": true,
+      "max_slip_m": 8.856430766974224e-05,
+      "first_bilateral_loss_step": null,
+      "max_arm_qvel_rad_s": 1.1090563602790808,
+      "max_all_contact_penetration_m": 1.3320253001587528e-05,
+      "max_arm_limit_rad": 0.0,
+      "max_finger_limit_m": 0.0,
+      "numerical_warning_count": 0,
+      "all_sampled_states_finite": true
+    },
+    {
+      "variant": "D07",
+      "name": "robot_joint_armature_plus_0p01",
+      "scope": "DIAGNOSTIC_ONLY",
+      "arm_mode": "full",
+      "model_configuration_sha256": "e546405ab0f598ca1f884061c693b0b8ad5294a4b36deceda7466d22c826665b",
+      "steps": 16,
+      "exit_code": 0,
+      "GUI_visible": true,
+      "max_slip_m": 0.005069042609256503,
+      "first_bilateral_loss_step": 3,
+      "max_arm_qvel_rad_s": 3.9694332336320794,
+      "max_all_contact_penetration_m": 0.003493853898239341,
+      "max_arm_limit_rad": 0.0,
+      "max_finger_limit_m": 0.0,
+      "numerical_warning_count": 0,
+      "all_sampled_states_finite": true
+    },
+    {
+      "variant": "D08",
+      "name": "arm_motor_force_limits_100Nm",
+      "scope": "DIAGNOSTIC_ONLY",
+      "arm_mode": "full",
+      "model_configuration_sha256": "0596b20b742a5098d7be26fa10b38f1b6fa32bbfb76d2859ef1f5e3ecdb71fec",
+      "steps": 16,
+      "exit_code": 0,
+      "GUI_visible": true,
+      "max_slip_m": 34982.549058221135,
+      "first_bilateral_loss_step": 3,
+      "max_arm_qvel_rad_s": 78.29290366166379,
+      "max_all_contact_penetration_m": 0.0009943240416816729,
+      "max_arm_limit_rad": 0.0,
+      "max_finger_limit_m": 0.0,
+      "numerical_warning_count": 0,
+      "all_sampled_states_finite": true
+    },
+    {
+      "variant": "D09",
+      "name": "passive_arm_affine_finger_PD",
+      "scope": "DIAGNOSTIC_ONLY",
+      "arm_mode": "zero",
+      "model_configuration_sha256": "be94a3bf0d4edc3cc617e086e5c694212f28022362b60f387e1be251711c964d",
+      "steps": 16,
+      "exit_code": 0,
+      "GUI_visible": true,
+      "max_slip_m": 0.025210726209875686,
+      "first_bilateral_loss_step": 3,
+      "max_arm_qvel_rad_s": 0.3821428011849879,
+      "max_all_contact_penetration_m": 0.0336076520540633,
+      "max_arm_limit_rad": 0.0,
+      "max_finger_limit_m": 7.94737012260516e-05,
+      "numerical_warning_count": 0,
+      "all_sampled_states_finite": true
+    },
+    {
+      "variant": "D10",
+      "name": "passive_arm_contact_solref_0p02",
+      "scope": "DIAGNOSTIC_ONLY",
+      "arm_mode": "zero",
+      "model_configuration_sha256": "14a7c4bec6047c54a0ed0a3c14180a8b39b220d1fa75860657b869fc221d8d78",
+      "steps": 16,
+      "exit_code": 0,
+      "GUI_visible": true,
+      "max_slip_m": 2.0530271010818603e-06,
+      "first_bilateral_loss_step": null,
+      "max_arm_qvel_rad_s": 9.618436308249883e-06,
+      "max_all_contact_penetration_m": 8.19143464140056e-06,
+      "max_arm_limit_rad": 0.0,
+      "max_finger_limit_m": 0.0,
+      "numerical_warning_count": 0,
+      "all_sampled_states_finite": true
+    }
+  ],
+  "fresh_vs_archived_baseline": {
+    "window_steps": 16,
+    "fresh_baseline_max_slip_m": 0.014241097559348706,
+    "archived_max_slip_m": 0.01184015338921775,
+    "qpos_pointwise_max_abs_difference_mixed_units": 0.18813281303767798,
+    "qvel_pointwise_max_abs_difference_mixed_units": 38.43639428456103,
+    "requested_torque_pointwise_max_abs_difference_nm": 0.6252393263385496,
+    "interpretation": "Same archived qpos/qvel/initial clock but solver/constraint warmstarts were not archived. New 16-step D01 is a controlled fresh baseline, not certified exact trajectory replay."
+  },
+  "body_inertia_vs_armature": {
+    "mass_unchanged_in_D06": true,
+    "joint_armature_unchanged_in_D06": true,
+    "D07_only_seven_rotational_arm_DOF_armatures_changed": true,
+    "D06_slip_ratio_to_D01": 0.006218924299946484,
+    "D06_velocity_ratio_to_D01": 0.11511887372872999,
+    "D07_slip_ratio_to_D01": 0.3559446586284272,
+    "not_equivalent_modifications": true,
+    "scope": "D06 alters body rotational inertia and recomputes corresponding controller M/nullspace as source-style dynamics dependence. It does not independently isolate plant inertia from controller mass dependence; source PhysX imported runtime inertia remains unknown."
+  },
+  "hypotheses": {
+    "H1_robot_inertia": {
+      "status": "SUPPORTED_BUT_NOT_PROVEN",
+      "support": "D06 source-style body+.01I reduced 16-step slip and velocity and retained bilateral contact; D07 armature sensitivity did not reproduce that result.",
+      "limit": "Shows a causal short-window effect of the coupled model/controller inertia intervention in this adapted engine; not exact Factory runtime inertia equality or unique final root cause."
+    },
+    "H2_saturation_acceleration": {
+      "status": "SUPPORTED_BUT_NOT_PROVEN",
+      "support": "Archived reversals start before saturation. D08 100Nm force limits catastrophically worsened finite peg motion rather than restoring grasp.",
+      "contradicted_claim": "The original12Nm cap alone causes failure, so raising the cap is a valid correction.",
+      "limit": "Saturation/acceleration interacts with contact, feedback and inertia; cap removal is not an isolated PD stability proof."
+    },
+    "H3_task_space_PD_discretization": {
+      "status": "SUPPORTED_BUT_NOT_PROVEN",
+      "support": "D04 task-only still loses contact at4; D05 null-only retains it. D03 fixed Cartesian target still fails, so moving-target/PPO changes are not necessary for short-window instability.",
+      "limit": "Gains/timestep were not swept. Local linear damping model omits FD/contact/integrator nonlinearities."
+    },
+    "H4_Jacobian_nullspace": {
+      "status": "INCONCLUSIVE",
+      "support": "All160 recorded source torque computations independently reconstruct from new full J/M logs; null-only remains comparatively stable.",
+      "contradicted_claim": "An observed saved-torque arithmetic error or the null branch alone is established as the cause.",
+      "limit": "Does not prove the source-design choice of finger-body Jacobian with centered-TCP feedback is dynamically equivalent to PhysX. Coupling remains."
+    },
+    "H5_finger_contact": {
+      "status": "SUPPORTED_BUT_NOT_PROVEN",
+      "support": "D02 passive-arm preserves grasp; D09 naive affine PD fails despite passive arm; D10 modest passive contact-timeconstant sensitivity preserves grasp.",
+      "limit": "Current finger/contact model is stable statically over16steps but acceleration robustness is not proven. Passive D10 cannot establish contact tuning solves driven instability."
+    },
+    "H6_reset": {
+      "status": "INCONCLUSIVE",
+      "support": "Identical admitted initial qpos/qvel used across variants. Passive-arm preservation weakens a purely static initial-grasp failure explanation.",
+      "limit": "One adapted initial condition and missing historical solver states; no source-randomization or multiple-reset test."
+    },
+    "H7_observation_quaternion_FD": {
+      "status": "INCONCLUSIVE",
+      "support": "No actor called during diagnostics; archived actions suffice to reproduce short-window failure, with previously verified early FD/sign behavior.",
+      "contradicted_claim": "A fresh PPO decision after the first action is necessary for the first-eight oscillation.",
+      "limit": "Broader cross-engine frame and float precision effects are not globally ruled out."
+    }
+  },
+  "scientific_boundary": {
+    "ROOT_CAUSE_PENDING": true,
+    "SOLUTION_PENDING": true,
+    "VALIDATION_PENDING": true,
+    "official_configuration_modified": false,
+    "full_policy_task_success_claim": false,
+    "D06_is_diagnostic_only_not_official_fix": true,
+    "D08_finite_and_no_warning_is_not_physical_plausibility": true,
+    "independent_review_of_GUI_pixels": "Not performed by this numeric reader; GUI visibility and native closure checked against saved window/process receipts. Root separately reviews actual screenshots."
+  },
+  "input_hashes": {
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r1_diagnostics.py": {
+      "sha256": "1bf3d108fa92a6be83911ed9fd886e83a092ebf1555ebde28f17d026e5c3f8b1",
+      "bytes": 16829
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/preregistered_matrix.json": {
+      "sha256": "8815b7157d5abd430a896cb70aed1564f8e2297e74a52cbbde90bb660f23d0ab",
+      "bytes": 3319
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/summary.json": {
+      "sha256": "c0147e659b762b1bb91509ba178da3ef432e29df2a95a234b0cdbf8b61ebeba6",
+      "bytes": 17162
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/archived_analysis/diagnostic_review_reader.py.txt": {
+      "sha256": "e5d32fb42641e076f58710305533ff1487be76457d4b292be50fca2bc974ff7d",
+      "bytes": 15075
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/analyze_g4s2a_r1.py": {
+      "sha256": "672e7b6ab02417731ee2e1f07617fde2c57f152a794a41d1997d88a527c1ef33",
+      "bytes": 24400
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s1b_env.py": {
+      "sha256": "065affe855ef1d3fa016d6ed8166699a9fc7ea1476d3c5302cee1663d56c92dd",
+      "bytes": 39533
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s1b_contract.py": {
+      "sha256": "dcf91aa274a6151f88f36901ce0c4a2feac76d7b8fcfe6586104f906c67d6d6c",
+      "bytes": 20029
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D01/physics.jsonl": {
+      "sha256": "ba4c841861cd9c9fb6a58a9056fe0e8e4ba7588edac557942e27b8ac8d253e07",
+      "bytes": 182404
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D01/result.json": {
+      "sha256": "135d788e1db1ee51466400926b5c8cac62909fa94c0769626328b5fa391fdaa0",
+      "bytes": 868
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D01/identity.json": {
+      "sha256": "1da589687a6e6175122e5705dd6d931a430e0b0f54f6200fffa9957f3cad40e3",
+      "bytes": 7507
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D01/gui_admission.json": {
+      "sha256": "523acf2b4fc01c430bf21e20ee075422b67da81984e1957aec79cf328f5d3c66",
+      "bytes": 1033
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D02/physics.jsonl": {
+      "sha256": "227e21e88c6b0e6cd44b746b6a7c29b679356243d0bdd718986ffcbaf86c3efe",
+      "bytes": 182207
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D02/result.json": {
+      "sha256": "2114ca198d5cf491d04c254854181b36db8c2bdcb62a5f8daae22d6331d18301",
+      "bytes": 879
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D02/identity.json": {
+      "sha256": "524b32ff3f01148a550ad3265ccaa39106b418fdae82711ecc34fc99e16a982e",
+      "bytes": 7503
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D02/gui_admission.json": {
+      "sha256": "523acf2b4fc01c430bf21e20ee075422b67da81984e1957aec79cf328f5d3c66",
+      "bytes": 1033
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D03/physics.jsonl": {
+      "sha256": "6ba6009113c7e67bb205f82a7b93527b96c03b3122cd4cb352c85c7b552e45a6",
+      "bytes": 183978
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D03/result.json": {
+      "sha256": "2ed36b2df9b3e3e8ef8d94b1a24edd0b8fa099d798badac7c6403472990e58a3",
+      "bytes": 886
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D03/identity.json": {
+      "sha256": "e29d67edbbd62d9bd6b8c10ce227b6089eb306a180c0d341b890b5cb0523a81e",
+      "bytes": 7520
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D03/gui_admission.json": {
+      "sha256": "523acf2b4fc01c430bf21e20ee075422b67da81984e1957aec79cf328f5d3c66",
+      "bytes": 1033
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D04/physics.jsonl": {
+      "sha256": "d320c0b1362a6c47b462d55b4954f0c47dffd860260201ce72c83d481b551da6",
+      "bytes": 183227
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D04/result.json": {
+      "sha256": "c8d5e5f18078deb48d8958cffff0f67a798f4004cf14ffbe4e52e0f1549c2fa6",
+      "bytes": 871
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D04/identity.json": {
+      "sha256": "5fb95e51c139ca76d4443dafa73518f58cf4b5ff66b15ece239873707dc78396",
+      "bytes": 7508
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D04/gui_admission.json": {
+      "sha256": "523acf2b4fc01c430bf21e20ee075422b67da81984e1957aec79cf328f5d3c66",
+      "bytes": 1033
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D05/physics.jsonl": {
+      "sha256": "8c6b8b3787deef1cd2e5f15066da74f464c57d4073a42f94c4a1082c1cd67c74",
+      "bytes": 194157
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D05/result.json": {
+      "sha256": "c426a4aeb4582cafb41e911ad3ae4fc8e7e12c096a0d765c13a22c9e0120d646",
+      "bytes": 885
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D05/identity.json": {
+      "sha256": "08f8325b654be8edc87ddb29c425ef2fb26d264904c8995c4edcd65ec679f61a",
+      "bytes": 7513
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D05/gui_admission.json": {
+      "sha256": "523acf2b4fc01c430bf21e20ee075422b67da81984e1957aec79cf328f5d3c66",
+      "bytes": 1033
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D06/physics.jsonl": {
+      "sha256": "42cd94227e036b3f88e6d31925107f0717d5115f689d73eab17d8d792209c3d0",
+      "bytes": 193144
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D06/result.json": {
+      "sha256": "1200f102b2431265e8eda95306ad3c3955d2d1082a9850ffcc83b175f8d54c36",
+      "bytes": 948
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D06/identity.json": {
+      "sha256": "075ce9a37585bcb7b01efc2e44b1170f78f45f9c920e1a2fce57af0a97a58a22",
+      "bytes": 7827
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D06/gui_admission.json": {
+      "sha256": "523acf2b4fc01c430bf21e20ee075422b67da81984e1957aec79cf328f5d3c66",
+      "bytes": 1033
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D07/physics.jsonl": {
+      "sha256": "8c12d6593aed4f6835efb316e9216194ac485c328ff9241b5eaf046b9bb665f5",
+      "bytes": 185546
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D07/result.json": {
+      "sha256": "6ce413ee021c5880f0e325d7e3fdf4db2c957dfabf7e4e9a1c1bb910eda644e3",
+      "bytes": 934
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D07/identity.json": {
+      "sha256": "75d4fd1d14401093054f088d906f514cf1176e43ca4fbc26dfc36980e0c34d3d",
+      "bytes": 7623
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D07/gui_admission.json": {
+      "sha256": "523acf2b4fc01c430bf21e20ee075422b67da81984e1957aec79cf328f5d3c66",
+      "bytes": 1033
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D08/physics.jsonl": {
+      "sha256": "5d82e1d51bdabdb50b611741fc1a87539dd76d8e26e8da2834a04af351db78cd",
+      "bytes": 169907
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D08/result.json": {
+      "sha256": "5cb881a005998303ed87871dc43f0b2f238ffb0f1cd331e6cfe81c8337b6bd6f",
+      "bytes": 932
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D08/identity.json": {
+      "sha256": "093cdb76d3bc3135d1ed8a7ea06216d35815f9e8d1a6503f29fe471a801d0942",
+      "bytes": 7634
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D08/gui_admission.json": {
+      "sha256": "523acf2b4fc01c430bf21e20ee075422b67da81984e1957aec79cf328f5d3c66",
+      "bytes": 1033
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D09/physics.jsonl": {
+      "sha256": "9987ab74a120cea9e652c2c5088677947b26310d5b5d981cc1c939d59e00e097",
+      "bytes": 493106
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D09/result.json": {
+      "sha256": "88aa9183b37b95eee37c5129f89e571e0e58b8b120ac0ae0d6801b3abaa2aa01",
+      "bytes": 941
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D09/identity.json": {
+      "sha256": "b04ebb2c1a192bee9c88d6bce6ec8af1448ef26a5a91841871501f15c9f7f7ee",
+      "bytes": 7591
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D09/gui_admission.json": {
+      "sha256": "523acf2b4fc01c430bf21e20ee075422b67da81984e1957aec79cf328f5d3c66",
+      "bytes": 1033
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D10/physics.jsonl": {
+      "sha256": "980f65872418e77fe89571ce549b884b7053092bd525db21f271b03a962b475b",
+      "bytes": 182315
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D10/result.json": {
+      "sha256": "bbcbca06470fa8ddf16ac2358192c1906a6c4be1231cf465b1a38402a87a9bad",
+      "bytes": 961
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D10/identity.json": {
+      "sha256": "20bd7f269715dca16944895801d9578d2af6a936df96e174cb433709706a7b49",
+      "bytes": 7651
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D10/gui_admission.json": {
+      "sha256": "523acf2b4fc01c430bf21e20ee075422b67da81984e1957aec79cf328f5d3c66",
+      "bytes": 1033
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "source": "priorfailedGUIstartup",
+  "private_raw_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/gui_startup_full_x11_tree_private.txt",
+  "private_raw_sha256": "861ca168bfad0d9a7c8bda7a3d33f4bbcaa4f097b6ec458bbb86d18e490a8f18",
+  "only_matching_MuJoCo_lines": [
+    "        0x620000b \"MuJoCo : g4_s1b_adapted_panda_peg_insert\": (\"MuJoCo\" \"MuJoCo\")  1706x960+20+90  +140+128"
+  ],
+  "other_desktop_window_titles_excluded_from_repository": true,
+  "new_physics_steps": 0,
+  "actor_calls": 0
+}

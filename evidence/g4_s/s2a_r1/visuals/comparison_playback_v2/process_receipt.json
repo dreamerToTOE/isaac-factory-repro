@@ -1,0 +1,33 @@
+{
+  "exit_code": 0,
+  "actual_visible_GUI": true,
+  "new_physics_steps": 0,
+  "policy_calls": 0,
+  "source_sha256": "0a5da8bd9ef79c017a3401d66daaec307330ad228907e7e4907af2a31551a415",
+  "graceful_closes": [
+    {
+      "viewer_close_requested": true,
+      "render_threads_joined": [
+        "Thread-1 (_launch_internal)"
+      ],
+      "remaining_render_threads": [],
+      "close_wall_s": 0.030834678997052833
+    },
+    {
+      "viewer_close_requested": true,
+      "render_threads_joined": [
+        "Thread-3 (_launch_internal)"
+      ],
+      "remaining_render_threads": [],
+      "close_wall_s": 0.028579603997059166
+    },
+    {
+      "viewer_close_requested": true,
+      "render_threads_joined": [
+        "Thread-5 (_launch_internal)"
+      ],
+      "remaining_render_threads": [],
+      "close_wall_s": 0.03131243700045161
+    }
+  ]
+}

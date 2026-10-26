@@ -1,0 +1,11 @@
+{
+  "files": {
+    "all_variant_slip.png": "73c4166c5b80dff39e28815f26404766990fce4c6470bf9ccccc69aac8beb231",
+    "body_inertia_vs_armature.png": "4117627151067611dbef8755c92c3cf51588ffc8155f5b4051e4f2c631099cdb",
+    "comparison.json": "c93bcc47c80ba7e70cd7929e7324db9f080db1ec94ecdb091a7508b58d215a97",
+    "static_armature_scope_clarification.json": "44ac1a7d5e42cc2c8d93a340a94018305595dd8e6dfc2dcf8849e68340271e54",
+    "variant_comparison.csv": "66ff35d90958c930e54797450e8c6e0f401398535f7f9a7721015cba79a1f738"
+  },
+  "new_physics_steps": 0,
+  "new_actor_calls": 0
+}

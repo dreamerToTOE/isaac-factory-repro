@@ -1,0 +1,33 @@
+{
+  "task": "G4-S2A-R1",
+  "scope": "DIAGNOSTIC_ONLY",
+  "variant": {
+    "id": "D08",
+    "name": "arm_motor_force_limits_100Nm",
+    "delta": {
+      "all_arm_motor_force_limits_nm": 100.0
+    },
+    "arm": "full"
+  },
+  "actual_physics_steps": 16,
+  "recorded_steps": 16,
+  "policy_inferences": 0,
+  "physics_call_wall_s": 0.01040623400331242,
+  "wall_s": 3.975759539003775,
+  "failure": null,
+  "graceful_close": {
+    "viewer_close_requested": true,
+    "render_threads_joined": [
+      "Thread-1 (_launch_internal)"
+    ],
+    "remaining_render_threads": [],
+    "close_wall_s": 0.015753549996588845
+  },
+  "model_configuration_sha256": "0596b20b742a5098d7be26fa10b38f1b6fa32bbfb76d2859ef1f5e3ecdb71fec",
+  "max_slip_m": 34982.549058221135,
+  "first_bilateral_loss_step": 3,
+  "max_arm_qvel_rad_s": 78.29290366166379,
+  "max_arm_limit_rad": 0.0,
+  "max_finger_limit_m": 0.0,
+  "max_all_penetration_m": 0.0009943240416816729
+}

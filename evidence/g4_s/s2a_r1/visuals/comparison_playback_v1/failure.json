@@ -1,0 +1,9 @@
+{
+  "phase": "ZERO_INTEGRATION_VISUAL_CAPTURE",
+  "exit_code": 1,
+  "new_physics_steps": 0,
+  "actor_calls": 0,
+  "error": "Path.relative_to mixed relative output path with absolute ROOT; failed after first screenshot, before remaining metadata/screenshots.",
+  "retained_partial_png": "D01_physics_04.png",
+  "recovery": "Resolve output path before capture; use new output directory. No physical experiment retry."
+}

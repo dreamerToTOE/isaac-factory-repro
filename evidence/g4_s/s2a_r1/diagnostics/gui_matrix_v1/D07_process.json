@@ -1,0 +1,48 @@
+{
+  "variant": "D07",
+  "command": [
+    "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+    "-u",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r1_diagnostics.py",
+    "--run-variant",
+    "D07",
+    "--manifest",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/preregistered_matrix.json",
+    "--output",
+    "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D07"
+  ],
+  "exact_child_exit_code": 0,
+  "result": {
+    "task": "G4-S2A-R1",
+    "scope": "DIAGNOSTIC_ONLY",
+    "variant": {
+      "id": "D07",
+      "name": "robot_joint_armature_plus_0p01",
+      "delta": {
+        "joint_armature_offset_kg_m2": 0.01
+      },
+      "arm": "full"
+    },
+    "actual_physics_steps": 16,
+    "recorded_steps": 16,
+    "policy_inferences": 0,
+    "physics_call_wall_s": 0.012237271010235418,
+    "wall_s": 4.103325600997778,
+    "failure": null,
+    "graceful_close": {
+      "viewer_close_requested": true,
+      "render_threads_joined": [
+        "Thread-1 (_launch_internal)"
+      ],
+      "remaining_render_threads": [],
+      "close_wall_s": 0.016415056998084765
+    },
+    "model_configuration_sha256": "e546405ab0f598ca1f884061c693b0b8ad5294a4b36deceda7466d22c826665b",
+    "max_slip_m": 0.005069042609256503,
+    "first_bilateral_loss_step": 3,
+    "max_arm_qvel_rad_s": 3.9694332336320794,
+    "max_arm_limit_rad": 0.0,
+    "max_finger_limit_m": 0.0,
+    "max_all_penetration_m": 0.003493853898239341
+  }
+}

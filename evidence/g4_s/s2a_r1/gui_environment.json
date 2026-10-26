@@ -1,0 +1,34 @@
+{
+  "task": "G4-S2A-R1",
+  "DISPLAY": ":1",
+  "WAYLAND_DISPLAY": null,
+  "XDG_SESSION_TYPE": "x11",
+  "XAUTHORITY": "/run/user/1000/gdm/Xauthority",
+  "MUJOCO_GL": null,
+  "loginctl_session_2": "Display=\nRemote=no\nType=x11\nActive=yes\nState=active\n",
+  "xdpyinfo_header": "name of display:    :1\nversion number:    11.0\nvendor string:    The X.Org Foundation\nvendor release number:    12101004\nX.Org version: 1.21.1.4\nmaximum request size:  16777212 bytes\nmotion buffer size:  256\nbitmap unit, bit order, padding:    32, LSBFirst, 32\nimage byte order:    LSBFirst\nnumber of supported pixmap formats:    7\nsupported pixmap formats:\n    depth 1, bits_per_pixel 1, scanline_pad 32",
+  "initial_GL_capability_probe": {
+    "provenance": "Recorded from the initial tool output; this summary is retrospective, not a new graphics/physics probe",
+    "mujoco_version": "3.5.0",
+    "glfw_get_version_string": "3.4.0 X11 GLX Null EGL OSMesa monotonic shared",
+    "glfw_init": 1,
+    "context_created": true,
+    "probe_window_visible": false,
+    "probe_window_size": [
+      32,
+      32
+    ],
+    "GL_VENDOR": "NVIDIA Corporation",
+    "GL_RENDERER": "NVIDIA GeForce RTX 3070/PCIe/SSE2",
+    "GL_VERSION": "4.6.0 NVIDIA 580.178.04",
+    "physical_steps": 0,
+    "used_as_GUI_success_evidence": false
+  },
+  "actual_GUI_success_basis": "Clean real X11 window captures plus IsViewable receipts, not the hidden graphics capability check",
+  "renderer": "native GLFW/GLX actual Ubuntu desktop",
+  "no_EGL_OSMesa_Xvfb_substitution": true,
+  "driver_or_global_installation_modified": false,
+  "new_policy_calls": 0,
+  "new_physics_steps_in_environment_checks": 0,
+  "viewer_source": "scripts/g4s2a_r1_viewer.py"
+}

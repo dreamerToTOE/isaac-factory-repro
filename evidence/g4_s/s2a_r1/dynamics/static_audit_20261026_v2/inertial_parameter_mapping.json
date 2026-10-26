@@ -1,0 +1,1191 @@
+{
+  "bodies": [
+    {
+      "source_body": "panda_link0",
+      "target_body": "link0",
+      "source_authored_mass_kg": 0.6297690272331238,
+      "source_CoM_m_in_source_axes": [
+        -0.04101800173521042,
+        -0.00014000000373926014,
+        0.049973998218774796
+      ],
+      "source_principal_inertia_kg_m2": [
+        0.0031305106822401285,
+        0.003879839088767767,
+        0.004304650239646435
+      ],
+      "source_tensor_in_target_body_axes_kg_m2": [
+        [
+          0.0031499999314957266,
+          8.290408036657026e-07,
+          0.00015000014256810285
+        ],
+        [
+          8.290408036657014e-07,
+          0.0038799999965062775,
+          8.229891782703112e-06
+        ],
+        [
+          0.00015000014256810282,
+          8.229891782703107e-06,
+          0.004285000082652327
+        ]
+      ],
+      "conditional_source_tensor_plus0p01I_in_target_body_axes": [
+        [
+          0.013149999931495727,
+          8.290408036657026e-07,
+          0.00015000014256810285
+        ],
+        [
+          8.290408036657014e-07,
+          0.013879999996506277,
+          8.229891782703112e-06
+        ],
+        [
+          0.00015000014256810282,
+          8.229891782703107e-06,
+          0.014285000082652327
+        ]
+      ],
+      "compiled_target": {
+        "name": "link0",
+        "id": 1,
+        "mass_kg": 0.629769,
+        "CoM_body_m": [
+          -0.041018,
+          -0.00014,
+          0.049974
+        ],
+        "principal_axes_wxyz": [
+          0.006304742250265338,
+          0.7512445646566475,
+          0.007417744420410821,
+          0.6599521432397345
+        ],
+        "principal_inertia_kg_m2": [
+          0.004304650123430994,
+          0.0038798390919025367,
+          0.0031305107846664564
+        ],
+        "inertia_tensor_body_kg_m2": [
+          [
+            0.003149999999997716,
+            8.290398098560977e-07,
+            0.0001499999999951007
+          ],
+          [
+            8.290398098560985e-07,
+            0.0038799999999426047,
+            8.229898539090702e-06
+          ],
+          [
+            0.00014999999999510067,
+            8.229898539090697e-06,
+            0.004285000000059666
+          ]
+        ],
+        "gravity_compensation": 1.0
+      },
+      "source_runtime_status": "UNKNOWN_NOT_MEASURED_PHYSX",
+      "missing_target_body": false,
+      "source_authored_inertia_missing": false
+    },
+    {
+      "source_body": "panda_link1",
+      "target_body": "link1",
+      "source_authored_mass_kg": 4.970684051513672,
+      "source_CoM_m_in_source_axes": [
+        0.003874999936670065,
+        0.0020810000132769346,
+        -0.04761999845504761
+      ],
+      "source_principal_inertia_kg_m2": [
+        0.7034354209899902,
+        0.7071369886398315,
+        0.008524555712938309
+      ],
+      "source_tensor_in_target_body_axes_kg_m2": [
+        [
+          0.7033699917463887,
+          -0.00013900057834754893,
+          0.0067719998291300735
+        ],
+        [
+          -0.0001390005783475481,
+          0.7066099741999629,
+          0.019168998985379514
+        ],
+        [
+          0.0067719998291300735,
+          0.01916899898537951,
+          0.00911699939640865
+        ]
+      ],
+      "conditional_source_tensor_plus0p01I_in_target_body_axes": [
+        [
+          0.7133699917463887,
+          -0.00013900057834754893,
+          0.0067719998291300735
+        ],
+        [
+          -0.0001390005783475481,
+          0.7166099741999629,
+          0.019168998985379514
+        ],
+        [
+          0.0067719998291300735,
+          0.01916899898537951,
+          0.01911699939640865
+        ]
+      ],
+      "compiled_target": {
+        "name": "link1",
+        "id": 2,
+        "mass_kg": 4.970684,
+        "CoM_body_m": [
+          0.003875,
+          0.002081,
+          -0.04762
+        ],
+        "principal_axes_wxyz": [
+          0.7115491548439588,
+          0.0063437712335342065,
+          -0.013112389998375933,
+          0.7024853180216057
+        ],
+        "principal_inertia_kg_m2": [
+          0.7071370144883009,
+          0.7034354292338564,
+          0.00852455627784294
+        ],
+        "inertia_tensor_body_kg_m2": [
+          [
+            0.7033700000000005,
+            -0.00013900445959308353,
+            0.006771999877535431
+          ],
+          [
+            -0.00013900445959308334,
+            0.7066099748820788,
+            0.019169456976747243
+          ],
+          [
+            0.0067719998775354305,
+            0.019169456976747243,
+            0.009117025117921757
+          ]
+        ],
+        "gravity_compensation": 1.0
+      },
+      "source_runtime_status": "UNKNOWN_NOT_MEASURED_PHYSX",
+      "missing_target_body": false,
+      "source_authored_inertia_missing": false
+    },
+    {
+      "source_body": "panda_link2",
+      "target_body": "link2",
+      "source_authored_mass_kg": 0.6469259858131409,
+      "source_CoM_m_in_source_axes": [
+        -0.003140999935567379,
+        -0.028720000758767128,
+        0.003495000069960952
+      ],
+      "source_principal_inertia_kg_m2": [
+        0.0027342496905475855,
+        0.028300104662775993,
+        0.031032642349600792
+      ],
+      "source_tensor_in_target_body_axes_kg_m2": [
+        [
+          0.00796199885914474,
+          -0.003925000108363543,
+          0.010253999809487184
+        ],
+        [
+          -0.003925000108363543,
+          0.028109998291527778,
+          0.000703998970541454
+        ],
+        [
+          0.010253999809487182,
+          0.0007039989705414557,
+          0.025994999552251843
+        ]
+      ],
+      "conditional_source_tensor_plus0p01I_in_target_body_axes": [
+        [
+          0.01796199885914474,
+          -0.003925000108363543,
+          0.010253999809487184
+        ],
+        [
+          -0.003925000108363543,
+          0.03810999829152778,
+          0.000703998970541454
+        ],
+        [
+          0.010253999809487182,
+          0.0007039989705414557,
+          0.03599499955225184
+        ]
+      ],
+      "compiled_target": {
+        "name": "link2",
+        "id": 3,
+        "mass_kg": 0.646926,
+        "CoM_body_m": [
+          -0.003141,
+          -0.02872,
+          0.003495
+        ],
+        "principal_axes_wxyz": [
+          -0.16817480155429798,
+          0.8283658778649345,
+          -0.12287755442070392,
+          0.5200272253746144
+        ],
+        "principal_inertia_kg_m2": [
+          0.03103264256517663,
+          0.02830010693683385,
+          0.0027342504979895274
+        ],
+        "inertia_tensor_body_kg_m2": [
+          [
+            0.007961999540648515,
+            -0.003924999835659038,
+            0.010253999663248917
+          ],
+          [
+            -0.003924999835659038,
+            0.028110000067721852,
+            0.0007039998362570821
+          ],
+          [
+            0.010253999663248917,
+            0.0007039998362570817,
+            0.025995000391629604
+          ]
+        ],
+        "gravity_compensation": 1.0
+      },
+      "source_runtime_status": "UNKNOWN_NOT_MEASURED_PHYSX",
+      "missing_target_body": false,
+      "source_authored_inertia_missing": false
+    },
+    {
+      "source_body": "panda_link3",
+      "target_body": "link3",
+      "source_authored_mass_kg": 3.2286040782928467,
+      "source_CoM_m_in_source_axes": [
+        0.027518000453710556,
+        0.03925200179219246,
+        -0.06650199741125107
+      ],
+      "source_principal_inertia_kg_m2": [
+        0.041479259729385376,
+        0.04150139167904854,
+        0.0012463537277653813
+      ],
+      "source_tensor_in_target_body_axes_kg_m2": [
+        [
+          0.03724200143179087,
+          -0.004760999912237461,
+          -0.011396001892922742
+        ],
+        [
+          -0.004760999912237461,
+          0.03615500395288968,
+          -0.012805000232288125
+        ],
+        [
+          -0.011396001892922742,
+          -0.012805000232288125,
+          0.010829999751518715
+        ]
+      ],
+      "conditional_source_tensor_plus0p01I_in_target_body_axes": [
+        [
+          0.04724200143179087,
+          -0.004760999912237461,
+          -0.011396001892922742
+        ],
+        [
+          -0.004760999912237461,
+          0.046155003952889684,
+          -0.012805000232288125
+        ],
+        [
+          -0.011396001892922742,
+          -0.012805000232288125,
+          0.020829999751518717
+        ]
+      ],
+      "compiled_target": {
+        "name": "link3",
+        "id": 4,
+        "mass_kg": 3.228604,
+        "CoM_body_m": [
+          0.027518,
+          0.039252,
+          -0.066502
+        ],
+        "principal_axes_wxyz": [
+          0.6627687684234549,
+          -0.006783314734544799,
+          0.25205316921967597,
+          0.7050962672784391
+        ],
+        "principal_inertia_kg_m2": [
+          0.04150138828861061,
+          0.041479257270665607,
+          0.0012463544407238245
+        ],
+        "inertia_tensor_body_kg_m2": [
+          [
+            0.03724200000176328,
+            -0.004761000001990125,
+            -0.011395999997898984
+          ],
+          [
+            -0.004761000001990125,
+            0.036154999999981466,
+            -0.012804999999329757
+          ],
+          [
+            -0.011395999997898984,
+            -0.012804999999329759,
+            0.010829999998255289
+          ]
+        ],
+        "gravity_compensation": 1.0
+      },
+      "source_runtime_status": "UNKNOWN_NOT_MEASURED_PHYSX",
+      "missing_target_body": false,
+      "source_authored_inertia_missing": false
+    },
+    {
+      "source_body": "panda_link4",
+      "target_body": "link4",
+      "source_authored_mass_kg": 3.587894916534424,
+      "source_CoM_m_in_source_axes": [
+        -0.05316999927163124,
+        0.10441900044679642,
+        0.02745399996638298
+      ],
+      "source_principal_inertia_kg_m2": [
+        0.02814827673137188,
+        0.010620084591209888,
+        0.034959644079208374
+      ],
+      "source_tensor_in_target_body_axes_kg_m2": [
+        [
+          0.02585300243294633,
+          0.0077960007399659505,
+          -0.0013319981398400673
+        ],
+        [
+          0.007796000739965951,
+          0.01955200120333332,
+          0.008641000688256928
+        ],
+        [
+          -0.0013319981398400651,
+          0.008641000688256928,
+          0.0283230017655105
+        ]
+      ],
+      "conditional_source_tensor_plus0p01I_in_target_body_axes": [
+        [
+          0.03585300243294633,
+          0.0077960007399659505,
+          -0.0013319981398400673
+        ],
+        [
+          0.007796000739965951,
+          0.029552001203333317,
+          0.008641000688256928
+        ],
+        [
+          -0.0013319981398400651,
+          0.008641000688256928,
+          0.0383230017655105
+        ]
+      ],
+      "compiled_target": {
+        "name": "link4",
+        "id": 5,
+        "mass_kg": 3.587895,
+        "CoM_body_m": [
+          -0.05317,
+          0.104419,
+          0.027454
+        ],
+        "principal_axes_wxyz": [
+          0.6505803874881221,
+          0.5298216601916185,
+          -0.0962034215397457,
+          0.5355175715993369
+        ],
+        "principal_inertia_kg_m2": [
+          0.03495964042412706,
+          0.028148276242039156,
+          0.010620083333833793
+        ],
+        "inertia_tensor_body_kg_m2": [
+          [
+            0.025853002310633984,
+            0.007795998125193512,
+            -0.001331999750817655
+          ],
+          [
+            0.007795998125193513,
+            0.019551999300297485,
+            0.008641001705008582
+          ],
+          [
+            -0.001331999750817653,
+            0.008641001705008582,
+            0.02832299838906856
+          ]
+        ],
+        "gravity_compensation": 1.0
+      },
+      "source_runtime_status": "UNKNOWN_NOT_MEASURED_PHYSX",
+      "missing_target_body": false,
+      "source_authored_inertia_missing": false
+    },
+    {
+      "source_body": "panda_link5",
+      "target_body": "link5",
+      "source_authored_mass_kg": 1.2259459495544434,
+      "source_CoM_m_in_source_axes": [
+        -0.011952999979257584,
+        0.041064999997615814,
+        -0.038437001407146454
+      ],
+      "source_principal_inertia_kg_m2": [
+        0.0367625392973423,
+        0.028853092342615128,
+        0.008034370839595795
+      ],
+      "source_tensor_in_target_body_axes_kg_m2": [
+        [
+          0.035549001279878305,
+          -0.0021169997914879226,
+          -0.004036999647405212
+        ],
+        [
+          -0.0021169997914879226,
+          0.02947400095632551,
+          0.00022899999849540232
+        ],
+        [
+          -0.004036999647405212,
+          0.00022899999849540238,
+          0.008627000243349389
+        ]
+      ],
+      "conditional_source_tensor_plus0p01I_in_target_body_axes": [
+        [
+          0.04554900127987831,
+          -0.0021169997914879226,
+          -0.004036999647405212
+        ],
+        [
+          -0.0021169997914879226,
+          0.03947400095632551,
+          0.00022899999849540232
+        ],
+        [
+          -0.004036999647405212,
+          0.00022899999849540238,
+          0.018627000243349387
+        ]
+      ],
+      "compiled_target": {
+        "name": "link5",
+        "id": 6,
+        "mass_kg": 1.225946,
+        "CoM_body_m": [
+          -0.011953,
+          0.041065,
+          -0.038437
+        ],
+        "principal_axes_wxyz": [
+          0.9873132613697035,
+          -0.012195351287934265,
+          0.0719186669438179,
+          -0.1410372386127408
+        ],
+        "principal_inertia_kg_m2": [
+          0.036762538266730406,
+          0.028853091260661545,
+          0.008034370472607986
+        ],
+        "inertia_tensor_body_kg_m2": [
+          [
+            0.03554899999468712,
+            -0.0021170000092892677,
+            -0.004037000017745762
+          ],
+          [
+            -0.0021170000092892672,
+            0.029473999999486154,
+            0.0002289999369738807
+          ],
+          [
+            -0.004037000017745762,
+            0.00022899993697388056,
+            0.008627000005826663
+          ]
+        ],
+        "gravity_compensation": 1.0
+      },
+      "source_runtime_status": "UNKNOWN_NOT_MEASURED_PHYSX",
+      "missing_target_body": false,
+      "source_authored_inertia_missing": false
+    },
+    {
+      "source_body": "panda_link6",
+      "target_body": "link6",
+      "source_authored_mass_kg": 1.6665550470352173,
+      "source_CoM_m_in_source_axes": [
+        0.060148999094963074,
+        -0.014116999693214893,
+        -0.010517000220716
+      ],
+      "source_principal_inertia_kg_m2": [
+        0.001597865018993616,
+        0.0043103741481900215,
+        0.0058427611365914345
+      ],
+      "source_tensor_in_target_body_axes_kg_m2": [
+        [
+          0.0019639999043171096,
+          0.00010900011028157446,
+          -0.001157999923355812
+        ],
+        [
+          0.00010900011028157439,
+          0.004354000391034687,
+          0.00034099985461104966
+        ],
+        [
+          -0.0011579999233558118,
+          0.00034099985461104955,
+          0.0054330000084232746
+        ]
+      ],
+      "conditional_source_tensor_plus0p01I_in_target_body_axes": [
+        [
+          0.01196399990431711,
+          0.00010900011028157446,
+          -0.001157999923355812
+        ],
+        [
+          0.00010900011028157439,
+          0.014354000391034686,
+          0.00034099985461104966
+        ],
+        [
+          -0.0011579999233558118,
+          0.00034099985461104955,
+          0.015433000008423275
+        ]
+      ],
+      "compiled_target": {
+        "name": "link6",
+        "id": 7,
+        "mass_kg": 1.666555,
+        "CoM_body_m": [
+          0.060149,
+          -0.014117,
+          -0.010517
+        ],
+        "principal_axes_wxyz": [
+          0.10107538124240018,
+          0.5933199069415573,
+          0.028722697180501022,
+          0.7980791076079152
+        ],
+        "principal_inertia_kg_m2": [
+          0.005842761226567758,
+          0.004310373704197247,
+          0.001597865069234999
+        ],
+        "inertia_tensor_body_kg_m2": [
+          [
+            0.0019639999730963966,
+            0.00010900001059101002,
+            -0.0011579999581984534
+          ],
+          [
+            0.00010900001059101002,
+            0.0043539999985153545,
+            0.0003409999993739057
+          ],
+          [
+            -0.0011579999581984534,
+            0.000340999999373906,
+            0.0054330000283882495
+          ]
+        ],
+        "gravity_compensation": 1.0
+      },
+      "source_runtime_status": "UNKNOWN_NOT_MEASURED_PHYSX",
+      "missing_target_body": false,
+      "source_authored_inertia_missing": false
+    },
+    {
+      "source_body": "panda_link7",
+      "target_body": "link7",
+      "source_authored_mass_kg": 0.7355219721794128,
+      "source_CoM_m_in_source_axes": [
+        0.010517000220716,
+        -0.004251999780535698,
+        0.06159700080752373
+      ],
+      "source_principal_inertia_kg_m2": [
+        0.012734493240714073,
+        0.010105476714670658,
+        0.00451803021132946
+      ],
+      "source_tensor_in_target_body_axes_kg_m2": [
+        [
+          0.012516000382137604,
+          -0.0004280000967090724,
+          -0.0011959999092936708
+        ],
+        [
+          -0.0004280000967090724,
+          0.010026999571643585,
+          -0.000740999986993182
+        ],
+        [
+          -0.0011959999092936706,
+          -0.0007409999869931818,
+          0.004815000212932998
+        ]
+      ],
+      "conditional_source_tensor_plus0p01I_in_target_body_axes": [
+        [
+          0.022516000382137604,
+          -0.0004280000967090724,
+          -0.0011959999092936708
+        ],
+        [
+          -0.0004280000967090724,
+          0.020026999571643583,
+          -0.000740999986993182
+        ],
+        [
+          -0.0011959999092936706,
+          -0.0007409999869931818,
+          0.014815000212933
+        ]
+      ],
+      "compiled_target": {
+        "name": "link7",
+        "id": 8,
+        "mass_kg": 0.735522,
+        "CoM_body_m": [
+          0.010517,
+          -0.004252,
+          0.061597
+        ],
+        "principal_axes_wxyz": [
+          0.9929385217915908,
+          -0.07620412050311047,
+          0.07335952004856763,
+          -0.05370665488486283
+        ],
+        "principal_inertia_kg_m2": [
+          0.012734492874724473,
+          0.01010547714435622,
+          0.004518029980919309
+        ],
+        "inertia_tensor_body_kg_m2": [
+          [
+            0.012515999991835442,
+            -0.00042800000332901295,
+            -0.001196000025356046
+          ],
+          [
+            -0.0004280000033290131,
+            0.010027000000915106,
+            -0.0007409999963592645
+          ],
+          [
+            -0.001196000025356046,
+            -0.0007409999963592647,
+            0.004815000007249452
+          ]
+        ],
+        "gravity_compensation": 1.0
+      },
+      "source_runtime_status": "UNKNOWN_NOT_MEASURED_PHYSX",
+      "missing_target_body": false,
+      "source_authored_inertia_missing": false
+    },
+    {
+      "source_body": "force_sensor",
+      "target_body": null,
+      "source_authored_mass_kg": 0.009999999776482582,
+      "source_CoM_m_in_source_axes": [
+        0.010517000220716,
+        -0.004251999780535698,
+        0.06159700080752373
+      ],
+      "source_principal_inertia_kg_m2": null,
+      "source_tensor_in_target_body_axes_kg_m2": null,
+      "conditional_source_tensor_plus0p01I_in_target_body_axes": null,
+      "compiled_target": null,
+      "source_runtime_status": "UNKNOWN_NOT_MEASURED_PHYSX",
+      "missing_target_body": true,
+      "source_authored_inertia_missing": true
+    },
+    {
+      "source_body": "panda_hand",
+      "target_body": "hand",
+      "source_authored_mass_kg": 0.7300000190734863,
+      "source_CoM_m_in_source_axes": [
+        -0.009999999776482582,
+        0.0,
+        0.029999999329447746
+      ],
+      "source_principal_inertia_kg_m2": [
+        0.0010000000474974513,
+        0.0024999999441206455,
+        0.0017000000225380063
+      ],
+      "source_tensor_in_target_body_axes_kg_m2": [
+        [
+          0.001000000047497466,
+          1.5023054128011784e-10,
+          -2.1981297587733676e-19
+        ],
+        [
+          1.5023054128011784e-10,
+          0.0024999999441206303,
+          -2.5121473036210725e-19
+        ],
+        [
+          -2.1981297587733676e-19,
+          -2.5121473036210725e-19,
+          0.0017000000225380076
+        ]
+      ],
+      "conditional_source_tensor_plus0p01I_in_target_body_axes": [
+        [
+          0.011000000047497467,
+          1.5023054128011784e-10,
+          -2.1981297587733676e-19
+        ],
+        [
+          1.5023054128011784e-10,
+          0.01249999994412063,
+          -2.5121473036210725e-19
+        ],
+        [
+          -2.1981297587733676e-19,
+          -2.5121473036210725e-19,
+          0.011700000022538008
+        ]
+      ],
+      "compiled_target": {
+        "name": "hand",
+        "id": 9,
+        "mass_kg": 0.73,
+        "CoM_body_m": [
+          -0.01,
+          0.0,
+          0.03
+        ],
+        "principal_axes_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "principal_inertia_kg_m2": [
+          0.001,
+          0.0025,
+          0.0017
+        ],
+        "inertia_tensor_body_kg_m2": [
+          [
+            0.001,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0025,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0017
+          ]
+        ],
+        "gravity_compensation": 1.0
+      },
+      "source_runtime_status": "UNKNOWN_NOT_MEASURED_PHYSX",
+      "missing_target_body": false,
+      "source_authored_inertia_missing": false
+    },
+    {
+      "source_body": "panda_leftfinger",
+      "target_body": "left_finger",
+      "source_authored_mass_kg": 0.02969999983906746,
+      "source_CoM_m_in_source_axes": [
+        0.0,
+        0.01140000019222498,
+        0.023099999874830246
+      ],
+      "source_principal_inertia_kg_m2": [
+        7.552000170107931e-06,
+        7.375549557764316e-06,
+        2.135450131390826e-06
+      ],
+      "source_tensor_in_target_body_axes_kg_m2": [
+        [
+          7.552000170107923e-06,
+          -3.93604524639073e-14,
+          1.0446029056532009e-13
+        ],
+        [
+          -3.936045246390728e-14,
+          7.1589997842254815e-06,
+          1.0429997793300025e-06
+        ],
+        [
+          1.044602905653201e-13,
+          1.0429997793300025e-06,
+          2.3519999049296646e-06
+        ]
+      ],
+      "conditional_source_tensor_plus0p01I_in_target_body_axes": [
+        [
+          0.010007552000170108,
+          -3.93604524639073e-14,
+          1.0446029056532009e-13
+        ],
+        [
+          -3.936045246390728e-14,
+          0.010007158999784226,
+          1.0429997793300025e-06
+        ],
+        [
+          1.044602905653201e-13,
+          1.0429997793300025e-06,
+          0.01000235199990493
+        ]
+      ],
+      "compiled_target": {
+        "name": "left_finger",
+        "id": 10,
+        "mass_kg": 0.015,
+        "CoM_body_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "principal_axes_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "principal_inertia_kg_m2": [
+          2.375e-06,
+          2.375e-06,
+          7.5e-07
+        ],
+        "inertia_tensor_body_kg_m2": [
+          [
+            2.375e-06,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            2.375e-06,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            7.5e-07
+          ]
+        ],
+        "gravity_compensation": 1.0
+      },
+      "source_runtime_status": "UNKNOWN_NOT_MEASURED_PHYSX",
+      "missing_target_body": false,
+      "source_authored_inertia_missing": false
+    },
+    {
+      "source_body": "panda_rightfinger",
+      "target_body": "right_finger",
+      "source_authored_mass_kg": 0.02969999983906746,
+      "source_CoM_m_in_source_axes": [
+        0.0,
+        0.01140000019222498,
+        0.023099999874830246
+      ],
+      "source_principal_inertia_kg_m2": [
+        7.552000170107931e-06,
+        7.375549557764316e-06,
+        2.135450131390826e-06
+      ],
+      "source_tensor_in_target_body_axes_kg_m2": [
+        [
+          7.552000170107923e-06,
+          -3.93604524639073e-14,
+          -1.0446029056532009e-13
+        ],
+        [
+          -3.936045246390728e-14,
+          7.1589997842254815e-06,
+          -1.0429997793300025e-06
+        ],
+        [
+          -1.044602905653201e-13,
+          -1.0429997793300025e-06,
+          2.3519999049296646e-06
+        ]
+      ],
+      "conditional_source_tensor_plus0p01I_in_target_body_axes": [
+        [
+          0.010007552000170108,
+          -3.93604524639073e-14,
+          -1.0446029056532009e-13
+        ],
+        [
+          -3.936045246390728e-14,
+          0.010007158999784226,
+          -1.0429997793300025e-06
+        ],
+        [
+          -1.044602905653201e-13,
+          -1.0429997793300025e-06,
+          0.01000235199990493
+        ]
+      ],
+      "compiled_target": {
+        "name": "right_finger",
+        "id": 11,
+        "mass_kg": 0.015,
+        "CoM_body_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "principal_axes_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "principal_inertia_kg_m2": [
+          2.375e-06,
+          2.375e-06,
+          7.5e-07
+        ],
+        "inertia_tensor_body_kg_m2": [
+          [
+            2.375e-06,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            2.375e-06,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            7.5e-07
+          ]
+        ],
+        "gravity_compensation": 1.0
+      },
+      "source_runtime_status": "UNKNOWN_NOT_MEASURED_PHYSX",
+      "missing_target_body": false,
+      "source_authored_inertia_missing": false
+    },
+    {
+      "source_body": "panda_fingertip_centered",
+      "target_body": null,
+      "source_authored_mass_kg": 9.999999974752427e-07,
+      "source_CoM_m_in_source_axes": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "source_principal_inertia_kg_m2": [
+        9.999999717180685e-10,
+        9.999999717180685e-10,
+        9.999999717180685e-10
+      ],
+      "source_tensor_in_target_body_axes_kg_m2": null,
+      "conditional_source_tensor_plus0p01I_in_target_body_axes": null,
+      "compiled_target": null,
+      "source_runtime_status": "UNKNOWN_NOT_MEASURED_PHYSX",
+      "missing_target_body": true,
+      "source_authored_inertia_missing": false
+    }
+  ],
+  "mapped_body_count": 11,
+  "authored_joint_properties_prior_to_runtime_overrides": [
+    {
+      "source_joint": "panda_joint1",
+      "authored_properties": {
+        "drive:angular:physics:damping": 0.0,
+        "drive:angular:physics:maxForce": 87.0,
+        "drive:angular:physics:stiffness": 0.0
+      }
+    },
+    {
+      "source_joint": "root_joint",
+      "authored_properties": {}
+    },
+    {
+      "source_joint": "panda_joint2",
+      "authored_properties": {
+        "drive:angular:physics:damping": 0.0,
+        "drive:angular:physics:maxForce": 87.0,
+        "drive:angular:physics:stiffness": 0.0
+      }
+    },
+    {
+      "source_joint": "panda_joint3",
+      "authored_properties": {
+        "drive:angular:physics:damping": 0.0,
+        "drive:angular:physics:maxForce": 87.0,
+        "drive:angular:physics:stiffness": 0.0
+      }
+    },
+    {
+      "source_joint": "panda_joint4",
+      "authored_properties": {
+        "drive:angular:physics:damping": 0.0,
+        "drive:angular:physics:maxForce": 87.0,
+        "drive:angular:physics:stiffness": 0.0
+      }
+    },
+    {
+      "source_joint": "panda_joint5",
+      "authored_properties": {
+        "drive:angular:physics:damping": 0.0,
+        "drive:angular:physics:maxForce": 12.0,
+        "drive:angular:physics:stiffness": 0.0
+      }
+    },
+    {
+      "source_joint": "panda_joint6",
+      "authored_properties": {
+        "drive:angular:physics:damping": 0.0,
+        "drive:angular:physics:maxForce": 12.0,
+        "drive:angular:physics:stiffness": 0.0
+      }
+    },
+    {
+      "source_joint": "panda_joint7",
+      "authored_properties": {
+        "drive:angular:physics:damping": 0.0,
+        "drive:angular:physics:maxForce": 12.0,
+        "drive:angular:physics:stiffness": 0.0
+      }
+    },
+    {
+      "source_joint": "panda_hand_joint",
+      "authored_properties": {}
+    },
+    {
+      "source_joint": "force_sensor_joint",
+      "authored_properties": {}
+    },
+    {
+      "source_joint": "panda_finger_joint1",
+      "authored_properties": {
+        "drive:linear:physics:damping": 0.0,
+        "drive:linear:physics:maxForce": 70.0,
+        "drive:linear:physics:stiffness": 0.0,
+        "physxJoint:jointFriction": 5.0
+      }
+    },
+    {
+      "source_joint": "panda_finger_joint2",
+      "authored_properties": {
+        "physxJoint:jointFriction": 0.10000000149011612
+      }
+    },
+    {
+      "source_joint": "panda_fingertip_centered_joint",
+      "authored_properties": {}
+    }
+  ],
+  "compiled_frozen_joint_parameters": {
+    "armature": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "damping": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "frictionloss": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "limitations": [
+    "Source force_sensor rotational inertia is not authored; actual PhysX cooking or fixed-body merging unknown.",
+    "No source USD mesh/asset is exported or converted. Authored numeric metadata is compared only.",
+    "Mapped-body 0.01I variant lacks extra source sensor and centered-fingertip bodies; not a complete Factory reconstruction."
+  ]
+}

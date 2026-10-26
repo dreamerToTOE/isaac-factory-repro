@@ -1,0 +1,13 @@
+{
+  "task": "G4-S2A-R1",
+  "status": "STATIC_DYNAMICS_AUDIT_COMPLETE",
+  "output": "evidence/g4_s/s2a_r1/dynamics/static_audit_20261026",
+  "files": {
+    "inertial_parameter_mapping.json": "f3981513df19f11fc7b27a056ce52d90b5a46fcee2fa3474691d72183d423a0f",
+    "source_runtime_inertia_rule.json": "9b553d96540d18045bd0890245938d70f3f93a36a7c2c8ca8796662ffb0380fe",
+    "usd_metadata_readonly.json": "ea6a1b5cbd59970a38c78147ba2ad6712d0541a6098a6e6116888e41ec9c81ba",
+    "matched_dynamics.json": "7fc244c5d0b18d70ca589b02511002c3030287b8bda66a268ae7271353233b89"
+  },
+  "physics_steps": 0,
+  "policy_calls": 0
+}

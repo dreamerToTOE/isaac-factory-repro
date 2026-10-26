@@ -1,0 +1,111 @@
+{
+  "reason": "Actual desktop notification overlays appear in some experimental window screenshots; preserve originals privately, do not publish unrelated desktop text or edit images.",
+  "scope": "ARCHIVED_STATE_PLAYBACK; NO PHYSICS OR ACTOR",
+  "source_directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r1/visuals/archive_v2",
+  "private_retention_directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v2_with_desktop_notification",
+  "all_original_files_preserved": true,
+  "files": [
+    {
+      "original_repository_path": "evidence/g4_s/s2a_r1/visuals/archive_v2/capture_manifest.json",
+      "sha256": "a17e66fea46d2438f75dbb05a75740af710acbdd20bc3b617136c568241245c2",
+      "bytes": 8937,
+      "retained_private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v2_with_desktop_notification/capture_manifest.json"
+    },
+    {
+      "original_repository_path": "evidence/g4_s/s2a_r1/visuals/archive_v2/first_action.png",
+      "sha256": "6f4b1eda87933ab4fe9d40a975cdb4e88d06e3467bfcf86efd7ab3aa007d2f2f",
+      "bytes": 120859,
+      "retained_private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v2_with_desktop_notification/first_action.png"
+    },
+    {
+      "original_repository_path": "evidence/g4_s/s2a_r1/visuals/archive_v2/first_arm_limit.png",
+      "sha256": "89fca2f5decd60d9b72b031390d55177c89187e783c8361a1d1f755805902493",
+      "bytes": 84097,
+      "retained_private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v2_with_desktop_notification/first_arm_limit.png"
+    },
+    {
+      "original_repository_path": "evidence/g4_s/s2a_r1/visuals/archive_v2/first_finger_limit.png",
+      "sha256": "fd37c8434d7ae46d1dc0d7cb2518665f1c41442412e907eb09ed3484423a44d9",
+      "bytes": 87801,
+      "retained_private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v2_with_desktop_notification/first_finger_limit.png"
+    },
+    {
+      "original_repository_path": "evidence/g4_s/s2a_r1/visuals/archive_v2/first_slip.png",
+      "sha256": "1f77a6626a189626e99a07245f13cf0b76213628a887d11831e02cd98336537c",
+      "bytes": 119235,
+      "retained_private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v2_with_desktop_notification/first_slip.png"
+    },
+    {
+      "original_repository_path": "evidence/g4_s/s2a_r1/visuals/archive_v2/grasp_loss.png",
+      "sha256": "e48af70d1f01fb5481404d3498e6dce5ebfd74a2e841ef3fdae326be72e90cad",
+      "bytes": 124020,
+      "retained_private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v2_with_desktop_notification/grasp_loss.png"
+    },
+    {
+      "original_repository_path": "evidence/g4_s/s2a_r1/visuals/archive_v2/gui_visibility.json",
+      "sha256": "705f660cedb13c1ed5d273655f0dafba1cccd1b7e0c19e7e3704cea0a7539d22",
+      "bytes": 1303,
+      "retained_private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v2_with_desktop_notification/gui_visibility.json"
+    },
+    {
+      "original_repository_path": "evidence/g4_s/s2a_r1/visuals/archive_v2/hand_support_collision.png",
+      "sha256": "f647b75dc60b22ad12db0dc5fc8625e5821f530e94fa64a9bc10a505fbf3677f",
+      "bytes": 89421,
+      "retained_private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v2_with_desktop_notification/hand_support_collision.png"
+    },
+    {
+      "original_repository_path": "evidence/g4_s/s2a_r1/visuals/archive_v2/initial_grasp.png",
+      "sha256": "bf34207d888f3ff68e1c07a80cd7d3791866728fa6793a83fdb1ace572cceb9d",
+      "bytes": 119286,
+      "retained_private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v2_with_desktop_notification/initial_grasp.png"
+    },
+    {
+      "original_repository_path": "evidence/g4_s/s2a_r1/visuals/archive_v2/initial_overview.png",
+      "sha256": "c79a053ca0c19fd0d14407934df4955652397dd5462de520cc86e8a908573fa2",
+      "bytes": 82320,
+      "retained_private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v2_with_desktop_notification/initial_overview.png"
+    },
+    {
+      "original_repository_path": "evidence/g4_s/s2a_r1/visuals/archive_v2/physics_1.png",
+      "sha256": "6f183dc5e2ad4bdd39f92cdb43daef91ab9539f774750600da37eb88a736a196",
+      "bytes": 118952,
+      "retained_private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v2_with_desktop_notification/physics_1.png"
+    },
+    {
+      "original_repository_path": "evidence/g4_s/s2a_r1/visuals/archive_v2/physics_2.png",
+      "sha256": "52d8d124d3ad688178ae0b28db223b2e2f52c79cdce7b3e9ae1f31df22847c27",
+      "bytes": 118663,
+      "retained_private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v2_with_desktop_notification/physics_2.png"
+    },
+    {
+      "original_repository_path": "evidence/g4_s/s2a_r1/visuals/archive_v2/physics_5.png",
+      "sha256": "8e3688a47f2f42453c1afe37999ebeb86824a1243929c4ad680816c03ae1512b",
+      "bytes": 125166,
+      "retained_private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v2_with_desktop_notification/physics_5.png"
+    },
+    {
+      "original_repository_path": "evidence/g4_s/s2a_r1/visuals/archive_v2/physics_6.png",
+      "sha256": "47775b004f055c1fb1cefb49d515adbae833c4deff245d77810b463ecc3932d8",
+      "bytes": 124492,
+      "retained_private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v2_with_desktop_notification/physics_6.png"
+    },
+    {
+      "original_repository_path": "evidence/g4_s/s2a_r1/visuals/archive_v2/physics_7.png",
+      "sha256": "e26313a754c3fdf70865375ca975a112a41f3ae2ac187444e2f1ff790dc2f460",
+      "bytes": 124808,
+      "retained_private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v2_with_desktop_notification/physics_7.png"
+    },
+    {
+      "original_repository_path": "evidence/g4_s/s2a_r1/visuals/archive_v2/physics_8.png",
+      "sha256": "d135177e24d26f38cfe7d49fd4a63064535f13dbff6e644098d702c57c9406c6",
+      "bytes": 124060,
+      "retained_private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v2_with_desktop_notification/physics_8.png"
+    },
+    {
+      "original_repository_path": "evidence/g4_s/s2a_r1/visuals/archive_v2/viewer_exit.json",
+      "sha256": "901dbac001786b3fb8b2bd49a124eee20cbd61b53cca2345b7024e4bc5df520f",
+      "bytes": 317,
+      "retained_private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v2_with_desktop_notification/viewer_exit.json"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "task": "G4-S2A-R1",
+  "scope": "DIAGNOSTIC_ONLY",
+  "variant": {
+    "id": "D02",
+    "name": "passive_arm",
+    "delta": {},
+    "arm": "zero"
+  },
+  "actual_physics_steps": 16,
+  "recorded_steps": 16,
+  "policy_inferences": 0,
+  "physics_call_wall_s": 0.010749274006229825,
+  "wall_s": 3.583351210996625,
+  "failure": null,
+  "graceful_close": {
+    "viewer_close_requested": true,
+    "render_threads_joined": [
+      "Thread-1 (_launch_internal)"
+    ],
+    "remaining_render_threads": [],
+    "close_wall_s": 8.878100197762251e-05
+  },
+  "model_configuration_sha256": "1d494fafccfb84f4b345bd8058d986c728cde1b1e55c5485ef747ba0b187c773",
+  "max_slip_m": 2.7907850367020243e-06,
+  "first_bilateral_loss_step": null,
+  "max_arm_qvel_rad_s": 1.2470549581096907e-05,
+  "max_arm_limit_rad": 0.0,
+  "max_finger_limit_m": 0.0,
+  "max_all_penetration_m": 7.812784468314952e-06
+}

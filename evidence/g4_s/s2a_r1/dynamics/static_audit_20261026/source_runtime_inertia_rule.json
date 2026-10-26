@@ -1,0 +1,13 @@
+{
+  "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py",
+  "sha256": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81",
+  "line_start": 41,
+  "line_end": 47,
+  "function_source": "def _set_body_inertias(self):\n        \"\"\"Note: this is to account for the asset_options.armature parameter in IGE.\"\"\"\n        inertias = self._robot.root_physx_view.get_inertias()\n        offset = torch.zeros_like(inertias)\n        offset[:, :, [0, 4, 8]] += 0.01\n        new_inertias = inertias + offset\n        self._robot.root_physx_view.set_inertias(new_inertias, torch.arange(self.num_envs))",
+  "quantity": "body rotational inertia tensor",
+  "offset_kg_m2": 0.01,
+  "basis_invariance": "0.01I is isotropic, so adding0.01 to principal moments is equivalent in any rotated inertia basis.",
+  "not_joint_armature": true,
+  "body_scope": "all bodies returned by root_physx_view.get_inertias; actual returned/merged PhysX body set not measured",
+  "physx_runtime_applied_torque": "UNKNOWN"
+}

@@ -1,0 +1,487 @@
+{
+  "task": "G4-S2A-R1",
+  "scope": "DIAGNOSTIC_ONLY",
+  "receipts": [
+    {
+      "variant": "D01",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r1_diagnostics.py",
+        "--run-variant",
+        "D01",
+        "--manifest",
+        "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/preregistered_matrix.json",
+        "--output",
+        "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D01"
+      ],
+      "exact_child_exit_code": 0,
+      "result": {
+        "task": "G4-S2A-R1",
+        "scope": "DIAGNOSTIC_ONLY",
+        "variant": {
+          "id": "D01",
+          "name": "frozen_baseline",
+          "delta": {},
+          "arm": "full"
+        },
+        "actual_physics_steps": 16,
+        "recorded_steps": 16,
+        "policy_inferences": 0,
+        "physics_call_wall_s": 0.01156219399854308,
+        "wall_s": 3.716716114002338,
+        "failure": null,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.0161595129975467
+        },
+        "model_configuration_sha256": "1d494fafccfb84f4b345bd8058d986c728cde1b1e55c5485ef747ba0b187c773",
+        "max_slip_m": 0.014241097559348706,
+        "first_bilateral_loss_step": 4,
+        "max_arm_qvel_rad_s": 9.634009822685538,
+        "max_arm_limit_rad": 0.0,
+        "max_finger_limit_m": 0.0,
+        "max_all_penetration_m": 0.004753668680625721
+      }
+    },
+    {
+      "variant": "D02",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r1_diagnostics.py",
+        "--run-variant",
+        "D02",
+        "--manifest",
+        "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/preregistered_matrix.json",
+        "--output",
+        "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D02"
+      ],
+      "exact_child_exit_code": 0,
+      "result": {
+        "task": "G4-S2A-R1",
+        "scope": "DIAGNOSTIC_ONLY",
+        "variant": {
+          "id": "D02",
+          "name": "passive_arm",
+          "delta": {},
+          "arm": "zero"
+        },
+        "actual_physics_steps": 16,
+        "recorded_steps": 16,
+        "policy_inferences": 0,
+        "physics_call_wall_s": 0.010749274006229825,
+        "wall_s": 3.583351210996625,
+        "failure": null,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 8.878100197762251e-05
+        },
+        "model_configuration_sha256": "1d494fafccfb84f4b345bd8058d986c728cde1b1e55c5485ef747ba0b187c773",
+        "max_slip_m": 2.7907850367020243e-06,
+        "first_bilateral_loss_step": null,
+        "max_arm_qvel_rad_s": 1.2470549581096907e-05,
+        "max_arm_limit_rad": 0.0,
+        "max_finger_limit_m": 0.0,
+        "max_all_penetration_m": 7.812784468314952e-06
+      }
+    },
+    {
+      "variant": "D03",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r1_diagnostics.py",
+        "--run-variant",
+        "D03",
+        "--manifest",
+        "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/preregistered_matrix.json",
+        "--output",
+        "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D03"
+      ],
+      "exact_child_exit_code": 0,
+      "result": {
+        "task": "G4-S2A-R1",
+        "scope": "DIAGNOSTIC_ONLY",
+        "variant": {
+          "id": "D03",
+          "name": "fixed_initial_TCP_reference",
+          "delta": {},
+          "arm": "fixed"
+        },
+        "actual_physics_steps": 16,
+        "recorded_steps": 16,
+        "policy_inferences": 0,
+        "physics_call_wall_s": 0.011346239007252734,
+        "wall_s": 3.7622942829984822,
+        "failure": null,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.015914300005533732
+        },
+        "model_configuration_sha256": "1d494fafccfb84f4b345bd8058d986c728cde1b1e55c5485ef747ba0b187c773",
+        "max_slip_m": 0.016167911134682522,
+        "first_bilateral_loss_step": 8,
+        "max_arm_qvel_rad_s": 13.960966305325822,
+        "max_arm_limit_rad": 0.0,
+        "max_finger_limit_m": 0.0,
+        "max_all_penetration_m": 0.004703160063055251
+      }
+    },
+    {
+      "variant": "D04",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r1_diagnostics.py",
+        "--run-variant",
+        "D04",
+        "--manifest",
+        "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/preregistered_matrix.json",
+        "--output",
+        "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D04"
+      ],
+      "exact_child_exit_code": 0,
+      "result": {
+        "task": "G4-S2A-R1",
+        "scope": "DIAGNOSTIC_ONLY",
+        "variant": {
+          "id": "D04",
+          "name": "task_torque_only",
+          "delta": {},
+          "arm": "task"
+        },
+        "actual_physics_steps": 16,
+        "recorded_steps": 16,
+        "policy_inferences": 0,
+        "physics_call_wall_s": 0.01153243899170775,
+        "wall_s": 3.6156681189968367,
+        "failure": null,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.01583410099556204
+        },
+        "model_configuration_sha256": "1d494fafccfb84f4b345bd8058d986c728cde1b1e55c5485ef747ba0b187c773",
+        "max_slip_m": 0.011829568096249007,
+        "first_bilateral_loss_step": 4,
+        "max_arm_qvel_rad_s": 9.440763495597011,
+        "max_arm_limit_rad": 0.0,
+        "max_finger_limit_m": 0.0,
+        "max_all_penetration_m": 0.003311901487252153
+      }
+    },
+    {
+      "variant": "D05",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r1_diagnostics.py",
+        "--run-variant",
+        "D05",
+        "--manifest",
+        "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/preregistered_matrix.json",
+        "--output",
+        "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D05"
+      ],
+      "exact_child_exit_code": 0,
+      "result": {
+        "task": "G4-S2A-R1",
+        "scope": "DIAGNOSTIC_ONLY",
+        "variant": {
+          "id": "D05",
+          "name": "nullspace_torque_only",
+          "delta": {},
+          "arm": "null"
+        },
+        "actual_physics_steps": 16,
+        "recorded_steps": 16,
+        "policy_inferences": 0,
+        "physics_call_wall_s": 0.010718896002799738,
+        "wall_s": 3.670488595002098,
+        "failure": null,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.015857200996833853
+        },
+        "model_configuration_sha256": "1d494fafccfb84f4b345bd8058d986c728cde1b1e55c5485ef747ba0b187c773",
+        "max_slip_m": 0.00010287516229436875,
+        "first_bilateral_loss_step": null,
+        "max_arm_qvel_rad_s": 1.1831514921069957,
+        "max_arm_limit_rad": 0.0,
+        "max_finger_limit_m": 0.0,
+        "max_all_penetration_m": 1.3425275740076752e-05
+      }
+    },
+    {
+      "variant": "D06",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r1_diagnostics.py",
+        "--run-variant",
+        "D06",
+        "--manifest",
+        "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/preregistered_matrix.json",
+        "--output",
+        "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D06"
+      ],
+      "exact_child_exit_code": 0,
+      "result": {
+        "task": "G4-S2A-R1",
+        "scope": "DIAGNOSTIC_ONLY",
+        "variant": {
+          "id": "D06",
+          "name": "robot_body_rotational_inertia_plus_0p01I",
+          "delta": {
+            "body_inertia_offset_kg_m2": 0.01
+          },
+          "arm": "full"
+        },
+        "actual_physics_steps": 16,
+        "recorded_steps": 16,
+        "policy_inferences": 0,
+        "physics_call_wall_s": 0.01102203499613097,
+        "wall_s": 3.5600619159959024,
+        "failure": null,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.016172605006431695
+        },
+        "model_configuration_sha256": "251374dcf1f0c15889a2e4fe7df22adc37e9b3452de8bdfd2f05368567896c5b",
+        "max_slip_m": 8.856430766974224e-05,
+        "first_bilateral_loss_step": null,
+        "max_arm_qvel_rad_s": 1.1090563602790808,
+        "max_arm_limit_rad": 0.0,
+        "max_finger_limit_m": 0.0,
+        "max_all_penetration_m": 1.3320253001587528e-05
+      }
+    },
+    {
+      "variant": "D07",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r1_diagnostics.py",
+        "--run-variant",
+        "D07",
+        "--manifest",
+        "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/preregistered_matrix.json",
+        "--output",
+        "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D07"
+      ],
+      "exact_child_exit_code": 0,
+      "result": {
+        "task": "G4-S2A-R1",
+        "scope": "DIAGNOSTIC_ONLY",
+        "variant": {
+          "id": "D07",
+          "name": "robot_joint_armature_plus_0p01",
+          "delta": {
+            "joint_armature_offset_kg_m2": 0.01
+          },
+          "arm": "full"
+        },
+        "actual_physics_steps": 16,
+        "recorded_steps": 16,
+        "policy_inferences": 0,
+        "physics_call_wall_s": 0.012237271010235418,
+        "wall_s": 4.103325600997778,
+        "failure": null,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.016415056998084765
+        },
+        "model_configuration_sha256": "e546405ab0f598ca1f884061c693b0b8ad5294a4b36deceda7466d22c826665b",
+        "max_slip_m": 0.005069042609256503,
+        "first_bilateral_loss_step": 3,
+        "max_arm_qvel_rad_s": 3.9694332336320794,
+        "max_arm_limit_rad": 0.0,
+        "max_finger_limit_m": 0.0,
+        "max_all_penetration_m": 0.003493853898239341
+      }
+    },
+    {
+      "variant": "D08",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r1_diagnostics.py",
+        "--run-variant",
+        "D08",
+        "--manifest",
+        "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/preregistered_matrix.json",
+        "--output",
+        "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D08"
+      ],
+      "exact_child_exit_code": 0,
+      "result": {
+        "task": "G4-S2A-R1",
+        "scope": "DIAGNOSTIC_ONLY",
+        "variant": {
+          "id": "D08",
+          "name": "arm_motor_force_limits_100Nm",
+          "delta": {
+            "all_arm_motor_force_limits_nm": 100.0
+          },
+          "arm": "full"
+        },
+        "actual_physics_steps": 16,
+        "recorded_steps": 16,
+        "policy_inferences": 0,
+        "physics_call_wall_s": 0.01040623400331242,
+        "wall_s": 3.975759539003775,
+        "failure": null,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.015753549996588845
+        },
+        "model_configuration_sha256": "0596b20b742a5098d7be26fa10b38f1b6fa32bbfb76d2859ef1f5e3ecdb71fec",
+        "max_slip_m": 34982.549058221135,
+        "first_bilateral_loss_step": 3,
+        "max_arm_qvel_rad_s": 78.29290366166379,
+        "max_arm_limit_rad": 0.0,
+        "max_finger_limit_m": 0.0,
+        "max_all_penetration_m": 0.0009943240416816729
+      }
+    },
+    {
+      "variant": "D09",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r1_diagnostics.py",
+        "--run-variant",
+        "D09",
+        "--manifest",
+        "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/preregistered_matrix.json",
+        "--output",
+        "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D09"
+      ],
+      "exact_child_exit_code": 0,
+      "result": {
+        "task": "G4-S2A-R1",
+        "scope": "DIAGNOSTIC_ONLY",
+        "variant": {
+          "id": "D09",
+          "name": "passive_arm_affine_finger_PD",
+          "delta": {
+            "finger_actuation": "affine-pd"
+          },
+          "arm": "zero"
+        },
+        "actual_physics_steps": 16,
+        "recorded_steps": 16,
+        "policy_inferences": 0,
+        "physics_call_wall_s": 0.023034002973872703,
+        "wall_s": 3.81563786699553,
+        "failure": null,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.01632354100001976
+        },
+        "model_configuration_sha256": "be94a3bf0d4edc3cc617e086e5c694212f28022362b60f387e1be251711c964d",
+        "max_slip_m": 0.025210726209875686,
+        "first_bilateral_loss_step": 3,
+        "max_arm_qvel_rad_s": 0.3821428011849879,
+        "max_arm_limit_rad": 0.0,
+        "max_finger_limit_m": 7.94737012260516e-05,
+        "max_all_penetration_m": 0.0336076520540633
+      }
+    },
+    {
+      "variant": "D10",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r1_diagnostics.py",
+        "--run-variant",
+        "D10",
+        "--manifest",
+        "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/preregistered_matrix.json",
+        "--output",
+        "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D10"
+      ],
+      "exact_child_exit_code": 0,
+      "result": {
+        "task": "G4-S2A-R1",
+        "scope": "DIAGNOSTIC_ONLY",
+        "variant": {
+          "id": "D10",
+          "name": "passive_arm_contact_solref_0p02",
+          "delta": {
+            "contact_solref": [
+              0.02,
+              1.0
+            ]
+          },
+          "arm": "zero"
+        },
+        "actual_physics_steps": 16,
+        "recorded_steps": 16,
+        "policy_inferences": 0,
+        "physics_call_wall_s": 0.013439258014841471,
+        "wall_s": 3.827873763999378,
+        "failure": null,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.015291138995962683
+        },
+        "model_configuration_sha256": "14a7c4bec6047c54a0ed0a3c14180a8b39b220d1fa75860657b869fc221d8d78",
+        "max_slip_m": 2.0530271010818603e-06,
+        "first_bilateral_loss_step": null,
+        "max_arm_qvel_rad_s": 9.618436308249883e-06,
+        "max_arm_limit_rad": 0.0,
+        "max_finger_limit_m": 0.0,
+        "max_all_penetration_m": 8.19143464140056e-06
+      }
+    }
+  ],
+  "actual_physics_steps": 160,
+  "completed_variants": 10,
+  "max_registered_steps": 160,
+  "actor_calls": 0,
+  "wall_s": 45.80223455999658,
+  "physics_call_wall_s": 0.1260478430049261,
+  "passed_execution_gates": true,
+  "official_configuration_changed": false
+}

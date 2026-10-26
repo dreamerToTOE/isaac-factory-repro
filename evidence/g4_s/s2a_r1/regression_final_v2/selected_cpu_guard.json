@@ -1,0 +1,7 @@
+{
+  "active": true,
+  "forbidden_calls": [],
+  "duration_s": 33.429647992001264,
+  "peak_rss_kib": 560864,
+  "scope": "Known Python actor/checkpoint/physics/GUI entry points, known scientific child script names and MuJoCo C integration calls in this process/new Python threads. Reviewed static collector children may compile/forward without integration. Not a general sandbox."
+}

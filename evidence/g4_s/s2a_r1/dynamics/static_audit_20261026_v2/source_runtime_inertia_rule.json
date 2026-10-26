@@ -1,0 +1,33 @@
+{
+  "configuration_source": {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env_cfg.py",
+    "sha256": "5f804ba3f6e3d96f352490a9b5e2e1e239d308ff7eeab7ae3aad0ca6aa8daed8"
+  },
+  "configuration_robot_range_lines": [
+    120,
+    183
+  ],
+  "configuration_override_summary": {
+    "robot_gravity_disabled": true,
+    "robot_linear_angular_damping": 0.0,
+    "arm_joint_damping": 0.0,
+    "arm_joint_friction": 0.0,
+    "robot_joint_armature": 0.0,
+    "finger_stiffness": 7500.0,
+    "finger_damping": 173.0,
+    "finger_friction": 0.1,
+    "finger_effort_limit_configured_N": 40.0,
+    "configured_effort_is_not_measured_applied_force": true
+  },
+  "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py",
+  "sha256": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81",
+  "line_start": 41,
+  "line_end": 47,
+  "function_source": "def _set_body_inertias(self):\n        \"\"\"Note: this is to account for the asset_options.armature parameter in IGE.\"\"\"\n        inertias = self._robot.root_physx_view.get_inertias()\n        offset = torch.zeros_like(inertias)\n        offset[:, :, [0, 4, 8]] += 0.01\n        new_inertias = inertias + offset\n        self._robot.root_physx_view.set_inertias(new_inertias, torch.arange(self.num_envs))",
+  "quantity": "body rotational inertia tensor",
+  "offset_kg_m2": 0.01,
+  "basis_invariance": "0.01I is isotropic, so adding0.01 to principal moments is equivalent in any rotated inertia basis.",
+  "not_joint_armature": true,
+  "body_scope": "all bodies returned by root_physx_view.get_inertias; actual returned/merged PhysX body set not measured",
+  "physx_runtime_applied_torque": "UNKNOWN"
+}

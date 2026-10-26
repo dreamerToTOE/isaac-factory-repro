@@ -1,0 +1,115 @@
+{
+  "task": "G4-S2A-R1",
+  "generated_utc": "2026-10-26T14:58:34.523340+00:00",
+  "scope": "DIAGNOSTIC_ONLY",
+  "maximum_variants": 12,
+  "registered_variant_count": 10,
+  "steps_per_variant": 16,
+  "maximum_registered_steps": 160,
+  "maximum_new_diagnostic_wall_s": 600,
+  "policy_inferences": 0,
+  "no_retry": true,
+  "variants": [
+    {
+      "id": "D01",
+      "name": "frozen_baseline",
+      "delta": {},
+      "arm": "full"
+    },
+    {
+      "id": "D02",
+      "name": "passive_arm",
+      "delta": {},
+      "arm": "zero"
+    },
+    {
+      "id": "D03",
+      "name": "fixed_initial_TCP_reference",
+      "delta": {},
+      "arm": "fixed"
+    },
+    {
+      "id": "D04",
+      "name": "task_torque_only",
+      "delta": {},
+      "arm": "task"
+    },
+    {
+      "id": "D05",
+      "name": "nullspace_torque_only",
+      "delta": {},
+      "arm": "null"
+    },
+    {
+      "id": "D06",
+      "name": "robot_body_rotational_inertia_plus_0p01I",
+      "delta": {
+        "body_inertia_offset_kg_m2": 0.01
+      },
+      "arm": "full"
+    },
+    {
+      "id": "D07",
+      "name": "robot_joint_armature_plus_0p01",
+      "delta": {
+        "joint_armature_offset_kg_m2": 0.01
+      },
+      "arm": "full"
+    },
+    {
+      "id": "D08",
+      "name": "arm_motor_force_limits_100Nm",
+      "delta": {
+        "all_arm_motor_force_limits_nm": 100.0
+      },
+      "arm": "full"
+    },
+    {
+      "id": "D09",
+      "name": "passive_arm_affine_finger_PD",
+      "delta": {
+        "finger_actuation": "affine-pd"
+      },
+      "arm": "zero"
+    },
+    {
+      "id": "D10",
+      "name": "passive_arm_contact_solref_0p02",
+      "delta": {
+        "contact_solref": [
+          0.02,
+          1.0
+        ]
+      },
+      "arm": "zero"
+    }
+  ],
+  "source_sha256": "1bf3d108fa92a6be83911ed9fd886e83a092ebf1555ebde28f17d026e5c3f8b1",
+  "frozen_environment_sha256": "065affe855ef1d3fa016d6ed8166699a9fc7ea1476d3c5302cee1663d56c92dd",
+  "imported_source_sha256": {
+    "scripts/g4s2a_r1_viewer.py": "0d75b8b0f961a38fd2256ee481be1f14122389e16596c3e8faa1f9a8aa4ee9fc",
+    "scripts/g4s1b_env.py": "065affe855ef1d3fa016d6ed8166699a9fc7ea1476d3c5302cee1663d56c92dd",
+    "scripts/g4s1b_contract.py": "dcf91aa274a6151f88f36901ce0c4a2feac76d7b8fcfe6586104f906c67d6d6c",
+    "scripts/g4s2a_smoke.py": "0a1a365b20c5312e417ddb5f759ee96aa12040b520de4ea84e62ddfc82fa40a8"
+  },
+  "frozen_controller_sha256": "dcf91aa274a6151f88f36901ce0c4a2feac76d7b8fcfe6586104f906c67d6d6c",
+  "xml_sha256": "c60c33ee11eb4806294aee259f97d987308b23e83da62f2219cbc9950fb195c9",
+  "initial_provenance": "S2A seed1001 admitted state; exact historical warmstarts UNKNOWN",
+  "action_protocol": "same first two archived clippedactions atsteps1/9, EMAreset sourceformula; noactor; fixedreference/passive/component-only deltasexplicit",
+  "body_inertia_scope": [
+    "link0",
+    "link1",
+    "link2",
+    "link3",
+    "link4",
+    "link5",
+    "link6",
+    "link7",
+    "hand",
+    "left_finger",
+    "right_finger"
+  ],
+  "armature_scope": "7 revolute arm DOFs only, kg m^2; deliberately not equivalent to body0.01I; fingers unchanged",
+  "contact_D10_interpretation": "effective positive solref baseline floors .005 to2dt=.0166667; variant.02 is modest sensitivity, not4x actualcontacttimeconstant",
+  "promotion_to_official_configuration": false
+}

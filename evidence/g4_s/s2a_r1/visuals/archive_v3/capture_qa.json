@@ -1,0 +1,123 @@
+{
+  "review": "All14actualGUIcapturesvisuallyinspected. Later4wereoccludedbyunrelateddesktopwindow; preserveprivatelyandexcludePNGfrompublicrepo. Noimagesedited.",
+  "captures": [
+    {
+      "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/initial_overview.png",
+      "original_sha256": "ae3a51055cf69c92b79345fac853475cbb64cc8e0047b0900cd7719f45e603e8",
+      "visually_reviewed": true,
+      "unrelated_overlay_or_foreground_window": false,
+      "publication_eligible": true,
+      "public_sha256": "ae3a51055cf69c92b79345fac853475cbb64cc8e0047b0900cd7719f45e603e8"
+    },
+    {
+      "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/initial_grasp.png",
+      "original_sha256": "bf34207d888f3ff68e1c07a80cd7d3791866728fa6793a83fdb1ace572cceb9d",
+      "visually_reviewed": true,
+      "unrelated_overlay_or_foreground_window": false,
+      "publication_eligible": true,
+      "public_sha256": "bf34207d888f3ff68e1c07a80cd7d3791866728fa6793a83fdb1ace572cceb9d"
+    },
+    {
+      "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/first_action.png",
+      "original_sha256": "6f4b1eda87933ab4fe9d40a975cdb4e88d06e3467bfcf86efd7ab3aa007d2f2f",
+      "visually_reviewed": true,
+      "unrelated_overlay_or_foreground_window": false,
+      "publication_eligible": true,
+      "public_sha256": "6f4b1eda87933ab4fe9d40a975cdb4e88d06e3467bfcf86efd7ab3aa007d2f2f"
+    },
+    {
+      "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/physics_1.png",
+      "original_sha256": "6f183dc5e2ad4bdd39f92cdb43daef91ab9539f774750600da37eb88a736a196",
+      "visually_reviewed": true,
+      "unrelated_overlay_or_foreground_window": false,
+      "publication_eligible": true,
+      "public_sha256": "6f183dc5e2ad4bdd39f92cdb43daef91ab9539f774750600da37eb88a736a196"
+    },
+    {
+      "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/physics_2.png",
+      "original_sha256": "52d8d124d3ad688178ae0b28db223b2e2f52c79cdce7b3e9ae1f31df22847c27",
+      "visually_reviewed": true,
+      "unrelated_overlay_or_foreground_window": false,
+      "publication_eligible": true,
+      "public_sha256": "52d8d124d3ad688178ae0b28db223b2e2f52c79cdce7b3e9ae1f31df22847c27"
+    },
+    {
+      "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/first_slip.png",
+      "original_sha256": "1f77a6626a189626e99a07245f13cf0b76213628a887d11831e02cd98336537c",
+      "visually_reviewed": true,
+      "unrelated_overlay_or_foreground_window": false,
+      "publication_eligible": true,
+      "public_sha256": "1f77a6626a189626e99a07245f13cf0b76213628a887d11831e02cd98336537c"
+    },
+    {
+      "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/grasp_loss.png",
+      "original_sha256": "cda0d87c47db57bd5551c17a9ec6512d042c5e7878dde402ddfdf0c7b1d34f0c",
+      "visually_reviewed": true,
+      "unrelated_overlay_or_foreground_window": false,
+      "publication_eligible": true,
+      "public_sha256": "cda0d87c47db57bd5551c17a9ec6512d042c5e7878dde402ddfdf0c7b1d34f0c"
+    },
+    {
+      "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/physics_5.png",
+      "original_sha256": "2c9d9a01efaf939bbb288cb4c83fd283ba2ff039c57320aa5783769995d2ff03",
+      "visually_reviewed": true,
+      "unrelated_overlay_or_foreground_window": false,
+      "publication_eligible": true,
+      "public_sha256": "2c9d9a01efaf939bbb288cb4c83fd283ba2ff039c57320aa5783769995d2ff03"
+    },
+    {
+      "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/physics_6.png",
+      "original_sha256": "3e402ebeedec9125f969d3839df06a38e884a9554500eb39d2dbe6ff0ca45941",
+      "visually_reviewed": true,
+      "unrelated_overlay_or_foreground_window": false,
+      "publication_eligible": true,
+      "public_sha256": "3e402ebeedec9125f969d3839df06a38e884a9554500eb39d2dbe6ff0ca45941"
+    },
+    {
+      "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/physics_7.png",
+      "original_sha256": "ce1f9dba0cd2cb4c33d7e6f216aeb98796b0b9b0c60cf5d9abbc10108c1c5df0",
+      "visually_reviewed": true,
+      "unrelated_overlay_or_foreground_window": false,
+      "publication_eligible": true,
+      "public_sha256": "ce1f9dba0cd2cb4c33d7e6f216aeb98796b0b9b0c60cf5d9abbc10108c1c5df0"
+    },
+    {
+      "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/physics_8.png",
+      "original_sha256": "e838a5f336d85ace571e3d1dc87af3f0f09dbdf5d2fde647459a6cb35d753148",
+      "visually_reviewed": true,
+      "unrelated_overlay_or_foreground_window": true,
+      "publication_eligible": false,
+      "retained_private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v3_foreground_occlusion/physics_8.png",
+      "preserved_sha256": "e838a5f336d85ace571e3d1dc87af3f0f09dbdf5d2fde647459a6cb35d753148"
+    },
+    {
+      "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/first_finger_limit.png",
+      "original_sha256": "9e9cb8af2c334bc237599dcb76d9bfe679e314e8b7e143aa637ce7a64857c6c2",
+      "visually_reviewed": true,
+      "unrelated_overlay_or_foreground_window": true,
+      "publication_eligible": false,
+      "retained_private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v3_foreground_occlusion/first_finger_limit.png",
+      "preserved_sha256": "9e9cb8af2c334bc237599dcb76d9bfe679e314e8b7e143aa637ce7a64857c6c2"
+    },
+    {
+      "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/first_arm_limit.png",
+      "original_sha256": "8ba905277b3fe4784841278b6cab99d5d72742b76d5b89f46711661a9cd5aca5",
+      "visually_reviewed": true,
+      "unrelated_overlay_or_foreground_window": true,
+      "publication_eligible": false,
+      "retained_private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v3_foreground_occlusion/first_arm_limit.png",
+      "preserved_sha256": "8ba905277b3fe4784841278b6cab99d5d72742b76d5b89f46711661a9cd5aca5"
+    },
+    {
+      "file": "evidence/g4_s/s2a_r1/visuals/archive_v3/hand_support_collision.png",
+      "original_sha256": "0ce3c89a6e670b4441b318c633f524e6b8eb8ba0b2e721d8be0791e7f903a2fc",
+      "visually_reviewed": true,
+      "unrelated_overlay_or_foreground_window": true,
+      "publication_eligible": false,
+      "retained_private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/archive_v3_foreground_occlusion/hand_support_collision.png",
+      "preserved_sha256": "0ce3c89a6e670b4441b318c633f524e6b8eb8ba0b2e721d8be0791e7f903a2fc"
+    }
+  ],
+  "new_physics_steps": 0,
+  "actor_calls": 0
+}

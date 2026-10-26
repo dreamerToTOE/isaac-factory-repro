@@ -1,0 +1,234 @@
+{
+  "operation": "PRESERVE_ALL_ORIGINAL_BYTES_EXCLUDE_UNRELATED_UI_FROM_PUBLICATION",
+  "records": [
+    {
+      "original_public_path": "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D01/physics_04.png",
+      "sha256": "b9e84812198ea6917af959eff3402df1f7363cef293f24c8f42494334986150a",
+      "source_experiment": "D01",
+      "mode": "NEW_INTEGRATED_PHYSICS",
+      "physics_step": 4,
+      "image_edited": false,
+      "public": true,
+      "review": "Root and independent reviewer visually checked actual MuJoCo image; no unrelated foreground/notification."
+    },
+    {
+      "original_public_path": "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D01/physics_16.png",
+      "sha256": "3c8f2be6fff670146d8a6d82219fe47b1363f74188e0949cecb2587d16597000",
+      "source_experiment": "D01",
+      "mode": "NEW_INTEGRATED_PHYSICS",
+      "physics_step": 16,
+      "image_edited": false,
+      "public": true,
+      "review": "Root and independent reviewer visually checked actual MuJoCo image; no unrelated foreground/notification."
+    },
+    {
+      "original_public_path": "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D02/physics_04.png",
+      "sha256": "cfbb2cabd8007ca8ce329849f0b974b46fd9ac5e4021dbcc2e7d629551edfbe9",
+      "source_experiment": "D02",
+      "mode": "NEW_INTEGRATED_PHYSICS",
+      "physics_step": 4,
+      "image_edited": false,
+      "public": false,
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/original_diagnostic_pngs_private/D02/physics_04.png",
+      "reason": "Conservative public-release exclusion: some original diagnostic images were occluded by other applications. All non-D01 original diagnostic PNGs retained privately; this does not assert every excluded image is contaminated. Clean separately labeled state-playback comparison is public."
+    },
+    {
+      "original_public_path": "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D02/physics_16.png",
+      "sha256": "930d8a631b80601bf258742d0e44bc4aa256671a33ef51fee5098d3e8664a733",
+      "source_experiment": "D02",
+      "mode": "NEW_INTEGRATED_PHYSICS",
+      "physics_step": 16,
+      "image_edited": false,
+      "public": false,
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/original_diagnostic_pngs_private/D02/physics_16.png",
+      "reason": "Conservative public-release exclusion: some original diagnostic images were occluded by other applications. All non-D01 original diagnostic PNGs retained privately; this does not assert every excluded image is contaminated. Clean separately labeled state-playback comparison is public."
+    },
+    {
+      "original_public_path": "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D03/physics_04.png",
+      "sha256": "8f7b278f0051b9540647831b5105047fd1e0f76b2b2910e05e49a17ab7388a53",
+      "source_experiment": "D03",
+      "mode": "NEW_INTEGRATED_PHYSICS",
+      "physics_step": 4,
+      "image_edited": false,
+      "public": false,
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/original_diagnostic_pngs_private/D03/physics_04.png",
+      "reason": "Conservative public-release exclusion: some original diagnostic images were occluded by other applications. All non-D01 original diagnostic PNGs retained privately; this does not assert every excluded image is contaminated. Clean separately labeled state-playback comparison is public."
+    },
+    {
+      "original_public_path": "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D03/physics_16.png",
+      "sha256": "8cd1717fce94eb8f62276fe16c78f770ac0cc554ec2cdf611bff215449acff34",
+      "source_experiment": "D03",
+      "mode": "NEW_INTEGRATED_PHYSICS",
+      "physics_step": 16,
+      "image_edited": false,
+      "public": false,
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/original_diagnostic_pngs_private/D03/physics_16.png",
+      "reason": "Conservative public-release exclusion: some original diagnostic images were occluded by other applications. All non-D01 original diagnostic PNGs retained privately; this does not assert every excluded image is contaminated. Clean separately labeled state-playback comparison is public."
+    },
+    {
+      "original_public_path": "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D04/physics_04.png",
+      "sha256": "b13cf566c02cc212e2f540168bffcf43cedaf8815fc165442e993045c3fec4f0",
+      "source_experiment": "D04",
+      "mode": "NEW_INTEGRATED_PHYSICS",
+      "physics_step": 4,
+      "image_edited": false,
+      "public": false,
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/original_diagnostic_pngs_private/D04/physics_04.png",
+      "reason": "Conservative public-release exclusion: some original diagnostic images were occluded by other applications. All non-D01 original diagnostic PNGs retained privately; this does not assert every excluded image is contaminated. Clean separately labeled state-playback comparison is public."
+    },
+    {
+      "original_public_path": "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D04/physics_16.png",
+      "sha256": "5b2ed37f4d46e8026342b2ea770b07b396d9bad48c08ea68d154e1511d8a1295",
+      "source_experiment": "D04",
+      "mode": "NEW_INTEGRATED_PHYSICS",
+      "physics_step": 16,
+      "image_edited": false,
+      "public": false,
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/original_diagnostic_pngs_private/D04/physics_16.png",
+      "reason": "Conservative public-release exclusion: some original diagnostic images were occluded by other applications. All non-D01 original diagnostic PNGs retained privately; this does not assert every excluded image is contaminated. Clean separately labeled state-playback comparison is public."
+    },
+    {
+      "original_public_path": "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D05/physics_04.png",
+      "sha256": "43447a8a46fcc5f68b39498f00a012e5ec90e39b0c82004408aa5ed50a104920",
+      "source_experiment": "D05",
+      "mode": "NEW_INTEGRATED_PHYSICS",
+      "physics_step": 4,
+      "image_edited": false,
+      "public": false,
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/original_diagnostic_pngs_private/D05/physics_04.png",
+      "reason": "Conservative public-release exclusion: some original diagnostic images were occluded by other applications. All non-D01 original diagnostic PNGs retained privately; this does not assert every excluded image is contaminated. Clean separately labeled state-playback comparison is public."
+    },
+    {
+      "original_public_path": "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D05/physics_16.png",
+      "sha256": "b8e3efa7a9f22f6ba5d508d3df5701ac780b2e6c67eaf697bf90dc3be5abafbf",
+      "source_experiment": "D05",
+      "mode": "NEW_INTEGRATED_PHYSICS",
+      "physics_step": 16,
+      "image_edited": false,
+      "public": false,
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/original_diagnostic_pngs_private/D05/physics_16.png",
+      "reason": "Conservative public-release exclusion: some original diagnostic images were occluded by other applications. All non-D01 original diagnostic PNGs retained privately; this does not assert every excluded image is contaminated. Clean separately labeled state-playback comparison is public."
+    },
+    {
+      "original_public_path": "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D06/physics_04.png",
+      "sha256": "452e8db72311977a1ae63119014bbc78d587f6a4eff71d4c1bb189e1eab5575f",
+      "source_experiment": "D06",
+      "mode": "NEW_INTEGRATED_PHYSICS",
+      "physics_step": 4,
+      "image_edited": false,
+      "public": false,
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/original_diagnostic_pngs_private/D06/physics_04.png",
+      "reason": "Conservative public-release exclusion: some original diagnostic images were occluded by other applications. All non-D01 original diagnostic PNGs retained privately; this does not assert every excluded image is contaminated. Clean separately labeled state-playback comparison is public."
+    },
+    {
+      "original_public_path": "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D06/physics_16.png",
+      "sha256": "3d170a4eeab43db92089d7ab3c06007ad5b3afbd112bd8814cf02dd2a0749911",
+      "source_experiment": "D06",
+      "mode": "NEW_INTEGRATED_PHYSICS",
+      "physics_step": 16,
+      "image_edited": false,
+      "public": false,
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/original_diagnostic_pngs_private/D06/physics_16.png",
+      "reason": "Conservative public-release exclusion: some original diagnostic images were occluded by other applications. All non-D01 original diagnostic PNGs retained privately; this does not assert every excluded image is contaminated. Clean separately labeled state-playback comparison is public."
+    },
+    {
+      "original_public_path": "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D07/physics_04.png",
+      "sha256": "6d7f9bf1f34b8937d814e433008143ccae84d4f6d6c53cbffeff7bbe97f8ff9d",
+      "source_experiment": "D07",
+      "mode": "NEW_INTEGRATED_PHYSICS",
+      "physics_step": 4,
+      "image_edited": false,
+      "public": false,
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/original_diagnostic_pngs_private/D07/physics_04.png",
+      "reason": "Conservative public-release exclusion: some original diagnostic images were occluded by other applications. All non-D01 original diagnostic PNGs retained privately; this does not assert every excluded image is contaminated. Clean separately labeled state-playback comparison is public."
+    },
+    {
+      "original_public_path": "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D07/physics_16.png",
+      "sha256": "e5529b41fc1a23f633e471d053df5542d8f8b81a84730e69d7f7b145c0435628",
+      "source_experiment": "D07",
+      "mode": "NEW_INTEGRATED_PHYSICS",
+      "physics_step": 16,
+      "image_edited": false,
+      "public": false,
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/original_diagnostic_pngs_private/D07/physics_16.png",
+      "reason": "Conservative public-release exclusion: some original diagnostic images were occluded by other applications. All non-D01 original diagnostic PNGs retained privately; this does not assert every excluded image is contaminated. Clean separately labeled state-playback comparison is public."
+    },
+    {
+      "original_public_path": "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D08/physics_04.png",
+      "sha256": "5504fcb21ba0214e75e1a961193cdb55ccd7aacdde441c7f8e80dea239c77cef",
+      "source_experiment": "D08",
+      "mode": "NEW_INTEGRATED_PHYSICS",
+      "physics_step": 4,
+      "image_edited": false,
+      "public": false,
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/original_diagnostic_pngs_private/D08/physics_04.png",
+      "reason": "Conservative public-release exclusion: some original diagnostic images were occluded by other applications. All non-D01 original diagnostic PNGs retained privately; this does not assert every excluded image is contaminated. Clean separately labeled state-playback comparison is public."
+    },
+    {
+      "original_public_path": "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D08/physics_16.png",
+      "sha256": "4a115e2db854cd53e9ae181a56cab8dfed0e99cc335e3bf4dfed7710c031b5f4",
+      "source_experiment": "D08",
+      "mode": "NEW_INTEGRATED_PHYSICS",
+      "physics_step": 16,
+      "image_edited": false,
+      "public": false,
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/original_diagnostic_pngs_private/D08/physics_16.png",
+      "reason": "Conservative public-release exclusion: some original diagnostic images were occluded by other applications. All non-D01 original diagnostic PNGs retained privately; this does not assert every excluded image is contaminated. Clean separately labeled state-playback comparison is public."
+    },
+    {
+      "original_public_path": "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D09/physics_04.png",
+      "sha256": "234a1fa3194ee12ae2c716ad1db9964f7870d96514c977a3e815bb4f2d195f29",
+      "source_experiment": "D09",
+      "mode": "NEW_INTEGRATED_PHYSICS",
+      "physics_step": 4,
+      "image_edited": false,
+      "public": false,
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/original_diagnostic_pngs_private/D09/physics_04.png",
+      "reason": "Conservative public-release exclusion: some original diagnostic images were occluded by other applications. All non-D01 original diagnostic PNGs retained privately; this does not assert every excluded image is contaminated. Clean separately labeled state-playback comparison is public."
+    },
+    {
+      "original_public_path": "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D09/physics_16.png",
+      "sha256": "04e52ce3cb5311ce67abec5b7302b599be895a1880ae9242dee4c3c998f77846",
+      "source_experiment": "D09",
+      "mode": "NEW_INTEGRATED_PHYSICS",
+      "physics_step": 16,
+      "image_edited": false,
+      "public": false,
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/original_diagnostic_pngs_private/D09/physics_16.png",
+      "reason": "Conservative public-release exclusion: some original diagnostic images were occluded by other applications. All non-D01 original diagnostic PNGs retained privately; this does not assert every excluded image is contaminated. Clean separately labeled state-playback comparison is public."
+    },
+    {
+      "original_public_path": "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D10/physics_04.png",
+      "sha256": "95169447e6d37c676a586b360819e34cbfdfb94f81507ee3ce007734febadce0",
+      "source_experiment": "D10",
+      "mode": "NEW_INTEGRATED_PHYSICS",
+      "physics_step": 4,
+      "image_edited": false,
+      "public": false,
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/original_diagnostic_pngs_private/D10/physics_04.png",
+      "reason": "Conservative public-release exclusion: some original diagnostic images were occluded by other applications. All non-D01 original diagnostic PNGs retained privately; this does not assert every excluded image is contaminated. Clean separately labeled state-playback comparison is public."
+    },
+    {
+      "original_public_path": "evidence/g4_s/s2a_r1/diagnostics/gui_matrix_v1/D10/physics_16.png",
+      "sha256": "bf1871519d0aa7f08b3bfc1d869059970de6fe5a35c3fb6ed383f64a9c990f92",
+      "source_experiment": "D10",
+      "mode": "NEW_INTEGRATED_PHYSICS",
+      "physics_step": 16,
+      "image_edited": false,
+      "public": false,
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/original_diagnostic_pngs_private/D10/physics_16.png",
+      "reason": "Conservative public-release exclusion: some original diagnostic images were occluded by other applications. All non-D01 original diagnostic PNGs retained privately; this does not assert every excluded image is contaminated. Clean separately labeled state-playback comparison is public."
+    },
+    {
+      "original_public_path": "evidence/g4_s/s2a_r1/visuals/comparison_playback_v1/D01_physics_04.png",
+      "sha256": "83240e5b002f50c2a1ec55fd864d89df9572f23eb3e4e4d8e418a1060047c49e",
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r1/original_diagnostic_pngs_private/comparison_playback_v1_partial.png",
+      "public": false,
+      "mode": "DIAGNOSTIC_STATE_PLAYBACK",
+      "image_edited": false,
+      "reason": "Partial failed capture session; complete clean comparison_playback_v2 is public."
+    }
+  ],
+  "new_physics_steps": 0,
+  "actor_calls": 0
+}

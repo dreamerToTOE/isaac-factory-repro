@@ -1,0 +1,14 @@
+{
+  "exit_code": 0,
+  "policy_inferences": 0,
+  "new_physics_steps": 0,
+  "wall_s": 30.020868383006018,
+  "graceful_close": {
+    "viewer_close_requested": true,
+    "render_threads_joined": [
+      "Thread-1 (_launch_internal)"
+    ],
+    "remaining_render_threads": [],
+    "close_wall_s": 0.02028932300163433
+  }
+}

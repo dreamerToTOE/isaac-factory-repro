@@ -1,0 +1,79 @@
+{
+  "started_utc": "2026-10-26T14:58:34.656097+00:00",
+  "variants": [
+    {
+      "id": "D01",
+      "name": "frozen_baseline",
+      "delta": {},
+      "arm": "full"
+    },
+    {
+      "id": "D02",
+      "name": "passive_arm",
+      "delta": {},
+      "arm": "zero"
+    },
+    {
+      "id": "D03",
+      "name": "fixed_initial_TCP_reference",
+      "delta": {},
+      "arm": "fixed"
+    },
+    {
+      "id": "D04",
+      "name": "task_torque_only",
+      "delta": {},
+      "arm": "task"
+    },
+    {
+      "id": "D05",
+      "name": "nullspace_torque_only",
+      "delta": {},
+      "arm": "null"
+    },
+    {
+      "id": "D06",
+      "name": "robot_body_rotational_inertia_plus_0p01I",
+      "delta": {
+        "body_inertia_offset_kg_m2": 0.01
+      },
+      "arm": "full"
+    },
+    {
+      "id": "D07",
+      "name": "robot_joint_armature_plus_0p01",
+      "delta": {
+        "joint_armature_offset_kg_m2": 0.01
+      },
+      "arm": "full"
+    },
+    {
+      "id": "D08",
+      "name": "arm_motor_force_limits_100Nm",
+      "delta": {
+        "all_arm_motor_force_limits_nm": 100.0
+      },
+      "arm": "full"
+    },
+    {
+      "id": "D09",
+      "name": "passive_arm_affine_finger_PD",
+      "delta": {
+        "finger_actuation": "affine-pd"
+      },
+      "arm": "zero"
+    },
+    {
+      "id": "D10",
+      "name": "passive_arm_contact_solref_0p02",
+      "delta": {
+        "contact_solref": [
+          0.02,
+          1.0
+        ]
+      },
+      "arm": "zero"
+    }
+  ],
+  "policy_inferences": 0
+}

@@ -1,0 +1,357 @@
+{
+  "task": "G4-S2A-R1",
+  "analysis": "OFFLINE_ARCHIVED_SUBSTEP_RECONSTRUCTION",
+  "generated_utc": "2026-10-26T14:46:43.159283+00:00",
+  "expected_start_commit": "9f521002cd1ee1694fabc1f2012a8bdd79e26434",
+  "HEAD_at_analysis": "9f521002cd1ee1694fabc1f2012a8bdd79e26434",
+  "new_actor_calls": 0,
+  "checkpoint_loads": 0,
+  "new_physics_steps": 0,
+  "GUI_opened_by_analyzer": false,
+  "archived_counts": {
+    "policy_steps": 149,
+    "physics_steps": 1192,
+    "closure_steps": 30
+  },
+  "acceleration_definition": "(post-step qvel minus previous post-step/reset qvel)/(1/120); interval velocity increment, not saved solver qacc; includes coupled dynamics and contacts.",
+  "actuator_stages": {
+    "integration": "Saved mj_step preintegration force at time_before",
+    "post_forward": "Recomputed actuation after mj_forward at final state; recorded separately"
+  },
+  "first_action": {
+    "raw_mu": [
+      -1.238300085067749,
+      2.3205859661102295,
+      -1.1223325729370117,
+      0.09105674177408218,
+      0.4455225169658661,
+      -1.2183674573898315
+    ],
+    "clipped": [
+      -1.0,
+      1.0,
+      -1.0,
+      0.09105674177408218,
+      0.4455225169658661,
+      -1.0
+    ],
+    "ema": [
+      -0.1171923374729385,
+      -0.10495424459305192,
+      0.4416664122813842,
+      0.01821134835481644,
+      0.08910450339317322,
+      -0.12410979856175892
+    ],
+    "single_policy_decision_covers_all_first_eight_substeps": true,
+    "interpretation": "Torque reversals across steps1–8 occur without another PPO inference or EMA update. Per-substep pose, FD/J/M and target reconstruction are active."
+  },
+  "first_eight_quantities": {
+    "joint7_qvel_after_rad_s": [
+      0.5046560985564515,
+      -5.149692851915195,
+      9.126765297359182,
+      -5.161160601229339,
+      9.357703721186963,
+      -4.762176025794421,
+      9.604245243915948,
+      -4.680271869502102
+    ],
+    "joint7_acceleration_interval_rad_s2": [
+      60.55952666282308,
+      -678.5218740565977,
+      1713.1749779129252,
+      -1714.5511078306224,
+      1742.2637186899562,
+      -1694.3855696377661,
+      1723.9705523652442,
+      -1714.142053610166
+    ],
+    "joint7_requested_nm": [
+      0.3605790725111682,
+      -4.604967727435743,
+      58.960183344075965,
+      -107.75817123419553,
+      62.74016608913161,
+      -107.28844523247905,
+      60.46803326023955,
+      -110.37247412031542
+    ],
+    "joint7_software_nm": [
+      0.3605790725111682,
+      -4.604967727435743,
+      58.960183344075965,
+      -100.0,
+      62.74016608913161,
+      -100.0,
+      60.46803326023955,
+      -100.0
+    ],
+    "joint7_integration_nm": [
+      0.3605790725111682,
+      -4.604967727435743,
+      12.0,
+      -12.0,
+      12.0,
+      -12.0,
+      12.0,
+      -12.0
+    ],
+    "joint7_task_nm": [
+      0.36057907251116816,
+      -4.604967727435743,
+      58.960183344075965,
+      -107.75817123419553,
+      62.74016608913161,
+      -107.28844523247905,
+      60.46803326023955,
+      -110.37247412031542
+    ],
+    "joint7_null_nm": [
+      4.383769748758678e-17,
+      -3.842764068052698e-17,
+      2.3767839206797842e-17,
+      6.620541931508669e-17,
+      -3.88686441739986e-17,
+      1.3305620097010004e-17,
+      1.0211337854728504e-17,
+      -8.892797173120237e-17
+    ],
+    "world_angular_z_FD_rad_s": [
+      0.0,
+      -0.45329266452046874,
+      5.349416264413479,
+      -9.870068619997935,
+      5.703745848431763,
+      -9.8376457412747,
+      5.499626423521586,
+      -10.154872390571548
+    ],
+    "world_angular_z_P_Nm": [
+      -0.3605790852204065,
+      -0.36060387029731344,
+      -0.36018079078946375,
+      -0.3617655847134746,
+      -0.3581145491299889,
+      -0.36017941000841897,
+      -0.35570942620572793,
+      -0.36343591992122676
+    ],
+    "world_angular_z_D_Nm": [
+      -0.0,
+      4.965572350189648,
+      -58.599919150085654,
+      108.1211845459351,
+      -62.481405269250374,
+      107.76600970481569,
+      -60.24538900028466,
+      111.24105353804896
+    ],
+    "left_pad_force_n": [
+      0.22333829370179695,
+      0.25652769237594747,
+      0.13770891353940404,
+      1.25202869244698,
+      0.0,
+      121.56633234944505,
+      102.05386138171353,
+      82.12722568024967
+    ],
+    "right_pad_force_n": [
+      0.23014157585197603,
+      0.1935963887925623,
+      0.5289651995056862,
+      0.0,
+      0.8278302048294326,
+      0.0,
+      0.5984511558798704,
+      0.0
+    ],
+    "translation_slip_m": [
+      3.729723492577372e-07,
+      1.3496174343982531e-05,
+      0.002371751112024027,
+      0.0042647828121259905,
+      0.00619153153670355,
+      0.010243259110744769,
+      0.010581638927902828,
+      0.01184015338921775
+    ],
+    "orientation_slip_rad": [
+      3.233500477086465e-05,
+      0.00018021504662240308,
+      0.06138714144434785,
+      0.1993895731916887,
+      0.231539950041634,
+      0.27019974758263815,
+      0.24845726221004383,
+      0.24225708930933806
+    ]
+  },
+  "checks": {
+    "archived_bundle_and_uncompressed_hashes_match": true,
+    "pd_wrench_independent_max_error_first8": 0.0,
+    "FD_independent_max_error_first8": 0.0,
+    "task_plus_null_max_error_first8_nm": 0.0,
+    "quaternion_min_consecutive_dot_first8": 0.999080019561149,
+    "quaternion_max_norm_error_first8": 6.661338147750939e-16,
+    "joint7_null_max_abs_first8_nm": 8.892797173120237e-17,
+    "joint7_task_max_abs_first8_nm": 110.37247412031542,
+    "initial_mass_condition_recorded": 616.8562708017998,
+    "initial_task_inverse_condition_recorded": 1593.9506882763203
+  },
+  "onsets": {
+    "joint7_requested_above_actual12Nm_limit": {
+      "physics_step": 3,
+      "episode_time_s": 0.025
+    },
+    "peg_hand_slip_over1mm": {
+      "physics_step": 3,
+      "episode_time_s": 0.025
+    },
+    "loss_of_bilateral_positive_pad_force": {
+      "physics_step": 4,
+      "episode_time_s": 0.03333333333333333
+    },
+    "finger_limit_over1e_6m": {
+      "physics_step": 61,
+      "episode_time_s": 0.5083333333333333
+    },
+    "arm_limit_over1e_6rad": {
+      "physics_step": 76,
+      "episode_time_s": 0.6333333333333333
+    }
+  },
+  "grasp_before_policy": {
+    "last_closure_pad_normal_force_n": {
+      "left_finger": 0.22672704354981857,
+      "right_finger": 0.22660104280630045
+    },
+    "finger_actuator_n": [
+      -0.22672670588434957,
+      -0.22668952100866563
+    ],
+    "note": "Normal force and actuator force are distinct physical quantities. Positive bilateral soft contact does not establish acceleration tolerance."
+  },
+  "source_controller_review": {
+    "PD": "target-current pose error; negative world FD damping; same signs as frozen Factory source",
+    "feedback_timestamp": "First FD explicitly reset zero; later substep feedback uses immediately preceding physics interval, not 8dt",
+    "target": "Rebuilt from current centered TCP each physics step; therefore this is not a fixed world Cartesian target",
+    "Jacobian": "Source and port use mean left/right finger body-origin world geometric Jacobian; centered TCP hand-local z=.112071m is a distinct point",
+    "nullspace": "Saved tau_null uses dynamic projection from J/M; its full historical inputs were not logged",
+    "inertia": "Original source adds .01I to each robot body inertia, not .01 joint armature; target S1B Menagerie inertias differ. Static/controlled comparison is separate evidence."
+  },
+  "hypotheses_from_archived_data_only": {
+    "H1_inertia_mismatch": {
+      "status": "INCONCLUSIVE",
+      "reason": "Different source body inertia rule is known; historical per-step full M/J absent, no isolated inertial experiment in this analyzer"
+    },
+    "H2_saturation_acceleration": {
+      "status": "SUPPORTED_BUT_NOT_PROVEN",
+      "reason": "Rapid J7 velocity reversal and acceleration estimate precede grasp loss; first >12Nm request is step3, simultaneous with >1mm slip; saturation alone is not established as unique cause"
+    },
+    "H3_discrete_PD": {
+      "status": "SUPPORTED_BUT_NOT_PROVEN",
+      "reason": "P/D independently reconstruct saved wrench; world angular FD damping magnitude rises and reverses torque within one fixed PPO action. Correct negative damping sign does not guarantee discrete-time stability."
+    },
+    "H4_J_nullspace": {
+      "status": "INCONCLUSIVE",
+      "reason": "Initial J7 null contribution is tiny; J7 task torque dominates. Coupling from other joints and full J/M projection cannot be isolated from archived outputs."
+    },
+    "H5_gripper_contact": {
+      "status": "SUPPORTED_BUT_NOT_PROVEN",
+      "reason": "Initial bilateral forces positive; lost during arm transient. Need no-arm and finger/contact diagnostic comparisons."
+    },
+    "H6_reset": {
+      "status": "INCONCLUSIVE",
+      "reason": "Initial state passes declared admission but only one adapted reset; acceleration robustness not tested by admission."
+    },
+    "H7_quaternion_FD": {
+      "status": "CONTRADICTED",
+      "scope": "Early quaternion sign jump, missing 1/120 FD update, or wrong PD damping sign as direct explanation of first-eight reversal",
+      "reason": "Positive consecutive quaternion dots, unit norms and independent FD/P-D checks. Broader cross-engine frame/dynamics mismatch remains unresolved."
+    }
+  },
+  "UNKNOWN": [
+    "Historical full J and M matrices",
+    "Historical solver qacc",
+    "Historical qfrc_constraint and contact warm starts",
+    "Independent reconstruction of J-transpose wrench and dynamic nullspace from full historical inputs",
+    "Original PhysX actually applied joint torque",
+    "Unique root cause and validated solution"
+  ],
+  "root_cause_status": "ROOT_CAUSE_PENDING",
+  "solution_status": "SOLUTION_PENDING",
+  "source_hashes": {
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/analyze_g4s2a_r1.py": {
+      "sha256": "672e7b6ab02417731ee2e1f07617fde2c57f152a794a41d1997d88a527c1ef33",
+      "bytes": 24400
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s1b_contract.py": {
+      "sha256": "dcf91aa274a6151f88f36901ce0c4a2feac76d7b8fcfe6586104f906c67d6d6c",
+      "bytes": 20029
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s1b_env.py": {
+      "sha256": "065affe855ef1d3fa016d6ed8166699a9fc7ea1476d3c5302cee1663d56c92dd",
+      "bytes": 39533
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_smoke.py": {
+      "sha256": "0a1a365b20c5312e417ddb5f759ee96aa12040b520de4ea84e62ddfc82fa40a8",
+      "bytes": 29031
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a/run_20261026T140338/preregistered_protocol.json": {
+      "sha256": "cd31fe9125bb54ec41149953b7c0d7d9419521730aa362a703d93291cae48505",
+      "bytes": 2835
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a/run_20261026T140338/collection.json": {
+      "sha256": "3710fc9ba151bf28e7c30540d769e6b70d7a0cc264d70a35159be9846c7030e3",
+      "bytes": 11159
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a/run_20261026T140338/seed_1001/policy.jsonl.gz": {
+      "sha256": "7098a1554bb2535d6f02bb4782ba275cba19a32f43272a1c1700b3f13fe28863",
+      "bytes": 1615469
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a/run_20261026T140338/seed_1001/physics.jsonl.gz": {
+      "sha256": "bceea758d341f21ae4895364870d81b46f8cd3c3f567f22c955d427b99641992",
+      "bytes": 1187791
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a/run_20261026T140338/seed_1001/closure.jsonl.gz": {
+      "sha256": "3933e7c2d2fb9939901f20cf7c6ae1642ba2d8d258e24e41f29459a369891aab",
+      "bytes": 23459
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a/run_20261026T140338/seed_1001/interface_reset.json": {
+      "sha256": "bb28ac8365916d4038fbe223bce18a0ccb5547ae4e6e23cd6ce2bb0551566b62",
+      "bytes": 66706
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_control.py": {
+      "sha256": "7ef611d530a86fa2aba9db222361b0fe8b64d34037f204ad622a17051ad5e163",
+      "bytes": 8326
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py": {
+      "sha256": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81",
+      "bytes": 43992
+    }
+  },
+  "artifacts": {
+    "evidence/g4_s/s2a_r1/archived_analysis/full_episode_substeps.csv": {
+      "sha256": "d6d1cdd8e20ae67d73fff7d7b6ed0df4a08f6051fe0755ce24ba86728db607c6",
+      "bytes": 261942
+    },
+    "evidence/g4_s/s2a_r1/archived_analysis/first_eight_substeps.png": {
+      "sha256": "df3b436b5d53191e8511512a46fae77489838c459c66e052b315304609ee2c2d",
+      "bytes": 489539
+    },
+    "evidence/g4_s/s2a_r1/archived_analysis/first_eight_steps.json": {
+      "sha256": "29c8884aa12ae7afc3e331cd42efe3448e838e0f270ef92dd364e7e9eff305dd",
+      "bytes": 65661
+    },
+    "evidence/g4_s/s2a_r1/archived_analysis/full_episode_chronology.png": {
+      "sha256": "8a9a888a46bce1d3b0edd179320845e4e26d3ec8ee492b15805228fabe6609e5",
+      "bytes": 209023
+    },
+    "evidence/g4_s/s2a_r1/archived_analysis/first_eight_steps.csv": {
+      "sha256": "ce2cbbfa1c341bbb440f2517f5c86196a95fce9c4c81cbded3a55ad36ac2c7af",
+      "bytes": 31370
+    }
+  }
+}

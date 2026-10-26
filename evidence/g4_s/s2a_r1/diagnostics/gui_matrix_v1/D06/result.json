@@ -1,0 +1,33 @@
+{
+  "task": "G4-S2A-R1",
+  "scope": "DIAGNOSTIC_ONLY",
+  "variant": {
+    "id": "D06",
+    "name": "robot_body_rotational_inertia_plus_0p01I",
+    "delta": {
+      "body_inertia_offset_kg_m2": 0.01
+    },
+    "arm": "full"
+  },
+  "actual_physics_steps": 16,
+  "recorded_steps": 16,
+  "policy_inferences": 0,
+  "physics_call_wall_s": 0.01102203499613097,
+  "wall_s": 3.5600619159959024,
+  "failure": null,
+  "graceful_close": {
+    "viewer_close_requested": true,
+    "render_threads_joined": [
+      "Thread-1 (_launch_internal)"
+    ],
+    "remaining_render_threads": [],
+    "close_wall_s": 0.016172605006431695
+  },
+  "model_configuration_sha256": "251374dcf1f0c15889a2e4fe7df22adc37e9b3452de8bdfd2f05368567896c5b",
+  "max_slip_m": 8.856430766974224e-05,
+  "first_bilateral_loss_step": null,
+  "max_arm_qvel_rad_s": 1.1090563602790808,
+  "max_arm_limit_rad": 0.0,
+  "max_finger_limit_m": 0.0,
+  "max_all_penetration_m": 1.3320253001587528e-05
+}

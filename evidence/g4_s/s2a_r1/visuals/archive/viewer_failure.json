@@ -1,0 +1,6 @@
+{
+  "type": "RuntimeError",
+  "error": "GUI_BLOCKED: no viewable MuJoCo X11 window",
+  "policy_inferences": 0,
+  "new_physics_steps": 0
+}
