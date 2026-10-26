@@ -123,7 +123,7 @@ AMP skip 事件：**10**；attempts−actor steps：`10`；与事件数一致：
 
 最终 CPU 回归 **220 passed（14.15 s）**，实际命令、stdout/stderr、退出码见 [artifact_execution_evaluated/status.json](../evidence/g3c_r5/artifact_execution_evaluated/status.json)，JUnit 见 [final_cpu_regression_evaluated.xml](../evidence/g3c_r5/final_cpu_regression_evaluated.xml)。独立科学审计 **139/139 通过**，见 [final_scientific_audit.md](../evidence/g3c_r5/final_scientific_audit.md)。三张科学图均完成人工可读性检查。
 
-运行结束、整合远端新文档之前的保留审计全部通过：起始提交的 tracked files **938/938**、R4 evidence **285/285**、R4 raw artifacts **277/277**、更早历史 artifacts **347/347**、预先存在的 G3V 文件 **5/5**、冻结源文件 **30/30**；分组存在交集，不能相加解释为独立文件总数。见 [postrun_preservation_audit.json](../evidence/g3c_r5/raw_collect_evaluated/postrun_preservation_audit.json)。原始起始提交保留在 Git 历史中；最终仅整合远端工程文档更新，未改变冻结科学源文件。最终提交及 fast-forward push 的远端 SHA 验证随交付 receipt 保存。
+2026-10-26T06:45:18Z（UTC）运行结束、整合远端新文档之前的保留审计快照全部通过：起始提交的 tracked files **938/938**、R4 evidence **285/285**、R4 raw artifacts **277/277**、更早历史 artifacts **347/347**、预先存在的 G3V 文件 **5/5**、冻结源文件 **30/30**；分组存在交集，不能相加解释为独立文件总数。见 [postrun_preservation_audit.json](../evidence/g3c_r5/raw_collect_evaluated/postrun_preservation_audit.json)。原始起始提交保留在 Git 历史中；最终仅整合远端工程文档更新，未改变冻结科学源文件。最终提交及 fast-forward push 的远端 SHA 验证随交付 receipt 保存。
 验收失败项：`[]`。
 分析错误：`[]`；分析警告：`[]`。
 

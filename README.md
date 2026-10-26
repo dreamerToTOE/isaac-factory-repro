@@ -3,7 +3,7 @@ Reproduction and evaluation of contact-rich robotic assembly tasks using NVIDIA 
 
 ## 下一阶段路线（2026-10-26 用户决策）
 
-**已更新优先级：PegInsert 独立策略推理工程验收 → 真正的跨物理引擎 Sim2Sim → 审阅后再决定 GearMesh → NutThread。** 这是一项未来工作排序决策，**不是**这些阶段已经完成或获得 GPU 运行授权。当前 G3C-R5 seed 1 已启动，须先等待其实际退出并保存结果；不得中断、覆盖或将新任务与其并行抢占 GPU。
+**已更新优先级：PegInsert 独立策略推理工程验收 → 真正的跨物理引擎 Sim2Sim → 审阅后再决定 GearMesh → NutThread。** 这是一项未来工作排序决策，**不是**这些阶段已经完成或获得 GPU 运行授权。G3C-R5 seed 1 现已完成并归档：400 epochs、1,638,400 transitions，正常退出；100/200/300/400 checkpoint 的 12 次独立评估全部完成。最终 ever-success 与 terminal-success 均为 278/288（96.53%），同协议 training seed 0 分别为 268/288、267/288。详见 [G3C-R5 完整中文报告](docs/REVIEW_G3C_R5_FINAL.md) 与 [最终证据](evidence/g3c_r5/README.md)。本任务已停在 seed 1，未启动 seed 2 或后续任务。
 
 - [分阶段路线与科学/工程验收门禁](docs/ROADMAP_POLICY_INFERENCE_SIM2SIM.md)：明确同仿真器独立推理和跨引擎 Sim2Sim 的区别、性能指标、失败轨迹、风险及各阶段 STOP 门禁。
 - [工程理解与面试问题验收](docs/ENGINEERING_LEARNING_GATE.md)：六个核心问题、各阶段追问和由项目本人解释的学习门禁；Codex 的测试 PASS 不代表本人掌握。
