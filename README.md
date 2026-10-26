@@ -1,6 +1,11 @@
 # isaac-factory-repro
 Reproduction and evaluation of contact-rich robotic assembly tasks using NVIDIA Isaac Lab, Franka, and PPO.
 
+## Engineering Case Studies｜工程故障复盘（持续更新）
+
+- [工程案例索引](docs/case_studies/README.md)：真实故障、隔离排障、证据与面试总结；统一证据标准见[案例模板](docs/case_studies/CASE_STUDY_TEMPLATE.md)。
+- [Panda Sim2Sim：冻结 PPO 迁移后的控制振荡与脱抓](docs/case_studies/SIM2SIM_PANDA_CONTROL_INSTABILITY.md)：G4-S2A 首次跨引擎闭环已运行但物理失稳；**ROOT_CAUSE_PENDING / SOLUTION_PENDING / VALIDATION_PENDING**。目前 G4-S2B NO-GO，不能声称已修复或迁移成功。
+
 ## G4-S1B：适配型 zero-shot Sim2Sim（2026-10-26 新授权）
 
 用户已将目标明确调整为 **ADAPTED ZERO-SHOT SIM2SIM**：冻结PhysX训练的G2 epoch200
