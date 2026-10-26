@@ -1,6 +1,14 @@
 # isaac-factory-repro
 Reproduction and evaluation of contact-rich robotic assembly tasks using NVIDIA Isaac Lab, Franka, and PPO.
 
+## 最新工程状态（2026-10-26）
+
+**PegInsert 独立推理链路 G4-I0 → G4-I1 → G4-I2 已全部工程 PASS。** [G4-I2 中文报告](docs/REVIEW_G4_I2.md) 与 [证据索引](evidence/g4_i/i2/README.md)：冻结 G2 策略完成 288/288 回合，ever/terminal 280/288（97.22%），仅与历史结果进行非配对描述性比较；并完成 GPU 推理延迟、动作饱和率、失败轨迹及控制周期分析。G4-I2 提交：`85b49ef547e07df063d2efe58457488c99935a70`。
+
+**下一步拟进入 G4-S0：跨物理引擎 Sim2Sim 的可行性与模型/接口映射审查（尚未执行、未获本次自动运行授权）。** 先审查 MuJoCo 等第二引擎的 Franka/peg-hole 资产、原19D观测与6D动作、EMA、PD/Jacobian控制器、时序及接触/成功判据；未经验证不得宣称 Sim2Sim 成功或转入 GearMesh/NutThread 训练。I2 的完整 wall 闭环仅 **3.47 Hz**（模拟策略15Hz），不构成硬实时或物理安全证明，实际施加扭矩 UNKNOWN。学习验收仍 PENDING，按用户新安排推迟至 Sim2Sim 后的独立窗口。
+
+以下旧阶段标题与叙述保留其历史成文口径，以上方最新状态为准。
+
 ## 下一阶段路线（2026-10-26 用户决策）
 
 **已更新优先级：PegInsert 独立策略推理工程验收 → 真正的跨物理引擎 Sim2Sim → 审阅后再决定 GearMesh → NutThread。** 这是一项未来工作排序决策，**不是**这些阶段已经完成或获得 GPU 运行授权。G3C-R5 seed 1 现已完成并归档：400 epochs、1,638,400 transitions，正常退出；100/200/300/400 checkpoint 的 12 次独立评估全部完成。最终 ever-success 与 terminal-success 均为 278/288（96.53%），同协议 training seed 0 分别为 268/288、267/288。详见 [G3C-R5 完整中文报告](docs/REVIEW_G3C_R5_FINAL.md) 与 [最终证据](evidence/g3c_r5/README.md)。本任务已停在 seed 1，未启动 seed 2 或后续任务。
