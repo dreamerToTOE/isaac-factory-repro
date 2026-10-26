@@ -1,0 +1,399 @@
+{
+  "asset_license_matrix": [
+    {
+      "applicable_exact_asset_license": "UNKNOWN",
+      "distribution_permission": "NOT_ESTABLISHED",
+      "gate": "BLOCKED",
+      "local_conversion_permission": "NOT_ESTABLISHED",
+      "name": "franka_mimic.usd",
+      "reason": "Bundled content-pack terms defer robot/prop licenses to hosted folders; neither the general Franka license nor repository code license establishes the scope of this exact Factory-modified USD.",
+      "reference_sha256": "86d0017a093669b222a8c640bf581cc3e3715035aa7c596600f478da011f6c8e",
+      "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/IsaacLab/Factory/franka_mimic.usd"
+    },
+    {
+      "applicable_exact_asset_license": "UNKNOWN",
+      "distribution_permission": "NOT_ESTABLISHED",
+      "gate": "BLOCKED",
+      "local_conversion_permission": "NOT_ESTABLISHED",
+      "name": "factory_peg_8mm.usd",
+      "reason": "Bundled content-pack terms defer robot/prop licenses to hosted folders; neither the general Franka license nor repository code license establishes the scope of this exact Factory-modified USD.",
+      "reference_sha256": "b5040c8c639f3dc0731adfb6022c0d63383b7550354e413dc24e7417b600869d",
+      "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/IsaacLab/Factory/factory_peg_8mm.usd"
+    },
+    {
+      "applicable_exact_asset_license": "UNKNOWN",
+      "distribution_permission": "NOT_ESTABLISHED",
+      "gate": "BLOCKED",
+      "local_conversion_permission": "NOT_ESTABLISHED",
+      "name": "factory_hole_8mm.usd",
+      "reason": "Bundled content-pack terms defer robot/prop licenses to hosted folders; neither the general Franka license nor repository code license establishes the scope of this exact Factory-modified USD.",
+      "reference_sha256": "4bad48cde5a2e523454f9ed584023fae53d619a5ffb3d6ab08f29a6240014c28",
+      "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/IsaacLab/Factory/factory_hole_8mm.usd"
+    },
+    {
+      "applicable_exact_asset_license": "UNKNOWN",
+      "distribution_permission": "NOT_ESTABLISHED",
+      "gate": "BLOCKED",
+      "local_conversion_permission": "NOT_ESTABLISHED",
+      "name": "table_instanceable.usd and table.usd dependency",
+      "reason": "Hosted-folder specific license and complete dependency chain are not established; generic Content grant is not a verified per-asset clearance.",
+      "reference_sha256": "479ed8fd374d8eafdedf3ca3b9d0d5981ffc6d5c5016929347f748be93d5df17",
+      "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Props/Mounts/SeattleLabTable/table_instanceable.usd"
+    },
+    {
+      "applicable_exact_asset_license": "Apache-2.0",
+      "commit": "8161bba264d7fa7c99ca301e91e7fb44737676ad",
+      "distribution_permission": "VERIFIED_UNDER_LICENSE_CONDITIONS",
+      "gate": "DIAGNOSTIC_ONLY_ALLOWED",
+      "local_conversion_permission": "VERIFIED_UNDER_LICENSE_CONDITIONS",
+      "name": "Menagerie franka_emika_panda",
+      "requirements": [
+        "Provide Apache-2.0 license with distributed derivative copies.",
+        "Retain relevant copyright/patent/trademark/attribution notices.",
+        "Mark changed files; preserve NOTICE contents if supplied.",
+        "No NOTICE found at model/root paths in the pinned checkout; this does not waive notices elsewhere.",
+        "Do not imply this license covers NVIDIA Factory modifications, peg, hole or table."
+      ],
+      "source_url": "https://github.com/google-deepmind/mujoco_menagerie/tree/8161bba264d7fa7c99ca301e91e7fb44737676ad/franka_emika_panda"
+    }
+  ],
+  "bundled_4_5_agreement_analysis": {
+    "component_override": "Components Under Other Licenses allows component-specific notices to control conflicts; isaac-sim-assets-LICENSE directs per-robot/prop terms to hosted folders.",
+    "definition": "Section 1.4 defines Content as NVIDIA audio/2D/3D assets.",
+    "distribution": "Section 2.1 permits Content as incorporated into products/services enhancing the work; standalone Content distribution is excluded; section 3 imposes additional distribution requirements.",
+    "implementation_consequence": "No original/derived asset conversion or distribution is authorized by this audit. Existing originals remain local read-only references; only independent Apache Panda diagnostics may be compiled.",
+    "local_conversion": "Section 2.1 permits modification/derivatives of Content, if the exact asset is NVIDIA Content governed by this agreement and no overriding component terms apply.",
+    "local_use": "Section 2.1 grants installation/use subject to license limitations.",
+    "status": "VERIFIED_TEXT_CONDITIONAL_APPLICABILITY",
+    "unresolved": "No evidence ties each exact required Factory USD and all third-party portions to a complete applicable license scope."
+  },
+  "collector_source": {
+    "bytes": 11614,
+    "exists": true,
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s1a_license_audit.py",
+    "sha256": "e41b7d4a511b94bdff2b9dc8344315f5dc2b86abe6a301a19285b69e5a5397b7"
+  },
+  "current_terms_not_retroactive": {
+    "edition": "June 9, 2025",
+    "reason": "The current page states a different grant/restrictions from the installed 4.5 agreement. A current web page cannot establish terms supplied with January2025 asset bytes, nor be selectively used to infer conversion permission.",
+    "status": "CONTEXT_ONLY_NOT_APPLIED_TO_FROZEN_4_5_ASSETS",
+    "url": "https://www.nvidia.com/en-us/agreements/enterprise-software/isaac-sim-additional-software-and-materials-license/"
+  },
+  "decision": "ORIGINAL_ASSET_CONVERSION_AND_DISTRIBUTION_BLOCKED; INDEPENDENT_PANDA_DIAGNOSTICS_ALLOWED",
+  "engine_or_physics_execution": false,
+  "existing_s0_layer_license_observations": [
+    {
+      "custom_layer_data": {
+        "omni_layer": {
+          "locked": {},
+          "muteness": {}
+        }
+      },
+      "interpretation": "No applicable asset license identified in these already-recorded layer metadata fields; this is not a complete search of all asset notices.",
+      "layer_documentation": "Generated from Composed Stage of root layer /home/mnosew/workspace/IsaacLab_benchmark/source/extensions/omni.isaac.lab_assets/data/Robots/Forge/franka_mimic.usd\n",
+      "name": "franka_mimic.usd"
+    },
+    {
+      "custom_layer_data": {},
+      "interpretation": "No applicable asset license identified in these already-recorded layer metadata fields; this is not a complete search of all asset notices.",
+      "layer_documentation": "",
+      "name": "factory_peg_8mm.usd"
+    },
+    {
+      "custom_layer_data": {},
+      "interpretation": "No applicable asset license identified in these already-recorded layer metadata fields; this is not a complete search of all asset notices.",
+      "layer_documentation": "",
+      "name": "factory_hole_8mm.usd"
+    }
+  ],
+  "generated_utc": "2026-10-26T11:51:30.054013+00:00",
+  "local_license_sources": [
+    {
+      "bytes": 49043,
+      "exists": true,
+      "path": "/home/ubuntu2004/isaacsim-4.5.0/LICENSE.txt",
+      "sha256": "e8a684e1278cc1de7a4b3fce180228f3195f02c3b208a5722122d95cce29ca20"
+    },
+    {
+      "bytes": 961,
+      "exists": true,
+      "path": "/home/ubuntu2004/isaacsim-4.5.0/PACKAGE-LICENSES/isaac-sim-assets-LICENSE.txt",
+      "sha256": "5d10853c8554f71b06b6fe734d059b7abf108b016a9f9ff3e6b225e5598b5f3c"
+    },
+    {
+      "bytes": 10140,
+      "exists": true,
+      "path": "/home/ubuntu2004/isaacsim-4.5.0/PACKAGE-LICENSES/franka-LICENSE.txt",
+      "sha256": "bb28c48e3e078166e91cfc2b6db7ffebb8a0973b9e23b3df060561292d8d69ec"
+    },
+    {
+      "bytes": 10173,
+      "exists": true,
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/LICENSE",
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+    },
+    {
+      "bytes": 2908,
+      "exists": true,
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/README.md",
+      "sha256": "e12684556d0154bdf2a9e77e7009ed680cd06ca89904f9e6303050f9fe59300c"
+    },
+    {
+      "exists": false,
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/NOTICE"
+    },
+    {
+      "exists": false,
+      "path": "/home/ubuntu2004/mujoco_menagerie/NOTICE"
+    },
+    {
+      "bytes": 1630,
+      "exists": true,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/LICENSE",
+      "sha256": "df351ebfa8af317bf5a9ad83df63a8b68e4f5c04b71f30767cdb27aa434eac62"
+    },
+    {
+      "bytes": 10173,
+      "exists": true,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/docs/licenses/assets/franka-license.txt",
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+    },
+    {
+      "bytes": 806,
+      "exists": true,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/docs/licenses/dependencies/isaacsim-license.txt",
+      "sha256": "6bfb6c19b70d50172a88eda1cc5529bf34dc377106e873b8504af0accb5b35f9"
+    }
+  ],
+  "negative_probe_interpretation": "404/not-found URLs prove only that no license was found there, never that no license exists or that assets are prohibited.",
+  "network_enabled": true,
+  "network_probes": [
+    {
+      "error": "HTTP Error 404: Not Found",
+      "maximum_response_bytes": 65536,
+      "method": "GET",
+      "response_body_saved": false,
+      "runtime_s": 1.4830155050003668,
+      "status": 404,
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/IsaacLab/Factory/LICENSE"
+    },
+    {
+      "error": "HTTP Error 404: Not Found",
+      "maximum_response_bytes": 65536,
+      "method": "GET",
+      "response_body_saved": false,
+      "runtime_s": 1.638836504003848,
+      "status": 404,
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/IsaacLab/Factory/LICENSE.txt"
+    },
+    {
+      "error": "HTTP Error 404: Not Found",
+      "maximum_response_bytes": 65536,
+      "method": "GET",
+      "response_body_saved": false,
+      "runtime_s": 3.707407351997972,
+      "status": 404,
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/IsaacLab/Factory/license.txt"
+    },
+    {
+      "error": "HTTP Error 404: Not Found",
+      "maximum_response_bytes": 65536,
+      "method": "GET",
+      "response_body_saved": false,
+      "runtime_s": 1.3578964839980472,
+      "status": 404,
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/IsaacLab/Factory/franka-LICENSE.txt"
+    },
+    {
+      "error": "HTTP Error 404: Not Found",
+      "maximum_response_bytes": 65536,
+      "method": "GET",
+      "response_body_saved": false,
+      "runtime_s": 2.2207292659950326,
+      "status": 404,
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/IsaacLab/Factory/LICENSE.md"
+    },
+    {
+      "error": "HTTP Error 404: Not Found",
+      "maximum_response_bytes": 65536,
+      "method": "GET",
+      "response_body_saved": false,
+      "runtime_s": 1.2074889630021062,
+      "status": 404,
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/IsaacLab/LICENSE"
+    },
+    {
+      "error": "HTTP Error 404: Not Found",
+      "maximum_response_bytes": 65536,
+      "method": "GET",
+      "response_body_saved": false,
+      "runtime_s": 1.5576109260000521,
+      "status": 404,
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/IsaacLab/LICENSE.txt"
+    },
+    {
+      "error": "HTTP Error 404: Not Found",
+      "maximum_response_bytes": 65536,
+      "method": "GET",
+      "response_body_saved": false,
+      "runtime_s": 1.2959342940011993,
+      "status": 404,
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Robots/Franka/LICENSE"
+    },
+    {
+      "error": "HTTP Error 404: Not Found",
+      "maximum_response_bytes": 65536,
+      "method": "GET",
+      "response_body_saved": false,
+      "runtime_s": 1.766780439997092,
+      "status": 404,
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Robots/Franka/LICENSE.txt"
+    },
+    {
+      "bytes": 10316,
+      "final_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Robots/Franka/franka-LICENSE.txt",
+      "headers": {
+        "Content-Length": "10316",
+        "Content-Type": "text/plain",
+        "Date": "Mon, 26 Oct 2026 11:51:23 GMT",
+        "ETag": "\"90c20472f526fb6a251a49240da0ea56\"",
+        "Last-Modified": "Thu, 30 Jan 2025 02:36:33 GMT"
+      },
+      "license_identification": "APACHE_2_0",
+      "maximum_response_bytes": 65536,
+      "method": "GET",
+      "response_truncated": false,
+      "runtime_s": 1.0704471749995719,
+      "sha256": "94b9224462ffdd31fb184897c2e6c69dfc9f03f667d8e2a458ed57b302df4684",
+      "status": 200,
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Robots/Franka/franka-LICENSE.txt"
+    },
+    {
+      "error": "HTTP Error 404: Not Found",
+      "maximum_response_bytes": 65536,
+      "method": "GET",
+      "response_body_saved": false,
+      "runtime_s": 3.0232119989959756,
+      "status": 404,
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Props/Mounts/SeattleLabTable/LICENSE"
+    },
+    {
+      "error": "HTTP Error 404: Not Found",
+      "maximum_response_bytes": 65536,
+      "method": "GET",
+      "response_body_saved": false,
+      "runtime_s": 1.2255534049982089,
+      "status": 404,
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Props/Mounts/SeattleLabTable/LICENSE.txt"
+    },
+    {
+      "error": "HTTP Error 404: Not Found",
+      "maximum_response_bytes": 65536,
+      "method": "GET",
+      "response_body_saved": false,
+      "runtime_s": 0.8854507650030428,
+      "status": 404,
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Props/Mounts/SeattleLabTable/license.txt"
+    },
+    {
+      "error": "HTTP Error 404: Not Found",
+      "maximum_response_bytes": 65536,
+      "method": "GET",
+      "response_body_saved": false,
+      "runtime_s": 0.8702395770014846,
+      "status": 404,
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Props/LICENSE"
+    },
+    {
+      "error": "HTTP Error 404: Not Found",
+      "maximum_response_bytes": 65536,
+      "method": "GET",
+      "response_body_saved": false,
+      "runtime_s": 2.988204469998891,
+      "status": 404,
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Props/LICENSE.txt"
+    },
+    {
+      "error": "HTTP Error 404: Not Found",
+      "maximum_response_bytes": 65536,
+      "method": "GET",
+      "response_body_saved": false,
+      "runtime_s": 1.4164885749996756,
+      "status": 404,
+      "url": "https://docs.isaacsim.omniverse.nvidia.com/4.5.0/assets/usd_assets_robots.html"
+    },
+    {
+      "error": "HTTP Error 404: Not Found",
+      "maximum_response_bytes": 65536,
+      "method": "GET",
+      "response_body_saved": false,
+      "runtime_s": 1.096189135001623,
+      "status": 404,
+      "url": "https://docs.isaacsim.omniverse.nvidia.com/4.5.0/common/NVIDIA_Omniverse_License_Agreement.html"
+    },
+    {
+      "final_url": "https://www.nvidia.com/en-us/agreements/enterprise-software/isaac-sim-additional-software-and-materials-license/",
+      "headers": {
+        "Content-Length": null,
+        "Content-Type": "text/html; charset=UTF-8",
+        "Date": "Mon, 26 Oct 2026 11:51:26 GMT",
+        "ETag": "W/\"4d90e-65ebcef24fa7d\"",
+        "Last-Modified": "Mon, 26 Oct 2026 11:50:19 GMT"
+      },
+      "maximum_response_bytes": 65536,
+      "method": "GET",
+      "response_truncated": true,
+      "runtime_s": 2.3262849809980253,
+      "status": 200,
+      "url": "https://www.nvidia.com/en-us/agreements/enterprise-software/isaac-sim-additional-software-and-materials-license/"
+    },
+    {
+      "error": "URLError: <urlopen error _ssl.c:990: The handshake operation timed out>",
+      "maximum_response_bytes": 65536,
+      "method": "GET",
+      "runtime_s": 15.009632045999751,
+      "status": null,
+      "url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/8161bba264d7fa7c99ca301e91e7fb44737676ad/franka_emika_panda/LICENSE"
+    },
+    {
+      "bytes": 10173,
+      "final_url": "https://raw.githubusercontent.com/isaac-sim/IsaacLab/90b79bb2d44feb8d833f260f2bf37da3487180ba/docs/licenses/assets/franka-license.txt",
+      "headers": {
+        "Content-Length": "10173",
+        "Content-Type": "text/plain; charset=utf-8",
+        "Date": "Mon, 26 Oct 2026 11:51:26 GMT",
+        "ETag": "\"d0d6c36fb3f2c441e55864e4f40f1e5c0c9a3455c1ec061c6afe522988696cce\"",
+        "Last-Modified": null
+      },
+      "license_identification": "APACHE_2_0",
+      "maximum_response_bytes": 65536,
+      "method": "GET",
+      "response_truncated": false,
+      "runtime_s": 1.8561116319979192,
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+      "status": 200,
+      "url": "https://raw.githubusercontent.com/isaac-sim/IsaacLab/90b79bb2d44feb8d833f260f2bf37da3487180ba/docs/licenses/assets/franka-license.txt"
+    }
+  ],
+  "original_or_derived_assets_copied_to_repository": false,
+  "positive_hosted_folder_finding": {
+    "applicability_to_frozen_franka_mimic": "UNKNOWN",
+    "license": "Apache-2.0",
+    "scope": "The stock Robots/Franka folder; no verified attribution or dependency link extends it to Factory/Forge modifications, peg, hole or table.",
+    "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Robots/Franka/franka-LICENSE.txt"
+  },
+  "s0_evidence": {
+    "bytes": 291461,
+    "exists": true,
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s0/assets_audit.json",
+    "sha256": "48880ac31be9bb92be6e1ca34820292308b1bc1533b7b91f99130ebd924c951f"
+  },
+  "schema_version": 1,
+  "scope": "Read-only license provenance and conservative implementation gate; not a blanket legal clearance.",
+  "task": "G4-S1A",
+  "unblocking_evidence_needed": [
+    "Exact applicable asset license/attribution for Factory franka_mimic modifications, peg, hole and table dependencies.",
+    "Verified local conversion/cross-engine use scope, including component-specific third-party terms.",
+    "Separate public redistribution basis if original or derived geometry is to be committed/distributed."
+  ]
+}

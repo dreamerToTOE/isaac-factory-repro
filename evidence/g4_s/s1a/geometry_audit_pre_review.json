@@ -1,0 +1,814 @@
+{
+  "analytic_independent_annulus_diagnostics": {
+    "bound_derivation": "Inner inscribed N-gon: rin*(1-cos(pi/N)) <= rin*(22/(7N))^2/2. Outer circumscribed N-gon: rout*(sec(pi/N)-1) <= rout*a/(1-a), a=(22/(7N))^2/2. Union covers ideal solid, retains an open bore. No claim of compiled floating-hull error or original geometry error.",
+    "candidates": [
+      {
+        "bore_error_bound_fraction_of_nominal_gap": 1.3707538936627282,
+        "bore_error_upper_bound_exact": "9801/125440000",
+        "bore_error_upper_bound_m": 7.81329719387755e-05,
+        "bound_scope": "ideal_independent_analytic_annulus_not_original_mesh_or_compiled_hulls",
+        "ideal_solid_hausdorff_upper_bound_m": 0.0003934319622825557,
+        "inner_boundary_sagitta_m_approx": 7.781961436691675e-05,
+        "minimum_nominal_radial_clearance_lower_bound_m": -2.113297193877551e-05,
+        "outer_boundary_error_upper_bound_exact": "121/307550",
+        "outer_boundary_error_upper_bound_m": 0.0003934319622825557,
+        "sectors": 16
+      },
+      {
+        "bore_error_bound_fraction_of_nominal_gap": 0.34268847341568204,
+        "bore_error_upper_bound_exact": "9801/501760000",
+        "bore_error_upper_bound_m": 1.9533242984693876e-05,
+        "bound_scope": "ideal_independent_analytic_annulus_not_original_mesh_or_compiled_hulls",
+        "ideal_solid_hausdorff_upper_bound_m": 9.692794488725117e-05,
+        "inner_boundary_sagitta_m_approx": 1.950185697760244e-05,
+        "minimum_nominal_radial_clearance_lower_bound_m": 3.7466757015306123e-05,
+        "outer_boundary_error_upper_bound_exact": "121/1248350",
+        "outer_boundary_error_upper_bound_m": 9.692794488725117e-05,
+        "sectors": 32
+      },
+      {
+        "bore_error_bound_fraction_of_nominal_gap": 0.08567211835392051,
+        "bore_error_upper_bound_exact": "9801/2007040000",
+        "bore_error_upper_bound_m": 4.883310746173469e-06,
+        "bound_scope": "ideal_independent_analytic_annulus_not_original_mesh_or_compiled_hulls",
+        "ideal_solid_hausdorff_upper_bound_m": 2.414422683600882e-05,
+        "inner_boundary_sagitta_m_approx": 4.87840236905176e-06,
+        "minimum_nominal_radial_clearance_lower_bound_m": 5.211668925382653e-05,
+        "outer_boundary_error_upper_bound_exact": "121/5011550",
+        "outer_boundary_error_upper_bound_m": 2.414422683600882e-05,
+        "sectors": 64
+      },
+      {
+        "bore_error_bound_fraction_of_nominal_gap": 0.021418029588480127,
+        "bore_error_upper_bound_exact": "9801/8028160000",
+        "bore_error_upper_bound_m": 1.2208276865433673e-06,
+        "bound_scope": "ideal_independent_analytic_annulus_not_original_mesh_or_compiled_hulls",
+        "ideal_solid_hausdorff_upper_bound_m": 6.030596555582414e-06,
+        "inner_boundary_sagitta_m_approx": 1.2197842803727876e-06,
+        "minimum_nominal_radial_clearance_lower_bound_m": 5.577917231345663e-05,
+        "outer_boundary_error_upper_bound_exact": "121/20064350",
+        "outer_boundary_error_upper_bound_m": 6.030596555582414e-06,
+        "sectors": 128
+      },
+      {
+        "bore_error_bound_fraction_of_nominal_gap": 0.005354507397120032,
+        "bore_error_upper_bound_exact": "9801/32112640000",
+        "bore_error_upper_bound_m": 3.052069216358418e-07,
+        "bound_scope": "ideal_independent_analytic_annulus_not_original_mesh_or_compiled_hulls",
+        "ideal_solid_hausdorff_upper_bound_m": 1.5073082650944153e-06,
+        "inner_boundary_sagitta_m_approx": 3.0495755146476286e-07,
+        "minimum_nominal_radial_clearance_lower_bound_m": 5.669479307836416e-05,
+        "outer_boundary_error_upper_bound_exact": "121/80275550",
+        "outer_boundary_error_upper_bound_m": 1.5073082650944153e-06,
+        "sectors": 256
+      },
+      {
+        "bore_error_bound_fraction_of_nominal_gap": 0.001338626849280008,
+        "bore_error_upper_bound_exact": "9801/128450560000",
+        "bore_error_upper_bound_m": 7.630173040896045e-08,
+        "bound_scope": "ideal_independent_analytic_annulus_not_original_mesh_or_compiled_hulls",
+        "ideal_solid_hausdorff_upper_bound_m": 3.768057676818053e-07,
+        "inner_boundary_sagitta_m_approx": 7.624010546550818e-08,
+        "minimum_nominal_radial_clearance_lower_bound_m": 5.692369826959104e-05,
+        "outer_boundary_error_upper_bound_exact": "121/321120350",
+        "outer_boundary_error_upper_bound_m": 3.768057676818053e-07,
+        "sectors": 512
+      },
+      {
+        "bore_error_bound_fraction_of_nominal_gap": 0.000334656712320002,
+        "bore_error_upper_bound_exact": "9801/513802240000",
+        "bore_error_upper_bound_m": 1.9075432602240114e-08,
+        "bound_scope": "ideal_independent_analytic_annulus_not_original_mesh_or_compiled_hulls",
+        "ideal_solid_hausdorff_upper_bound_m": 9.420011085251062e-08,
+        "inner_boundary_sagitta_m_approx": 1.9060071216425722e-08,
+        "minimum_nominal_radial_clearance_lower_bound_m": 5.698092456739776e-05,
+        "outer_boundary_error_upper_bound_exact": "121/1284499550",
+        "outer_boundary_error_upper_bound_m": 9.420011085251062e-08,
+        "sectors": 1024
+      }
+    ],
+    "distribution": "Generated source code only; no copied Factory vertices or meshes; repository license applies to code, third-party rights not inferred.",
+    "identity": "ORIGINAL_MATHEMATICAL_DIAGNOSTIC_NOT_DERIVED_FROM_FACTORY_ASSET",
+    "reference": "Ideal circular annulus rin=.00405,rout=.02,height=.025; independent nominal-dimensional diagnostic, not a Factory reconstruction."
+  },
+  "candidate_comparison": [
+    {
+      "decision": "REJECTED",
+      "method": "single_convex_hull",
+      "reason": "The convex hull of a full ring contains its axis and fills the physical bore; visual mesh nonconvexity does not alter standard convex mesh collision."
+    },
+    {
+      "decision": "CONDITIONAL_NOT_CONVERTED",
+      "method": "bore_preserving_convex_decomposition",
+      "original_error_m": "UNKNOWN",
+      "requirements": "Permission; original inner wall, chamfer, floor and outer support surfaces; conservative or two-sided source-relative Hausdorff bound and per-section clearance; compiled-hull validation."
+    },
+    {
+      "decision": "REJECTED_AS_FAITHFUL_NONCONVEX_COLLIDER",
+      "method": "native_triangle_visual_mesh_as_standard_mesh_geom",
+      "reason": "Standard mesh collisions use the convex hull; triangle preservation in the asset is insufficient."
+    },
+    {
+      "decision": "CONDITIONAL_NOT_IMPLEMENTED",
+      "method": "MuJoCo_SDF_plugin",
+      "original_error_m": "UNKNOWN",
+      "requirements": "Licensed faithful source SDF signed-distance and gradient, independently bounded fit/grid interpolation and solver tolerance; cooked PhysX bytes are not a portable SDF API."
+    },
+    {
+      "decision": "REJECTED_AS_FACTORY_SUBSTITUTION",
+      "method": "ideal_cylinder_plus_ideal_hole",
+      "reason": "Nominal dimensions differ from measured source bore and omit chamfer/floor/outer details; independent diagnostics only."
+    }
+  ],
+  "collector_sha256": "35073cf51b4be8414e01f221225099ecc9970436d5e8d463e4c17381f790f750",
+  "decision": "NO-GO_FOR_S1B_FAITHFUL_FACTORY_MODEL",
+  "diagnostic_result": "PASS_INDEPENDENT_SYNTHETIC_CAPABILITY_ONLY",
+  "error_budget": {
+    "original_57um_fidelity_certified": false,
+    "source_cooked_PhysX_SDF_to_MuJoCo_collision_m": "UNKNOWN",
+    "source_cooked_PhysX_SDF_to_raw_mesh_m": "UNKNOWN",
+    "source_raw_mesh_to_converted_mesh_m": "UNKNOWN_NO_CONVERSION"
+  },
+  "generated_utc": "2026-10-26T11:59:53Z",
+  "gripper_reconstruction": {
+    "candidate_finger_mass_kg": [
+      0.015,
+      0.015
+    ],
+    "menagerie_independent_pad_boxes": [
+      {
+        "class": "fingertip_pad_collision_1",
+        "geom": {
+          "pos": "0 0.0055 0.0445",
+          "size": "0.0085 0.004 0.0085",
+          "type": "box"
+        }
+      },
+      {
+        "class": "fingertip_pad_collision_2",
+        "geom": {
+          "pos": "0.0055 0.002 0.05",
+          "size": "0.003 0.002 0.003",
+          "type": "box"
+        }
+      },
+      {
+        "class": "fingertip_pad_collision_3",
+        "geom": {
+          "pos": "-0.0055 0.002 0.05",
+          "size": "0.003 0.002 0.003",
+          "type": "box"
+        }
+      },
+      {
+        "class": "fingertip_pad_collision_4",
+        "geom": {
+          "pos": "0.0055 0.002 0.0395",
+          "size": "0.003 0.002 0.0035",
+          "type": "box"
+        }
+      },
+      {
+        "class": "fingertip_pad_collision_5",
+        "geom": {
+          "pos": "-0.0055 0.002 0.0395",
+          "size": "0.003 0.002 0.0035",
+          "type": "box"
+        }
+      }
+    ],
+    "original_collision_metadata": [
+      {
+        "apis": [
+          "PhysicsCollisionAPI",
+          "PhysicsMeshCollisionAPI"
+        ],
+        "attributes": {
+          "physics:approximation": "convexHull",
+          "xformOp:orient": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xformOp:scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "xformOp:translate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xformOpOrder": [
+            "xformOp:translate",
+            "xformOp:orient",
+            "xformOp:scale"
+          ]
+        },
+        "authored_extent": [
+          [
+            -0.031635917723178864,
+            -0.10398972034454346,
+            -0.02592480182647705
+          ],
+          [
+            0.03161578252911568,
+            0.10042587667703629,
+            0.06596215069293976
+          ]
+        ],
+        "face_count": 200,
+        "path": "/panda/panda_hand/collisions",
+        "raw_stage_world_bounds": [
+          [
+            0.006228898002191091,
+            -0.08323399592509648,
+            0.8600378483533859
+          ],
+          [
+            0.17127056730981738,
+            0.08186002352647855,
+            0.9519248008728027
+          ]
+        ],
+        "vertex_count": 600
+      },
+      {
+        "apis": [
+          "PhysicsCollisionAPI",
+          "PhysicsMeshCollisionAPI"
+        ],
+        "attributes": {
+          "physics:approximation": "convexHull",
+          "xformOp:orient": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xformOp:scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "xformOp:translate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xformOpOrder": [
+            "xformOp:translate",
+            "xformOp:orient",
+            "xformOp:scale"
+          ]
+        },
+        "authored_extent": [
+          [
+            -0.010502000339329243,
+            -8.399999933317304e-05,
+            0.00013299999409355223
+          ],
+          [
+            0.010502000339329243,
+            0.02634499967098236,
+            0.05389999970793724
+          ]
+        ],
+        "face_count": 8202,
+        "path": "/panda/panda_leftfinger/collisions",
+        "raw_stage_world_bounds": [
+          [
+            0.08051454488766285,
+            -0.02605481288404614,
+            0.8137000240385532
+          ],
+          [
+            0.11405474126420012,
+            0.00748538313698337,
+            0.8674670237523969
+          ]
+        ],
+        "vertex_count": 4245
+      },
+      {
+        "apis": [
+          "PhysicsCollisionAPI",
+          "PhysicsMeshCollisionAPI"
+        ],
+        "attributes": {
+          "physics:approximation": "convexHull",
+          "xformOp:orient": [
+            -4.371138828673793e-08,
+            -0.0,
+            0.0,
+            1.0
+          ],
+          "xformOp:scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "xformOp:translate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xformOpOrder": [
+            "xformOp:translate",
+            "xformOp:orient",
+            "xformOp:scale"
+          ]
+        },
+        "authored_extent": [
+          [
+            -0.010502000339329243,
+            -8.399999933317304e-05,
+            0.00013299999409355223
+          ],
+          [
+            0.010502000339329243,
+            0.02634499967098236,
+            0.05389999970793724
+          ]
+        ],
+        "face_count": 8202,
+        "path": "/panda/panda_rightfinger/collisions",
+        "raw_stage_world_bounds": [
+          [
+            0.06194521405801242,
+            -0.007485482151933348,
+            0.8137000240385532
+          ],
+          [
+            0.09548541009919126,
+            0.026054714204454644,
+            0.8674670237523969
+          ]
+        ],
+        "vertex_count": 4245
+      }
+    ],
+    "original_geometry_converted": false,
+    "peg_weld_created": false,
+    "physical_grasp_requirements": [
+      "Peg remains independent 6-DOF rigid body with finger/peg contacts; no hand weld.",
+      "Original contact surface dimensions, relative frames and materials must be mapped, not replaced by Menagerie five-pad boxes without comparison.",
+      "Reset closes fingers for .25 simulated seconds with original gains and randomized pose distribution; no probe performed here.",
+      "Finger mimic, implicit PD saturation and contact compliance require dedicated validation."
+    ],
+    "source_finger_control": {
+      "armature": 0,
+      "damping": 173,
+      "effort_limit_N": 40,
+      "joint_friction": 0.1,
+      "mode": "implicit PD position target0, effort target0",
+      "names": [
+        "panda_finger_joint1",
+        "panda_finger_joint2"
+      ],
+      "stiffness": 7500
+    },
+    "source_finger_mass_kg": [
+      0.02969999983906746,
+      0.02969999983906746
+    ],
+    "status": "NOT_RECONSTRUCTED_CONTACT_EQUIVALENCE_UNKNOWN"
+  },
+  "independent_synthetic_compile": {
+    "command": [
+      "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s1a_geometry_audit.py",
+      "--probe-mujoco"
+    ],
+    "result": {
+      "MjData_created": true,
+      "compiled_hull_error_to_ideal_annulus": "NOT_CERTIFIED_NOT_FACTORY_ERROR",
+      "compiled_vertex_quantization": {
+        "maximum_bidir_vertex_distance_m_approx": 9.99366242744418e-10,
+        "mesh_vert_dtype": "float32",
+        "scope": "Measured all64 synthetic meshes after compiler recenter/rotation; double arithmetic, not rigorous rounding bound or Factory conversion error."
+      },
+      "engine_version": "3.5.0",
+      "invalid_assets": [
+        {
+          "actual_error": "Error: size 0 must be positive in geom\nElement name '', id 0, line 1",
+          "name": "zero_radius",
+          "rejected": true
+        },
+        {
+          "actual_error": "Error: mesh 'missing' not found in geom 0\nElement name '', id 0, line 1",
+          "name": "missing_mesh",
+          "rejected": true
+        },
+        {
+          "actual_error": "Error: qhull error\nElement name 'flat', id 0, line 1",
+          "name": "coplanar_mesh",
+          "rejected": true
+        }
+      ],
+      "peak_rss_kib": 63028,
+      "physics_steps": 0,
+      "policy_inferences": 0,
+      "repeat_compilation": [
+        {
+          "compile_s": 0.0071617460052948445,
+          "compiled_geometry_sha256": "92af208595544e148f9d3734a7fae4adb2f4c1663084232de0933c078b86657c",
+          "nbody": 3,
+          "ngeom": 65,
+          "nmesh": 64,
+          "nq": 7,
+          "nv": 6
+        },
+        {
+          "compile_s": 0.004694953000580426,
+          "compiled_geometry_sha256": "92af208595544e148f9d3734a7fae4adb2f4c1663084232de0933c078b86657c",
+          "nbody": 3,
+          "ngeom": 65,
+          "nmesh": 64,
+          "nq": 7,
+          "nv": 6
+        }
+      ],
+      "reproducible_compiled_geometry": true,
+      "runtime_s": 0.20425071000499884,
+      "scope": "INDEPENDENT_SYNTHETIC_ANNULUS_COMPILATION_AND_STATIC_COLLISION_ONLY_NOT_FACTORY",
+      "single_convex_hull_negative_control": {
+        "axis_sphere_distance_m": -0.012599999924433083,
+        "bore_integrity_rejected": true,
+        "contact_count": 1,
+        "physics_time_s": 0.0,
+        "scope": "INDEPENDENT_SYNTHETIC_RING_STANDARD_SINGLE_MESH_GEOM_NEGATIVE_CONTROL"
+      },
+      "static_synthetic_distance_checks": [
+        {
+          "case": "axis_open_bore",
+          "contact_count": 0,
+          "minimum_geom_distance_m": 0.003945121273738018,
+          "physics_time_s": 0.0,
+          "sphere_center_m": [
+            0.0,
+            0,
+            0.0125
+          ],
+          "sphere_radius_m": 0.0001
+        },
+        {
+          "case": "inner_wall_contact",
+          "contact_count": 2,
+          "minimum_geom_distance_m": -9.001198478322255e-05,
+          "physics_time_s": 0.0,
+          "sphere_center_m": [
+            0.00404,
+            0,
+            0.0125
+          ],
+          "sphere_radius_m": 0.0001
+        }
+      ],
+      "xml_sha256": "a56cb5c1f5be23ba555f2fe3de788455c9b853b2cffdcedb7b7957db6283348b"
+    },
+    "returncode": 0,
+    "runtime_s": 0.2580066110022017,
+    "stderr": "QH6154 Qhull precision error: Initial simplex is flat (facet 1 is coplanar with the interior point)\n\nWhile executing:  | qhull Qt\nOptions selected for Qhull 2020.2.r 2023/01/02:\n  run-id 1729259647  Qtriangulate  _pre-merge  _zero-centrum  _max-width  1\n  Error-roundoff 1.4e-15  _one-merge 9.7e-15  _near-inside 4.9e-14\n  Visible-distance 2.8e-15  U-max-coplanar 2.8e-15  Width-outside 5.5e-15\n  _wide-facet 1.7e-14  _maxoutside 1.1e-14\n\nThe input to qhull appears to be less than 3 dimensional, or a\ncomputation has overflowed.\n\nQhull could not construct a clearly convex simplex from points:\n- p3(v4):     1     1     0\n- p2(v3):     0     1     0\n- p1(v2):     1     0     0\n- p0(v1):     0     0     0\n\nThe center point is coplanar with a facet, or a vertex is coplanar\nwith a neighboring facet.  The maximum round off error for\ncomputing distances is 1.4e-15.  The center point, facets and distances\nto the center point are as follows:\n\ncenter point      0.5      0.5        0\n\nfacet p2 p1 p0 distance=    0\nfacet p3 p1 p0 distance=    0\nfacet p3 p2 p0 distance=    0\nfacet p3 p2 p1 distance=    0\n\nThese points either have a maximum or minimum x-coordinate, or\nthey maximize the determinant for k coordinates.  Trial points\nare first selected from points that maximize a coordinate.\n\nThe min and max coordinates for each dimension are:\n  0:         0         1  difference=    1\n  1:         0         1  difference=    1\n  2:         0         0  difference=    0\n\nIf the input should be full dimensional, you have several options that\nmay determine an initial simplex:\n  - use 'QJ'  to joggle the input and make it full dimensional\n  - use 'QbB' to scale the points to the unit cube\n  - use 'QR0' to randomly rotate the input for different maximum points\n  - use 'Qs'  to search all points for the initial simplex\n  - use 'En'  to specify a maximum roundoff error less than 1.4e-15.\n  - trace execution with 'T3' to see the determinant for each point.\n\nIf the input is lower dimensional:\n  - use 'QJ' to joggle the input and make it full dimensional\n  - use 'Qbk:0Bk:0' to delete coordinate k from the input.  You should\n    pick the coordinate with the least range.  The hull will have the\n    correct topology.\n  - determine the flat containing the points, rotate the points\n    into a coordinate plane, and delete the other coordinates.\n  - add one or more points to make the input full dimensional.\n"
+  },
+  "nominal_dimensions_m": {
+    "hole_diameter": 0.0081,
+    "peg_diameter": 0.007986,
+    "radial_gap": 5.7e-05
+  },
+  "original_geometry_reference": {
+    "command": [
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s1a_geometry_audit.py",
+      "--probe-usd",
+      "--s0",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s0/assets_audit.json"
+    ],
+    "result": {
+      "assets": [
+        {
+          "meshes": [
+            {
+              "axis_surface_intersections": [
+                {
+                  "z_exact": "0",
+                  "z_m": 0.0
+                },
+                {
+                  "z_exact": "13421773/268435456",
+                  "z_m": 0.05000000074505806
+                }
+              ],
+              "collision_approximation": "sdf",
+              "complete_straight_inner_wall": null,
+              "cooked_buffers": [
+                {
+                  "decoded": false,
+                  "length": 1403,
+                  "name": "physxCookedData:convexHull:buffer",
+                  "type": "uchar[]"
+                },
+                {
+                  "decoded": false,
+                  "length": 1629295,
+                  "name": "physxCookedData:triangleMesh:buffer",
+                  "type": "uchar[]"
+                }
+              ],
+              "local_to_world_transform_verified_identity": true,
+              "maximum_raw_mesh_radius_squared_exact": "1176465874449665/73786976294838206464",
+              "original_cooked_SDF_effective_surface_error_m": "UNKNOWN_NOT_DECODED_OR_PHYSX_EXECUTED",
+              "path": "/Root/forge_round_peg_8mm/mesh",
+              "sections": [
+                {
+                  "all_section_segments": 288,
+                  "maximum_radius_m_approx": 0.003993004597000524,
+                  "maximum_radius_squared_exact": "1176465874449665/73786976294838206464",
+                  "minimum_radius_above_nominal_hole_radius": false,
+                  "minimum_radius_m_approx": 0.003992046726479117,
+                  "minimum_radius_squared_exact": "263322653216395944838689/16523307695400799150412922880",
+                  "selected_segments": 288,
+                  "selection_radial_cutoff_m": null,
+                  "status": "EXACT_RATIONAL_POLYGON_SECTION_EXTREMA_SQRT_DISPLAY_ONLY",
+                  "z_exact": "1/1000",
+                  "z_m": 0.001
+                },
+                {
+                  "all_section_segments": 288,
+                  "maximum_radius_m_approx": 0.003993004597000524,
+                  "maximum_radius_squared_exact": "1176465874449665/73786976294838206464",
+                  "minimum_radius_above_nominal_hole_radius": false,
+                  "minimum_radius_m_approx": 0.003992046726479117,
+                  "minimum_radius_squared_exact": "263322653216395944838689/16523307695400799150412922880",
+                  "selected_segments": 288,
+                  "selection_radial_cutoff_m": null,
+                  "status": "EXACT_RATIONAL_POLYGON_SECTION_EXTREMA_SQRT_DISPLAY_ONLY",
+                  "z_exact": "1/40",
+                  "z_m": 0.025
+                },
+                {
+                  "all_section_segments": 288,
+                  "maximum_radius_m_approx": 0.003993004597000524,
+                  "maximum_radius_squared_exact": "1176465874449665/73786976294838206464",
+                  "minimum_radius_above_nominal_hole_radius": false,
+                  "minimum_radius_m_approx": 0.003992046726479117,
+                  "minimum_radius_squared_exact": "263322653216395944838689/16523307695400799150412922880",
+                  "selected_segments": 288,
+                  "selection_radial_cutoff_m": null,
+                  "status": "EXACT_RATIONAL_POLYGON_SECTION_EXTREMA_SQRT_DISPLAY_ONLY",
+                  "z_exact": "49/1000",
+                  "z_m": 0.049
+                }
+              ],
+              "topology": {
+                "boundary_edges": 0,
+                "closed_oriented_triangle_surface": true,
+                "edge_incidence_histogram": {
+                  "2": 1728
+                },
+                "euler_characteristic_used": 2,
+                "exact_coordinate_welded_vertices": 578,
+                "faces": 1152,
+                "nonmanifold_edges": 0,
+                "orientation_inconsistent_edges": 0,
+                "undirected_edges": 1728,
+                "used_vertices": 578,
+                "vertices": 1154,
+                "zero_area_faces": 0
+              },
+              "vertex_z_levels_m": [
+                0.0,
+                0.0005000000237487257,
+                0.0494999997317791,
+                0.05000000074505806
+              ],
+              "world_bounds_m": [
+                [
+                  -0.003992999903857708,
+                  -0.003992999903857708,
+                  0.0
+                ],
+                [
+                  0.003992999903857708,
+                  0.003992999903857708,
+                  0.05000000074505806
+                ]
+              ]
+            }
+          ],
+          "name": "factory_peg_8mm.usd",
+          "original_unchanged": true,
+          "sha256_after": "b5040c8c639f3dc0731adfb6022c0d63383b7550354e413dc24e7417b600869d",
+          "sha256_before": "b5040c8c639f3dc0731adfb6022c0d63383b7550354e413dc24e7417b600869d"
+        },
+        {
+          "meshes": [
+            {
+              "axis_surface_intersections": [
+                {
+                  "z_exact": "-6442451/2147483648",
+                  "z_m": -0.003000000026077032
+                },
+                {
+                  "z_exact": "0",
+                  "z_m": 0.0
+                }
+              ],
+              "collision_approximation": "sdf",
+              "complete_straight_inner_wall": {
+                "maximum_radius_m_approx": 0.014326549049982297,
+                "maximum_radius_squared_exact": "118318573838389/576460752303423488",
+                "minimum_radius_m_approx": 0.004498925657431294,
+                "minimum_radius_squared_exact": "1061949035432197287190408329/52466976910365431430855809564672",
+                "scope": "All raw mesh boundary triangles intersecting open z slab(0,.024); exact rational clipping/projection covers entire triangle interiors, not finitely selected z planes.",
+                "selection": "ALL triangles intersecting open z slab; floor/chamfer at slab endpoints excluded explicitly; no radial cutoff.",
+                "status": "EXACT_RATIONAL_ALL_BOUNDARY_SLAB_BOUND",
+                "triangle_count": 588,
+                "z_interval_m": [
+                  0.0,
+                  0.024000000208616257
+                ]
+              },
+              "cooked_buffers": [
+                {
+                  "decoded": false,
+                  "length": 909,
+                  "name": "physxCookedData:convexHull:buffer",
+                  "type": "uchar[]"
+                },
+                {
+                  "decoded": false,
+                  "length": 7471707,
+                  "name": "physxCookedData:triangleMesh:buffer",
+                  "type": "uchar[]"
+                }
+              ],
+              "local_to_world_transform_verified_identity": true,
+              "maximum_raw_mesh_radius_squared_exact": "28823036326681/36028797018963968",
+              "original_cooked_SDF_effective_surface_error_m": "UNKNOWN_NOT_DECODED_OR_PHYSX_EXECUTED",
+              "path": "/Root/forge_hole_8mm/forge_hole_8mm/mesh",
+              "sections": [
+                {
+                  "all_section_segments": 588,
+                  "maximum_radius_m_approx": 0.004500004880643948,
+                  "maximum_radius_squared_exact": "1494189511123865/73786976294838206464",
+                  "minimum_radius_above_nominal_hole_radius": true,
+                  "minimum_radius_m_approx": 0.004498925657431294,
+                  "minimum_radius_squared_exact": "1061949035432197287190408329/52466976910365431430855809564672",
+                  "selected_segments": 288,
+                  "selection_radial_cutoff_m": 0.008,
+                  "status": "EXACT_RATIONAL_POLYGON_SECTION_EXTREMA_SQRT_DISPLAY_ONLY",
+                  "z_exact": "1/1000",
+                  "z_m": 0.001
+                },
+                {
+                  "all_section_segments": 588,
+                  "maximum_radius_m_approx": 0.004500004880643948,
+                  "maximum_radius_squared_exact": "1494189511123865/73786976294838206464",
+                  "minimum_radius_above_nominal_hole_radius": true,
+                  "minimum_radius_m_approx": 0.004498925657431294,
+                  "minimum_radius_squared_exact": "1061949035432197287190408329/52466976910365431430855809564672",
+                  "selected_segments": 288,
+                  "selection_radial_cutoff_m": 0.008,
+                  "status": "EXACT_RATIONAL_POLYGON_SECTION_EXTREMA_SQRT_DISPLAY_ONLY",
+                  "z_exact": "1/80",
+                  "z_m": 0.0125
+                },
+                {
+                  "all_section_segments": 588,
+                  "maximum_radius_m_approx": 0.004500004880643948,
+                  "maximum_radius_squared_exact": "1494189511123865/73786976294838206464",
+                  "minimum_radius_above_nominal_hole_radius": true,
+                  "minimum_radius_m_approx": 0.004498925657431294,
+                  "minimum_radius_squared_exact": "1061949035432197287190408329/52466976910365431430855809564672",
+                  "selected_segments": 288,
+                  "selection_radial_cutoff_m": 0.008,
+                  "status": "EXACT_RATIONAL_POLYGON_SECTION_EXTREMA_SQRT_DISPLAY_ONLY",
+                  "z_exact": "239/10000",
+                  "z_m": 0.0239
+                },
+                {
+                  "all_section_segments": 588,
+                  "maximum_radius_m_approx": 0.005000004957285312,
+                  "maximum_radius_squared_exact": "11538464125755070702400759189/461537649840224102171593932800000",
+                  "minimum_radius_above_nominal_hole_radius": true,
+                  "minimum_radius_m_approx": 0.004998806495520087,
+                  "minimum_radius_squared_exact": "245021449113298517961636259500514916716209/9805538587523676043554718108754410209280000000",
+                  "selected_segments": 288,
+                  "selection_radial_cutoff_m": 0.008,
+                  "status": "EXACT_RATIONAL_POLYGON_SECTION_EXTREMA_SQRT_DISPLAY_ONLY",
+                  "z_exact": "49/2000",
+                  "z_m": 0.0245
+                }
+              ],
+              "topology": {
+                "boundary_edges": 0,
+                "closed_oriented_triangle_surface": true,
+                "edge_incidence_histogram": {
+                  "2": 5709
+                },
+                "euler_characteristic_used": -6,
+                "exact_coordinate_welded_vertices": 1897,
+                "faces": 3806,
+                "nonmanifold_edges": 0,
+                "orientation_inconsistent_edges": 0,
+                "undirected_edges": 5709,
+                "used_vertices": 1897,
+                "vertices": 1897,
+                "zero_area_faces": 0
+              },
+              "vertex_z_levels_m": [
+                -0.003000000026077032,
+                0.0,
+                0.024000000208616257,
+                0.02500000037252903
+              ],
+              "world_bounds_m": [
+                [
+                  -0.019999999552965164,
+                  -0.019999999552965164,
+                  -0.003000000026077032
+                ],
+                [
+                  0.019999999552965164,
+                  0.019999999552965164,
+                  0.02500000037252903
+                ]
+              ]
+            }
+          ],
+          "name": "factory_hole_8mm.usd",
+          "original_unchanged": true,
+          "sha256_after": "4bad48cde5a2e523454f9ed584023fae53d619a5ffb3d6ab08f29a6240014c28",
+          "sha256_before": "4bad48cde5a2e523454f9ed584023fae53d619a5ffb3d6ab08f29a6240014c28"
+        }
+      ],
+      "peak_rss_kib": 117624,
+      "runtime_s": 1.762857649999205,
+      "scope": "READ_ONLY_ORIGINAL_USD_SCALAR_GEOMETRY_METADATA_NO_CONVERSION_NO_VERTEX_EXPORT",
+      "usd_version": [
+        0,
+        22,
+        11
+      ]
+    },
+    "returncode": 0,
+    "runtime_s": 1.8086972239980241,
+    "stderr": ""
+  },
+  "peak_rss_kib": 20140,
+  "primary_sources": {
+    "mujoco_collision": "https://mujoco.readthedocs.io/en/3.5.0/computation/index.html#collision-detection",
+    "mujoco_mesh": "https://mujoco.readthedocs.io/en/3.5.0/XMLreference.html#asset-mesh",
+    "mujoco_sdf": "https://mujoco.readthedocs.io/en/3.5.0/programming/extension.html#sdf"
+  },
+  "restrictions": {
+    "checkpoint_loads": 0,
+    "original_assets_copied": false,
+    "original_derived_mesh_exported": false,
+    "original_dimensions_modified": false,
+    "original_geometry_preserved": true,
+    "physics_steps": 0,
+    "policy_rollouts": 0
+  },
+  "runtime_s": 2.07142149900028,
+  "s0_evidence_sha256": "48880ac31be9bb92be6e1ca34820292308b1bc1533b7b91f99130ebd924c951f",
+  "schema_version": 1,
+  "scope": "CPU_FIRST_GEOMETRY_PREREQUISITES_NO_ORIGINAL_ASSET_CONVERSION_OR_REDISTRIBUTION",
+  "source_nominal_dimension_reconciliation": {
+    "coaxial_raw_gap_lower_bound_divided_by_nominal57um": 8.875808077719299,
+    "coaxial_raw_geometric_radial_gap_lower_bound_exact": "50592106043/100000000000000",
+    "coaxial_raw_geometric_radial_gap_lower_bound_m": 0.00050592106043,
+    "do_not_correct_by_rescaling": "Keep original unmodified. Resolve source/config/cooked mismatch before a fidelity claim; do not enlarge/shrink either part.",
+    "peg_maximum_radius_upper_bound_exact": "3993004597001/1000000000000000",
+    "peg_maximum_radius_upper_bound_m": 0.003993004597001,
+    "scope": "Straight raw bore slab z in (0,.024) and complete raw peg maximum radius at coaxial vertical placement; no cooked SDF/contact or arbitrary pose/physics claim.",
+    "status": "VERIFIED_RAW_SOURCE_GEOMETRY_DISAGREES_WITH_NOMINAL_CONFIGURATION",
+    "straight_bore_radius_lower_bound_exact": "4498925657431/1000000000000000",
+    "straight_bore_radius_lower_bound_m": 0.004498925657431
+  },
+  "support_geometry": {
+    "original_hole_fixed_joint": "Source fixed-world joint retained as a mapping requirement; no altered collider built.",
+    "requirements": "Resolve table USD dependency and applicable license, collision transforms, full dimensions and material before any Factory physics probe.",
+    "status": "BLOCKED_FOR_FAITHFUL_RECONSTRUCTION",
+    "table_dependency": {
+      "default_prim": "DemoTable",
+      "dependency_status": "UNKNOWN_NOT_COMPOSED_OR_FETCHED",
+      "external_composition_references": [
+        "table.usd"
+      ],
+      "file": {
+        "bytes": 4584,
+        "exists": true,
+        "md5": "cc5384821e87bdcd44cf20fb461a5363",
+        "path": "/home/ubuntu2004/.cache/ov/client/http/d025017ca0141657e0317517b84a432f939081bdc9bdf6bcb960feededdf3d05.usd",
+        "sha256": "479ed8fd374d8eafdedf3ca3b9d0d5981ffc6d5c5016929347f748be93d5df17"
+      },
+      "sublayers": [],
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Props/Mounts/SeattleLabTable/table_instanceable.usd"
+    }
+  },
+  "task": "G4-S1A"
+}

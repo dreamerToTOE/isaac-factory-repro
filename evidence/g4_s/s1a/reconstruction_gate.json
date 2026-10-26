@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "task": "G4-S1A",
+  "generated_utc": "2026-10-26T12:09:43.204117+00:00",
+  "starting_commit": "554120e2ea001170c8895c6441f831622db7fd91",
+  "engineering_status": "COMPLETE",
+  "faithful_Factory_reconstruction": "BLOCKED",
+  "S1B_decision": "NO-GO",
+  "decision_scope": "Current evidence-remediable prerequisite gate, not impossibility claim. Independent diagnostic success is not faithful Factory reconstruction.",
+  "source_receipts": {
+    "evidence/g4_s/s1a/robot_mapping.json": "517647209506046295e70dde465626cd132931f9d00fb792374c26c7ce83175e",
+    "evidence/g4_s/s1a/geometry_audit.json": "d9c103f9c4003386ecd6ec66d438594af33dc20308cd6f53d089ca1f74e08b3f",
+    "evidence/g4_s/s1a/licensing_audit.json": "9b2dfb3f90c6db38466d83b34638eff789de9b575f67dc3c3504d2b1ad769996",
+    "evidence/g4_s/s1a/cpu_validation_20261026T_g4s1a_r2/summary.json": "eb3c25221ebc998718b2e49528c0c30265b9d0712c8244ff972f421e857afd0d",
+    "docs/REVIEW_G4_S1A.md": "fa06aa6dffe47db616f096ccfc3a8bf6c91d3ca9402fd84cded5db8c4066b5c6"
+  },
+  "pinned_target": {
+    "engine": "MuJoCo",
+    "version": "3.5.0",
+    "model": "franka_emika_panda/panda.xml",
+    "menagerie_commit": "8161bba264d7fa7c99ca301e91e7fb44737676ad",
+    "FR3_substitution": false
+  },
+  "original_asset_license_gates": [
+    {
+      "applicable_exact_asset_license": "UNKNOWN",
+      "distribution_permission": "NOT_ESTABLISHED",
+      "gate": "BLOCKED",
+      "local_conversion_permission": "NOT_ESTABLISHED",
+      "name": "franka_mimic.usd",
+      "reason": "Bundled content-pack terms defer robot/prop licenses to hosted folders; neither the general Franka license nor repository code license establishes the scope of this exact Factory-modified USD.",
+      "reference_sha256": "86d0017a093669b222a8c640bf581cc3e3715035aa7c596600f478da011f6c8e",
+      "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/IsaacLab/Factory/franka_mimic.usd"
+    },
+    {
+      "applicable_exact_asset_license": "UNKNOWN",
+      "distribution_permission": "NOT_ESTABLISHED",
+      "gate": "BLOCKED",
+      "local_conversion_permission": "NOT_ESTABLISHED",
+      "name": "factory_peg_8mm.usd",
+      "reason": "Bundled content-pack terms defer robot/prop licenses to hosted folders; neither the general Franka license nor repository code license establishes the scope of this exact Factory-modified USD.",
+      "reference_sha256": "b5040c8c639f3dc0731adfb6022c0d63383b7550354e413dc24e7417b600869d",
+      "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/IsaacLab/Factory/factory_peg_8mm.usd"
+    },
+    {
+      "applicable_exact_asset_license": "UNKNOWN",
+      "distribution_permission": "NOT_ESTABLISHED",
+      "gate": "BLOCKED",
+      "local_conversion_permission": "NOT_ESTABLISHED",
+      "name": "factory_hole_8mm.usd",
+      "reason": "Bundled content-pack terms defer robot/prop licenses to hosted folders; neither the general Franka license nor repository code license establishes the scope of this exact Factory-modified USD.",
+      "reference_sha256": "4bad48cde5a2e523454f9ed584023fae53d619a5ffb3d6ab08f29a6240014c28",
+      "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/IsaacLab/Factory/factory_hole_8mm.usd"
+    },
+    {
+      "applicable_exact_asset_license": "UNKNOWN",
+      "distribution_permission": "NOT_ESTABLISHED",
+      "gate": "BLOCKED",
+      "local_conversion_permission": "NOT_ESTABLISHED",
+      "name": "table_instanceable.usd and table.usd dependency",
+      "reason": "Hosted-folder specific license and complete dependency chain are not established; generic Content grant is not a verified per-asset clearance.",
+      "reference_sha256": "479ed8fd374d8eafdedf3ca3b9d0d5981ffc6d5c5016929347f748be93d5df17",
+      "source_url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Props/Mounts/SeattleLabTable/table_instanceable.usd"
+    },
+    {
+      "applicable_exact_asset_license": "Apache-2.0",
+      "commit": "8161bba264d7fa7c99ca301e91e7fb44737676ad",
+      "distribution_permission": "VERIFIED_UNDER_LICENSE_CONDITIONS",
+      "gate": "DIAGNOSTIC_ONLY_ALLOWED",
+      "local_conversion_permission": "VERIFIED_UNDER_LICENSE_CONDITIONS",
+      "name": "Menagerie franka_emika_panda",
+      "requirements": [
+        "Provide Apache-2.0 license with distributed derivative copies.",
+        "Retain relevant copyright/patent/trademark/attribution notices.",
+        "Mark changed files; preserve NOTICE contents if supplied.",
+        "No NOTICE found at model/root paths in the pinned checkout; this does not waive notices elsewhere.",
+        "Do not imply this license covers NVIDIA Factory modifications, peg, hole or table."
+      ],
+      "source_url": "https://github.com/google-deepmind/mujoco_menagerie/tree/8161bba264d7fa7c99ca301e91e7fb44737676ad/franka_emika_panda"
+    }
+  ],
+  "dimensions": {
+    "joint_and_static_frame_mapping": {
+      "status": "VERIFIED_WITH_RECORDED_DIFFERENCES",
+      "joint_count": 9,
+      "arm_dofs": 7,
+      "finger_dofs": 2,
+      "static_fixtures": 12,
+      "right_finger_body_axes_pi_difference": true,
+      "live_PhysX_pose_J_M_or_quaternion_sign_parity": "NOT_VERIFIED"
+    },
+    "robot_mass_CoM_inertia": {
+      "status": "MAPPED_AUTHORED_METADATA_RUNTIME_CONDITIONAL",
+      "original_body_count": 13,
+      "missing_candidate_bodies": [
+        "force_sensor",
+        "panda_fingertip_centered"
+      ],
+      "runtime_0_01I_is_not_joint_armature": true,
+      "sensor_authored_inertia": "UNKNOWN",
+      "live_PhysX_tensors": "UNKNOWN"
+    },
+    "actuator_and_gravity": {
+      "status": "NOT_RECONSTRUCTED",
+      "candidate_default_arm_position_servos": 7,
+      "candidate_default_finger_actuators": 1,
+      "original_arm_effort_backend_semantics": "UNKNOWN",
+      "candidate_not_original_gravity_or_armature": true
+    },
+    "raw_geometry": {
+      "status": "READ_ONLY_SCALAR_TOPOLOGY_AND_EXACT_RADIAL_BOUNDS_VERIFIED",
+      "nominal_radial_clearance_m": 5.7e-05,
+      "complete_raw_coaxial_straight_slab_radial_clearance_lower_bound_m": 0.00050592106043,
+      "scope": "Open positive-z straight bore slab only; exact XY surface projection + peg XY vertex norm bound; no full3D fit across floor, arbitrary pose, dynamics or cookedSDF certificate.",
+      "hole_has_floor_base_and_top_chamfer": true,
+      "original_USD_converted": false
+    },
+    "original_collision_conversion": {
+      "status": "BLOCKED",
+      "error_budget": {
+        "original_57um_fidelity_certified": false,
+        "source_cooked_PhysX_SDF_to_MuJoCo_collision_m": "UNKNOWN",
+        "source_cooked_PhysX_SDF_to_raw_mesh_m": "UNKNOWN",
+        "source_raw_mesh_to_converted_mesh_m": "UNKNOWN_NO_CONVERSION"
+      },
+      "single_convex_hull_for_hole": "REJECTED",
+      "bore_enlarged": false,
+      "peg_shrunk": false
+    },
+    "independent_synthetic_annulus": {
+      "status": "STATIC_DIAGNOSTIC_PASS_ONLY_NOT_FACTORY",
+      "sectors": 64,
+      "ideal_inner_error_upper_bound_m": 4.883310746173469e-06,
+      "measured_compiled_vertex_error_m_approx": 9.99366242744418e-10,
+      "compiled_surface_strict_error_certificate": false,
+      "single_hull_axis_collision_negative_control": true,
+      "ideal_inner_error_upper_bound_exact": "9801/2007040000",
+      "ideal_outer_error_upper_bound_m": 2.414422683600882e-05,
+      "ideal_bound_is_original_Factory_error": false
+    },
+    "gripper_physical_grasp": {
+      "status": "NOT_RECONSTRUCTED_CONTACT_EQUIVALENCE_UNKNOWN",
+      "required_peg_independent_6DOF": true,
+      "peg_weld_created": false,
+      "original_fingertip_geometry_equivalence": "UNKNOWN",
+      "mimic_PD_and_material_equivalence": "UNKNOWN"
+    },
+    "table_and_support": {
+      "status": "BLOCKED_DEPENDENCY_LICENSE_AND_COLLISION_CLOSURE",
+      "top_layer_reference": "table.usd",
+      "source_ground_translation_m": [
+        0,
+        0,
+        -1.05
+      ],
+      "source_table_translation_m": [
+        0.55,
+        0,
+        0
+      ],
+      "source_table_quaternion_wxyz": [
+        0.70711,
+        0,
+        0,
+        0.70711
+      ],
+      "source_hole_fixed_world_joint": true,
+      "substitute_support_built": false
+    }
+  },
+  "validation": {
+    "new_robot_cases": 20,
+    "new_geometry_cases": 28,
+    "selected_collected_cases": 535,
+    "selected_passed": 534,
+    "selected_skipped": 1,
+    "selected_failed": 0,
+    "system_plot_same_case_passed": 1,
+    "distinct_allowed_cases_eventually_passed": 535,
+    "historical_policy_cases_not_executed": 73,
+    "full_historical_suite_claimed": false,
+    "final_wall_duration_s": 36.63954810099676,
+    "tripwire_negative_dummy_exit": 97,
+    "policy_inferences": 0
+  },
+  "preservation": {
+    "equal_before_after": true,
+    "historical_tracked_files": 1637,
+    "checkpoint_count_hash_only": 3,
+    "original_USD_count": 4,
+    "unrelated_g3v_file_count": 5
+  },
+  "remaining_blockers": [
+    "Exact asset-specific license applicability and conversion/distribution scope",
+    "Raw/config/cookedSDF diameter reconciliation and bounded original geometry conversion preserving bore/floor/chamfer",
+    "Original hand/fingertip collider support and physical grasp/mimic/PD/contact semantics",
+    "Live source masses/CoMs/inertias for robot, sensor, peg and hole; actuator and gravity force routes",
+    "Table dependency, license, collision geometry and materials"
+  ],
+  "review": {
+    "license_and_scope": "INDEPENDENT_REVIEW_PASS",
+    "geometry_math_and_report": "INDEPENDENT_REVIEW_PASS_AFTER_EXPLICIT_XY_NORM_AND_UPPER_BOUND_WORDING",
+    "robot_frame_mass_inertia": "INDEPENDENT_REVIEW_PASS_AFTER_FRAME_ALIGNED_TENSOR_TABLE",
+    "historical_implementation_changes": false
+  },
+  "retained_attempts": [
+    "cpu_validation_20261026T_g4s1a (runner import-root failure)",
+    "cpu_validation_20261026T_g4s1a_r1 (pass before collector no-overwrite hardening)",
+    "geometry_audit_pre_review.json (default results unchanged after exact-input API fix)",
+    "licensing_audit_network_initial.json"
+  ],
+  "restrictions": {
+    "physics_integration_steps": 0,
+    "policy_inferences": 0,
+    "policy_rollouts": 0,
+    "checkpoint_deserializations": 0,
+    "training": false,
+    "packages_installed": false,
+    "S1B_started": false,
+    "learning_examination": "PENDING"
+  },
+  "stop_after": "G4-S1A"
+}

@@ -1,0 +1,237 @@
+"""S1A preservation and CPU regressions, excluding every policy-forward test file.
+
+No engine entry point, asset conversion, checkpoint deserialization, or policy call.
+Existing tests are unchanged. A profiler aborts the child before a forbidden call.
+"""
+from __future__ import annotations
+
+import argparse
+from datetime import datetime, timezone
+import hashlib
+import json
+import os
+from pathlib import Path
+import resource
+import subprocess
+import sys
+import tempfile
+import threading
+import time
+import xml.etree.ElementTree as ET
+
+REPO = Path(__file__).resolve().parents[1]
+START = '554120e2ea001170c8895c6441f831622db7fd91'
+FACTORY_PYTHON = REPO.parents[1] / 'work/envs/factory-g01/bin/python'
+EXCLUDED = {
+    'tests/test_g4i1_policy.py': 'FrozenPolicy/official-player actor forward and checkpoint construction',
+    'tests/test_g4i1_edge_cpu.py': 'actor forward in shared policy fixture',
+    'tests/test_g4i2_fault_contract.py': 'actor forward and from_checkpoint negative controls',
+    'tests/test_g4i2_policy_probe.py': 'actor forward with profiling',
+}
+
+
+def sha(path):
+    h = hashlib.sha256()
+    with Path(path).open('rb') as stream:
+        for block in iter(lambda: stream.read(1024 * 1024), b''):
+            h.update(block)
+    return h.hexdigest()
+
+
+def write(path, data):
+    with Path(path).open('x') as stream:
+        stream.write(json.dumps(data, indent=2, ensure_ascii=False, allow_nan=False) + '\n')
+
+
+def snapshot():
+    files = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', START], cwd=REPO, text=True).splitlines()
+    changed = subprocess.check_output(['git', 'diff', '--name-only', START, '--', *files], cwd=REPO, text=True).splitlines()
+    if changed:
+        raise RuntimeError('Historical tracked files changed: ' + repr(changed))
+    audit = json.loads((REPO / 'evidence/g4_i/i0/checkpoint_audit.json').read_text())
+    external = {}
+    for label, entry in audit['source_files'].items():
+        value = sha(entry['path'])
+        assert value == entry['sha256'], label
+        external[entry['path']] = value
+    checkpoints = {}
+    for label, entry in audit['checkpoints'].items():
+        value = sha(entry['path'])
+        assert value == entry['sha256'], label
+        checkpoints[label] = {'path': entry['path'], 'sha256': value, 'bytes': Path(entry['path']).stat().st_size}
+        for stem in ('agent', 'env'):
+            path = entry[stem + '_config_path']
+            value = sha(path)
+            assert value == entry[stem + '_config_sha256'], path
+            external[path] = value
+    s0 = json.loads((REPO / 'evidence/g4_s/s0/assets_audit.json').read_text())
+    # File receipts may occur at different nesting levels in archived S0 metadata.
+    originals = {}
+    def visit(value):
+        if isinstance(value, dict):
+            if {'path', 'sha256'} <= value.keys() and str(value['path']).endswith('.usd'):
+                path = Path(value['path'])
+                digest = sha(path)
+                assert digest == value['sha256'], str(path)
+                originals[str(path)] = digest
+            for child in value.values():
+                visit(child)
+        elif isinstance(value, list):
+            for child in value:
+                visit(child)
+    visit(s0)
+    assert len(originals) == 4, originals
+    other = REPO.parent / 'isaac-factory-repro'
+    unrelated = {}
+    for path in [other / 'docs/DEMO_G3V.md', other / 'scripts/g3v_playback.sh', *sorted((other / 'evidence/g3v').rglob('*'))]:
+        if path.is_file():
+            unrelated[str(path)] = sha(path)
+    return {
+        'tracked': {name: {'sha256': sha(REPO / name), 'executable': bool((REPO / name).stat().st_mode & 0o111)} for name in files},
+        'frozen_external_sources_and_configurations': external,
+        'checkpoints_hash_only_no_deserialization': checkpoints,
+        'four_original_USD_hashes': originals,
+        'unrelated_original_checkout_g3v': unrelated,
+    }
+
+
+def guarded_pytest(arguments, receipt):
+    """A Python call event precedes the body; do not let pytest catch a violation.
+
+    This is a scoped tripwire for known policy/serialization/engine entry points,
+    not a general security sandbox. Subprocesses are the reviewed S1A collectors.
+    """
+    # Match `python -m pytest` import roots. Keeping this script's directory on
+    # sys.path creates duplicate success_metrics / scripts.success_metrics modules.
+    sys.path[:] = [str(REPO)] + [p for p in sys.path if Path(p).resolve() not in (REPO, REPO / 'scripts')]
+    import pytest
+    forbidden = []
+    def profile(frame, event, arg):
+        if event == 'call':
+            filename = frame.f_code.co_filename.replace('\\', '/')
+            name = frame.f_code.co_name
+            blocked = (
+                (filename.endswith('/scripts/g4i1_policy.py') and name in ('infer', 'from_checkpoint'))
+                or ('/rl_games/algos_torch/players.py' in filename and name == 'get_action')
+                or (any('/rl_games/algos_torch/' + suffix in filename for suffix in ('models.py', 'network_builder.py')) and name == 'forward')
+                or (filename.endswith('/torch/serialization.py') and name == 'load')
+                or ('/isaacsim/' in filename and name == '__init__' and frame.f_locals.get('self', None).__class__.__name__ == 'SimulationApp')
+            )
+        elif event == 'c_call':
+            name = getattr(arg, '__name__', '')
+            filename = getattr(arg, '__module__', '') or ''
+            blocked = name in ('mj_step', 'mj_step1', 'mj_step2') and 'mujoco' in filename
+        else:
+            return
+        if blocked:
+            forbidden.append({'event': event, 'module_or_file': filename, 'function': name})
+            write(receipt, {'active': True, 'forbidden_calls': forbidden, 'aborted_before_body': True})
+            os._exit(97)
+    sys.setprofile(profile)
+    threading.setprofile(profile)
+    started = time.monotonic()
+    try:
+        if arguments == ['--guard-negative-control']:
+            # Independent dummy body, no imported actor or checkpoint. A correct
+            # call-entry tripwire terminates before this body can be evaluated.
+            exec(compile("def infer():\n    raise AssertionError('tripwire body executed')\ninfer()\n",
+                         str(REPO / 'scripts/g4i1_policy.py'), 'exec'), {})
+            raise AssertionError('negative tripwire did not terminate')
+        result = pytest.main(arguments)
+    finally:
+        sys.setprofile(None)
+        threading.setprofile(None)
+    write(receipt, {'active': True, 'forbidden_calls': forbidden, 'elapsed_s': time.monotonic() - started,
+                    'child_peak_rss_kib': resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
+                    'scope': 'Known Python policy/checkpoint-load/Isaac entry points and MuJoCo integration C calls in this pytest process/current and newly created Python threads; reviewed collectors run separately. Not a general sandbox.'})
+    return int(result)
+
+
+def tests(output, python, targets, label):
+    env = {**os.environ, 'CUDA_VISIBLE_DEVICES': '', 'PYTEST_DISABLE_PLUGIN_AUTOLOAD': '1', 'PYTHONDONTWRITEBYTECODE': '1'}
+    base = Path(tempfile.mkdtemp(prefix='g4s1a_cpu_', dir='/dev/shm' if Path('/dev/shm').is_dir() else None)) / 'pytest'
+    junit = output / (label + '.xml')
+    guard_receipt = output / (label + '_guard.json')
+    command = [str(python), str(Path(__file__).resolve()), '--guarded-pytest', str(guard_receipt),
+               '-q', *targets, '-p', 'no:cacheprovider', '--basetemp=' + str(base), '--junitxml=' + str(junit)]
+    start = time.monotonic()
+    result = subprocess.run(command, cwd=REPO, env=env, capture_output=True, text=True, timeout=600)
+    with (output / (label + '.txt')).open('x') as stream:
+        stream.write(result.stdout + result.stderr)
+    cases = ET.parse(junit).findall('.//testcase') if junit.exists() else []
+    skipped = sum(case.find('skipped') is not None for case in cases)
+    failed = sum(case.find('failure') is not None or case.find('error') is not None for case in cases)
+    guard_data = json.loads(guard_receipt.read_text()) if guard_receipt.exists() else {}
+    guard_verified = guard_data.get('active') is True and guard_data.get('forbidden_calls') == []
+    return {'command': command, 'exit_code': result.returncode, 'passed': len(cases) - skipped - failed,
+            'skipped': skipped, 'failed': failed, 'duration_s': time.monotonic() - start,
+            'log': str((output / (label + '.txt')).relative_to(REPO)), 'junit': str(junit.relative_to(REPO)),
+            'guard': str(guard_receipt.relative_to(REPO)), 'guard_verified': guard_verified, 'collected_cases': len(cases)}
+
+
+def main():
+    if len(sys.argv) > 1 and sys.argv[1] == '--guarded-pytest':
+        return guarded_pytest(sys.argv[3:], Path(sys.argv[2]))
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output', type=Path, required=True)
+    args = parser.parse_args()
+    output = args.output.resolve()
+    output.mkdir(parents=True, exist_ok=False)
+    with (output / 'runner_source.py.txt').open('x') as stream:
+        stream.write(Path(__file__).read_text())
+    start = time.monotonic()
+    before = snapshot()
+    write(output / 'preservation_before.json', before)
+    # Historical S0 collected-case identities document exactly what is excluded.
+    old_cases = ET.parse(REPO / 'evidence/g4_s/s0/cpu_validation_20261026T_g4s0/full_cpu.xml').findall('.//testcase')
+    excluded = {path: {'reason': reason, 'previously_collected_cases': sum(case.attrib.get('classname', '') == path[:-3].replace('/', '.') for case in old_cases)} for path, reason in EXCLUDED.items()}
+    assert sum(entry['previously_collected_cases'] for entry in excluded.values()) == 73
+    write(output / 'excluded_policy_tests.json', {'policy_inference_prohibited_by_S1A': True, 'unchanged_test_files': excluded,
+          'not_claimed_as_full_suite': True, 'prior_S0_total_cases': len(old_cases)})
+    negative_receipt = output / 'tripwire_negative_control.json'
+    negative_command = [str(FACTORY_PYTHON), str(Path(__file__).resolve()), '--guarded-pytest', str(negative_receipt), '--guard-negative-control']
+    negative_result = subprocess.run(negative_command, cwd=REPO, capture_output=True, text=True, timeout=60,
+        env={**os.environ, 'CUDA_VISIBLE_DEVICES': '', 'PYTEST_DISABLE_PLUGIN_AUTOLOAD': '1', 'PYTHONDONTWRITEBYTECODE': '1'})
+    negative_data = json.loads(negative_receipt.read_text()) if negative_receipt.exists() else {}
+    negative_passed = (negative_result.returncode == 97 and negative_data.get('active') is True
+                       and negative_data.get('aborted_before_body') is True
+                       and len(negative_data.get('forbidden_calls', [])) == 1
+                       and negative_data['forbidden_calls'][0]['function'] == 'infer')
+    negative = {'command': negative_command, 'exit_code': negative_result.returncode, 'passed': negative_passed,
+                'receipt': str(negative_receipt.relative_to(REPO)), 'stdout': negative_result.stdout, 'stderr': negative_result.stderr,
+                'scope': 'Synthetic known-filename dummy function; no actor imported or executed.'}
+    write(output / 'tripwire_negative_control_process.json', negative)
+    if not negative_passed:
+        raise RuntimeError('No-policy tripwire negative control failed; do not run tests')
+    selected = tests(output, FACTORY_PYTHON, ['tests', *['--ignore=' + path for path in EXCLUDED]], 'selected_cpu')
+    plot = tests(output, '/usr/bin/python3', ['tests/test_g4i2_analysis.py::test_plots_are_real_files_and_cannot_overwrite'], 'system_plot')
+    after = snapshot()
+    write(output / 'preservation_after.json', after)
+    assert before == after, 'Protected contents changed during CPU validation'
+    receipts = {str(path.relative_to(REPO)): sha(path) for path in sorted((REPO / 'evidence/g4_s/s1a').glob('*_audit.json'))}
+    receipts['evidence/g4_s/s1a/robot_mapping.json'] = sha(REPO / 'evidence/g4_s/s1a/robot_mapping.json')
+    passed = all(item['exit_code'] == 0 and item['failed'] == 0 and item['collected_cases'] > 0 and item['guard_verified'] for item in (selected, plot))
+    summary = {
+        'task': 'G4-S1A', 'starting_commit': START, 'generated_utc': datetime.now(timezone.utc).isoformat(),
+        'engineering_audit': 'COMPLETE' if passed else 'CPU_VALIDATION_FAILED',
+        'faithful_Factory_reconstruction': 'BLOCKED', 'S1B_decision': 'NO-GO',
+        'selected_cpu': selected, 'system_plot': plot, 'excluded_policy_tests': excluded,
+        'tripwire_negative_control': negative,
+        'original_or_derived_assets_distributed': False, 'no_policy_inference_guard_receipts': [selected['guard'], plot['guard']],
+        'preservation': {'equal_before_after': True, 'historical_tracked_files': len(before['tracked']),
+                         'checkpoint_count_hash_only': len(before['checkpoints_hash_only_no_deserialization']),
+                         'original_USD_count': len(before['four_original_USD_hashes']),
+                         'unrelated_g3v_file_count': len(before['unrelated_original_checkout_g3v'])},
+        'audit_receipts': receipts, 'duration_s': time.monotonic() - start,
+        'restrictions': {'physics_integration_steps': 0, 'policy_inferences': 0, 'policy_rollouts': 0,
+                         'checkpoint_deserializations': 0, 'training': False, 'packages_installed': False,
+                         'S1B_started': False, 'learning_examination': 'PENDING'},
+        'source_sha256': {str(path.relative_to(REPO)): sha(path) for path in sorted(REPO.glob('scripts/*g4s1a*.py')) + sorted(REPO.glob('tests/test_g4s1a*.py'))},
+    }
+    write(output / 'summary.json', summary)
+    print(json.dumps({key: summary[key] for key in ('engineering_audit', 'S1B_decision', 'selected_cpu', 'system_plot', 'preservation', 'duration_s')}, indent=2))
+    return 0 if passed else 1
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

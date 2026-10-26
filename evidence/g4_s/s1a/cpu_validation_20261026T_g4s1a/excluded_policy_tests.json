@@ -1,0 +1,23 @@
+{
+  "policy_inference_prohibited_by_S1A": true,
+  "unchanged_test_files": {
+    "tests/test_g4i1_policy.py": {
+      "reason": "FrozenPolicy/official-player actor forward and checkpoint construction",
+      "previously_collected_cases": 49
+    },
+    "tests/test_g4i1_edge_cpu.py": {
+      "reason": "actor forward in shared policy fixture",
+      "previously_collected_cases": 9
+    },
+    "tests/test_g4i2_fault_contract.py": {
+      "reason": "actor forward and from_checkpoint negative controls",
+      "previously_collected_cases": 11
+    },
+    "tests/test_g4i2_policy_probe.py": {
+      "reason": "actor forward with profiling",
+      "previously_collected_cases": 4
+    }
+  },
+  "not_claimed_as_full_suite": true,
+  "prior_S0_total_cases": 560
+}

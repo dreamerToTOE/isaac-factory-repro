@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/audit_g4s1a.py",
+    "--guarded-pytest",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s1a/cpu_validation_20261026T_g4s1a_r1/tripwire_negative_control.json",
+    "--guard-negative-control"
+  ],
+  "exit_code": 97,
+  "passed": true,
+  "receipt": "evidence/g4_s/s1a/cpu_validation_20261026T_g4s1a_r1/tripwire_negative_control.json",
+  "stdout": "",
+  "stderr": "",
+  "scope": "Synthetic known-filename dummy function; no actor imported or executed."
+}

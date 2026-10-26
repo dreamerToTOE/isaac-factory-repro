@@ -1,0 +1,129 @@
+{
+  "task": "G4-S1A",
+  "starting_commit": "554120e2ea001170c8895c6441f831622db7fd91",
+  "generated_utc": "2026-10-26T12:09:02.052880+00:00",
+  "engineering_audit": "COMPLETE",
+  "faithful_Factory_reconstruction": "BLOCKED",
+  "S1B_decision": "NO-GO",
+  "selected_cpu": {
+    "command": [
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/audit_g4s1a.py",
+      "--guarded-pytest",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s1a/cpu_validation_20261026T_g4s1a_r2/selected_cpu_guard.json",
+      "-q",
+      "tests",
+      "--ignore=tests/test_g4i1_policy.py",
+      "--ignore=tests/test_g4i1_edge_cpu.py",
+      "--ignore=tests/test_g4i2_fault_contract.py",
+      "--ignore=tests/test_g4i2_policy_probe.py",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp=/dev/shm/g4s1a_cpu_zhx6q7gu/pytest",
+      "--junitxml=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s1a/cpu_validation_20261026T_g4s1a_r2/selected_cpu.xml"
+    ],
+    "exit_code": 0,
+    "passed": 534,
+    "skipped": 1,
+    "failed": 0,
+    "duration_s": 28.050254223002412,
+    "log": "evidence/g4_s/s1a/cpu_validation_20261026T_g4s1a_r2/selected_cpu.txt",
+    "junit": "evidence/g4_s/s1a/cpu_validation_20261026T_g4s1a_r2/selected_cpu.xml",
+    "guard": "evidence/g4_s/s1a/cpu_validation_20261026T_g4s1a_r2/selected_cpu_guard.json",
+    "guard_verified": true,
+    "collected_cases": 535
+  },
+  "system_plot": {
+    "command": [
+      "/usr/bin/python3",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/audit_g4s1a.py",
+      "--guarded-pytest",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s1a/cpu_validation_20261026T_g4s1a_r2/system_plot_guard.json",
+      "-q",
+      "tests/test_g4i2_analysis.py::test_plots_are_real_files_and_cannot_overwrite",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp=/dev/shm/g4s1a_cpu_0yjvup_7/pytest",
+      "--junitxml=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s1a/cpu_validation_20261026T_g4s1a_r2/system_plot.xml"
+    ],
+    "exit_code": 0,
+    "passed": 1,
+    "skipped": 0,
+    "failed": 0,
+    "duration_s": 5.69276235900179,
+    "log": "evidence/g4_s/s1a/cpu_validation_20261026T_g4s1a_r2/system_plot.txt",
+    "junit": "evidence/g4_s/s1a/cpu_validation_20261026T_g4s1a_r2/system_plot.xml",
+    "guard": "evidence/g4_s/s1a/cpu_validation_20261026T_g4s1a_r2/system_plot_guard.json",
+    "guard_verified": true,
+    "collected_cases": 1
+  },
+  "excluded_policy_tests": {
+    "tests/test_g4i1_policy.py": {
+      "reason": "FrozenPolicy/official-player actor forward and checkpoint construction",
+      "previously_collected_cases": 49
+    },
+    "tests/test_g4i1_edge_cpu.py": {
+      "reason": "actor forward in shared policy fixture",
+      "previously_collected_cases": 9
+    },
+    "tests/test_g4i2_fault_contract.py": {
+      "reason": "actor forward and from_checkpoint negative controls",
+      "previously_collected_cases": 11
+    },
+    "tests/test_g4i2_policy_probe.py": {
+      "reason": "actor forward with profiling",
+      "previously_collected_cases": 4
+    }
+  },
+  "tripwire_negative_control": {
+    "command": [
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/audit_g4s1a.py",
+      "--guarded-pytest",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s1a/cpu_validation_20261026T_g4s1a_r2/tripwire_negative_control.json",
+      "--guard-negative-control"
+    ],
+    "exit_code": 97,
+    "passed": true,
+    "receipt": "evidence/g4_s/s1a/cpu_validation_20261026T_g4s1a_r2/tripwire_negative_control.json",
+    "stdout": "",
+    "stderr": "",
+    "scope": "Synthetic known-filename dummy function; no actor imported or executed."
+  },
+  "original_or_derived_assets_distributed": false,
+  "no_policy_inference_guard_receipts": [
+    "evidence/g4_s/s1a/cpu_validation_20261026T_g4s1a_r2/selected_cpu_guard.json",
+    "evidence/g4_s/s1a/cpu_validation_20261026T_g4s1a_r2/system_plot_guard.json"
+  ],
+  "preservation": {
+    "equal_before_after": true,
+    "historical_tracked_files": 1637,
+    "checkpoint_count_hash_only": 3,
+    "original_USD_count": 4,
+    "unrelated_g3v_file_count": 5
+  },
+  "audit_receipts": {
+    "evidence/g4_s/s1a/geometry_audit.json": "d9c103f9c4003386ecd6ec66d438594af33dc20308cd6f53d089ca1f74e08b3f",
+    "evidence/g4_s/s1a/licensing_audit.json": "9b2dfb3f90c6db38466d83b34638eff789de9b575f67dc3c3504d2b1ad769996",
+    "evidence/g4_s/s1a/robot_mapping.json": "517647209506046295e70dde465626cd132931f9d00fb792374c26c7ce83175e"
+  },
+  "duration_s": 36.63954810099676,
+  "restrictions": {
+    "physics_integration_steps": 0,
+    "policy_inferences": 0,
+    "policy_rollouts": 0,
+    "checkpoint_deserializations": 0,
+    "training": false,
+    "packages_installed": false,
+    "S1B_started": false,
+    "learning_examination": "PENDING"
+  },
+  "source_sha256": {
+    "scripts/audit_g4s1a.py": "e0d67d6b99427d462737549002b8ff61f8428b33a3257a5e47b6e361c94fdcd7",
+    "scripts/g4s1a_geometry_audit.py": "55156aa022c11ef0cd6eeed390e230731f06f5100e861dd7e0639fa02e0c99b6",
+    "scripts/g4s1a_license_audit.py": "e41b7d4a511b94bdff2b9dc8344315f5dc2b86abe6a301a19285b69e5a5397b7",
+    "scripts/g4s1a_robot_audit.py": "5ceaf2d10576daa5fe27ea32d8ef786defd76488ae20a8174d99e7ca1971cc31",
+    "tests/test_g4s1a_geometry.py": "46513867cdaab2aa0a9240a0857b5e80212e0731f38acd5bfcf978ffcb0974d4",
+    "tests/test_g4s1a_robot_mapping.py": "7437e6fa389a902101ef9e07dfca02a2db21e3f28727df9cb0aacc53be552749"
+  }
+}

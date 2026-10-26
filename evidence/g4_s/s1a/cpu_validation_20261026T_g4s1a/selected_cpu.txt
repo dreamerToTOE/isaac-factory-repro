@@ -1,0 +1,114 @@
+........................................................................ [ 13%]
+........................................................................ [ 26%]
+........................................................................ [ 40%]
+........................................................................ [ 53%]
+....s................................................................... [ 67%]
+........................................................................ [ 80%]
+........................................................................ [ 94%]
+.............................F                                           [100%]
+=================================== FAILURES ===================================
+__ test_production_wrapper_persists_before_close_and_keeps_predicate_returns ___
+
+tmp_path = PosixPath('/dev/shm/g4s1a_cpu_upzldx02/pytest/test_production_wrapper_persis0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7cf3c6480730>
+
+    def test_production_wrapper_persists_before_close_and_keeps_predicate_returns(tmp_path, monkeypatch):
+        from scripts import diagnose_checkpoint, success_metrics
+    
+        class ControlledFactory(TinyFactory):
+            def __init__(self):
+                super().__init__()
+                self.cfg_task = SimpleNamespace(name="peg_insert", success_threshold=.04, engage_threshold=.9,
+                                                fixed_asset_cfg=SimpleNamespace(height=.025),
+                                                held_asset_cfg=SimpleNamespace(height=.05))
+                self.step_dt = 1 / 15
+                self.max_episode_length = 150
+                self.last_result = None
+                self.closed = False
+    
+            def _get_curr_successes(self, success_threshold, check_rot=False):
+                # An independent controlled result: success [False, True], engagement
+                # [True, True]. The production observer must return this SAME object.
+                self.last_result = torch.tensor([success_threshold > .1, True])
+                return self.last_result
+    
+            def close(self):
+                self.closed = True
+    
+        checkpoint = tmp_path / "checkpoint.pth"
+        checkpoint.write_bytes(b"controlled-checkpoint")
+        monkeypatch.setattr(diagnose_checkpoint, "EXPECTED_CHECKPOINT_SHA256",
+                            hashlib.sha256(checkpoint.read_bytes()).hexdigest())
+        trajectory = tmp_path / "trajectories.npz"
+        metadata_path = tmp_path / "trajectory_metadata.json"
+        result_path = tmp_path / "metrics.json"
+        env = ControlledFactory()
+        original_predicate = env._get_curr_successes
+        original_pre_physics = env._pre_physics_step
+        original_capture = success_metrics.PreResetSuccessCapture
+    
+        def controlled_evaluator(path, run_name):
+            assert path.endswith("evaluate_checkpoint.py")
+            with success_metrics.PreResetSuccessCapture(env, convert=lambda value: value.tolist()) as capture:
+                env._pre_physics_step(torch.ones(2, 6))
+                result = env._get_curr_successes(.04)
+                assert result is env.last_result
+                assert result.tolist() == [False, True]
+                engagement = env._get_curr_successes(.9)
+                assert engagement is env.last_result
+                assert capture.consume()["step_numbers"] == [149, 149]
+            # No evaluator metrics or close have occurred yet: shutdown cannot lose
+            # the already serialized trajectory and identity metadata.
+            assert trajectory.is_file() and metadata_path.is_file()
+            assert not env.closed
+            assert env._get_curr_successes == original_predicate
+            assert env._pre_physics_step == original_pre_physics
+            with np.load(trajectory, allow_pickle=False) as loaded:
+                assert loaded["official_success"].tolist() == [[False, True]]
+                assert loaded["engaged"].tolist() == [[True, True]]
+                assert loaded["policy_step"].tolist() == [[149, 149]]
+            result_path.write_text(json.dumps({"status": "complete", "aggregate": {"episodes_completed": 2},
+                                               "episodes_completed": 2}))
+            env.close()
+            # The close hook links final primary metrics BEFORE the original close.
+            assert json.loads(metadata_path.read_text())["evaluation_output"]["episodes_completed"] == 2
+            assert env.closed
+            return {}
+    
+        monkeypatch.setattr(diagnose_checkpoint.runpy, "run_path", controlled_evaluator)
+        monkeypatch.setattr(sys, "argv", ["diagnose_checkpoint.py", "--trajectory-output", str(trajectory),
+            "--diagnostic-metadata", str(metadata_path), "--checkpoint", str(checkpoint),
+            "--output", str(result_path), "--task", "Isaac-Factory-PegInsert-Direct-v0",
+            "--seed", "1001", "--num_envs", "32", "--episodes", "1", "--max_steps", "149"])
+>       diagnose_checkpoint.main()
+
+tests/test_trajectory_capture.py:210: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/diagnose_checkpoint.py:174: in main
+    runpy.run_path(str(evaluator_path), run_name="__main__")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/evaluate_checkpoint.py'
+run_name = '__main__'
+
+    def controlled_evaluator(path, run_name):
+        assert path.endswith("evaluate_checkpoint.py")
+        with success_metrics.PreResetSuccessCapture(env, convert=lambda value: value.tolist()) as capture:
+            env._pre_physics_step(torch.ones(2, 6))
+            result = env._get_curr_successes(.04)
+            assert result is env.last_result
+            assert result.tolist() == [False, True]
+            engagement = env._get_curr_successes(.9)
+            assert engagement is env.last_result
+            assert capture.consume()["step_numbers"] == [149, 149]
+        # No evaluator metrics or close have occurred yet: shutdown cannot lose
+        # the already serialized trajectory and identity metadata.
+>       assert trajectory.is_file() and metadata_path.is_file()
+E       AssertionError: assert (False)
+E        +  where False = is_file()
+E        +    where is_file = PosixPath('/dev/shm/g4s1a_cpu_upzldx02/pytest/test_production_wrapper_persis0/trajectories.npz').is_file
+
+tests/test_trajectory_capture.py:189: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_trajectory_capture.py::test_production_wrapper_persists_before_close_and_keeps_predicate_returns
+1 failed, 532 passed, 1 skipped in 27.32s
