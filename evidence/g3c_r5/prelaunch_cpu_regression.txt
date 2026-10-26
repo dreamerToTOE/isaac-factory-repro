@@ -1,0 +1,2 @@
+CPU-only full regression: 201 passed.
+See XML and exact invocation in manifest.
