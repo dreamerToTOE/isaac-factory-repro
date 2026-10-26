@@ -1,0 +1,10 @@
+{
+  "unchanged_files_and_historical_case_counts": {
+    "tests/test_g4i1_policy.py": 49,
+    "tests/test_g4i1_edge_cpu.py": 9,
+    "tests/test_g4i2_fault_contract.py": 11,
+    "tests/test_g4i2_policy_probe.py": 4
+  },
+  "total_not_run": 73,
+  "reason": "S1B prohibits actor execution and checkpoint loads; do not claim complete actor regression."
+}

@@ -1,0 +1,87 @@
+{
+  "task": "G4-S1B",
+  "protocol": "ADAPTED_ZERO_SHOT_SIM2SIM_NO_POLICY_ENGINEERING_ONLY",
+  "starting_commit": "6e282557e2fd0c689932b6a572b53d987ad4c8d3",
+  "generated_utc": "2026-10-26T13:11:35.759667+00:00",
+  "regression_status": "PASS",
+  "selected_cpu": {
+    "command": [
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/audit_g4s1b.py",
+      "--guarded-pytest",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s1b/cpu_validation_20261026T_g4s1b/selected_cpu_guard.json",
+      "-q",
+      "tests",
+      "--ignore=tests/test_g4i1_policy.py",
+      "--ignore=tests/test_g4i1_edge_cpu.py",
+      "--ignore=tests/test_g4i2_fault_contract.py",
+      "--ignore=tests/test_g4i2_policy_probe.py",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp=/dev/shm/g4s1b_cpu_k4v8xb_8/pytest",
+      "--junitxml=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s1b/cpu_validation_20261026T_g4s1b/selected_cpu.xml"
+    ],
+    "exit_code": 0,
+    "duration_s": 30.196937478001928,
+    "cases": 562,
+    "passed": 561,
+    "failed": 0,
+    "skipped": 1,
+    "guard_verified": true,
+    "log": "evidence/g4_s/s1b/cpu_validation_20261026T_g4s1b/selected_cpu.txt",
+    "junit": "evidence/g4_s/s1b/cpu_validation_20261026T_g4s1b/selected_cpu.xml",
+    "guard": "evidence/g4_s/s1b/cpu_validation_20261026T_g4s1b/selected_cpu_guard.json"
+  },
+  "system_plot": {
+    "command": [
+      "/usr/bin/python3",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/audit_g4s1b.py",
+      "--guarded-pytest",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s1b/cpu_validation_20261026T_g4s1b/system_plot_guard.json",
+      "-q",
+      "tests/test_g4i2_analysis.py::test_plots_are_real_files_and_cannot_overwrite",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp=/dev/shm/g4s1b_cpu_jv17eisf/pytest",
+      "--junitxml=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s1b/cpu_validation_20261026T_g4s1b/system_plot.xml"
+    ],
+    "exit_code": 0,
+    "duration_s": 5.655096022004727,
+    "cases": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "guard_verified": true,
+    "log": "evidence/g4_s/s1b/cpu_validation_20261026T_g4s1b/system_plot.txt",
+    "junit": "evidence/g4_s/s1b/cpu_validation_20261026T_g4s1b/system_plot.xml",
+    "guard": "evidence/g4_s/s1b/cpu_validation_20261026T_g4s1b/system_plot_guard.json"
+  },
+  "excluded_policy_cases": 73,
+  "tripwire_negative_control_passed": true,
+  "preservation": {
+    "equal_before_after": true,
+    "historical_tracked_protected": 1690,
+    "forward_only_docs_allowed": [
+      "README.md",
+      "docs/ROADMAP_POLICY_INFERENCE_SIM2SIM.md"
+    ],
+    "checkpoint_count_hash_only": 3,
+    "external_source_configuration_count": 20,
+    "original_USD_count": 4,
+    "independent_pinned_Panda_file_count": 78,
+    "unrelated_G3V_count": 5
+  },
+  "sources": {
+    "scripts/audit_g4s1b.py": "061cc4bf44e2ca691aa84c969999f7631e79108c18466b0656b9afb5914c4e05",
+    "scripts/g4s1b_contract.py": "dcf91aa274a6151f88f36901ce0c4a2feac76d7b8fcfe6586104f906c67d6d6c",
+    "scripts/g4s1b_env.py": "065affe855ef1d3fa016d6ed8166699a9fc7ea1476d3c5302cee1663d56c92dd",
+    "tests/test_g4s1b_contract.py": "94d86286a1417fc3c203f3c02d30ea1f93dd51fda9b6251e6ed2f6a99cb36425",
+    "tests/test_g4s1b_env.py": "cb330d33bda17b4ca5bee4657f638ab5088b9fa194871532ad1072b1a3c21eb5"
+  },
+  "duration_s": 38.844671040998946,
+  "policy_inferences": 0,
+  "checkpoint_loads": 0,
+  "training": false,
+  "S2_started": false,
+  "guard_scope": "pytest parent process/current and new Python threads; known-entry tripwire, not sandbox. Reviewed MuJoCo child performs bounded physics without policy."
+}

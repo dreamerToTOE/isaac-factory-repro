@@ -1,0 +1,6014 @@
+{
+  "protocol": "ADAPTED_ZERO_SHOT_SIM2SIM_NO_POLICY",
+  "config": {
+    "timestep": 0.008333333333333333,
+    "decimation": 8,
+    "peg_radius": 0.003993,
+    "peg_height": 0.05,
+    "peg_mass": 0.019,
+    "bore_radius": 0.00405,
+    "hole_height": 0.025,
+    "hole_outer_radius": 0.02,
+    "floor_thickness": 0.003,
+    "hole_sectors": 256,
+    "friction": 0.75,
+    "robot_gravity_compensation": true,
+    "peg_gravity_compensation": true,
+    "contact_solref": [
+      0.005,
+      1.0
+    ],
+    "contact_solimp": [
+      0.99,
+      0.999,
+      1e-05
+    ],
+    "solver_iterations": 100,
+    "finger_kp": 7500.0,
+    "finger_kd": 173.0,
+    "finger_force_limit": 40.0,
+    "finger_actuation": "step-implicit-pd"
+  },
+  "mujoco_version": "3.5.0",
+  "menagerie_commit": "8161bba264d7fa7c99ca301e91e7fb44737676ad",
+  "xml_sha256": "c60c33ee11eb4806294aee259f97d987308b23e83da62f2219cbc9950fb195c9",
+  "asset_scope": "Apache-2.0 Panda references; original analytic peg/hole/support; no NVIDIA assets",
+  "adaptations": [
+    "Menagerie inertias, geometry and finger pads retained; no claim of Factory equivalence",
+    "Robot gravity compensated and peg gravity compensated by default, matching source disable_gravity intent",
+    "Implicitfast MuJoCo solver; independent nominal cylinder and polygonal blind bore",
+    "Finger step-implicit free-motion PD prediction plus symmetric joint equality; not PhysX implicit drive parity; coefficients7500/173 and forcecap40 retained but effective contact stiffness differs",
+    "Robot self collision disabled by group masks; all robot/object and peg/hole contacts enabled",
+    "TCP quaternion uses native hand xquat chain branch; not measured PhysX raw-sign parity"
+  ],
+  "structure": {
+    "nq": 16,
+    "nv": 15,
+    "nu": 9,
+    "peg_joint_type": 0,
+    "equality_types": [
+      2
+    ],
+    "has_weld": false
+  },
+  "mapping": {
+    "arm_qpos_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "arm_dof_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "finger_qpos_ids": [
+      7,
+      8
+    ],
+    "finger_dof_ids": [
+      7,
+      8
+    ],
+    "arm_joint_limits": [
+      [
+        -2.8973,
+        2.8973
+      ],
+      [
+        -1.7628,
+        1.7628
+      ],
+      [
+        -2.8973,
+        2.8973
+      ],
+      [
+        -3.0718,
+        -0.0698
+      ],
+      [
+        -2.8973,
+        2.8973
+      ],
+      [
+        -0.0175,
+        3.7525
+      ],
+      [
+        -2.8973,
+        2.8973
+      ]
+    ],
+    "tcp_hand_local_z_m": 0.11207100003957748
+  },
+  "probes": {
+    "robot_kinematics": {
+      "tcp_pose": [
+        0.5042383420459131,
+        -0.001114129742648868,
+        0.34071526839346583
+      ],
+      "tcp_jacobian_fd_max_error": 1.5611151260586098e-09,
+      "controller_finger_origin_linear_jacobian_fd_max_error": 1.3391876496626764e-09,
+      "controller_and_tcp_jacobian_max_difference": 0.05171252118480525,
+      "mass_symmetry_max_error": 0.0,
+      "mass_eigenvalues": [
+        0.006292140360258273,
+        0.02486382856309082,
+        0.032571873685883664,
+        0.10082451181208334,
+        0.4823550781905088,
+        1.1349391362700216,
+        2.7987806431672206
+      ],
+      "mass_matrix": [
+        [
+          1.2735742597866957,
+          -0.6119273433907668,
+          1.1159232532250425,
+          0.32569602864147945,
+          0.024220983719939384,
+          -0.02541779453857977,
+          -0.006892008191519327
+        ],
+        [
+          -0.6119273433907668,
+          0.9107822849026295,
+          -0.49740491618215743,
+          -0.32932666326339377,
+          0.018135282140663282,
+          -0.02709255040345533,
+          0.0004024307319063121
+        ],
+        [
+          1.1159232532250425,
+          -0.49740491618215743,
+          1.2897079799258815,
+          -0.018439612509896564,
+          0.010079464783966537,
+          -0.06523045337738015,
+          -0.006048825455281588
+        ],
+        [
+          0.32569602864147945,
+          -0.32932666326339377,
+          -0.018439612509896564,
+          1.0127738951308645,
+          0.03714315377686679,
+          0.14293489306501553,
+          -0.0043056976814310356
+        ],
+        [
+          0.024220983719939384,
+          0.018135282140663282,
+          0.010079464783966537,
+          0.03714315377686679,
+          0.03343870333977531,
+          0.0001850745916645996,
+          0.0022111961052548117
+        ],
+        [
+          -0.02541779453857977,
+          -0.02709255040345533,
+          -0.06523045337738015,
+          0.14293489306501553,
+          0.0001850745916645996,
+          0.053653936988610124,
+          -0.0015581242699873735
+        ],
+        [
+          -0.006892008191519327,
+          0.0004024307319063121,
+          -0.006048825455281588,
+          -0.0043056976814310356,
+          0.0022111961052548117,
+          -0.0015581242699873735,
+          0.0066961519746103265
+        ]
+      ]
+    },
+    "static_hold": {
+      "steps": 24,
+      "time_s": 0.19999999999999998,
+      "max_joint_displacement_rad": 2.220446049250313e-15,
+      "robot_gravity_compensation": true,
+      "snapshot": {
+        "time_s": 0.19999999999999998,
+        "qpos": [
+          -1.3003,
+          -0.4015,
+          1.1791,
+          -2.1493,
+          0.40009999999999935,
+          1.9424999999999977,
+          0.4754,
+          0.04,
+          0.04,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "qvel": [
+          -1.6079297772677739e-15,
+          -2.614496638431536e-16,
+          5.152544039971361e-16,
+          2.9133539996727974e-15,
+          -4.215111806219955e-15,
+          -1.7725993547074267e-14,
+          -2.0165512675849995e-15,
+          -9.858291657248995e-17,
+          9.858291657248951e-17,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "tcp_position_world": [
+          0.5042383420459126,
+          -0.0011141297426488425,
+          0.34071526839346566
+        ],
+        "tcp_quaternion_wxyz": [
+          -0.002155711187596718,
+          0.9999665739731062,
+          -1.0303178257176082e-05,
+          -0.00788693474092159
+        ],
+        "peg_root_position": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "peg_quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hole_root_position": [
+          0.6,
+          0.0,
+          0.05
+        ],
+        "requested_arm_torque_nm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "software_limited_arm_torque_nm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actuator_force_nm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "generalized_actuator_contribution_nm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "finger_actuator_force_n": [
+          -6.241650030957252e-19,
+          6.241650030957511e-19
+        ],
+        "finger_command": {
+          "mode": "step-implicit-pd",
+          "target_opening_per_finger_m": 0.04,
+          "raw_pd_force_n": [
+            -6.154513407715692e-17,
+            6.154513407715919e-17
+          ],
+          "commanded_force_n": [
+            -6.241650030957252e-19,
+            6.241650030957511e-19
+          ]
+        },
+        "contacts": []
+      }
+    },
+    "torque_direction": [
+      {
+        "joint": 1,
+        "torque_nm": 0.001,
+        "own_qvel_rad_s": 4.788696034841576e-05
+      },
+      {
+        "joint": 2,
+        "torque_nm": 0.001,
+        "own_qvel_rad_s": 1.5542458493301737e-05
+      },
+      {
+        "joint": 3,
+        "torque_nm": 0.001,
+        "own_qvel_rad_s": 3.951224284420781e-05
+      },
+      {
+        "joint": 4,
+        "torque_nm": 0.001,
+        "own_qvel_rad_s": 2.3000936024670746e-05
+      },
+      {
+        "joint": 5,
+        "torque_nm": 0.001,
+        "own_qvel_rad_s": 0.0002932119418689862
+      },
+      {
+        "joint": 6,
+        "torque_nm": 0.001,
+        "own_qvel_rad_s": 0.00029598363806455886
+      },
+      {
+        "joint": 7,
+        "torque_nm": 0.001,
+        "own_qvel_rad_s": 0.0013036199945150448
+      }
+    ],
+    "actuation_saturation": {
+      "time_s": 0.0,
+      "qpos": [
+        -1.3003,
+        -0.4015,
+        1.1791,
+        -2.1493,
+        0.4001,
+        1.9425,
+        0.4754,
+        0.04,
+        0.04,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "qvel": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "tcp_position_world": [
+        0.5042383420459131,
+        -0.001114129742648868,
+        0.34071526839346583
+      ],
+      "tcp_quaternion_wxyz": [
+        -0.0021557111875967067,
+        0.9999665739731061,
+        -1.0303178257287104e-05,
+        -0.00788693474092044
+      ],
+      "peg_root_position": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "peg_quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "hole_root_position": [
+        0.6,
+        0.0,
+        0.05
+      ],
+      "requested_arm_torque_nm": [
+        200.0,
+        -200.0,
+        101.0,
+        -101.0,
+        20.0,
+        -20.0,
+        12.5
+      ],
+      "software_limited_arm_torque_nm": [
+        100.0,
+        -100.0,
+        100.0,
+        -100.0,
+        20.0,
+        -20.0,
+        12.5
+      ],
+      "actuator_force_nm": [
+        87.0,
+        -87.0,
+        87.0,
+        -87.0,
+        12.0,
+        -12.0,
+        12.0
+      ],
+      "generalized_actuator_contribution_nm": [
+        87.0,
+        -87.0,
+        87.0,
+        -87.0,
+        12.0,
+        -12.0,
+        12.0
+      ],
+      "finger_actuator_force_n": [
+        0.0,
+        0.0
+      ],
+      "finger_command": {},
+      "contacts": []
+    },
+    "static_geometry": {
+      "open_bore": {
+        "scope": "adapted_ground_truth_diagnostic_not_original_success",
+        "peg_root_in_hole_frame_m": [
+          0.0,
+          0.0,
+          0.009999999999999995
+        ],
+        "axis_tilt_rad": 0.0,
+        "axis_in_hole_frame": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "other_axis_endpoint_in_hole_frame_m": [
+          0.0,
+          0.0,
+          0.06
+        ],
+        "full_cylinder_z_extent_in_hole_frame_m": [
+          0.009999999999999995,
+          0.06
+        ],
+        "conservative_radial_envelope_m": 0.003993,
+        "bore_apothem_m": 0.004049695042448535,
+        "inside_bore": true,
+        "floor_contact": false,
+        "wall_or_rim_contact": false,
+        "minimum_contact_distance_m": 0.0,
+        "interpenetration_beyond_tolerance": false,
+        "resting_above_opening": false,
+        "entirely_above_opening": false,
+        "physical_insertion_candidate": false,
+        "contacts": []
+      },
+      "wall": {
+        "scope": "adapted_ground_truth_diagnostic_not_original_success",
+        "peg_root_in_hole_frame_m": [
+          0.0,
+          0.0002,
+          0.009999999999999995
+        ],
+        "axis_tilt_rad": 0.0,
+        "axis_in_hole_frame": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "other_axis_endpoint_in_hole_frame_m": [
+          0.0,
+          0.0002,
+          0.06
+        ],
+        "full_cylinder_z_extent_in_hole_frame_m": [
+          0.009999999999999995,
+          0.06
+        ],
+        "conservative_radial_envelope_m": 0.004193,
+        "bore_apothem_m": 0.004049695042448535,
+        "inside_bore": false,
+        "floor_contact": false,
+        "wall_or_rim_contact": true,
+        "minimum_contact_distance_m": -0.0001430010010971767,
+        "interpenetration_beyond_tolerance": true,
+        "resting_above_opening": false,
+        "entirely_above_opening": false,
+        "physical_insertion_candidate": false,
+        "contacts": [
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_012",
+            "distance_m": -4.790819224602313e-07,
+            "normal_force_n": 0.42200649182286154,
+            "position_world_m": [
+              0.6038458195302123,
+              0.0012704762098598773,
+              0.07000000020117805
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_013",
+            "distance_m": -5.337797111590529e-06,
+            "normal_force_n": 0.6410478427077351,
+            "position_world_m": [
+              0.603815814790722,
+              0.0013651550368374004,
+              0.07500000030876977
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_014",
+            "distance_m": -1.0305369640563191e-05,
+            "normal_force_n": 4.152942799383961,
+            "position_world_m": [
+              0.603783512291407,
+              0.0014591939373092872,
+              0.07000000019868216
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_015",
+            "distance_m": -1.4592750302902548e-05,
+            "normal_force_n": 3.083651827692882,
+            "position_world_m": [
+              0.6037486172309665,
+              0.0015522240738734502,
+              0.07500000037252905
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_016",
+            "distance_m": -1.9441871029300437e-05,
+            "normal_force_n": 3.0684638093983585,
+            "position_world_m": [
+              0.6037116807205274,
+              0.001644560469918437,
+              0.07500000037252905
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_017",
+            "distance_m": -2.412717030023541e-05,
+            "normal_force_n": 3.8575164569071108,
+            "position_world_m": [
+              0.603672298994217,
+              0.0017362208377958558,
+              0.07000000019868215
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_018",
+            "distance_m": -2.81297057430438e-05,
+            "normal_force_n": 2.369645695864422,
+            "position_world_m": [
+              0.6036303734599722,
+              0.0018267218785769778,
+              0.07500000005531085
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_019",
+            "distance_m": -3.257115079641872e-05,
+            "normal_force_n": 2.153700698039806,
+            "position_world_m": [
+              0.6035864027166058,
+              0.0019163272119254332,
+              0.07500000110933244
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_020",
+            "distance_m": -3.7372375377199147e-05,
+            "normal_force_n": 3.455095168712975,
+            "position_world_m": [
+              0.6035404945315401,
+              0.0020047351878423395,
+              0.07000000017381403
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_021",
+            "distance_m": -4.178739077327669e-05,
+            "normal_force_n": 3.4704802031070656,
+            "position_world_m": [
+              0.6034922261959604,
+              0.0020919678603497165,
+              0.07000000016875828
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_022",
+            "distance_m": -4.624140254812993e-05,
+            "normal_force_n": 3.283586664061829,
+            "position_world_m": [
+              0.6034417152027712,
+              0.0021782397490998978,
+              0.07000000025648748
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_023",
+            "distance_m": -5.04858679726631e-05,
+            "normal_force_n": 2.9382926326860748,
+            "position_world_m": [
+              0.6033888655739943,
+              0.002263425977987981,
+              0.07000000014754847
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_024",
+            "distance_m": -5.42784169014097e-05,
+            "normal_force_n": 2.963895332539514,
+            "position_world_m": [
+              0.6033339869009949,
+              0.0023467931950876767,
+              0.07000000026647647
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_025",
+            "distance_m": -5.803494960387396e-05,
+            "normal_force_n": 2.8177946630627746,
+            "position_world_m": [
+              0.6032769075813909,
+              0.0024290128428815366,
+              0.07000000012574052
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_026",
+            "distance_m": -6.273625544587289e-05,
+            "normal_force_n": 3.0711281533901507,
+            "position_world_m": [
+              0.6032185202663962,
+              0.0025096493659440104,
+              0.07000000034470721
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_027",
+            "distance_m": -6.664524186088421e-05,
+            "normal_force_n": 2.637794230086045,
+            "position_world_m": [
+              0.6031571755015026,
+              0.0025895171406658205,
+              0.07000000015845664
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_028",
+            "distance_m": -7.047370808633483e-05,
+            "normal_force_n": 2.63447953529265,
+            "position_world_m": [
+              0.60309427541184,
+              0.002667282234168403,
+              0.07000000015264302
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_029",
+            "distance_m": -7.428772977007751e-05,
+            "normal_force_n": 1.8140459093697907,
+            "position_world_m": [
+              0.6030294628272475,
+              0.0027435005112793607,
+              0.07380906369231865
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_030",
+            "distance_m": -7.820148282649541e-05,
+            "normal_force_n": 2.5487226586712692,
+            "position_world_m": [
+              0.602962820326838,
+              0.002818164528533114,
+              0.07040876657413234
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_031",
+            "distance_m": -8.16909436302984e-05,
+            "normal_force_n": 2.1782722232541074,
+            "position_world_m": [
+              0.6028935068205183,
+              0.002891796451132963,
+              0.07000000019868216
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_032",
+            "distance_m": -8.49951273374385e-05,
+            "normal_force_n": 0.9211026865609372,
+            "position_world_m": [
+              0.6028260124282918,
+              0.0029600103325961675,
+              0.07499999937726815
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_033",
+            "distance_m": -8.815625875389072e-05,
+            "normal_force_n": 1.113422038091211,
+            "position_world_m": [
+              0.6027505899315841,
+              0.0030324068721985543,
+              0.07499999945028343
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_034",
+            "distance_m": -9.158958882179045e-05,
+            "normal_force_n": 1.9057959207698483,
+            "position_world_m": [
+              0.6026762919528953,
+              0.0031004556331472215,
+              0.07000000062885411
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_035",
+            "distance_m": -9.506059586634874e-05,
+            "normal_force_n": 2.1107194840237504,
+            "position_world_m": [
+              0.6026011210821787,
+              0.0031659927172155013,
+              0.06999999997320541
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_036",
+            "distance_m": -9.861782828431018e-05,
+            "normal_force_n": 1.9909237171454066,
+            "position_world_m": [
+              0.602523688768554,
+              0.0032303169455490457,
+              0.07000000009282029
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_037",
+            "distance_m": -0.00010163908222100307,
+            "normal_force_n": 1.9790182382324508,
+            "position_world_m": [
+              0.602444784684075,
+              0.0032923055378219932,
+              0.0700000005251322
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_038",
+            "distance_m": -0.00010445005901041842,
+            "normal_force_n": 1.3326910799223728,
+            "position_world_m": [
+              0.6023683810057912,
+              0.0033493773106189153,
+              0.06999999999673384
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_039",
+            "distance_m": -0.0001074777576520119,
+            "normal_force_n": 1.50579863547761,
+            "position_world_m": [
+              0.6022812210120325,
+              0.003411233604380238,
+              0.07000000014454244
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_040",
+            "distance_m": -0.00011028856721128002,
+            "normal_force_n": 1.4812634222572847,
+            "position_world_m": [
+              0.602197755344611,
+              0.0034672525853872388,
+              0.07000000013110899
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_041",
+            "distance_m": -0.00011299964958413275,
+            "normal_force_n": 1.4555181324714535,
+            "position_world_m": [
+              0.6021128904831586,
+              0.0035211841168303155,
+              0.07000000019868213
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_042",
+            "distance_m": -0.00011572690709615921,
+            "normal_force_n": 1.4338846048363316,
+            "position_world_m": [
+              0.6020267092973252,
+              0.0035730422772399413,
+              0.07000000019868216
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_043",
+            "distance_m": -0.0001177852356234418,
+            "normal_force_n": 1.2913497063116566,
+            "position_world_m": [
+              0.6019387732648321,
+              0.0036226847286761326,
+              0.06999999996358401
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_044",
+            "distance_m": -0.0001203755339074849,
+            "normal_force_n": 1.2790935518787674,
+            "position_world_m": [
+              0.6018500897281953,
+              0.0036702081841817826,
+              0.06999999995145595
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_045",
+            "distance_m": -0.00012258687730784998,
+            "normal_force_n": 0.840271295105594,
+            "position_world_m": [
+              0.6017627508835999,
+              0.003714155579079285,
+              0.07000000059292616
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_046",
+            "distance_m": -0.00012462610054638092,
+            "normal_force_n": 0.7937614997869602,
+            "position_world_m": [
+              0.6016764699960879,
+              0.0037549449105951497,
+              0.07000000062372966
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_047",
+            "distance_m": -0.00012659774542579682,
+            "normal_force_n": 0.7487188806385848,
+            "position_world_m": [
+              0.6015892066701589,
+              0.0037937163554555547,
+              0.07000000065542913
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_048",
+            "distance_m": -0.00012847393149583943,
+            "normal_force_n": 0.566706614851351,
+            "position_world_m": [
+              0.6015010590152696,
+              0.003830414339035505,
+              0.07000000009476479
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_049",
+            "distance_m": -0.00013063961915747366,
+            "normal_force_n": 0.5370774656423015,
+            "position_world_m": [
+              0.601390206662715,
+              0.003873348801700745,
+              0.07000000031440867
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_050",
+            "distance_m": -0.00013226941340828858,
+            "normal_force_n": 0.49479886571842335,
+            "position_world_m": [
+              0.6012974408721837,
+              0.0039062293197009513,
+              0.07000000036288594
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_051",
+            "distance_m": -0.00013379771279115865,
+            "normal_force_n": 0.4545240759567498,
+            "position_world_m": [
+              0.6012037946977866,
+              0.003936868587562557,
+              0.0700000004093825
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_052",
+            "distance_m": -0.000135223331626362,
+            "normal_force_n": 0.4161365243145857,
+            "position_world_m": [
+              0.6011093303044341,
+              0.003965238546656665,
+              0.07000000045341054
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_053",
+            "distance_m": -0.0001365466268215478,
+            "normal_force_n": 0.3796973633515527,
+            "position_world_m": [
+              0.6010141102474256,
+              0.003991312584990125,
+              0.07000000049445579
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_054",
+            "distance_m": -0.00013785209210829272,
+            "normal_force_n": 0.2689443030934528,
+            "position_world_m": [
+              0.6009154210754244,
+              0.0040157726747089995,
+              0.07000000022115091
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_055",
+            "distance_m": -0.0001389378896270423,
+            "normal_force_n": 0.22326219449299312,
+            "position_world_m": [
+              0.6008199718133098,
+              0.004036868060079105,
+              0.07000000023430958
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_056",
+            "distance_m": -0.00013990851114311625,
+            "normal_force_n": 0.17918182552474077,
+            "position_world_m": [
+              0.6007241130338309,
+              0.004055625392553035,
+              0.07000000024772761
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_057",
+            "distance_m": -0.0001407318917191656,
+            "normal_force_n": 0.060357038887231776,
+            "position_world_m": [
+              0.6006272767334924,
+              0.0040721225780920535,
+              0.07000000002049407
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_058",
+            "distance_m": -0.000141422112552021,
+            "normal_force_n": 0.05923065650570079,
+            "position_world_m": [
+              0.6005239784183714,
+              0.004087070041157983,
+              0.0700000001936552
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_059",
+            "distance_m": -0.00014200690721559233,
+            "normal_force_n": 0.0,
+            "position_world_m": [
+              0.6004265964368078,
+              0.004098650460096692,
+              0.06999999999635123
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_060",
+            "distance_m": -0.00014248014741964654,
+            "normal_force_n": 0.0,
+            "position_world_m": [
+              0.6003285085273526,
+              0.004107895975864397,
+              0.07000000002055456
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_061",
+            "distance_m": -0.00014283594797039365,
+            "normal_force_n": 0.0,
+            "position_world_m": [
+              0.6002304612890919,
+              0.004114723612780478,
+              0.07000000004364348
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_062",
+            "distance_m": -0.0001430010010971767,
+            "normal_force_n": 0.0,
+            "position_world_m": [
+              0.6001300574070801,
+              0.0041191977291334374,
+              0.06999999991012534
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_063",
+            "distance_m": -0.00014292633347377643,
+            "normal_force_n": 0.0,
+            "position_world_m": [
+              0.6000232202416088,
+              0.004121181570744121,
+              0.07000000020746887
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_064",
+            "distance_m": -0.00014270173491979872,
+            "normal_force_n": 0.0,
+            "position_world_m": [
+              0.5999462962944178,
+              0.0041206970038035265,
+              0.06999999994792384
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_065",
+            "distance_m": -0.00014260633037043767,
+            "normal_force_n": 0.0,
+            "position_world_m": [
+              0.5998507321695743,
+              0.004118294539522371,
+              0.06999999991725554
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_066",
+            "distance_m": -0.00014241305602386256,
+            "normal_force_n": 0.0,
+            "position_world_m": [
+              0.5997552236321737,
+              0.00411363257925049,
+              0.06999999988520741
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_067",
+            "distance_m": -0.00014241110116032898,
+            "normal_force_n": 0.0,
+            "position_world_m": [
+              0.5996503964599457,
+              0.004106045672713575,
+              0.07000000019868215
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_068",
+            "distance_m": -0.00014173559550555279,
+            "normal_force_n": 0.0,
+            "position_world_m": [
+              0.5995645504066245,
+              0.004097531524659333,
+              0.06999999981646665
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_069",
+            "distance_m": -0.00014125487526393102,
+            "normal_force_n": 0.0,
+            "position_world_m": [
+              0.5994695092357507,
+              0.004086098514922889,
+              0.06999999978013641
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_070",
+            "distance_m": -0.00014067988240053808,
+            "normal_force_n": 0.0,
+            "position_world_m": [
+              0.5993747250460478,
+              0.004072415177787539,
+              0.06999999974235269
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_071",
+            "distance_m": -0.00013975369017687195,
+            "normal_force_n": 0.0,
+            "position_world_m": [
+              0.5992794236565913,
+              0.004056202902142402,
+              0.07000000067463213
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_072",
+            "distance_m": -0.00013842448530274032,
+            "normal_force_n": 0.0,
+            "position_world_m": [
+              0.5991488527828082,
+              0.004030005933589078,
+              0.07000000075158044
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_073",
+            "distance_m": -0.00013742708299588203,
+            "normal_force_n": 0.0,
+            "position_world_m": [
+              0.5990594426750472,
+              0.004009584687094867,
+              0.07000000067550116
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_074",
+            "distance_m": -0.00013631223351003981,
+            "normal_force_n": 0.0,
+            "position_world_m": [
+              0.598970330068844,
+              0.003987091368333553,
+              0.07000000060435248
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_075",
+            "distance_m": -0.00013508137890771058,
+            "normal_force_n": 0.0,
+            "position_world_m": [
+              0.5988815236891741,
+              0.003962512791544126,
+              0.07000000053774183
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_076",
+            "distance_m": -0.00013312009085847542,
+            "normal_force_n": 0.0,
+            "position_world_m": [
+              0.5987709112282782,
+              0.0039284995701895035,
+              0.07000000009789255
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_077",
+            "distance_m": -0.00013170583400603388,
+            "normal_force_n": 0.0,
+            "position_world_m": [
+              0.5986820676041069,
+              0.0038988816484163747,
+              0.07000000011729282
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_078",
+            "distance_m": -0.0001302046301158623,
+            "normal_force_n": 0.0,
+            "position_world_m": [
+              0.5985942970667661,
+              0.0038673566524588237,
+              0.07000000013490165
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_079",
+            "distance_m": -0.00012880244268382226,
+            "normal_force_n": 0.0,
+            "position_world_m": [
+              0.5985143675406848,
+              0.0038367601848422134,
+              0.07000000039158191
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_080",
+            "distance_m": -0.0001269339439290147,
+            "normal_force_n": 0.10421539467492769,
+            "position_world_m": [
+              0.5984232578162925,
+              0.003799244396328807,
+              0.07000000036492876
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_081",
+            "distance_m": -0.0001249191769454752,
+            "normal_force_n": 0.26352795174260435,
+            "position_world_m": [
+              0.5983314873952011,
+              0.003758734415593384,
+              0.0700000000682238
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_082",
+            "distance_m": -0.00012273461468947566,
+            "normal_force_n": 0.41705389424579153,
+            "position_world_m": [
+              0.5982403178763118,
+              0.003715720402113679,
+              0.070000000107771
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_083",
+            "distance_m": -0.00012045045117706995,
+            "normal_force_n": 0.5779817902335835,
+            "position_world_m": [
+              0.5981502778002746,
+              0.0036704527483200034,
+              0.0700000001459406
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_084",
+            "distance_m": -0.00011806857247838534,
+            "normal_force_n": 0.7434192764279461,
+            "position_world_m": [
+              0.5980614232258756,
+              0.0036229620125273003,
+              0.07000000018270153
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_085",
+            "distance_m": -0.0001153436187055895,
+            "normal_force_n": 0.9355736129253506,
+            "position_world_m": [
+              0.5979733954825217,
+              0.003572881748901518,
+              0.07000000023549047
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_086",
+            "distance_m": -0.00011277569804400873,
+            "normal_force_n": 1.098329082993672,
+            "position_world_m": [
+              0.5978871801368979,
+              0.003521096461427937,
+              0.07000000029145251
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_087",
+            "distance_m": -0.00011010602868574516,
+            "normal_force_n": 1.2890240979062917,
+            "position_world_m": [
+              0.5978019591013943,
+              0.0034669461318087786,
+              0.07000000008435983
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_088",
+            "distance_m": -0.00010732576318743288,
+            "normal_force_n": 1.4567161825618844,
+            "position_world_m": [
+              0.5977183901313438,
+              0.003410860300913007,
+              0.07000000007474166
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_089",
+            "distance_m": -0.00010444704180466441,
+            "normal_force_n": 1.620794046115444,
+            "position_world_m": [
+              0.59763627908421,
+              0.003352721651975907,
+              0.0700000000731868
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_090",
+            "distance_m": -0.00010146948572671835,
+            "normal_force_n": 1.7805765613920501,
+            "position_world_m": [
+              0.5975556763947991,
+              0.0032925700862277618,
+              0.07000000007967178
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_091",
+            "distance_m": -9.83973391616012e-05,
+            "normal_force_n": 1.9357159635081538,
+            "position_world_m": [
+              0.5974766326597418,
+              0.0032304447976412723,
+              0.07000000009409371
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_092",
+            "distance_m": -9.522938247323714e-05,
+            "normal_force_n": 2.0857108347376205,
+            "position_world_m": [
+              0.5973991951202484,
+              0.0031663879216631318,
+              0.07000000011627065
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_093",
+            "distance_m": -9.196948138075659e-05,
+            "normal_force_n": 2.2303575808918477,
+            "position_world_m": [
+              0.5973234122888437,
+              0.0031004414555546376,
+              0.07000000014589547
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_094",
+            "distance_m": -8.861695824966148e-05,
+            "normal_force_n": 2.369301616814111,
+            "position_world_m": [
+              0.5972493294542025,
+              0.003032649819206906,
+              0.07000000018255192
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_095",
+            "distance_m": -8.48732870977553e-05,
+            "normal_force_n": 2.5102479469146806,
+            "position_world_m": [
+              0.5971769323609168,
+              0.002962780177235059,
+              0.07000000023817832
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_096",
+            "distance_m": -8.132133855599363e-05,
+            "normal_force_n": 2.6356832102409156,
+            "position_world_m": [
+              0.5971064058327815,
+              0.0028914324333179807,
+              0.07000000029532896
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_097",
+            "distance_m": -7.795015625338107e-05,
+            "normal_force_n": 2.762351532469621,
+            "position_world_m": [
+              0.5970376401395261,
+              0.002818500306008097,
+              0.07000000018108848
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_098",
+            "distance_m": -7.389755322828939e-05,
+            "normal_force_n": 2.8940744248821613,
+            "position_world_m": [
+              0.5969707071895995,
+              0.002743399930768915,
+              0.0700000000580711
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_099",
+            "distance_m": -7.011878414876194e-05,
+            "normal_force_n": 3.0026587966457976,
+            "position_world_m": [
+              0.5969057874432081,
+              0.0026670758127454886,
+              0.07000000007476025
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_100",
+            "distance_m": -6.626925240468233e-05,
+            "normal_force_n": 3.1049340205863145,
+            "position_world_m": [
+              0.5968428165739561,
+              0.0025891953268821696,
+              0.07000000009030402
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_101",
+            "distance_m": -6.234881349054151e-05,
+            "normal_force_n": 3.2007200457993097,
+            "position_world_m": [
+              0.596781830294241,
+              0.0025098098823468492,
+              0.07000000010467916
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_102",
+            "distance_m": -5.8362371381357424e-05,
+            "normal_force_n": 3.290072468847593,
+            "position_world_m": [
+              0.5967228654044555,
+              0.0024289707046360573,
+              0.07000000011785884
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_103",
+            "distance_m": -5.430909720751816e-05,
+            "normal_force_n": 3.3728004826661326,
+            "position_world_m": [
+              0.5966659543632512,
+              0.0023467305985724954,
+              0.07000000012984658
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_104",
+            "distance_m": -5.004505810739879e-05,
+            "normal_force_n": 3.442568877899574,
+            "position_world_m": [
+              0.5966111944507235,
+              0.0022631036996949056,
+              0.07000000022337743
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_105",
+            "distance_m": -4.5934923482101917e-05,
+            "normal_force_n": 3.5149352621156957,
+            "position_world_m": [
+              0.596558461839581,
+              0.002178240117487247,
+              0.07000000019203309
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_106",
+            "distance_m": -4.1744947555230276e-05,
+            "normal_force_n": 3.5797100744547903,
+            "position_world_m": [
+              0.5965078856855495,
+              0.0020921301496320604,
+              0.07000000017531992
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_107",
+            "distance_m": -3.7478502782508616e-05,
+            "normal_force_n": 3.6369080872951782,
+            "position_world_m": [
+              0.5964594951072499,
+              0.002004831203126391,
+              0.07000000016999176
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_108",
+            "distance_m": -3.3139470576720646e-05,
+            "normal_force_n": 3.6865746706699056,
+            "position_world_m": [
+              0.596413316104544,
+              0.0019163989746215524,
+              0.07000000017273231
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_109",
+            "distance_m": -2.8306630227823585e-05,
+            "normal_force_n": 1.4632309766030303,
+            "position_world_m": [
+              0.5963908376184128,
+              0.0018065482165177012,
+              0.06999998686704259
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_110",
+            "distance_m": -2.4259912383329135e-05,
+            "normal_force_n": 3.763524965074012,
+            "position_world_m": [
+              0.5963276912098366,
+              0.001736368535457517,
+              0.07000000018984638
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_111",
+            "distance_m": -1.9262930641242756e-05,
+            "normal_force_n": 3.7774946542257437,
+            "position_world_m": [
+              0.5962884862216857,
+              0.001644748597267126,
+              0.07000000019868216
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_112",
+            "distance_m": -1.4711932872117342e-05,
+            "normal_force_n": 3.798023731396076,
+            "position_world_m": [
+              0.5962513785642862,
+              0.0015523911185845486,
+              0.07000000019868216
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_113",
+            "distance_m": -1.011544208769412e-05,
+            "normal_force_n": 3.8116118730888027,
+            "position_world_m": [
+              0.5962165879418084,
+              0.0014591942352155385,
+              0.07000000019868213
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_114",
+            "distance_m": -5.475224721212976e-06,
+            "normal_force_n": 0.8117566008435786,
+            "position_world_m": [
+              0.5961841322151253,
+              0.0013652172078594312,
+              0.07000000019868215
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_115",
+            "distance_m": -7.950161264450843e-07,
+            "normal_force_n": 0.38272879520123904,
+            "position_world_m": [
+              0.5961540286854439,
+              0.001270519977633034,
+              0.07000000019868215
+            ]
+          }
+        ]
+      },
+      "rim": {
+        "scope": "adapted_ground_truth_diagnostic_not_original_success",
+        "peg_root_in_hole_frame_m": [
+          0.0,
+          0.003,
+          0.023999999999999994
+        ],
+        "axis_tilt_rad": 0.0,
+        "axis_in_hole_frame": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "other_axis_endpoint_in_hole_frame_m": [
+          0.0,
+          0.003,
+          0.074
+        ],
+        "full_cylinder_z_extent_in_hole_frame_m": [
+          0.023999999999999994,
+          0.074
+        ],
+        "conservative_radial_envelope_m": 0.006993,
+        "bore_apothem_m": 0.004049695042448535,
+        "inside_bore": false,
+        "floor_contact": false,
+        "wall_or_rim_contact": true,
+        "minimum_contact_distance_m": -0.0010000003725290502,
+        "interpenetration_beyond_tolerance": true,
+        "resting_above_opening": false,
+        "entirely_above_opening": false,
+        "physical_insertion_candidate": false,
+        "contacts": [
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_016",
+            "distance_m": -4.8392846085056874e-05,
+            "normal_force_n": 20.23692483076585,
+            "position_world_m": [
+              0.603725202143167,
+              0.0016327237419517839,
+              0.07466666691170801
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_017",
+            "distance_m": -0.00011763685617627819,
+            "normal_force_n": 24.283932675961346,
+            "position_world_m": [
+              0.6037166999387774,
+              0.0017122459094916476,
+              0.07500000037252905
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_018",
+            "distance_m": -0.00018745267541232352,
+            "normal_force_n": 26.620335553202075,
+            "position_world_m": [
+              0.6037067771694478,
+              0.0017922095971486,
+              0.07466666660978086
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_019",
+            "distance_m": -0.0002577753780844134,
+            "normal_force_n": 30.72448655125976,
+            "position_world_m": [
+              0.6036953786325118,
+              0.0018726108417821301,
+              0.07500000037252905
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_020",
+            "distance_m": -0.0003285962317696435,
+            "normal_force_n": 33.989020479711954,
+            "position_world_m": [
+              0.6036824772022167,
+              0.00195343661107568,
+              0.07500000037252907
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_021",
+            "distance_m": -0.0003998218429616664,
+            "normal_force_n": 37.151985184188334,
+            "position_world_m": [
+              0.6036660294641041,
+              0.002027229041134006,
+              0.07500002410927804
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_022",
+            "distance_m": -0.00047101250941989606,
+            "normal_force_n": 40.43697580037207,
+            "position_world_m": [
+              0.6036495915686603,
+              0.002107504000305754,
+              0.07500000037252905
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_023",
+            "distance_m": -0.0005425128904619598,
+            "normal_force_n": 43.7457930415373,
+            "position_world_m": [
+              0.603631544331727,
+              0.0021881293853670556,
+              0.07500000037252903
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_024",
+            "distance_m": -0.0006144045987508148,
+            "normal_force_n": 47.07891080509106,
+            "position_world_m": [
+              0.6036119031227632,
+              0.0022690772051767163,
+              0.07500000037252905
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_025",
+            "distance_m": -0.0006866502864464394,
+            "normal_force_n": 50.43457975239045,
+            "position_world_m": [
+              0.603590624749707,
+              0.0023503320882823754,
+              0.07500000037252905
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_026",
+            "distance_m": -0.0007592093813539265,
+            "normal_force_n": 53.999333163861905,
+            "position_world_m": [
+              0.6035676669045719,
+              0.00243187911935248,
+              0.07500000037252905
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_027",
+            "distance_m": -0.0008320453572060483,
+            "normal_force_n": 59.056259881169794,
+            "position_world_m": [
+              0.6035429834461737,
+              0.0025136986100212904,
+              0.07500000037252905
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_028",
+            "distance_m": -0.0009051161676855269,
+            "normal_force_n": 64.12831064175253,
+            "position_world_m": [
+              0.6035165301742715,
+              0.002595771738172803,
+              0.07500000037252905
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_029",
+            "distance_m": -0.0009783831420798156,
+            "normal_force_n": 69.21279900960191,
+            "position_world_m": [
+              0.603488259426719,
+              0.0026780745386931746,
+              0.07500000037252905
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_030",
+            "distance_m": -0.001000000372529036,
+            "normal_force_n": 25.987327968375883,
+            "position_world_m": [
+              0.6029332006646528,
+              0.0027926391766046493,
+              0.0745000001862646
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_031",
+            "distance_m": -0.0010000003725290502,
+            "normal_force_n": 26.163728541653718,
+            "position_world_m": [
+              0.603120966654054,
+              0.0031209666619958086,
+              0.07450000018626453
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_032",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 25.227386215044643,
+            "position_world_m": [
+              0.602792638929935,
+              0.0029332004143006016,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_033",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 25.516416580066778,
+            "position_world_m": [
+              0.6030589970084856,
+              0.003375083017606733,
+              0.07450000018626453
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_034",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 25.16467369819193,
+            "position_world_m": [
+              0.6030202034166656,
+              0.0035012550085662024,
+              0.07450000018626453
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_035",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 24.794811847559828,
+            "position_world_m": [
+              0.602976250275798,
+              0.0036265712730756015,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_036",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 24.4073105229993,
+            "position_world_m": [
+              0.602927179274015,
+              0.003750833766415735,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_037",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 24.002675712593593,
+            "position_world_m": [
+              0.6028730394253425,
+              0.0038738451871553137,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_038",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 23.58143030564489,
+            "position_world_m": [
+              0.6028138846560422,
+              0.003995409263469634,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_039",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 23.144122663272707,
+            "position_world_m": [
+              0.6027497762616454,
+              0.004115331196245899,
+              0.07450000018626453
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_040",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 22.691323103721036,
+            "position_world_m": [
+              0.6026807812360421,
+              0.004233415934063832,
+              0.07450000018626453
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_041",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 22.22362221836567,
+            "position_world_m": [
+              0.6026069730850074,
+              0.00434947110218185,
+              0.07450000018626453
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_042",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 21.741632783064453,
+            "position_world_m": [
+              0.6025284317737511,
+              0.004463305704424906,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_043",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 21.245992480652184,
+            "position_world_m": [
+              0.6024452443788252,
+              0.004574729964771757,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_044",
+            "distance_m": -0.0010000003725290226,
+            "normal_force_n": 20.73735969664751,
+            "position_world_m": [
+              0.602357504561503,
+              0.004683556689037551,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_045",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 20.216414479278694,
+            "position_world_m": [
+              0.602265312941797,
+              0.004789601544371452,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_046",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 19.466076116072223,
+            "position_world_m": [
+              0.6022023897490444,
+              0.005104892737846376,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_047",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 19.140416880678952,
+            "position_world_m": [
+              0.602068011920721,
+              0.004992622439088583,
+              0.07450000018626453
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_048",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 18.586830322271183,
+            "position_world_m": [
+              0.601963138839169,
+              0.005089246377024517,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_049",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 18.02386288628646,
+            "position_world_m": [
+              0.6018542868254748,
+              0.005182384834969233,
+              0.07450000018626453
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_050",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 17.452295972772937,
+            "position_world_m": [
+              0.6017415916490314,
+              0.005271872897945614,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_051",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 16.87292620931566,
+            "position_world_m": [
+              0.601625195603884,
+              0.005357551461978076,
+              0.07450000018626453
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_052",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 16.286567520210895,
+            "position_world_m": [
+              0.6015052480157814,
+              0.005439267140642393,
+              0.07450000018626453
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_053",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 15.69404907724318,
+            "position_world_m": [
+              0.6013819047136989,
+              0.005516872296389426,
+              0.07450000018626454
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_054",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 15.096209154066711,
+            "position_world_m": [
+              0.6012553274121444,
+              0.005590227384851009,
+              0.07450000018626454
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_055",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 14.3375911630949,
+            "position_world_m": [
+              0.601108941208259,
+              0.005716422494356787,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_056",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 13.75220702612869,
+            "position_world_m": [
+              0.6009766615958002,
+              0.005768846003680777,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_057",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 13.279328569221958,
+            "position_world_m": [
+              0.6008579006052128,
+              0.005783496703205762,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_058",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 12.577628018559393,
+            "position_world_m": [
+              0.6007066686730762,
+              0.005863395408173856,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_059",
+            "distance_m": -0.0010000003725290222,
+            "normal_force_n": 12.057277151903932,
+            "position_world_m": [
+              0.600580002326518,
+              0.005888863339500552,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_060",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 10.309281574418753,
+            "position_world_m": [
+              0.6004999959189361,
+              0.0067782784560778166,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_061",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 10.813485699498626,
+            "position_world_m": [
+              0.600289606104565,
+              0.0059785283360880214,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_062",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 12.308954557112038,
+            "position_world_m": [
+              0.6001529892118538,
+              0.004740485742018597,
+              0.07450000018626453
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_063",
+            "distance_m": -0.0010000003725290222,
+            "normal_force_n": 8.221239131875748,
+            "position_world_m": [
+              0.6000000000003404,
+              0.00689975285664202,
+              0.07450000018626454
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_064",
+            "distance_m": -0.0010000003725290222,
+            "normal_force_n": 12.574893982038216,
+            "position_world_m": [
+              0.5999261598991708,
+              0.0040490936119760785,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_065",
+            "distance_m": -0.0010000003725290222,
+            "normal_force_n": 7.347570558923537,
+            "position_world_m": [
+              0.5997629750838462,
+              0.006885853908108416,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_066",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 10.939928261609731,
+            "position_world_m": [
+              0.5997218789373182,
+              0.00457981453707481,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_067",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 10.585729734200182,
+            "position_world_m": [
+              0.5996127493332746,
+              0.00454384903189128,
+              0.07450000018626453
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_068",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 11.656413533553039,
+            "position_world_m": [
+              0.5995788900102172,
+              0.003806264617132075,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_069",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 10.855386551591625,
+            "position_world_m": [
+              0.599455894351579,
+              0.004012976517600128,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_070",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 11.017668228377193,
+            "position_world_m": [
+              0.599395710082928,
+              0.003773093828392336,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_071",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 10.709865298665433,
+            "position_world_m": [
+              0.5993051639253226,
+              0.00375181802898309,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_072",
+            "distance_m": -0.0010000003725290222,
+            "normal_force_n": 9.83596630238544,
+            "position_world_m": [
+              0.5991646473166803,
+              0.003962603567210088,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_073",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 9.50712526022866,
+            "position_world_m": [
+              0.5990684379142539,
+              0.003941096294341162,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_074",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 9.184099888142013,
+            "position_world_m": [
+              0.5989727604935233,
+              0.0039172483117427175,
+              0.07450000018626454
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_075",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 8.867085587608042,
+            "position_world_m": [
+              0.5988776723182623,
+              0.003891072620193544,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_076",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 8.556275178493694,
+            "position_world_m": [
+              0.5987832300950282,
+              0.003862582512515613,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_077",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 9.047760666488493,
+            "position_world_m": [
+              0.5987837521390322,
+              0.003561380009074709,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_078",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 7.954014086531003,
+            "position_world_m": [
+              0.5985965094860479,
+              0.00379872454658508,
+              0.07450000018626454
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_079",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 7.662929973077515,
+            "position_world_m": [
+              0.5985043429639663,
+              0.003763391403137784,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_080",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 7.378781353170908,
+            "position_world_m": [
+              0.59841304628009,
+              0.003725814588289439,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_081",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 8.137361581234527,
+            "position_world_m": [
+              0.5984646752679894,
+              0.003379174218172876,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_082",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 6.831980953053358,
+            "position_world_m": [
+              0.5982332817009383,
+              0.0036440153354529046,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_083",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 6.56966486663034,
+            "position_world_m": [
+              0.5981449223364539,
+              0.0035998388559273665,
+              0.07450000018626453
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_084",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 6.314952410809043,
+            "position_world_m": [
+              0.5980576492444664,
+              0.003553511162515879,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_085",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 6.0680028048424415,
+            "position_world_m": [
+              0.5979715157938088,
+              0.00350505845714216,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_086",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 5.828966699379893,
+            "position_world_m": [
+              0.5978865735723105,
+              0.003454508070295146,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_087",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 7.101553509705964,
+            "position_world_m": [
+              0.5980430819477455,
+              0.0030356124851558634,
+              0.07450000018626453
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_088",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 5.375223605870099,
+            "position_world_m": [
+              0.5977204693668203,
+              0.003347232642660386,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_089",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 5.160797858607302,
+            "position_world_m": [
+              0.5976394079230811,
+              0.003290568474621944,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_090",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 4.987760312683138,
+            "position_world_m": [
+              0.5975597387156761,
+              0.0032319314932567405,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_091",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 4.863030507589678,
+            "position_world_m": [
+              0.5974815118276504,
+              0.0031713533023952165,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_092",
+            "distance_m": -0.0010000003725290222,
+            "normal_force_n": 4.703459774429804,
+            "position_world_m": [
+              0.5973782927136473,
+              0.0030865898014513153,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_093",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 4.630273910518149,
+            "position_world_m": [
+              0.5973295707500555,
+              0.003044519269642841,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_094",
+            "distance_m": -0.0010000003725290224,
+            "normal_force_n": 4.522393219002246,
+            "position_world_m": [
+              0.5972559492275772,
+              0.0029783369849190403,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_095",
+            "distance_m": -0.0010000003725290222,
+            "normal_force_n": 4.420271337130066,
+            "position_world_m": [
+              0.5971839544502053,
+              0.002910361342609486,
+              0.07450000018626453
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_096",
+            "distance_m": -0.0010000003725290502,
+            "normal_force_n": 4.3239700167577375,
+            "position_world_m": [
+              0.5971136295485626,
+              0.00284063261171003,
+              0.07450000018626454
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_097",
+            "distance_m": -0.0010000003725290363,
+            "normal_force_n": 4.233550146371335,
+            "position_world_m": [
+              0.5970450174200483,
+              0.0027691913523656083,
+              0.07450000018626451
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_098",
+            "distance_m": -0.00097839723389747,
+            "normal_force_n": 73.60967647426875,
+            "position_world_m": [
+              0.5965115495044184,
+              0.0026802819765820427,
+              0.07500000037252902
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_099",
+            "distance_m": -0.0009053026304715404,
+            "normal_force_n": 43.13807888534675,
+            "position_world_m": [
+              0.5964829084463542,
+              0.0026002165328122954,
+              0.08757465356960167
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_100",
+            "distance_m": -0.0008324045215321849,
+            "normal_force_n": 67.21816218779975,
+            "position_world_m": [
+              0.5964560405046524,
+              0.0025199533622663056,
+              0.07500000037252907
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_101",
+            "distance_m": -0.0007597220674496251,
+            "normal_force_n": 64.03358652604655,
+            "position_world_m": [
+              0.596430934163267,
+              0.0024395246588796364,
+              0.07500000037252905
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_102",
+            "distance_m": -0.0006872028010748073,
+            "normal_force_n": 32.40235121367624,
+            "position_world_m": [
+              0.596410227730841,
+              0.0023444663128670087,
+              0.08972802226700297
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_103",
+            "distance_m": -0.0006147961206187751,
+            "normal_force_n": 57.702152778242244,
+            "position_world_m": [
+              0.5963886888882697,
+              0.0022654035407265634,
+              0.07500000037252903
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_104",
+            "distance_m": -0.0005427102661932978,
+            "normal_force_n": 28.282616097161657,
+            "position_world_m": [
+              0.5963688011312702,
+              0.0021862532489359127,
+              0.089133270937135
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_105",
+            "distance_m": -0.00047096547174513574,
+            "normal_force_n": 51.39655089552613,
+            "position_world_m": [
+              0.5963505522153545,
+              0.002107046180748476,
+              0.07500000037252902
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_106",
+            "distance_m": -0.0003995821235749663,
+            "normal_force_n": 48.26455874041646,
+            "position_world_m": [
+              0.5963339296065124,
+              0.002027811916605146,
+              0.07500000037252905
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_107",
+            "distance_m": -0.0003285823669586373,
+            "normal_force_n": 45.14773506599418,
+            "position_world_m": [
+              0.5963189200558205,
+              0.0019485828872363516,
+              0.07500000037252905
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_108",
+            "distance_m": -0.00025804639379538676,
+            "normal_force_n": 42.04674880547547,
+            "position_world_m": [
+              0.5963053749428966,
+              0.0018697072136928921,
+              0.07500000037252905
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_109",
+            "distance_m": -0.0001879510339145653,
+            "normal_force_n": 38.93057382319944,
+            "position_world_m": [
+              0.5962926313011021,
+              0.001793258292546424,
+              0.07500000037252903
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_110",
+            "distance_m": -0.00011775587330267803,
+            "normal_force_n": 36.5214650119046,
+            "position_world_m": [
+              0.596283031928438,
+              0.0017128456827236438,
+              0.07466666835760646
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_wall_111",
+            "distance_m": -4.832175447892474e-05,
+            "normal_force_n": 32.7987071074987,
+            "position_world_m": [
+              0.5962747494313996,
+              0.0016329571588469143,
+              0.07500000037252905
+            ]
+          }
+        ]
+      },
+      "floor_penetration": {
+        "scope": "adapted_ground_truth_diagnostic_not_original_success",
+        "peg_root_in_hole_frame_m": [
+          0.0,
+          0.0,
+          -0.00020000000000000573
+        ],
+        "axis_tilt_rad": 0.0,
+        "axis_in_hole_frame": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "other_axis_endpoint_in_hole_frame_m": [
+          0.0,
+          0.0,
+          0.0498
+        ],
+        "full_cylinder_z_extent_in_hole_frame_m": [
+          -0.00020000000000000573,
+          0.0498
+        ],
+        "conservative_radial_envelope_m": 0.003993,
+        "bore_apothem_m": 0.004049695042448535,
+        "inside_bore": false,
+        "floor_contact": true,
+        "wall_or_rim_contact": false,
+        "minimum_contact_distance_m": -0.00019999999999999882,
+        "interpenetration_beyond_tolerance": true,
+        "resting_above_opening": false,
+        "entirely_above_opening": false,
+        "physical_insertion_candidate": false,
+        "contacts": [
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_floor",
+            "distance_m": -0.00019999999999999882,
+            "normal_force_n": 0.01362309317049969,
+            "position_world_m": [
+              0.6013186586191508,
+              0.0013186586191508208,
+              0.049900000000000014
+            ]
+          }
+        ]
+      },
+      "above_opening": {
+        "scope": "adapted_ground_truth_diagnostic_not_original_success",
+        "peg_root_in_hole_frame_m": [
+          0.0,
+          0.0,
+          0.03
+        ],
+        "axis_tilt_rad": 0.0,
+        "axis_in_hole_frame": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "other_axis_endpoint_in_hole_frame_m": [
+          0.0,
+          0.0,
+          0.08
+        ],
+        "full_cylinder_z_extent_in_hole_frame_m": [
+          0.03,
+          0.08
+        ],
+        "conservative_radial_envelope_m": 0.003993,
+        "bore_apothem_m": 0.004049695042448535,
+        "inside_bore": false,
+        "floor_contact": false,
+        "wall_or_rim_contact": false,
+        "minimum_contact_distance_m": 0.0,
+        "interpenetration_beyond_tolerance": false,
+        "resting_above_opening": false,
+        "entirely_above_opening": true,
+        "physical_insertion_candidate": false,
+        "contacts": []
+      }
+    },
+    "freefall": {
+      "steps": 12,
+      "initial_z_m": 0.5,
+      "trajectory": [
+        {
+          "time_s": 0.008333333333333333,
+          "z_m": 0.49931875,
+          "vz_m_s": -0.08175
+        },
+        {
+          "time_s": 0.016666666666666666,
+          "z_m": 0.49795625,
+          "vz_m_s": -0.1635
+        },
+        {
+          "time_s": 0.025,
+          "z_m": 0.4959125,
+          "vz_m_s": -0.24525000000000002
+        },
+        {
+          "time_s": 0.03333333333333333,
+          "z_m": 0.4931875,
+          "vz_m_s": -0.327
+        },
+        {
+          "time_s": 0.041666666666666664,
+          "z_m": 0.48978125,
+          "vz_m_s": -0.40875
+        },
+        {
+          "time_s": 0.049999999999999996,
+          "z_m": 0.48569375,
+          "vz_m_s": -0.4905
+        },
+        {
+          "time_s": 0.05833333333333333,
+          "z_m": 0.480925,
+          "vz_m_s": -0.57225
+        },
+        {
+          "time_s": 0.06666666666666667,
+          "z_m": 0.475475,
+          "vz_m_s": -0.654
+        },
+        {
+          "time_s": 0.075,
+          "z_m": 0.46934375,
+          "vz_m_s": -0.73575
+        },
+        {
+          "time_s": 0.08333333333333333,
+          "z_m": 0.46253125,
+          "vz_m_s": -0.8175
+        },
+        {
+          "time_s": 0.09166666666666666,
+          "z_m": 0.4550375,
+          "vz_m_s": -0.89925
+        },
+        {
+          "time_s": 0.09999999999999999,
+          "z_m": 0.4468625,
+          "vz_m_s": -0.981
+        }
+      ],
+      "expected_velocity_m_s": -0.981,
+      "observed_drop_m": 0.053137500000000004,
+      "expected_semiimplicit_drop_m": 0.0531375
+    },
+    "aligned_drop_insertion": {
+      "steps": 120,
+      "scope": "direct placement plus freefall, not robot assembly or PPO",
+      "peak_signed_contact_distance_m": 0.0,
+      "history": [
+        {
+          "step": 1,
+          "time_s": 0.008333333333333333,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.03
+          ],
+          "axis_tilt_rad": 0.0,
+          "axis_in_hole_frame": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.08
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            0.03,
+            0.08
+          ],
+          "conservative_radial_envelope_m": 0.003993,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": false,
+          "floor_contact": false,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": 0.0,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": true,
+          "physical_insertion_candidate": false,
+          "contacts": []
+        },
+        {
+          "step": 11,
+          "time_s": 0.09166666666666666,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.03
+          ],
+          "axis_tilt_rad": 0.0,
+          "axis_in_hole_frame": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.08
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            0.03,
+            0.08
+          ],
+          "conservative_radial_envelope_m": 0.003993,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": false,
+          "floor_contact": false,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": 0.0,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": true,
+          "physical_insertion_candidate": false,
+          "contacts": []
+        },
+        {
+          "step": 21,
+          "time_s": 0.175,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.03
+          ],
+          "axis_tilt_rad": 0.0,
+          "axis_in_hole_frame": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.08
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            0.03,
+            0.08
+          ],
+          "conservative_radial_envelope_m": 0.003993,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": false,
+          "floor_contact": false,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": 0.0,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": true,
+          "physical_insertion_candidate": false,
+          "contacts": []
+        },
+        {
+          "step": 31,
+          "time_s": 0.2583333333333333,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.03
+          ],
+          "axis_tilt_rad": 0.0,
+          "axis_in_hole_frame": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.08
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            0.03,
+            0.08
+          ],
+          "conservative_radial_envelope_m": 0.003993,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": false,
+          "floor_contact": false,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": 0.0,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": true,
+          "physical_insertion_candidate": false,
+          "contacts": []
+        },
+        {
+          "step": 41,
+          "time_s": 0.3416666666666669,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.03
+          ],
+          "axis_tilt_rad": 0.0,
+          "axis_in_hole_frame": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.08
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            0.03,
+            0.08
+          ],
+          "conservative_radial_envelope_m": 0.003993,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": false,
+          "floor_contact": false,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": 0.0,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": true,
+          "physical_insertion_candidate": false,
+          "contacts": []
+        },
+        {
+          "step": 51,
+          "time_s": 0.4250000000000005,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.03
+          ],
+          "axis_tilt_rad": 0.0,
+          "axis_in_hole_frame": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.08
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            0.03,
+            0.08
+          ],
+          "conservative_radial_envelope_m": 0.003993,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": false,
+          "floor_contact": false,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": 0.0,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": true,
+          "physical_insertion_candidate": false,
+          "contacts": []
+        },
+        {
+          "step": 61,
+          "time_s": 0.508333333333334,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.03
+          ],
+          "axis_tilt_rad": 0.0,
+          "axis_in_hole_frame": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.08
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            0.03,
+            0.08
+          ],
+          "conservative_radial_envelope_m": 0.003993,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": false,
+          "floor_contact": false,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": 0.0,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": true,
+          "physical_insertion_candidate": false,
+          "contacts": []
+        },
+        {
+          "step": 71,
+          "time_s": 0.591666666666667,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.03
+          ],
+          "axis_tilt_rad": 0.0,
+          "axis_in_hole_frame": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.08
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            0.03,
+            0.08
+          ],
+          "conservative_radial_envelope_m": 0.003993,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": false,
+          "floor_contact": false,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": 0.0,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": true,
+          "physical_insertion_candidate": false,
+          "contacts": []
+        },
+        {
+          "step": 81,
+          "time_s": 0.675,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.03
+          ],
+          "axis_tilt_rad": 0.0,
+          "axis_in_hole_frame": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.08
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            0.03,
+            0.08
+          ],
+          "conservative_radial_envelope_m": 0.003993,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": false,
+          "floor_contact": false,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": 0.0,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": true,
+          "physical_insertion_candidate": false,
+          "contacts": []
+        },
+        {
+          "step": 91,
+          "time_s": 0.7583333333333331,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.03
+          ],
+          "axis_tilt_rad": 0.0,
+          "axis_in_hole_frame": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.08
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            0.03,
+            0.08
+          ],
+          "conservative_radial_envelope_m": 0.003993,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": false,
+          "floor_contact": false,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": 0.0,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": true,
+          "physical_insertion_candidate": false,
+          "contacts": []
+        },
+        {
+          "step": 101,
+          "time_s": 0.8416666666666661,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.03
+          ],
+          "axis_tilt_rad": 0.0,
+          "axis_in_hole_frame": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.08
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            0.03,
+            0.08
+          ],
+          "conservative_radial_envelope_m": 0.003993,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": false,
+          "floor_contact": false,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": 0.0,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": true,
+          "physical_insertion_candidate": false,
+          "contacts": []
+        },
+        {
+          "step": 111,
+          "time_s": 0.9249999999999992,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.03
+          ],
+          "axis_tilt_rad": 0.0,
+          "axis_in_hole_frame": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.08
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            0.03,
+            0.08
+          ],
+          "conservative_radial_envelope_m": 0.003993,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": false,
+          "floor_contact": false,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": 0.0,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": true,
+          "physical_insertion_candidate": false,
+          "contacts": []
+        },
+        {
+          "step": 120,
+          "time_s": 0.9999999999999989,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.03
+          ],
+          "axis_tilt_rad": 0.0,
+          "axis_in_hole_frame": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.08
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            0.03,
+            0.08
+          ],
+          "conservative_radial_envelope_m": 0.003993,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": false,
+          "floor_contact": false,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": 0.0,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": true,
+          "physical_insertion_candidate": false,
+          "contacts": []
+        }
+      ],
+      "final": {
+        "scope": "adapted_ground_truth_diagnostic_not_original_success",
+        "peg_root_in_hole_frame_m": [
+          0.0,
+          0.0,
+          0.03
+        ],
+        "axis_tilt_rad": 0.0,
+        "axis_in_hole_frame": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "other_axis_endpoint_in_hole_frame_m": [
+          0.0,
+          0.0,
+          0.08
+        ],
+        "full_cylinder_z_extent_in_hole_frame_m": [
+          0.03,
+          0.08
+        ],
+        "conservative_radial_envelope_m": 0.003993,
+        "bore_apothem_m": 0.004049695042448535,
+        "inside_bore": false,
+        "floor_contact": false,
+        "wall_or_rim_contact": false,
+        "minimum_contact_distance_m": 0.0,
+        "interpenetration_beyond_tolerance": false,
+        "resting_above_opening": false,
+        "entirely_above_opening": true,
+        "physical_insertion_candidate": false,
+        "contacts": []
+      },
+      "passed": false
+    },
+    "gentle_reference_insertion": {
+      "steps": 240,
+      "reference_force_world_n": [
+        0,
+        0,
+        -0.001
+      ],
+      "scope": "independent aligned peg, direct placement plus bounded no-policy force, not robot assembly",
+      "peg_gravity_compensated": true,
+      "peak_signed_contact_distance_m": -9.649122807018492e-05,
+      "history": [
+        {
+          "step": 1,
+          "time_s": 0.008333333333333333,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.025996345029239767
+          ],
+          "axis_tilt_rad": 0.0,
+          "axis_in_hole_frame": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.07599634502923977
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            0.025996345029239767,
+            0.07599634502923977
+          ],
+          "conservative_radial_envelope_m": 0.003993,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": false,
+          "floor_contact": false,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": 0.0,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": true,
+          "physical_insertion_candidate": false,
+          "contacts": []
+        },
+        {
+          "step": 21,
+          "time_s": 0.175,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.025155701754385973
+          ],
+          "axis_tilt_rad": 0.0,
+          "axis_in_hole_frame": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.07515570175438598
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            0.025155701754385973,
+            0.07515570175438598
+          ],
+          "conservative_radial_envelope_m": 0.003993,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": false,
+          "floor_contact": false,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": 0.0,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": true,
+          "physical_insertion_candidate": false,
+          "contacts": []
+        },
+        {
+          "step": 41,
+          "time_s": 0.3416666666666669,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.022853070175438597
+          ],
+          "axis_tilt_rad": 0.0,
+          "axis_in_hole_frame": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.0728530701754386
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            0.022853070175438597,
+            0.0728530701754386
+          ],
+          "conservative_radial_envelope_m": 0.003993,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": true,
+          "floor_contact": false,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": 0.0,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": false,
+          "physical_insertion_candidate": false,
+          "contacts": []
+        },
+        {
+          "step": 61,
+          "time_s": 0.508333333333334,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.01908845029239767
+          ],
+          "axis_tilt_rad": 0.0,
+          "axis_in_hole_frame": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.06908845029239767
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            0.01908845029239767,
+            0.06908845029239767
+          ],
+          "conservative_radial_envelope_m": 0.003993,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": true,
+          "floor_contact": false,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": 0.0,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": false,
+          "physical_insertion_candidate": false,
+          "contacts": []
+        },
+        {
+          "step": 81,
+          "time_s": 0.675,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.013861842105263159
+          ],
+          "axis_tilt_rad": 0.0,
+          "axis_in_hole_frame": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.06386184210526316
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            0.013861842105263159,
+            0.06386184210526316
+          ],
+          "conservative_radial_envelope_m": 0.003993,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": true,
+          "floor_contact": false,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": 0.0,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": false,
+          "physical_insertion_candidate": false,
+          "contacts": []
+        },
+        {
+          "step": 101,
+          "time_s": 0.8416666666666661,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.007173245614035088
+          ],
+          "axis_tilt_rad": 0.0,
+          "axis_in_hole_frame": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            0.0,
+            0.0,
+            0.05717324561403509
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            0.007173245614035088,
+            0.05717324561403509
+          ],
+          "conservative_radial_envelope_m": 0.003993,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": true,
+          "floor_contact": false,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": 0.0,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": false,
+          "physical_insertion_candidate": false,
+          "contacts": []
+        },
+        {
+          "step": 121,
+          "time_s": 1.0083333333333322,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            7.778336463815094e-08,
+            7.78194911108532e-08,
+            -5.068101637521749e-05
+          ],
+          "axis_tilt_rad": 0.0020349048918307517,
+          "axis_in_hole_frame": [
+            -0.0014388935154606463,
+            -0.0014388945948475217,
+            0.999997929581755
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            -7.186689240839416e-05,
+            -7.186691025126524e-05,
+            0.04994921546271254
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            -5.880638600060574e-05,
+            0.04995734083233793
+          ],
+          "conservative_radial_envelope_m": 0.004094855202210562,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": false,
+          "floor_contact": true,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": -5.8806312030095785e-05,
+          "interpenetration_beyond_tolerance": true,
+          "resting_above_opening": false,
+          "entirely_above_opening": false,
+          "physical_insertion_candidate": false,
+          "contacts": [
+            {
+              "geom1": "peg_collision",
+              "geom2": "hole_floor",
+              "distance_m": -5.8806312030095785e-05,
+              "normal_force_n": 0.0,
+              "position_world_m": [
+                0.5971712584093206,
+                -0.0028179944646154536,
+                0.04997059684398547
+              ]
+            }
+          ]
+        },
+        {
+          "step": 141,
+          "time_s": 1.1749999999999983,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            2.5677196768825183e-07,
+            -5.496367903092239e-08,
+            5.799279164338256e-06
+          ],
+          "axis_tilt_rad": 0.0015618664624019265,
+          "axis_in_hole_frame": [
+            0.0011112536436036395,
+            0.0010975154679482512,
+            0.9999987802868248
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            5.581945414787023e-05,
+            5.482080971838164e-05,
+            0.05000573829350558
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            -4.3725108444045633e-07,
+            0.050011974823754364
+          ],
+          "conservative_radial_envelope_m": 0.004071355880115375,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": false,
+          "floor_contact": true,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": -4.3650544640428224e-07,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": false,
+          "physical_insertion_candidate": false,
+          "contacts": [
+            {
+              "geom1": "peg_collision",
+              "geom2": "hole_floor",
+              "distance_m": -4.3650544640428224e-07,
+              "normal_force_n": 0.0009749555245921611,
+              "position_world_m": [
+                0.6028674341038162,
+                0.0027785990389892173,
+                0.04999978174727682
+              ]
+            }
+          ]
+        },
+        {
+          "step": 161,
+          "time_s": 1.3416666666666643,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            2.264890485159654e-07,
+            -7.60374469193447e-08,
+            8.728739669144892e-06
+          ],
+          "axis_tilt_rad": 0.002238111575565936,
+          "axis_in_hole_frame": [
+            -0.001408332738935855,
+            -0.0017394636982756982,
+            0.9999974954293331
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            -7.019014789827679e-05,
+            -8.704922236070427e-05,
+            0.050008603511135806
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            -2.080323911594758e-07,
+            0.05001754028319611
+          ],
+          "conservative_radial_envelope_m": 0.004105144397434104,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": false,
+          "floor_contact": true,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": -1.8076020601804547e-07,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": false,
+          "physical_insertion_candidate": false,
+          "contacts": [
+            {
+              "geom1": "peg_collision",
+              "geom2": "hole_floor",
+              "distance_m": -1.8076020601804547e-07,
+              "normal_force_n": 0.000981132239517475,
+              "position_world_m": [
+                0.5973531349955897,
+                -0.0029788630926608642,
+                0.04999990961989699
+              ]
+            }
+          ]
+        },
+        {
+          "step": 181,
+          "time_s": 1.5083333333333304,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            2.1531659055717967e-07,
+            -9.746391072537913e-08,
+            4.995288423244315e-06
+          ],
+          "axis_tilt_rad": 0.0013689664185345704,
+          "axis_in_hole_frame": [
+            0.000868285866735693,
+            0.0010583702266032367,
+            0.9999990629656188
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            4.362960992734183e-05,
+            5.2821047419436455e-05,
+            0.05000494843670419
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            -4.7099277853791767e-07,
+            0.05001041471790597
+          ],
+          "conservative_radial_envelope_m": 0.004061684647697366,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": false,
+          "floor_contact": true,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": -4.236060187643588e-07,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": false,
+          "physical_insertion_candidate": false,
+          "contacts": [
+            {
+              "geom1": "peg_collision",
+              "geom2": "hole_floor",
+              "distance_m": -4.236060187643588e-07,
+              "normal_force_n": 0.0009756623588816156,
+              "position_world_m": [
+                0.6025178524663253,
+                0.0030544674966595407,
+                0.04999978819699062
+              ]
+            }
+          ]
+        },
+        {
+          "step": 201,
+          "time_s": 1.6749999999999965,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            2.6525976593028133e-07,
+            -2.969904307688399e-08,
+            5.6926944229374055e-06
+          ],
+          "axis_tilt_rad": 0.0015113517883786703,
+          "axis_in_hole_frame": [
+            0.0006810813063363447,
+            0.0013491889196536387,
+            0.9999988579081033
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            3.431932508274752e-05,
+            6.742974693960506e-05,
+            0.0500056355898281
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            -3.421309705800092e-07,
+            0.05001167041522162
+          ],
+          "conservative_radial_envelope_m": 0.004068834477822315,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": false,
+          "floor_contact": true,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": -9.392949314701508e-08,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": false,
+          "physical_insertion_candidate": false,
+          "contacts": [
+            {
+              "geom1": "peg_collision",
+              "geom2": "hole_floor",
+              "distance_m": -9.392949314701508e-08,
+              "normal_force_n": 0.0009834618073301974,
+              "position_world_m": [
+                0.6021317120367999,
+                0.0032129589995775636,
+                0.04999995303525343
+              ]
+            }
+          ]
+        },
+        {
+          "step": 221,
+          "time_s": 1.8416666666666626,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            2.2816693068250515e-07,
+            -4.924202090921013e-08,
+            7.40379710417044e-06
+          ],
+          "axis_tilt_rad": 0.001988529748816314,
+          "axis_in_hole_frame": [
+            -0.0007856876864973084,
+            -0.0018267293746829637,
+            0.9999980228753705
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            -3.905621739418292e-05,
+            -9.138571075505741e-05,
+            0.0500073049408727
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            -5.363969499689239e-07,
+            0.05001524513492684
+          ],
+          "conservative_radial_envelope_m": 0.0040926598419756275,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": false,
+          "floor_contact": true,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": -1.8017761965086807e-07,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": false,
+          "physical_insertion_candidate": false,
+          "contacts": [
+            {
+              "geom1": "peg_collision",
+              "geom2": "hole_floor",
+              "distance_m": -1.8017761965086807e-07,
+              "normal_force_n": 0.0009826598566603807,
+              "position_world_m": [
+                0.5976473905259347,
+                -0.0031397393585998875,
+                0.0499999099111902
+              ]
+            }
+          ]
+        },
+        {
+          "step": 240,
+          "time_s": 1.9999999999999953,
+          "scope": "adapted_ground_truth_diagnostic_not_original_success",
+          "peg_root_in_hole_frame_m": [
+            2.2985461944902141e-07,
+            -1.1725394419309931e-07,
+            2.3089317032973233e-06
+          ],
+          "axis_tilt_rad": 0.0006586562004104123,
+          "axis_in_hole_frame": [
+            0.000565956506997111,
+            -0.0003369290114804176,
+            0.9999997830860127
+          ],
+          "other_axis_endpoint_in_hole_frame_m": [
+            2.8527679969304573e-05,
+            -1.696370451821398e-05,
+            0.050002298086003934
+          ],
+          "full_cylinder_z_extent_in_hole_frame_m": [
+            -3.210823147131469e-07,
+            0.050004928100021946
+          ],
+          "conservative_radial_envelope_m": 0.0040261908418105325,
+          "bore_apothem_m": 0.004049695042448535,
+          "inside_bore": true,
+          "floor_contact": true,
+          "wall_or_rim_contact": false,
+          "minimum_contact_distance_m": -2.685982731090887e-07,
+          "interpenetration_beyond_tolerance": false,
+          "resting_above_opening": false,
+          "entirely_above_opening": false,
+          "physical_insertion_candidate": true,
+          "contacts": [
+            {
+              "geom1": "peg_collision",
+              "geom2": "hole_floor",
+              "distance_m": -2.685982731090887e-07,
+              "normal_force_n": 0.0010134127453401427,
+              "position_world_m": [
+                0.6030716178257174,
+                -0.002491020027957357,
+                0.04999986570086346
+              ]
+            }
+          ]
+        }
+      ],
+      "final": {
+        "scope": "adapted_ground_truth_diagnostic_not_original_success",
+        "peg_root_in_hole_frame_m": [
+          2.2985461944902141e-07,
+          -1.1725394419309931e-07,
+          2.3089317032973233e-06
+        ],
+        "axis_tilt_rad": 0.0006586562004104123,
+        "axis_in_hole_frame": [
+          0.000565956506997111,
+          -0.0003369290114804176,
+          0.9999997830860127
+        ],
+        "other_axis_endpoint_in_hole_frame_m": [
+          2.8527679969304573e-05,
+          -1.696370451821398e-05,
+          0.050002298086003934
+        ],
+        "full_cylinder_z_extent_in_hole_frame_m": [
+          -3.210823147131469e-07,
+          0.050004928100021946
+        ],
+        "conservative_radial_envelope_m": 0.0040261908418105325,
+        "bore_apothem_m": 0.004049695042448535,
+        "inside_bore": true,
+        "floor_contact": true,
+        "wall_or_rim_contact": false,
+        "minimum_contact_distance_m": -2.685982731090887e-07,
+        "interpenetration_beyond_tolerance": false,
+        "resting_above_opening": false,
+        "entirely_above_opening": false,
+        "physical_insertion_candidate": true,
+        "contacts": [
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_floor",
+            "distance_m": -2.685982731090887e-07,
+            "normal_force_n": 0.0010134127453401427,
+            "position_world_m": [
+              0.6030716178257174,
+              -0.002491020027957357,
+              0.04999986570086346
+            ]
+          }
+        ]
+      },
+      "passed": true
+    },
+    "physical_grasp": {
+      "steps": 90,
+      "no_weld": true,
+      "gravity_compensated_close_steps": 30,
+      "gravity_on_stress_steps": 60,
+      "initial_peg_root": [
+        0.503727413383488,
+        -0.0009744735528233514,
+        0.30832759925765807
+      ],
+      "root_displacement_m": 0.0076025233941609625,
+      "both_finger_contact_steps": 82,
+      "final_30_steps_both_fingers_positive_force": true,
+      "hand_relative_slip_m": 2.357321919853128e-05,
+      "history": [
+        {
+          "step": 1,
+          "both_fingers_contact": false,
+          "finger_qpos_m": [
+            0.014732406236831017,
+            0.014732406236831013
+          ],
+          "peg_root_position": [
+            0.503727413383488,
+            -0.0009744735528233514,
+            0.30832759925765807
+          ],
+          "peg_contacts": [],
+          "finger_forces_n": [
+            -1.1378002528444955,
+            -1.1378002528445008
+          ],
+          "normal_force_by_finger_n": {
+            "left_finger": 0.0,
+            "right_finger": 0.0
+          },
+          "finger_command": {
+            "mode": "step-implicit-pd",
+            "target_opening_per_finger_m": 0,
+            "raw_pd_force_n": [
+              -150.0,
+              -150.0
+            ],
+            "commanded_force_n": [
+              -1.1378002528444955,
+              -1.1378002528445008
+            ]
+          }
+        },
+        {
+          "step": 11,
+          "both_fingers_contact": true,
+          "finger_qpos_m": [
+            0.0031216694242418726,
+            0.0031163958866646997
+          ],
+          "peg_root_position": [
+            0.5037971401201218,
+            -0.0009865199462036878,
+            0.3083327128772175
+          ],
+          "peg_contacts": [
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_4",
+              "distance_m": -1.965857261037393e-05,
+              "normal_force_n": 0.21081474890935617,
+              "position_world_m": [
+                0.5067537117575767,
+                -0.004245973486031733,
+                0.34133295719850054
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_6",
+              "distance_m": -1.1221526110589472e-05,
+              "normal_force_n": 0.052026395026772546,
+              "position_world_m": [
+                0.5069088653696576,
+                -0.004285796620524191,
+                0.35133167149085087
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_7",
+              "distance_m": -6.7647858684300945e-06,
+              "normal_force_n": 0.060695342949300096,
+              "position_world_m": [
+                0.5020133453008064,
+                -0.00431402027800519,
+                0.358349318932795
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_5",
+              "distance_m": -4.4928245982385943e-07,
+              "normal_force_n": 0.275460301863864,
+              "position_world_m": [
+                0.5067480774486683,
+                0.0019999141700472417,
+                0.34135998021735403
+              ]
+            }
+          ],
+          "finger_forces_n": [
+            -0.31034291083983356,
+            -0.31079739461861605
+          ],
+          "normal_force_by_finger_n": {
+            "left_finger": 0.3235364868854288,
+            "right_finger": 0.275460301863864
+          },
+          "finger_command": {
+            "mode": "step-implicit-pd",
+            "target_opening_per_finger_m": 0,
+            "raw_pd_force_n": [
+              -36.313785185522356,
+              -36.36331505882038
+            ],
+            "commanded_force_n": [
+              -0.31034291083983356,
+              -0.31079739461861605
+            ]
+          }
+        },
+        {
+          "step": 21,
+          "both_fingers_contact": true,
+          "finger_qpos_m": [
+            0.003108899582731599,
+            0.003109282098364892
+          ],
+          "peg_root_position": [
+            0.5037589644043031,
+            -0.0009835188927325026,
+            0.30833507084238704
+          ],
+          "peg_contacts": [
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_4",
+              "distance_m": -1.1362624390337503e-05,
+              "normal_force_n": 0.1375801992828538,
+              "position_world_m": [
+                0.50675157651364,
+                -0.004230216506142078,
+                0.3413331604775839
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_5",
+              "distance_m": -2.7612500765233286e-06,
+              "normal_force_n": 0.022189648832887383,
+              "position_world_m": [
+                0.5018424713242454,
+                -0.004252754542548757,
+                0.3474113138346472
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_6",
+              "distance_m": -5.050709307355825e-06,
+              "normal_force_n": 0.011735373363655781,
+              "position_world_m": [
+                0.5069073932188127,
+                -0.004270842112270499,
+                0.3513318627210853
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_7",
+              "distance_m": -5.721233623548969e-06,
+              "normal_force_n": 0.04550054376378487,
+              "position_world_m": [
+                0.5020141713663102,
+                -0.004301087219655895,
+                0.35835372533638166
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_5",
+              "distance_m": -5.709132399834803e-06,
+              "normal_force_n": 0.08964908434748073,
+              "position_world_m": [
+                0.5067502128177352,
+                0.001994592011606079,
+                0.341360024371986
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_6",
+              "distance_m": -4.984794610205358e-06,
+              "normal_force_n": 0.04449428578963904,
+              "position_world_m": [
+                0.5020147329767588,
+                0.0019211869412264098,
+                0.35837948082936855
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_7",
+              "distance_m": -2.462416403703372e-06,
+              "normal_force_n": 0.0231570749918645,
+              "position_world_m": [
+                0.5069069336482639,
+                0.0019502173662529767,
+                0.35135869738322567
+              ]
+            }
+          ],
+          "finger_forces_n": [
+            -0.1769113629986231,
+            -0.17691053302269477
+          ],
+          "normal_force_by_finger_n": {
+            "left_finger": 0.21700576524318185,
+            "right_finger": 0.15730044512898428
+          },
+          "finger_command": {
+            "mode": "step-implicit-pd",
+            "target_opening_per_finger_m": 0,
+            "raw_pd_force_n": [
+              -23.32761672661413,
+              -23.32767530330856
+            ],
+            "commanded_force_n": [
+              -0.1769113629986231,
+              -0.17691053302269477
+            ]
+          }
+        },
+        {
+          "step": 31,
+          "both_fingers_contact": true,
+          "finger_qpos_m": [
+            0.003106569357226208,
+            0.0031061544681062875
+          ],
+          "peg_root_position": [
+            0.5037303710676491,
+            -0.0009762413784765455,
+            0.30833265333499926
+          ],
+          "peg_contacts": [
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_4",
+              "distance_m": -6.890710204061018e-06,
+              "normal_force_n": 0.09480244431073279,
+              "position_world_m": [
+                0.5067768925807954,
+                -0.004232707259205695,
+                0.343145589406897
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_5",
+              "distance_m": -5.211324573402534e-06,
+              "normal_force_n": 0.04829086477382251,
+              "position_world_m": [
+                0.501784013969357,
+                -0.004234900663454434,
+                0.3438758449267325
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_6",
+              "distance_m": -5.136582520427149e-06,
+              "normal_force_n": 0.04069884403469804,
+              "position_world_m": [
+                0.5069055394446682,
+                -0.004267352352101402,
+                0.35132889466502903
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_7",
+              "distance_m": -5.6311064499877795e-06,
+              "normal_force_n": 0.049786530600526784,
+              "position_world_m": [
+                0.5020123822832181,
+                -0.004297580320131189,
+                0.35835202397992894
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_4",
+              "distance_m": -4.574214767123421e-06,
+              "normal_force_n": 0.04335042040905916,
+              "position_world_m": [
+                0.5018403060855883,
+                0.0019662869895286,
+                0.34743523869878296
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_5",
+              "distance_m": -5.227908724996996e-06,
+              "normal_force_n": 0.048825751643443695,
+              "position_world_m": [
+                0.5067623077871561,
+                0.0019886579548911263,
+                0.34225951493214224
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_6",
+              "distance_m": -5.3240412197156995e-06,
+              "normal_force_n": 0.05566110731130129,
+              "position_world_m": [
+                0.501944903756669,
+                0.001937922659690722,
+                0.35407477629994455
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_7",
+              "distance_m": -5.248190192297362e-06,
+              "normal_force_n": 0.054967506614351874,
+              "position_world_m": [
+                0.5069059171836294,
+                0.0019493645061358818,
+                0.35135573945367155
+              ]
+            }
+          ],
+          "finger_forces_n": [
+            -0.17654365399894353,
+            -0.17656659141198036
+          ],
+          "normal_force_by_finger_n": {
+            "left_finger": 0.23357868371978013,
+            "right_finger": 0.20280478597815602
+          },
+          "finger_command": {
+            "mode": "step-implicit-pd",
+            "target_opening_per_finger_m": 0,
+            "raw_pd_force_n": [
+              -23.280250200032725,
+              -23.28271814150383
+            ],
+            "commanded_force_n": [
+              -0.17654365399894353,
+              -0.17656659141198036
+            ]
+          }
+        },
+        {
+          "step": 41,
+          "both_fingers_contact": true,
+          "finger_qpos_m": [
+            0.0031065949712601724,
+            0.0031051232697093083
+          ],
+          "peg_root_position": [
+            0.5035600049282346,
+            -0.0008750964961438964,
+            0.30813424804104095
+          ],
+          "peg_contacts": [
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_4",
+              "distance_m": -6.3952313924608695e-06,
+              "normal_force_n": 0.07460339355768818,
+              "position_world_m": [
+                0.5066331493721337,
+                -0.004148048255491863,
+                0.3429484772735997
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_5",
+              "distance_m": -5.797156230421851e-06,
+              "normal_force_n": 0.05544515825141744,
+              "position_world_m": [
+                0.5016187590952571,
+                -0.004145405956931419,
+                0.3423445984257364
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_6",
+              "distance_m": -5.549693665170002e-06,
+              "normal_force_n": 0.0535472940215798,
+              "position_world_m": [
+                0.5067670759586722,
+                -0.0041866984723619854,
+                0.3511322971275252
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_7",
+              "distance_m": -5.5947243161803304e-06,
+              "normal_force_n": 0.06180100423481327,
+              "position_world_m": [
+                0.5017642625042685,
+                -0.004187604143681911,
+                0.3512143146243998
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_4",
+              "distance_m": -5.372438827335928e-06,
+              "normal_force_n": 0.05822535772520761,
+              "position_world_m": [
+                0.5016920541768581,
+                0.0020491639740738516,
+                0.3468721535270205
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_5",
+              "distance_m": -5.743265005562614e-06,
+              "normal_force_n": 0.07092349989917741,
+              "position_world_m": [
+                0.5066323448089932,
+                0.0020683464067614765,
+                0.3429780960744151
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_6",
+              "distance_m": -4.952009884747373e-06,
+              "normal_force_n": 0.04152769027904163,
+              "position_world_m": [
+                0.501804795471316,
+                0.0020162580243624335,
+                0.35374155109470173
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_7",
+              "distance_m": -5.970267302715805e-06,
+              "normal_force_n": 0.05543830638991727,
+              "position_world_m": [
+                0.5068803812880507,
+                0.0019963583152525855,
+                0.35810072195239173
+              ]
+            }
+          ],
+          "finger_forces_n": [
+            -0.17666264571271914,
+            -0.1765779274071061
+          ],
+          "normal_force_by_finger_n": {
+            "left_finger": 0.24539685006549872,
+            "right_finger": 0.22611485429334394
+          },
+          "finger_command": {
+            "mode": "step-implicit-pd",
+            "target_opening_per_finger_m": 0,
+            "raw_pd_force_n": [
+              -23.292156061436746,
+              -23.280965276539064
+            ],
+            "commanded_force_n": [
+              -0.17666264571271914,
+              -0.1765779274071061
+            ]
+          }
+        },
+        {
+          "step": 51,
+          "both_fingers_contact": true,
+          "finger_qpos_m": [
+            0.0031067115616714965,
+            0.003105029682487339
+          ],
+          "peg_root_position": [
+            0.5031407215621035,
+            -0.0006224415628391985,
+            0.3076395105748271
+          ],
+          "peg_contacts": [
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_4",
+              "distance_m": -5.789798087794714e-06,
+              "normal_force_n": 0.03755871567286343,
+              "position_world_m": [
+                0.506265333572542,
+                -0.003929293379314686,
+                0.34244989066999354
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_5",
+              "distance_m": -5.740911322986547e-06,
+              "normal_force_n": 0.07040209548364033,
+              "position_world_m": [
+                0.5012539511740737,
+                -0.003932702190216041,
+                0.3418579256015015
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_6",
+              "distance_m": -5.418256345519861e-06,
+              "normal_force_n": 0.07339043129805765,
+              "position_world_m": [
+                0.5064157004270033,
+                -0.003981858220621585,
+                0.35063390058303257
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_7",
+              "distance_m": -5.544377547185309e-06,
+              "normal_force_n": 0.07384395164165208,
+              "position_world_m": [
+                0.5014130774313768,
+                -0.0039848889907905805,
+                0.3507236263000799
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_4",
+              "distance_m": -5.426356993910829e-06,
+              "normal_force_n": 0.04501657584160315,
+              "position_world_m": [
+                0.5012632624624609,
+                0.002279262724961902,
+                0.34257620191042326
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_5",
+              "distance_m": -5.780151361520123e-06,
+              "normal_force_n": 0.07570492565748041,
+              "position_world_m": [
+                0.5062659513320847,
+                0.0022823715756104825,
+                0.34248647470556126
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_6",
+              "distance_m": -5.057700707764838e-06,
+              "normal_force_n": 0.042659502736274356,
+              "position_world_m": [
+                0.501454615859384,
+                0.0022162852067652127,
+                0.35323703537851636
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_7",
+              "distance_m": -5.978025429722406e-06,
+              "normal_force_n": 0.0637481643836208,
+              "position_world_m": [
+                0.5065372392570797,
+                0.002193336133515265,
+                0.3576040337915682
+              ]
+            }
+          ],
+          "finger_forces_n": [
+            -0.17678304656044233,
+            -0.17665092108247332
+          ],
+          "normal_force_by_finger_n": {
+            "left_finger": 0.2551951940962135,
+            "right_finger": 0.22712916861897872
+          },
+          "finger_command": {
+            "mode": "step-implicit-pd",
+            "target_opening_per_finger_m": 0,
+            "raw_pd_force_n": [
+              -23.304303976075158,
+              -23.287822879913335
+            ],
+            "commanded_force_n": [
+              -0.17678304656044233,
+              -0.17665092108247332
+            ]
+          }
+        },
+        {
+          "step": 61,
+          "both_fingers_contact": true,
+          "finger_qpos_m": [
+            0.0031064472657196312,
+            0.0031045845031976993
+          ],
+          "peg_root_position": [
+            0.5024712730570307,
+            -0.00022055712758859244,
+            0.30685018263458613
+          ],
+          "peg_contacts": [
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_4",
+              "distance_m": -7.1294368696914e-06,
+              "normal_force_n": 0.09410228049225025,
+              "position_world_m": [
+                0.5056867589299465,
+                -0.003591098408260742,
+                0.34165135348093295
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_5",
+              "distance_m": -6.255047461970348e-06,
+              "normal_force_n": 0.06037637593199021,
+              "position_world_m": [
+                0.5006681406073578,
+                -0.0035912284981664774,
+                0.3409949399551977
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_6",
+              "distance_m": -5.901882859451607e-06,
+              "normal_force_n": 0.05885800382832509,
+              "position_world_m": [
+                0.5058533976571629,
+                -0.0036536127785707197,
+                0.3498355214774045
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_7",
+              "distance_m": -5.852986353354304e-06,
+              "normal_force_n": 0.06471773538577852,
+              "position_world_m": [
+                0.5008507664544284,
+                -0.003659934384100923,
+                0.34993755523533965
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_4",
+              "distance_m": -5.358825302855455e-06,
+              "normal_force_n": 0.057085964940567266,
+              "position_world_m": [
+                0.500754744207379,
+                0.0025889912428077055,
+                0.34560933972068786
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_5",
+              "distance_m": -5.940125320943201e-06,
+              "normal_force_n": 0.07176345943358607,
+              "position_world_m": [
+                0.5057420033257607,
+                0.0026012758510613014,
+                0.34476169132385726
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_6",
+              "distance_m": -5.9379603714510316e-06,
+              "normal_force_n": 0.058794612690456,
+              "position_world_m": [
+                0.500954553319773,
+                0.0025136933182420117,
+                0.3554129591829357
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_7",
+              "distance_m": -6.3196166162530136e-06,
+              "normal_force_n": 0.05990010388564327,
+              "position_world_m": [
+                0.5059880226420037,
+                0.002508639922237629,
+                0.35681117293404
+              ]
+            }
+          ],
+          "finger_forces_n": [
+            -0.17676744093078198,
+            -0.17664333787047784
+          ],
+          "normal_force_by_finger_n": {
+            "left_finger": 0.2780543956383441,
+            "right_finger": 0.2475441409502526
+          },
+          "finger_command": {
+            "mode": "step-implicit-pd",
+            "target_opening_per_finger_m": 0,
+            "raw_pd_force_n": [
+              -23.30331264408858,
+              -23.287169471558855
+            ],
+            "commanded_force_n": [
+              -0.17676744093078198,
+              -0.17664333787047784
+            ]
+          }
+        },
+        {
+          "step": 71,
+          "both_fingers_contact": true,
+          "finger_qpos_m": [
+            0.003107006577765359,
+            0.0031046638713753518
+          ],
+          "peg_root_position": [
+            0.5015520057056791,
+            0.0003351555393639252,
+            0.3057697801337869
+          ],
+          "peg_contacts": [
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_4",
+              "distance_m": -6.45614240168552e-06,
+              "normal_force_n": 0.07614510556745406,
+              "position_world_m": [
+                0.5048880081487097,
+                -0.0031211112691625423,
+                0.34055608712642393
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_5",
+              "distance_m": -5.819563443327933e-06,
+              "normal_force_n": 0.052979137123024655,
+              "position_world_m": [
+                0.49986888301099414,
+                -0.0031246520665202493,
+                0.3399722959112472
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_6",
+              "distance_m": -5.5831950128786055e-06,
+              "normal_force_n": 0.05526586009507435,
+              "position_world_m": [
+                0.50508232807594,
+                -0.0032040014903551278,
+                0.34874004492202504
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_7",
+              "distance_m": -5.600456281254965e-06,
+              "normal_force_n": 0.06340375417793898,
+              "position_world_m": [
+                0.5000802545802422,
+                -0.003214973655218242,
+                0.34885885981385323
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_4",
+              "distance_m": -5.3666676219724675e-06,
+              "normal_force_n": 0.05981803575639575,
+              "position_world_m": [
+                0.4999646091753487,
+                0.0030449822318762247,
+                0.34456418742535244
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_5",
+              "distance_m": -5.783990967113997e-06,
+              "normal_force_n": 0.07114907270531835,
+              "position_world_m": [
+                0.5049455024237567,
+                0.003065145920414155,
+                0.34355549820705616
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_6",
+              "distance_m": -4.959152581805851e-06,
+              "normal_force_n": 0.04216825040424832,
+              "position_world_m": [
+                0.500127879820504,
+                0.002975009186543654,
+                0.35142666681024753
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_7",
+              "distance_m": -5.949223089194717e-06,
+              "normal_force_n": 0.05137121774300687,
+              "position_world_m": [
+                0.5052349230703401,
+                0.002941403927389709,
+                0.3557253793045949
+              ]
+            }
+          ],
+          "finger_forces_n": [
+            -0.17669195356495873,
+            -0.17655703608214374
+          ],
+          "normal_force_by_finger_n": {
+            "left_finger": 0.24779385696349204,
+            "right_finger": 0.2245065766089693
+          },
+          "finger_command": {
+            "mode": "step-implicit-pd",
+            "target_opening_per_finger_m": 0,
+            "raw_pd_force_n": [
+              -23.29581895389387,
+              -23.277969037406688
+            ],
+            "commanded_force_n": [
+              -0.17669195356495873,
+              -0.17655703608214374
+            ]
+          }
+        },
+        {
+          "step": 81,
+          "both_fingers_contact": true,
+          "finger_qpos_m": [
+            0.003107281714779764,
+            0.003104440879761413
+          ],
+          "peg_root_position": [
+            0.5003900418177557,
+            0.0010369329594155734,
+            0.30440234510573144
+          ],
+          "peg_contacts": [
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_4",
+              "distance_m": -6.3022721846691125e-06,
+              "normal_force_n": 0.07555567727113818,
+              "position_world_m": [
+                0.5038772489720681,
+                -0.0025256435081286535,
+                0.3391679777905602
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_5",
+              "distance_m": -5.736428299960168e-06,
+              "normal_force_n": 0.05542194579742076,
+              "position_world_m": [
+                0.4988559658101295,
+                -0.002532988994870698,
+                0.3386120943187755
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_6",
+              "distance_m": -5.4887790304536414e-06,
+              "normal_force_n": 0.051109796707797486,
+              "position_world_m": [
+                0.5041063287207621,
+                -0.0026341396176259944,
+                0.3473513207431409
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_7",
+              "distance_m": -5.543780566829005e-06,
+              "normal_force_n": 0.06015644738990001,
+              "position_world_m": [
+                0.4991048655814718,
+                -0.0026510100446617627,
+                0.3474912508640436
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_4",
+              "distance_m": -5.3538042115827185e-06,
+              "normal_force_n": 0.056637807024765466,
+              "position_world_m": [
+                0.4988570059287705,
+                0.0036732156323601413,
+                0.33939108233206033
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_5",
+              "distance_m": -5.793003496962298e-06,
+              "normal_force_n": 0.06978193441652501,
+              "position_world_m": [
+                0.5038584957821342,
+                0.0036902244645170045,
+                0.339251153777268
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_6",
+              "distance_m": -5.004141826954701e-06,
+              "normal_force_n": 0.04346032387695356,
+              "position_world_m": [
+                0.4991559636163426,
+                0.0035312460334763047,
+                0.35005593248062894
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_7",
+              "distance_m": -5.929174051557053e-06,
+              "normal_force_n": 0.05443575426469203,
+              "position_world_m": [
+                0.5042816716751892,
+                0.00348946733058338,
+                0.3543499034146
+              ]
+            }
+          ],
+          "finger_forces_n": [
+            -0.1768288570268164,
+            -0.1766225694885527
+          ],
+          "normal_force_by_finger_n": {
+            "left_finger": 0.24224386716625645,
+            "right_finger": 0.22431581958293606
+          },
+          "finger_command": {
+            "mode": "step-implicit-pd",
+            "target_opening_per_finger_m": 0,
+            "raw_pd_force_n": [
+              -23.30982339185049,
+              -23.28380571437766
+            ],
+            "commanded_force_n": [
+              -0.1768288570268164,
+              -0.1766225694885527
+            ]
+          }
+        },
+        {
+          "step": 90,
+          "both_fingers_contact": true,
+          "finger_qpos_m": [
+            0.0031073152349839006,
+            0.003103945984105452
+          ],
+          "peg_root_position": [
+            0.4991429263813135,
+            0.0017916821236108522,
+            0.30293044967112737
+          ],
+          "peg_contacts": [
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_4",
+              "distance_m": -6.949564762890127e-06,
+              "normal_force_n": 0.09094080755538353,
+              "position_world_m": [
+                0.5027903299615077,
+                -0.0018846918356693707,
+                0.33767229783999914
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_5",
+              "distance_m": -5.926768191438126e-06,
+              "normal_force_n": 0.06387569113232172,
+              "position_world_m": [
+                0.49788239715358507,
+                -0.0019552554389155935,
+                0.3407021585008486
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_6",
+              "distance_m": -5.996771792197995e-06,
+              "normal_force_n": 0.054801254256491835,
+              "position_world_m": [
+                0.503056539510643,
+                -0.0020206098081631822,
+                0.34585465122340264
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "left_finger_geom_7",
+              "distance_m": -6.062154263338851e-06,
+              "normal_force_n": 0.050868878916981566,
+              "position_world_m": [
+                0.4982804522556119,
+                -0.002158916990111874,
+                0.35292611504243393
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_4",
+              "distance_m": -5.233851822957162e-06,
+              "normal_force_n": 0.0525402614847484,
+              "position_world_m": [
+                0.4978883092047878,
+                0.004243519739832718,
+                0.3417623983106034
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_5",
+              "distance_m": -5.991004170644075e-06,
+              "normal_force_n": 0.05936829745584461,
+              "position_world_m": [
+                0.5027421709435023,
+                0.004342163616432568,
+                0.33708770177662745
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_6",
+              "distance_m": -4.874457437580365e-06,
+              "normal_force_n": 0.04141430036408168,
+              "position_world_m": [
+                0.4981128169839333,
+                0.004128585871680751,
+                0.3486527438740651
+              ]
+            },
+            {
+              "geom1": "peg_collision",
+              "geom2": "right_finger_geom_7",
+              "distance_m": -5.771876762127138e-06,
+              "normal_force_n": 0.0641768453634984,
+              "position_world_m": [
+                0.5030310093346131,
+                0.004194316757615407,
+                0.34595901199748313
+              ]
+            }
+          ],
+          "finger_forces_n": [
+            -0.17681994585232888,
+            -0.1766351762229933
+          ],
+          "normal_force_by_finger_n": {
+            "left_finger": 0.26048663186117865,
+            "right_finger": 0.2174997046681731
+          },
+          "finger_command": {
+            "mode": "step-implicit-pd",
+            "target_opening_per_finger_m": 0,
+            "raw_pd_force_n": [
+              -23.30982886789127,
+              -23.285001821644663
+            ],
+            "commanded_force_n": [
+              -0.17681994585232888,
+              -0.1766351762229933
+            ]
+          }
+        }
+      ],
+      "passed": true,
+      "scope": "static close/hold of independently placed peg, not robot pickup or insertion"
+    },
+    "reference_controller_bridge": {
+      "scope": "three explicit bounded reference actions; no actor/checkpoint/policy inference",
+      "initial_observation_size": 19,
+      "lstm_reset_pending": true,
+      "actions": [
+        {
+          "episode_steps": 1,
+          "simulation_time_s": 0.06666666666666667,
+          "observation_size": 19,
+          "max_arm_qvel_rad_s": 15.704314280469086,
+          "official_geometric_success": false,
+          "physical_insertion_candidate": false,
+          "substep_count": 8,
+          "state_is_pre_reset": true,
+          "reset_required": false
+        },
+        {
+          "episode_steps": 2,
+          "simulation_time_s": 0.13333333333333333,
+          "observation_size": 19,
+          "max_arm_qvel_rad_s": 20.247301390010904,
+          "official_geometric_success": false,
+          "physical_insertion_candidate": false,
+          "substep_count": 8,
+          "state_is_pre_reset": true,
+          "reset_required": false
+        },
+        {
+          "episode_steps": 3,
+          "simulation_time_s": 0.19999999999999998,
+          "observation_size": 19,
+          "max_arm_qvel_rad_s": 17.299114787782916,
+          "official_geometric_success": false,
+          "physical_insertion_candidate": false,
+          "substep_count": 8,
+          "state_is_pre_reset": true,
+          "reset_required": false
+        }
+      ],
+      "policy_updates": 3,
+      "physics_steps": 24,
+      "target_rebuilt_each_physics_step": true,
+      "official_predicate_and_physical_diagnostic_kept_separate": true
+    },
+    "naive_affine_finger_pd_negative_control": {
+      "steps": 1,
+      "config": {
+        "timestep": 0.008333333333333333,
+        "decimation": 8,
+        "peg_radius": 0.003993,
+        "peg_height": 0.05,
+        "peg_mass": 0.019,
+        "bore_radius": 0.00405,
+        "hole_height": 0.025,
+        "hole_outer_radius": 0.02,
+        "floor_thickness": 0.003,
+        "hole_sectors": 256,
+        "friction": 0.75,
+        "robot_gravity_compensation": true,
+        "peg_gravity_compensation": true,
+        "contact_solref": [
+          0.005,
+          1.0
+        ],
+        "contact_solimp": [
+          0.99,
+          0.999,
+          1e-05
+        ],
+        "solver_iterations": 100,
+        "finger_kp": 7500.0,
+        "finger_kd": 173.0,
+        "finger_force_limit": 40.0,
+        "finger_actuation": "affine-pd"
+      },
+      "snapshot": {
+        "time_s": 0.008333333333333333,
+        "qpos": [
+          -1.3003,
+          -0.4015,
+          1.1791,
+          -2.1493,
+          0.4001,
+          1.9425,
+          0.4754,
+          -0.16518518518518566,
+          -0.16518518518518563,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "qvel": [
+          4.2331906770922303e-16,
+          1.3600394238700644e-16,
+          -1.167175541539003e-16,
+          1.4877170177831818e-16,
+          1.5615863768681306e-15,
+          -1.4022368346749343e-15,
+          -4.2406165405399626e-16,
+          -22.22222222222228,
+          -22.222222222222275,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "tcp_position_world": [
+          0.5042383420459131,
+          -0.001114129742648868,
+          0.34071526839346583
+        ],
+        "tcp_quaternion_wxyz": [
+          -0.0021557111875967067,
+          0.9999665739731061,
+          -1.0303178257287104e-05,
+          -0.00788693474092044
+        ],
+        "peg_root_position": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "peg_quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hole_root_position": [
+          0.6,
+          0.0,
+          0.05
+        ],
+        "requested_arm_torque_nm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "software_limited_arm_torque_nm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actuator_force_nm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "generalized_actuator_contribution_nm": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "finger_actuator_force_n": [
+          40.0,
+          40.0
+        ],
+        "finger_command": {
+          "mode": "affine-pd",
+          "target_opening_per_finger_m": 0,
+          "raw_pd_force_n": [
+            -150.0,
+            -150.0
+          ],
+          "commanded_force_n": [
+            -40.0,
+            -40.0
+          ]
+        },
+        "contacts": []
+      },
+      "joint_limit_violation_m": 0.16518518518518566,
+      "rejected_for_final_configuration": true,
+      "reason": "force clipping removes velocity derivative while saturated; source implicit drive not reproduced by naive affine actuator"
+    }
+  },
+  "licensed_asset_manifest": [
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/panda.xml",
+      "sha256": "96ad67da03710f17f798c9478fd9e9efdf24a3bf8359f05e456dd9fb158ea273",
+      "bytes": 14438
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/LICENSE",
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+      "bytes": 10173
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link0.stl",
+      "sha256": "dfc6d94330de8ddb005b311bfdba9f3b8e1aa7c256b71592ee7ff32cb9a9a5aa",
+      "bytes": 10084
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link1.stl",
+      "sha256": "e41a39a94108fcf56aacff603fc91ec80541f4c1af17b51a0de5617f5566e6d2",
+      "bytes": 15084
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link2.stl",
+      "sha256": "370f7605a0fae3529db169ded50f52f171024aa792d4d773bc84197301f6a039",
+      "bytes": 15084
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link3.stl",
+      "sha256": "0a8d638b9349c6c0eefc4e888636ac4838c4b27170f18a51699321118af709c1",
+      "bytes": 15084
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link4.stl",
+      "sha256": "0180ebb5772ec9840cb049750cffb29a9ddc90311752a16ea34757782ef9e48d",
+      "bytes": 15084
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link5_collision_0.obj",
+      "sha256": "3e5aa75fb13f193555c3dfb999df91d81df25006a5c3af5338297d78137c129b",
+      "bytes": 3861
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link5_collision_1.obj",
+      "sha256": "87cd8f621071df010f774cbde789282b8463840dfe704f8bdfa2e29be0142e15",
+      "bytes": 2412
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link5_collision_2.obj",
+      "sha256": "823ab6c8f7b1d79e0844fa071d82a03499ff68e34fddb1ba3451032c22736040",
+      "bytes": 3786
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6.stl",
+      "sha256": "20b768e99a0e0440b5754dcca108016434e57937cc356acd9c352ccd3cb27f77",
+      "bytes": 10084
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link7.stl",
+      "sha256": "92ac6afcf7574c034d3170d8a68e95ac9048ab9d0dd5bbd8311b86e551b9ab1c",
+      "bytes": 10084
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/hand.stl",
+      "sha256": "94493e94f30fe940f2c8ca2f155c3bbe67bbff406d3edf5e261670d2f0f6e2ed",
+      "bytes": 10084
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link0_0.obj",
+      "sha256": "6b9f41a4c203540daaeb7a33cc3d0d6c6a32dc8bba187074eeaf97b3e36b3f9c",
+      "bytes": 296497
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link0_1.obj",
+      "sha256": "57673d2ee2a9db2e10c8986ae57c56a7c39c012b60fd26d7d8549553b664a5ed",
+      "bytes": 103978
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link0_2.obj",
+      "sha256": "1ca435a2a87a9608a146a47955724d43dd7ce10fc3dd3018800aa98f8ba86e05",
+      "bytes": 590892
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link0_3.obj",
+      "sha256": "3e9c6334d2b3b47944af3458ee5f20519abc20fe7ee23063bb53405ccab28046",
+      "bytes": 47588
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link0_4.obj",
+      "sha256": "215d25789704936120f119c0bc1cc7f68516dd3f8f1df61457b71acac3873f26",
+      "bytes": 211200
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link0_5.obj",
+      "sha256": "9361b104e93743045107aa5b15fb1a0835ba9c1f355aae71f56403cf6a9c33f6",
+      "bytes": 17023
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link0_7.obj",
+      "sha256": "2dc0b8ebbbc80e4c065d71e195adbc384f673438641fac82b07b801b4d2837cb",
+      "bytes": 30699
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link0_8.obj",
+      "sha256": "3b8c436999db5586b8eb47bed2b0aa7de6993868b2681b4c04246eeac42fdb7a",
+      "bytes": 3263194
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link0_9.obj",
+      "sha256": "45178f97d2b5da6bce11f610212c4ef7d08c73db33a4fc38e1b7f66b93d023f5",
+      "bytes": 105629
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link0_10.obj",
+      "sha256": "c9198b9d8534d628d097b0f2b239bb30343353182df098ce0d9db6bc13326848",
+      "bytes": 343308
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link0_11.obj",
+      "sha256": "f0adec78d6677b7799d25121981270e8bfe119b5c18d08a91ee37a54ad75f65c",
+      "bytes": 22295
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link1.obj",
+      "sha256": "51091e776b16babdbe2f3849b5c041f921d1f11dd94ac19a0f1c81abf496fbae",
+      "bytes": 3274995
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link2.obj",
+      "sha256": "5c9f8e715de52c3eb71b475de35993b3b96081e02abea9f28c414768877fc59b",
+      "bytes": 3295608
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link3_0.obj",
+      "sha256": "ce2da87f51708e11b189249d41401065dabe89a06e251185a06cef4d5ff27178",
+      "bytes": 3046804
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link3_1.obj",
+      "sha256": "2880b7753a7173f38fa87ee21da4dfc7fa7be46fbe07bac5aef9e128513cb118",
+      "bytes": 65260
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link3_2.obj",
+      "sha256": "670cff81ae84693769ca4ae658c154cf909d81167e7c8d22b70ea977f2504efa",
+      "bytes": 83591
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link3_3.obj",
+      "sha256": "30ede0c812efd0e0b767d134a4eae0b84e0fa407bb6325a5a555e0569b3a3ffd",
+      "bytes": 457684
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link4_0.obj",
+      "sha256": "443bf6d178177cf347951ecf107ccd10ca444e605e375b67304579e5f948806f",
+      "bytes": 83486
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link4_1.obj",
+      "sha256": "ca935ec7cc8b3f0e86aa079c76b0b3bf593b1e9830bab0fa7131ac51577c74f0",
+      "bytes": 3148001
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link4_2.obj",
+      "sha256": "c89caf26d379c35bb9e191ee2d91d09ab29ecc792b48d8bc10b39e5b38222175",
+      "bytes": 455522
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link4_3.obj",
+      "sha256": "1495d17f45bdb230cf58b0beef9da4e8c9cfe76a3d2d38da89017efe5e093136",
+      "bytes": 67497
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link5_0.obj",
+      "sha256": "a3238b8f2af0f2eb66d9fe63dc5d41ac52d5d38507241b5ed10e3cb019ab3e71",
+      "bytes": 824158
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link5_1.obj",
+      "sha256": "9d994bbf83ec241e301b5197a6846da13f2a4a0582edb2c0f76962c5549649d6",
+      "bytes": 63174
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link5_2.obj",
+      "sha256": "83b4ffe9f772cd7fe182e98640650eebc899aaf01842656574b0416c90dd40a4",
+      "bytes": 3856621
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_0.obj",
+      "sha256": "0504c70ebf1b284ee8faae7dcb896b8830bc672a6552015dd5dbd121fa031fb9",
+      "bytes": 157563
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_1.obj",
+      "sha256": "45f7ca77695198b6d86ec2417ad4e42e6275044f0f96266699ee8e1057757ac1",
+      "bytes": 27106
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_2.obj",
+      "sha256": "e54eee4d8232947ee8af65afd5a067e09dac2da6e7e585cb1dccb65496457da0",
+      "bytes": 9916
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_3.obj",
+      "sha256": "d4f6a25ef32fa1fa4734146981994ee760232cb077c80fea6487d78a077c7f27",
+      "bytes": 11943
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_4.obj",
+      "sha256": "be353480fe71d46f7a96f0a3cbb7e112caaf8d88368826f321a36a253c8749b2",
+      "bytes": 13846
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_5.obj",
+      "sha256": "7c87664623c3e1a6cb330db273227a69626dc5e53b4caff1d4ee7911eb3340c6",
+      "bytes": 11841
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_6.obj",
+      "sha256": "8fbc031e0d07b795ebf99115c75223141caaba317cab569159f3d477a7821681",
+      "bytes": 12597
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_7.obj",
+      "sha256": "7dc5ebb799fe281aab27d6e84e7a4efa0a8e42da2369ec83de3ea3f206f62d73",
+      "bytes": 4382
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_8.obj",
+      "sha256": "e3f77381817a341030f9dcc4c4aa7c559f80411b453fd87eb0fefecca82151bf",
+      "bytes": 9131
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_9.obj",
+      "sha256": "25a56ea9b02a03b6cb5a81f31c54f54d0185e1a0b3937c37e4289d896e50215a",
+      "bytes": 17616
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_10.obj",
+      "sha256": "365f26c21d10332cab8d8704645cb46930c30b3085956f2d097498c793f24db4",
+      "bytes": 368502
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_11.obj",
+      "sha256": "8ae61e08b3ad064f25bbf03b22e59cc15d65883b5a7ce92711aff29df2493901",
+      "bytes": 32653
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_12.obj",
+      "sha256": "f28d1bfd62b0244ffd19fb35fe9edefdf583d3c9167db944e87185d919e1d021",
+      "bytes": 3894
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_13.obj",
+      "sha256": "0a55fa92dccb261d07200e6565fca4c850fd17f0c1ecf38821c0b97d51796c7d",
+      "bytes": 3798
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_14.obj",
+      "sha256": "750ae3ee4781e62e3a045c662195247b03f6642b05aa93104f08258e5f6eba26",
+      "bytes": 444469
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_15.obj",
+      "sha256": "5999c1c2497a004a7c4bbe034cdf13744f839d85ae7a11b1bc386c48a3e642e6",
+      "bytes": 668552
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_16.obj",
+      "sha256": "551d7a8b37c53e7a152d008b4e36992e5b5abe74a4be18b57ee6319c27def09f",
+      "bytes": 3675358
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link7_0.obj",
+      "sha256": "04586b0bde011715cfc22072ac72fe0717eb4d4817bcf665987ce6cd88eb2b93",
+      "bytes": 1362355
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link7_1.obj",
+      "sha256": "c3f72289f394c9d6749a4a327fb11f05b203c37c95032c92f28019b40ebe7e00",
+      "bytes": 121358
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link7_2.obj",
+      "sha256": "d2faecedb304d0989040d082410378dc949dbbda23bd18c05134f08aae984db5",
+      "bytes": 208907
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link7_3.obj",
+      "sha256": "b62d87c4d4bdb7b281ed341d347c39dad0e50bf36aed8ac11d050073701d5f70",
+      "bytes": 123684
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link7_4.obj",
+      "sha256": "cb78ccb61fd4ad6c7bff4c4d2e6cb41e1964a5a3e1a28e67c0c6202371cfc018",
+      "bytes": 85732
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link7_5.obj",
+      "sha256": "099071d3090b51471ba52f4f90814fd3089f4975d196e4d488117073d0bfe491",
+      "bytes": 226402
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link7_6.obj",
+      "sha256": "99469e2d95ab74ce0292f2f16954c87a8a7dc16652e62e970fe37c94330a81bb",
+      "bytes": 99900
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link7_7.obj",
+      "sha256": "426c3db8a19373f3dc73d4bec672e948121b2914c10e2e7b9c7ea80643a19e54",
+      "bytes": 792162
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/hand_0.obj",
+      "sha256": "b94aab901086f85df04c019b30f43bf9aa23a7ad0443ec80a8c14662a41cabd2",
+      "bytes": 9091
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/hand_1.obj",
+      "sha256": "cd76f7494bb314406a1819c46eb826ee254894f87235714f604a470653d9badb",
+      "bytes": 121863
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/hand_2.obj",
+      "sha256": "e0f44a71712afa5b98eb20355eff17763d3e2e19f459b2bef19abed3727e64b3",
+      "bytes": 596001
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/hand_3.obj",
+      "sha256": "a431a06d99e88a1b322b3122a01424ee7704daeaad0bc343b90b9604f014ad0c",
+      "bytes": 902145
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/hand_4.obj",
+      "sha256": "21f96ef6a8de082e41b1ea9834f1043de359e5d60305541bcb63539581f53bff",
+      "bytes": 151988
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/finger_0.obj",
+      "sha256": "215098c0fcdf7192f6c503a37cf49e3efecf8a9e1320f02b17c5584d89cc5b2c",
+      "bytes": 87872
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/finger_1.obj",
+      "sha256": "cf239e9aca26bba09dbbf1c544c47d87cfc9a2f0637c8bb786af750b6d4eca44",
+      "bytes": 64651
+    }
+  ],
+  "body_mass_inertia": [
+    {
+      "name": "world",
+      "mass_kg": 0.0,
+      "com_local_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "principal_inertia_kg_m2": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertial_quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "gravity_compensation": 0.0
+    },
+    {
+      "name": "link0",
+      "mass_kg": 0.629769,
+      "com_local_m": [
+        -0.041018,
+        -0.00014,
+        0.049974
+      ],
+      "principal_inertia_kg_m2": [
+        0.004304650123430994,
+        0.0038798390919025367,
+        0.0031305107846664564
+      ],
+      "inertial_quaternion_wxyz": [
+        0.006304742250265338,
+        0.7512445646566475,
+        0.007417744420410821,
+        0.6599521432397345
+      ],
+      "gravity_compensation": 1.0
+    },
+    {
+      "name": "link1",
+      "mass_kg": 4.970684,
+      "com_local_m": [
+        0.003875,
+        0.002081,
+        -0.04762
+      ],
+      "principal_inertia_kg_m2": [
+        0.7071370144883009,
+        0.7034354292338564,
+        0.00852455627784294
+      ],
+      "inertial_quaternion_wxyz": [
+        0.7115491548439588,
+        0.0063437712335342065,
+        -0.013112389998375933,
+        0.7024853180216057
+      ],
+      "gravity_compensation": 1.0
+    },
+    {
+      "name": "link2",
+      "mass_kg": 0.646926,
+      "com_local_m": [
+        -0.003141,
+        -0.02872,
+        0.003495
+      ],
+      "principal_inertia_kg_m2": [
+        0.03103264256517663,
+        0.02830010693683385,
+        0.0027342504979895274
+      ],
+      "inertial_quaternion_wxyz": [
+        -0.16817480155429798,
+        0.8283658778649345,
+        -0.12287755442070392,
+        0.5200272253746144
+      ],
+      "gravity_compensation": 1.0
+    },
+    {
+      "name": "link3",
+      "mass_kg": 3.228604,
+      "com_local_m": [
+        0.027518,
+        0.039252,
+        -0.066502
+      ],
+      "principal_inertia_kg_m2": [
+        0.04150138828861061,
+        0.041479257270665607,
+        0.0012463544407238245
+      ],
+      "inertial_quaternion_wxyz": [
+        0.6627687684234549,
+        -0.006783314734544799,
+        0.25205316921967597,
+        0.7050962672784391
+      ],
+      "gravity_compensation": 1.0
+    },
+    {
+      "name": "link4",
+      "mass_kg": 3.587895,
+      "com_local_m": [
+        -0.05317,
+        0.104419,
+        0.027454
+      ],
+      "principal_inertia_kg_m2": [
+        0.03495964042412706,
+        0.028148276242039156,
+        0.010620083333833793
+      ],
+      "inertial_quaternion_wxyz": [
+        0.6505803874881221,
+        0.5298216601916185,
+        -0.0962034215397457,
+        0.5355175715993369
+      ],
+      "gravity_compensation": 1.0
+    },
+    {
+      "name": "link5",
+      "mass_kg": 1.225946,
+      "com_local_m": [
+        -0.011953,
+        0.041065,
+        -0.038437
+      ],
+      "principal_inertia_kg_m2": [
+        0.036762538266730406,
+        0.028853091260661545,
+        0.008034370472607986
+      ],
+      "inertial_quaternion_wxyz": [
+        0.9873132613697035,
+        -0.012195351287934265,
+        0.0719186669438179,
+        -0.1410372386127408
+      ],
+      "gravity_compensation": 1.0
+    },
+    {
+      "name": "link6",
+      "mass_kg": 1.666555,
+      "com_local_m": [
+        0.060149,
+        -0.014117,
+        -0.010517
+      ],
+      "principal_inertia_kg_m2": [
+        0.005842761226567758,
+        0.004310373704197247,
+        0.001597865069234999
+      ],
+      "inertial_quaternion_wxyz": [
+        0.10107538124240018,
+        0.5933199069415573,
+        0.028722697180501022,
+        0.7980791076079152
+      ],
+      "gravity_compensation": 1.0
+    },
+    {
+      "name": "link7",
+      "mass_kg": 0.735522,
+      "com_local_m": [
+        0.010517,
+        -0.004252,
+        0.061597
+      ],
+      "principal_inertia_kg_m2": [
+        0.012734492874724473,
+        0.01010547714435622,
+        0.004518029980919309
+      ],
+      "inertial_quaternion_wxyz": [
+        0.9929385217915908,
+        -0.07620412050311047,
+        0.07335952004856763,
+        -0.05370665488486283
+      ],
+      "gravity_compensation": 1.0
+    },
+    {
+      "name": "hand",
+      "mass_kg": 0.73,
+      "com_local_m": [
+        -0.01,
+        0.0,
+        0.03
+      ],
+      "principal_inertia_kg_m2": [
+        0.001,
+        0.0025,
+        0.0017
+      ],
+      "inertial_quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "gravity_compensation": 1.0
+    },
+    {
+      "name": "left_finger",
+      "mass_kg": 0.015,
+      "com_local_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "principal_inertia_kg_m2": [
+        2.375e-06,
+        2.375e-06,
+        7.5e-07
+      ],
+      "inertial_quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "gravity_compensation": 1.0
+    },
+    {
+      "name": "right_finger",
+      "mass_kg": 0.015,
+      "com_local_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "principal_inertia_kg_m2": [
+        2.375e-06,
+        2.375e-06,
+        7.5e-07
+      ],
+      "inertial_quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "gravity_compensation": 1.0
+    },
+    {
+      "name": "hole",
+      "mass_kg": 0.03492938419821012,
+      "com_local_m": [
+        -4.36497619427218e-19,
+        5.257295546486676e-20,
+        0.010576118548021568
+      ],
+      "principal_inertia_kg_m2": [
+        7.553253181113882e-06,
+        6.1609805748712784e-06,
+        6.1609805748712835e-06
+      ],
+      "inertial_quaternion_wxyz": [
+        0.5000000000000007,
+        0.5000000000000007,
+        -0.5000000000000007,
+        0.5000000000000007
+      ],
+      "gravity_compensation": 0.0
+    },
+    {
+      "name": "peg",
+      "mass_kg": 0.019,
+      "com_local_m": [
+        0.0,
+        0.0,
+        0.025
+      ],
+      "principal_inertia_kg_m2": [
+        4.034067566083334e-06,
+        4.034067566083334e-06,
+        1.5146846549999998e-07
+      ],
+      "inertial_quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "gravity_compensation": 1.0
+    }
+  ],
+  "geometry": {
+    "nominal_peg_diameter_m": 0.007986,
+    "nominal_hole_diameter_m": 0.0081,
+    "nominal_radial_clearance_m": 5.699999999999976e-05,
+    "sectors": 256,
+    "ideal_chord_intrusion_m": 3.0495755146476286e-07,
+    "ideal_minimum_radial_clearance_m": 5.6695042448534974e-05,
+    "comparison": "New analytic nominal geometry; original raw straight-slab gap>=505.921um remains historical, cooked SDF unknown",
+    "floor_thickness_m": 0.003,
+    "peg_height_m": 0.05,
+    "hole_height_m": 0.025,
+    "margin_m": 0.0,
+    "gap_m": 0.0,
+    "positive_solref_timeconstant_floor_s": 0.016666666666666666,
+    "refsafe_enabled": true,
+    "compiled_measured_inner_apothem_range_m": [
+      0.004049694574789427,
+      0.004049695506215943
+    ],
+    "compiled_measurement_is_float_not_rigorous_certificate": true
+  },
+  "runtime_s": 0.9606632030045148,
+  "peak_rss_kib": 468020,
+  "physics_steps_executed": 518
+}

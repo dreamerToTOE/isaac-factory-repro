@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="5.408" timestamp="2026-10-26T22:11:28.862242" hostname="ubuntu2004"><testcase classname="tests.test_g4i2_analysis" name="test_plots_are_real_files_and_cannot_overwrite" time="5.214" /></testsuite></testsuites>

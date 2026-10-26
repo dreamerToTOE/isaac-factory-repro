@@ -1,0 +1,16 @@
+{
+  "task": "G4-S1B",
+  "command": [
+    "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+    "scripts/g4s1b_env.py",
+    "--output",
+    "evidence/g4_s/s1b/environment_no_policy_final.json"
+  ],
+  "exit_code": 0,
+  "stderr": "",
+  "output_path": "evidence/g4_s/s1b/environment_no_policy_final.json",
+  "output_sha256": "83fd1ee3ccd9dad8279e03a2ee133970e6f97736f7aa77c3ca0a3c3f6f82fc9b",
+  "generated_utc": "2026-10-26T13:17:36.169846+00:00",
+  "physics_steps": 518,
+  "scope": "real bounded MuJoCo 3.5.0 no-policy collector; no actor/checkpoint/training"
+}

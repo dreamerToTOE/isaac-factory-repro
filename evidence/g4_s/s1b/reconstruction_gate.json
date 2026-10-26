@@ -1,0 +1,183 @@
+{
+  "schema_version": "g4_s1b_gate_v1",
+  "task": "G4-S1B",
+  "generated_utc": "2026-10-26T13:16:52.162299+00:00",
+  "starting_commit": "6e282557e2fd0c689932b6a572b53d987ad4c8d3",
+  "status": "G4_S1B_PASS",
+  "scientific_zero_shot_policy_effectiveness": "NOT_ASSESSED_NO_POLICY_AUTHORIZED_IN_THIS_STAGE",
+  "objective": "ADAPTED_ZERO_SHOT_SIM2SIM_NO_POLICY_ENVIRONMENT_AND_INTERFACE_ENGINEERING",
+  "exact_Factory_reconstruction": "NOT_CLAIMED_S1A_NO_GO_REMAINS",
+  "artifacts": {
+    "docs/REVIEW_G4_S1B.md": "a49e4c8399f318c402b8a087a9a727398162e9caba9312fe753bcc0355776089",
+    "scripts/g4s1b_contract.py": "dcf91aa274a6151f88f36901ce0c4a2feac76d7b8fcfe6586104f906c67d6d6c",
+    "scripts/g4s1b_env.py": "065affe855ef1d3fa016d6ed8166699a9fc7ea1476d3c5302cee1663d56c92dd",
+    "scripts/audit_g4s1b.py": "061cc4bf44e2ca691aa84c969999f7631e79108c18466b0656b9afb5914c4e05",
+    "tests/test_g4s1b_contract.py": "94d86286a1417fc3c203f3c02d30ea1f93dd51fda9b6251e6ed2f6a99cb36425",
+    "tests/test_g4s1b_env.py": "cb330d33bda17b4ca5bee4657f638ab5088b9fa194871532ad1072b1a3c21eb5",
+    "evidence/g4_s/s1b/environment_no_policy_final.json": "83fd1ee3ccd9dad8279e03a2ee133970e6f97736f7aa77c3ca0a3c3f6f82fc9b",
+    "evidence/g4_s/s1b/controller_contract.json": "514153ff5b8b5b8f83f5b532a3fcdcb8a631267649d13e3d34b6948800a1b824",
+    "evidence/g4_s/s1b/implementation_review.json": "8cc54def8829926f9ca9978f8e207ed97a22df82a667cbadb1f17771ac0568e1",
+    "evidence/g4_s/s1b/environment_process_receipt.json": "85e2cfde2ad42dae01610d3fd99ac4b1cb67ca4340968f9c6ecc6a364230d893"
+  },
+  "engine": {
+    "name": "MuJoCo",
+    "version": "3.5.0",
+    "menagerie_commit": "8161bba264d7fa7c99ca301e91e7fb44737676ad",
+    "xml_sha256": "c60c33ee11eb4806294aee259f97d987308b23e83da62f2219cbc9950fb195c9",
+    "nq": 16,
+    "nv": 15,
+    "nu": 9,
+    "has_weld": false
+  },
+  "geometry": {
+    "peg_diameter_m": 0.007986,
+    "hole_diameter_m": 0.0081,
+    "nominal_radial_clearance_m": 5.699999999999976e-05,
+    "hole_sectors": 256,
+    "ideal_chord_intrusion_m": 3.0495755146476286e-07,
+    "compiled_apothem_range_m": [
+      0.004049694574789427,
+      0.004049695506215943
+    ],
+    "margin_m": 0.0,
+    "gap_m": 0.0,
+    "original_Factory_raw_gap_m": ">=0.000505921060430 (S1A read-only bound)",
+    "original_cooked_SDF": "UNKNOWN"
+  },
+  "controller": {
+    "observation_size": 19,
+    "action_size": 6,
+    "physics_dt_s": 0.008333333333333333,
+    "decimation": 8,
+    "policy_hz": 15,
+    "target_rebuilt_each_physics_step": true,
+    "oracle_numeric": {
+      "fixtures": 24,
+      "seed": 20261026,
+      "target_max_abs_error": 1.8884049393652624e-07,
+      "software_torque_max_abs_error_Nm": 7.020106860711195e-06,
+      "wrench_max_abs_error": 6.673315448901818e-06,
+      "pose_error_max_abs_error": 2.2252939509831426e-07,
+      "dynamic_nullspace_max_residual": 2.73025073293556e-15,
+      "elapsed_seconds_including_imports": 1.231144117002259,
+      "peak_rss_kib": 494292,
+      "process_exit_status": 0,
+      "quantitative_tolerance": "source/porttarget<1e-6,torque/wrench<3e-5,pose<1e-6,dynamicnullresidual<1e-12; these fixedfixturebounds are not globalerrorcertificates"
+    },
+    "source_sha256": {
+      "factory_env.py": {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py",
+        "sha256": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81"
+      },
+      "factory_control.py": {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_control.py",
+        "sha256": "7ef611d530a86fa2aba9db222361b0fe8b64d34037f204ad622a17051ad5e163"
+      },
+      "installed_utility_sha256": {
+        "/home/ubuntu2004/isaacsim-4.5.0/exts/isaacsim.core.utils/isaacsim/core/utils/torch/rotations.py": "40e0b7c318fdf77c171dd09bc20aa3185be076fe94a312dcfd11a2a02c8122b0",
+        "/home/ubuntu2004/isaacsim-4.5.0/exts/isaacsim.core.utils/isaacsim/core/utils/torch/maths.py": "25eb6af449529061369ccb627714557ee133dde2d03d3e2bd1eef85c49d7a21c",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/utils/math.py": "902973439cc588a5c98a3fa1b2ec3656a2ca7cfaba865f8ef5544014f4f81205"
+      }
+    }
+  },
+  "physics": {
+    "steps": 518,
+    "runtime_s": 0.9606632030045148,
+    "peak_rss_kib": 468020,
+    "static_hold_max_joint_displacement_rad": 2.220446049250313e-15,
+    "jacobian_fd_error_mixed": 1.5611151260586098e-09,
+    "mass_min_eigenvalue": 0.006292140360258273,
+    "grasp": {
+      "both_contact_steps": 82,
+      "final_30_all_positive": true,
+      "relative_slip_m": 2.357321919853128e-05
+    },
+    "insertion": {
+      "gentle_endpoint_candidate": true,
+      "gentle_peak_signed_distance_m": -9.649122807018492e-05,
+      "gentle_final": {
+        "scope": "adapted_ground_truth_diagnostic_not_original_success",
+        "peg_root_in_hole_frame_m": [
+          2.2985461944902141e-07,
+          -1.1725394419309931e-07,
+          2.3089317032973233e-06
+        ],
+        "axis_tilt_rad": 0.0006586562004104123,
+        "axis_in_hole_frame": [
+          0.000565956506997111,
+          -0.0003369290114804176,
+          0.9999997830860127
+        ],
+        "other_axis_endpoint_in_hole_frame_m": [
+          2.8527679969304573e-05,
+          -1.696370451821398e-05,
+          0.050002298086003934
+        ],
+        "full_cylinder_z_extent_in_hole_frame_m": [
+          -3.210823147131469e-07,
+          0.050004928100021946
+        ],
+        "conservative_radial_envelope_m": 0.0040261908418105325,
+        "bore_apothem_m": 0.004049695042448535,
+        "inside_bore": true,
+        "floor_contact": true,
+        "wall_or_rim_contact": false,
+        "minimum_contact_distance_m": -2.685982731090887e-07,
+        "interpenetration_beyond_tolerance": false,
+        "resting_above_opening": false,
+        "entirely_above_opening": false,
+        "physical_insertion_candidate": true,
+        "contacts": [
+          {
+            "geom1": "peg_collision",
+            "geom2": "hole_floor",
+            "distance_m": -2.685982731090887e-07,
+            "normal_force_n": 0.0010134127453401427,
+            "position_world_m": [
+              0.6030716178257174,
+              -0.002491020027957357,
+              0.04999986570086346
+            ]
+          }
+        ]
+      },
+      "gravity_drop_candidate": false
+    }
+  },
+  "regression": {
+    "selected_cases": 562,
+    "selected_passed": 561,
+    "selected_skipped": 1,
+    "selected_failed": 0,
+    "system_plot_passed": 1,
+    "excluded_policy_cases": 73,
+    "policy_inferences": 0,
+    "checkpoint_loads": 0,
+    "tripwire_negative_control_passed": true,
+    "preservation": {
+      "equal_before_after": true,
+      "historical_tracked_protected": 1690,
+      "forward_only_docs_allowed": [
+        "README.md",
+        "docs/ROADMAP_POLICY_INFERENCE_SIM2SIM.md"
+      ],
+      "checkpoint_count_hash_only": 3,
+      "external_source_configuration_count": 20,
+      "original_USD_count": 4,
+      "independent_pinned_Panda_file_count": 78,
+      "unrelated_G3V_count": 5
+    }
+  },
+  "limitations": [
+    "No PPO actor loading or policy episode; zero-shot effectiveness unassessed",
+    "MuJoCo contact/dynamics not PhysX parity",
+    "Low-speed insertion has final ~0.269um floor penetration and ~96.49um transient peak penetration",
+    "Physical grasp is placed-peg close/hold, not robot pickup trajectory",
+    "Source Factory exact asset gate from S1A remains NO-GO"
+  ],
+  "s2_entry": "CONDITIONAL_SEPARATE_AUTHORIZATION_REQUIRED",
+  "s2_started": false,
+  "training_started": false,
+  "learning_status": "PENDING",
+  "stop_after": "G4-S1B"
+}

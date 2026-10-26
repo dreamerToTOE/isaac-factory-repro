@@ -1,6 +1,16 @@
 # isaac-factory-repro
 Reproduction and evaluation of contact-rich robotic assembly tasks using NVIDIA Isaac Lab, Franka, and PPO.
 
+## G4-S1B：适配型 zero-shot Sim2Sim（2026-10-26 新授权）
+
+用户已将目标明确调整为 **ADAPTED ZERO-SHOT SIM2SIM**：冻结PhysX训练的G2 epoch200
+策略，在独立许可、真实物理接触的MuJoCo Panda PegInsert中检验无重训迁移。
+本阶段只构建环境和19D/6D控制接口，做CPU无策略验证；不执行actor、policy episode或训练。
+[S1B报告](docs/REVIEW_G4_S1B.md)和[更新后的路线](docs/ROADMAP_POLICY_INFERENCE_SIM2SIM.md)
+记录适配协议、验证结果与S2门禁。S0/S1A关于精确资产重建的许可、几何和运行时未知量
+保持原结论，不能把适配模型描述成原Factory精确复刻。历史实验及下方历史导航原样保留。
+学习考核仍PENDING；S2及后续任务没有自动执行授权。
+
 ## 最新工程状态（2026-10-26）
 
 **PegInsert 独立推理链路 G4-I0 → G4-I1 → G4-I2 已全部工程 PASS。** [G4-I2 中文报告](docs/REVIEW_G4_I2.md) 与 [证据索引](evidence/g4_i/i2/README.md)：冻结 G2 策略完成 288/288 回合，ever/terminal 280/288（97.22%），仅与历史结果进行非配对描述性比较；并完成 GPU 推理延迟、动作饱和率、失败轨迹及控制周期分析。G4-I2 提交：`85b49ef547e07df063d2efe58457488c99935a70`。

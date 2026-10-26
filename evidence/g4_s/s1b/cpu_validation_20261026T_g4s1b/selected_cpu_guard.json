@@ -1,0 +1,7 @@
+{
+  "active": true,
+  "forbidden_calls": [],
+  "elapsed_s": 29.800921775997267,
+  "child_peak_rss_kib": 543088,
+  "scope": "Known Python policy/checkpoint-load/Isaac entry points and MuJoCo integration C calls in this pytest process/current and newly created Python threads; reviewed collectors run separately. Not a general sandbox."
+}

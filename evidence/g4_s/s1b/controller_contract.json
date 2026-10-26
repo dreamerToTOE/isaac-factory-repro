@@ -1,0 +1,204 @@
+{
+  "schema_version": "g4_s1b_controller_contract_v1",
+  "scope": "CPU mathematical port for separately authorized adapted zero-shot Sim2Sim; no actor or checkpoint loading, no policy commands, no original simulator execution",
+  "implementation": "scripts/g4s1b_contract.py",
+  "original_license": "Isaac Lab BSD-3-Clause notice retained in full in port; installed Isaac Sim utility functions are used only as local in-memory test oracles, not redistributed",
+  "precision": {
+    "source": "Torch float32 CPU oracle",
+    "target": "NumPy float64 for double MuJoCo state and controller; raw19 and frozen RMS output float32",
+    "claim": "equation/semantic port, not bitwise PhysX equivalence",
+    "finite_difference_limitation": "float32 source world-pose differencing has conversion error amplified by120; target double differs numerically"
+  },
+  "physics_timing": {
+    "physics_dt_s": 0.008333333333333333,
+    "decimation": 8,
+    "policy_update_hz_simulation": 15,
+    "target_rebuilt_every_physics_step": true,
+    "wall_clock_real_time_claim": false
+  },
+  "observation": {
+    "size": 19,
+    "fields": [
+      {
+        "indices": [
+          0,
+          1,
+          2
+        ],
+        "field": "world TCP position minus noisy reset hole top",
+        "units": "m"
+      },
+      {
+        "indices": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "field": "raw world TCP quaternion wxyz; no sign canonicalization",
+        "units": "dimensionless"
+      },
+      {
+        "indices": [
+          7,
+          8,
+          9
+        ],
+        "field": "world TCP physics-step position finite difference",
+        "units": "m/s"
+      },
+      {
+        "indices": [
+          10,
+          11,
+          12
+        ],
+        "field": "world angular finite difference: axis_angle(sign(dq.w)*dq)/dt, dq=qnow*conj(qprevious)",
+        "units": "rad/s"
+      },
+      {
+        "indices": [
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "field": "internal EMA action history, not raw policy output",
+        "units": "normalized action"
+      }
+    ],
+    "reset_reference": "b=root_reset+R(root_quat_reset)*[0,0,.025]+episode_noise; both observation and action references cached",
+    "noise_contract": "caller explicitly supplies once-per-episode noise; source sigma=.001m eachworld axis; None is specified zero-noise diagnostic, not source RNG emulation",
+    "reset_cache": "xyz=(p-b)/.05 without clipping; xy rotation0; yaw after left unrot(-pi), source modulo2pi, >pi/2 subtract2pi, <-pi add2pi, then (yaw+pi)/(3pi/2)*2-1",
+    "reset_fd": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "fd_cache": "one update per new simulation physics timestamp; repeated unchanged pose timestamp reusesFD, skipped or backwards dt rejected",
+    "half_turn_branch": "exact dq.w=0 gives sign(0)=0 then zero angularFD as source; not repaired",
+    "privileged_state_assumption": "simulator ground-truth TCP pose, hole reset pose and reference noise state are used; no perception/sensor observability claim",
+    "normalization": "provided immutable frozenmean/variance metadata; castfloat32, (obs-mean)/sqrt(var+1e-5), clip[-5,5], no statistic updates",
+    "lstm": "not loaded/executed; existing frozen two-layer1024 h/c reset contract remains separate from EMA reset; eventual policyintegration must reset both"
+  },
+  "action": {
+    "size": 6,
+    "chain": [
+      "rawmu",
+      "clip[-1,1]",
+      "EMA=.2*clipped+.8*old oncepolicyupdate",
+      "perphysics currentpose Cartesian target",
+      "worldtask PD",
+      "JT tasktorque",
+      "dynamically consistentnullspacetorque",
+      "softwareclip[-100,100]",
+      "separatelymeasuredMuJoCoactuation"
+    ],
+    "position": "pstar=b+clip(pcurrent+.02*cache_xyz-b,-.05,.05), world axes",
+    "rotation": "rotvec=.097*cache_rot; <=1e-6 identity; qpre=dq_world*qcurrent; sourceextrinsicXYZ; overwrite roll3.14159,pitch0, retain modulo2pi yaw; convertwxyz",
+    "gripper": "zero positiontarget; independentphysicalfingerPD adaptation in environment, not armcontroller; armfunctiondoesnotaddfingerforce"
+  },
+  "controller": {
+    "task_kp": [
+      100,
+      100,
+      100,
+      30,
+      30,
+      30
+    ],
+    "task_kd": [
+      20,
+      20,
+      20,
+      10.954451150103322,
+      10.954451150103322,
+      10.954451150103322
+    ],
+    "default_q": [
+      -1.3003,
+      -0.4015,
+      1.1791,
+      -2.1493,
+      0.4001,
+      1.9425,
+      0.4754
+    ],
+    "error": "target-current position; targetsign by dot(target,current)>=0 then axis_angle(target*inverse(current)) worldorientation",
+    "wrench": "Kp*poseerror-Kd*[linearFD,angularFD]; desiredtaskvelocityzero; this is commanded PD wrench, not contact measurement",
+    "jacobian": "mean of left/right finger BODY-origin worldgeometric6x7, stackjacpabovejacr; separateTCPpose; explicitly not replacing by TCPsiteJ",
+    "mass_matrix": "full MuJoCo denseM principal7armDOFblock, namedjointaddressmapping; independent6DOFpeg not concatenatedintoarmblock",
+    "raw_joint_velocity": "seven mapped qvel components, not joint or taskFD",
+    "formula": "tau_task=J.T@F; Lambda=inv(J@inv(M)@J.T); J_hash=Lambda@J@inv(M); u=M@(10*wrap(qdefault-q)-6.3246*qdot); tau_null=(I-J.T@J_hash)@u; requested=tau_task+tau_null; software=clip(requested,-100,100)",
+    "not_added": [
+      "taskwrenchLambdaweighting",
+      "gravityfeedforward",
+      "Coriolisfeedforward",
+      "qfrc_biasfeedforward",
+      "dampedpseudoinverse",
+      "gainretuning",
+      "nullspacesetpointjointlimitclipping"
+    ],
+    "invalid_state": "explicit ValueError before command for nonfinite, nonunitquat, nonsymmetric/nonpositiveM, rankdeficientJ, unresolvedinversecondition>=1/float64eps; no zerosubstitution or retry"
+  },
+  "cpu_validation": {
+    "latest_process_exit_status": 0,
+    "latest_pytest_summary": "16 passed in1.40s",
+    "actor_calls": 0,
+    "checkpoint_loads": 0,
+    "command": "CUDA_VISIBLE_DEVICES='' PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTHONDONTWRITEBYTECODE=1 /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python -m pytest -q tests/test_g4s1b_contract.py -p no:cacheprovider",
+    "coverage": [
+      "actualunmodifiedsourceAST targetgeneration24fixtures",
+      "actualsourceposeerror+fulltorque24fixtures",
+      "actualsourceresetcache5yawfixtures",
+      "actualsourceall19observationfields",
+      "actualsourcephysicsFDincludingqsignflip",
+      "independentknowntorque1Nm/null20Nm/damping-19Nm/clamp100Nm",
+      "negativeNaN/Inf/singularM/nonpositiveM/zeroJ/rankoneJ",
+      "timestampinvalidandresetfirstFD",
+      "frozenprimaryRMSmetadatawithoutcheckpoint"
+    ]
+  },
+  "oracle_numeric_evidence": {
+    "fixtures": 24,
+    "seed": 20261026,
+    "target_max_abs_error": 1.8884049393652624e-07,
+    "software_torque_max_abs_error_Nm": 7.020106860711195e-06,
+    "wrench_max_abs_error": 6.673315448901818e-06,
+    "pose_error_max_abs_error": 2.2252939509831426e-07,
+    "dynamic_nullspace_max_residual": 2.73025073293556e-15,
+    "elapsed_seconds_including_imports": 1.231144117002259,
+    "peak_rss_kib": 494292,
+    "process_exit_status": 0,
+    "quantitative_tolerance": "source/porttarget<1e-6,torque/wrench<3e-5,pose<1e-6,dynamicnullresidual<1e-12; these fixedfixturebounds are not globalerrorcertificates"
+  },
+  "remaining_limits": [
+    "MuJoCo inertial/contactmodel differs fromPhysX",
+    "sourcehistoricalactualappliedtorqueunknown",
+    "fingerimplicitPD vs explicitMuJoCoPD adaptationmustbemeasured",
+    "rawquaternion signparityacrossenginesunknown",
+    "numpyFP64controller vsTorchFP32sourceprecisiondifference",
+    "sourceRNGandfullresetIKnotemulatedbythismathmodule",
+    "noactororend-to-endpolicyvalidationinS1B"
+  ],
+  "source_identity": {
+    "factory_env.py": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py",
+      "sha256": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81"
+    },
+    "factory_control.py": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_control.py",
+      "sha256": "7ef611d530a86fa2aba9db222361b0fe8b64d34037f204ad622a17051ad5e163"
+    },
+    "installed_utility_sha256": {
+      "/home/ubuntu2004/isaacsim-4.5.0/exts/isaacsim.core.utils/isaacsim/core/utils/torch/rotations.py": "40e0b7c318fdf77c171dd09bc20aa3185be076fe94a312dcfd11a2a02c8122b0",
+      "/home/ubuntu2004/isaacsim-4.5.0/exts/isaacsim.core.utils/isaacsim/core/utils/torch/maths.py": "25eb6af449529061369ccb627714557ee133dde2d03d3e2bd1eef85c49d7a21c",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/utils/math.py": "902973439cc588a5c98a3fa1b2ec3656a2ca7cfaba865f8ef5544014f4f81205"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "command": "MuJoCo Python scripts/g4s1b_env.py --output /tmp/g4s1b_env_development_1.json",
+  "exit_code": 1,
+  "error": "TypeError: mj_fullM signature is (model,dst,data.qM), not (model,data,dst)",
+  "scope": "collector API binding defect before physics probes; corrected new environment only; no historical code modified"
+}

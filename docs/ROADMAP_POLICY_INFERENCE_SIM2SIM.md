@@ -5,6 +5,26 @@
 性质：**用户批准的未来工作顺序；不是实验结果或自动执行许可。**
 目标仓库：`dreamerToTOE/isaac-factory-repro`
 
+## 2026-10-26 前瞻性更新：G4-S1B 适配型 zero-shot Sim2Sim
+
+用户在G4-S1B任务中明确调整科学目标：检验冻结的G2 epoch200 PPO策略能否在MuJoCo
+物理Panda PegInsert任务中无重训工作，称为 **ADAPTED ZERO-SHOT SIM2SIM**。
+该定义允许独立许可Panda、原创peg/hole和明确登记的动力学/接触适配，不要求逐项复刻
+原Factory USD、cooked SDF、惯量和求解器。S0的CONDITIONAL与S1A对**精确资产重建**
+的NO-GO继续有效，历史审计及下文当时的严格重建路线保留，不追溯改写。
+
+本次只授权S1B：实现目标物理环境、原19D观测/6D动作数学链、CPU无策略验证及证据。
+原名义peg直径.007986m、hole直径.0081m为primary geometry；原raw mesh差异单独登记，
+不能暗中放宽孔隙或用weld替代物理夹持。官方几何success与独立插入/碰撞诊断分别报告。
+使用MuJoCo3.5.0与固定Menagerie Panda；不分发未获许可的NVIDIA原/衍生资产。
+
+S1B结束时由[实现与验证报告](REVIEW_G4_S1B.md)给出PASS/PARTIAL/BLOCKED和S2入场条件。
+S1B工程PASS只代表无策略环境与接口可审查，不是PPO转移成功。G4-S2仍需单独授权和
+冻结目标协议后才可运行policy episodes；本次禁止actor/checkpoint load、rollout、
+训练/微调、S2、GearMesh及NutThread。学习和理论考核仍PENDING，推迟至Sim2Sim之后。
+
+下面各“当前/下一阶段”状态是其制定时记录，现阶段导航以上述新授权及S1B报告为准。
+
 ## 2026-10-26 最新导航：G4-I2 已验收，下一阶段为 G4-S0 审查
 
 **G4-I0、G4-I1、G4-I2 均为工程 PASS；G4-I2 已归档，commit `85b49ef547e07df063d2efe58457488c99935a70`。** 详见 [G4-I2 完整报告](REVIEW_G4_I2.md) 和 [I2 证据索引](../evidence/g4_i/i2/README.md)。G4-I2 使用冻结 G2 epoch200 PegInsert 策略，独立完成 288/288 回合评估，ever/terminal 均 280/288（97.22%）；与历史 280/288 **只允许非配对描述性对照**，不代表原 episode 精确重放。

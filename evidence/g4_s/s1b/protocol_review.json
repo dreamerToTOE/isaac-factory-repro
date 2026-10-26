@@ -1,0 +1,355 @@
+{
+  "schema_version": "g4_s1b_independent_protocol_review_v1",
+  "review_kind": "INDEPENDENT_READ_ONLY_SOURCE_AND_SPEC_REVIEW",
+  "created_utc": "2026-10-26T12:52:12.941402+00:00",
+  "starting_commit": "6e282557e2fd0c689932b6a572b53d987ad4c8d3",
+  "scope": "Adapted zero-shot interface engineering only. No policy load, inference, rollouts or new physics executed by reviewer.",
+  "historical_exact_reconstruction_gate": "S1A NO-GO remains unchanged",
+  "source_identity": [
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py",
+      "sha256": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81",
+      "bytes": 43992
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env_cfg.py",
+      "sha256": "5f804ba3f6e3d96f352490a9b5e2e1e239d308ff7eeab7ae3aad0ca6aa8daed8",
+      "bytes": 6419
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_tasks_cfg.py",
+      "sha256": "7510b6cbed1e5bdd297723cabf7d25cef6a00b94bb3804b7578f2925a6a43971",
+      "bytes": 16331
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_control.py",
+      "sha256": "7ef611d530a86fa2aba9db222361b0fe8b64d34037f204ad622a17051ad5e163",
+      "bytes": 8326
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/utils/math.py",
+      "sha256": "902973439cc588a5c98a3fa1b2ec3656a2ca7cfaba865f8ef5544014f4f81205",
+      "bytes": 74279
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/envs/direct_rl_env.py",
+      "sha256": "0c919fdc93e9198562edaaa3c29627a8dc0e123f581f41cdffc75641f9033fc1",
+      "bytes": 29922
+    },
+    {
+      "path": "/home/ubuntu2004/isaacsim-4.5.0/exts/isaacsim.core.utils/isaacsim/core/utils/torch/rotations.py",
+      "sha256": "40e0b7c318fdf77c171dd09bc20aa3185be076fe94a312dcfd11a2a02c8122b0",
+      "bytes": 14432
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/panda.xml",
+      "sha256": "96ad67da03710f17f798c9478fd9e9efdf24a3bf8359f05e456dd9fb158ea273",
+      "bytes": 14438
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/README.md",
+      "sha256": "e12684556d0154bdf2a9e77e7009ed680cd06ca89904f9e6303050f9fe59300c",
+      "bytes": 2908
+    },
+    {
+      "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/LICENSE",
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+      "bytes": 10173
+    },
+    {
+      "path": "/home/ubuntu2004/.codex/attachments/5d535929-3a34-4399-b210-1485c036bcf6/已粘贴的文本.txt",
+      "sha256": "94b0da04900986a81ed228deeb5b0eceb1e8d08956798129271fc6ab2f8a970e",
+      "bytes": 10478
+    }
+  ],
+  "menagerie_commit": "8161bba264d7fa7c99ca301e91e7fb44737676ad",
+  "license": {
+    "model": "Pinned Menagerie franka_emika_panda",
+    "license": "Apache-2.0",
+    "basis": "Local README explicit release license plus licensebytes",
+    "original_factory_assets": "NOT_USED_OR_CONVERTED_BY_REVIEWER",
+    "distribution_notice": "Preserve applicable license attribution and modifications notice; original Factory license gap not retroactively cleared."
+  },
+  "official_references": [
+    {
+      "url": "https://mujoco.readthedocs.io/en/3.5.0/APIreference/APIfunctions.html#mj-jacbody",
+      "claim": "mj_jacBody origin is distinct from mj_jacBodyCom; world-aligned geometric point Jacobian."
+    },
+    {
+      "url": "https://mujoco.readthedocs.io/en/3.5.0/APIreference/APIfunctions.html#mj-fullm",
+      "claim": "mj_fullM expands full nv×nv inertia from qM; binding signature must be verified on installed version."
+    },
+    {
+      "url": "https://mujoco.readthedocs.io/en/3.5.0/XMLreference.html#body",
+      "claim": "body gravcomp1 compensates weight; default contribution in passiveforces."
+    },
+    {
+      "url": "https://mujoco.readthedocs.io/en/3.5.0/XMLreference.html#body-joint",
+      "claim": "actuatorgravcomp can move gravcomp into generalized actuatorforces; must not conflate with torquecommand."
+    },
+    {
+      "url": "https://github.com/google-deepmind/mujoco_menagerie/blob/8161bba264d7fa7c99ca301e91e7fb44737676ad/franka_emika_panda/LICENSE",
+      "claim": "Pinned Panda model Apache2 license, read from localbytecopy."
+    },
+    {
+      "url": "https://github.com/isaac-sim/IsaacLab/blob/90b79bb2d44feb8d833f260f2bf37da3487180ba/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py",
+      "claim": "Pinned original control/observation/reset source directlyread locally."
+    }
+  ],
+  "checklist": [
+    {
+      "id": "O1",
+      "category": "observation",
+      "requirement": "Observation ordering: world TCP minus reset-cached noisy hole top xyz, world TCP wxyz quaternion, physics FD linear xyz, physics FD angular xyz, EMA action6. Exactly19 FP32 values.",
+      "source": "factory_env.py194-225,254-290",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "O2",
+      "category": "observation",
+      "requirement": "Raw observation quaternion sign is not canonicalized or replaced by a matrix-derived hemisphere. No q/−q equivalence assertion for actor features.",
+      "source": "factory_env.py201,263",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "O3",
+      "category": "observation",
+      "requirement": "FD dt=1/120 using immediately previous physics timestamp, including all8 decimation steps; no body velocity or1/15policy FD substitute.",
+      "source": "factory_env.py214-225,345-348,429-432",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "O4",
+      "category": "observation",
+      "requirement": "Angular dq=q_now*conj(q_prev), then multiply sign(dq.w), then axis-angle/dt. sign(0)=0 is retained; axis-angle Taylor threshold1e-6.",
+      "source": "factory_env.py219-225; math.py474-503",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "O5",
+      "category": "observation",
+      "requirement": "Fixed observation frame=root resetpose+Rfixed*[0,0,.025]; episode position noise sigma.001 eachaxis. Cache, not live relative hole-local coordinate.",
+      "source": "factory_env.py704-727,848-860",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "O6",
+      "category": "observation",
+      "requirement": "RMS accepts externally frozen mean/var; evaluateFP32(mean,var), eps1e-5, clamp±5; no checkpoint load, statistics update, new observation, or fabricated zeros.",
+      "source": "S0observation_success_audit.json; G4-S1B§3,6",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "A1",
+      "category": "action",
+      "requirement": "Boundary rawaction clip±1, EMA=.2*clipped+.8*previous, no EMAreclip; scaling afterEMA.",
+      "source": "factory_env.py296-304; rl_gameswrapper boundary",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "A2",
+      "category": "action",
+      "requirement": "Each physics substep target p=currentTCP+.02*EMAxyz, clip around cached noisy fixed actionframe ±.05world axes.",
+      "source": "factory_env.py350-368",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "A3",
+      "category": "action",
+      "requirement": "rotvec=.097*EMArot, qdeltaidentity if norm<=1e-6; left multiply currentquat. get_euler_xyz returns modulo2π, then roll=3.14159,pitch0,yawretained, convertback.",
+      "source": "factory_env.py370-391; rotations.py279-326",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "A4",
+      "category": "action",
+      "requirement": "Same EMA held8physics steps, target rebuilt from lateststate eachsubstep; no15Hzheldtarget or directjointpositionaction.",
+      "source": "direct_rl_env.py343-356; factory_env.py338-391",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "C1",
+      "category": "controller",
+      "requirement": "Poseerror target−current; choose target quaternion sign by dot>=0; errorquat=qtarget*inverse(qcurrent); inverseconjugate/||q||².",
+      "source": "factory_control.py94-135",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "C2",
+      "category": "controller",
+      "requirement": "PD Kp=[100,100,100,30,30,30], Kd=2sqrtKp; targettaskvelocityzero; F=Kp*error−Kd*physicsFDvelocity. tau_task=J.T*F with noLambda premultiplier.",
+      "source": "factory_control.py48-66,178-196; factory_env.py393-397",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "C3",
+      "category": "controller",
+      "requirement": "M=fullmassmatrix arm7 principalblock. Jmean of left/right fingerBODY ORIGIN worldJacobians first7armcolumns, linearthenangular; TCPpose separate.",
+      "source": "factory_env.py200-212",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "C4",
+      "category": "controller",
+      "requirement": "Lambda=inv(J*inv(M)*J.T); Jhash=Lambda*J*inv(M); u=M*(10*wrap(qdefault−qarm)−6.3246*qvelraw); tau_null=(I−J.T*Jhash)*u.",
+      "source": "factory_control.py71-87",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "C5",
+      "category": "controller",
+      "requirement": "qdefault=[−1.3003,−.4015,1.1791,−2.1493,.4001,1.9425,.4754]; wrap to[−π,π). No inverse damping, gravity/Coriolis/fullbiasfeedforward, or changedgain silentaddition.",
+      "source": "factory_control.py75-87; factory_env_cfg.py65-67",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "C6",
+      "category": "controller",
+      "requirement": "Requestedtorque and software±100clippedtorque separately logged. MuJoCo actuatorforce, mappedgeneralized qfrc_actuator, and passivegravcomp separately named/measured. No actualPhysXtorqueequivalenceclaim.",
+      "source": "factory_control.py90; G4-S1B§7",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "C7",
+      "category": "controller",
+      "requirement": "Armpositionservos replacedby unitgear torque motors. Preserve map qposadr separately dofadr; independentpegfreejoint means nq!=nv globally.",
+      "source": "G4-S1B§4,7; S0controlleraudit",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "C8",
+      "category": "controller",
+      "requirement": "FingerPDtarget0 from original7500/173/40N; anytargetintegration adaptation explicitly declared; no fingerjointweldpayload constraint.",
+      "source": "factory_env_cfg.py175-182; factory_env.py418-423",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "C9",
+      "category": "controller",
+      "requirement": "Reject or explicitly record nonfinite inputs and singular matrices. No hiddenregularization or silentdefaulttorque.",
+      "source": "G4-S1B§9C; exactsourceinvstructure",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "R1",
+      "category": "reset",
+      "requirement": "Initialize EMAxyz=(TCP−fixedactionframe)/.05,rotx/y0; yawfrom qEuler(−π,0,0)*qTCP, sourcewrappedrange, yawaction=2*(yaw+π)/(3π/2)−1; no clip.",
+      "source": "factory_env.py845-878",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "R2",
+      "category": "reset",
+      "requirement": "ResetpreviousTCPpose=currentpose, explicit linear/angularFDzero; preserve rawjointvelocity semantics separately. LSTMh/creset remainsexternalfrozenpolicycolumncontract.",
+      "source": "factory_env.py845-884; G4-S1B§3",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "R3",
+      "category": "reset",
+      "requirement": "Register adapted reset distribution; randomseedrepeatability and explicitpose support tested. Source IK,gravityoff,.25sgrasp timeline identified; do not falselyclaim crossengineRNG/postgrasp parity.",
+      "source": "factory_env.py527-537,635-886",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "T1",
+      "category": "timing",
+      "requirement": "Exact dt1/120,decimation8,15Hz simulationupdate; wallthroughputseparate. Auxiliaryreset physics excludedfrom episodecounter.",
+      "source": "factory_env_cfg.py72,99; factory_env.py527-537,635-886",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "T2",
+      "category": "timing",
+      "requirement": "Episodecounter incrementsafter8substeps. Timeout>=149,149steps=9.93333333333333s. Success doesnotendepisode. Evaluateever/terminal/firstsuccesstimesbeforeautoreset.",
+      "source": "direct_rl_env.py358-392; factory_env.py429-432,460-491",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "S1",
+      "category": "success",
+      "requirement": "Originalpredicate strictlyworldXYnorm<.0025 and signedheldroot.z−fixedroot.z<.001, FP32. Noabs,orientation,contact,holdtime,lowerdepthcondition.",
+      "source": "factory_env.py435-463; PegInsertCfgsuccess_threshold.04,height.025",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "S2",
+      "category": "success",
+      "requirement": "Separatephysicaldiagnosticsfor rimcontact/aboveopening/insertion/interpenetration/geometricfalsepositive; do not replace originalpredicate.",
+      "source": "G4-S1B§5,9E",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "G1",
+      "category": "geometry",
+      "requirement": "Primaryindependentgeometry exactnominalpegdiam.007986 andholediam.0081;57µmradialgap. Analyticprimitive/convexsectorapproximationerror separately quantified; nohiddenrelaxation.",
+      "source": "G4-S1B§5",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "G2",
+      "category": "geometry",
+      "requirement": "Holegenuineopenbore; unionofconvexwallsorprimitives, neveronesolidconvexhull. Pegindependentrigidbody6DOF andcollisionenabled.",
+      "source": "G4-S1B§4-5",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "G3",
+      "category": "geometry",
+      "requirement": "Distinguishsourceconfignominal57µm, sourcerawmesh≥505.921µmlimitedstraightcoaxialslab, unknowncookedSDF, newadaptedgeometry.",
+      "source": "S1Ageometry_audit.json; G4-S1B§5",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "G4",
+      "category": "physics",
+      "requirement": "Boundedno-policytests: freefallwhenappropriate, openbore,wall/rimcontacts, independentphysicalgraspwithoutwelding, physicalinsertionfeasibility, penetrationdiagnostics; failedtestremainsevidence.",
+      "source": "G4-S1B§9D",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "P1",
+      "category": "provenance",
+      "requirement": "MuJoCo3.5.0, pinnedMenageriePanda8161bba264d7fa7c99ca301e91e7fb44737676ad. NoFR3. PreserveApache2license/attribution/modificationnoticeifderivingmodel.",
+      "source": "PandaREADMEandLICENSEatpinnedlocalcheckout",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "P2",
+      "category": "provenance",
+      "requirement": "NooriginalFactoryassetordeivative redistribution; independentownauthoredpeg/hole permittedundernewadaptedprotocol. OriginalS1ANO-GOscopeunchanged.",
+      "source": "G4-S1B§1,4; S1Alicensing_audit.json",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "P3",
+      "category": "provenance",
+      "requirement": "PrivilegedsimulatorgroundtruthTCP/holeinputassumptionexplicit; nohardwareobservabilityclaim. NoPPOactorload/execution/training.",
+      "source": "G4-S1B§3,6,9",
+      "implementation_review": "PENDING"
+    },
+    {
+      "id": "P4",
+      "category": "acceptance",
+      "requirement": "PASSrequiresenvironmentsteps,19D,6Dtorquechain, meaningfulrobotmotion,physicalgeometryopenboreindependentpeg, contact/insertiontested,actualactuationdiagnostics, regressions; otherwisePARTIAL/BLOCKED.",
+      "source": "G4-S1B§10",
+      "implementation_review": "PENDING"
+    }
+  ],
+  "implementation_review": {
+    "status": "PENDING",
+    "findings": []
+  },
+  "retained_license_files": [
+    {
+      "path": "models/g4_s1b/LICENSE_PANDA",
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9",
+      "bytes": 10173
+    },
+    {
+      "path": "models/g4_s1b/LICENSE_ISAACLAB_BSD3",
+      "sha256": "df351ebfa8af317bf5a9ad83df63a8b68e4f5c04b71f30767cdb27aa434eac62",
+      "bytes": 1630
+    }
+  ]
+}
