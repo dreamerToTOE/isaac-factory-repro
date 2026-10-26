@@ -226,3 +226,14 @@ actor/checkpoint/mj_step/viewer启动tripwire及3项dummy负控证明在入口�
 共公开20张已核查的真实GUI PNG（10张v3归档、3张v2晚期归档、5张独立回放、2张D01同期积分帧）。未录制视频；没有把checkpoint/原USD/mesh或桌面其他窗口信息提交到Git。
 Git提交和独立远端SHA核对在最终交付时记录；推送采用普通fast-forward，不force。
 本阶段至此停止，无新的完整PPO回合、1002/1003、S2B、训练、GearMesh或NutThread。
+
+## 8. 实际Git发布记录
+
+诊断主体（源码、190个交付文件、完整证据与案例更新）的提交：
+
+`1e768b5b32eccae0b42b668be491c77b01e074a1`。
+
+已从`9f521002cd1ee1694fabc1f2012a8bdd79e26434`普通fast-forward推送至GitHub `main`；
+于UTC `2026-10-26T15:27:56.822766+00:00`独立执行`git ls-remote ... refs/heads/main`，返回SHA同为`1e768b5b32eccae0b42b668be491c77b01e074a1`。
+本节及[publication_evidence.json](../evidence/g4_s/s2a_r1/publication_evidence.json)在核对后通过仅发布记录的后续提交归档，
+没有新增策略调用、物理步或改动科学结果。最终文档提交与远端head在交付答复中核对。

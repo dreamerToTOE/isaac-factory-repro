@@ -1,0 +1,26 @@
+{
+  "task": "G4-S2A-R1",
+  "verified_utc": "2026-10-26T15:27:56.822766+00:00",
+  "branch": "main",
+  "scientific_result_commit": "1e768b5b32eccae0b42b668be491c77b01e074a1",
+  "remote_main_sha_at_initial_publication": "1e768b5b32eccae0b42b668be491c77b01e074a1",
+  "starting_commit": "9f521002cd1ee1694fabc1f2012a8bdd79e26434",
+  "independent_verification_command": [
+    "git",
+    "-c",
+    "core.sshCommand=ssh -o ConnectTimeout=10 -o HostName=github.com -o Port=22 -o HostKeyAlias=github.com -o BatchMode=yes -o StrictHostKeyChecking=yes",
+    "ls-remote",
+    "git@github.com:dreamerToTOE/isaac-factory-repro.git",
+    "refs/heads/main"
+  ],
+  "ordinary_fast_forward_push_exit_code": 0,
+  "force_push": false,
+  "publication_followup_scope": [
+    "docs/REVIEW_G4_S2A_R1.md",
+    "evidence/g4_s/s2a_r1/publication_evidence.json"
+  ],
+  "followup_policy_calls": 0,
+  "followup_physics_steps": 0,
+  "report_sha256": "f3c6a812e58645990437e98139dfd0e070ff9c3538ef590dc81c7428ef40b34c",
+  "scientific_runtime_or_evidence_modified_after_initial_publication": false
+}
