@@ -1,0 +1,2178 @@
+{
+  "task": "G4-S2A",
+  "reviewer": "independent_physics_audit",
+  "generated_utc": "2026-10-26T14:07:08.771796+00:00",
+  "review_method": "Read existing JSONL/NPZ only; independently sum named pad forces, reconstruct hand-relative transforms from raw WXYZ quaternions, recompute committed Panda joint bounds and all contact extrema, recompute original FP32 geometric success at each pre-reset policy boundary.",
+  "new_actor_calls": 0,
+  "new_physics_steps": 0,
+  "model_compilations": 0,
+  "input_hashes": {
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/actor_initial_info.json": {
+      "sha256": "217f056acf7f6d8eb11131e8c54d510767184a7e8d641e1cbc95a16c708ee0f9",
+      "bytes": 1356
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/actor_stderr.log": {
+      "sha256": "98b89dd66a6ff27ca3ed1ff2ec872da255826381500630b06857f0260e1687af",
+      "bytes": 61
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/preregistered_protocol.json": {
+      "sha256": "cd31fe9125bb54ec41149953b7c0d7d9419521730aa362a703d93291cae48505",
+      "bytes": 2835
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/seed_1001/actor_trace.npz": {
+      "sha256": "f49dba4ac593ed88d59ac6fcd84a5ef1b40a64eda28a68c55a449f1a14559b0b",
+      "bytes": 2321525
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/seed_1001/attempt.json": {
+      "sha256": "8b9d8932d1129afb7639ca2ef08480cc9cc09bea22a4a46829591bf32a098f58",
+      "bytes": 112
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/seed_1001/closure.jsonl": {
+      "sha256": "3ff43f854a76feafc1b328eb397a3448e15457bcfd424b666a464f141c27b9eb",
+      "bytes": 106071
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/seed_1001/ik.json": {
+      "sha256": "0ee8f2ebad70de6a1e02ad24556076f0169db665e68cfabc5e69a91cb67e4c28",
+      "bytes": 331
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/seed_1001/inference.jsonl": {
+      "sha256": "f06e3d56845347a6b04c25a63f365b59d02d21f66275337093225ed81687170d",
+      "bytes": 13195524
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/seed_1001/interface_reset.json": {
+      "sha256": "bb28ac8365916d4038fbe223bce18a0ccb5547ae4e6e23cd6ce2bb0551566b62",
+      "bytes": 66706
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/seed_1001/physics.jsonl": {
+      "sha256": "8e1873f739665649d76e169e9d133afcd7e1bedad3641f140fd5ac9bd89bf9fe",
+      "bytes": 5575031
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/seed_1001/policy.jsonl": {
+      "sha256": "d32a9946c8df6dc654d95b70c87834debad41e7424561e351ddc504f5a8da936",
+      "bytes": 7078591
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/seed_1001/reset_admission.json": {
+      "sha256": "d6358d83b39a56da89cfcbbe4d7fc6c0ed8664c5257fb7a62d40865f85a3cda4",
+      "bytes": 8211
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/seed_1001/reset_draw.json": {
+      "sha256": "c808d6c626076efff99b6afbf7ae5f772ee42f05230f6e04feb6fcbb4bb3d7b0",
+      "bytes": 623
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/seed_1001/result.json": {
+      "sha256": "7ade2df94a4b340252a9e31cd70cbe4d1a1f63d0c056765093ca24f15724e704",
+      "bytes": 5119
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/summary.json": {
+      "sha256": "cffba2c3784d09257d1d7ae1d2d252d4a49b34c3ba954a5dc7bf1683dd5f6c1a",
+      "bytes": 7978
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/artifact_manifest.json": {
+      "sha256": "490d9c82809130760920c11a990aecd80184e21863089eb21ac8c7e2f3ede540",
+      "bytes": 3374
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s1b/environment_no_policy_final.json": {
+      "sha256": "83fd1ee3ccd9dad8279e03a2ee133970e6f97736f7aa77c3ca0a3c3f6f82fc9b",
+      "bytes": 186076
+    },
+    "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/panda.xml": {
+      "sha256": "96ad67da03710f17f798c9478fd9e9efdf24a3bf8359f05e456dd9fb158ea273",
+      "bytes": 14438
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_smoke.py": {
+      "sha256": "0a1a365b20c5312e417ddb5f759ee96aa12040b520de4ea84e62ddfc82fa40a8",
+      "bytes": 29031
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_inference.py": {
+      "sha256": "9f7aac4a311e67d1a08170a77606ceee83a490e3ca6b251f772e861fd36ae9ca",
+      "bytes": 20217
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s1b_env.py": {
+      "sha256": "065affe855ef1d3fa016d6ed8166699a9fc7ea1476d3c5302cee1663d56c92dd",
+      "bytes": 39533
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s1b_contract.py": {
+      "sha256": "dcf91aa274a6151f88f36901ce0c4a2feac76d7b8fcfe6586104f906c67d6d6c",
+      "bytes": 20029
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a/independent_physics_review_reader.py.txt": {
+      "sha256": "0ab798660bf1368eb9bea8374c7088334405b921a8e652963ab94f6c7753798a",
+      "bytes": 14451
+    }
+  },
+  "evidence_integrity": {
+    "raw_manifest_all_hashes_match": true,
+    "NPZ_matches_policy_and_inference_JSONL": true,
+    "policy_steps_sequential": true,
+    "physics_steps_sequential": true,
+    "counts": {
+      "attempts": 1,
+      "policy_steps": 149,
+      "physics_steps": 1192,
+      "closure_physics_steps": 30,
+      "inference_requests": 149,
+      "inference_responses": 149
+    },
+    "actor_trace_shapes": {
+      "observation": [
+        149,
+        19
+      ],
+      "normalized": [
+        149,
+        19
+      ],
+      "mu": [
+        149,
+        6
+      ],
+      "clipped": [
+        149,
+        6
+      ],
+      "ema": [
+        149,
+        6
+      ],
+      "h": [
+        149,
+        2,
+        1,
+        1024
+      ],
+      "c": [
+        149,
+        2,
+        1,
+        1024
+      ]
+    }
+  },
+  "clock_semantics": {
+    "physics_dt_s": 0.008333333333333333,
+    "policy_decimation": 8,
+    "closure_time_s": 0.25,
+    "policy_episode_time_s": 9.933333333333334,
+    "MuJoCo_data_time_at_episode_start_s": 0.24999999999999997,
+    "MuJoCo_data_time_at_episode_end_s": 10.183333333333396,
+    "policy_loop_wall_s": 6.103187869004614,
+    "complete_experiment_wall_s": 11.267380198005412,
+    "reported_command_submit_hz": 24.414909906096756,
+    "command_submit_clock_limit": "Host timestamp immediately before ReferenceRunner.step_reference_action; controller-admission cadence, not directly instrumented motor-application timestamps.",
+    "wall_time_not_simulation_time": true
+  },
+  "reset_review": {
+    "admission": "PASS",
+    "last10_bilateral_independently_verified": true,
+    "position_stability_last10_m": 2.7897204653612004e-06,
+    "orientation_stability_last10_rad": 6.93753610049704e-05,
+    "final_pad_forces_n": {
+      "left_finger": 0.22672704354981857,
+      "right_finger": 0.22660104280630045
+    },
+    "joint_violation_at_admission": 0.0,
+    "entire_peg_above_hole_at_admission": true,
+    "nonpad_interference_at_admission": [],
+    "maximum_closure_contact_penetration_m": 0.0003163276763672248,
+    "initial_LSTM_h_c_zero": true,
+    "reset_difference": "Hole/support fixed pose; source-like TCP xyz/yaw and held-peg draws; NumPy RNG; 30 zero-arm-torque closure steps. This is adapted reset, not matched PhysX initialization."
+  },
+  "outcomes": {
+    "official_ever_success": false,
+    "official_terminal_success": false,
+    "official_first_success": null,
+    "physical_insertion_candidate": false,
+    "contact_quality_validated_success": false,
+    "termination": "timeout_149_policy_steps",
+    "integration_runtime_exception": null,
+    "technically_valid_episode_denominator": 0,
+    "attempted_episode_denominator": 1,
+    "next_seeds_attempted": false,
+    "engineering_status": "G4_S2A_PARTIAL"
+  },
+  "extrema": {
+    "maximum_arm_joint_limit_violation_rad": 0.3219983716976671,
+    "maximum_finger_joint_limit_violation_m": 0.0008730671048176516,
+    "maximum_arm_qvel_rad_s": 63.6523669411641,
+    "maximum_all_contact_penetration_m": 0.01691742953223052,
+    "maximum_peg_hole_contact_penetration_m": 0.0,
+    "maximum_peg_hand_translation_slip_m": 7.386733353723797
+  },
+  "witnesses": {
+    "first_arm_limit_failure": {
+      "policy_step": 10,
+      "episode_physics_step": 76,
+      "episode_elapsed_simulation_s": 0.6333333333333333,
+      "absolute_MuJoCo_data_time_s": 0.8833333333333326,
+      "values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.05629897681559326,
+        0.0,
+        0.0
+      ],
+      "state": {
+        "time_s": 0.8833333333333326,
+        "qpos": [
+          1.0635204538808631,
+          0.601457070265294,
+          -0.34854145066333536,
+          -2.3148041590577275,
+          2.9535989768155932,
+          2.9810852806788417,
+          -0.5626460963113358,
+          0.0001009019017843376,
+          -9.899045572057347e-05,
+          0.4570638003832416,
+          0.23094033627915161,
+          -0.014369521774598031,
+          0.10195926568393325,
+          0.1501016709207351,
+          0.9369271612144603,
+          0.29873280888882814
+        ],
+        "qvel": [
+          0.8556095605367213,
+          1.4104927772955873,
+          0.5203691164150206,
+          0.9891983714926201,
+          8.515636250005604,
+          0.06697941639640614,
+          -12.867934046542416,
+          0.017523825757616435,
+          -0.017604277355085095,
+          -0.6374954518109932,
+          0.5995181559611332,
+          -0.4998142518143771,
+          6.201819737708145,
+          -12.353223195606214,
+          5.812743215460146
+        ],
+        "tcp_position_world": [
+          0.3607150197628153,
+          0.23948105205965087,
+          -0.024089883260895686
+        ],
+        "tcp_quaternion_wxyz": [
+          -0.15866113378127694,
+          0.9009661478026911,
+          -0.37488366428300357,
+          0.15016285624136963
+        ],
+        "peg_root_position": [
+          0.4570638003832416,
+          0.23094033627915161,
+          -0.014369521774598031
+        ],
+        "peg_quaternion_wxyz": [
+          0.10195926568393325,
+          0.1501016709207351,
+          0.9369271612144603,
+          0.29873280888882814
+        ],
+        "hole_root_position": [
+          0.6,
+          0.0,
+          0.05
+        ],
+        "requested_arm_torque_nm": [
+          71.42438602048827,
+          2.139657905308499,
+          42.6113521609173,
+          21.679908017068723,
+          -104.71052000038048,
+          -16.005313588104322,
+          -101.19569445130287
+        ],
+        "software_limited_arm_torque_nm": [
+          71.42438602048827,
+          2.139657905308499,
+          42.6113521609173,
+          21.679908017068723,
+          -100.0,
+          -16.005313588104322,
+          -100.0
+        ],
+        "actuator_force_nm": [
+          71.42438602048827,
+          2.139657905308499,
+          42.6113521609173,
+          21.679908017068723,
+          -12.0,
+          -12.0,
+          -12.0
+        ],
+        "generalized_actuator_contribution_nm": [
+          71.42438602048827,
+          2.139657905308499,
+          42.6113521609173,
+          21.679908017068723,
+          -12.0,
+          -12.0,
+          -12.0
+        ],
+        "finger_actuator_force_n": [
+          0.03032653313219422,
+          -0.03027529202211514
+        ],
+        "finger_command": {
+          "mode": "step-implicit-pd",
+          "target_opening_per_finger_m": 0.0,
+          "raw_pd_force_n": [
+            3.078309537043402,
+            -3.078486139409608
+          ],
+          "commanded_force_n": [
+            0.03032653313219422,
+            -0.03027529202211514
+          ]
+        },
+        "contacts": [],
+        "integration_actuation": {
+          "stage": "mj_step_preintegration_actuation",
+          "state_time_s": 0.8749999999999993,
+          "step_end_time_s": 0.8833333333333326,
+          "arm_actuator_force_nm": [
+            71.42438602048827,
+            2.139657905308499,
+            42.6113521609173,
+            21.679908017068723,
+            -12.0,
+            -12.0,
+            -12.0
+          ],
+          "arm_qfrc_actuator_nm": [
+            71.42438602048827,
+            2.139657905308499,
+            42.6113521609173,
+            21.679908017068723,
+            -12.0,
+            -12.0,
+            -12.0
+          ],
+          "finger_actuator_force_n": [
+            0.03032653313219422,
+            -0.03027529202211514
+          ]
+        },
+        "snapshot_actuation_stage": "poststep_mj_forward_recomputed_at_time_s",
+        "s2a": {
+          "hole_quaternion_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "finger_generalized_actuator_contribution_n": [
+            0.03032653313219422,
+            -0.03027529202211514
+          ],
+          "relative_peg_hole": {
+            "scope": "adapted_ground_truth_diagnostic_not_original_success",
+            "peg_root_in_hole_frame_m": [
+              -0.14293619961675835,
+              0.23094033627915161,
+              -0.06436952177459804
+            ],
+            "axis_tilt_rad": 0.6422900739785573,
+            "axis_in_hole_frame": [
+              0.2807373982596325,
+              0.5291732528976443,
+              -0.800726034069168
+            ],
+            "other_axis_endpoint_in_hole_frame_m": [
+              -0.12889932970377674,
+              0.25739899892403384,
+              -0.10440582347805644
+            ],
+            "full_cylinder_z_extent_in_hole_frame_m": [
+              -0.10679775319254357,
+              -0.0619775920601109
+            ],
+            "conservative_radial_envelope_m": 0.3055401847473296,
+            "bore_apothem_m": 0.004049695042448535,
+            "inside_bore": false,
+            "floor_contact": false,
+            "wall_or_rim_contact": false,
+            "minimum_contact_distance_m": 0.0,
+            "interpenetration_beyond_tolerance": false,
+            "resting_above_opening": false,
+            "entirely_above_opening": false,
+            "physical_insertion_candidate": false,
+            "contacts": []
+          },
+          "relative_peg_hand_m": [
+            0.07257257220273051,
+            -0.05865729779567452,
+            0.027259126172707947
+          ],
+          "relative_peg_hand_rotation": [
+            [
+              -0.8922815134004148,
+              -0.3235098045817847,
+              -0.3149207950950815
+            ],
+            [
+              0.398137498396101,
+              -0.8927334495865842,
+              -0.21098227499041322
+            ],
+            [
+              -0.2128854931994132,
+              -0.3136373611811755,
+              0.9253709377630948
+            ]
+          ],
+          "peg_hand_slip_m": 0.09145290440401453,
+          "peg_hand_slip_rad": 2.8684139542356215,
+          "arm_joint_limit_violation_rad": 0.05629897681559326,
+          "finger_joint_limit_violation_m": 9.899045572057347e-05,
+          "all_contact_penetration_m": 0.0,
+          "peg_hole_penetration_m": 0.0
+        }
+      }
+    },
+    "first_finger_limit_failure": {
+      "policy_step": 8,
+      "episode_physics_step": 61,
+      "episode_elapsed_simulation_s": 0.5083333333333333,
+      "absolute_MuJoCo_data_time_s": 0.7583333333333331,
+      "values": [
+        6.0925728741157226e-05,
+        0.0
+      ],
+      "state": {
+        "time_s": 0.7583333333333331,
+        "qpos": [
+          0.9970170405812747,
+          0.4403239997249896,
+          -0.5308954300676744,
+          -2.3864083072508455,
+          1.9812405399889736,
+          2.796447517633226,
+          0.023726959450909704,
+          -6.0925728741157226e-05,
+          0.000241336962580893,
+          0.5307937974255592,
+          0.1817481944805388,
+          0.030215255108618673,
+          -0.28442612323432453,
+          -0.34290641655946785,
+          0.5009491562038262,
+          0.742001962802601
+        ],
+        "qvel": [
+          1.0814395044433676,
+          1.0624898522095505,
+          1.28530343996687,
+          -0.45821851879083,
+          6.713925875051822,
+          2.6694176333898527,
+          4.849000018637785,
+          -0.02091268216176255,
+          0.013160328206405114,
+          -0.4222788020388573,
+          0.16635469909936448,
+          -0.314579081903077,
+          12.490008296799928,
+          -5.3797959743620165,
+          5.812743215460169
+        ],
+        "tcp_position_world": [
+          0.4644595982394414,
+          0.17900418630968076,
+          0.05358489923869103
+        ],
+        "tcp_quaternion_wxyz": [
+          -0.21780893082350866,
+          0.9259256612380865,
+          -0.2842723723987246,
+          0.1200423167267777
+        ],
+        "peg_root_position": [
+          0.5307937974255592,
+          0.1817481944805388,
+          0.030215255108618673
+        ],
+        "peg_quaternion_wxyz": [
+          -0.28442612323432453,
+          -0.34290641655946785,
+          0.5009491562038262,
+          0.742001962802601
+        ],
+        "hole_root_position": [
+          0.6,
+          0.0,
+          0.05
+        ],
+        "requested_arm_torque_nm": [
+          -82.66234066427864,
+          2.3696461420099633,
+          -57.621711086244865,
+          -34.49164335172115,
+          53.64042090162368,
+          11.05008422892357,
+          65.36906716442218
+        ],
+        "software_limited_arm_torque_nm": [
+          -82.66234066427864,
+          2.3696461420099633,
+          -57.621711086244865,
+          -34.49164335172115,
+          53.64042090162368,
+          11.05008422892357,
+          65.36906716442218
+        ],
+        "actuator_force_nm": [
+          -82.66234066427864,
+          2.3696461420099633,
+          -57.621711086244865,
+          -34.49164335172115,
+          12.0,
+          11.05008422892357,
+          12.0
+        ],
+        "generalized_actuator_contribution_nm": [
+          -82.66234066427864,
+          2.3696461420099633,
+          -57.621711086244865,
+          -34.49164335172115,
+          12.0,
+          11.05008422892357,
+          12.0
+        ],
+        "finger_actuator_force_n": [
+          -0.02926796819713002,
+          0.03376132633378952
+        ],
+        "finger_command": {
+          "mode": "step-implicit-pd",
+          "target_opening_per_finger_m": 0.0,
+          "raw_pd_force_n": [
+            -3.1059873607550683,
+            3.0534623901195017
+          ],
+          "commanded_force_n": [
+            -0.02926796819713002,
+            0.03376132633378952
+          ]
+        },
+        "contacts": [],
+        "integration_actuation": {
+          "stage": "mj_step_preintegration_actuation",
+          "state_time_s": 0.7499999999999998,
+          "step_end_time_s": 0.7583333333333331,
+          "arm_actuator_force_nm": [
+            -82.66234066427864,
+            2.3696461420099633,
+            -57.621711086244865,
+            -34.49164335172115,
+            12.0,
+            11.05008422892357,
+            12.0
+          ],
+          "arm_qfrc_actuator_nm": [
+            -82.66234066427864,
+            2.3696461420099633,
+            -57.621711086244865,
+            -34.49164335172115,
+            12.0,
+            11.05008422892357,
+            12.0
+          ],
+          "finger_actuator_force_n": [
+            -0.02926796819713002,
+            0.03376132633378952
+          ]
+        },
+        "snapshot_actuation_stage": "poststep_mj_forward_recomputed_at_time_s",
+        "s2a": {
+          "hole_quaternion_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "finger_generalized_actuator_contribution_n": [
+            -0.02926796819713002,
+            0.03376132633378952
+          ],
+          "relative_peg_hole": {
+            "scope": "adapted_ground_truth_diagnostic_not_original_success",
+            "peg_root_in_hole_frame_m": [
+              -0.06920620257444077,
+              0.1817481944805388,
+              -0.01978474489138133
+            ],
+            "axis_tilt_rad": 1.3047382485177408,
+            "axis_in_hole_frame": [
+              -0.7938405211625836,
+              0.5483474289467241,
+              0.2629302647620389
+            ],
+            "other_axis_endpoint_in_hole_frame_m": [
+              -0.10889822863256995,
+              0.209165565927875,
+              -0.006638231653279383
+            ],
+            "full_cylinder_z_extent_in_hole_frame_m": [
+              -0.023637250548304095,
+              -0.0027857259963566185
+            ],
+            "conservative_radial_envelope_m": 0.24671228754068464,
+            "bore_apothem_m": 0.004049695042448535,
+            "inside_bore": false,
+            "floor_contact": false,
+            "wall_or_rim_contact": false,
+            "minimum_contact_distance_m": 0.0,
+            "interpenetration_beyond_tolerance": false,
+            "resting_above_opening": false,
+            "entirely_above_opening": false,
+            "physical_insertion_candidate": false,
+            "contacts": []
+          },
+          "relative_peg_hand_m": [
+            0.04981224497869289,
+            -0.022470594086105043,
+            0.0443588602296282
+          ],
+          "relative_peg_hand_rotation": [
+            [
+              -0.06714123498877299,
+              0.35061088923668304,
+              -0.9341113739339884
+            ],
+            [
+              0.9607721987237161,
+              -0.22977782096206742,
+              -0.15530272101131573
+            ],
+            [
+              -0.26908890115308876,
+              -0.9078954550732066,
+              -0.32142962827598315
+            ]
+          ],
+          "peg_hand_slip_m": 0.05386797594735128,
+          "peg_hand_slip_rad": 2.0049319469279143,
+          "arm_joint_limit_violation_rad": 0.0,
+          "finger_joint_limit_violation_m": 6.0925728741157226e-05,
+          "all_contact_penetration_m": 0.0,
+          "peg_hole_penetration_m": 0.0
+        }
+      }
+    },
+    "maximum_arm_limit_failure": {
+      "policy_step": 110,
+      "episode_physics_step": 873,
+      "episode_elapsed_simulation_s": 7.275,
+      "absolute_MuJoCo_data_time_s": 7.525000000000164,
+      "values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0076248378518779525,
+        0.3219983716976671
+      ],
+      "state": {
+        "time_s": 7.525000000000164,
+        "qpos": [
+          -0.5844815009711174,
+          0.6671578706924365,
+          0.19870385645608546,
+          -2.5682466752465585,
+          2.4978437810589,
+          3.760124837851878,
+          -3.219298371697667,
+          -0.00019383808096253488,
+          0.0007959762320714649,
+          -2.144338931027566,
+          2.7326336114907237,
+          -3.909873495953788,
+          -0.5441492899057594,
+          -0.12115120390229417,
+          -0.7691784245736342,
+          0.3123915607991115
+        ],
+        "qvel": [
+          0.844452117441695,
+          0.4078588048895905,
+          -1.7239501484989805,
+          9.268026870749926,
+          40.29951119825843,
+          -0.06690968250002217,
+          -1.868278103064732,
+          0.0008125152069158583,
+          0.017542213768620876,
+          -0.306300435386677,
+          0.8777021711096958,
+          -1.2304047253015082,
+          28.226048603808827,
+          -16.776355101949264,
+          5.8127432154596095
+        ],
+        "tcp_position_world": [
+          0.09299250075995726,
+          -0.13172972108851083,
+          0.01718147282000443
+        ],
+        "tcp_quaternion_wxyz": [
+          -0.1617220425363292,
+          0.8029060295960291,
+          0.5100281888045314,
+          -0.26279104859371905
+        ],
+        "peg_root_position": [
+          -2.144338931027566,
+          2.7326336114907237,
+          -3.909873495953788
+        ],
+        "peg_quaternion_wxyz": [
+          -0.5441492899057594,
+          -0.12115120390229417,
+          -0.7691784245736342,
+          0.3123915607991115
+        ],
+        "hole_root_position": [
+          0.6,
+          0.0,
+          0.05
+        ],
+        "requested_arm_torque_nm": [
+          38.62386142028065,
+          -274.4496200733873,
+          -39.84915649133133,
+          265.6803445358188,
+          -67.77442769592693,
+          7.54229345281136,
+          116.0159204861192
+        ],
+        "software_limited_arm_torque_nm": [
+          38.62386142028065,
+          -100.0,
+          -39.84915649133133,
+          100.0,
+          -67.77442769592693,
+          7.54229345281136,
+          100.0
+        ],
+        "actuator_force_nm": [
+          38.62386142028065,
+          -87.0,
+          -39.84915649133133,
+          87.0,
+          -12.0,
+          7.54229345281136,
+          12.0
+        ],
+        "generalized_actuator_contribution_nm": [
+          38.62386142028065,
+          -87.0,
+          -39.84915649133133,
+          87.0,
+          -12.0,
+          7.54229345281136,
+          12.0
+        ],
+        "finger_actuator_force_n": [
+          0.010538814412892622,
+          -0.09260180521534761
+        ],
+        "finger_command": {
+          "mode": "step-implicit-pd",
+          "target_opening_per_finger_m": 0.0,
+          "raw_pd_force_n": [
+            1.5112834254418377,
+            -10.352805322122718
+          ],
+          "commanded_force_n": [
+            0.010538814412892622,
+            -0.09260180521534761
+          ]
+        },
+        "contacts": [],
+        "integration_actuation": {
+          "stage": "mj_step_preintegration_actuation",
+          "state_time_s": 7.51666666666683,
+          "step_end_time_s": 7.525000000000164,
+          "arm_actuator_force_nm": [
+            38.62386142028065,
+            -87.0,
+            -39.84915649133133,
+            87.0,
+            -12.0,
+            7.54229345281136,
+            12.0
+          ],
+          "arm_qfrc_actuator_nm": [
+            38.62386142028065,
+            -87.0,
+            -39.84915649133133,
+            87.0,
+            -12.0,
+            7.54229345281136,
+            12.0
+          ],
+          "finger_actuator_force_n": [
+            0.010538814412892622,
+            -0.09260180521534761
+          ]
+        },
+        "snapshot_actuation_stage": "poststep_mj_forward_recomputed_at_time_s",
+        "s2a": {
+          "hole_quaternion_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "finger_generalized_actuator_contribution_n": [
+            0.010538814412892622,
+            -0.09260180521534761
+          ],
+          "relative_peg_hole": {
+            "scope": "adapted_ground_truth_diagnostic_not_original_success",
+            "peg_root_in_hole_frame_m": [
+              -2.744338931027566,
+              2.7326336114907237,
+              -3.959873495953788
+            ],
+            "axis_tilt_rad": 1.356534567923647,
+            "axis_in_hole_frame": [
+              0.7614025597256894,
+              -0.6124183803204409,
+              -0.21262612607310594
+            ],
+            "other_axis_endpoint_in_hole_frame_m": [
+              -2.7062688030412816,
+              2.7020126924747014,
+              -3.970504802257443
+            ],
+            "full_cylinder_z_extent_in_hole_frame_m": [
+              -3.9744064968412856,
+              -3.9559718013699454
+            ],
+            "conservative_radial_envelope_m": 3.9256629513246453,
+            "bore_apothem_m": 0.004049695042448535,
+            "inside_bore": false,
+            "floor_contact": false,
+            "wall_or_rim_contact": false,
+            "minimum_contact_distance_m": 0.0,
+            "interpenetration_beyond_tolerance": false,
+            "resting_above_opening": false,
+            "entirely_above_opening": false,
+            "physical_insertion_candidate": false,
+            "contacts": []
+          },
+          "relative_peg_hand_m": [
+            2.8344405476131582,
+            -0.7940236005066348,
+            4.468496757114702
+          ],
+          "relative_peg_hand_rotation": [
+            [
+              -0.03353207639488623,
+              0.9704732640868048,
+              -0.238866581055929
+            ],
+            [
+              0.2696002903572983,
+              0.23892438309181616,
+              0.9328616310061497
+            ],
+            [
+              0.9623883225039186,
+              -0.033117712132577165,
+              -0.26965150444823377
+            ]
+          ],
+          "peg_hand_slip_m": 5.323163351086364,
+          "peg_hand_slip_rad": 1.801788478126488,
+          "arm_joint_limit_violation_rad": 0.3219983716976671,
+          "finger_joint_limit_violation_m": 0.00019383808096253488,
+          "all_contact_penetration_m": 0.0,
+          "peg_hole_penetration_m": 0.0
+        }
+      }
+    },
+    "maximum_finger_limit_failure": {
+      "policy_step": 127,
+      "episode_physics_step": 1012,
+      "episode_elapsed_simulation_s": 8.433333333333334,
+      "absolute_MuJoCo_data_time_s": 8.683333333333481,
+      "values": [
+        0.0,
+        0.0008730671048176516
+      ],
+      "state": {
+        "time_s": 8.683333333333481,
+        "qpos": [
+          0.0856847469424196,
+          0.8480121350017336,
+          -0.5652428370687833,
+          -2.2411535461230563,
+          -1.9988646022301575,
+          3.760990975433785,
+          1.2769318054046193,
+          0.0008864817447450934,
+          -0.0008730671048176516,
+          -2.6124045347609846,
+          3.0815823063174275,
+          -4.644973451259793,
+          0.3060638423175478,
+          0.22223563970632898,
+          -0.664309225400807,
+          -0.6446933363371432
+        ],
+        "qvel": [
+          1.1448978794067373,
+          1.7516882685819355,
+          -6.24438988777937,
+          -4.195270682639194,
+          11.068728715254526,
+          0.2726386557038202,
+          -33.55174820581428,
+          0.11164017997980881,
+          -0.11219728414255839,
+          -0.740590449940048,
+          -0.18813522984621403,
+          0.11590086239266453,
+          28.487030580678308,
+          -25.425414163391782,
+          5.812743215459974
+        ],
+        "tcp_position_world": [
+          0.34055133041861724,
+          -0.07715193196373442,
+          -0.04673887590298091
+        ],
+        "tcp_quaternion_wxyz": [
+          -0.0957128351369525,
+          0.8191893230927547,
+          0.5651529585864157,
+          0.01923641135712253
+        ],
+        "peg_root_position": [
+          -2.6124045347609846,
+          3.0815823063174275,
+          -4.644973451259793
+        ],
+        "peg_quaternion_wxyz": [
+          0.3060638423175478,
+          0.22223563970632898,
+          -0.664309225400807,
+          -0.6446933363371432
+        ],
+        "hole_root_position": [
+          0.6,
+          0.0,
+          0.05
+        ],
+        "requested_arm_torque_nm": [
+          89.78324886528245,
+          75.77243541603958,
+          92.82765765372578,
+          -61.35849114236137,
+          -108.23406731714384,
+          45.65848678687712,
+          -65.8949672500096
+        ],
+        "software_limited_arm_torque_nm": [
+          89.78324886528245,
+          75.77243541603958,
+          92.82765765372578,
+          -61.35849114236137,
+          -100.0,
+          45.65848678687712,
+          -65.8949672500096
+        ],
+        "actuator_force_nm": [
+          87.0,
+          75.77243541603958,
+          87.0,
+          -61.35849114236137,
+          -12.0,
+          12.0,
+          -12.0
+        ],
+        "generalized_actuator_contribution_nm": [
+          87.0,
+          75.77243541603958,
+          87.0,
+          -61.35849114236137,
+          -12.0,
+          12.0,
+          -12.0
+        ],
+        "finger_actuator_force_n": [
+          0.017295027869112446,
+          -0.01698692343803704
+        ],
+        "finger_command": {
+          "mode": "step-implicit-pd",
+          "target_opening_per_finger_m": 0.0,
+          "raw_pd_force_n": [
+            1.7948367394468034,
+            -1.8009399729561573
+          ],
+          "commanded_force_n": [
+            0.017295027869112446,
+            -0.01698692343803704
+          ]
+        },
+        "contacts": [
+          {
+            "geom1": "independent_support",
+            "geom2": "hand_geom_5",
+            "distance_m": -0.004861226382078476,
+            "normal_force_n": 65.80665027557438,
+            "position_world_m": [
+              0.4424306131910391,
+              -0.10842954723903238,
+              0.03234352353902753
+            ]
+          }
+        ],
+        "integration_actuation": {
+          "stage": "mj_step_preintegration_actuation",
+          "state_time_s": 8.675000000000148,
+          "step_end_time_s": 8.683333333333481,
+          "arm_actuator_force_nm": [
+            87.0,
+            75.77243541603958,
+            87.0,
+            -61.35849114236137,
+            -12.0,
+            12.0,
+            -12.0
+          ],
+          "arm_qfrc_actuator_nm": [
+            87.0,
+            75.77243541603958,
+            87.0,
+            -61.35849114236137,
+            -12.0,
+            12.0,
+            -12.0
+          ],
+          "finger_actuator_force_n": [
+            0.017295027869112446,
+            -0.01698692343803704
+          ]
+        },
+        "snapshot_actuation_stage": "poststep_mj_forward_recomputed_at_time_s",
+        "s2a": {
+          "hole_quaternion_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "finger_generalized_actuator_contribution_n": [
+            0.017295027869112446,
+            -0.01698692343803704
+          ],
+          "relative_peg_hole": {
+            "scope": "adapted_ground_truth_diagnostic_not_original_success",
+            "peg_root_in_hole_frame_m": [
+              -3.2124045347609846,
+              3.0815823063174275,
+              -4.694973451259793
+            ],
+            "axis_tilt_rad": 1.5521861055850663,
+            "axis_in_hole_frame": [
+              -0.6931897400569149,
+              0.7205148741895445,
+              0.01860914698339622
+            ],
+            "other_axis_endpoint_in_hole_frame_m": [
+              -3.2470640217638302,
+              3.1176080500269046,
+              -4.694042993910624
+            ],
+            "full_cylinder_z_extent_in_hole_frame_m": [
+              -4.698965759811274,
+              -4.690050685359143
+            ],
+            "conservative_radial_envelope_m": 4.505466387708001,
+            "bore_apothem_m": 0.004049695042448535,
+            "inside_bore": false,
+            "floor_contact": false,
+            "wall_or_rim_contact": false,
+            "minimum_contact_distance_m": 0.0,
+            "interpenetration_beyond_tolerance": false,
+            "resting_above_opening": false,
+            "entirely_above_opening": false,
+            "physical_insertion_candidate": false,
+            "contacts": []
+          },
+          "relative_peg_hand_m": [
+            1.2063353595896198,
+            -3.2071045295728196,
+            5.300994913824413
+          ],
+          "relative_peg_hand_rotation": [
+            [
+              -0.8768108450164235,
+              0.23900867758540645,
+              0.41722607073438656
+            ],
+            [
+              -0.44329427278703454,
+              -0.06568457853918293,
+              -0.8939662878746262
+            ],
+            [
+              -0.18626038165910214,
+              -0.9687932639015405,
+              0.16354412873350266
+            ]
+          ],
+          "peg_hand_slip_m": 6.284984718305998,
+          "peg_hand_slip_rad": 1.7479524302542273,
+          "arm_joint_limit_violation_rad": 0.008490975433784964,
+          "finger_joint_limit_violation_m": 0.0008730671048176516,
+          "all_contact_penetration_m": 0.004861226382078476,
+          "peg_hole_penetration_m": 0.0
+        }
+      }
+    },
+    "first_slip_above_1mm_diagnostic_only": {
+      "policy_step": 1,
+      "episode_physics_step": 3,
+      "episode_elapsed_simulation_s": 0.025,
+      "absolute_MuJoCo_data_time_s": 0.275,
+      "values": 0.0023717511120240242,
+      "state": {
+        "time_s": 0.275,
+        "qpos": [
+          -0.017716389972967032,
+          0.4488434671051529,
+          -0.016494909003823922,
+          -2.0150408749868833,
+          0.016318958963877687,
+          2.4708238445499906,
+          0.2196638304124205,
+          0.004227325419452256,
+          0.004414355746978127,
+          0.6059736371702242,
+          -0.017850194576769885,
+          0.08429809915651026,
+          -0.2415906871651978,
+          0.01550684184105117,
+          -0.01799236967868245,
+          0.9700874972725443
+        ],
+        "qvel": [
+          -0.2855791068090302,
+          -0.015172068515339834,
+          0.08263275580951847,
+          -0.1938080833823457,
+          0.6799177460375283,
+          1.2548029284871893,
+          9.126765297359182,
+          0.027718683286488893,
+          0.05258412430531438,
+          -0.025942970010936463,
+          0.02844884895556985,
+          0.02518813829688929,
+          -5.184836239799563,
+          -2.043271856629379,
+          -13.719937354303918
+        ],
+        "tcp_position_world": [
+          0.605688583653076,
+          -0.020194608108561135,
+          0.11606962938466675
+        ],
+        "tcp_quaternion_wxyz": [
+          -0.00041116483600833927,
+          0.9663270982212429,
+          0.25728827966687584,
+          0.003809374338168269
+        ],
+        "peg_root_position": [
+          0.6059736371702242,
+          -0.017850194576769885,
+          0.08429809915651026
+        ],
+        "peg_quaternion_wxyz": [
+          -0.2415906871651978,
+          0.01550684184105117,
+          -0.01799236967868245,
+          0.9700874972725443
+        ],
+        "hole_root_position": [
+          0.6,
+          0.0,
+          0.05
+        ],
+        "requested_arm_torque_nm": [
+          -61.93888801052615,
+          -3.586850536951084,
+          -54.07011817192783,
+          2.969602791089497,
+          46.474597626000076,
+          2.9844710760576745,
+          58.960183344075965
+        ],
+        "software_limited_arm_torque_nm": [
+          -61.93888801052615,
+          -3.586850536951084,
+          -54.07011817192783,
+          2.969602791089497,
+          46.474597626000076,
+          2.9844710760576745,
+          58.960183344075965
+        ],
+        "actuator_force_nm": [
+          -61.93888801052615,
+          -3.586850536951084,
+          -54.07011817192783,
+          2.969602791089497,
+          12.0,
+          2.9844710760576745,
+          12.0
+        ],
+        "generalized_actuator_contribution_nm": [
+          -61.93888801052615,
+          -3.586850536951084,
+          -54.07011817192783,
+          2.969602791089497,
+          12.0,
+          2.9844710760576745,
+          12.0
+        ],
+        "finger_actuator_force_n": [
+          -0.2298059670946661,
+          -0.22379316639287666
+        ],
+        "finger_command": {
+          "mode": "step-implicit-pd",
+          "target_opening_per_finger_m": 0.0,
+          "raw_pd_force_n": [
+            -30.214491656462677,
+            -29.583454169077683
+          ],
+          "commanded_force_n": [
+            -0.2298059670946661,
+            -0.22379316639287666
+          ]
+        },
+        "contacts": [
+          {
+            "geom1": "peg_collision",
+            "geom2": "left_finger_geom_6",
+            "distance_m": -3.042338175857717e-05,
+            "normal_force_n": 0.13770891353940404,
+            "position_world_m": [
+              0.6099076705819282,
+              -0.02264266537737738,
+              0.13376390093524143
+            ]
+          },
+          {
+            "geom1": "peg_collision",
+            "geom2": "right_finger_geom_5",
+            "distance_m": -4.952131228294871e-05,
+            "normal_force_n": 0.5289651995056862,
+            "position_world_m": [
+              0.6056477532711797,
+              -0.015100761187310383,
+              0.1167554062131767
+            ]
+          }
+        ],
+        "integration_actuation": {
+          "stage": "mj_step_preintegration_actuation",
+          "state_time_s": 0.26666666666666666,
+          "step_end_time_s": 0.275,
+          "arm_actuator_force_nm": [
+            -61.93888801052615,
+            -3.586850536951084,
+            -54.07011817192783,
+            2.969602791089497,
+            12.0,
+            2.9844710760576745,
+            12.0
+          ],
+          "arm_qfrc_actuator_nm": [
+            -61.93888801052615,
+            -3.586850536951084,
+            -54.07011817192783,
+            2.969602791089497,
+            12.0,
+            2.9844710760576745,
+            12.0
+          ],
+          "finger_actuator_force_n": [
+            -0.2298059670946661,
+            -0.22379316639287666
+          ]
+        },
+        "snapshot_actuation_stage": "poststep_mj_forward_recomputed_at_time_s",
+        "s2a": {
+          "hole_quaternion_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "finger_generalized_actuator_contribution_n": [
+            -0.2298059670946661,
+            -0.22379316639287666
+          ],
+          "relative_peg_hole": {
+            "scope": "adapted_ground_truth_diagnostic_not_original_success",
+            "peg_root_in_hole_frame_m": [
+              0.005973637170224255,
+              -0.017850194576769885,
+              0.03429809915651026
+            ],
+            "axis_tilt_rad": 0.04750973142386059,
+            "axis_in_hole_frame": [
+              0.03877956469317933,
+              -0.027415728590907754,
+              0.9988716249789233
+            ],
+            "other_axis_endpoint_in_hole_frame_m": [
+              0.007912615404883222,
+              -0.019220981006315273,
+              0.08424168040545643
+            ],
+            "full_cylinder_z_extent_in_hole_frame_m": [
+              0.034108464157608855,
+              0.08443131540435783
+            ],
+            "conservative_radial_envelope_m": 0.0251908177071481,
+            "bore_apothem_m": 0.004049695042448535,
+            "inside_bore": false,
+            "floor_contact": false,
+            "wall_or_rim_contact": false,
+            "minimum_contact_distance_m": 0.0,
+            "interpenetration_beyond_tolerance": false,
+            "resting_above_opening": false,
+            "entirely_above_opening": true,
+            "physical_insertion_candidate": false,
+            "contacts": []
+          },
+          "relative_peg_hand_m": [
+            0.0011724257512016984,
+            -0.0019293138037366272,
+            0.0317790942202413
+          ],
+          "relative_peg_hand_rotation": [
+            [
+              -0.9990739217940184,
+              -0.03302729262967241,
+              0.02757710522640935
+            ],
+            [
+              -0.03178786468257865,
+              0.9985153616483616,
+              0.04423351909082823
+            ],
+            [
+              -0.028997076577416122,
+              0.04331593810355013,
+              -0.9986405254425479
+            ]
+          ],
+          "peg_hand_slip_m": 0.002371751112024027,
+          "peg_hand_slip_rad": 0.06138714144434785,
+          "arm_joint_limit_violation_rad": 0.0,
+          "finger_joint_limit_violation_m": 0.0,
+          "all_contact_penetration_m": 4.952131228294871e-05,
+          "peg_hole_penetration_m": 0.0
+        }
+      }
+    },
+    "first_nonbilateral_pad_contact": {
+      "policy_step": 1,
+      "episode_physics_step": 4,
+      "episode_elapsed_simulation_s": 0.03333333333333333,
+      "absolute_MuJoCo_data_time_s": 0.2833333333333334,
+      "values": {
+        "left_finger": 1.25202869244698,
+        "right_finger": 0.0
+      },
+      "state": {
+        "time_s": 0.2833333333333334,
+        "qpos": [
+          -0.026156603947755395,
+          0.44879462751739985,
+          -0.0057692465281733545,
+          -2.012161785986519,
+          0.012214518729532213,
+          2.4488114841358386,
+          0.17665415873550933,
+          0.004727392860936834,
+          0.004437686098137836,
+          0.6072882959616838,
+          -0.019730244440416468,
+          0.08339406736171816,
+          -0.19115259590170053,
+          -0.010243663766418127,
+          0.03216241438583731,
+          0.9809797814091554
+        ],
+        "qvel": [
+          -1.0128256769746038,
+          -0.00586075053036106,
+          1.2870794970780681,
+          0.34549068004376327,
+          -0.49253282812145693,
+          -2.6414832496982372,
+          -5.161160601229339,
+          0.060008092978149435,
+          0.002799642139165115,
+          0.15775905497515025,
+          -0.22560598363759013,
+          -0.1084838153750535,
+          13.04216844341471,
+          3.348793737089683,
+          -12.462198596234987
+        ],
+        "tcp_position_world": [
+          0.6022522765702423,
+          -0.018552462401235367,
+          0.11527586967069954
+        ],
+        "tcp_quaternion_wxyz": [
+          -0.0043949151509585106,
+          0.9599314544861077,
+          0.28015705287529535,
+          -0.0049308349424105075
+        ],
+        "peg_root_position": [
+          0.6072882959616838,
+          -0.019730244440416468,
+          0.08339406736171816
+        ],
+        "peg_quaternion_wxyz": [
+          -0.19115259590170053,
+          -0.010243663766418127,
+          0.03216241438583731,
+          0.9809797814091554
+        ],
+        "hole_root_position": [
+          0.6,
+          0.0,
+          0.05
+        ],
+        "requested_arm_torque_nm": [
+          105.9017251863673,
+          12.639563558894912,
+          94.44197309941973,
+          -12.88278098305019,
+          -87.30355849526516,
+          -12.835791154642695,
+          -107.75817123419553
+        ],
+        "software_limited_arm_torque_nm": [
+          100.0,
+          12.639563558894912,
+          94.44197309941973,
+          -12.88278098305019,
+          -87.30355849526516,
+          -12.835791154642695,
+          -100.0
+        ],
+        "actuator_force_nm": [
+          87.0,
+          12.639563558894912,
+          87.0,
+          -12.88278098305019,
+          -12.0,
+          -12.0,
+          -12.0
+        ],
+        "generalized_actuator_contribution_nm": [
+          87.0,
+          12.639563558894912,
+          87.0,
+          -12.88278098305019,
+          -12.0,
+          -12.0,
+          -12.0
+        ],
+        "finger_actuator_force_n": [
+          -0.2903959263681976,
+          -0.34467805544796415
+        ],
+        "finger_command": {
+          "mode": "step-implicit-pd",
+          "target_opening_per_finger_m": 0.0,
+          "raw_pd_force_n": [
+            -36.500272854454494,
+            -42.204721607155335
+          ],
+          "commanded_force_n": [
+            -0.2903959263681976,
+            -0.34467805544796415
+          ]
+        },
+        "contacts": [
+          {
+            "geom1": "peg_collision",
+            "geom2": "left_finger_geom_4",
+            "distance_m": -0.0007763657151109205,
+            "normal_force_n": 1.25202869244698,
+            "position_world_m": [
+              0.608164924375118,
+              -0.020855420540394746,
+              0.115893790511745
+            ]
+          }
+        ],
+        "integration_actuation": {
+          "stage": "mj_step_preintegration_actuation",
+          "state_time_s": 0.275,
+          "step_end_time_s": 0.2833333333333334,
+          "arm_actuator_force_nm": [
+            87.0,
+            12.639563558894912,
+            87.0,
+            -12.88278098305019,
+            -12.0,
+            -12.0,
+            -12.0
+          ],
+          "arm_qfrc_actuator_nm": [
+            87.0,
+            12.639563558894912,
+            87.0,
+            -12.88278098305019,
+            -12.0,
+            -12.0,
+            -12.0
+          ],
+          "finger_actuator_force_n": [
+            -0.2903959263681976,
+            -0.34467805544796415
+          ]
+        },
+        "snapshot_actuation_stage": "poststep_mj_forward_recomputed_at_time_s",
+        "s2a": {
+          "hole_quaternion_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "finger_generalized_actuator_contribution_n": [
+            -0.2903959263681976,
+            -0.34467805544796415
+          ],
+          "relative_peg_hole": {
+            "scope": "adapted_ground_truth_diagnostic_not_original_success",
+            "peg_root_in_hole_frame_m": [
+              0.007288295961683788,
+              -0.019730244440416468,
+              0.033394067361718155
+            ],
+            "axis_tilt_rad": 0.06752144899071441,
+            "axis_in_hole_frame": [
+              -0.032393512085457474,
+              0.059185150626628685,
+              0.9977212929070275
+            ],
+            "other_axis_endpoint_in_hole_frame_m": [
+              0.005668620357410914,
+              -0.016770986909085035,
+              0.08328013200706953
+            ],
+            "full_cylinder_z_extent_in_hole_frame_m": [
+              0.033124659036821436,
+              0.08354954033196625
+            ],
+            "conservative_radial_envelope_m": 0.028399857497176047,
+            "bore_apothem_m": 0.004049695042448535,
+            "inside_bore": false,
+            "floor_contact": false,
+            "wall_or_rim_contact": false,
+            "minimum_contact_distance_m": 0.0,
+            "interpenetration_beyond_tolerance": false,
+            "resting_above_opening": false,
+            "entirely_above_opening": true,
+            "physical_insertion_candidate": false,
+            "contacts": []
+          },
+          "relative_peg_hand_m": [
+            0.003835003959176263,
+            0.004058414559381931,
+            0.03181226172734438
+          ],
+          "relative_peg_hand_rotation": [
+            [
+              -0.9832278556640712,
+              -0.18236484774127268,
+              -0.002458892948118177
+            ],
+            [
+              -0.18161303412823643,
+              0.9802327170898013,
+              -0.07848901949621284
+            ],
+            [
+              0.016723925405355517,
+              -0.07672602332353275,
+              -0.9969119457926003
+            ]
+          ],
+          "peg_hand_slip_m": 0.0042647828121259905,
+          "peg_hand_slip_rad": 0.1993895731916887,
+          "arm_joint_limit_violation_rad": 0.0,
+          "finger_joint_limit_violation_m": 0.0,
+          "all_contact_penetration_m": 0.0007763657151109205,
+          "peg_hole_penetration_m": 0.0
+        }
+      }
+    },
+    "maximum_all_contact_penetration": {
+      "policy_step": 86,
+      "episode_physics_step": 685,
+      "episode_elapsed_simulation_s": 5.708333333333333,
+      "absolute_MuJoCo_data_time_s": 5.958333333333419,
+      "values": {
+        "geom1": "independent_support",
+        "geom2": "hand_geom_5",
+        "distance_m": -0.01691742953223052,
+        "normal_force_n": 1173.354783867503,
+        "position_world_m": [
+          0.5267521934459015,
+          -0.15154128523388474,
+          0.013139577801380073
+        ]
+      },
+      "state": {
+        "time_s": 5.958333333333419,
+        "qpos": [
+          -1.226831433739643,
+          1.3061271021462375,
+          0.5747365659899359,
+          -1.963561153278358,
+          -0.8833620176551036,
+          3.7616459659603283,
+          0.26419155202781053,
+          0.0004228849233291755,
+          -8.486282928341532e-05,
+          -1.4692353970920229,
+          2.14293655322256,
+          -2.961328909152278,
+          -0.5155664239582967,
+          0.7907740754639188,
+          -0.003207720693319479,
+          -0.3299353491049288
+        ],
+        "qvel": [
+          7.742975009618394,
+          -1.4528675648568519,
+          -9.012693441150681,
+          5.977297668023995,
+          -29.593030826916085,
+          -0.056757136939886016,
+          38.53637536711666,
+          0.0069897110009010735,
+          0.0003752617886472508,
+          -0.7763076870302046,
+          0.19967945982286195,
+          -0.06453891181369528,
+          -9.634755752581372,
+          24.97995148966441,
+          5.81274321545958
+        ],
+        "tcp_position_world": [
+          0.587812135541862,
+          -0.23531962821260013,
+          -0.018521507009611263
+        ],
+        "tcp_quaternion_wxyz": [
+          -0.024036283963524613,
+          0.8547975342942621,
+          0.09697958939768628,
+          0.509252777761624
+        ],
+        "peg_root_position": [
+          -1.4692353970920229,
+          2.14293655322256,
+          -2.961328909152278
+        ],
+        "peg_quaternion_wxyz": [
+          -0.5155664239582967,
+          0.7907740754639188,
+          -0.003207720693319479,
+          -0.3299353491049288
+        ],
+        "hole_root_position": [
+          0.6,
+          0.0,
+          0.05
+        ],
+        "requested_arm_torque_nm": [
+          -179.6935507945832,
+          34.037580517159114,
+          -116.01907434484345,
+          58.01095867792151,
+          150.71608342584227,
+          14.349582969788305,
+          82.6076032886266
+        ],
+        "software_limited_arm_torque_nm": [
+          -100.0,
+          34.037580517159114,
+          -100.0,
+          58.01095867792151,
+          100.0,
+          14.349582969788305,
+          82.6076032886266
+        ],
+        "actuator_force_nm": [
+          -87.0,
+          34.037580517159114,
+          -87.0,
+          58.01095867792151,
+          12.0,
+          12.0,
+          12.0
+        ],
+        "generalized_actuator_contribution_nm": [
+          -87.0,
+          34.037580517159114,
+          -87.0,
+          58.01095867792151,
+          12.0,
+          12.0,
+          12.0
+        ],
+        "finger_actuator_force_n": [
+          0.0022366869224377385,
+          0.0007086759502542779
+        ],
+        "finger_command": {
+          "mode": "step-implicit-pd",
+          "target_opening_per_finger_m": 0.0,
+          "raw_pd_force_n": [
+            -0.5078634022150403,
+            0.24245767103254467
+          ],
+          "commanded_force_n": [
+            0.0022366869224377385,
+            0.0007086759502542779
+          ]
+        },
+        "contacts": [
+          {
+            "geom1": "independent_support",
+            "geom2": "hand_geom_5",
+            "distance_m": -0.01691742953223052,
+            "normal_force_n": 1173.354783867503,
+            "position_world_m": [
+              0.5267521934459015,
+              -0.15154128523388474,
+              0.013139577801380073
+            ]
+          }
+        ],
+        "integration_actuation": {
+          "stage": "mj_step_preintegration_actuation",
+          "state_time_s": 5.950000000000085,
+          "step_end_time_s": 5.958333333333419,
+          "arm_actuator_force_nm": [
+            -87.0,
+            34.037580517159114,
+            -87.0,
+            58.01095867792151,
+            12.0,
+            12.0,
+            12.0
+          ],
+          "arm_qfrc_actuator_nm": [
+            -87.0,
+            34.037580517159114,
+            -87.0,
+            58.01095867792151,
+            12.0,
+            12.0,
+            12.0
+          ],
+          "finger_actuator_force_n": [
+            0.0022366869224377385,
+            0.0007086759502542779
+          ]
+        },
+        "snapshot_actuation_stage": "poststep_mj_forward_recomputed_at_time_s",
+        "s2a": {
+          "hole_quaternion_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "finger_generalized_actuator_contribution_n": [
+            0.0022366869224377385,
+            0.0007086759502542779
+          ],
+          "relative_peg_hole": {
+            "scope": "adapted_ground_truth_diagnostic_not_original_success",
+            "peg_root_in_hole_frame_m": [
+              -2.0692353970920228,
+              2.14293655322256,
+              -3.0113289091522777
+            ],
+            "axis_tilt_rad": 1.3174262516660633,
+            "axis_in_hole_frame": [
+              -0.5185010551288071,
+              0.8175098053852846,
+              -0.25066785579572454
+            ],
+            "other_axis_endpoint_in_hole_frame_m": [
+              -2.0951604498484633,
+              2.183812043491824,
+              -3.023862301942064
+            ],
+            "full_cylinder_z_extent_in_hole_frame_m": [
+              -3.027727818034798,
+              -3.0074633930595436
+            ],
+            "conservative_radial_envelope_m": 3.031307901574401,
+            "bore_apothem_m": 0.004049695042448535,
+            "inside_bore": false,
+            "floor_contact": false,
+            "wall_or_rim_contact": false,
+            "minimum_contact_distance_m": 0.0,
+            "interpenetration_beyond_tolerance": false,
+            "resting_above_opening": false,
+            "entirely_above_opening": false,
+            "physical_insertion_candidate": false,
+            "contacts": []
+          },
+          "relative_peg_hand_m": [
+            -3.1911037100089024,
+            -2.891928443244901,
+            -0.03562882644559595
+          ],
+          "relative_peg_hand_rotation": [
+            [
+              -0.050455633176354965,
+              -0.937726195756896,
+              -0.3436914471907462
+            ],
+            [
+              -0.20988566751632046,
+              0.34640059398667444,
+              -0.9143055479744747
+            ],
+            [
+              0.976423184716544,
+              0.02600404347357372,
+              -0.21429314984623912
+            ]
+          ],
+          "peg_hand_slip_m": 4.308961044421355,
+          "peg_hand_slip_rad": 1.7664652660724833,
+          "arm_joint_limit_violation_rad": 0.00914596596032835,
+          "finger_joint_limit_violation_m": 8.486282928341532e-05,
+          "all_contact_penetration_m": 0.01691742953223052,
+          "peg_hole_penetration_m": 0.0
+        }
+      }
+    },
+    "maximum_arm_qvel": {
+      "policy_step": 137,
+      "episode_physics_step": 1090,
+      "episode_elapsed_simulation_s": 9.083333333333334,
+      "absolute_MuJoCo_data_time_s": 9.333333333333444,
+      "values": 63.6523669411641,
+      "state": {
+        "time_s": 9.333333333333444,
+        "qpos": [
+          0.7768920306321188,
+          1.705598732125405,
+          -0.011746896113724217,
+          -1.5223627094084755,
+          2.968484940197655,
+          3.7527427808397644,
+          -3.053796480957088,
+          -0.00020595628484988682,
+          0.0005013638980190411,
+          -2.924158529470588,
+          3.279206708682412,
+          -5.055951757237918,
+          0.44249330539571785,
+          -0.8766231333090656,
+          0.09510562225703499,
+          0.16335996278913906
+        ],
+        "qvel": [
+          5.752036564979875,
+          6.727888993591942,
+          -9.19515115255938,
+          13.50048710590469,
+          63.6523669411641,
+          0.18535092052644342,
+          -60.10690549716493,
+          -0.05744138819956274,
+          0.04729752525765307,
+          -1.237987963429958,
+          0.37054768743555644,
+          0.03834193893140754,
+          -14.24719785350469,
+          39.03872632753255,
+          5.812743215459305
+        ],
+        "tcp_position_world": [
+          0.13290616290095483,
+          0.07300782368151135,
+          -0.2921032460921007
+        ],
+        "tcp_quaternion_wxyz": [
+          0.04163076036894919,
+          0.6377027169058832,
+          0.6901594781914749,
+          -0.33953205931756747
+        ],
+        "peg_root_position": [
+          -2.924158529470588,
+          3.279206708682412,
+          -5.055951757237918
+        ],
+        "peg_quaternion_wxyz": [
+          0.44249330539571785,
+          -0.8766231333090656,
+          0.09510562225703499,
+          0.16335996278913906
+        ],
+        "hole_root_position": [
+          0.6,
+          0.0,
+          0.05
+        ],
+        "requested_arm_torque_nm": [
+          210.4521970412676,
+          -228.3392347659705,
+          -169.74438126340434,
+          183.34094132196628,
+          -268.6529987798819,
+          -18.597780353475116,
+          -98.834317610269
+        ],
+        "software_limited_arm_torque_nm": [
+          100.0,
+          -100.0,
+          -100.0,
+          100.0,
+          -100.0,
+          -18.597780353475116,
+          -98.834317610269
+        ],
+        "actuator_force_nm": [
+          87.0,
+          -87.0,
+          -87.0,
+          87.0,
+          -12.0,
+          -12.0,
+          -12.0
+        ],
+        "generalized_actuator_contribution_nm": [
+          87.0,
+          -87.0,
+          -87.0,
+          87.0,
+          -12.0,
+          -12.0,
+          -12.0
+        ],
+        "finger_actuator_force_n": [
+          0.04749974715150903,
+          -0.04839977852489637
+        ],
+        "finger_command": {
+          "mode": "step-implicit-pd",
+          "target_opening_per_finger_m": 0.0,
+          "raw_pd_force_n": [
+            4.137083233840675,
+            -4.980497029288445
+          ],
+          "commanded_force_n": [
+            0.04749974715150903,
+            -0.04839977852489637
+          ]
+        },
+        "contacts": [],
+        "integration_actuation": {
+          "stage": "mj_step_preintegration_actuation",
+          "state_time_s": 9.325000000000111,
+          "step_end_time_s": 9.333333333333444,
+          "arm_actuator_force_nm": [
+            87.0,
+            -87.0,
+            -87.0,
+            87.0,
+            -12.0,
+            -12.0,
+            -12.0
+          ],
+          "arm_qfrc_actuator_nm": [
+            87.0,
+            -87.0,
+            -87.0,
+            87.0,
+            -12.0,
+            -12.0,
+            -12.0
+          ],
+          "finger_actuator_force_n": [
+            0.04749974715150903,
+            -0.04839977852489637
+          ]
+        },
+        "snapshot_actuation_stage": "poststep_mj_forward_recomputed_at_time_s",
+        "s2a": {
+          "hole_quaternion_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "finger_generalized_actuator_contribution_n": [
+            0.04749974715150903,
+            -0.04839977852489637
+          ],
+          "relative_peg_hole": {
+            "scope": "adapted_ground_truth_diagnostic_not_original_success",
+            "peg_root_in_hole_frame_m": [
+              -3.524158529470588,
+              3.279206708682412,
+              -5.105951757237918
+            ],
+            "axis_tilt_rad": 0.982401630486528,
+            "axis_in_hole_frame": [
+              -0.20224304256647097,
+              0.8068726375144532,
+              -0.5550263944750048
+            ],
+            "other_axis_endpoint_in_hole_frame_m": [
+              -3.534270681598912,
+              3.319550340558135,
+              -5.133703076961668
+            ],
+            "full_cylinder_z_extent_in_hole_frame_m": [
+              -5.137024585078327,
+              -5.102630249121258
+            ],
+            "conservative_radial_envelope_m": 4.859407439866857,
+            "bore_apothem_m": 0.004049695042448535,
+            "inside_bore": false,
+            "floor_contact": false,
+            "wall_or_rim_contact": false,
+            "minimum_contact_distance_m": 0.0,
+            "interpenetration_beyond_tolerance": false,
+            "resting_above_opening": false,
+            "entirely_above_opening": false,
+            "physical_insertion_candidate": false,
+            "contacts": []
+          },
+          "relative_peg_hand_m": [
+            5.628321057643427,
+            -0.9383886451057462,
+            3.124265879130017
+          ],
+          "relative_peg_hand_rotation": [
+            [
+              -0.007231797041760342,
+              -0.08059542220242631,
+              0.9967206624885202
+            ],
+            [
+              0.9985514105035537,
+              0.052563639479112585,
+              0.011495407172791905
+            ],
+            [
+              -0.05331774275890905,
+              0.9953599558575368,
+              0.08009854294787332
+            ]
+          ],
+          "peg_hand_slip_m": 6.488024499742761,
+          "peg_hand_slip_rad": 2.1061555378050394,
+          "arm_joint_limit_violation_rad": 0.15649648095708812,
+          "finger_joint_limit_violation_m": 0.00020595628484988682,
+          "all_contact_penetration_m": 0.0,
+          "peg_hole_penetration_m": 0.0
+        }
+      }
+    },
+    "first_eight_joint7_states": [
+      {
+        "physics_step": 1,
+        "joint7_qvel_rad_s": 0.5046560985564515,
+        "joint7_requested_torque_nm": 0.3605790725111682,
+        "joint7_integrating_actuator_torque_nm": 0.3605790725111682
+      },
+      {
+        "physics_step": 2,
+        "joint7_qvel_rad_s": -5.149692851915195,
+        "joint7_requested_torque_nm": -4.604967727435743,
+        "joint7_integrating_actuator_torque_nm": -4.604967727435743
+      },
+      {
+        "physics_step": 3,
+        "joint7_qvel_rad_s": 9.126765297359182,
+        "joint7_requested_torque_nm": 58.960183344075965,
+        "joint7_integrating_actuator_torque_nm": 12.0
+      },
+      {
+        "physics_step": 4,
+        "joint7_qvel_rad_s": -5.161160601229339,
+        "joint7_requested_torque_nm": -107.75817123419553,
+        "joint7_integrating_actuator_torque_nm": -12.0
+      },
+      {
+        "physics_step": 5,
+        "joint7_qvel_rad_s": 9.357703721186963,
+        "joint7_requested_torque_nm": 62.74016608913161,
+        "joint7_integrating_actuator_torque_nm": 12.0
+      },
+      {
+        "physics_step": 6,
+        "joint7_qvel_rad_s": -4.762176025794421,
+        "joint7_requested_torque_nm": -107.28844523247905,
+        "joint7_integrating_actuator_torque_nm": -12.0
+      },
+      {
+        "physics_step": 7,
+        "joint7_qvel_rad_s": 9.604245243915948,
+        "joint7_requested_torque_nm": 60.46803326023955,
+        "joint7_integrating_actuator_torque_nm": 12.0
+      },
+      {
+        "physics_step": 8,
+        "joint7_qvel_rad_s": -4.680271869502102,
+        "joint7_requested_torque_nm": -110.37247412031542,
+        "joint7_integrating_actuator_torque_nm": -12.0
+      }
+    ]
+  },
+  "interpretation": {
+    "observed": "Early alternating arm velocity/torque saturation and loss of bilateral grasp precede the first joint-limit gate failures. Peak whole-episode penetration is support/hand, not peg/hole.",
+    "hypothesis_not_isolated_proof": "Adapted Panda dynamics and physical-rate PD/discretization/actuator mismatch are plausible explanations. This experiment does not prove a PPO algorithm defect or a single causal mechanism.",
+    "not_a_success_probability_estimate": true,
+    "not_exact_Factory_reconstruction": true,
+    "joint_limit_verification": "Independent raw-qpos check against frozen baseline arm bounds and pinned Panda finger defaults.",
+    "free_peg_structure_scope": "Frozen S1B source and recorded structural gate; no fresh simulator compilation in this review.",
+    "remaining_limits": [
+      "No matched cross-engine initial state/RNG parity",
+      "No controlled ablation of inertia/contact/controller mismatch",
+      "Only one smoke attempt and zero fully gate-valid episodes",
+      "Actor subprocess peak RSS was not measured by this physics audit",
+      "No S2B, additional seeds, policy or physics reruns"
+    ]
+  }
+}

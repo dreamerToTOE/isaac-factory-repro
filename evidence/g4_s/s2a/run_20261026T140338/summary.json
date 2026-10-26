@@ -1,0 +1,207 @@
+{
+  "task": "G4-S2A",
+  "status": "G4_S2A_PARTIAL",
+  "protocol": "ADAPTED_ZERO_SHOT_SIM2SIM",
+  "episodes": [
+    {
+      "seed": 1001,
+      "reset_admitted": true,
+      "policy_steps_completed": 149,
+      "policy_inferences": 149,
+      "policy_inference_requests": 149,
+      "physics_steps_completed": 1192,
+      "reset_physics_steps": 30,
+      "termination_reason": "timeout_149_policy_steps",
+      "physics_steps_recorded": 1192,
+      "technical_gates": {
+        "checkpoint_identity": true,
+        "rms_unchanged": true,
+        "model_eval": true,
+        "physical_finite": true,
+        "independent_peg": true,
+        "interfaces_valid": true,
+        "complete_149": true,
+        "physical_steps_1192": true,
+        "all_physics_steps_recorded": true,
+        "arm_joint_limits_within_1e_6_rad": false,
+        "finger_joint_limits_within_1e_6_m": false,
+        "reset_not_hidden": true
+      },
+      "technical_pass": false,
+      "fault": null,
+      "terminal_success_scope": "last completed pre-reset policy step; final_physical_diagnostic is actual final state",
+      "ever_success": false,
+      "terminal_success": false,
+      "first_success_policy_step": null,
+      "first_success_simulation_time_s": null,
+      "physical_insertion_candidate": false,
+      "contact_quality_validated_success": false,
+      "final_physical_diagnostic": {
+        "scope": "adapted_ground_truth_diagnostic_not_original_success",
+        "peg_root_in_hole_frame_m": [
+          -3.9339122676829716,
+          3.5173262363677926,
+          -5.6920142779613325
+        ],
+        "axis_tilt_rad": 1.2289592015506898,
+        "axis_in_hole_frame": [
+          -0.4426951928263295,
+          0.831654695386026,
+          -0.33521848679754296
+        ],
+        "other_axis_endpoint_in_hole_frame_m": [
+          -3.956047027324288,
+          3.558908971137094,
+          -5.70877520230121
+        ],
+        "full_cylinder_z_extent_in_hole_frame_m": [
+          -5.71253716898791,
+          -5.688252311274632
+        ],
+        "conservative_radial_envelope_m": 5.328149346285744,
+        "bore_apothem_m": 0.004049695042448535,
+        "inside_bore": false,
+        "floor_contact": false,
+        "wall_or_rim_contact": false,
+        "minimum_contact_distance_m": 0.0,
+        "interpenetration_beyond_tolerance": false,
+        "resting_above_opening": false,
+        "entirely_above_opening": false,
+        "physical_insertion_candidate": false,
+        "contacts": []
+      },
+      "maximum_episode_all_contact_penetration_m": 0.01691742953223052,
+      "maximum_episode_peg_hole_penetration_m": 0.0,
+      "maximum_peg_hand_slip_m": 7.386733353723797,
+      "maximum_peg_hand_slip_rad": 3.138645005964939,
+      "maximum_arm_joint_limit_violation_rad": 0.3219983716976671,
+      "maximum_finger_joint_limit_violation_m": 0.0008730671048176516,
+      "maximum_arm_qvel_rad_s": 63.6523669411641,
+      "action_saturation_rate": 0.0447427293064877,
+      "arm_motor_saturation_fraction": 0.45913231064237775,
+      "simulation_time_s": 9.933333333333334,
+      "wall_clock_s": 6.103187869004614,
+      "dynamics_cpu_s": 3.7193647160000003,
+      "inference_latency_s": {
+        "mean": 0.016998915925991936,
+        "p50": 0.016901451999729034,
+        "p95": 0.018157190398778767,
+        "p99": 0.019426344319654166,
+        "maximum": 0.01974802799668396
+      },
+      "ipc_inference_latency_s": {
+        "mean": 0.024786379885423815,
+        "p50": 0.024650936997204553,
+        "p95": 0.026321479796024505,
+        "p99": 0.02805146140191937,
+        "maximum": 0.030152650004311
+      },
+      "physics_step_wall_s": {
+        "mean": 0.0005221227316089438,
+        "p50": 0.0004943579988321289,
+        "p95": 0.0006338800485536922,
+        "p99": 0.000785197720542782,
+        "maximum": 0.0009025029939948581
+      },
+      "policy_step_wall_s": {
+        "mean": 0.0394903546310637,
+        "p50": 0.03921141199680278,
+        "p95": 0.041981877000944225,
+        "p99": 0.043966911079769494,
+        "maximum": 0.04470451299857814
+      },
+      "effective_wall_command_hz": 24.413470992217846,
+      "command_submit_hz": 24.414909906096756,
+      "real_time_factor": 1.627564732814523,
+      "policy_info_after": {
+        "checkpoint_sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+        "checkpoint_sha256_at_load": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+        "metadata": {
+          "role": "g2_epoch200_primary",
+          "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+          "sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+          "epoch": 200,
+          "frame": 1638400,
+          "strict_state_dict": true,
+          "frozen_rms_exact": true,
+          "fp32": true,
+          "optimizer_restored": false,
+          "rng_policy": "discard the same Normal.sample as official deterministic Player"
+        },
+        "python_executable": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+        "torch_version": "2.7.0+cu128",
+        "device": "cpu",
+        "state_shape": [
+          2,
+          1,
+          1024
+        ],
+        "rms_unchanged": true,
+        "eval_mode": true,
+        "all_parameters_frozen": true,
+        "normalization": "unchanged FrozenPolicy.infer exactly once",
+        "action": "deterministic mu, clipped to [-1,1]",
+        "rng": "torch.manual_seed(reset seed); original discarded Normal.sample consumed",
+        "infer_count": 149,
+        "reset_count": 1,
+        "current_seed": 1001
+      }
+    }
+  ],
+  "attempted_seed_denominator": 1,
+  "completed_valid_episode_denominator": 0,
+  "reset_failures": 0,
+  "failure": null,
+  "actor_process_receipt": {
+    "child_returncode": 0,
+    "healthy": true,
+    "response": {
+      "id": 153,
+      "ok": true,
+      "info": {
+        "checkpoint_sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+        "checkpoint_sha256_at_load": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+        "metadata": {
+          "role": "g2_epoch200_primary",
+          "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+          "sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+          "epoch": 200,
+          "frame": 1638400,
+          "strict_state_dict": true,
+          "frozen_rms_exact": true,
+          "fp32": true,
+          "optimizer_restored": false,
+          "rng_policy": "discard the same Normal.sample as official deterministic Player"
+        },
+        "python_executable": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+        "torch_version": "2.7.0+cu128",
+        "device": "cpu",
+        "state_shape": [
+          2,
+          1,
+          1024
+        ],
+        "rms_unchanged": true,
+        "eval_mode": true,
+        "all_parameters_frozen": true,
+        "normalization": "unchanged FrozenPolicy.infer exactly once",
+        "action": "deterministic mu, clipped to [-1,1]",
+        "rng": "torch.manual_seed(reset seed); original discarded Normal.sample consumed",
+        "infer_count": 149,
+        "reset_count": 1,
+        "current_seed": 1001
+      },
+      "closed": true,
+      "bridge_roundtrip_seconds": 0.3793939910028712
+    }
+  },
+  "policy_inferences": 149,
+  "physics_steps": 1192,
+  "reset_physics_steps": 30,
+  "actor_exit_ok": true,
+  "wall_s": 11.267380198005412,
+  "dynamics_peak_rss_kib": 352772,
+  "checkpoint_unchanged": true,
+  "learning_status": "PENDING",
+  "stop_after": "G4-S2A"
+}

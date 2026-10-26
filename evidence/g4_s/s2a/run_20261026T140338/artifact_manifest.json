@@ -1,0 +1,17 @@
+{
+  "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/actor_initial_info.json": "217f056acf7f6d8eb11131e8c54d510767184a7e8d641e1cbc95a16c708ee0f9",
+  "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/actor_stderr.log": "98b89dd66a6ff27ca3ed1ff2ec872da255826381500630b06857f0260e1687af",
+  "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/preregistered_protocol.json": "cd31fe9125bb54ec41149953b7c0d7d9419521730aa362a703d93291cae48505",
+  "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/seed_1001/actor_trace.npz": "f49dba4ac593ed88d59ac6fcd84a5ef1b40a64eda28a68c55a449f1a14559b0b",
+  "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/seed_1001/attempt.json": "8b9d8932d1129afb7639ca2ef08480cc9cc09bea22a4a46829591bf32a098f58",
+  "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/seed_1001/closure.jsonl": "3ff43f854a76feafc1b328eb397a3448e15457bcfd424b666a464f141c27b9eb",
+  "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/seed_1001/ik.json": "0ee8f2ebad70de6a1e02ad24556076f0169db665e68cfabc5e69a91cb67e4c28",
+  "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/seed_1001/inference.jsonl": "f06e3d56845347a6b04c25a63f365b59d02d21f66275337093225ed81687170d",
+  "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/seed_1001/interface_reset.json": "bb28ac8365916d4038fbe223bce18a0ccb5547ae4e6e23cd6ce2bb0551566b62",
+  "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/seed_1001/physics.jsonl": "8e1873f739665649d76e169e9d133afcd7e1bedad3641f140fd5ac9bd89bf9fe",
+  "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/seed_1001/policy.jsonl": "d32a9946c8df6dc654d95b70c87834debad41e7424561e351ddc504f5a8da936",
+  "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/seed_1001/reset_admission.json": "d6358d83b39a56da89cfcbbe4d7fc6c0ed8664c5257fb7a62d40865f85a3cda4",
+  "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/seed_1001/reset_draw.json": "c808d6c626076efff99b6afbf7ae5f772ee42f05230f6e04feb6fcbb4bb3d7b0",
+  "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/seed_1001/result.json": "7ade2df94a4b340252a9e31cd70cbe4d1a1f63d0c056765093ca24f15724e704",
+  "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/summary.json": "cffba2c3784d09257d1d7ae1d2d252d4a49b34c3ba954a5dc7bf1683dd5f6c1a"
+}

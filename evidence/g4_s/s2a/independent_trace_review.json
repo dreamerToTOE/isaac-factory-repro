@@ -1,0 +1,187 @@
+{
+  "task": "G4-S2A",
+  "review": "independent read-only saved-trace review",
+  "run_directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1",
+  "reviewer_scope": {
+    "new_actor_forwards": 0,
+    "new_physics_steps": 0,
+    "checkpoint_loads": 0,
+    "raw_evidence_modified": false,
+    "isaac_ros_or_physical_commands": false
+  },
+  "method": "Saved traces checked against unmodified SHA-pinned Factory AST CPU source oracles, archived RMS, independent clock arithmetic, pinned Menagerie joint ranges and raw file digests. No trajectory replay.",
+  "source_oracles": {
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_control.py": "7ef611d530a86fa2aba9db222361b0fe8b64d34037f204ad622a17051ad5e163"
+  },
+  "rms_archive": {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_i/i0/checkpoint_audit.json",
+    "sha256": "b7f83be8ea0e8b6ce53f820029238bb42604fa17251b59d194b10529782ed354"
+  },
+  "manifest": {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1/artifact_manifest.json",
+    "sha256": "490d9c82809130760920c11a990aecd80184e21863089eb21ac8c7e2f3ede540",
+    "verified_files": 15,
+    "all_match": true
+  },
+  "record_counts": {
+    "closure": 30,
+    "physics": 1192,
+    "policy": 149,
+    "inference_request_response_lines": 298,
+    "requests": 149,
+    "responses": 149
+  },
+  "chronology": {
+    "consecutive_indices": true,
+    "eight_physics_steps_per_policy_decision": true,
+    "reset_physics_seconds": 0.25,
+    "policy_physics_seconds": 9.933333333333334,
+    "final_absolute_seconds": 10.183333333333396,
+    "pre_reset_terminal_records": true,
+    "no_pose_or_clock_reset_at_interface": true,
+    "no_additional_seed_attempts": true
+  },
+  "reset": {
+    "physical_admission_recomputed": true,
+    "closure_stability_last10_m": 2.78972046536178e-06,
+    "closure_rotation_last10_rad": 6.937533860058268e-05,
+    "peg_lowest_z_in_hole_frame_before_policy_m": 0.03414450646905633,
+    "frozen_XML_SHA256_independently_regenerated": "c60c33ee11eb4806294aee259f97d987308b23e83da62f2219cbc9950fb195c9",
+    "bilateral_pad_force_all_last10_positive": true,
+    "lstm_initial_h_c_zero": true,
+    "initial_linear_angular_fd_zero": true,
+    "ema_pose_derived_not_all_zero": true,
+    "local_rng_draws_and_gaussian_noise_exact": true,
+    "source_reset_cache_max_abs_error": 1.7149842390651315e-07,
+    "initial_ema": [
+      0.10350957815882689,
+      -0.38119280574131487,
+      0.8020830153517302,
+      0.0,
+      0.0,
+      0.09486275179780135
+    ],
+    "first_clipped_action": [
+      -1.0,
+      1.0,
+      -1.0,
+      0.09105674177408218,
+      0.4455225169658661,
+      -1.0
+    ],
+    "first_ema_after_action": [
+      -0.1171923374729385,
+      -0.10495424459305192,
+      0.4416664122813842,
+      0.01821134835481644,
+      0.08910450339317322,
+      -0.12410979856175892
+    ]
+  },
+  "parity_max_abs_errors": {
+    "raw_request_response": 0.0,
+    "archived_RMS_single_normalization": 0.0,
+    "action_mu_clipping": 0.0,
+    "EMA_float64_equation": 8.940696738513054e-09,
+    "EMA_original_source_float32": 9.536338363425045e-08,
+    "NPZ_vs_inference_and_policy": 2.979726243523828e-08,
+    "h_c_post_forward_saved_storage": 0.0,
+    "raw_observation_original_source_float32": 3.9696693420410156e-05,
+    "velocity_FD_original_source_float32": 3.9696693420410156e-05,
+    "all_1192_target_positions_and_quaternions_vs_original_source_float32": 2.414756906099491e-07
+  },
+  "recurrent_evidence": {
+    "state_shape": [
+      149,
+      2,
+      1,
+      1024
+    ],
+    "post_forward_h_c_match_npz": true,
+    "infer_indices_1_to_149": true,
+    "reset_index_fixed_at_1": true,
+    "LSTM_reset_event_only_step1": true,
+    "limitation": "Per-forward input h/c are owned by the server and not separately logged. Post-forward equality and monotone no-reset counters establish trace consistency, not an independent replay proof of network recurrence internals."
+  },
+  "outcomes": {
+    "original_source_geometric_ever_success": false,
+    "original_source_geometric_terminal_success": false,
+    "all_149_source_predicates_recomputed": true,
+    "physical_candidate_final": false,
+    "contact_quality_success_final": false,
+    "no_success_rate_inference_from_one_failed_adapted_episode": true
+  },
+  "negative_witnesses": {
+    "first_arm_limit_exceedance_over_1e_6_rad": {
+      "physics_step": 76,
+      "policy_step": 10,
+      "episode_simulation_time_s": 0.6333333333333333,
+      "absolute_simulation_time_s": 0.8833333333333326,
+      "value": 0.05629897681559326,
+      "qpos": [
+        1.0635204538808631,
+        0.601457070265294,
+        -0.34854145066333536,
+        -2.3148041590577275,
+        2.9535989768155932,
+        2.9810852806788417,
+        -0.5626460963113358,
+        0.0001009019017843376,
+        -9.899045572057347e-05
+      ]
+    },
+    "first_finger_limit_exceedance_over_1e_6_m": {
+      "physics_step": 61,
+      "policy_step": 8,
+      "episode_simulation_time_s": 0.5083333333333333,
+      "absolute_simulation_time_s": 0.7583333333333331,
+      "value": 6.0925728741157226e-05,
+      "qpos": [
+        0.9970170405812747,
+        0.4403239997249896,
+        -0.5308954300676744,
+        -2.3864083072508455,
+        1.9812405399889736,
+        2.796447517633226,
+        0.023726959450909704,
+        -6.0925728741157226e-05,
+        0.000241336962580893
+      ]
+    },
+    "first_slip_over_1mm": {
+      "physics_step": 3,
+      "policy_step": 1,
+      "episode_simulation_time_s": 0.025,
+      "absolute_simulation_time_s": 0.275,
+      "value": 0.002371751112024027,
+      "qpos": [
+        -0.017716389972967032,
+        0.4488434671051529,
+        -0.016494909003823922,
+        -2.0150408749868833,
+        0.016318958963877687,
+        2.4708238445499906,
+        0.2196638304124205,
+        0.004227325419452256,
+        0.004414355746978127
+      ]
+    },
+    "maximum_arm_joint_limit_violation_rad": 0.3219983716976671,
+    "maximum_finger_joint_limit_violation_m": 0.0008730671048176516,
+    "maximum_all_contact_penetration_m": 0.01691742953223052
+  },
+  "classification": {
+    "independent_evidence_review": "PASS",
+    "task_status": "G4_S2A_PARTIAL",
+    "technical_complete_valid_episode": false,
+    "reason": "149 decisions and 1192 steps were recorded, but independently reconstructed joint-limit excursions fail preregistered continuation gates. Seeds 1002/1003 were correctly not attempted. This is an executed but physically invalid adapted episode, not successful zero-shot transfer."
+  },
+  "limitations": [
+    "Float64 controller port and Float32 original source have quantified observation/target rounding differences; tolerances are review tolerances, not geometry or success relaxation.",
+    "Source torque recomputation needs per-step full Jacobian and mass matrix, which are not retained here; no independent all-step torque equation claim.",
+    "Review used local uncompressed raw files by absolute path and SHA256. The complete lossless gzip/NPZ bundle is subsequently archived under evidence/g4_s/s2a/run_20261026T140338/ with compressed and raw digests in collection.json.",
+    "Collision-free or physical-safety certification is not claimed."
+  ],
+  "audit_script_sha256": "6824a881e316dbf748a10509bc01181f73ea000cdd1d7dc33d4ad77dba310490"
+}

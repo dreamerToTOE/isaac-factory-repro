@@ -1,0 +1,33 @@
+{
+  "checkpoint_sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+  "checkpoint_sha256_at_load": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+  "metadata": {
+    "role": "g2_epoch200_primary",
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+    "sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+    "epoch": 200,
+    "frame": 1638400,
+    "strict_state_dict": true,
+    "frozen_rms_exact": true,
+    "fp32": true,
+    "optimizer_restored": false,
+    "rng_policy": "discard the same Normal.sample as official deterministic Player"
+  },
+  "python_executable": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+  "torch_version": "2.7.0+cu128",
+  "device": "cpu",
+  "state_shape": [
+    2,
+    1,
+    1024
+  ],
+  "rms_unchanged": true,
+  "eval_mode": true,
+  "all_parameters_frozen": true,
+  "normalization": "unchanged FrozenPolicy.infer exactly once",
+  "action": "deterministic mu, clipped to [-1,1]",
+  "rng": "torch.manual_seed(reset seed); original discarded Normal.sample consumed",
+  "infer_count": 0,
+  "reset_count": 0,
+  "current_seed": null
+}

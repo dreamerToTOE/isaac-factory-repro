@@ -1,0 +1,211 @@
+"""Read-only numeric review of the one existing S2A execution.
+
+No Torch, actor, MuJoCo, model compilation, physics, or experiment entry point is
+imported. Raw JSONL/NPZ and frozen S1B evidence are the only numeric inputs.
+"""
+import hashlib
+import json
+import math
+from datetime import datetime, timezone
+from pathlib import Path
+import xml.etree.ElementTree as ET
+import numpy as np
+
+REPO = Path(__file__).resolve().parents[3]
+RAW = REPO.parents[1] / 'work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1'
+OUT = REPO / 'evidence/g4_s/s2a/independent_physics_review.json'
+
+def load(path):
+    return json.loads(path.read_text())
+
+def rows(path):
+    return [json.loads(line) for line in path.read_text().splitlines()]
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+def matrix(quaternion):
+    w, x, y, z = quaternion
+    return np.array([[1-2*(y*y+z*z), 2*(x*y-z*w), 2*(x*z+y*w)],
+                     [2*(x*y+z*w), 1-2*(x*x+z*z), 2*(y*z-x*w)],
+                     [2*(x*z-y*w), 2*(y*z+x*w), 1-2*(x*x+y*y)]])
+
+def relative(state):
+    hand = matrix(state['tcp_quaternion_wxyz'])
+    peg = matrix(state['peg_quaternion_wxyz'])
+    position = hand.T @ (np.asarray(state['peg_root_position']) - state['tcp_position_world'])
+    return position, hand.T @ peg
+
+def angle(a, b):
+    return float(math.acos(np.clip((np.trace(a.T @ b)-1)/2, -1, 1)))
+
+def pad_forces(state):
+    forces = {'left_finger': 0., 'right_finger': 0.}
+    for contact in state['contacts']:
+        if 'peg_collision' not in (contact['geom1'], contact['geom2']):
+            continue
+        other = contact['geom2'] if contact['geom1'] == 'peg_collision' else contact['geom1']
+        for side in forces:
+            if other in {side + '_geom_' + str(k) for k in range(3, 8)}:
+                forces[side] += max(0., contact['normal_force_n'])
+    return forces
+
+def limits(q, bounds):
+    return np.maximum(np.maximum(bounds[:, 0]-q, q-bounds[:, 1]), 0.)
+
+def witness(row, values=None):
+    return {'policy_step': row['policy_step'], 'episode_physics_step': row['physics_step'],
+            'episode_elapsed_simulation_s': row['physics_step']/120,
+            'absolute_MuJoCo_data_time_s': row['state']['time_s'],
+            'values': values, 'state': row['state']}
+
+summary = load(RAW/'summary.json')
+manifest = load(RAW/'artifact_manifest.json')
+assert all(sha(Path(path)) == digest for path, digest in manifest.items())
+assert len(list(RAW.glob('seed_*/attempt.json'))) == 1
+episode = RAW/'seed_1001'
+policy = rows(episode/'policy.jsonl')
+physics = rows(episode/'physics.jsonl')
+closure = rows(episode/'closure.jsonl')
+inference = rows(episode/'inference.jsonl')
+reset = load(episode/'reset_admission.json')
+interface_reset = load(episode/'interface_reset.json')
+result = load(episode/'result.json')
+trace = np.load(episode/'actor_trace.npz')
+baseline_path = REPO/'evidence/g4_s/s1b/environment_no_policy_final.json'
+baseline = load(baseline_path)
+arm_ids = baseline['mapping']['arm_qpos_ids']
+finger_ids = baseline['mapping']['finger_qpos_ids']
+arm_bounds = np.asarray(baseline['mapping']['arm_joint_limits'])
+panda_path = Path('/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/panda.xml')
+panda_xml = ET.parse(panda_path)
+finger_bounds = np.asarray([list(map(float, panda_xml.find(".//default[@class='finger']/joint").get('range').split()))]*2)
+
+assert len(policy) == 149 and len(physics) == 1192 and len(closure) == 30
+assert [row['policy_step'] for row in policy] == list(range(1, 150))
+assert [row['physics_step'] for row in physics] == list(range(1, 1193))
+assert sum(row['event'] == 'request' for row in inference) == 149
+assert sum(row['event'] == 'response' for row in inference) == 149
+for key in ('observation', 'normalized', 'mu', 'clipped', 'ema'):
+    assert np.array_equal(trace[key], np.asarray([row[key] for row in policy], dtype=np.float32))
+responses = [row['actor'] for row in inference if row['event'] == 'response']
+for key in ('h', 'c'):
+    assert np.array_equal(trace[key], np.asarray([row[key] for row in responses], dtype=np.float32))
+
+arm_violation = [limits(np.asarray(row['state']['qpos'])[arm_ids], arm_bounds) for row in physics]
+finger_violation = [limits(np.asarray(row['state']['qpos'])[finger_ids], finger_bounds) for row in physics]
+for row, arm, finger in zip(physics, arm_violation, finger_violation):
+    assert float(max(arm)) == row['state']['s2a']['arm_joint_limit_violation_rad']
+    assert float(max(finger)) == row['state']['s2a']['finger_joint_limit_violation_m']
+arm_max = max(float(max(value)) for value in arm_violation)
+finger_max = max(float(max(value)) for value in finger_violation)
+first_arm_index = next(i for i, value in enumerate(arm_violation) if max(value) > 1e-6)
+first_finger_index = next(i for i, value in enumerate(finger_violation) if max(value) > 1e-6)
+max_arm_index = max(range(len(physics)), key=lambda i: max(arm_violation[i]))
+max_finger_index = max(range(len(physics)), key=lambda i: max(finger_violation[i]))
+
+official = []
+for row in policy:
+    state = row['control_substeps'][-1]['physical_state_after']
+    delta = np.asarray(state['peg_root_position'], dtype=np.float32)-np.asarray(state['hole_root_position'], dtype=np.float32)
+    success = bool(np.linalg.norm(delta[:2]) < np.float32(.0025) and delta[2] < np.float32(.025*.04))
+    assert success == row['official_geometric_success']
+    official.append(success)
+
+relative_reference = relative(interface_reset['initial']['state'])
+relative_positions = [relative(row['state'])[0] for row in closure]
+relative_rotations = [relative(row['state'])[1] for row in closure]
+closure_position_stability = max(float(np.linalg.norm(value-relative_positions[-1])) for value in relative_positions[-10:])
+closure_rotation_stability = max(angle(value, relative_rotations[-1]) for value in relative_rotations[-10:])
+assert math.isclose(closure_position_stability, reset['stability_m'], abs_tol=1e-12)
+assert math.isclose(closure_rotation_stability, reset['angular_stability_rad'], abs_tol=1e-10)
+closure_bilateral = all(all(force > 1e-6 for force in pad_forces(row['state']).values()) for row in closure[-10:])
+assert closure_bilateral
+first_nonbilateral = next(row for row in physics if not all(force > 1e-6 for force in pad_forces(row['state']).values()))
+slips = [float(np.linalg.norm(relative(row['state'])[0]-relative_reference[0])) for row in physics]
+first_slip_index = next(i for i, value in enumerate(slips) if value > .001)
+all_penetrations = [max((max(0., -c['distance_m']) for c in row['state']['contacts']), default=0.) for row in physics]
+assembly_penetrations = [max((max(0., -c['distance_m']) for c in row['state']['contacts']
+                              if 'peg_collision' in (c['geom1'], c['geom2'])
+                              and any(name.startswith('hole_') for name in (c['geom1'], c['geom2']))), default=0.) for row in physics]
+peak_penetration_index = int(np.argmax(all_penetrations))
+peak_contact = min(physics[peak_penetration_index]['state']['contacts'], key=lambda c: c['distance_m'])
+peak_qvel_index = max(range(len(physics)), key=lambda i: max(abs(np.asarray(physics[i]['state']['qvel'])[arm_ids])))
+max_arm_qvel = float(max(abs(np.asarray(physics[peak_qvel_index]['state']['qvel'])[arm_ids])))
+assert arm_max == result['maximum_arm_joint_limit_violation_rad']
+assert finger_max == result['maximum_finger_joint_limit_violation_m']
+assert max(all_penetrations) == result['maximum_episode_all_contact_penetration_m']
+assert max(assembly_penetrations) == result['maximum_episode_peg_hole_penetration_m']
+assert math.isclose(max(slips), result['maximum_peg_hand_slip_m'], abs_tol=1e-12)
+assert max_arm_qvel == result['maximum_arm_qvel_rad_s']
+
+inputs = [Path(path) for path in manifest] + [RAW/'artifact_manifest.json', baseline_path, panda_path,
+          REPO/'scripts/g4s2a_smoke.py', REPO/'scripts/g4s2a_inference.py',
+          REPO/'scripts/g4s1b_env.py', REPO/'scripts/g4s1b_contract.py', Path(__file__)]
+review = {
+    'task': 'G4-S2A', 'reviewer': 'independent_physics_audit',
+    'generated_utc': datetime.now(timezone.utc).isoformat(),
+    'review_method': 'Read existing JSONL/NPZ only; independently sum named pad forces, reconstruct hand-relative transforms from raw WXYZ quaternions, recompute committed Panda joint bounds and all contact extrema, recompute original FP32 geometric success at each pre-reset policy boundary.',
+    'new_actor_calls': 0, 'new_physics_steps': 0, 'model_compilations': 0,
+    'input_hashes': {str(path): {'sha256': sha(path), 'bytes': path.stat().st_size} for path in inputs},
+    'evidence_integrity': {'raw_manifest_all_hashes_match': True, 'NPZ_matches_policy_and_inference_JSONL': True,
+        'policy_steps_sequential': True, 'physics_steps_sequential': True,
+        'counts': {'attempts': 1, 'policy_steps': 149, 'physics_steps': 1192, 'closure_physics_steps': 30,
+                   'inference_requests': 149, 'inference_responses': 149},
+        'actor_trace_shapes': {key: list(trace[key].shape) for key in trace.files}},
+    'clock_semantics': {'physics_dt_s': 1/120, 'policy_decimation': 8,
+        'closure_time_s': 30/120, 'policy_episode_time_s': 1192/120,
+        'MuJoCo_data_time_at_episode_start_s': interface_reset['initial']['state']['time_s'],
+        'MuJoCo_data_time_at_episode_end_s': physics[-1]['state']['time_s'],
+        'policy_loop_wall_s': result['wall_clock_s'], 'complete_experiment_wall_s': summary['wall_s'],
+        'reported_command_submit_hz': result['command_submit_hz'],
+        'command_submit_clock_limit': 'Host timestamp immediately before ReferenceRunner.step_reference_action; controller-admission cadence, not directly instrumented motor-application timestamps.',
+        'wall_time_not_simulation_time': True},
+    'reset_review': {'admission': reset['admission'], 'last10_bilateral_independently_verified': closure_bilateral,
+        'position_stability_last10_m': closure_position_stability, 'orientation_stability_last10_rad': closure_rotation_stability,
+        'final_pad_forces_n': pad_forces(closure[-1]['state']), 'joint_violation_at_admission': reset['q_limit_violation'],
+        'entire_peg_above_hole_at_admission': reset['starts_above_hole'],
+        'nonpad_interference_at_admission': reset['interference_bodies'],
+        'maximum_closure_contact_penetration_m': reset['maximum_closure_all_contact_penetration_m'],
+        'initial_LSTM_h_c_zero': all(np.count_nonzero(np.asarray(interface_reset['lstm'][key])) == 0 for key in ('h', 'c')),
+        'reset_difference': 'Hole/support fixed pose; source-like TCP xyz/yaw and held-peg draws; NumPy RNG; 30 zero-arm-torque closure steps. This is adapted reset, not matched PhysX initialization.'},
+    'outcomes': {'official_ever_success': any(official), 'official_terminal_success': official[-1],
+        'official_first_success': None, 'physical_insertion_candidate': result['physical_insertion_candidate'],
+        'contact_quality_validated_success': result['contact_quality_validated_success'],
+        'termination': result['termination_reason'], 'integration_runtime_exception': result['fault'],
+        'technically_valid_episode_denominator': 0, 'attempted_episode_denominator': 1,
+        'next_seeds_attempted': False, 'engineering_status': 'G4_S2A_PARTIAL'},
+    'extrema': {'maximum_arm_joint_limit_violation_rad': arm_max,
+        'maximum_finger_joint_limit_violation_m': finger_max,
+        'maximum_arm_qvel_rad_s': max_arm_qvel,
+        'maximum_all_contact_penetration_m': max(all_penetrations),
+        'maximum_peg_hole_contact_penetration_m': max(assembly_penetrations),
+        'maximum_peg_hand_translation_slip_m': max(slips)},
+    'witnesses': {
+        'first_arm_limit_failure': witness(physics[first_arm_index], arm_violation[first_arm_index].tolist()),
+        'first_finger_limit_failure': witness(physics[first_finger_index], finger_violation[first_finger_index].tolist()),
+        'maximum_arm_limit_failure': witness(physics[max_arm_index], arm_violation[max_arm_index].tolist()),
+        'maximum_finger_limit_failure': witness(physics[max_finger_index], finger_violation[max_finger_index].tolist()),
+        'first_slip_above_1mm_diagnostic_only': witness(physics[first_slip_index], slips[first_slip_index]),
+        'first_nonbilateral_pad_contact': witness(first_nonbilateral, pad_forces(first_nonbilateral['state'])),
+        'maximum_all_contact_penetration': witness(physics[peak_penetration_index], peak_contact),
+        'maximum_arm_qvel': witness(physics[peak_qvel_index], max_arm_qvel),
+        'first_eight_joint7_states': [{'physics_step': row['physics_step'],
+            'joint7_qvel_rad_s': row['state']['qvel'][6],
+            'joint7_requested_torque_nm': row['state']['requested_arm_torque_nm'][6],
+            'joint7_integrating_actuator_torque_nm': row['state']['integration_actuation']['arm_actuator_force_nm'][6]}
+            for row in physics[:8]]},
+    'interpretation': {'observed': 'Early alternating arm velocity/torque saturation and loss of bilateral grasp precede the first joint-limit gate failures. Peak whole-episode penetration is support/hand, not peg/hole.',
+        'hypothesis_not_isolated_proof': 'Adapted Panda dynamics and physical-rate PD/discretization/actuator mismatch are plausible explanations. This experiment does not prove a PPO algorithm defect or a single causal mechanism.',
+        'not_a_success_probability_estimate': True,
+        'not_exact_Factory_reconstruction': True,
+        'joint_limit_verification': 'Independent raw-qpos check against frozen baseline arm bounds and pinned Panda finger defaults.',
+        'free_peg_structure_scope': 'Frozen S1B source and recorded structural gate; no fresh simulator compilation in this review.',
+        'remaining_limits': ['No matched cross-engine initial state/RNG parity', 'No controlled ablation of inertia/contact/controller mismatch',
+             'Only one smoke attempt and zero fully gate-valid episodes', 'Actor subprocess peak RSS was not measured by this physics audit',
+             'No S2B, additional seeds, policy or physics reruns']} }
+with OUT.open('x') as stream:
+    json.dump(review, stream, ensure_ascii=False, indent=2, allow_nan=False)
+    stream.write('\n')
+print(json.dumps({'output': str(OUT), 'sha256': sha(OUT), 'status': review['outcomes']['engineering_status'],
+                  'counts': review['evidence_integrity']['counts'], 'independent_extrema': review['extrema']}))

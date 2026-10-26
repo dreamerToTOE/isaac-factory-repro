@@ -1,0 +1,28 @@
+"""Offline plot of recorded physics only; no actor/simulator import."""
+from pathlib import Path
+import gzip,json
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+import numpy as np
+root=Path(__file__).resolve().parent
+rows=[json.loads(x) for x in gzip.open(root/'run_20261026T140338/seed_1001/physics.jsonl.gz','rt')]
+rows=rows[:16]
+t=np.array([r['physics_step']/120 for r in rows])*1000
+v=[r['state']['qvel'][6] for r in rows]
+requested=[r['state']['requested_arm_torque_nm'][6] for r in rows]
+actual=[r['state']['integration_actuation']['arm_actuator_force_nm'][6] for r in rows]
+slip=[r['state']['s2a']['peg_hand_slip_m']*1000 for r in rows]
+fig,ax=plt.subplots(3,1,figsize=(8,7),sharex=True,layout='constrained')
+ax[0].plot(t,v,'o-',label='Joint 7 velocity');ax[0].set_ylabel('rad/s')
+ax[1].plot(t,requested,'o-',label='Requested torque');ax[1].plot(t,actual,'s-',label='Integrated motor torque')
+ax[1].axhline(12,color='gray',linestyle=':');ax[1].axhline(-12,color='gray',linestyle=':');ax[1].set_ylabel('Nm')
+ax[2].plot(t,slip,'o-',label='Peg-hand translation slip');ax[2].axhline(1,color='gray',linestyle=':',label='1 mm marker')
+ax[2].set_ylabel('mm');ax[2].set_xlabel('Time after policy start (ms); reset preparation excluded')
+for a in ax:
+ a.axvline(4/120*1000,color='firebrick',linestyle='--',alpha=.7,label='First bilateral contact loss' if a is ax[0] else None)
+ a.grid(alpha=.25);a.legend(loc='best',fontsize=8)
+fig.suptitle('G4-S2A seed 1001: early oscillation and grasp loss (recorded trace)')
+out=root/'failure_onset.png'
+if out.exists():raise FileExistsError(out)
+fig.savefig(out,dpi=150)

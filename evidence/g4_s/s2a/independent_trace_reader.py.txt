@@ -1,0 +1,199 @@
+"""Read-only independent audit of saved S2A records; no policy/physics calls."""
+import hashlib, importlib.util, json, math, sys
+from pathlib import Path
+from types import SimpleNamespace
+import xml.etree.ElementTree as ET
+import numpy as np
+import torch
+
+REPO=Path('/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2')
+RUN=Path('/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1')
+E=RUN/'seed_1001'
+sys.path.insert(0,str(REPO))
+spec=importlib.util.spec_from_file_location('s1b_source_oracles',REPO/'tests/test_g4s1b_contract.py')
+oracle_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(oracle_module)
+ns=oracle_module.source_oracle()
+tensor=oracle_module.tensor
+
+def read(path): return json.loads(Path(path).read_text())
+def rows(path): return [json.loads(line) for line in Path(path).read_text().splitlines()]
+def sha(path): return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+def maxerr(a,b): return float(np.max(np.abs(np.asarray(a,dtype=float)-np.asarray(b,dtype=float))))
+def finite(value):
+    if isinstance(value,dict): return all(finite(v) for v in value.values())
+    if isinstance(value,(list,tuple)): return all(finite(v) for v in value)
+    if isinstance(value,(int,float)): return math.isfinite(value)
+    return True
+
+summary=read(RUN/'summary.json');result=read(E/'result.json');reset=read(E/'reset_admission.json');interface=read(E/'interface_reset.json')
+closure=rows(E/'closure.jsonl');physics=rows(E/'physics.jsonl');policy=rows(E/'policy.jsonl');inference=rows(E/'inference.jsonl')
+trace=np.load(E/'actor_trace.npz');manifest=read(RUN/'artifact_manifest.json')
+assert all(Path(p).is_file() and sha(p)==digest for p,digest in manifest.items())
+assert [x['closure_step'] for x in closure]==list(range(1,31))
+assert [x['physics_step'] for x in physics]==list(range(1,1193))
+assert [x['policy_step'] for x in policy]==list(range(1,150))
+assert len(inference)==298
+assert all(x['policy_step']==(i//8)+1 for i,x in enumerate(physics))
+assert all(abs(x['state']['time_s']-(i+1)/120)<1e-12 for i,x in enumerate(closure))
+assert all(abs(x['state']['time_s']-(30+i+1)/120)<1e-11 for i,x in enumerate(physics))
+assert all(abs(x['simulation_time_s']-(i+1)*8/120)<1e-11 for i,x in enumerate(policy))
+assert all(x['state_is_pre_reset'] for x in policy)
+assert maxerr(interface['initial']['state']['qpos'],closure[-1]['state']['qpos'])==0
+assert interface['initial']['state']['time_s']==closure[-1]['state']['time_s']
+assert all(np.count_nonzero(np.asarray(interface['lstm'][k]))==0 for k in ('h','c'))
+assert interface['initial']['lstm_reset_pending'] and np.count_nonzero(np.asarray(interface['initial']['observation'][7:13]))==0
+assert all(finite(x) for x in closure+physics+policy+inference)
+
+archived=read(REPO/'evidence/g4_i/i0/checkpoint_audit.json')
+rms=archived['checkpoints']['g2_epoch200_primary']['rms']
+mean=torch.tensor(rms['running_mean'],dtype=torch.float32)
+var=torch.tensor(rms['running_var'],dtype=torch.float32)
+normalization_error=0.;ema_error=0.;source_ema_error=0.;trace_error=0.;target_error=0.;observation_error=0.;request_error=0.
+state_store_error=0.;source_reset_error=0.;fd_error=0.
+initial=interface['initial'];noise=np.asarray(initial['episode_noise_m']);fixed_tip=np.array([.6,0.,.075])
+cache=np.asarray(initial['ema_cache'],dtype=np.float64)
+proxy=oracle_module.action_proxy(initial['state']['tcp_position_world'],initial['state']['tcp_quaternion_wxyz'],cache,fixed_tip+noise)
+proxy.fixed_pos_obs_frame=tensor(fixed_tip);proxy.init_fixed_pos_obs_noise=tensor(noise)
+ns['reset_action_cache_oracle'](proxy)
+source_reset_error=maxerr(cache,proxy.actions.numpy()[0])
+assert source_reset_error<4e-7
+
+for i,row in enumerate(policy):
+    request,response=inference[2*i:2*i+2];actor=response['actor']
+    assert request['event']=='request' and response['event']=='response'
+    assert request['policy_step']==response['policy_step']==i+1
+    request_error=max(request_error,maxerr(request['observation'],actor['observation']))
+    request_error=max(request_error,maxerr(actor['observation'],row['observation']))
+    assert actor['infer_index']==actor['infer_count']==i+1 and actor['reset_index']==1
+    assert actor['rms_unchanged'] and actor['consumed_discarded_sample']
+    x=torch.tensor(row['observation'],dtype=torch.float32)
+    expected_norm=((x-mean)/(var+1e-5).sqrt()).clamp(-5,5)
+    normalization_error=max(normalization_error,maxerr(expected_norm.numpy(),row['normalized']))
+    assert np.array_equal(np.asarray(actor['clipped'],dtype=np.float32),np.clip(np.asarray(actor['mu'],dtype=np.float32),-1,1))
+    expected_ema=.8*cache+.2*np.asarray(actor['clipped'],dtype=np.float32)
+    ema_error=max(ema_error,maxerr(expected_ema,row['ema']))
+    proxy=oracle_module.action_proxy([0,0,0],[1,0,0,0],cache,[0,0,0])
+    proxy.reset_buf=torch.zeros(1,dtype=torch.bool)
+    ns['_pre_physics_step'](proxy,tensor(actor['clipped']))
+    source_ema_error=max(source_ema_error,maxerr(proxy.actions.numpy()[0],row['ema']))
+    for key in ('observation','normalized','mu','clipped','h','c'):
+        trace_error=max(trace_error,maxerr(trace[key][i],actor[key]))
+    trace_error=max(trace_error,maxerr(trace['ema'][i],row['ema']))
+    state_store_error=max(state_store_error,maxerr(trace['h'][i],actor['h']),maxerr(trace['c'][i],actor['c']))
+    pre=initial['state'] if i==0 else physics[i*8-1]['state']
+    if i==0: linear=np.zeros(3);angular=np.zeros(3)
+    else:
+        old=physics[i*8-2]['state']
+        fd_proxy=SimpleNamespace(fingertip_midpoint_pos=tensor(pre['tcp_position_world']),prev_fingertip_pos=tensor(old['tcp_position_world']),
+            fingertip_midpoint_quat=tensor(pre['tcp_quaternion_wxyz']),prev_fingertip_quat=tensor(old['tcp_quaternion_wxyz']))
+        ns['physics_fd_oracle'](fd_proxy,1/120)
+        linear,angular=fd_proxy.ee_linvel_fd.numpy()[0],fd_proxy.ee_angvel_fd.numpy()[0]
+        fd_error=max(fd_error,maxerr(linear,row['observation'][7:10]),maxerr(angular,row['observation'][10:13]))
+    obs_proxy=oracle_module.action_proxy(pre['tcp_position_world'],pre['tcp_quaternion_wxyz'],cache,fixed_tip)
+    obs_proxy.init_fixed_pos_obs_noise=tensor(noise);obs_proxy.ee_linvel_fd=tensor(linear);obs_proxy.ee_angvel_fd=tensor(angular)
+    for attr,value in [('fingertip_midpoint_linvel',[0.]*3),('fingertip_midpoint_angvel',[0.]*3),('joint_pos',[0.]*9),('held_pos',[0.]*3),('held_quat',[1.,0.,0.,0.]),('fixed_pos',[0.]*3),('fixed_quat',[1.,0.,0.,0.]),('task_prop_gains',oracle_module.c.KP)]: setattr(obs_proxy,attr,tensor(value))
+    observed=ns['_get_observations'](obs_proxy)['policy'].numpy()[0]
+    observation_error=max(observation_error,maxerr(observed,row['observation']))
+    for j,sub in enumerate(row['control_substeps']):
+        index=i*8+j;physical=physics[index]
+        assert abs(sub['time_before_s']-(30+index)/120)<1e-11
+        assert sub['physical_state_after']['time_s']==physical['state']['time_s']
+        assert maxerr(sub['physical_state_after']['qpos'],physical['state']['qpos'])==0
+        assert maxerr(sub['physical_state_after']['qvel'],physical['state']['qvel'])==0
+        a=oracle_module.action_proxy(sub['position_before_m'],sub['quaternion_before_wxyz'],row['ema'],fixed_tip+noise)
+        ns['_apply_action'](a)
+        target_error=max(target_error,maxerr(a.ctrl_target_fingertip_midpoint_pos.numpy()[0],sub['target_position_m']),maxerr(a.ctrl_target_fingertip_midpoint_quat.numpy()[0],sub['target_quaternion_wxyz']))
+        assert maxerr(physical['target']['position_target'],sub['target_position_m'])==0
+    assert row['lstm_reset_event']==(i==0)
+    assert row['lstm_state_in_npz_row']==i
+    cache=np.asarray(row['ema'],dtype=float)
+
+print({"request_error":request_error,"trace_error":trace_error,"state_store_error":state_store_error,"normalization_error":normalization_error,"ema_error":ema_error,"source_ema_error":source_ema_error,"observation_error":observation_error,"target_error":target_error,"fd_error":fd_error})
+assert request_error==state_store_error==normalization_error==0
+assert trace_error<1e-7
+assert ema_error<1e-7 and source_ema_error<4e-7
+assert observation_error<1e-4 and target_error<1e-6
+
+# Independently reconstruct the once-per-episode reset stream, not the actor RNG.
+rng=np.random.default_rng(1001)
+expected_xyz=rng.uniform(-1,1,3)*[.02,.02,.01];expected_yaw=float(rng.uniform(-.785,.785));expected_held=rng.uniform(-1,1,3)*[.003,0,.003];expected_noise=rng.normal(0,.001,3)
+draw=read(E/'reset_draw.json')
+assert maxerr(draw['tcp_position_offset_m'],expected_xyz)==0 and draw['tcp_yaw_rad']==expected_yaw
+assert maxerr(draw['held_noise_local_m'],expected_held)==0 and maxerr(noise,expected_noise)==0
+
+# Original geometric success is independently executed on saved FP32 positions.
+source=archived['source_files']['factory_env.py'];tree=oracle_module.checked_tree(source['path'],source['sha256'])
+import ast
+cls=next(n for n in tree.body if isinstance(n,ast.ClassDef) and n.name=='FactoryEnv')
+node=next(n for n in cls.body if isinstance(n,ast.FunctionDef) and n.name=='_get_curr_successes')
+success_ns={'torch':torch};exec(compile(ast.fix_missing_locations(ast.Module([node],type_ignores=[])),source['path'],'exec'),success_ns)
+success=[]
+for row in policy:
+    state=row['control_substeps'][-1]['physical_state_after']
+    proxy=SimpleNamespace(num_envs=1,device='cpu',held_base_pos=tensor(state['peg_root_position']),target_held_base_pos=tensor(state['hole_root_position']),cfg_task=SimpleNamespace(name='peg_insert',fixed_asset_cfg=SimpleNamespace(height=.025)))
+    outcome=bool(success_ns['_get_curr_successes'](proxy,.04,False)[0]);success.append(outcome)
+    assert outcome==row['official_geometric_success']
+assert not any(success)
+
+# Parse joint limits from the pinned Apache Menagerie source, without compiling.
+panda=ET.parse('/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/panda.xml').getroot()
+arm_limits=np.array([list(map(float,panda.find(f".//joint[@name='joint{i}']").get('range',panda.find(".//default[@class='panda']/joint").get('range')).split())) for i in range(1,8)])
+finger_default=panda.find(".//default[@class='finger']/joint")
+finger_range=list(map(float,finger_default.get('range').split()))
+limits=np.r_[arm_limits,np.array([finger_range,finger_range])]
+arm=[];finger=[]
+for row in physics:
+    q=np.asarray(row['state']['qpos'][:9]);violation=np.maximum(0,np.maximum(limits[:,0]-q,q-limits[:,1]))
+    arm.append(float(np.max(violation[:7])));finger.append(float(np.max(violation[7:])))
+assert abs(max(arm)-result['maximum_arm_joint_limit_violation_rad'])<1e-14
+assert abs(max(finger)-result['maximum_finger_joint_limit_violation_m'])<1e-14
+
+def witness(values,threshold):
+    index=next((i for i,v in enumerate(values) if v>threshold),None)
+    if index is None:return None
+    row=physics[index]
+    return {'physics_step':index+1,'policy_step':row['policy_step'],'episode_simulation_time_s':(index+1)/120,'absolute_simulation_time_s':row['state']['time_s'],'value':values[index],'qpos':row['state']['qpos'][:9]}
+peak=max((max(0.,-c['distance_m']) for row in physics for c in row['state']['contacts']),default=0)
+assert abs(peak-result['maximum_episode_all_contact_penetration_m'])<1e-14
+assert reset['admission']=='PASS' and all(all(v>1e-6 for v in row['pad_force_n'].values()) for row in closure[-10:])
+relative=np.array([row['relative_peg_hand_m'] for row in closure]);rotations=np.array([row['relative_peg_hand_rotation'] for row in closure])
+closure_stability=max(float(np.linalg.norm(v-relative[-1])) for v in relative[-10:])
+closure_rotation=max(float(math.acos(np.clip((np.trace(v.T@rotations[-1])-1)/2,-1,1))) for v in rotations[-10:])
+assert closure_stability<=.001 and closure_rotation<=.05
+assert abs(closure_stability-reset['stability_m'])<1e-14 and abs(closure_rotation-reset['angular_stability_rad'])<1e-12
+assert all(not row['interference_bodies'] for row in closure[-10:])
+q=np.array(closure[-1]['state']['qpos'][:9]);assert np.max(np.maximum(0,np.maximum(limits[:,0]-q,q-limits[:,1])))==0
+# XML generation reads independent licensed files but does not load/step MuJoCo.
+from scripts.g4s1b_env import model_xml,EnvironmentConfig
+xml_text=model_xml(EnvironmentConfig());xml=ET.fromstring(xml_text)
+assert hashlib.sha256(xml_text.encode()).hexdigest()=='c60c33ee11eb4806294aee259f97d987308b23e83da62f2219cbc9950fb195c9'
+assert xml.find(".//body[@name='peg']/freejoint") is not None and not xml.findall('.//weld')
+final=closure[-1]['state'];w,x,y,z=final['peg_quaternion_wxyz'];axis=np.array([2*(x*z+w*y),2*(y*z-w*x),1-2*(x*x+y*y)])
+root=np.array(final['peg_root_position'])-np.array(final['hole_root_position'])
+min_z=min(root[2],root[2]+.05*axis[2])-.003993*math.sqrt(max(0,1-axis[2]**2))
+assert min_z>.025 and final['tcp_position_world'][2]>.075
+
+assert summary['status']=='G4_S2A_PARTIAL' and summary['attempted_seed_denominator']==1
+assert summary['completed_valid_episode_denominator']==0 and not (RUN/'seed_1002').exists() and not (RUN/'seed_1003').exists()
+
+out={
+ 'task':'G4-S2A','review':'independent read-only saved-trace review','run_directory':str(RUN),
+ 'reviewer_scope':{'new_actor_forwards':0,'new_physics_steps':0,'checkpoint_loads':0,'raw_evidence_modified':False,'isaac_ros_or_physical_commands':False},
+ 'method':'Saved traces checked against unmodified SHA-pinned Factory AST CPU source oracles, archived RMS, independent clock arithmetic, pinned Menagerie joint ranges and raw file digests. No trajectory replay.',
+ 'source_oracles':{v['path']:v['sha256'] for k,v in archived['source_files'].items() if k in ('factory_env.py','factory_control.py')},
+ 'rms_archive':{'path':str(REPO/'evidence/g4_i/i0/checkpoint_audit.json'),'sha256':sha(REPO/'evidence/g4_i/i0/checkpoint_audit.json')},
+ 'manifest':{'path':str(RUN/'artifact_manifest.json'),'sha256':sha(RUN/'artifact_manifest.json'),'verified_files':len(manifest),'all_match':True},
+ 'record_counts':{'closure':len(closure),'physics':len(physics),'policy':len(policy),'inference_request_response_lines':len(inference),'requests':149,'responses':149},
+ 'chronology':{'consecutive_indices':True,'eight_physics_steps_per_policy_decision':True,'reset_physics_seconds':.25,'policy_physics_seconds':1192/120,'final_absolute_seconds':physics[-1]['state']['time_s'],'pre_reset_terminal_records':True,'no_pose_or_clock_reset_at_interface':True,'no_additional_seed_attempts':True},
+ 'reset':{'physical_admission_recomputed':True,'closure_stability_last10_m':closure_stability,'closure_rotation_last10_rad':closure_rotation,'peg_lowest_z_in_hole_frame_before_policy_m':min_z,'frozen_XML_SHA256_independently_regenerated':hashlib.sha256(xml_text.encode()).hexdigest(),'bilateral_pad_force_all_last10_positive':True,'lstm_initial_h_c_zero':True,'initial_linear_angular_fd_zero':True,'ema_pose_derived_not_all_zero':True,'local_rng_draws_and_gaussian_noise_exact':True,'source_reset_cache_max_abs_error':source_reset_error,'initial_ema':initial['ema_cache'],'first_clipped_action':policy[0]['clipped'],'first_ema_after_action':policy[0]['ema']},
+ 'parity_max_abs_errors':{'raw_request_response':request_error,'archived_RMS_single_normalization':normalization_error,'action_mu_clipping':0.,'EMA_float64_equation':ema_error,'EMA_original_source_float32':source_ema_error,'NPZ_vs_inference_and_policy':trace_error,'h_c_post_forward_saved_storage':state_store_error,'raw_observation_original_source_float32':observation_error,'velocity_FD_original_source_float32':fd_error,'all_1192_target_positions_and_quaternions_vs_original_source_float32':target_error},
+ 'recurrent_evidence':{'state_shape':[149,2,1,1024],'post_forward_h_c_match_npz':True,'infer_indices_1_to_149':True,'reset_index_fixed_at_1':True,'LSTM_reset_event_only_step1':True,'limitation':'Per-forward input h/c are owned by the server and not separately logged. Post-forward equality and monotone no-reset counters establish trace consistency, not an independent replay proof of network recurrence internals.'},
+ 'outcomes':{'original_source_geometric_ever_success':False,'original_source_geometric_terminal_success':False,'all_149_source_predicates_recomputed':True,'physical_candidate_final':False,'contact_quality_success_final':False,'no_success_rate_inference_from_one_failed_adapted_episode':True},
+ 'negative_witnesses':{'first_arm_limit_exceedance_over_1e_6_rad':witness(arm,1e-6),'first_finger_limit_exceedance_over_1e_6_m':witness(finger,1e-6),'first_slip_over_1mm':witness([r['state']['s2a']['peg_hand_slip_m'] for r in physics],.001),'maximum_arm_joint_limit_violation_rad':max(arm),'maximum_finger_joint_limit_violation_m':max(finger),'maximum_all_contact_penetration_m':peak},
+ 'classification':{'independent_evidence_review':'PASS','task_status':'G4_S2A_PARTIAL','technical_complete_valid_episode':False,'reason':'149 decisions and 1192 steps were recorded, but independently reconstructed joint-limit excursions fail preregistered continuation gates. Seeds 1002/1003 were correctly not attempted. This is an executed but physically invalid adapted episode, not successful zero-shot transfer.'},
+ 'limitations':['Float64 controller port and Float32 original source have quantified observation/target rounding differences; tolerances are review tolerances, not geometry or success relaxation.','Source torque recomputation needs per-step full Jacobian and mass matrix, which are not retained here; no independent all-step torque equation claim.','Raw evidence is local and referenced by absolute path and SHA256, not embedded in Git.','Collision-free or physical-safety certification is not claimed.'],
+ 'audit_script_sha256':sha(__file__)
+}
+destination=REPO/'evidence/g4_s/s2a/independent_trace_review.json';destination.parent.mkdir(parents=True,exist_ok=True)
+with destination.open('w') as stream:json.dump(out,stream,ensure_ascii=False,indent=2,allow_nan=False);stream.write('\n')
+print(json.dumps({'file':str(destination),'parity':out['parity_max_abs_errors'],'first_arm_limit':out['negative_witnesses']['first_arm_limit_exceedance_over_1e_6_rad'],'first_finger_limit':out['negative_witnesses']['first_finger_limit_exceedance_over_1e_6_m']},ensure_ascii=False))

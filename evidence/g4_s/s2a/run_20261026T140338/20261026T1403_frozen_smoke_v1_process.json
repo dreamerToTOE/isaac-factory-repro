@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/usr/bin/time",
+    "-v",
+    "-o",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1_resource.txt",
+    "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+    "-u",
+    "-m",
+    "scripts.g4s2a_smoke",
+    "--output",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1",
+    "--max-episodes",
+    "3"
+  ],
+  "started_utc": "2026-10-26T14:03:38.338942+00:00",
+  "finished_utc": "2026-10-26T14:03:50.194563+00:00",
+  "exact_wait_returncode": 2,
+  "wall_s": 11.855636263004271,
+  "console_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1_console.log",
+  "console_sha256": "a5abe68d5e41e58c541dc1f838a53db7c68d76d1200c4562e2f0b6a8995c78db",
+  "resource_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a/20261026T1403_frozen_smoke_v1_resource.txt",
+  "environment_overrides": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  }
+}

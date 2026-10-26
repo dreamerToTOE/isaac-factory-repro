@@ -1,0 +1,3 @@
+build mlp: 1024
+RunningMeanStd:  (1,)
+RunningMeanStd:  (19,)

@@ -1,0 +1,30 @@
+{
+  "scripts/audit_g4s2a.py": {
+    "sha256": "f07454f7af848cf01234d40f0bcb4b21cf5c07a72a1792e3f8e473e3eaf0acfe",
+    "bytes": 10792
+  },
+  "scripts/collect_g4s2a.py": {
+    "sha256": "0eec1b2891492503fabb746f8f4a008fd677c07c524eeaf05cf20c12de353a1a",
+    "bytes": 4667
+  },
+  "scripts/g4s2a_inference.py": {
+    "sha256": "9f7aac4a311e67d1a08170a77606ceee83a490e3ca6b251f772e861fd36ae9ca",
+    "bytes": 20217
+  },
+  "scripts/g4s2a_smoke.py": {
+    "sha256": "0a1a365b20c5312e417ddb5f759ee96aa12040b520de4ea84e62ddfc82fa40a8",
+    "bytes": 29031
+  },
+  "tests/test_g4s2a_collection.py": {
+    "sha256": "e13218f3a9505b5514f2f9f7787647f882e2f1beb73d5d82d403036b0ec1131e",
+    "bytes": 2852
+  },
+  "tests/test_g4s2a_inference.py": {
+    "sha256": "e4d65e6271f7fe385d316ed6adac442d5edb0a847047035d3571644d17afdc83",
+    "bytes": 5852
+  },
+  "tests/test_g4s2a_smoke.py": {
+    "sha256": "94dce60e185870e3e1ab52e1905f5b0d4769c5a2f9e3f034a6ccc66561170e31",
+    "bytes": 11151
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "task": "G4-S2A",
+  "start_commit": "5b39da565b4e579aaf600739d2e8fb180222a5da",
+  "generated_utc": "2026-10-26T14:03:38.921667+00:00",
+  "seeds": [
+    1001,
+    1002,
+    1003
+  ],
+  "max_complete_episodes": 3,
+  "max_policy_steps": 149,
+  "max_execution_wall_s": 1200,
+  "checkpoint_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+  "checkpoint_sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+  "xml_sha256": "c60c33ee11eb4806294aee259f97d987308b23e83da62f2219cbc9950fb195c9",
+  "mujoco_version": "3.5.0",
+  "menagerie_commit": "8161bba264d7fa7c99ca301e91e7fb44737676ad",
+  "configuration": {
+    "timestep": 0.008333333333333333,
+    "decimation": 8,
+    "peg_radius": 0.003993,
+    "peg_height": 0.05,
+    "peg_mass": 0.019,
+    "bore_radius": 0.00405,
+    "hole_height": 0.025,
+    "hole_outer_radius": 0.02,
+    "floor_thickness": 0.003,
+    "hole_sectors": 256,
+    "friction": 0.75,
+    "robot_gravity_compensation": true,
+    "peg_gravity_compensation": true,
+    "contact_solref": [
+      0.005,
+      1.0
+    ],
+    "contact_solimp": [
+      0.99,
+      0.999,
+      1e-05
+    ],
+    "solver_iterations": 100,
+    "finger_kp": 7500.0,
+    "finger_kd": 173.0,
+    "finger_force_limit": 40.0,
+    "finger_actuation": "step-implicit-pd"
+  },
+  "reset": "one IK solve from original reset q; original TCP xyz/yaw + held noise ranges; fixed hole/support pose; 30 zero-arm-torque physical finger closure steps",
+  "reset_rng": "NumPy default_rng(seed); TCP xyz, yaw, held xyz, then observation Gaussian; not paired PhysX",
+  "admission": "last10 bilateral pad force>1e-6N; translation stability<=1mm; rotation<=.05rad; limits<=1e-6 numerical tolerance; no peg nonpad interference; entire peg initially above opening; free peg/no weld",
+  "continuation_joint_limits": "whole-episode max arm/finger violation <=1e-6 rad/m; larger excursions stop additional seeds",
+  "contact_quality": "S1B independent candidate + endpoint assembly penetration<=10um AND stricter entire episode peg/hole penetration<=10um; report gripper/all-contact peaks separately",
+  "source_files_sha256": {
+    "scripts/g4s2a_smoke.py": "0a1a365b20c5312e417ddb5f759ee96aa12040b520de4ea84e62ddfc82fa40a8",
+    "scripts/g4s2a_inference.py": "9f7aac4a311e67d1a08170a77606ceee83a490e3ca6b251f772e861fd36ae9ca",
+    "scripts/g4s1b_env.py": "065affe855ef1d3fa016d6ed8166699a9fc7ea1476d3c5302cee1663d56c92dd",
+    "scripts/g4s1b_contract.py": "dcf91aa274a6151f88f36901ce0c4a2feac76d7b8fcfe6586104f906c67d6d6c",
+    "scripts/g4i1_policy.py": "6f22926b1a5acff28a2a0cf774b74cbc3e97d4221b36ee639d744dbe249489e2"
+  },
+  "automatic_retry": false,
+  "training": false,
+  "s2b": false
+}

@@ -1,0 +1,26 @@
+{
+  "task": "G4-S2A",
+  "record_kind": "RETROSPECTIVE_DEVELOPMENT_DISCLOSURE_NOT_RAW_PROBE_LOG",
+  "scope": "Before the formal manifest, implementation development included non-policy FK/IK, peg-frame and physical gripper-closure probes.",
+  "policy_forward_during_development_physics_probes": 0,
+  "formal_policy_experiments_before_registered_run": 0,
+  "observed_development_categories": [
+    "Task TCP IK at nominal and offset poses",
+    "Correction of peg up-axis and flipped fingertip frame",
+    "Checks of physical finger opening, contact and relative peg stability",
+    "Read-only original Factory reset-source inspection"
+  ],
+  "known_probe_limitation": "Several early exploratory probes, including a 13-pose IK grid and repeated nominal seed-1001 physical resets, were not recorded into contemporaneous raw evidence files. Exact total attempt count and total physical-probe wall time are not reconstructible from the saved repository artifacts.",
+  "formal_denominator_rule": "Formal run has exactly one registered attempt per requested seed, stops on the first failed technical continuation gate and never retries. Development resets are not independent PPO episodes or efficacy samples.",
+  "preformal_decision": "Freeze one documented source-like randomized reset protocol, including the original implementable TCP xyz/yaw and held-peg noise ranges. Do not select the successful centered development pose as formal seed1001.",
+  "differences_from_source": [
+    "Fixed hole root/yaw and support rather than randomized fixed-root xyz/yaw",
+    "Single local DLS IK instead of source IK retry/reset controller",
+    "30 physical zero-arm-torque closure steps at unchanged S1B finger actuation rather than original PhysX reset hold controller",
+    "NumPy local random stream rather than paired Torch/PhysX streams"
+  ],
+  "budget_scope": "Formal registered process wall time is independently measured; early exploratory probes lacked a unified contemporaneous stopwatch. Do not claim complete retrospective execution-budget accounting.",
+  "scientific_claim_limit": "Formal protocol is frozen before the first policy-driven MuJoCo episode; it is not an unexamined or preregistered-before-development initialization design.",
+  "no_retry_after_formal_result": true,
+  "stop_after": "G4-S2A"
+}
