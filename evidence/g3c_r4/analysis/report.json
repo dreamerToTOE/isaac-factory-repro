@@ -1,0 +1,1768 @@
+{
+  "analysis_script_identity": {
+    "bytes": 27876,
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/analyze_g3cr4.py",
+    "sha256": "cd70a61508a0ec270ed41c4be231af5831018e28d7773b36b7d3581a40d29ca0"
+  },
+  "audit_exit_error": null,
+  "audit_identity": {
+    "bytes": 302811,
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/train_32env_seed0_400ep_20261025t140016z/supervisor/training_audit.json",
+    "sha256": "98f3486573945e69ede0d96d13477b106094fa88ed6674046a5a497a86d5b77b"
+  },
+  "audit_instrumentation_errors": [],
+  "audit_runtime": {
+    "actions_num": 6,
+    "actor_model": "Network(\n  (value_mean_std): RunningMeanStd()\n  (running_mean_std): RunningMeanStd()\n  (a2c_network): Network(\n    (actor_cnn): Sequential()\n    (critic_cnn): Sequential()\n    (actor_mlp): Sequential(\n      (0): Linear(in_features=1024, out_features=512, bias=True)\n      (1): ELU(alpha=1.0)\n      (2): Linear(in_features=512, out_features=128, bias=True)\n      (3): ELU(alpha=1.0)\n      (4): Linear(in_features=128, out_features=64, bias=True)\n      (5): ELU(alpha=1.0)\n    )\n    (critic_mlp): Sequential()\n    (rnn): LSTMWithDones(\n      (rnn): LSTM(19, 1024, num_layers=2)\n    )\n    (layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)\n    (value): Linear(in_features=64, out_features=1, bias=True)\n    (value_act): Identity()\n    (mu): Linear(in_features=64, out_features=6, bias=True)\n    (mu_act): Identity()\n    (sigma_act): Identity()\n    (sigma): Linear(in_features=64, out_features=6, bias=True)\n  )\n)",
+    "central_value_model": "Network(\n  (value_mean_std): RunningMeanStd()\n  (running_mean_std): RunningMeanStd()\n  (a2c_network): Network(\n    (actor_cnn): Sequential()\n    (critic_cnn): Sequential()\n    (actor_mlp): Sequential(\n      (0): Linear(in_features=1024, out_features=512, bias=True)\n      (1): ELU(alpha=1.0)\n      (2): Linear(in_features=512, out_features=128, bias=True)\n      (3): ELU(alpha=1.0)\n      (4): Linear(in_features=128, out_features=64, bias=True)\n      (5): ELU(alpha=1.0)\n    )\n    (critic_mlp): Sequential()\n    (rnn): LSTMWithDones(\n      (rnn): LSTM(43, 1024, num_layers=2)\n    )\n    (layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)\n    (value): Linear(in_features=64, out_features=1, bias=True)\n    (value_act): Identity()\n  )\n)",
+    "config": {
+      "bounds_loss_coef": 0.0001,
+      "central_value_config": {
+        "clip_value": true,
+        "kl_threshold": 0.008,
+        "learning_rate": "1e-4",
+        "lr_schedule": "adaptive",
+        "mini_epochs": 4,
+        "minibatch_size": 512,
+        "model": {
+          "name": "central_value"
+        },
+        "network": "<rl_games.algos_torch.models.ModelCentralValue object at 0x7ded89558be0>",
+        "normalize_input": true,
+        "truncate_grads": true
+      },
+      "clip_value": true,
+      "critic_coef": 2,
+      "device": "cuda:0",
+      "e_clip": 0.2,
+      "entropy_coef": 0.0,
+      "env_name": "rlgpu",
+      "features": {
+        "observer": "<rl_games.common.algo_observer.IsaacAlgoObserver object at 0x7ded89558760>"
+      },
+      "full_experiment_name": "g3cr4_peginsert_32env_seed0_400ep_20261025t140016z",
+      "gamma": 0.995,
+      "grad_norm": 1.0,
+      "horizon_length": 128,
+      "kl_threshold": 0.008,
+      "learning_rate": 0.0001,
+      "lr_schedule": "adaptive",
+      "max_epochs": 400,
+      "mini_epochs": 4,
+      "minibatch_size": 512,
+      "mixed_precision": true,
+      "multi_gpu": false,
+      "name": "Factory",
+      "network": "<rl_games.algos_torch.models.ModelA2CContinuousLogStd object at 0x7ded89558b20>",
+      "normalize_advantage": true,
+      "normalize_input": true,
+      "normalize_value": true,
+      "num_actors": 32,
+      "player": {
+        "deterministic": false
+      },
+      "ppo": true,
+      "print_stats": true,
+      "reward_shaper": "<rl_games.common.tr_helpers.DefaultRewardsShaper object at 0x7ded89558790>",
+      "save_best_after": 10,
+      "save_frequency": 25,
+      "schedule_type": "standard",
+      "score_to_win": 20000,
+      "seq_length": 128,
+      "tau": 0.95,
+      "train_dir": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory",
+      "truncate_grads": true,
+      "value_bootstrap": true
+    },
+    "horizon_length": 128,
+    "mini_epochs": 4,
+    "minibatch_size": 512,
+    "mixed_precision": true,
+    "num_actors": 32,
+    "obs_shape": [
+      19
+    ],
+    "state_shape": [
+      43
+    ]
+  },
+  "checkpoint_inspections": {
+    "100": {
+      "actor_model_present": true,
+      "all_tensors_and_numeric_arrays_finite": true,
+      "central_value_present": true,
+      "epoch": 100,
+      "frame": 409600,
+      "nonzero_adam_exp_avg_states": 22,
+      "optimizer_state_count": 22,
+      "optimizer_step_max": 3199,
+      "optimizer_step_min": 3199,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_100_rew_331.73917.pth",
+      "selection": {
+        "all_candidates_preserved": true,
+        "all_milestone_candidate_paths": [
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_100_rew_331.73917.pth"
+        ],
+        "basis": "last matching checkpoint save in chronological training audit",
+        "selected_save_event": {
+          "epoch": 100,
+          "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_100_rew_331.73917",
+          "frame": 409600,
+          "operation": "save"
+        }
+      },
+      "sha256": "9ba32c0ae42b1d732beed25bac08083864a86c7ae8d5e2916928bc485b8f898a",
+      "size_bytes": 212889115
+    },
+    "200": {
+      "actor_model_present": true,
+      "all_tensors_and_numeric_arrays_finite": true,
+      "central_value_present": true,
+      "epoch": 200,
+      "frame": 819200,
+      "nonzero_adam_exp_avg_states": 22,
+      "optimizer_state_count": 22,
+      "optimizer_step_max": 6396,
+      "optimizer_step_min": 6396,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_200_rew_331.54846.pth",
+      "selection": {
+        "all_candidates_preserved": true,
+        "all_milestone_candidate_paths": [
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_200_rew_331.54846.pth"
+        ],
+        "basis": "last matching checkpoint save in chronological training audit",
+        "selected_save_event": {
+          "epoch": 200,
+          "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_200_rew_331.54846",
+          "frame": 819200,
+          "operation": "save"
+        }
+      },
+      "sha256": "2166165f8b9f75b84ed0db53a56bfe8c704904d2816dd68237d44ec2c7d43236",
+      "size_bytes": 212889115
+    },
+    "300": {
+      "actor_model_present": true,
+      "all_tensors_and_numeric_arrays_finite": true,
+      "central_value_present": true,
+      "epoch": 300,
+      "frame": 1228800,
+      "nonzero_adam_exp_avg_states": 22,
+      "optimizer_state_count": 22,
+      "optimizer_step_max": 9592,
+      "optimizer_step_min": 9592,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_300_rew_344.49777.pth",
+      "selection": {
+        "all_candidates_preserved": true,
+        "all_milestone_candidate_paths": [
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_300_rew_344.49777.pth"
+        ],
+        "basis": "last matching checkpoint save in chronological training audit",
+        "selected_save_event": {
+          "epoch": 300,
+          "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_300_rew_344.49777",
+          "frame": 1228800,
+          "operation": "save"
+        }
+      },
+      "sha256": "c0bb3dbadb406b4bae8a9e7d5727cfb2f868265fc10588710611776f01354272",
+      "size_bytes": 212889115
+    },
+    "400": {
+      "actor_model_present": true,
+      "all_tensors_and_numeric_arrays_finite": true,
+      "central_value_present": true,
+      "epoch": 400,
+      "frame": 1638400,
+      "nonzero_adam_exp_avg_states": 22,
+      "optimizer_state_count": 22,
+      "optimizer_step_max": 12790,
+      "optimizer_step_min": 12790,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew__345.99203_.pth",
+      "selection": {
+        "all_candidates_preserved": true,
+        "all_milestone_candidate_paths": [
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew_345.99203.pth",
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew__345.99203_.pth"
+        ],
+        "basis": "last matching checkpoint save in chronological training audit",
+        "selected_save_event": {
+          "epoch": 400,
+          "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew__345.99203_",
+          "frame": 1638400,
+          "operation": "save"
+        }
+      },
+      "sha256": "da72a148ebe2b1e2f11f79c4316c24f515510780a3975e2304a41077436b3c36",
+      "size_bytes": 212889335
+    }
+  },
+  "checkpoint_inventory": [
+    {
+      "bytes": 212885999,
+      "inspection_hash_matches": null,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/Factory.pth",
+      "sha256": "533c6019560f31ff525901c0dc5ee64c93d12e2588f2bc61a7655b328fce3b37",
+      "tensor_inspection": null
+    },
+    {
+      "bytes": 212889115,
+      "inspection_hash_matches": true,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_100_rew_331.73917.pth",
+      "sha256": "9ba32c0ae42b1d732beed25bac08083864a86c7ae8d5e2916928bc485b8f898a",
+      "tensor_inspection": {
+        "actor_model_present": true,
+        "all_tensors_and_numeric_arrays_finite": true,
+        "central_value_present": true,
+        "epoch": 100,
+        "frame": 409600,
+        "nonzero_adam_exp_avg_states": 22,
+        "optimizer_state_count": 22,
+        "optimizer_step_max": 3199,
+        "optimizer_step_min": 3199,
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_100_rew_331.73917.pth",
+        "selection": {
+          "all_candidates_preserved": true,
+          "all_milestone_candidate_paths": [
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_100_rew_331.73917.pth"
+          ],
+          "basis": "last matching checkpoint save in chronological training audit",
+          "selected_save_event": {
+            "epoch": 100,
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_100_rew_331.73917",
+            "frame": 409600,
+            "operation": "save"
+          }
+        },
+        "sha256": "9ba32c0ae42b1d732beed25bac08083864a86c7ae8d5e2916928bc485b8f898a",
+        "size_bytes": 212889115
+      }
+    },
+    {
+      "bytes": 212889115,
+      "inspection_hash_matches": null,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_125_rew_311.21207.pth",
+      "sha256": "5226d0c2fa58255d3a4528c3de86fd6b4b9396a7b93e6fe6b3d3ea7d1c79cc7c",
+      "tensor_inspection": null
+    },
+    {
+      "bytes": 212889005,
+      "inspection_hash_matches": null,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_150_rew_324.5499.pth",
+      "sha256": "84c5724db83a324cc3088f8048cff2bf7ba808cd5335234ce5f6f9642f55be8c",
+      "tensor_inspection": null
+    },
+    {
+      "bytes": 212889005,
+      "inspection_hash_matches": null,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_175_rew_323.9612.pth",
+      "sha256": "e973a85db40bfbc35969418b6de90350e189c928d4cc1b66b22e1dc2975c377e",
+      "tensor_inspection": null
+    },
+    {
+      "bytes": 212889115,
+      "inspection_hash_matches": true,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_200_rew_331.54846.pth",
+      "sha256": "2166165f8b9f75b84ed0db53a56bfe8c704904d2816dd68237d44ec2c7d43236",
+      "tensor_inspection": {
+        "actor_model_present": true,
+        "all_tensors_and_numeric_arrays_finite": true,
+        "central_value_present": true,
+        "epoch": 200,
+        "frame": 819200,
+        "nonzero_adam_exp_avg_states": 22,
+        "optimizer_state_count": 22,
+        "optimizer_step_max": 6396,
+        "optimizer_step_min": 6396,
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_200_rew_331.54846.pth",
+        "selection": {
+          "all_candidates_preserved": true,
+          "all_milestone_candidate_paths": [
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_200_rew_331.54846.pth"
+          ],
+          "basis": "last matching checkpoint save in chronological training audit",
+          "selected_save_event": {
+            "epoch": 200,
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_200_rew_331.54846",
+            "frame": 819200,
+            "operation": "save"
+          }
+        },
+        "sha256": "2166165f8b9f75b84ed0db53a56bfe8c704904d2816dd68237d44ec2c7d43236",
+        "size_bytes": 212889115
+      }
+    },
+    {
+      "bytes": 212889115,
+      "inspection_hash_matches": null,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_225_rew_329.18393.pth",
+      "sha256": "11dcd7c6a5f30683346d8e4652989114dfb8bf2d74b79e4547be24592afabd04",
+      "tensor_inspection": null
+    },
+    {
+      "bytes": 212889115,
+      "inspection_hash_matches": null,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_250_rew_344.46658.pth",
+      "sha256": "e2462fe32d3be6bd177df8a0db9d27b13570af97e486315a1939bd157bc54df4",
+      "tensor_inspection": null
+    },
+    {
+      "bytes": 212889005,
+      "inspection_hash_matches": null,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_25_rew_111.28653.pth",
+      "sha256": "1ee36d0797cd769089354eab0dd16c4623b8995907638621e641ec44a9a0be56",
+      "tensor_inspection": null
+    },
+    {
+      "bytes": 212889115,
+      "inspection_hash_matches": null,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_275_rew_345.01547.pth",
+      "sha256": "a0caeddc3fc9bc5b54bd3ae0bd721e69da6ab3df606c3141648e569f788717b3",
+      "tensor_inspection": null
+    },
+    {
+      "bytes": 212889115,
+      "inspection_hash_matches": true,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_300_rew_344.49777.pth",
+      "sha256": "c0bb3dbadb406b4bae8a9e7d5727cfb2f868265fc10588710611776f01354272",
+      "tensor_inspection": {
+        "actor_model_present": true,
+        "all_tensors_and_numeric_arrays_finite": true,
+        "central_value_present": true,
+        "epoch": 300,
+        "frame": 1228800,
+        "nonzero_adam_exp_avg_states": 22,
+        "optimizer_state_count": 22,
+        "optimizer_step_max": 9592,
+        "optimizer_step_min": 9592,
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_300_rew_344.49777.pth",
+        "selection": {
+          "all_candidates_preserved": true,
+          "all_milestone_candidate_paths": [
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_300_rew_344.49777.pth"
+          ],
+          "basis": "last matching checkpoint save in chronological training audit",
+          "selected_save_event": {
+            "epoch": 300,
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_300_rew_344.49777",
+            "frame": 1228800,
+            "operation": "save"
+          }
+        },
+        "sha256": "c0bb3dbadb406b4bae8a9e7d5727cfb2f868265fc10588710611776f01354272",
+        "size_bytes": 212889115
+      }
+    },
+    {
+      "bytes": 212889115,
+      "inspection_hash_matches": null,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_325_rew_343.98096.pth",
+      "sha256": "1c8ad42e73c9ed126de38cff7fc32f7946cdd31582f607ad210b1d751b4b745f",
+      "tensor_inspection": null
+    },
+    {
+      "bytes": 212888895,
+      "inspection_hash_matches": null,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_350_rew_357.895.pth",
+      "sha256": "cf8cb70879a8665e5d32111c8b4382aa6b0e850ee89abf02a404b92152482711",
+      "tensor_inspection": null
+    },
+    {
+      "bytes": 212889115,
+      "inspection_hash_matches": null,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_375_rew_345.91623.pth",
+      "sha256": "9de1d66bc845c28043602dc7ad718beaecf977514347203fa1b7f8777f2508b9",
+      "tensor_inspection": null
+    },
+    {
+      "bytes": 212889115,
+      "inspection_hash_matches": null,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew_345.99203.pth",
+      "sha256": "f27b09b771b0a7c9c0d8925ecf091ac8afa8b2db5c38232c6dcbfdb25c566c70",
+      "tensor_inspection": null
+    },
+    {
+      "bytes": 212889335,
+      "inspection_hash_matches": true,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew__345.99203_.pth",
+      "sha256": "da72a148ebe2b1e2f11f79c4316c24f515510780a3975e2304a41077436b3c36",
+      "tensor_inspection": {
+        "actor_model_present": true,
+        "all_tensors_and_numeric_arrays_finite": true,
+        "central_value_present": true,
+        "epoch": 400,
+        "frame": 1638400,
+        "nonzero_adam_exp_avg_states": 22,
+        "optimizer_state_count": 22,
+        "optimizer_step_max": 12790,
+        "optimizer_step_min": 12790,
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew__345.99203_.pth",
+        "selection": {
+          "all_candidates_preserved": true,
+          "all_milestone_candidate_paths": [
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew_345.99203.pth",
+            "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew__345.99203_.pth"
+          ],
+          "basis": "last matching checkpoint save in chronological training audit",
+          "selected_save_event": {
+            "epoch": 400,
+            "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew__345.99203_",
+            "frame": 1638400,
+            "operation": "save"
+          }
+        },
+        "sha256": "da72a148ebe2b1e2f11f79c4316c24f515510780a3975e2304a41077436b3c36",
+        "size_bytes": 212889335
+      }
+    },
+    {
+      "bytes": 212888895,
+      "inspection_hash_matches": null,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_50_rew_264.5973.pth",
+      "sha256": "2ae19dbb24adb64521328c85bed6132afeec4ce1bca00fe0381ae5173f0629c6",
+      "tensor_inspection": null
+    },
+    {
+      "bytes": 212888895,
+      "inspection_hash_matches": null,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_75_rew_303.1485.pth",
+      "sha256": "e24035cd258d45a8dc25fdcb6d4a3b2bfa2c7a739f685edb4f3860256b7fa168",
+      "tensor_inspection": null
+    }
+  ],
+  "completion_gates": {
+    "complete": true,
+    "failed_requirements": [],
+    "gpu_monitoring_coverage_required": false,
+    "loss_magnitude_or_convergence_threshold_required": false,
+    "scientific_success_rate_threshold_required": false
+  },
+  "engineering_status": "COMPLETE",
+  "epoch_csv_scope": "completed_epochs.csv retains all observed audit rows; in_verified_contiguous_prefix marks rows included in verified transition totals and PPO timing.",
+  "evaluation": {
+    "checkpoints": [
+      {
+        "aggregate": {
+          "episodes_completed": 96,
+          "ever_success_count": 74,
+          "ever_success_rate": 0.7708333333333334,
+          "ever_success_wilson95": [
+            0.6773148946997619,
+            0.8435108285439975
+          ],
+          "first_success_step_conditional": {
+            "max": 122,
+            "mean": 39.770270270270274,
+            "median": 31.0,
+            "min": 20,
+            "n": 74,
+            "q25": 23.0,
+            "q75": 43.5
+          },
+          "first_success_time_seconds_conditional": {
+            "max": 8.133333333333333,
+            "mean": 2.651351351351351,
+            "median": 2.0666666666666664,
+            "min": 1.3333333333333333,
+            "n": 74,
+            "q25": 1.5333333333333332,
+            "q75": 2.8999999999999995
+          },
+          "terminal_success_count": 74,
+          "terminal_success_rate": 0.7708333333333334,
+          "terminal_success_wilson95": [
+            0.6773148946997619,
+            0.8435108285439975
+          ],
+          "transient_only_count": 0
+        },
+        "checkpoint_epoch": 100,
+        "complete_preregistered_seeds": true,
+        "episodes_requested": 96,
+        "per_seed": [
+          {
+            "auto_reset_order_verified": true,
+            "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_100_rew_331.73917.pth",
+            "checkpoint_sha256": "9ba32c0ae42b1d732beed25bac08083864a86c7ae8d5e2916928bc485b8f898a",
+            "deterministic": true,
+            "episodes_completed": 32,
+            "episodes_requested": 32,
+            "ever_success_count": 25,
+            "ever_success_rate": 0.78125,
+            "ever_success_wilson95": [
+              0.6124500635075647,
+              0.8897616374739581
+            ],
+            "first_success_step_conditional": {
+              "max": 122,
+              "mean": 47.04,
+              "median": 33,
+              "min": 20,
+              "n": 25,
+              "q25": 24.0,
+              "q75": 69.0
+            },
+            "first_success_time_seconds_conditional": {
+              "max": 8.133333333333333,
+              "mean": 3.136,
+              "median": 2.2,
+              "min": 1.3333333333333333,
+              "n": 25,
+              "q25": 1.6,
+              "q75": 4.6
+            },
+            "input_identity": {
+              "bytes": 21588,
+              "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch100/seed1001/metrics.json",
+              "sha256": "63e276956e13da796e59c503236544c3e1d3a9d45e8113c52dd29894eb4b6b73"
+            },
+            "meets_preregistered_target": true,
+            "official_success_capture": "pre_reset_factory_get_curr_successes",
+            "seed": 1001,
+            "status": "complete",
+            "terminal_success_count": 25,
+            "terminal_success_rate": 0.78125,
+            "terminal_success_wilson95": [
+              0.6124500635075647,
+              0.8897616374739581
+            ],
+            "transient_only_count": 0
+          },
+          {
+            "auto_reset_order_verified": true,
+            "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_100_rew_331.73917.pth",
+            "checkpoint_sha256": "9ba32c0ae42b1d732beed25bac08083864a86c7ae8d5e2916928bc485b8f898a",
+            "deterministic": true,
+            "episodes_completed": 32,
+            "episodes_requested": 32,
+            "ever_success_count": 29,
+            "ever_success_rate": 0.90625,
+            "ever_success_wilson95": [
+              0.7578184527161212,
+              0.9675984487016337
+            ],
+            "first_success_step_conditional": {
+              "max": 100,
+              "mean": 37.96551724137931,
+              "median": 30,
+              "min": 20,
+              "n": 29,
+              "q25": 24.0,
+              "q75": 42.0
+            },
+            "first_success_time_seconds_conditional": {
+              "max": 6.666666666666667,
+              "mean": 2.5310344827586206,
+              "median": 2.0,
+              "min": 1.3333333333333333,
+              "n": 29,
+              "q25": 1.6,
+              "q75": 2.8
+            },
+            "input_identity": {
+              "bytes": 21631,
+              "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch100/seed1002/metrics.json",
+              "sha256": "e82d5561e114c4e72914e1bf84a1bc9b944eb181685ce53f31c32d9670ebf84b"
+            },
+            "meets_preregistered_target": true,
+            "official_success_capture": "pre_reset_factory_get_curr_successes",
+            "seed": 1002,
+            "status": "complete",
+            "terminal_success_count": 29,
+            "terminal_success_rate": 0.90625,
+            "terminal_success_wilson95": [
+              0.7578184527161212,
+              0.9675984487016337
+            ],
+            "transient_only_count": 0
+          },
+          {
+            "auto_reset_order_verified": true,
+            "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_100_rew_331.73917.pth",
+            "checkpoint_sha256": "9ba32c0ae42b1d732beed25bac08083864a86c7ae8d5e2916928bc485b8f898a",
+            "deterministic": true,
+            "episodes_completed": 32,
+            "episodes_requested": 32,
+            "ever_success_count": 20,
+            "ever_success_rate": 0.625,
+            "ever_success_wilson95": [
+              0.4525440735307745,
+              0.7706611269054578
+            ],
+            "first_success_step_conditional": {
+              "max": 81,
+              "mean": 33.3,
+              "median": 30.5,
+              "min": 20,
+              "n": 20,
+              "q25": 22.0,
+              "q75": 39.0
+            },
+            "first_success_time_seconds_conditional": {
+              "max": 5.4,
+              "mean": 2.2199999999999998,
+              "median": 2.033333333333333,
+              "min": 1.3333333333333333,
+              "n": 20,
+              "q25": 1.4666666666666666,
+              "q75": 2.6
+            },
+            "input_identity": {
+              "bytes": 21526,
+              "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch100/seed1003/metrics.json",
+              "sha256": "526d61bb9629ca346a564c2f21c0e375acc163c0d77b2c96cf423cd2a5a58beb"
+            },
+            "meets_preregistered_target": true,
+            "official_success_capture": "pre_reset_factory_get_curr_successes",
+            "seed": 1003,
+            "status": "complete",
+            "terminal_success_count": 20,
+            "terminal_success_rate": 0.625,
+            "terminal_success_wilson95": [
+              0.4525440735307745,
+              0.7706611269054578
+            ],
+            "transient_only_count": 0
+          }
+        ]
+      },
+      {
+        "aggregate": {
+          "episodes_completed": 96,
+          "ever_success_count": 83,
+          "ever_success_rate": 0.8645833333333334,
+          "ever_success_wilson95": [
+            0.7819886149785562,
+            0.9191229355418891
+          ],
+          "first_success_step_conditional": {
+            "max": 125,
+            "mean": 38.18072289156626,
+            "median": 33,
+            "min": 19,
+            "n": 83,
+            "q25": 25.0,
+            "q75": 41.5
+          },
+          "first_success_time_seconds_conditional": {
+            "max": 8.333333333333334,
+            "mean": 2.5453815261044177,
+            "median": 2.2,
+            "min": 1.2666666666666666,
+            "n": 83,
+            "q25": 1.6666666666666667,
+            "q75": 2.7666666666666666
+          },
+          "terminal_success_count": 83,
+          "terminal_success_rate": 0.8645833333333334,
+          "terminal_success_wilson95": [
+            0.7819886149785562,
+            0.9191229355418891
+          ],
+          "transient_only_count": 0
+        },
+        "checkpoint_epoch": 200,
+        "complete_preregistered_seeds": true,
+        "episodes_requested": 96,
+        "per_seed": [
+          {
+            "auto_reset_order_verified": true,
+            "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_200_rew_331.54846.pth",
+            "checkpoint_sha256": "2166165f8b9f75b84ed0db53a56bfe8c704904d2816dd68237d44ec2c7d43236",
+            "deterministic": true,
+            "episodes_completed": 32,
+            "episodes_requested": 32,
+            "ever_success_count": 28,
+            "ever_success_rate": 0.875,
+            "ever_success_wilson95": [
+              0.7193169451834978,
+              0.9502986561251991
+            ],
+            "first_success_step_conditional": {
+              "max": 125,
+              "mean": 43.67857142857143,
+              "median": 35.0,
+              "min": 19,
+              "n": 28,
+              "q25": 23.0,
+              "q75": 57.75
+            },
+            "first_success_time_seconds_conditional": {
+              "max": 8.333333333333334,
+              "mean": 2.9119047619047618,
+              "median": 2.333333333333333,
+              "min": 1.2666666666666666,
+              "n": 28,
+              "q25": 1.5333333333333332,
+              "q75": 3.85
+            },
+            "input_identity": {
+              "bytes": 21631,
+              "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch200/seed1001/metrics.json",
+              "sha256": "0a635f3d23342b57faf621fb7ad79379ad68d2bf7c451eb0a289f95fbc979ed5"
+            },
+            "meets_preregistered_target": true,
+            "official_success_capture": "pre_reset_factory_get_curr_successes",
+            "seed": 1001,
+            "status": "complete",
+            "terminal_success_count": 28,
+            "terminal_success_rate": 0.875,
+            "terminal_success_wilson95": [
+              0.7193169451834978,
+              0.9502986561251991
+            ],
+            "transient_only_count": 0
+          },
+          {
+            "auto_reset_order_verified": true,
+            "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_200_rew_331.54846.pth",
+            "checkpoint_sha256": "2166165f8b9f75b84ed0db53a56bfe8c704904d2816dd68237d44ec2c7d43236",
+            "deterministic": true,
+            "episodes_completed": 32,
+            "episodes_requested": 32,
+            "ever_success_count": 31,
+            "ever_success_rate": 0.96875,
+            "ever_success_wilson95": [
+              0.8425573617998744,
+              0.9944621398359969
+            ],
+            "first_success_step_conditional": {
+              "max": 79,
+              "mean": 35.193548387096776,
+              "median": 32,
+              "min": 21,
+              "n": 31,
+              "q25": 26.5,
+              "q75": 37.5
+            },
+            "first_success_time_seconds_conditional": {
+              "max": 5.266666666666667,
+              "mean": 2.346236559139785,
+              "median": 2.1333333333333333,
+              "min": 1.4,
+              "n": 31,
+              "q25": 1.7666666666666666,
+              "q75": 2.5
+            },
+            "input_identity": {
+              "bytes": 21621,
+              "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch200/seed1002/metrics.json",
+              "sha256": "443ee974e082f61c1ec311e0de3f01de829758bfb2081ddded686fd93df5f090"
+            },
+            "meets_preregistered_target": true,
+            "official_success_capture": "pre_reset_factory_get_curr_successes",
+            "seed": 1002,
+            "status": "complete",
+            "terminal_success_count": 31,
+            "terminal_success_rate": 0.96875,
+            "terminal_success_wilson95": [
+              0.8425573617998744,
+              0.9944621398359969
+            ],
+            "transient_only_count": 0
+          },
+          {
+            "auto_reset_order_verified": true,
+            "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_200_rew_331.54846.pth",
+            "checkpoint_sha256": "2166165f8b9f75b84ed0db53a56bfe8c704904d2816dd68237d44ec2c7d43236",
+            "deterministic": true,
+            "episodes_completed": 32,
+            "episodes_requested": 32,
+            "ever_success_count": 24,
+            "ever_success_rate": 0.75,
+            "ever_success_wilson95": [
+              0.5789344100575552,
+              0.8674759908149096
+            ],
+            "first_success_step_conditional": {
+              "max": 90,
+              "mean": 35.625,
+              "median": 32.0,
+              "min": 19,
+              "n": 24,
+              "q25": 26.5,
+              "q75": 42.5
+            },
+            "first_success_time_seconds_conditional": {
+              "max": 6.0,
+              "mean": 2.375,
+              "median": 2.1333333333333333,
+              "min": 1.2666666666666666,
+              "n": 24,
+              "q25": 1.7666666666666668,
+              "q75": 2.833333333333333
+            },
+            "input_identity": {
+              "bytes": 21515,
+              "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch200/seed1003/metrics.json",
+              "sha256": "81667fc0c9fb9cbbd57827a33b5460921e329bcb4f4f5bb87afccffca6780943"
+            },
+            "meets_preregistered_target": true,
+            "official_success_capture": "pre_reset_factory_get_curr_successes",
+            "seed": 1003,
+            "status": "complete",
+            "terminal_success_count": 24,
+            "terminal_success_rate": 0.75,
+            "terminal_success_wilson95": [
+              0.5789344100575552,
+              0.8674759908149096
+            ],
+            "transient_only_count": 0
+          }
+        ]
+      },
+      {
+        "aggregate": {
+          "episodes_completed": 96,
+          "ever_success_count": 92,
+          "ever_success_rate": 0.9583333333333334,
+          "ever_success_wilson95": [
+            0.8977180853334191,
+            0.9836792924637118
+          ],
+          "first_success_step_conditional": {
+            "max": 119,
+            "mean": 38.77173913043478,
+            "median": 31.0,
+            "min": 18,
+            "n": 92,
+            "q25": 25.0,
+            "q75": 44.25
+          },
+          "first_success_time_seconds_conditional": {
+            "max": 7.933333333333334,
+            "mean": 2.5847826086956522,
+            "median": 2.0666666666666664,
+            "min": 1.2,
+            "n": 92,
+            "q25": 1.6666666666666667,
+            "q75": 2.9499999999999997
+          },
+          "terminal_success_count": 92,
+          "terminal_success_rate": 0.9583333333333334,
+          "terminal_success_wilson95": [
+            0.8977180853334191,
+            0.9836792924637118
+          ],
+          "transient_only_count": 0
+        },
+        "checkpoint_epoch": 300,
+        "complete_preregistered_seeds": true,
+        "episodes_requested": 96,
+        "per_seed": [
+          {
+            "auto_reset_order_verified": true,
+            "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_300_rew_344.49777.pth",
+            "checkpoint_sha256": "c0bb3dbadb406b4bae8a9e7d5727cfb2f868265fc10588710611776f01354272",
+            "deterministic": true,
+            "episodes_completed": 32,
+            "episodes_requested": 32,
+            "ever_success_count": 32,
+            "ever_success_rate": 1.0,
+            "ever_success_wilson95": [
+              0.8928208017449293,
+              1.0
+            ],
+            "first_success_step_conditional": {
+              "max": 119,
+              "mean": 45.0625,
+              "median": 36.5,
+              "min": 18,
+              "n": 32,
+              "q25": 28.5,
+              "q75": 62.0
+            },
+            "first_success_time_seconds_conditional": {
+              "max": 7.933333333333334,
+              "mean": 3.0041666666666664,
+              "median": 2.4333333333333336,
+              "min": 1.2,
+              "n": 32,
+              "q25": 1.9,
+              "q75": 4.133333333333333
+            },
+            "input_identity": {
+              "bytes": 21569,
+              "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch300/seed1001/metrics.json",
+              "sha256": "1fea3f0dfd6a08e8d6ceb239ca798c17be6794d35922a69035c919e679ac6dc2"
+            },
+            "meets_preregistered_target": true,
+            "official_success_capture": "pre_reset_factory_get_curr_successes",
+            "seed": 1001,
+            "status": "complete",
+            "terminal_success_count": 32,
+            "terminal_success_rate": 1.0,
+            "terminal_success_wilson95": [
+              0.8928208017449293,
+              1.0
+            ],
+            "transient_only_count": 0
+          },
+          {
+            "auto_reset_order_verified": true,
+            "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_300_rew_344.49777.pth",
+            "checkpoint_sha256": "c0bb3dbadb406b4bae8a9e7d5727cfb2f868265fc10588710611776f01354272",
+            "deterministic": true,
+            "episodes_completed": 32,
+            "episodes_requested": 32,
+            "ever_success_count": 32,
+            "ever_success_rate": 1.0,
+            "ever_success_wilson95": [
+              0.8928208017449293,
+              1.0
+            ],
+            "first_success_step_conditional": {
+              "max": 69,
+              "mean": 31.6875,
+              "median": 27.5,
+              "min": 20,
+              "n": 32,
+              "q25": 23.0,
+              "q75": 36.0
+            },
+            "first_success_time_seconds_conditional": {
+              "max": 4.6,
+              "mean": 2.1125,
+              "median": 1.8333333333333335,
+              "min": 1.3333333333333333,
+              "n": 32,
+              "q25": 1.5333333333333332,
+              "q75": 2.4
+            },
+            "input_identity": {
+              "bytes": 21561,
+              "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch300/seed1002/metrics.json",
+              "sha256": "7a12ae3761f1a231262d5d2e8e5b8fb16e0c5f3f233303c5ae0b0ee0fac95e1b"
+            },
+            "meets_preregistered_target": true,
+            "official_success_capture": "pre_reset_factory_get_curr_successes",
+            "seed": 1002,
+            "status": "complete",
+            "terminal_success_count": 32,
+            "terminal_success_rate": 1.0,
+            "terminal_success_wilson95": [
+              0.8928208017449293,
+              1.0
+            ],
+            "transient_only_count": 0
+          },
+          {
+            "auto_reset_order_verified": true,
+            "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_300_rew_344.49777.pth",
+            "checkpoint_sha256": "c0bb3dbadb406b4bae8a9e7d5727cfb2f868265fc10588710611776f01354272",
+            "deterministic": true,
+            "episodes_completed": 32,
+            "episodes_requested": 32,
+            "ever_success_count": 28,
+            "ever_success_rate": 0.875,
+            "ever_success_wilson95": [
+              0.7193169451834978,
+              0.9502986561251991
+            ],
+            "first_success_step_conditional": {
+              "max": 117,
+              "mean": 39.67857142857143,
+              "median": 31.0,
+              "min": 21,
+              "n": 28,
+              "q25": 26.5,
+              "q75": 38.25
+            },
+            "first_success_time_seconds_conditional": {
+              "max": 7.8,
+              "mean": 2.645238095238095,
+              "median": 2.0666666666666664,
+              "min": 1.4,
+              "n": 28,
+              "q25": 1.7666666666666668,
+              "q75": 2.55
+            },
+            "input_identity": {
+              "bytes": 21610,
+              "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch300/seed1003/metrics.json",
+              "sha256": "6b5d1d419833210f06538fd17be52cbb5428c392cee3e36291a55bf99fba5cb3"
+            },
+            "meets_preregistered_target": true,
+            "official_success_capture": "pre_reset_factory_get_curr_successes",
+            "seed": 1003,
+            "status": "complete",
+            "terminal_success_count": 28,
+            "terminal_success_rate": 0.875,
+            "terminal_success_wilson95": [
+              0.7193169451834978,
+              0.9502986561251991
+            ],
+            "transient_only_count": 0
+          }
+        ]
+      },
+      {
+        "aggregate": {
+          "episodes_completed": 288,
+          "ever_success_count": 268,
+          "ever_success_rate": 0.9305555555555556,
+          "ever_success_wilson95": [
+            0.8951775265031079,
+            0.9545989274734668
+          ],
+          "first_success_step_conditional": {
+            "max": 124,
+            "mean": 36.16417910447761,
+            "median": 34.0,
+            "min": 18,
+            "n": 268,
+            "q25": 24.0,
+            "q75": 41.25
+          },
+          "first_success_time_seconds_conditional": {
+            "max": 8.266666666666666,
+            "mean": 2.4109452736318406,
+            "median": 2.2666666666666666,
+            "min": 1.2,
+            "n": 268,
+            "q25": 1.6,
+            "q75": 2.75
+          },
+          "terminal_success_count": 267,
+          "terminal_success_rate": 0.9270833333333334,
+          "terminal_success_wilson95": [
+            0.8911070137892445,
+            0.951816404268164
+          ],
+          "transient_only_count": 1
+        },
+        "checkpoint_epoch": 400,
+        "complete_preregistered_seeds": true,
+        "episodes_requested": 288,
+        "per_seed": [
+          {
+            "auto_reset_order_verified": true,
+            "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew__345.99203_.pth",
+            "checkpoint_sha256": "da72a148ebe2b1e2f11f79c4316c24f515510780a3975e2304a41077436b3c36",
+            "deterministic": true,
+            "episodes_completed": 96,
+            "episodes_requested": 96,
+            "ever_success_count": 91,
+            "ever_success_rate": 0.9479166666666666,
+            "ever_success_wilson95": [
+              0.8838152196850738,
+              0.9775503995257587
+            ],
+            "first_success_step_conditional": {
+              "max": 124,
+              "mean": 38.934065934065934,
+              "median": 36,
+              "min": 18,
+              "n": 91,
+              "q25": 27.0,
+              "q75": 45.0
+            },
+            "first_success_time_seconds_conditional": {
+              "max": 8.266666666666666,
+              "mean": 2.5956043956043957,
+              "median": 2.4,
+              "min": 1.2,
+              "n": 91,
+              "q25": 1.8,
+              "q75": 3.0
+            },
+            "input_identity": {
+              "bytes": 41008,
+              "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch400/seed1001/metrics.json",
+              "sha256": "3499322aaa6a994963a01aa142001ceef598d3b100197c8d1c5749e69ddc5d96"
+            },
+            "meets_preregistered_target": true,
+            "official_success_capture": "pre_reset_factory_get_curr_successes",
+            "seed": 1001,
+            "status": "complete",
+            "terminal_success_count": 90,
+            "terminal_success_rate": 0.9375,
+            "terminal_success_wilson95": [
+              0.8702905349355852,
+              0.9710433256889488
+            ],
+            "transient_only_count": 1
+          },
+          {
+            "auto_reset_order_verified": true,
+            "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew__345.99203_.pth",
+            "checkpoint_sha256": "da72a148ebe2b1e2f11f79c4316c24f515510780a3975e2304a41077436b3c36",
+            "deterministic": true,
+            "episodes_completed": 96,
+            "episodes_requested": 96,
+            "ever_success_count": 91,
+            "ever_success_rate": 0.9479166666666666,
+            "ever_success_wilson95": [
+              0.8838152196850738,
+              0.9775503995257587
+            ],
+            "first_success_step_conditional": {
+              "max": 97,
+              "mean": 34.010989010989015,
+              "median": 32,
+              "min": 19,
+              "n": 91,
+              "q25": 23.0,
+              "q75": 39.5
+            },
+            "first_success_time_seconds_conditional": {
+              "max": 6.466666666666667,
+              "mean": 2.2673992673992673,
+              "median": 2.1333333333333333,
+              "min": 1.2666666666666666,
+              "n": 91,
+              "q25": 1.5333333333333332,
+              "q75": 2.6333333333333333
+            },
+            "input_identity": {
+              "bytes": 40987,
+              "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch400/seed1002/metrics.json",
+              "sha256": "24a5d24992e0b0654f848522b4f0472fcdfd04e66c4861173a5c822c19708a68"
+            },
+            "meets_preregistered_target": true,
+            "official_success_capture": "pre_reset_factory_get_curr_successes",
+            "seed": 1002,
+            "status": "complete",
+            "terminal_success_count": 91,
+            "terminal_success_rate": 0.9479166666666666,
+            "terminal_success_wilson95": [
+              0.8838152196850738,
+              0.9775503995257587
+            ],
+            "transient_only_count": 0
+          },
+          {
+            "auto_reset_order_verified": true,
+            "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew__345.99203_.pth",
+            "checkpoint_sha256": "da72a148ebe2b1e2f11f79c4316c24f515510780a3975e2304a41077436b3c36",
+            "deterministic": true,
+            "episodes_completed": 96,
+            "episodes_requested": 96,
+            "ever_success_count": 86,
+            "ever_success_rate": 0.8958333333333334,
+            "ever_success_wilson95": [
+              0.8187783586967837,
+              0.9424284675825568
+            ],
+            "first_success_step_conditional": {
+              "max": 86,
+              "mean": 35.51162790697674,
+              "median": 34.0,
+              "min": 18,
+              "n": 86,
+              "q25": 24.0,
+              "q75": 39.75
+            },
+            "first_success_time_seconds_conditional": {
+              "max": 5.733333333333333,
+              "mean": 2.3674418604651164,
+              "median": 2.2666666666666666,
+              "min": 1.2,
+              "n": 86,
+              "q25": 1.6,
+              "q75": 2.65
+            },
+            "input_identity": {
+              "bytes": 40875,
+              "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch400/seed1003/metrics.json",
+              "sha256": "2ddb001e524aa7f4c3fa7af6e1deb925807845273f2b3601fd4212eefee95930"
+            },
+            "meets_preregistered_target": true,
+            "official_success_capture": "pre_reset_factory_get_curr_successes",
+            "seed": 1003,
+            "status": "complete",
+            "terminal_success_count": 86,
+            "terminal_success_rate": 0.8958333333333334,
+            "terminal_success_wilson95": [
+              0.8187783586967837,
+              0.9424284675825568
+            ],
+            "transient_only_count": 0
+          }
+        ]
+      }
+    ],
+    "denominator_rule": "Only actual completed episode records from preregistered seeds in each selected evaluator output; unfinished episodes excluded; complete and partial duplicate outputs are not pooled. Additional seeds remain separate per-seed rows.",
+    "expected_checkpoint_epochs": [
+      100,
+      200,
+      300,
+      400
+    ],
+    "final_episodes_per_env": 3,
+    "first_success_rule": "Conditional on ever-successful completed episodes; failed episodes are excluded, never encoded as zero seconds or timeout times.",
+    "interval_rule": "Two-sided 95% Wilson score intervals over episode counts. Descriptive only: vector environments and episodes share policy/seeds; intervals do not quantify training-seed variability.",
+    "num_envs_per_seed": 32,
+    "preregistered_seeds": [
+      1001,
+      1002,
+      1003
+    ]
+  },
+  "historical_input_issues": {
+    "errors": [],
+    "warnings": []
+  },
+  "historical_matched_transition_comparison": {
+    "denominator_rule": "Each checkpoint/protocol keeps its original evaluation denominator; G3B diagnostic and interrupted runs are excluded.",
+    "historical_protocol": "G2 64 environments, training seed 0, 200 epochs, horizon128",
+    "limits": [
+      "Equal transitions do not imply identical training trajectories: rollout batches are 4096 versus 8192 transitions.",
+      "Keeping minibatch512 and four mini-epochs changes optimizer update grouping and on-policy data collection.",
+      "One training seed in each protocol does not quantify training-seed variability or isolate a causal environment-count effect.",
+      "Evaluation seeds 1001/1002/1003 are independent initial-condition seeds, not independent training runs.",
+      "Success-rate differences are descriptive; no pooled denominator or significance claim is made."
+    ],
+    "new_protocol": "G3C-R4 32 environments, training seed 0, 400 epochs, horizon128",
+    "rows": [
+      {
+        "denominators_pooled": false,
+        "historical_64env_epoch": 50,
+        "historical_evaluation": {
+          "episodes_completed": 96,
+          "ever_success_count": 69,
+          "ever_success_rate": 0.71875,
+          "ever_success_wilson95": [
+            0.6217410386959606,
+            0.7989258916163063
+          ],
+          "first_success_step_conditional": {
+            "max": 102,
+            "mean": 35.2463768115942,
+            "median": 33,
+            "min": 20,
+            "n": 69,
+            "q25": 26.0,
+            "q75": 38.0
+          },
+          "first_success_time_seconds_conditional": {
+            "max": 6.8,
+            "mean": 2.34975845410628,
+            "median": 2.2,
+            "min": 1.3333333333333333,
+            "n": 69,
+            "q25": 1.7333333333333334,
+            "q75": 2.533333333333333
+          },
+          "terminal_success_count": 69,
+          "terminal_success_rate": 0.71875,
+          "terminal_success_wilson95": [
+            0.6217410386959606,
+            0.7989258916163063
+          ],
+          "transient_only_count": 0
+        },
+        "matched_training_transitions": 409600,
+        "new_32env_epoch": 100,
+        "new_evaluation": {
+          "episodes_completed": 96,
+          "ever_success_count": 74,
+          "ever_success_rate": 0.7708333333333334,
+          "ever_success_wilson95": [
+            0.6773148946997619,
+            0.8435108285439975
+          ],
+          "first_success_step_conditional": {
+            "max": 122,
+            "mean": 39.770270270270274,
+            "median": 31.0,
+            "min": 20,
+            "n": 74,
+            "q25": 23.0,
+            "q75": 43.5
+          },
+          "first_success_time_seconds_conditional": {
+            "max": 8.133333333333333,
+            "mean": 2.651351351351351,
+            "median": 2.0666666666666664,
+            "min": 1.3333333333333333,
+            "n": 74,
+            "q25": 1.5333333333333332,
+            "q75": 2.8999999999999995
+          },
+          "terminal_success_count": 74,
+          "terminal_success_rate": 0.7708333333333334,
+          "terminal_success_wilson95": [
+            0.6773148946997619,
+            0.8435108285439975
+          ],
+          "transient_only_count": 0
+        },
+        "observed_rate_differences": {
+          "ever_success_rate_percentage_points": 5.2083333333333375,
+          "terminal_success_rate_percentage_points": 5.2083333333333375
+        }
+      },
+      {
+        "denominators_pooled": false,
+        "historical_64env_epoch": 100,
+        "historical_evaluation": {
+          "episodes_completed": 96,
+          "ever_success_count": 81,
+          "ever_success_rate": 0.84375,
+          "ever_success_wilson95": [
+            0.7580851332547138,
+            0.9029629000931343
+          ],
+          "first_success_step_conditional": {
+            "max": 141,
+            "mean": 33.65432098765432,
+            "median": 27,
+            "min": 19,
+            "n": 81,
+            "q25": 23.0,
+            "q75": 37.0
+          },
+          "first_success_time_seconds_conditional": {
+            "max": 9.4,
+            "mean": 2.2436213991769547,
+            "median": 1.8,
+            "min": 1.2666666666666666,
+            "n": 81,
+            "q25": 1.5333333333333332,
+            "q75": 2.466666666666667
+          },
+          "terminal_success_count": 81,
+          "terminal_success_rate": 0.84375,
+          "terminal_success_wilson95": [
+            0.7580851332547138,
+            0.9029629000931343
+          ],
+          "transient_only_count": 0
+        },
+        "matched_training_transitions": 819200,
+        "new_32env_epoch": 200,
+        "new_evaluation": {
+          "episodes_completed": 96,
+          "ever_success_count": 83,
+          "ever_success_rate": 0.8645833333333334,
+          "ever_success_wilson95": [
+            0.7819886149785562,
+            0.9191229355418891
+          ],
+          "first_success_step_conditional": {
+            "max": 125,
+            "mean": 38.18072289156626,
+            "median": 33,
+            "min": 19,
+            "n": 83,
+            "q25": 25.0,
+            "q75": 41.5
+          },
+          "first_success_time_seconds_conditional": {
+            "max": 8.333333333333334,
+            "mean": 2.5453815261044177,
+            "median": 2.2,
+            "min": 1.2666666666666666,
+            "n": 83,
+            "q25": 1.6666666666666667,
+            "q75": 2.7666666666666666
+          },
+          "terminal_success_count": 83,
+          "terminal_success_rate": 0.8645833333333334,
+          "terminal_success_wilson95": [
+            0.7819886149785562,
+            0.9191229355418891
+          ],
+          "transient_only_count": 0
+        },
+        "observed_rate_differences": {
+          "ever_success_rate_percentage_points": 2.083333333333337,
+          "terminal_success_rate_percentage_points": 2.083333333333337
+        }
+      },
+      {
+        "denominators_pooled": false,
+        "historical_64env_epoch": 150,
+        "historical_evaluation": {
+          "episodes_completed": 96,
+          "ever_success_count": 92,
+          "ever_success_rate": 0.9583333333333334,
+          "ever_success_wilson95": [
+            0.8977180853334191,
+            0.9836792924637118
+          ],
+          "first_success_step_conditional": {
+            "max": 141,
+            "mean": 35.55434782608695,
+            "median": 28.0,
+            "min": 18,
+            "n": 92,
+            "q25": 23.0,
+            "q75": 43.25
+          },
+          "first_success_time_seconds_conditional": {
+            "max": 9.4,
+            "mean": 2.3702898550724636,
+            "median": 1.8666666666666667,
+            "min": 1.2,
+            "n": 92,
+            "q25": 1.5333333333333332,
+            "q75": 2.8833333333333333
+          },
+          "terminal_success_count": 92,
+          "terminal_success_rate": 0.9583333333333334,
+          "terminal_success_wilson95": [
+            0.8977180853334191,
+            0.9836792924637118
+          ],
+          "transient_only_count": 0
+        },
+        "matched_training_transitions": 1228800,
+        "new_32env_epoch": 300,
+        "new_evaluation": {
+          "episodes_completed": 96,
+          "ever_success_count": 92,
+          "ever_success_rate": 0.9583333333333334,
+          "ever_success_wilson95": [
+            0.8977180853334191,
+            0.9836792924637118
+          ],
+          "first_success_step_conditional": {
+            "max": 119,
+            "mean": 38.77173913043478,
+            "median": 31.0,
+            "min": 18,
+            "n": 92,
+            "q25": 25.0,
+            "q75": 44.25
+          },
+          "first_success_time_seconds_conditional": {
+            "max": 7.933333333333334,
+            "mean": 2.5847826086956522,
+            "median": 2.0666666666666664,
+            "min": 1.2,
+            "n": 92,
+            "q25": 1.6666666666666667,
+            "q75": 2.9499999999999997
+          },
+          "terminal_success_count": 92,
+          "terminal_success_rate": 0.9583333333333334,
+          "terminal_success_wilson95": [
+            0.8977180853334191,
+            0.9836792924637118
+          ],
+          "transient_only_count": 0
+        },
+        "observed_rate_differences": {
+          "ever_success_rate_percentage_points": 0.0,
+          "terminal_success_rate_percentage_points": 0.0
+        }
+      },
+      {
+        "denominators_pooled": false,
+        "historical_64env_epoch": 200,
+        "historical_evaluation": {
+          "episodes_completed": 288,
+          "ever_success_count": 280,
+          "ever_success_rate": 0.9722222222222222,
+          "ever_success_wilson95": [
+            0.9461541500457419,
+            0.9858587349608235
+          ],
+          "first_success_step_conditional": {
+            "max": 105,
+            "mean": 33.535714285714285,
+            "median": 29.0,
+            "min": 18,
+            "n": 280,
+            "q25": 24.0,
+            "q75": 40.0
+          },
+          "first_success_time_seconds_conditional": {
+            "max": 7.0,
+            "mean": 2.2357142857142858,
+            "median": 1.9333333333333333,
+            "min": 1.2,
+            "n": 280,
+            "q25": 1.6,
+            "q75": 2.6666666666666665
+          },
+          "terminal_success_count": 280,
+          "terminal_success_rate": 0.9722222222222222,
+          "terminal_success_wilson95": [
+            0.9461541500457419,
+            0.9858587349608235
+          ],
+          "transient_only_count": 0
+        },
+        "matched_training_transitions": 1638400,
+        "new_32env_epoch": 400,
+        "new_evaluation": {
+          "episodes_completed": 288,
+          "ever_success_count": 268,
+          "ever_success_rate": 0.9305555555555556,
+          "ever_success_wilson95": [
+            0.8951775265031079,
+            0.9545989274734668
+          ],
+          "first_success_step_conditional": {
+            "max": 124,
+            "mean": 36.16417910447761,
+            "median": 34.0,
+            "min": 18,
+            "n": 268,
+            "q25": 24.0,
+            "q75": 41.25
+          },
+          "first_success_time_seconds_conditional": {
+            "max": 8.266666666666666,
+            "mean": 2.4109452736318406,
+            "median": 2.2666666666666666,
+            "min": 1.2,
+            "n": 268,
+            "q25": 1.6,
+            "q75": 2.75
+          },
+          "terminal_success_count": 267,
+          "terminal_success_rate": 0.9270833333333334,
+          "terminal_success_wilson95": [
+            0.8911070137892445,
+            0.951816404268164
+          ],
+          "transient_only_count": 1
+        },
+        "observed_rate_differences": {
+          "ever_success_rate_percentage_points": -4.1666666666666625,
+          "terminal_success_rate_percentage_points": -4.513888888888884
+        }
+      }
+    ]
+  },
+  "issues": {
+    "errors": [],
+    "warnings": []
+  },
+  "limits": [
+    "No automatic training retry, resume, or concatenation is performed by this analyzer.",
+    "Unfinished evaluation episodes are excluded; missing results are null, not zero.",
+    "First-success timing is conditional on successful completed episodes.",
+    "G3B diagnostic episodes and prior interrupted runs remain outside all new denominators.",
+    "Hashing confirms artifact identity; tensor finiteness is known only for explicitly inspected checkpoints."
+  ],
+  "manifest_identity": {
+    "bytes": 19331,
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r4/manifest_frozen.json",
+    "sha256": "d18f353c2e0719963194f63bdd667d9280f323c739f0dffa6ba6802029824686"
+  },
+  "monitoring_policy": {
+    "explicit_user_authorization_recorded": true,
+    "gpu_monitoring_coverage": "not measured; no continuous-coverage claim",
+    "gpu_telemetry_required": false,
+    "independent_gpu_guard_enabled": false,
+    "normal_cuda_error_handling": "unchanged",
+    "selected": "user-authorized-no-gpu-guard",
+    "telemetry_missing_or_gap_is_failure": false
+  },
+  "plots": [
+    "training_scalars.png",
+    "training_scalars.pdf",
+    "matched_transition_success.png",
+    "matched_transition_success.pdf",
+    "first_success_timing.png",
+    "first_success_timing.pdf"
+  ],
+  "schema_version": "g3cr4_analysis_v1",
+  "scientific_status": "ASSESSED_DESCRIPTIVELY",
+  "training": {
+    "all_logged_scalars_finite": true,
+    "audit_contiguous_from_epoch_1": true,
+    "audit_epoch_count": 400,
+    "console_evidence": {
+      "error_lines": [],
+      "identity": {
+        "bytes": 62462,
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/train_32env_seed0_400ep_20261025t140016z/supervisor/console.txt",
+        "sha256": "dd41174a8b48c067d8f999c16684457cef57252139ef18c9d9965ade5ae8cc88"
+      },
+      "last_120_lines_bounded_16000_chars": "fps step: 119 fps step and policy inference: 118 fps total: 112 epoch: 293/400 frames: 1196032\nfps step: 120 fps step and policy inference: 119 fps total: 113 epoch: 294/400 frames: 1200128\nfps step: 120 fps step and policy inference: 119 fps total: 113 epoch: 295/400 frames: 1204224\nfps step: 119 fps step and policy inference: 118 fps total: 112 epoch: 296/400 frames: 1208320\nfps step: 121 fps step and policy inference: 119 fps total: 113 epoch: 297/400 frames: 1212416\nfps step: 119 fps step and policy inference: 117 fps total: 112 epoch: 298/400 frames: 1216512\nfps step: 128 fps step and policy inference: 126 fps total: 120 epoch: 299/400 frames: 1220608\nfps step: 121 fps step and policy inference: 120 fps total: 113 epoch: 300/400 frames: 1224704\n=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_300_rew_344.49777.pth'\nfps step: 121 fps step and policy inference: 120 fps total: 113 epoch: 301/400 frames: 1228800\nfps step: 121 fps step and policy inference: 120 fps total: 113 epoch: 302/400 frames: 1232896\nfps step: 120 fps step and policy inference: 119 fps total: 113 epoch: 303/400 frames: 1236992\nfps step: 120 fps step and policy inference: 119 fps total: 112 epoch: 304/400 frames: 1241088\nfps step: 117 fps step and policy inference: 116 fps total: 110 epoch: 305/400 frames: 1245184\nfps step: 125 fps step and policy inference: 123 fps total: 117 epoch: 306/400 frames: 1249280\nfps step: 120 fps step and policy inference: 119 fps total: 112 epoch: 307/400 frames: 1253376\nfps step: 120 fps step and policy inference: 119 fps total: 112 epoch: 308/400 frames: 1257472\nfps step: 121 fps step and policy inference: 120 fps total: 113 epoch: 309/400 frames: 1261568\nfps step: 121 fps step and policy inference: 120 fps total: 113 epoch: 310/400 frames: 1265664\nfps step: 120 fps step and policy inference: 119 fps total: 113 epoch: 311/400 frames: 1269760\nfps step: 118 fps step and policy inference: 117 fps total: 111 epoch: 312/400 frames: 1273856\nfps step: 125 fps step and policy inference: 124 fps total: 118 epoch: 313/400 frames: 1277952\nfps step: 121 fps step and policy inference: 120 fps total: 114 epoch: 314/400 frames: 1282048\nfps step: 120 fps step and policy inference: 119 fps total: 113 epoch: 315/400 frames: 1286144\nfps step: 119 fps step and policy inference: 118 fps total: 112 epoch: 316/400 frames: 1290240\nfps step: 119 fps step and policy inference: 118 fps total: 111 epoch: 317/400 frames: 1294336\nfps step: 118 fps step and policy inference: 117 fps total: 111 epoch: 318/400 frames: 1298432\nfps step: 117 fps step and policy inference: 116 fps total: 110 epoch: 319/400 frames: 1302528\nfps step: 125 fps step and policy inference: 124 fps total: 117 epoch: 320/400 frames: 1306624\nfps step: 121 fps step and policy inference: 120 fps total: 114 epoch: 321/400 frames: 1310720\nfps step: 122 fps step and policy inference: 121 fps total: 114 epoch: 322/400 frames: 1314816\nfps step: 122 fps step and policy inference: 121 fps total: 114 epoch: 323/400 frames: 1318912\nfps step: 122 fps step and policy inference: 121 fps total: 114 epoch: 324/400 frames: 1323008\nfps step: 120 fps step and policy inference: 119 fps total: 113 epoch: 325/400 frames: 1327104\n=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_325_rew_343.98096.pth'\nfps step: 120 fps step and policy inference: 119 fps total: 112 epoch: 326/400 frames: 1331200\nfps step: 125 fps step and policy inference: 123 fps total: 117 epoch: 327/400 frames: 1335296\nfps step: 119 fps step and policy inference: 118 fps total: 112 epoch: 328/400 frames: 1339392\nfps step: 121 fps step and policy inference: 119 fps total: 113 epoch: 329/400 frames: 1343488\nfps step: 121 fps step and policy inference: 120 fps total: 114 epoch: 330/400 frames: 1347584\nfps step: 121 fps step and policy inference: 120 fps total: 113 epoch: 331/400 frames: 1351680\nfps step: 119 fps step and policy inference: 118 fps total: 112 epoch: 332/400 frames: 1355776\nfps step: 120 fps step and policy inference: 118 fps total: 112 epoch: 333/400 frames: 1359872\nfps step: 124 fps step and policy inference: 123 fps total: 117 epoch: 334/400 frames: 1363968\nfps step: 120 fps step and policy inference: 119 fps total: 113 epoch: 335/400 frames: 1368064\nfps step: 120 fps step and policy inference: 118 fps total: 112 epoch: 336/400 frames: 1372160\nfps step: 120 fps step and policy inference: 119 fps total: 113 epoch: 337/400 frames: 1376256\nfps step: 120 fps step and policy inference: 119 fps total: 113 epoch: 338/400 frames: 1380352\nfps step: 120 fps step and policy inference: 119 fps total: 113 epoch: 339/400 frames: 1384448\nfps step: 120 fps step and policy inference: 119 fps total: 113 epoch: 340/400 frames: 1388544\nfps step: 122 fps step and policy inference: 121 fps total: 115 epoch: 341/400 frames: 1392640\nfps step: 120 fps step and policy inference: 119 fps total: 113 epoch: 342/400 frames: 1396736\nfps step: 120 fps step and policy inference: 119 fps total: 112 epoch: 343/400 frames: 1400832\nfps step: 121 fps step and policy inference: 120 fps total: 113 epoch: 344/400 frames: 1404928\nfps step: 121 fps step and policy inference: 120 fps total: 113 epoch: 345/400 frames: 1409024\nfps step: 120 fps step and policy inference: 119 fps total: 113 epoch: 346/400 frames: 1413120\nfps step: 119 fps step and policy inference: 118 fps total: 112 epoch: 347/400 frames: 1417216\nfps step: 123 fps step and policy inference: 122 fps total: 116 epoch: 348/400 frames: 1421312\nfps step: 118 fps step and policy inference: 117 fps total: 111 epoch: 349/400 frames: 1425408\nsaving next best rewards:  [353.48764]\n=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/Factory.pth'\nfps step: 120 fps step and policy inference: 119 fps total: 113 epoch: 350/400 frames: 1429504\n=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_350_rew_357.895.pth'\nsaving next best rewards:  [357.895]\n=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/Factory.pth'\nfps step: 121 fps step and policy inference: 119 fps total: 113 epoch: 351/400 frames: 1433600\nfps step: 120 fps step and policy inference: 118 fps total: 112 epoch: 352/400 frames: 1437696\nfps step: 121 fps step and policy inference: 120 fps total: 114 epoch: 353/400 frames: 1441792\nfps step: 120 fps step and policy inference: 119 fps total: 113 epoch: 354/400 frames: 1445888\nfps step: 126 fps step and policy inference: 125 fps total: 119 epoch: 355/400 frames: 1449984\nfps step: 121 fps step and policy inference: 120 fps total: 113 epoch: 356/400 frames: 1454080\nfps step: 120 fps step and policy inference: 119 fps total: 112 epoch: 357/400 frames: 1458176\nfps step: 121 fps step and policy inference: 120 fps total: 113 epoch: 358/400 frames: 1462272\nfps step: 121 fps step and policy inference: 120 fps total: 113 epoch: 359/400 frames: 1466368\nfps step: 120 fps step and policy inference: 119 fps total: 113 epoch: 360/400 frames: 1470464\nfps step: 119 fps step and policy inference: 118 fps total: 112 epoch: 361/400 frames: 1474560\nfps step: 123 fps step and policy inference: 122 fps total: 116 epoch: 362/400 frames: 1478656\nfps step: 119 fps step and policy inference: 118 fps total: 112 epoch: 363/400 frames: 1482752\nfps step: 121 fps step and policy inference: 120 fps total: 113 epoch: 364/400 frames: 1486848\nfps step: 121 fps step and policy inference: 120 fps total: 113 epoch: 365/400 frames: 1490944\nfps step: 121 fps step and policy inference: 120 fps total: 114 epoch: 366/400 frames: 1495040\nfps step: 120 fps step and policy inference: 119 fps total: 113 epoch: 367/400 frames: 1499136\nfps step: 120 fps step and policy inference: 119 fps total: 112 epoch: 368/400 frames: 1503232\nfps step: 125 fps step and policy inference: 123 fps total: 117 epoch: 369/400 frames: 1507328\nfps step: 120 fps step and policy inference: 118 fps total: 112 epoch: 370/400 frames: 1511424\nfps step: 120 fps step and policy inference: 119 fps total: 112 epoch: 371/400 frames: 1515520\nfps step: 120 fps step and policy inference: 119 fps total: 112 epoch: 372/400 frames: 1519616\nfps step: 121 fps step and policy inference: 119 fps total: 113 epoch: 373/400 frames: 1523712\nfps step: 122 fps step and policy inference: 120 fps total: 114 epoch: 374/400 frames: 1527808\nfps step: 121 fps step and policy inference: 120 fps total: 113 epoch: 375/400 frames: 1531904\n=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_375_rew_345.91623.pth'\nfps step: 118 fps step and policy inference: 117 fps total: 111 epoch: 376/400 frames: 1536000\nfps step: 125 fps step and policy inference: 124 fps total: 117 epoch: 377/400 frames: 1540096\nfps step: 120 fps step and policy inference: 119 fps total: 112 epoch: 378/400 frames: 1544192\nfps step: 121 fps step and policy inference: 119 fps total: 113 epoch: 379/400 frames: 1548288\nfps step: 120 fps step and policy inference: 119 fps total: 112 epoch: 380/400 frames: 1552384\nfps step: 121 fps step and policy inference: 119 fps total: 113 epoch: 381/400 frames: 1556480\nfps step: 121 fps step and policy inference: 119 fps total: 113 epoch: 382/400 frames: 1560576\nfps step: 119 fps step and policy inference: 117 fps total: 111 epoch: 383/400 frames: 1564672\nfps step: 125 fps step and policy inference: 124 fps total: 118 epoch: 384/400 frames: 1568768\nfps step: 119 fps step and policy inference: 117 fps total: 111 epoch: 385/400 frames: 1572864\nfps step: 119 fps step and policy inference: 118 fps total: 112 epoch: 386/400 frames: 1576960\nfps step: 120 fps step and policy inference: 119 fps total: 113 epoch: 387/400 frames: 1581056\nfps step: 120 fps step and policy inference: 119 fps total: 113 epoch: 388/400 frames: 1585152\nfps step: 121 fps step and policy inference: 120 fps total: 114 epoch: 389/400 frames: 1589248\nfps step: 119 fps step and policy inference: 118 fps total: 111 epoch: 390/400 frames: 1593344\nfps step: 126 fps step and policy inference: 125 fps total: 118 epoch: 391/400 frames: 1597440\nfps step: 119 fps step and policy inference: 118 fps total: 112 epoch: 392/400 frames: 1601536\nfps step: 119 fps step and policy inference: 118 fps total: 111 epoch: 393/400 frames: 1605632\nfps step: 120 fps step and policy inference: 118 fps total: 112 epoch: 394/400 frames: 1609728\nfps step: 120 fps step and policy inference: 118 fps total: 112 epoch: 395/400 frames: 1613824\nfps step: 120 fps step and policy inference: 119 fps total: 113 epoch: 396/400 frames: 1617920\nfps step: 117 fps step and policy inference: 116 fps total: 110 epoch: 397/400 frames: 1622016\nfps step: 124 fps step and policy inference: 123 fps total: 116 epoch: 398/400 frames: 1626112\nfps step: 120 fps step and policy inference: 119 fps total: 112 epoch: 399/400 frames: 1630208\nfps step: 120 fps step and policy inference: 119 fps total: 113 epoch: 400/400 frames: 1634304\n=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew_345.99203.pth'\n=> saving checkpoint '/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew__345.99203_.pth'\nMAX EPOCHS NUM!\nFACTORY_TENSORBOARD_FINALIZER={\"agents\": [{\"close_called\": true, \"errors\": [], \"flush_called\": true, \"global_rank\": 0, \"success\": true, \"writer_class\": \"SummaryWriter\", \"writer_expected\": true, \"writer_present\": true}], \"no_agent_created\": false, \"status\": \"complete\", \"training_error\": null}"
+    },
+    "end_to_end_transitions_per_wall_second": 112.37379469256459,
+    "environment_step_aggregate_fps": 120.86334746685696,
+    "environment_transitions": 1638400,
+    "exit": {
+      "child_exit_code": 0,
+      "child_signal": null,
+      "error": null,
+      "raw_wait_returncode": 0,
+      "received_supervisor_signals": [],
+      "stop_signals": [],
+      "termination_reason": "child_exit"
+    },
+    "gradient_note": "Finite logged losses do not prove finite applied gradients. Report gradient/AMP observations separately from the observer evidence.",
+    "horizon_length": 128,
+    "last_observed_epoch": 400,
+    "launched_process_wall_seconds": 14579.911664301995,
+    "launched_process_wall_uncertainty_seconds": null,
+    "loss_stability": {
+      "gradient_finiteness_measured": false,
+      "limitation": "Finite observed losses/parameters support numerical stability only. Loss magnitude does not establish convergence or task success; applied gradients are not measured.",
+      "logged_loss_and_optimization_scalars_finite": true,
+      "observed_epoch_loss_arrays_finite": true,
+      "optimizer_steps": {
+        "actor": 12790,
+        "central_value": 12800
+      },
+      "scalar_statistics": {
+        "info/cval_lr": {
+          "max": 9.999999747378752e-05,
+          "mean": 9.999999747378752e-05,
+          "median": 9.999999747378752e-05,
+          "min": 9.999999747378752e-05,
+          "n": 400,
+          "q25": 9.999999747378752e-05,
+          "q75": 9.999999747378752e-05
+        },
+        "info/kl": {
+          "max": 0.04510808736085892,
+          "mean": 0.01048823091230588,
+          "median": 0.00929012568667531,
+          "min": -0.0009428381454199553,
+          "n": 400,
+          "q25": 0.006655527860857546,
+          "q75": 0.012547810329124331
+        },
+        "info/last_lr": {
+          "max": 9.999999747378752e-05,
+          "mean": 2.171161651631337e-05,
+          "median": 1.975308623514138e-05,
+          "min": 2.60122942563612e-06,
+          "n": 400,
+          "q25": 8.779149538895581e-06,
+          "q75": 2.9629629352712072e-05
+        },
+        "losses/a_loss": {
+          "max": 0.0027312119491398335,
+          "mean": -0.009025978521676734,
+          "median": -0.009328701999038458,
+          "min": -0.014998827129602432,
+          "n": 400,
+          "q25": -0.010677929501980543,
+          "q75": -0.007716614520177245
+        },
+        "losses/bounds_loss": {
+          "max": 0.17329752445220947,
+          "mean": 0.06102918605376445,
+          "median": 0.062008244916796684,
+          "min": 0.0,
+          "n": 400,
+          "q25": 0.026536398101598024,
+          "q75": 0.08930796198546886
+        },
+        "losses/c_loss": {
+          "max": 1.3295421600341797,
+          "mean": 0.03725801105931168,
+          "median": 0.011227120645344257,
+          "min": 0.001593112014234066,
+          "n": 400,
+          "q25": 0.007350875763222575,
+          "q75": 0.01689312979578972
+        },
+        "losses/cval_loss": {
+          "max": 1.2960821390151978,
+          "mean": 0.024957808944163842,
+          "median": 0.003247216227464378,
+          "min": 0.0003498930891510099,
+          "n": 400,
+          "q25": 0.002025516121648252,
+          "q75": 0.005055733025074005
+        },
+        "losses/entropy": {
+          "max": 8.515938758850098,
+          "mean": 3.0406856367737056,
+          "median": 2.9672656059265137,
+          "min": -2.976545810699463,
+          "n": 400,
+          "q25": 0.11526983976364136,
+          "q75": 6.036073088645935
+        }
+      }
+    },
+    "num_envs": 32,
+    "official_ppo_aggregate_fps": 113.30034676248667,
+    "official_ppo_timing_source": "verified_contiguous_epoch_audit_prefix",
+    "official_ppo_total_seconds": 14460.67948436737,
+    "reward_summary": {
+      "rewards/iter": {
+        "max": 357.8949890136719,
+        "mean": 307.11364507077633,
+        "median": 333.39276123046875,
+        "min": 35.205787658691406,
+        "n": 399,
+        "q25": 314.4233703613281,
+        "q75": 343.97283935546875
+      },
+      "shaped_rewards/iter": {
+        "max": 935.0372924804688,
+        "mean": 818.3570753876727,
+        "median": 908.8844604492188,
+        "min": 37.57115936279297,
+        "n": 399,
+        "q25": 871.3374633789062,
+        "q75": 920.471923828125
+      }
+    },
+    "scalar_tag_count": 53,
+    "stable_aggregate_total_fps": 113.20618974883932,
+    "stable_epoch_range": [
+      11,
+      400
+    ],
+    "stable_epoch_seconds": {
+      "max": 37.54565954208374,
+      "mean": 36.18176717269115,
+      "median": 36.32818937301636,
+      "min": 32.84832525253296,
+      "n": 390,
+      "q25": 36.001311242580414,
+      "q75": 36.57623666524887
+    },
+    "stable_timing_source": "verified_contiguous_epoch_audit_prefix_epochs_11_onward",
+    "tensorboard_finalizer": {
+      "agents": [
+        {
+          "close_called": true,
+          "errors": [],
+          "flush_called": true,
+          "global_rank": 0,
+          "success": true,
+          "writer_class": "SummaryWriter",
+          "writer_expected": true,
+          "writer_present": true
+        }
+      ],
+      "no_agent_created": false,
+      "status": "complete",
+      "training_error": null
+    },
+    "throughput_scope": {
+      "completed_transition_numerator": "verified contiguous audit prefix only",
+      "excluded_audit_rows": 0,
+      "included_audit_rows": 400,
+      "observed_audit_rows": 400,
+      "official_and_environment_seconds_denominator": "same verified contiguous audit prefix; no TensorBoard inference across audit gaps",
+      "uncompleted_rollout_seconds": "unknown; excluded from official completed-prefix PPO timing",
+      "wall_duration_available": true,
+      "wall_seconds_denominator": "entire finalized supervisor duration, including startup, excluded later audit rows, and any incomplete rollout",
+      "wall_throughput_limit": "Verified prefix transitions divided by whole finalized wall time; excludes all unverified or incomplete interactions, not total-interaction throughput."
+    },
+    "timing_note": "Total PPO time = rollout/inference + optimization. Process wall includes startup, initialization, checkpoint I/O, shutdown and monitoring overhead. Neither is the policy's simulated elapsed time.",
+    "training_duration_scope": "durable supervisor start through actual child wait and finalization",
+    "training_duration_seconds": 14579.911664301995,
+    "transition_count_source": "verified_contiguous_32x128_epoch_audit_prefix",
+    "verified_progress": {
+      "all_audit_rows_in_contiguous_prefix": true,
+      "completed_epochs_verified": 400,
+      "completed_transitions_verified": 1638400,
+      "completion_fraction": 1.0,
+      "count_rule": "Sum actual audit transitions only for contiguous epochs starting at 1, each with 32*128 transitions; no interpolation or resumed-run concatenation.",
+      "planned_epochs": 400,
+      "planned_transitions": 1638400,
+      "possibly_uncompleted_rollout_transitions": 0
+    },
+    "wall_measurement_evidence": {
+      "duration_scope": "supervisor start through actual child wait and finalization",
+      "source": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/train_32env_seed0_400ep_20261025t140016z/supervisor/status.json"
+    }
+  }
+}

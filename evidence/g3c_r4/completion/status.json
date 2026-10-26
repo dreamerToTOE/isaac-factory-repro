@@ -1,0 +1,460 @@
+{
+  "controller_exit_code": 0,
+  "ended": {
+    "monotonic_seconds": 50070.838062409,
+    "unix_seconds": 1792952746.7661972,
+    "utc": "2026-10-25T18:25:46.766186+00:00"
+  },
+  "evaluations": [
+    {
+      "aggregate": {
+        "episodes_completed": 32,
+        "episodes_requested": 32,
+        "ever_success_count": 25,
+        "ever_success_rate": 0.78125,
+        "ever_success_wilson95": [
+          0.6124500635075647,
+          0.8897616374739581
+        ],
+        "first_success_count": 25,
+        "first_success_rate": 0.78125,
+        "mean_first_success_step": 47.04,
+        "terminal_success_count": 25,
+        "terminal_success_rate": 0.78125,
+        "terminal_success_wilson95": [
+          0.6124500635075647,
+          0.8897616374739581
+        ],
+        "transient_only_count": 0
+      },
+      "checkpoint_sha256": "9ba32c0ae42b1d732beed25bac08083864a86c7ae8d5e2916928bc485b8f898a",
+      "episodes_completed": 32,
+      "epoch": 100,
+      "metrics": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch100/seed1001/metrics.json",
+      "seed": 1001
+    },
+    {
+      "aggregate": {
+        "episodes_completed": 32,
+        "episodes_requested": 32,
+        "ever_success_count": 29,
+        "ever_success_rate": 0.90625,
+        "ever_success_wilson95": [
+          0.7578184527161212,
+          0.9675984487016337
+        ],
+        "first_success_count": 29,
+        "first_success_rate": 0.90625,
+        "mean_first_success_step": 37.96551724137931,
+        "terminal_success_count": 29,
+        "terminal_success_rate": 0.90625,
+        "terminal_success_wilson95": [
+          0.7578184527161212,
+          0.9675984487016337
+        ],
+        "transient_only_count": 0
+      },
+      "checkpoint_sha256": "9ba32c0ae42b1d732beed25bac08083864a86c7ae8d5e2916928bc485b8f898a",
+      "episodes_completed": 32,
+      "epoch": 100,
+      "metrics": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch100/seed1002/metrics.json",
+      "seed": 1002
+    },
+    {
+      "aggregate": {
+        "episodes_completed": 32,
+        "episodes_requested": 32,
+        "ever_success_count": 20,
+        "ever_success_rate": 0.625,
+        "ever_success_wilson95": [
+          0.4525440735307745,
+          0.7706611269054578
+        ],
+        "first_success_count": 20,
+        "first_success_rate": 0.625,
+        "mean_first_success_step": 33.3,
+        "terminal_success_count": 20,
+        "terminal_success_rate": 0.625,
+        "terminal_success_wilson95": [
+          0.4525440735307745,
+          0.7706611269054578
+        ],
+        "transient_only_count": 0
+      },
+      "checkpoint_sha256": "9ba32c0ae42b1d732beed25bac08083864a86c7ae8d5e2916928bc485b8f898a",
+      "episodes_completed": 32,
+      "epoch": 100,
+      "metrics": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch100/seed1003/metrics.json",
+      "seed": 1003
+    },
+    {
+      "aggregate": {
+        "episodes_completed": 32,
+        "episodes_requested": 32,
+        "ever_success_count": 28,
+        "ever_success_rate": 0.875,
+        "ever_success_wilson95": [
+          0.7193169451834978,
+          0.9502986561251991
+        ],
+        "first_success_count": 28,
+        "first_success_rate": 0.875,
+        "mean_first_success_step": 43.67857142857143,
+        "terminal_success_count": 28,
+        "terminal_success_rate": 0.875,
+        "terminal_success_wilson95": [
+          0.7193169451834978,
+          0.9502986561251991
+        ],
+        "transient_only_count": 0
+      },
+      "checkpoint_sha256": "2166165f8b9f75b84ed0db53a56bfe8c704904d2816dd68237d44ec2c7d43236",
+      "episodes_completed": 32,
+      "epoch": 200,
+      "metrics": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch200/seed1001/metrics.json",
+      "seed": 1001
+    },
+    {
+      "aggregate": {
+        "episodes_completed": 32,
+        "episodes_requested": 32,
+        "ever_success_count": 31,
+        "ever_success_rate": 0.96875,
+        "ever_success_wilson95": [
+          0.8425573617998744,
+          0.9944621398359969
+        ],
+        "first_success_count": 31,
+        "first_success_rate": 0.96875,
+        "mean_first_success_step": 35.193548387096776,
+        "terminal_success_count": 31,
+        "terminal_success_rate": 0.96875,
+        "terminal_success_wilson95": [
+          0.8425573617998744,
+          0.9944621398359969
+        ],
+        "transient_only_count": 0
+      },
+      "checkpoint_sha256": "2166165f8b9f75b84ed0db53a56bfe8c704904d2816dd68237d44ec2c7d43236",
+      "episodes_completed": 32,
+      "epoch": 200,
+      "metrics": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch200/seed1002/metrics.json",
+      "seed": 1002
+    },
+    {
+      "aggregate": {
+        "episodes_completed": 32,
+        "episodes_requested": 32,
+        "ever_success_count": 24,
+        "ever_success_rate": 0.75,
+        "ever_success_wilson95": [
+          0.5789344100575552,
+          0.8674759908149096
+        ],
+        "first_success_count": 24,
+        "first_success_rate": 0.75,
+        "mean_first_success_step": 35.625,
+        "terminal_success_count": 24,
+        "terminal_success_rate": 0.75,
+        "terminal_success_wilson95": [
+          0.5789344100575552,
+          0.8674759908149096
+        ],
+        "transient_only_count": 0
+      },
+      "checkpoint_sha256": "2166165f8b9f75b84ed0db53a56bfe8c704904d2816dd68237d44ec2c7d43236",
+      "episodes_completed": 32,
+      "epoch": 200,
+      "metrics": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch200/seed1003/metrics.json",
+      "seed": 1003
+    },
+    {
+      "aggregate": {
+        "episodes_completed": 32,
+        "episodes_requested": 32,
+        "ever_success_count": 32,
+        "ever_success_rate": 1.0,
+        "ever_success_wilson95": [
+          0.8928208017449293,
+          1.0
+        ],
+        "first_success_count": 32,
+        "first_success_rate": 1.0,
+        "mean_first_success_step": 45.0625,
+        "terminal_success_count": 32,
+        "terminal_success_rate": 1.0,
+        "terminal_success_wilson95": [
+          0.8928208017449293,
+          1.0
+        ],
+        "transient_only_count": 0
+      },
+      "checkpoint_sha256": "c0bb3dbadb406b4bae8a9e7d5727cfb2f868265fc10588710611776f01354272",
+      "episodes_completed": 32,
+      "epoch": 300,
+      "metrics": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch300/seed1001/metrics.json",
+      "seed": 1001
+    },
+    {
+      "aggregate": {
+        "episodes_completed": 32,
+        "episodes_requested": 32,
+        "ever_success_count": 32,
+        "ever_success_rate": 1.0,
+        "ever_success_wilson95": [
+          0.8928208017449293,
+          1.0
+        ],
+        "first_success_count": 32,
+        "first_success_rate": 1.0,
+        "mean_first_success_step": 31.6875,
+        "terminal_success_count": 32,
+        "terminal_success_rate": 1.0,
+        "terminal_success_wilson95": [
+          0.8928208017449293,
+          1.0
+        ],
+        "transient_only_count": 0
+      },
+      "checkpoint_sha256": "c0bb3dbadb406b4bae8a9e7d5727cfb2f868265fc10588710611776f01354272",
+      "episodes_completed": 32,
+      "epoch": 300,
+      "metrics": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch300/seed1002/metrics.json",
+      "seed": 1002
+    },
+    {
+      "aggregate": {
+        "episodes_completed": 32,
+        "episodes_requested": 32,
+        "ever_success_count": 28,
+        "ever_success_rate": 0.875,
+        "ever_success_wilson95": [
+          0.7193169451834978,
+          0.9502986561251991
+        ],
+        "first_success_count": 28,
+        "first_success_rate": 0.875,
+        "mean_first_success_step": 39.67857142857143,
+        "terminal_success_count": 28,
+        "terminal_success_rate": 0.875,
+        "terminal_success_wilson95": [
+          0.7193169451834978,
+          0.9502986561251991
+        ],
+        "transient_only_count": 0
+      },
+      "checkpoint_sha256": "c0bb3dbadb406b4bae8a9e7d5727cfb2f868265fc10588710611776f01354272",
+      "episodes_completed": 32,
+      "epoch": 300,
+      "metrics": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch300/seed1003/metrics.json",
+      "seed": 1003
+    },
+    {
+      "aggregate": {
+        "episodes_completed": 96,
+        "episodes_requested": 96,
+        "ever_success_count": 91,
+        "ever_success_rate": 0.9479166666666666,
+        "ever_success_wilson95": [
+          0.8838152196850738,
+          0.9775503995257587
+        ],
+        "first_success_count": 91,
+        "first_success_rate": 0.9479166666666666,
+        "mean_first_success_step": 38.934065934065934,
+        "terminal_success_count": 90,
+        "terminal_success_rate": 0.9375,
+        "terminal_success_wilson95": [
+          0.8702905349355852,
+          0.9710433256889488
+        ],
+        "transient_only_count": 1
+      },
+      "checkpoint_sha256": "da72a148ebe2b1e2f11f79c4316c24f515510780a3975e2304a41077436b3c36",
+      "episodes_completed": 96,
+      "epoch": 400,
+      "metrics": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch400/seed1001/metrics.json",
+      "seed": 1001
+    },
+    {
+      "aggregate": {
+        "episodes_completed": 96,
+        "episodes_requested": 96,
+        "ever_success_count": 91,
+        "ever_success_rate": 0.9479166666666666,
+        "ever_success_wilson95": [
+          0.8838152196850738,
+          0.9775503995257587
+        ],
+        "first_success_count": 91,
+        "first_success_rate": 0.9479166666666666,
+        "mean_first_success_step": 34.010989010989015,
+        "terminal_success_count": 91,
+        "terminal_success_rate": 0.9479166666666666,
+        "terminal_success_wilson95": [
+          0.8838152196850738,
+          0.9775503995257587
+        ],
+        "transient_only_count": 0
+      },
+      "checkpoint_sha256": "da72a148ebe2b1e2f11f79c4316c24f515510780a3975e2304a41077436b3c36",
+      "episodes_completed": 96,
+      "epoch": 400,
+      "metrics": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch400/seed1002/metrics.json",
+      "seed": 1002
+    },
+    {
+      "aggregate": {
+        "episodes_completed": 96,
+        "episodes_requested": 96,
+        "ever_success_count": 86,
+        "ever_success_rate": 0.8958333333333334,
+        "ever_success_wilson95": [
+          0.8187783586967837,
+          0.9424284675825568
+        ],
+        "first_success_count": 86,
+        "first_success_rate": 0.8958333333333334,
+        "mean_first_success_step": 35.51162790697674,
+        "terminal_success_count": 86,
+        "terminal_success_rate": 0.8958333333333334,
+        "terminal_success_wilson95": [
+          0.8187783586967837,
+          0.9424284675825568
+        ],
+        "transient_only_count": 0
+      },
+      "checkpoint_sha256": "da72a148ebe2b1e2f11f79c4316c24f515510780a3975e2304a41077436b3c36",
+      "episodes_completed": 96,
+      "epoch": 400,
+      "metrics": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch400/seed1003/metrics.json",
+      "seed": 1003
+    }
+  ],
+  "phase": "training_and_evaluation_complete",
+  "schema_version": "g3cr4_completion_v1",
+  "selected_checkpoints": {
+    "100": {
+      "actor_model_present": true,
+      "all_tensors_and_numeric_arrays_finite": true,
+      "central_value_present": true,
+      "epoch": 100,
+      "frame": 409600,
+      "nonzero_adam_exp_avg_states": 22,
+      "optimizer_state_count": 22,
+      "optimizer_step_max": 3199,
+      "optimizer_step_min": 3199,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_100_rew_331.73917.pth",
+      "selection": {
+        "all_candidates_preserved": true,
+        "all_milestone_candidate_paths": [
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_100_rew_331.73917.pth"
+        ],
+        "basis": "last matching checkpoint save in chronological training audit",
+        "selected_save_event": {
+          "epoch": 100,
+          "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_100_rew_331.73917",
+          "frame": 409600,
+          "operation": "save"
+        }
+      },
+      "sha256": "9ba32c0ae42b1d732beed25bac08083864a86c7ae8d5e2916928bc485b8f898a",
+      "size_bytes": 212889115
+    },
+    "200": {
+      "actor_model_present": true,
+      "all_tensors_and_numeric_arrays_finite": true,
+      "central_value_present": true,
+      "epoch": 200,
+      "frame": 819200,
+      "nonzero_adam_exp_avg_states": 22,
+      "optimizer_state_count": 22,
+      "optimizer_step_max": 6396,
+      "optimizer_step_min": 6396,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_200_rew_331.54846.pth",
+      "selection": {
+        "all_candidates_preserved": true,
+        "all_milestone_candidate_paths": [
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_200_rew_331.54846.pth"
+        ],
+        "basis": "last matching checkpoint save in chronological training audit",
+        "selected_save_event": {
+          "epoch": 200,
+          "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_200_rew_331.54846",
+          "frame": 819200,
+          "operation": "save"
+        }
+      },
+      "sha256": "2166165f8b9f75b84ed0db53a56bfe8c704904d2816dd68237d44ec2c7d43236",
+      "size_bytes": 212889115
+    },
+    "300": {
+      "actor_model_present": true,
+      "all_tensors_and_numeric_arrays_finite": true,
+      "central_value_present": true,
+      "epoch": 300,
+      "frame": 1228800,
+      "nonzero_adam_exp_avg_states": 22,
+      "optimizer_state_count": 22,
+      "optimizer_step_max": 9592,
+      "optimizer_step_min": 9592,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_300_rew_344.49777.pth",
+      "selection": {
+        "all_candidates_preserved": true,
+        "all_milestone_candidate_paths": [
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_300_rew_344.49777.pth"
+        ],
+        "basis": "last matching checkpoint save in chronological training audit",
+        "selected_save_event": {
+          "epoch": 300,
+          "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_300_rew_344.49777",
+          "frame": 1228800,
+          "operation": "save"
+        }
+      },
+      "sha256": "c0bb3dbadb406b4bae8a9e7d5727cfb2f868265fc10588710611776f01354272",
+      "size_bytes": 212889115
+    },
+    "400": {
+      "actor_model_present": true,
+      "all_tensors_and_numeric_arrays_finite": true,
+      "central_value_present": true,
+      "epoch": 400,
+      "frame": 1638400,
+      "nonzero_adam_exp_avg_states": 22,
+      "optimizer_state_count": 22,
+      "optimizer_step_max": 12790,
+      "optimizer_step_min": 12790,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew__345.99203_.pth",
+      "selection": {
+        "all_candidates_preserved": true,
+        "all_milestone_candidate_paths": [
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew_345.99203.pth",
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew__345.99203_.pth"
+        ],
+        "basis": "last matching checkpoint save in chronological training audit",
+        "selected_save_event": {
+          "epoch": 400,
+          "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew__345.99203_",
+          "frame": 1638400,
+          "operation": "save"
+        }
+      },
+      "sha256": "da72a148ebe2b1e2f11f79c4316c24f515510780a3975e2304a41077436b3c36",
+      "size_bytes": 212889335
+    }
+  },
+  "started": {
+    "monotonic_seconds": 34569.140825925,
+    "unix_seconds": 1792937245.0689602,
+    "utc": "2026-10-25T14:07:25.068945+00:00"
+  },
+  "training": {
+    "automatic_resume": false,
+    "completed_epochs": 400,
+    "completed_transitions": 1638400,
+    "gradient_finiteness_measured": false,
+    "observed_epoch_loss_arrays_finite": true,
+    "tensorboard_tail_complete": true
+  }
+}

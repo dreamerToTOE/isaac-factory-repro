@@ -1,0 +1,27 @@
+{
+  "manifest_sha256": "d18f353c2e0719963194f63bdd667d9280f323c739f0dffa6ba6802029824686",
+  "registration_commit": "4f121350df8ba2ec2e049d67150a7d463097d87a",
+  "training_launcher": {
+    "returncode": 0,
+    "stdout": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/train_32env_seed0_400ep_20261025t140016z\n",
+    "stderr": ""
+  },
+  "completion_submission": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "Running as unit: factory-g3cr4-20261025t140016z-completion.service\n",
+    "argv": [
+      "systemd-run",
+      "--user",
+      "--unit=factory-g3cr4-20261025t140016z-completion",
+      "--property=WorkingDirectory=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs",
+      "--property=Restart=no",
+      "--property=KillMode=control-group",
+      "--property=TimeoutStopSec=10",
+      "/usr/bin/python3",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/complete_g3cr4.py",
+      "--manifest",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r4/manifest_frozen.json"
+    ]
+  }
+}

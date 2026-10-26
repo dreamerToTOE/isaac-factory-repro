@@ -1,0 +1,56 @@
+{
+  "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+  "command": [
+    "env",
+    "TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1",
+    "bash",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/evaluate_checkpoint.py",
+    "--headless",
+    "--device",
+    "cuda:0",
+    "--task",
+    "Isaac-Factory-PegInsert-Direct-v0",
+    "--checkpoint",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_300_rew_344.49777.pth",
+    "--num_envs",
+    "32",
+    "--episodes",
+    "1",
+    "--seed",
+    "1001",
+    "--max_steps",
+    "160",
+    "--snapshot-limit",
+    "12",
+    "--progress-interval",
+    "10",
+    "--output",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/completion_32env_seed0_400ep_20261025t140016z/evaluation/epoch300/seed1001/metrics.json"
+  ],
+  "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs",
+  "engineering": true,
+  "environment": {
+    "FACTORY_VENV": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01",
+    "ISAACSIM_PATH": "/home/ubuntu2004/isaacsim-4.5.0",
+    "OMP_NUM_THREADS": "4"
+  },
+  "guard_directory": null,
+  "identity": {
+    "birth_ticks": "4950157",
+    "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef",
+    "pgid": 152305,
+    "pid": 152305,
+    "state": "R"
+  },
+  "lock_file": "/run/user/1000/isaac-factory-gpu0.lock",
+  "schema_version": 2,
+  "stale_seconds": 2,
+  "started": {
+    "monotonic_seconds": 49501.613611894,
+    "unix_seconds": 1792952177.5417464,
+    "utc": "2026-10-25T18:16:17.541733+00:00"
+  },
+  "startup_timeout_seconds": 30,
+  "timeout_seconds": 1800.0
+}

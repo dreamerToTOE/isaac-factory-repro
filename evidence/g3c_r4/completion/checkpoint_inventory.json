@@ -1,0 +1,92 @@
+[
+  {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/Factory.pth",
+    "sha256": "533c6019560f31ff525901c0dc5ee64c93d12e2588f2bc61a7655b328fce3b37",
+    "size_bytes": 212885999
+  },
+  {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_100_rew_331.73917.pth",
+    "sha256": "9ba32c0ae42b1d732beed25bac08083864a86c7ae8d5e2916928bc485b8f898a",
+    "size_bytes": 212889115
+  },
+  {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_125_rew_311.21207.pth",
+    "sha256": "5226d0c2fa58255d3a4528c3de86fd6b4b9396a7b93e6fe6b3d3ea7d1c79cc7c",
+    "size_bytes": 212889115
+  },
+  {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_150_rew_324.5499.pth",
+    "sha256": "84c5724db83a324cc3088f8048cff2bf7ba808cd5335234ce5f6f9642f55be8c",
+    "size_bytes": 212889005
+  },
+  {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_175_rew_323.9612.pth",
+    "sha256": "e973a85db40bfbc35969418b6de90350e189c928d4cc1b66b22e1dc2975c377e",
+    "size_bytes": 212889005
+  },
+  {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_200_rew_331.54846.pth",
+    "sha256": "2166165f8b9f75b84ed0db53a56bfe8c704904d2816dd68237d44ec2c7d43236",
+    "size_bytes": 212889115
+  },
+  {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_225_rew_329.18393.pth",
+    "sha256": "11dcd7c6a5f30683346d8e4652989114dfb8bf2d74b79e4547be24592afabd04",
+    "size_bytes": 212889115
+  },
+  {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_250_rew_344.46658.pth",
+    "sha256": "e2462fe32d3be6bd177df8a0db9d27b13570af97e486315a1939bd157bc54df4",
+    "size_bytes": 212889115
+  },
+  {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_25_rew_111.28653.pth",
+    "sha256": "1ee36d0797cd769089354eab0dd16c4623b8995907638621e641ec44a9a0be56",
+    "size_bytes": 212889005
+  },
+  {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_275_rew_345.01547.pth",
+    "sha256": "a0caeddc3fc9bc5b54bd3ae0bd721e69da6ab3df606c3141648e569f788717b3",
+    "size_bytes": 212889115
+  },
+  {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_300_rew_344.49777.pth",
+    "sha256": "c0bb3dbadb406b4bae8a9e7d5727cfb2f868265fc10588710611776f01354272",
+    "size_bytes": 212889115
+  },
+  {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_325_rew_343.98096.pth",
+    "sha256": "1c8ad42e73c9ed126de38cff7fc32f7946cdd31582f607ad210b1d751b4b745f",
+    "size_bytes": 212889115
+  },
+  {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_350_rew_357.895.pth",
+    "sha256": "cf8cb70879a8665e5d32111c8b4382aa6b0e850ee89abf02a404b92152482711",
+    "size_bytes": 212888895
+  },
+  {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_375_rew_345.91623.pth",
+    "sha256": "9de1d66bc845c28043602dc7ad718beaecf977514347203fa1b7f8777f2508b9",
+    "size_bytes": 212889115
+  },
+  {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew_345.99203.pth",
+    "sha256": "f27b09b771b0a7c9c0d8925ecf091ac8afa8b2db5c38232c6dcbfdb25c566c70",
+    "size_bytes": 212889115
+  },
+  {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew__345.99203_.pth",
+    "sha256": "da72a148ebe2b1e2f11f79c4316c24f515510780a3975e2304a41077436b3c36",
+    "size_bytes": 212889335
+  },
+  {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_50_rew_264.5973.pth",
+    "sha256": "2ae19dbb24adb64521328c85bed6132afeec4ce1bca00fe0381ae5173f0629c6",
+    "size_bytes": 212888895
+  },
+  {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_75_rew_303.1485.pth",
+    "sha256": "e24035cd258d45a8dc25fdcb6d4a3b2bfa2c7a739f685edb4f3860256b7fa168",
+    "size_bytes": 212888895
+  }
+]

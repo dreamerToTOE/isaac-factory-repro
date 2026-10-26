@@ -1,0 +1,371 @@
+{
+  "schema_version": "g3cr4_runtime_config_audit_v1",
+  "generated_utc": "2026-10-25T14:09:01.754594+00:00",
+  "read_only_cpu_audit": true,
+  "gpu_telemetry_queried": false,
+  "manifest": {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r4/manifest_frozen.json",
+    "bytes": 19331,
+    "sha256": "d18f353c2e0719963194f63bdd667d9280f323c739f0dffa6ba6802029824686"
+  },
+  "configuration_comparisons": {
+    "g2_to_r4_env.yaml": {
+      "baseline": {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/configs/resolved/g2_peginsert_64env_seed0_baseline_rerun/env.yaml",
+        "bytes": 12078,
+        "sha256": "9b07adc49a4ec46b41e7ae789510e47f5c20dd001ae32b22e18b5f7cc29bc876"
+      },
+      "r4": {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/params/env.yaml",
+        "bytes": 12078,
+        "sha256": "01c678dca9512a99ccbe93b1b27278fe991fbb9116b7b5db33e1ed389c5dc3d4"
+      },
+      "differences": {
+        "scene.num_envs": {
+          "baseline": 64,
+          "r4": 32
+        }
+      },
+      "allowed_difference_keys": [
+        "scene.num_envs"
+      ],
+      "unexpected_difference_keys": [],
+      "passed": true
+    },
+    "r2_to_r4_env.yaml": {
+      "baseline": {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_peginsert_32env_seed0_baseline_400ep/params/env.yaml",
+        "bytes": 12078,
+        "sha256": "01c678dca9512a99ccbe93b1b27278fe991fbb9116b7b5db33e1ed389c5dc3d4"
+      },
+      "r4": {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/params/env.yaml",
+        "bytes": 12078,
+        "sha256": "01c678dca9512a99ccbe93b1b27278fe991fbb9116b7b5db33e1ed389c5dc3d4"
+      },
+      "differences": {},
+      "allowed_difference_keys": [],
+      "unexpected_difference_keys": [],
+      "passed": true
+    },
+    "g2_to_r4_agent.yaml": {
+      "baseline": {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/configs/resolved/g2_peginsert_64env_seed0_baseline_rerun/agent.yaml",
+        "bytes": 2445,
+        "sha256": "e72507a2984840f9620c6210a882842341882a2ef1f031860a78978942d36ace"
+      },
+      "r4": {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/params/agent.yaml",
+        "bytes": 2456,
+        "sha256": "212abcbbdcb83f5aecdd7f91feb3a36a0c385671d2ca06e1ecb4e46be20c9d27"
+      },
+      "differences": {
+        "params.config.full_experiment_name": {
+          "baseline": "g2_peginsert_64env_seed0_baseline_rerun",
+          "r4": "g3cr4_peginsert_32env_seed0_400ep_20261025t140016z"
+        },
+        "params.config.max_epochs": {
+          "baseline": 200,
+          "r4": 400
+        },
+        "params.config.save_frequency": {
+          "baseline": 50,
+          "r4": 25
+        }
+      },
+      "allowed_difference_keys": [
+        "params.config.full_experiment_name",
+        "params.config.max_epochs",
+        "params.config.save_frequency"
+      ],
+      "unexpected_difference_keys": [],
+      "passed": true
+    },
+    "r2_to_r4_agent.yaml": {
+      "baseline": {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr2_peginsert_32env_seed0_baseline_400ep/params/agent.yaml",
+        "bytes": 2448,
+        "sha256": "8c31c57af35deb5061e10a7730c5968687b3f2e7f94fb63104232805943349ce"
+      },
+      "r4": {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/params/agent.yaml",
+        "bytes": 2456,
+        "sha256": "212abcbbdcb83f5aecdd7f91feb3a36a0c385671d2ca06e1ecb4e46be20c9d27"
+      },
+      "differences": {
+        "params.config.full_experiment_name": {
+          "baseline": "g3cr2_peginsert_32env_seed0_baseline_400ep",
+          "r4": "g3cr4_peginsert_32env_seed0_400ep_20261025t140016z"
+        },
+        "params.config.save_frequency": {
+          "baseline": 50,
+          "r4": 25
+        }
+      },
+      "allowed_difference_keys": [
+        "params.config.full_experiment_name",
+        "params.config.save_frequency"
+      ],
+      "unexpected_difference_keys": [],
+      "passed": true
+    }
+  },
+  "runtime_audit_snapshot": {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/train_32env_seed0_400ep_20261025t140016z/supervisor/training_audit.json",
+    "bytes": 5847,
+    "sha256": "4aa8ffaec9c52fe28a72022acb7eb37c721fdffee9e968f5604995156928d401"
+  },
+  "runtime_dimensions": {
+    "num_actors": {
+      "expected": 32,
+      "actual": 32,
+      "passed": true
+    },
+    "horizon_length": {
+      "expected": 128,
+      "actual": 128,
+      "passed": true
+    },
+    "minibatch_size": {
+      "expected": 512,
+      "actual": 512,
+      "passed": true
+    },
+    "mini_epochs": {
+      "expected": 4,
+      "actual": 4,
+      "passed": true
+    },
+    "obs_shape": {
+      "expected": [
+        19
+      ],
+      "actual": [
+        19
+      ],
+      "passed": true
+    },
+    "state_shape": {
+      "expected": [
+        43
+      ],
+      "actual": [
+        43
+      ],
+      "passed": true
+    },
+    "actions_num": {
+      "expected": 6,
+      "actual": 6,
+      "passed": true
+    },
+    "mixed_precision": {
+      "expected": true,
+      "actual": true,
+      "passed": true
+    }
+  },
+  "runtime_config_registered": {
+    "num_actors": {
+      "expected": 32,
+      "actual": 32,
+      "passed": true
+    },
+    "max_epochs": {
+      "expected": 400,
+      "actual": 400,
+      "passed": true
+    },
+    "horizon_length": {
+      "expected": 128,
+      "actual": 128,
+      "passed": true
+    },
+    "save_frequency": {
+      "expected": 25,
+      "actual": 25,
+      "passed": true
+    },
+    "full_experiment_name": {
+      "expected": "g3cr4_peginsert_32env_seed0_400ep_20261025t140016z",
+      "actual": "g3cr4_peginsert_32env_seed0_400ep_20261025t140016z",
+      "passed": true
+    }
+  },
+  "architecture_comparison": {
+    "actor_model": {
+      "matches_r2": true,
+      "r4": "Network(\n  (value_mean_std): RunningMeanStd()\n  (running_mean_std): RunningMeanStd()\n  (a2c_network): Network(\n    (actor_cnn): Sequential()\n    (critic_cnn): Sequential()\n    (actor_mlp): Sequential(\n      (0): Linear(in_features=1024, out_features=512, bias=True)\n      (1): ELU(alpha=1.0)\n      (2): Linear(in_features=512, out_features=128, bias=True)\n      (3): ELU(alpha=1.0)\n      (4): Linear(in_features=128, out_features=64, bias=True)\n      (5): ELU(alpha=1.0)\n    )\n    (critic_mlp): Sequential()\n    (rnn): LSTMWithDones(\n      (rnn): LSTM(19, 1024, num_layers=2)\n    )\n    (layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)\n    (value): Linear(in_features=64, out_features=1, bias=True)\n    (value_act): Identity()\n    (mu): Linear(in_features=64, out_features=6, bias=True)\n    (mu_act): Identity()\n    (sigma_act): Identity()\n    (sigma): Linear(in_features=64, out_features=6, bias=True)\n  )\n)",
+      "r2": "Network(\n  (value_mean_std): RunningMeanStd()\n  (running_mean_std): RunningMeanStd()\n  (a2c_network): Network(\n    (actor_cnn): Sequential()\n    (critic_cnn): Sequential()\n    (actor_mlp): Sequential(\n      (0): Linear(in_features=1024, out_features=512, bias=True)\n      (1): ELU(alpha=1.0)\n      (2): Linear(in_features=512, out_features=128, bias=True)\n      (3): ELU(alpha=1.0)\n      (4): Linear(in_features=128, out_features=64, bias=True)\n      (5): ELU(alpha=1.0)\n    )\n    (critic_mlp): Sequential()\n    (rnn): LSTMWithDones(\n      (rnn): LSTM(19, 1024, num_layers=2)\n    )\n    (layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)\n    (value): Linear(in_features=64, out_features=1, bias=True)\n    (value_act): Identity()\n    (mu): Linear(in_features=64, out_features=6, bias=True)\n    (mu_act): Identity()\n    (sigma_act): Identity()\n    (sigma): Linear(in_features=64, out_features=6, bias=True)\n  )\n)"
+    },
+    "central_value_model": {
+      "matches_r2": true,
+      "r4": "Network(\n  (value_mean_std): RunningMeanStd()\n  (running_mean_std): RunningMeanStd()\n  (a2c_network): Network(\n    (actor_cnn): Sequential()\n    (critic_cnn): Sequential()\n    (actor_mlp): Sequential(\n      (0): Linear(in_features=1024, out_features=512, bias=True)\n      (1): ELU(alpha=1.0)\n      (2): Linear(in_features=512, out_features=128, bias=True)\n      (3): ELU(alpha=1.0)\n      (4): Linear(in_features=128, out_features=64, bias=True)\n      (5): ELU(alpha=1.0)\n    )\n    (critic_mlp): Sequential()\n    (rnn): LSTMWithDones(\n      (rnn): LSTM(43, 1024, num_layers=2)\n    )\n    (layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)\n    (value): Linear(in_features=64, out_features=1, bias=True)\n    (value_act): Identity()\n  )\n)",
+      "r2": "Network(\n  (value_mean_std): RunningMeanStd()\n  (running_mean_std): RunningMeanStd()\n  (a2c_network): Network(\n    (actor_cnn): Sequential()\n    (critic_cnn): Sequential()\n    (actor_mlp): Sequential(\n      (0): Linear(in_features=1024, out_features=512, bias=True)\n      (1): ELU(alpha=1.0)\n      (2): Linear(in_features=512, out_features=128, bias=True)\n      (3): ELU(alpha=1.0)\n      (4): Linear(in_features=128, out_features=64, bias=True)\n      (5): ELU(alpha=1.0)\n    )\n    (critic_mlp): Sequential()\n    (rnn): LSTMWithDones(\n      (rnn): LSTM(43, 1024, num_layers=2)\n    )\n    (layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)\n    (value): Linear(in_features=64, out_features=1, bias=True)\n    (value_act): Identity()\n  )\n)"
+    }
+  },
+  "frozen_source_verification": {
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/complete_g3cr4.py": {
+      "expected": "c4fa64ab82a20056f6f3d17a33d9a6c32ea9dd432b966332c33105541d3b0175",
+      "actual": "c4fa64ab82a20056f6f3d17a33d9a6c32ea9dd432b966332c33105541d3b0175",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/durable_supervisor.py": {
+      "expected": "2f02e42128dea3bfdda5146802ea097f6b25be805296e6a16f093f6d2b31a889",
+      "actual": "2f02e42128dea3bfdda5146802ea097f6b25be805296e6a16f093f6d2b31a889",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/evaluate_checkpoint.py": {
+      "expected": "415dff9b59ece8a21e6bbe0a6c9fff08e2ea594cb8dc2ef8fe73e299c94af707",
+      "actual": "415dff9b59ece8a21e6bbe0a6c9fff08e2ea594cb8dc2ef8fe73e299c94af707",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/evaluation_reporting.py": {
+      "expected": "8cfb68a200a9f81b430444e94b7c2c7ae54c7b4e0d39feb4a68625efc3514dcd",
+      "actual": "8cfb68a200a9f81b430444e94b7c2c7ae54c7b4e0d39feb4a68625efc3514dcd",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g2_training_observer.py": {
+      "expected": "953b5cfd20615a5d8f6b9a200ce03124828a39e6da8f8423a4989c0dc25e3d6a",
+      "actual": "953b5cfd20615a5d8f6b9a200ce03124828a39e6da8f8423a4989c0dc25e3d6a",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g3a_launch_smoke.py": {
+      "expected": "2af94bacd94d005fa6177eed7eec9e11d4d3b163ae7a2b69ef7db8a7996202cd",
+      "actual": "2af94bacd94d005fa6177eed7eec9e11d4d3b163ae7a2b69ef7db8a7996202cd",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g3cr4_launch.py": {
+      "expected": "727e8806b39a1cb5001b4ffd5ea1e8f90a45b50f9e793897f7576edd7ac0a1bc",
+      "actual": "727e8806b39a1cb5001b4ffd5ea1e8f90a45b50f9e793897f7576edd7ac0a1bc",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/gpu_guard.py": {
+      "expected": "bbbe15c007acd052db176743f42e0a831fd7b6b7a92a6d41dc311ca74b8146f2",
+      "actual": "bbbe15c007acd052db176743f42e0a831fd7b6b7a92a6d41dc311ca74b8146f2",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/python_entry.py": {
+      "expected": "df5ad392a16259f0be72c632643c24a20a57c8ff07e551881b0d52fefe6e011f",
+      "actual": "df5ad392a16259f0be72c632643c24a20a57c8ff07e551881b0d52fefe6e011f",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh": {
+      "expected": "10d11ff9b3d44c252c895ac3ca6ca2aa5301c78cbcacd1b5dc01702a494409d8",
+      "actual": "10d11ff9b3d44c252c895ac3ca6ca2aa5301c78cbcacd1b5dc01702a494409d8",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/success_metrics.py": {
+      "expected": "bd3233876429dcce64bee52be11b9f03a69b1e35279b4e285dab4e81151bbfa2",
+      "actual": "bd3233876429dcce64bee52be11b9f03a69b1e35279b4e285dab4e81151bbfa2",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/supervised_exec.py": {
+      "expected": "0d9fa854306b38833c7f1f4d66d0ec04d3c8b3c1397b95991f25b00e2ffa6b89",
+      "actual": "0d9fa854306b38833c7f1f4d66d0ec04d3c8b3c1397b95991f25b00e2ffa6b89",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/supervision_common.py": {
+      "expected": "850f8fdf3c18147c8b94c109d978efc0d8c2c26bf6d8d9e6b6600c9e6d40f1e1",
+      "actual": "850f8fdf3c18147c8b94c109d978efc0d8c2c26bf6d8d9e6b6600c9e6d40f1e1",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/tensorboard_finalizer.py": {
+      "expected": "e4d14b64d1989a899a732174132a1aa1d92fc0f394115ff7ba4db6f74b586028",
+      "actual": "e4d14b64d1989a899a732174132a1aa1d92fc0f394115ff7ba4db6f74b586028",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/tensorboard_tail.py": {
+      "expected": "edb09c2acb1284fff0998532cee2dd1aeb5e8586e054679c32f178ecc6fa87fb",
+      "actual": "edb09c2acb1284fff0998532cee2dd1aeb5e8586e054679c32f178ecc6fa87fb",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/a2c_continuous.py": {
+      "expected": "998755d3365d8160930a8a8a0cfe8e7e1cd647b6cd2b7edc4e38895828c5a720",
+      "actual": "998755d3365d8160930a8a8a0cfe8e7e1cd647b6cd2b7edc4e38895828c5a720",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/central_value.py": {
+      "expected": "6e62bcce9fe892e9245ce2cd46f06fb50f85ee9843572a4dedaf5e797f1ee7b6",
+      "actual": "6e62bcce9fe892e9245ce2cd46f06fb50f85ee9843572a4dedaf5e797f1ee7b6",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/models.py": {
+      "expected": "78a806701b3099ea45de5c9c1e00c761d0a9443b4b39d6cce087680fc4e62f37",
+      "actual": "78a806701b3099ea45de5c9c1e00c761d0a9443b4b39d6cce087680fc4e62f37",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/players.py": {
+      "expected": "e22d083c540b479b31fefc2bbd05d132a54e3f97d14bf21421498e011942c043",
+      "actual": "e22d083c540b479b31fefc2bbd05d132a54e3f97d14bf21421498e011942c043",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/running_mean_std.py": {
+      "expected": "c7ad469e2bbc89de8419b55c768d1076f5d394d72102cc38c7e49002fc1db788",
+      "actual": "c7ad469e2bbc89de8419b55c768d1076f5d394d72102cc38c7e49002fc1db788",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/a2c_common.py": {
+      "expected": "b2ff92d888212227620138a6ca09d41ea2b8de6af044163ca3699f4ed48de661",
+      "actual": "b2ff92d888212227620138a6ca09d41ea2b8de6af044163ca3699f4ed48de661",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py": {
+      "expected": "668fb1251c83d6e13271457d53a1b7079f3c2964d3284a13ac3bc2ff58194110",
+      "actual": "668fb1251c83d6e13271457d53a1b7079f3c2964d3284a13ac3bc2ff58194110",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/envs/direct_rl_env.py": {
+      "expected": "0c919fdc93e9198562edaaa3c29627a8dc0e123f581f41cdffc75641f9033fc1",
+      "actual": "0c919fdc93e9198562edaaa3c29627a8dc0e123f581f41cdffc75641f9033fc1",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/agents/rl_games_ppo_cfg.yaml": {
+      "expected": "a64fef462770f9ba4a3acd0fdd21eef47f0d97529182b24f255ec9ab8fd27ebb",
+      "actual": "a64fef462770f9ba4a3acd0fdd21eef47f0d97529182b24f255ec9ab8fd27ebb",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_control.py": {
+      "expected": "7ef611d530a86fa2aba9db222361b0fe8b64d34037f204ad622a17051ad5e163",
+      "actual": "7ef611d530a86fa2aba9db222361b0fe8b64d34037f204ad622a17051ad5e163",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py": {
+      "expected": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81",
+      "actual": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env_cfg.py": {
+      "expected": "5f804ba3f6e3d96f352490a9b5e2e1e239d308ff7eeab7ae3aad0ca6aa8daed8",
+      "actual": "5f804ba3f6e3d96f352490a9b5e2e1e239d308ff7eeab7ae3aad0ca6aa8daed8",
+      "passed": true
+    },
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_tasks_cfg.py": {
+      "expected": "7510b6cbed1e5bdd297723cabf7d25cef6a00b94bb3804b7578f2925a6a43971",
+      "actual": "7510b6cbed1e5bdd297723cabf7d25cef6a00b94bb3804b7578f2925a6a43971",
+      "passed": true
+    }
+  },
+  "supervision_policy": {
+    "launch_policy": "user-authorized-no-gpu-guard",
+    "gpu_guard_enabled": false,
+    "gpu_telemetry_required": false,
+    "gpu_telemetry_gaps_terminate_child": false,
+    "supervisor_guard_directory": null,
+    "training_argv_matches_manifest": true,
+    "no_guard_argv": true,
+    "only_supervisor_unit": true,
+    "passed": true
+  },
+  "audit_instrumentation_errors_at_snapshot": [],
+  "restore_events_at_snapshot": [],
+  "completed_epoch_count_at_snapshot": 2,
+  "upstream_head": "90b79bb2d44feb8d833f260f2bf37da3487180ba",
+  "upstream_working_tree": "",
+  "notes": [
+    "Agent YAML num_actors=128 is upstream pre-environment dump; unchanged official train.py overrides actual runtime num_actors to32. Runtime audit is authoritative.",
+    "No GPU telemetry commands were issued; CUDA allocator fields already in audit were not used to make capacity/coverage claims.",
+    "This is an initialization/configuration audit, not completion or numerical-stability certification. Dynamic audit snapshot hash will change as new epochs finish."
+  ],
+  "passed": true
+}

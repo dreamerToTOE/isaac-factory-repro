@@ -80,6 +80,48 @@ def completed_epoch_evidence(epochs, planned_epochs=400):
             'count_rule': 'Sum actual audit transitions only for contiguous epochs starting at 1, each with 32*128 transitions; no interpolation or resumed-run concatenation.'}
 
 
+def verified_throughput(train, epochs, supervisor):
+    """Keep every throughput numerator and timing denominator on the same prefix."""
+    count = train['verified_progress']['completed_epochs_verified']
+    prefix = epochs[:count]
+    transitions = train['verified_progress']['completed_transitions_verified']
+
+    def seconds(rows, key):
+        values = [row.get(key) for row in rows]
+        return (sum(values) if values and all(finite_number(value) and value >= 0 for value in values)
+                and sum(values) > 0 else None)
+
+    official = seconds(prefix, 'official_total_seconds')
+    environment = seconds(prefix, 'env_step_seconds')
+    stable = [row for row in prefix if row['epoch'] >= 11]
+    stable_seconds = seconds(stable, 'official_total_seconds')
+    duration = supervisor.get('wall_seconds')
+    reliable_wall = supervisor.get('finalized') is True and finite_number(duration) and duration > 0
+    train.update({
+        'official_ppo_total_seconds': official,
+        'official_ppo_timing_source': 'verified_contiguous_epoch_audit_prefix' if official else None,
+        'official_ppo_aggregate_fps': transitions / official if official else None,
+        'environment_step_aggregate_fps': transitions / environment if environment else None,
+        'launched_process_wall_seconds': duration if reliable_wall else None,
+        'end_to_end_transitions_per_wall_second': transitions / duration if reliable_wall else None,
+        'stable_epoch_range': [11, count] if stable_seconds else None,
+        'stable_timing_source': 'verified_contiguous_epoch_audit_prefix_epochs_11_onward' if stable_seconds else None,
+        'stable_aggregate_total_fps': sum(row['environment_transitions'] for row in stable) / stable_seconds if stable_seconds else None,
+        'stable_epoch_seconds': descriptive([row['official_total_seconds'] for row in stable]) if stable_seconds else descriptive([]),
+        'throughput_scope': {
+            'completed_transition_numerator': 'verified contiguous audit prefix only',
+            'official_and_environment_seconds_denominator': 'same verified contiguous audit prefix; no TensorBoard inference across audit gaps',
+            'wall_seconds_denominator': 'entire finalized supervisor duration, including startup, excluded later audit rows, and any incomplete rollout',
+            'wall_throughput_limit': 'Verified prefix transitions divided by whole finalized wall time; excludes all unverified or incomplete interactions, not total-interaction throughput.',
+            'observed_audit_rows': len(epochs), 'included_audit_rows': count,
+            'excluded_audit_rows': len(epochs) - count,
+            'uncompleted_rollout_seconds': 'unknown; excluded from official completed-prefix PPO timing',
+            'wall_duration_available': reliable_wall,
+        },
+    })
+    return train
+
+
 def checkpoint_records(directory, selected, issues):
     """Hash generated files; tensor inspection remains explicit separate evidence."""
     rows = []
@@ -199,9 +241,16 @@ def analyze(manifest, *, tensorboard_python=None):
                'wall_evidence': {'source': str(paths['supervisor'] / 'status.json'),
                                  'duration_scope': 'supervisor start through actual child wait and finalization'}}
     train = training_summary(scalars, audit, epochs, monitor, 32, 128, issues)
+    # Keep the user-facing duration explicit.  ``training_summary`` retains
+    # the established ``launched_process_wall_seconds`` field, but a direct
+    # name avoids making readers infer which timing is the actual supervisor
+    # duration when comparing runs.
+    train['training_duration_seconds'] = supervisor.get('wall_seconds')
+    train['training_duration_scope'] = 'durable supervisor start through actual child wait and finalization'
     train['verified_progress'] = completed_epoch_evidence(epochs)
     train['environment_transitions'] = train['verified_progress']['completed_transitions_verified']
     train['transition_count_source'] = 'verified_contiguous_32x128_epoch_audit_prefix'
+    train = verified_throughput(train, epochs, supervisor)
     train['exit'] = {key: supervisor.get(key) for key in (
         'raw_wait_returncode', 'child_exit_code', 'child_signal', 'termination_reason',
         'error', 'stop_signals', 'received_supervisor_signals')}
@@ -245,6 +294,7 @@ def analyze(manifest, *, tensorboard_python=None):
         'training': train, 'checkpoint_inventory': inventory,
         'checkpoint_inspections': selected, 'completion_gates': gates,
         'evaluation': evaluation, 'historical_matched_transition_comparison': matched_comparison(evaluation, historical),
+        'epoch_csv_scope': 'completed_epochs.csv retains all observed audit rows; in_verified_contiguous_prefix marks rows included in verified transition totals and PPO timing.',
         'historical_input_issues': historical_issues, 'issues': issues,
         'audit_identity': audit.get('input_identity'), 'audit_runtime': audit.get('runtime'),
         'audit_exit_error': audit.get('exit_error'), 'audit_instrumentation_errors': audit.get('instrumentation_errors'),
@@ -258,9 +308,11 @@ def analyze(manifest, *, tensorboard_python=None):
 
 def write_csv(output, report, epochs):
     with (output / 'completed_epochs.csv').open('w', newline='') as stream:
-        fields = ['epoch', 'environment_transitions', 'official_total_seconds', 'total_fps', 'epoch_loss_arrays_finite']
+        fields = ['epoch', 'environment_transitions', 'official_total_seconds', 'total_fps', 'epoch_loss_arrays_finite', 'in_verified_contiguous_prefix']
         writer = csv.DictWriter(stream, fieldnames=fields, extrasaction='ignore')
-        writer.writeheader(); writer.writerows(epochs)
+        writer.writeheader()
+        prefix_count = report['training']['verified_progress']['completed_epochs_verified']
+        writer.writerows({**row, 'in_verified_contiguous_prefix': index < prefix_count} for index, row in enumerate(epochs))
     with (output / 'evaluation_per_seed.csv').open('w', newline='') as stream:
         fields = ['checkpoint_epoch', 'seed', 'status', 'episodes_completed', 'ever_success_count', 'ever_success_rate',
                   'terminal_success_count', 'terminal_success_rate', 'conditional_first_success_n',

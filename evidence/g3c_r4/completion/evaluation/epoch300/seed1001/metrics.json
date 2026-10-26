@@ -1,0 +1,823 @@
+{
+  "aggregate": {
+    "episodes_completed": 32,
+    "episodes_requested": 32,
+    "ever_success_count": 32,
+    "ever_success_rate": 1.0,
+    "ever_success_wilson95": [
+      0.8928208017449293,
+      1.0
+    ],
+    "first_success_count": 32,
+    "first_success_rate": 1.0,
+    "mean_first_success_step": 45.0625,
+    "terminal_success_count": 32,
+    "terminal_success_rate": 1.0,
+    "terminal_success_wilson95": [
+      0.8928208017449293,
+      1.0
+    ],
+    "transient_only_count": 0
+  },
+  "auto_reset_order_verified": true,
+  "capture_calls": 149,
+  "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_300_rew_344.49777.pth",
+  "checkpoint_sha256": "c0bb3dbadb406b4bae8a9e7d5727cfb2f868265fc10588710611776f01354272",
+  "deterministic": true,
+  "elapsed_seconds": 40.527864682000654,
+  "episodes": [
+    {
+      "env_id": 0,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 68,
+      "first_success_time_seconds": 4.533333333333333,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 1,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 67,
+      "first_success_time_seconds": 4.466666666666667,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 2,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 23,
+      "first_success_time_seconds": 1.5333333333333332,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 3,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 39,
+      "first_success_time_seconds": 2.6,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 4,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 37,
+      "first_success_time_seconds": 2.466666666666667,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 5,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 31,
+      "first_success_time_seconds": 2.0666666666666664,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 6,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 22,
+      "first_success_time_seconds": 1.4666666666666666,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 7,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 29,
+      "first_success_time_seconds": 1.9333333333333333,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 8,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 45,
+      "first_success_time_seconds": 3.0,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 9,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 25,
+      "first_success_time_seconds": 1.6666666666666667,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 10,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 84,
+      "first_success_time_seconds": 5.6,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 11,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 50,
+      "first_success_time_seconds": 3.3333333333333335,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 12,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 31,
+      "first_success_time_seconds": 2.0666666666666664,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 13,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 61,
+      "first_success_time_seconds": 4.066666666666666,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 14,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 69,
+      "first_success_time_seconds": 4.6,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 15,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 70,
+      "first_success_time_seconds": 4.666666666666667,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 16,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 82,
+      "first_success_time_seconds": 5.466666666666667,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 17,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 27,
+      "first_success_time_seconds": 1.8,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 18,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 65,
+      "first_success_time_seconds": 4.333333333333333,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 19,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 30,
+      "first_success_time_seconds": 2.0,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 20,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 36,
+      "first_success_time_seconds": 2.4,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 21,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 33,
+      "first_success_time_seconds": 2.2,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 22,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 30,
+      "first_success_time_seconds": 2.0,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 23,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 18,
+      "first_success_time_seconds": 1.2,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 24,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 29,
+      "first_success_time_seconds": 1.9333333333333333,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 25,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 23,
+      "first_success_time_seconds": 1.5333333333333332,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 26,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 119,
+      "first_success_time_seconds": 7.933333333333334,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 27,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 49,
+      "first_success_time_seconds": 3.2666666666666666,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 28,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 51,
+      "first_success_time_seconds": 3.4,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 29,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 23,
+      "first_success_time_seconds": 1.5333333333333332,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 30,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 21,
+      "first_success_time_seconds": 1.4,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    },
+    {
+      "env_id": 31,
+      "episode_id": 0,
+      "ever_success": true,
+      "first_success_step": 55,
+      "first_success_time_seconds": 3.6666666666666665,
+      "seed": 1001,
+      "steps": 149,
+      "terminal_kind": "timeout",
+      "terminal_success": true
+    }
+  ],
+  "episodes_completed": 32,
+  "episodes_per_env_requested": 1,
+  "geometric_snapshot_limit": 12,
+  "geometric_snapshots": [
+    {
+      "curr_yaw_rad": null,
+      "env_id": 23,
+      "episode_id": 0,
+      "episode_step": 18,
+      "geometry_recheck_result": true,
+      "held_base_pos": [
+        0.5675572156906128,
+        -0.047471046447753906,
+        0.020882226526737213
+      ],
+      "official_check_rot": false,
+      "official_height_threshold_m": 0.001,
+      "official_predicate_result": true,
+      "official_success_threshold": 0.04,
+      "official_xy_threshold_m": 0.0025,
+      "official_yaw_threshold_rad": null,
+      "seed": 1001,
+      "target_held_base_pos": [
+        0.5673176050186157,
+        -0.047826290130615234,
+        0.020907700061798096
+      ],
+      "trigger": "first_success",
+      "xy_dist_m": 0.00042849895544350147,
+      "z_disp_m": -2.547353506088257e-05
+    },
+    {
+      "curr_yaw_rad": null,
+      "env_id": 30,
+      "episode_id": 0,
+      "episode_step": 21,
+      "geometry_recheck_result": true,
+      "held_base_pos": [
+        0.600801944732666,
+        0.0010995864868164062,
+        0.08164248615503311
+      ],
+      "official_check_rot": false,
+      "official_height_threshold_m": 0.001,
+      "official_predicate_result": true,
+      "official_success_threshold": 0.04,
+      "official_xy_threshold_m": 0.0025,
+      "official_yaw_threshold_rad": null,
+      "seed": 1001,
+      "target_held_base_pos": [
+        0.600806713104248,
+        0.0005977153778076172,
+        0.08163578063249588
+      ],
+      "trigger": "first_success",
+      "xy_dist_m": 0.0005018937517888844,
+      "z_disp_m": 6.705522537231445e-06
+    },
+    {
+      "curr_yaw_rad": null,
+      "env_id": 6,
+      "episode_id": 0,
+      "episode_step": 22,
+      "geometry_recheck_result": true,
+      "held_base_pos": [
+        0.6017370223999023,
+        -0.007156848907470703,
+        0.04274274408817291
+      ],
+      "official_check_rot": false,
+      "official_height_threshold_m": 0.001,
+      "official_predicate_result": true,
+      "official_success_threshold": 0.04,
+      "official_xy_threshold_m": 0.0025,
+      "official_yaw_threshold_rad": null,
+      "seed": 1001,
+      "target_held_base_pos": [
+        0.6020917892456055,
+        -0.007231473922729492,
+        0.042590465396642685
+      ],
+      "trigger": "first_success",
+      "xy_dist_m": 0.0003625305544119328,
+      "z_disp_m": 0.00015227869153022766
+    },
+    {
+      "curr_yaw_rad": null,
+      "env_id": 2,
+      "episode_id": 0,
+      "episode_step": 23,
+      "geometry_recheck_result": true,
+      "held_base_pos": [
+        0.6394743919372559,
+        0.04186795651912689,
+        0.03842403367161751
+      ],
+      "official_check_rot": false,
+      "official_height_threshold_m": 0.001,
+      "official_predicate_result": true,
+      "official_success_threshold": 0.04,
+      "official_xy_threshold_m": 0.0025,
+      "official_yaw_threshold_rad": null,
+      "seed": 1001,
+      "target_held_base_pos": [
+        0.6399540901184082,
+        0.041766997426748276,
+        0.0383576974272728
+      ],
+      "trigger": "first_success",
+      "xy_dist_m": 0.0004902071668766439,
+      "z_disp_m": 6.63362443447113e-05
+    },
+    {
+      "curr_yaw_rad": null,
+      "env_id": 25,
+      "episode_id": 0,
+      "episode_step": 23,
+      "geometry_recheck_result": true,
+      "held_base_pos": [
+        0.5931065082550049,
+        0.04416918754577637,
+        0.01441679522395134
+      ],
+      "official_check_rot": false,
+      "official_height_threshold_m": 0.001,
+      "official_predicate_result": true,
+      "official_success_threshold": 0.04,
+      "official_xy_threshold_m": 0.0025,
+      "official_yaw_threshold_rad": null,
+      "seed": 1001,
+      "target_held_base_pos": [
+        0.5929412841796875,
+        0.04371070861816406,
+        0.014132790267467499
+      ],
+      "trigger": "first_success",
+      "xy_dist_m": 0.00048734169104136527,
+      "z_disp_m": 0.00028400495648384094
+    },
+    {
+      "curr_yaw_rad": null,
+      "env_id": 29,
+      "episode_id": 0,
+      "episode_step": 23,
+      "geometry_recheck_result": true,
+      "held_base_pos": [
+        0.606905460357666,
+        0.03410768508911133,
+        0.04466511681675911
+      ],
+      "official_check_rot": false,
+      "official_height_threshold_m": 0.001,
+      "official_predicate_result": true,
+      "official_success_threshold": 0.04,
+      "official_xy_threshold_m": 0.0025,
+      "official_yaw_threshold_rad": null,
+      "seed": 1001,
+      "target_held_base_pos": [
+        0.6072578430175781,
+        0.03397083282470703,
+        0.04457549378275871
+      ],
+      "trigger": "first_success",
+      "xy_dist_m": 0.0003780239203479141,
+      "z_disp_m": 8.962303400039673e-05
+    },
+    {
+      "curr_yaw_rad": null,
+      "env_id": 0,
+      "episode_id": 0,
+      "episode_step": 149,
+      "geometry_recheck_result": true,
+      "held_base_pos": [
+        0.5520792007446289,
+        0.01973581314086914,
+        0.06385896354913712
+      ],
+      "official_check_rot": false,
+      "official_height_threshold_m": 0.001,
+      "official_predicate_result": true,
+      "official_success_threshold": 0.04,
+      "official_xy_threshold_m": 0.0025,
+      "official_yaw_threshold_rad": null,
+      "seed": 1001,
+      "target_held_base_pos": [
+        0.5523490905761719,
+        0.019317150115966797,
+        0.06380024552345276
+      ],
+      "trigger": "terminal_success",
+      "xy_dist_m": 0.0004981157253496349,
+      "z_disp_m": 5.871802568435669e-05
+    },
+    {
+      "curr_yaw_rad": null,
+      "env_id": 1,
+      "episode_id": 0,
+      "episode_step": 149,
+      "geometry_recheck_result": true,
+      "held_base_pos": [
+        0.6174941062927246,
+        0.026974081993103027,
+        0.08653191477060318
+      ],
+      "official_check_rot": false,
+      "official_height_threshold_m": 0.001,
+      "official_predicate_result": true,
+      "official_success_threshold": 0.04,
+      "official_xy_threshold_m": 0.0025,
+      "official_yaw_threshold_rad": null,
+      "seed": 1001,
+      "target_held_base_pos": [
+        0.6173343658447266,
+        0.026601076126098633,
+        0.08651365339756012
+      ],
+      "trigger": "terminal_success",
+      "xy_dist_m": 0.00040577133768238127,
+      "z_disp_m": 1.8261373043060303e-05
+    },
+    {
+      "curr_yaw_rad": null,
+      "env_id": 2,
+      "episode_id": 0,
+      "episode_step": 149,
+      "geometry_recheck_result": true,
+      "held_base_pos": [
+        0.639561653137207,
+        0.042017675936222076,
+        0.03845126926898956
+      ],
+      "official_check_rot": false,
+      "official_height_threshold_m": 0.001,
+      "official_predicate_result": true,
+      "official_success_threshold": 0.04,
+      "official_xy_threshold_m": 0.0025,
+      "official_yaw_threshold_rad": null,
+      "seed": 1001,
+      "target_held_base_pos": [
+        0.6399540901184082,
+        0.041766997426748276,
+        0.0383576974272728
+      ],
+      "trigger": "terminal_success",
+      "xy_dist_m": 0.00046566780656576157,
+      "z_disp_m": 9.357184171676636e-05
+    },
+    {
+      "curr_yaw_rad": null,
+      "env_id": 3,
+      "episode_id": 0,
+      "episode_step": 149,
+      "geometry_recheck_result": true,
+      "held_base_pos": [
+        0.6025347709655762,
+        -0.010568857192993164,
+        0.06868641078472137
+      ],
+      "official_check_rot": false,
+      "official_height_threshold_m": 0.001,
+      "official_predicate_result": true,
+      "official_success_threshold": 0.04,
+      "official_xy_threshold_m": 0.0025,
+      "official_yaw_threshold_rad": null,
+      "seed": 1001,
+      "target_held_base_pos": [
+        0.6021747589111328,
+        -0.010866880416870117,
+        0.06867967545986176
+      ],
+      "trigger": "terminal_success",
+      "xy_dist_m": 0.0004673612420447171,
+      "z_disp_m": 6.735324859619141e-06
+    },
+    {
+      "curr_yaw_rad": null,
+      "env_id": 4,
+      "episode_id": 0,
+      "episode_step": 149,
+      "geometry_recheck_result": true,
+      "held_base_pos": [
+        0.5550236701965332,
+        0.013198375701904297,
+        0.04800344258546829
+      ],
+      "official_check_rot": false,
+      "official_height_threshold_m": 0.001,
+      "official_predicate_result": true,
+      "official_success_threshold": 0.04,
+      "official_xy_threshold_m": 0.0025,
+      "official_yaw_threshold_rad": null,
+      "seed": 1001,
+      "target_held_base_pos": [
+        0.5549983978271484,
+        0.013014793395996094,
+        0.04794120416045189
+      ],
+      "trigger": "terminal_success",
+      "xy_dist_m": 0.00018531366367824376,
+      "z_disp_m": 6.22384250164032e-05
+    },
+    {
+      "curr_yaw_rad": null,
+      "env_id": 5,
+      "episode_id": 0,
+      "episode_step": 149,
+      "geometry_recheck_result": true,
+      "held_base_pos": [
+        0.6225833892822266,
+        -0.03204631805419922,
+        0.022516651079058647
+      ],
+      "official_check_rot": false,
+      "official_height_threshold_m": 0.001,
+      "official_predicate_result": true,
+      "official_success_threshold": 0.04,
+      "official_xy_threshold_m": 0.0025,
+      "official_yaw_threshold_rad": null,
+      "seed": 1001,
+      "target_held_base_pos": [
+        0.6230039596557617,
+        -0.03231048583984375,
+        0.02241150103509426
+      ],
+      "trigger": "terminal_success",
+      "xy_dist_m": 0.0004966528504155576,
+      "z_disp_m": 0.00010515004396438599
+    }
+  ],
+  "inference_settings": {
+    "action_selection": "policy_mean",
+    "model_training": false,
+    "normalization": "checkpoint buffers in eval mode",
+    "player_clip_actions": true,
+    "rnn_reset": "zero hidden/cell states at completed episode boundaries",
+    "torch_inference_mode": true
+  },
+  "max_steps": 160,
+  "num_envs": 32,
+  "official_predicate_source_sha256": "4c7080dc798a2ecb88aa4ef7e8e14ff9d7eb3af8736691a6f55adc3e91793024",
+  "official_rotation_check": false,
+  "official_success_capture": "pre_reset_factory_get_curr_successes",
+  "official_success_threshold": 0.04,
+  "policy_observation_shape": [
+    32,
+    19
+  ],
+  "runtime_packages": {
+    "gymnasium": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/gymnasium/__init__.py",
+      "version": "1.2.0"
+    },
+    "numpy": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/numpy/__init__.py",
+      "version": "1.26.4"
+    },
+    "torch": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/torch/__init__.py",
+      "version": "2.7.0+cu128"
+    }
+  },
+  "seed": 1001,
+  "status": "complete",
+  "step_dt_seconds": 0.06666666666666667,
+  "steps_executed": 149,
+  "task": "Isaac-Factory-PegInsert-Direct-v0",
+  "terminal_consistency_checks": [
+    {
+      "captured_rate": 1.0,
+      "official_rate": 1.0,
+      "policy_step": 149,
+      "pre_reset_episode_steps": [
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149,
+        149
+      ],
+      "returned_episode_steps_after_reset": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

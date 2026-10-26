@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/complete_g3cr4.py",
+    "--inspect-checkpoint",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_100_rew_331.73917.pth"
+  ],
+  "cwd": null,
+  "started": {
+    "monotonic_seconds": 49156.638155196,
+    "unix_seconds": 1792951832.56629,
+    "utc": "2026-10-25T18:10:32.566278+00:00"
+  }
+}

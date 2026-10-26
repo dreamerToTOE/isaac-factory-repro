@@ -1,0 +1,9 @@
+{
+  "monotonic_seconds": 49444.488633095,
+  "returncode": 0,
+  "role": "supervisor",
+  "stderr": "Running as unit: factory-g3cr4-20261025t140016z-eval-e200-s1003-supervisor.service\n",
+  "stdout": "",
+  "unix_seconds": 1792952120.4167678,
+  "utc": "2026-10-25T18:15:20.416757+00:00"
+}

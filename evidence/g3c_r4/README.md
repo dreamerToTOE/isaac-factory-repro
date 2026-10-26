@@ -1,5 +1,13 @@
 # G3C-R4 evidence
 
-Registration for one fresh 32-env / seed0 / 400-epoch PegInsert training attempt under the explicitly authorized no-independent-GPU-guard policy. No result is claimed by this registration. See [protocol](../../docs/PROTOCOL_G3C_R4.md).
+The fresh, explicitly authorized no-independent-GPU-guard PegInsert run completed successfully.
 
-`manifest_frozen.json` records exact argv, source identities, directories, parameters, and conditional evaluation. `preflight_snapshot.json` and `historical_fingerprints.json` preserve the read-only preflight and previous artifacts. CPU validation and actual execution records are added independently without rewriting historical G2/G3A/G3B/G3C evidence. Large checkpoints remain outside Git.
+- Registration and exact policy: [`manifest_frozen.json`](manifest_frozen.json)
+- Compact result: [`result.json`](result.json)
+- Full CPU analysis, milestone checks, success denominators, timing, and matched-transition comparison: [`analysis/report.json`](analysis/report.json)
+- Raw post-run artifact inventory: [`raw_artifact_inventory.json`](raw_artifact_inventory.json)
+- Preservation audit for the starting repository, historical checkpoints, raw evidence, and frozen sources: [`postrun_preservation_audit.json`](postrun_preservation_audit.json)
+- CPU prelaunch regression: [`prelaunch_cpu_regression.xml`](prelaunch_cpu_regression.xml)
+- Final CPU regression after post-run analysis: [`final_cpu_regression.xml`](final_cpu_regression.xml), 167 passed
+
+Training used 32 environments, seed 0, 400 epochs, horizon 128, and 1,638,400 completed transitions. The supervisor exited with raw wait status 0 and no stop signals. The independent GPU guard was intentionally omitted under the user's authorization; no continuous GPU telemetry coverage is claimed. Historical G2/G3B/R2 evidence remains separate and was not overwritten or pooled. Large checkpoints and full runtime logs remain outside Git; their paths and hashes are recorded in the inventories.

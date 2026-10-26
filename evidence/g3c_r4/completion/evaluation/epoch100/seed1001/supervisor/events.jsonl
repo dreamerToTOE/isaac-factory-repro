@@ -1,0 +1,2 @@
+{"event": "child_spawned_gated", "utc": "2026-10-25T18:10:44.002239+00:00", "unix_seconds": 1792951844.0022447, "monotonic_seconds": 49168.074109479, "identity": {"pid": 150850, "birth_ticks": "4916800", "boot_id": "c26a16fb-2550-4a52-a373-3399fbb47bef", "pgid": 150850, "state": "R"}}
+{"event": "exec_released", "utc": "2026-10-25T18:10:44.144116+00:00", "unix_seconds": 1792951844.1441274, "monotonic_seconds": 49168.215992826, "guard_identity": null}

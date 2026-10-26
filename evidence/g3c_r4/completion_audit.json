@@ -1,0 +1,326 @@
+{
+  "schema_version": "g3cr4_completion_independent_read_only_review_v1",
+  "reviewed_utc": "2026-10-25T14:10:18.234303+00:00",
+  "manifest_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r4/manifest_frozen.json",
+  "manifest_sha256": "d18f353c2e0719963194f63bdd667d9280f323c739f0dffa6ba6802029824686",
+  "checks": {
+    "all_28_frozen_source_hashes_match": true,
+    "actual_train_argv_equals_registration": true,
+    "actual_training_cwd_matches_registration": true,
+    "guard_directory_absent": true,
+    "actual_gpu_guard_disabled": true,
+    "actual_gpu_telemetry_not_required": true,
+    "actual_monitoring_policy_explicit": true,
+    "runtime_dimensions_correct": true,
+    "first_audit_epoch_present_finite": true,
+    "audit_no_instrumentation_errors": true,
+    "controller_waiting_without_evaluation": true,
+    "completion_has_no_gpu_telemetry_dependency": true,
+    "no_checkpoint_restore_events": true,
+    "all_12_original_evaluator_jsons_pass_new_completion_schema": true,
+    "historical_path_selection_final_matches_trusted_name": true,
+    "evaluation_cli_policy_explicit": true,
+    "evaluation_early_final_episode_budgets_match": true,
+    "completion_service_restart_no": true,
+    "completion_service_running": true
+  },
+  "all_checks_pass": true,
+  "bugs_found": [],
+  "actual_audit_observation": {
+    "completed_epoch_count": 4,
+    "last_completed_epoch": 4,
+    "last_epoch_loss_arrays_finite": true,
+    "runtime": {
+      "num_actors": 32,
+      "horizon_length": 128,
+      "minibatch_size": 512,
+      "mini_epochs": 4,
+      "obs_shape": [
+        19
+      ],
+      "state_shape": [
+        43
+      ],
+      "actions_num": 6,
+      "mixed_precision": true
+    }
+  },
+  "historical_path_selection_schema_controls": [
+    {
+      "epoch": 50,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_50_rew_301.46692.pth",
+      "selection": {
+        "basis": "last matching checkpoint save in chronological training audit",
+        "selected_save_event": {
+          "operation": "save",
+          "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_50_rew_301.46692",
+          "epoch": 50,
+          "frame": 204800
+        },
+        "all_milestone_candidate_paths": [
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_50_rew_301.46692.pth"
+        ],
+        "all_candidates_preserved": true
+      },
+      "exists": true,
+      "test_only_transformation": "Copied historical save-event frame set to epoch*4096 for registered32env selector; historical evidence unmodified."
+    },
+    {
+      "epoch": 100,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_100_rew_346.65335.pth",
+      "selection": {
+        "basis": "last matching checkpoint save in chronological training audit",
+        "selected_save_event": {
+          "operation": "save",
+          "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_100_rew_346.65335",
+          "epoch": 100,
+          "frame": 409600
+        },
+        "all_milestone_candidate_paths": [
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_100_rew_346.65335.pth"
+        ],
+        "all_candidates_preserved": true
+      },
+      "exists": true,
+      "test_only_transformation": "Copied historical save-event frame set to epoch*4096 for registered32env selector; historical evidence unmodified."
+    },
+    {
+      "epoch": 150,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_150_rew_350.71515.pth",
+      "selection": {
+        "basis": "last matching checkpoint save in chronological training audit",
+        "selected_save_event": {
+          "operation": "save",
+          "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_150_rew_350.71515",
+          "epoch": 150,
+          "frame": 614400
+        },
+        "all_milestone_candidate_paths": [
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_150_rew_350.71515.pth"
+        ],
+        "all_candidates_preserved": true
+      },
+      "exists": true,
+      "test_only_transformation": "Copied historical save-event frame set to epoch*4096 for registered32env selector; historical evidence unmodified."
+    },
+    {
+      "epoch": 200,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+      "selection": {
+        "basis": "last matching checkpoint save in chronological training audit",
+        "selected_save_event": {
+          "operation": "save",
+          "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_",
+          "epoch": 200,
+          "frame": 819200
+        },
+        "all_milestone_candidate_paths": [
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew_350.4961.pth",
+          "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth"
+        ],
+        "all_candidates_preserved": true
+      },
+      "exists": true,
+      "test_only_transformation": "Copied historical save-event frame set to epoch*4096 for registered32env selector; historical evidence unmodified."
+    }
+  ],
+  "historical_evaluation_schema_controls": [
+    {
+      "original_evidence_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch050/seed1001/metrics.json",
+      "registered_new_epoch_only_for_schema_validation": 100,
+      "episodes_checked": 32,
+      "validation": "pass"
+    },
+    {
+      "original_evidence_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch050/seed1002/metrics.json",
+      "registered_new_epoch_only_for_schema_validation": 100,
+      "episodes_checked": 32,
+      "validation": "pass"
+    },
+    {
+      "original_evidence_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch050/seed1003/metrics.json",
+      "registered_new_epoch_only_for_schema_validation": 100,
+      "episodes_checked": 32,
+      "validation": "pass"
+    },
+    {
+      "original_evidence_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch100/seed1001/metrics.json",
+      "registered_new_epoch_only_for_schema_validation": 200,
+      "episodes_checked": 32,
+      "validation": "pass"
+    },
+    {
+      "original_evidence_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch100/seed1002/metrics.json",
+      "registered_new_epoch_only_for_schema_validation": 200,
+      "episodes_checked": 32,
+      "validation": "pass"
+    },
+    {
+      "original_evidence_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch100/seed1003/metrics.json",
+      "registered_new_epoch_only_for_schema_validation": 200,
+      "episodes_checked": 32,
+      "validation": "pass"
+    },
+    {
+      "original_evidence_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch150/seed1001/metrics.json",
+      "registered_new_epoch_only_for_schema_validation": 300,
+      "episodes_checked": 32,
+      "validation": "pass"
+    },
+    {
+      "original_evidence_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch150/seed1002/metrics.json",
+      "registered_new_epoch_only_for_schema_validation": 300,
+      "episodes_checked": 32,
+      "validation": "pass"
+    },
+    {
+      "original_evidence_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch150/seed1003/metrics.json",
+      "registered_new_epoch_only_for_schema_validation": 300,
+      "episodes_checked": 32,
+      "validation": "pass"
+    },
+    {
+      "original_evidence_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch200/seed1001/metrics.json",
+      "registered_new_epoch_only_for_schema_validation": 400,
+      "episodes_checked": 96,
+      "validation": "pass"
+    },
+    {
+      "original_evidence_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch200/seed1002/metrics.json",
+      "registered_new_epoch_only_for_schema_validation": 400,
+      "episodes_checked": 96,
+      "validation": "pass"
+    },
+    {
+      "original_evidence_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch200/seed1003/metrics.json",
+      "registered_new_epoch_only_for_schema_validation": 400,
+      "episodes_checked": 96,
+      "validation": "pass"
+    }
+  ],
+  "generated_future_evaluation_commands_not_executed": [
+    {
+      "epoch": 100,
+      "command": [
+        "/usr/bin/python3",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g3cr4_launch.py",
+        "--output",
+        "/fresh/never-launched",
+        "--unit-prefix",
+        "factory-g3cr4-20261025t140016z-eval-e100-s1001",
+        "--cwd",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs",
+        "--monitoring-policy",
+        "user-authorized-no-gpu-guard",
+        "--timeout",
+        "1800",
+        "--setenv",
+        "FACTORY_VENV=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01",
+        "--setenv",
+        "ISAACSIM_PATH=/home/ubuntu2004/isaacsim-4.5.0",
+        "--setenv",
+        "OMP_NUM_THREADS=4",
+        "--wait",
+        "--",
+        "env",
+        "TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1",
+        "bash",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/evaluate_checkpoint.py",
+        "--headless",
+        "--device",
+        "cuda:0",
+        "--task",
+        "Isaac-Factory-PegInsert-Direct-v0",
+        "--checkpoint",
+        "/trusted/example.pth",
+        "--num_envs",
+        "32",
+        "--episodes",
+        "1",
+        "--seed",
+        "1001",
+        "--max_steps",
+        "160",
+        "--snapshot-limit",
+        "12",
+        "--progress-interval",
+        "10",
+        "--output",
+        "/fresh/never-launched/metrics.json"
+      ],
+      "not_executed": true
+    },
+    {
+      "epoch": 400,
+      "command": [
+        "/usr/bin/python3",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g3cr4_launch.py",
+        "--output",
+        "/fresh/never-launched",
+        "--unit-prefix",
+        "factory-g3cr4-20261025t140016z-eval-e400-s1001",
+        "--cwd",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs",
+        "--monitoring-policy",
+        "user-authorized-no-gpu-guard",
+        "--timeout",
+        "1800",
+        "--setenv",
+        "FACTORY_VENV=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01",
+        "--setenv",
+        "ISAACSIM_PATH=/home/ubuntu2004/isaacsim-4.5.0",
+        "--setenv",
+        "OMP_NUM_THREADS=4",
+        "--wait",
+        "--",
+        "env",
+        "TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1",
+        "bash",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/evaluate_checkpoint.py",
+        "--headless",
+        "--device",
+        "cuda:0",
+        "--task",
+        "Isaac-Factory-PegInsert-Direct-v0",
+        "--checkpoint",
+        "/trusted/example.pth",
+        "--num_envs",
+        "32",
+        "--episodes",
+        "3",
+        "--seed",
+        "1001",
+        "--max_steps",
+        "480",
+        "--snapshot-limit",
+        "12",
+        "--progress-interval",
+        "10",
+        "--output",
+        "/fresh/never-launched/metrics.json"
+      ],
+      "not_executed": true
+    }
+  ],
+  "actual_services": {
+    "factory-g3cr4-20261025t140016z-completion.service": {
+      "query_exit_code": 0,
+      "properties_text": "Restart=no\nExecStart={ path=/usr/bin/python3 ; argv[]=/usr/bin/python3 /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/complete_g3cr4.py --manifest /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r4/manifest_frozen.json ; ignore_errors=no ; start_time=[Sun 2026-10-25 23:07:24 KST] ; stop_time=[n/a] ; pid=127474 ; code=(null) ; status=0/0 }\nWorkingDirectory=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs\nKillMode=control-group\nActiveState=active\nSubState=running\n",
+      "stderr": ""
+    },
+    "factory-g3cr4-s0-20261025t140016z-supervisor.service": {
+      "query_exit_code": 0,
+      "properties_text": "Restart=no\nExecStart={ path=/usr/bin/python3 ; argv[]=/usr/bin/python3 /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/durable_supervisor.py --output /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r4/train_32env_seed0_400ep_20261025t140016z/supervisor --lock-file /run/user/1000/isaac-factory-gpu0.lock --timeout 43200.0 -- bash /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py --headless --device cuda:0 --task Isaac-Factory-PegInsert-Direct-v0 --num_envs 32 --seed 0 --max_iterations 400 agent.params.config.full_experiment_name=g3cr4_peginsert_32env_seed0_400ep_20261025t140016z agent.params.config.save_frequency=25 ; ignore_errors=no ; start_time=[Sun 2026-10-25 23:07:24 KST] ; stop_time=[n/a] ; pid=127471 ; code=(null) ; status=0/0 }\nWorkingDirectory=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs\nKillMode=control-group\nActiveState=active\nSubState=running\n",
+      "stderr": ""
+    }
+  },
+  "review_limitations": [
+    "Current full training remains running; this review does not assert400epoch completion or new evaluation success.",
+    "Historical schema controls are CPU-only validation against old evidence; no samples pooled or newly evaluated.",
+    "Path-selection controls use a transformed in-memory copy of historical save-event frame values as documented per record.",
+    "No GPU telemetry queried, no training/evaluation launched, no frozen sources edited."
+  ],
+  "code_files_changed": []
+}

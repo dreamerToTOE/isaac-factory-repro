@@ -137,6 +137,14 @@ def test_incomplete_audit_does_not_invent_missing_transitions(tmp_path, monkeypa
     assert report['training']['verified_progress']['completed_epochs_verified'] == 4
     assert report['training']['environment_transitions'] == 16384
     assert report['training']['verified_progress']['all_audit_rows_in_contiguous_prefix'] is False
+    train = report['training']
+    assert train['end_to_end_transitions_per_wall_second'] == pytest.approx(16384 / 321.5)
+    assert train['official_ppo_total_seconds'] == 4.0
+    assert train['official_ppo_aggregate_fps'] == 4096
+    assert train['environment_step_aggregate_fps'] == 8192
+    assert train['throughput_scope']['excluded_audit_rows'] == 5
+    assert train['stable_aggregate_total_fps'] is None
+    assert train['stable_epoch_range'] is None
 
 
 def test_nonfinite_epoch_is_an_engineering_failure_without_loss_threshold(tmp_path, monkeypatch):
@@ -209,3 +217,36 @@ def test_controller_failure_before_training_gate_has_null_training_not_a_crash(t
     report, _, _ = analysis.analyze(manifest)
     assert report['engineering_status'] == 'INCOMPLETE'
     assert report['training']['environment_transitions'] == 0
+
+
+def test_missing_prefix_timing_is_null_and_not_filled_from_later_epochs(tmp_path, monkeypatch):
+    manifest = fixture(tmp_path, monkeypatch, epochs=20, complete=False)
+    audit_path = Path(manifest['training']['run_root']) / 'supervisor/training_audit.json'
+    audit = json.loads(audit_path.read_text())
+    audit['epochs'].pop(4)
+    audit['epochs'][2].pop('official_total_seconds')
+    audit['epochs'][1].pop('env_step_seconds')
+    put(audit_path, audit)
+    report, _, rows = analysis.analyze(manifest)
+    train = report['training']
+    assert train['environment_transitions'] == 16384
+    assert train['official_ppo_total_seconds'] is None
+    assert train['official_ppo_aggregate_fps'] is None
+    assert train['environment_step_aggregate_fps'] is None
+    output = tmp_path / 'csv'; output.mkdir()
+    analysis.write_csv(output, report, rows)
+    import csv
+    csv_rows = list(csv.DictReader((output / 'completed_epochs.csv').open()))
+    assert len(csv_rows) == 19
+    assert [row['in_verified_contiguous_prefix'] for row in csv_rows[:5]] == ['True'] * 4 + ['False']
+
+
+def test_unfinalized_wall_duration_does_not_produce_wall_throughput(tmp_path, monkeypatch):
+    manifest = fixture(tmp_path, monkeypatch, epochs=10, complete=False)
+    status_path = Path(manifest['training']['run_root']) / 'supervisor/status.json'
+    status = json.loads(status_path.read_text()); status['finalized'] = False
+    put(status_path, status)
+    report, _, _ = analysis.analyze(manifest)
+    assert report['training']['launched_process_wall_seconds'] is None
+    assert report['training']['end_to_end_transitions_per_wall_second'] is None
+    assert report['training']['official_ppo_aggregate_fps'] == 4096
