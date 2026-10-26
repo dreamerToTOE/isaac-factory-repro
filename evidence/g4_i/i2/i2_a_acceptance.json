@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "status": "I2_A_PASS",
+  "checks": {
+    "events": true,
+    "minimal_exit": true,
+    "minimal_guard": true,
+    "minimal_success": true,
+    "minimal_rms": true,
+    "minimal_no_error": true,
+    "minimal_no_event_samples": true,
+    "initial_randomized_configuration_equal": true
+  },
+  "matched_overhead_conditions": [
+    {
+      "phase": "a_events",
+      "matched_steps": [
+        21,
+        149
+      ],
+      "interval_n": 128,
+      "mean_command_interval_ms": 271.3965061796875,
+      "p50_ms": 270.803693
+    },
+    {
+      "phase": "a_minimal",
+      "matched_steps": [
+        21,
+        149
+      ],
+      "interval_n": 128,
+      "mean_command_interval_ms": 228.11775665625,
+      "p50_ms": 227.969368
+    }
+  ],
+  "interpretation": "same initial randomized configuration, matched steps21..149; event condition also includes Player oracle and detailed diagnostic work, difference is not pure event overhead"
+}

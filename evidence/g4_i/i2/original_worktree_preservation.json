@@ -1,0 +1,33 @@
+{
+  "original_repo": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+  "original_head": "ed0310d074254a5110c5f3895aaf09f2a6829be5",
+  "original_status": "## main...origin/main\n?? docs/DEMO_G3V.md\n?? evidence/g3v/\n?? scripts/g3v_playback.sh\n",
+  "unrelated_untracked_files": [
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/docs/DEMO_G3V.md",
+      "sha256": "f1d20d8111cf39a90a62b096fd15a1c581916dcbb559d7082ec8d662b906f0a2",
+      "bytes": 7147
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g3v_playback.sh",
+      "sha256": "d0f71a7c9ba147bf85b3ae39e62e0ba66ac90ffbbf5ff06779c49495b9642b90",
+      "bytes": 3130
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3v/README.md",
+      "sha256": "b6523f2fd4b87ceea7f2f4109fb7c153d15d95029f9ef32e8d28fd750d99f84b",
+      "bytes": 2621
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3v/checkpoint_identity.json",
+      "sha256": "e080a739122fd1505ea90f054e0a3edd6481b95fc135c13cec7a44569a0cf364",
+      "bytes": 1778
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3v/playback_config.json",
+      "sha256": "8b2ec76c670187b11181640c295984bc2b8cc69b8c203bb42f8bfbd2acb63c6b",
+      "bytes": 2776
+    }
+  ],
+  "policy": "original repository never edited; isolated sibling clone used"
+}

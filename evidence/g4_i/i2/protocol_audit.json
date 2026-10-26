@@ -1,0 +1,576 @@
+{
+  "schema_version": "g4_i2_historical_protocol_audit_v1",
+  "created_utc": "2026-10-26T09:30:00.576874+00:00",
+  "repository_head_at_audit": "ed0310d074254a5110c5f3895aaf09f2a6829be5",
+  "scope": "Read-only source/history/checkpoint audit; no actor execution, GPU workload, simulator, training, checkpoint mutation, or historical evidence edits.",
+  "engineering_stage": "G4-I2",
+  "learning_status": "PENDING; deferred by user; not engineering blocker",
+  "historical_protocol_reconstructed": true,
+  "checkpoint": {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+    "bytes": 212889225,
+    "sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+    "matches_i0": true
+  },
+  "protocol": {
+    "task": "Isaac-Factory-PegInsert-Direct-v0",
+    "evaluation_seeds": [
+      1001,
+      1002,
+      1003
+    ],
+    "training_seed_distinct_from_evaluation_seeds": 0,
+    "seed_execution": "Sequential independent processes",
+    "num_envs_per_seed": 32,
+    "complete_episodes_per_env": 3,
+    "episodes_per_seed": 96,
+    "total_complete_episodes": 288,
+    "episode_ids": "Each seed env_id 0..31 crossed with episode_id 0..2",
+    "complete_episode_steps": 149,
+    "policy_steps_executed_per_seed": 447,
+    "physics_dt_seconds": 0.008333333333333333,
+    "decimation": 8,
+    "policy_dt_seconds": 0.06666666666666667,
+    "policy": "deterministic mean FP32, checkpoint RMS eval, zero h/c at every done; preserve discarded Normal.sample RNG consumption",
+    "success": {
+      "capture": "official FactoryEnv._get_curr_successes reward call before auto-reset",
+      "ever": "Any official success mask true during complete episode",
+      "terminal": "Official success mask at done before reset",
+      "first_success_time": "first_success_step multiplied by step_dt=1/15 seconds; null if never successful",
+      "predicate": "world XY distance < 0.0025 m AND one-sided held_base.z - target_held_base.z < fixed_asset_height*success_threshold = 0.025*0.04 = 0.001 m; no rotation test for PegInsert",
+      "predicate_is_not_physical_contact_proof": true,
+      "partial_denominator_rule": "Complete environment episodes only; unfinished episodes excluded, never imputed successful"
+    },
+    "original_g2_max_steps": 480,
+    "g3b_max_steps": 450
+  },
+  "g2_original": {
+    "per_seed": [
+      {
+        "seed": 1001,
+        "metrics": {
+          "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g2/evaluation/epoch200/seed1001/metrics.json",
+          "bytes": 40819,
+          "sha256": "0a6ab77092f50b5d3fbeb9c1220940e90b18df56122d4c78362e761fba198cea"
+        },
+        "status": "complete",
+        "num_envs": 32,
+        "episodes_per_env": 3,
+        "episodes_completed": 96,
+        "ever_success_count": 95,
+        "terminal_success_count": 95,
+        "policy_steps_executed": 447,
+        "max_steps": 480,
+        "elapsed_seconds": 110.89905534400168,
+        "all_episode_ids_exact": true,
+        "all_episode_lengths_149": true,
+        "all_termination_timeout": true,
+        "official_predicate_source_sha256": "4c7080dc798a2ecb88aa4ef7e8e14ff9d7eb3af8736691a6f55adc3e91793024",
+        "official_success_threshold": 0.04,
+        "step_dt_seconds": 0.06666666666666667,
+        "deterministic": true,
+        "inference_settings": {
+          "action_selection": "policy_mean",
+          "model_training": false,
+          "normalization": "checkpoint buffers in eval mode",
+          "player_clip_actions": true,
+          "rnn_reset": "zero hidden/cell states at completed episode boundaries",
+          "torch_inference_mode": true
+        }
+      },
+      {
+        "seed": 1002,
+        "metrics": {
+          "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g2/evaluation/epoch200/seed1002/metrics.json",
+          "bytes": 40925,
+          "sha256": "1c1fa341411611232c99cbe4900fd7883cac5465ff542c1b8fa8fb4e615fa196"
+        },
+        "status": "complete",
+        "num_envs": 32,
+        "episodes_per_env": 3,
+        "episodes_completed": 96,
+        "ever_success_count": 96,
+        "terminal_success_count": 96,
+        "policy_steps_executed": 447,
+        "max_steps": 480,
+        "elapsed_seconds": 112.72507241800486,
+        "all_episode_ids_exact": true,
+        "all_episode_lengths_149": true,
+        "all_termination_timeout": true,
+        "official_predicate_source_sha256": "4c7080dc798a2ecb88aa4ef7e8e14ff9d7eb3af8736691a6f55adc3e91793024",
+        "official_success_threshold": 0.04,
+        "step_dt_seconds": 0.06666666666666667,
+        "deterministic": true,
+        "inference_settings": {
+          "action_selection": "policy_mean",
+          "model_training": false,
+          "normalization": "checkpoint buffers in eval mode",
+          "player_clip_actions": true,
+          "rnn_reset": "zero hidden/cell states at completed episode boundaries",
+          "torch_inference_mode": true
+        }
+      },
+      {
+        "seed": 1003,
+        "metrics": {
+          "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g2/evaluation/epoch200/seed1003/metrics.json",
+          "bytes": 40916,
+          "sha256": "27daef215badafd17bf34dd412dc3b5fcd77fdbcb23aaf194ce15c3f1764b4e8"
+        },
+        "status": "complete",
+        "num_envs": 32,
+        "episodes_per_env": 3,
+        "episodes_completed": 96,
+        "ever_success_count": 89,
+        "terminal_success_count": 89,
+        "policy_steps_executed": 447,
+        "max_steps": 480,
+        "elapsed_seconds": 110.81305897599668,
+        "all_episode_ids_exact": true,
+        "all_episode_lengths_149": true,
+        "all_termination_timeout": true,
+        "official_predicate_source_sha256": "4c7080dc798a2ecb88aa4ef7e8e14ff9d7eb3af8736691a6f55adc3e91793024",
+        "official_success_threshold": 0.04,
+        "step_dt_seconds": 0.06666666666666667,
+        "deterministic": true,
+        "inference_settings": {
+          "action_selection": "policy_mean",
+          "model_training": false,
+          "normalization": "checkpoint buffers in eval mode",
+          "player_clip_actions": true,
+          "rnn_reset": "zero hidden/cell states at completed episode boundaries",
+          "torch_inference_mode": true
+        }
+      }
+    ],
+    "denominator": 288,
+    "ever_success_count": 280,
+    "terminal_success_count": 280,
+    "rate": 0.9722222222222222,
+    "eight_failure_identifiers": [
+      {
+        "seed": 1001,
+        "env_id": 11,
+        "episode_id": 0
+      },
+      {
+        "seed": 1003,
+        "env_id": 4,
+        "episode_id": 0
+      },
+      {
+        "seed": 1003,
+        "env_id": 12,
+        "episode_id": 0
+      },
+      {
+        "seed": 1003,
+        "env_id": 25,
+        "episode_id": 0
+      },
+      {
+        "seed": 1003,
+        "env_id": 29,
+        "episode_id": 0
+      },
+      {
+        "seed": 1003,
+        "env_id": 5,
+        "episode_id": 1
+      },
+      {
+        "seed": 1003,
+        "env_id": 1,
+        "episode_id": 2
+      },
+      {
+        "seed": 1003,
+        "env_id": 5,
+        "episode_id": 2
+      }
+    ]
+  },
+  "g3b_independent_diagnostic": {
+    "per_seed": [
+      {
+        "seed": 1001,
+        "artifacts": {
+          "metrics.json": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3b/diagnostic_20261025_01/seed1001/diagnostics/metrics.json",
+            "bytes": 31467,
+            "sha256": "66bc6230ca51c86980dd2a46eab38a5b8b645b401b9a5b4c37a1d870233744e7",
+            "matches_receipt": true
+          },
+          "trajectories.npz": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3b/diagnostic_20261025_01/seed1001/diagnostics/trajectories.npz",
+            "bytes": 2383999,
+            "sha256": "7752e5e4c4d727a446d928e70d4faf4f8541279448aa71bdc35552f3d784a8bb",
+            "matches_receipt": true
+          },
+          "trajectory_metadata.json": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3b/diagnostic_20261025_01/seed1001/diagnostics/trajectory_metadata.json",
+            "bytes": 8050,
+            "sha256": "bdb1b19e3a75a5f49fa7c6a50dcd3a0e8edcdee111dc367b9e1d7511a59fc0ed",
+            "matches_receipt": true
+          }
+        },
+        "episodes_completed": 96,
+        "ever_success_count": 95,
+        "terminal_success_count": 95,
+        "policy_steps_executed": 447,
+        "child_exit_code": 0,
+        "guard_continuous_monitoring": true,
+        "guard_min_free_MiB": 1509.625,
+        "guard_peak_used_MiB": 6308.0,
+        "guard_elapsed_s": 139.80011829499927
+      },
+      {
+        "seed": 1002,
+        "artifacts": {
+          "metrics.json": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3b/diagnostic_20261025_01/seed1002/diagnostics/metrics.json",
+            "bytes": 31558,
+            "sha256": "8983bc32e452123753039ec2ad24960b366a267c0c9106a8f9e9844f3eb528ef",
+            "matches_receipt": true
+          },
+          "trajectories.npz": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3b/diagnostic_20261025_01/seed1002/diagnostics/trajectories.npz",
+            "bytes": 2384982,
+            "sha256": "34f852db293af1fb238786dc5079ed079e60a397e37529644e8ffbaa3a3eee6d",
+            "matches_receipt": true
+          },
+          "trajectory_metadata.json": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3b/diagnostic_20261025_01/seed1002/diagnostics/trajectory_metadata.json",
+            "bytes": 7964,
+            "sha256": "035fda4d71fd024b04648209279ea2309fb3278cd29178a4ef0356c50028ce91",
+            "matches_receipt": true
+          }
+        },
+        "episodes_completed": 96,
+        "ever_success_count": 96,
+        "terminal_success_count": 96,
+        "policy_steps_executed": 447,
+        "child_exit_code": 0,
+        "guard_continuous_monitoring": true,
+        "guard_min_free_MiB": 1557.875,
+        "guard_peak_used_MiB": 6259.75,
+        "guard_elapsed_s": 139.1000711600027
+      },
+      {
+        "seed": 1003,
+        "artifacts": {
+          "metrics.json": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3b/diagnostic_20261025_02/seed1003/diagnostics/metrics.json",
+            "bytes": 31573,
+            "sha256": "ed88cdd6aaf689aa9e3cc48120fe62f3d4a0aecaaceaa37a8175555213efbd2a",
+            "matches_receipt": true
+          },
+          "trajectories.npz": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3b/diagnostic_20261025_02/seed1003/diagnostics/trajectories.npz",
+            "bytes": 2395201,
+            "sha256": "a1e114a7b4652ef48ab673ac25941245c7feaac6b10ce832618178616b5d5302",
+            "matches_receipt": true
+          },
+          "trajectory_metadata.json": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3b/diagnostic_20261025_02/seed1003/diagnostics/trajectory_metadata.json",
+            "bytes": 8050,
+            "sha256": "182b649ed94bb0b3263a013a903d3b6b7de79f3a3cf7332c54288f8db54b2958",
+            "matches_receipt": true
+          }
+        },
+        "episodes_completed": 96,
+        "ever_success_count": 89,
+        "terminal_success_count": 89,
+        "policy_steps_executed": 447,
+        "child_exit_code": 0,
+        "guard_continuous_monitoring": true,
+        "guard_min_free_MiB": 1507.8125,
+        "guard_peak_used_MiB": 6309.8125,
+        "guard_elapsed_s": 138.70010426799854
+      }
+    ],
+    "denominator": 288,
+    "ever_success_count": 280,
+    "terminal_success_count": 280,
+    "exact_historical_replay_verified": false,
+    "first_seed1003_guard_failure_preserved": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3b/diagnostic_20261025_01/seed1003",
+    "first_seed1003_failure_reason": "guard fail-closed on 0.8392135989997769 s monitoring gap before simulation startup"
+  },
+  "pairing_assessment": {
+    "paired_to_original_g2_allowed": false,
+    "reason": "G2 retains episode summaries and at most 12 successful geometry snapshots per seed; it does not retain all initial randomized configurations, complete failure traces, or RNG reset states. Same seed/env/episode identifiers and matching outcomes cannot establish paired historical initial conditions or random streams.",
+    "g3b_scope": "447x32 pre-reset records per seed, first at policy step 1, not the original G2 full initial/RNG record; compare separate pools.",
+    "i1_rng_evidence_scope": "150/150 live CPU/CUDA RNG comparisons against isolated oracle for B=1, same supplied observations/state; this does not establish B=32 historical episode pairing.",
+    "recommended_comparison": "Descriptive side-by-side per-seed and pooled counts/rates, never merge G2/G3B/I2 denominators; identifier outcome table may be reported explicitly as recurrence without paired causal statistics."
+  },
+  "resource_budget_recommendation": {
+    "subject_to_fresh_guard_preflight": true,
+    "inherit_no_gpu_guard_exception": false,
+    "processes": "Run one process at a time; no simultaneous I2-A/I2-B",
+    "i2a": "One environment short headless validation before any B32 evaluation; pass instrumentation and action parity first.",
+    "i2b_num_envs": 32,
+    "i2b_seeds": [
+      1001,
+      1002,
+      1003
+    ],
+    "i2b_episodes_per_env": 3,
+    "i2b_max_policy_steps": 450,
+    "recommended_timeout_s_per_seed": 1800,
+    "recommended_total_i2b_wall_limit_s": 5400,
+    "interpretation": "Maximum budget recommendation, not a measured I2 time or authority to bypass failed preflight. Historical G3B took approx 139–140 s/seed including startup and guard.",
+    "guard": {
+      "minimum_free_MiB": 1024,
+      "consecutive_low_samples": 3,
+      "sample_interval_s": 0.1,
+      "gap_limit_s": 0.5
+    },
+    "historical_g3b_peak_used_MiB": 6309.8125,
+    "historical_g3b_min_free_MiB": 1507.8125,
+    "unrelated_gpu_processes": "Do not terminate; stop on mandatory preflight/guard failure."
+  },
+  "scientific_source_preservation": {
+    "all_matches_i1": true,
+    "files": [
+      {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env_cfg.py",
+        "bytes": 6419,
+        "sha256": "5f804ba3f6e3d96f352490a9b5e2e1e239d308ff7eeab7ae3aad0ca6aa8daed8",
+        "name": "factory_env_cfg.py",
+        "expected_i1_sha256": "5f804ba3f6e3d96f352490a9b5e2e1e239d308ff7eeab7ae3aad0ca6aa8daed8",
+        "matches_i1": true
+      },
+      {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py",
+        "bytes": 43992,
+        "sha256": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81",
+        "name": "factory_env.py",
+        "expected_i1_sha256": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81",
+        "matches_i1": true
+      },
+      {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_control.py",
+        "bytes": 8326,
+        "sha256": "7ef611d530a86fa2aba9db222361b0fe8b64d34037f204ad622a17051ad5e163",
+        "name": "factory_control.py",
+        "expected_i1_sha256": "7ef611d530a86fa2aba9db222361b0fe8b64d34037f204ad622a17051ad5e163",
+        "matches_i1": true
+      },
+      {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/envs/direct_rl_env.py",
+        "bytes": 29922,
+        "sha256": "0c919fdc93e9198562edaaa3c29627a8dc0e123f581f41cdffc75641f9033fc1",
+        "name": "direct_rl_env.py",
+        "expected_i1_sha256": "0c919fdc93e9198562edaaa3c29627a8dc0e123f581f41cdffc75641f9033fc1",
+        "matches_i1": true
+      },
+      {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/envs/direct_rl_env_cfg.py",
+        "bytes": 9277,
+        "sha256": "e3988fbf96bdde304a4ef1c76f21584f0160e26c617de9b77d8c4aaab53d48c8",
+        "name": "direct_rl_env_cfg.py",
+        "expected_i1_sha256": "e3988fbf96bdde304a4ef1c76f21584f0160e26c617de9b77d8c4aaab53d48c8",
+        "matches_i1": true
+      },
+      {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_rl/isaaclab_rl/rl_games.py",
+        "bytes": 14120,
+        "sha256": "512af373b28e659308bc98d54cb9f646fe1870d8ad087019ce2d54a5deee2623",
+        "name": "rl_games_wrapper.py",
+        "expected_i1_sha256": "512af373b28e659308bc98d54cb9f646fe1870d8ad087019ce2d54a5deee2623",
+        "matches_i1": true
+      },
+      {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/models.py",
+        "bytes": 14061,
+        "sha256": "78a806701b3099ea45de5c9c1e00c761d0a9443b4b39d6cce087680fc4e62f37",
+        "name": "models.py",
+        "expected_i1_sha256": "78a806701b3099ea45de5c9c1e00c761d0a9443b4b39d6cce087680fc4e62f37",
+        "matches_i1": true
+      },
+      {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/network_builder.py",
+        "bytes": 41906,
+        "sha256": "6a03fe980305921dd4c133fe7b35641434e3c636b441bbc1436411094ad66193",
+        "name": "network_builder.py",
+        "expected_i1_sha256": "6a03fe980305921dd4c133fe7b35641434e3c636b441bbc1436411094ad66193",
+        "matches_i1": true
+      },
+      {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/running_mean_std.py",
+        "bytes": 3958,
+        "sha256": "c7ad469e2bbc89de8419b55c768d1076f5d394d72102cc38c7e49002fc1db788",
+        "name": "running_mean_std.py",
+        "expected_i1_sha256": "c7ad469e2bbc89de8419b55c768d1076f5d394d72102cc38c7e49002fc1db788",
+        "matches_i1": true
+      },
+      {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/players.py",
+        "bytes": 8927,
+        "sha256": "e22d083c540b479b31fefc2bbd05d132a54e3f97d14bf21421498e011942c043",
+        "name": "players.py",
+        "expected_i1_sha256": "e22d083c540b479b31fefc2bbd05d132a54e3f97d14bf21421498e011942c043",
+        "matches_i1": true
+      },
+      {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/player.py",
+        "bytes": 16021,
+        "sha256": "db45d52106f3bff3b4b117d037f72c76f01f0a862b051d490a837232b4e2683f",
+        "name": "base_player.py",
+        "expected_i1_sha256": "db45d52106f3bff3b4b117d037f72c76f01f0a862b051d490a837232b4e2683f",
+        "matches_i1": true
+      },
+      {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/layers/recurrent.py",
+        "bytes": 2763,
+        "sha256": "513a0cada38071444a8b2459690db904426b0913c568b66ec8a721338210f023",
+        "name": "recurrent.py",
+        "expected_i1_sha256": "513a0cada38071444a8b2459690db904426b0913c568b66ec8a721338210f023",
+        "matches_i1": true
+      },
+      {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/evaluate_checkpoint.py",
+        "bytes": 18441,
+        "sha256": "415dff9b59ece8a21e6bbe0a6c9fff08e2ea594cb8dc2ef8fe73e299c94af707",
+        "name": "evaluate_checkpoint.py",
+        "expected_i1_sha256": "415dff9b59ece8a21e6bbe0a6c9fff08e2ea594cb8dc2ef8fe73e299c94af707",
+        "matches_i1": true
+      },
+      {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/evaluation_runtime.py",
+        "bytes": 1179,
+        "sha256": "c42644f7c1572922c34d925b6bdc1bc45b7f2d1156362aeec71c9b79cd868e69",
+        "name": "evaluation_runtime.py",
+        "expected_i1_sha256": "c42644f7c1572922c34d925b6bdc1bc45b7f2d1156362aeec71c9b79cd868e69",
+        "matches_i1": true
+      }
+    ]
+  },
+  "source_identities": {
+    "docs/ROADMAP_POLICY_INFERENCE_SIM2SIM.md": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/docs/ROADMAP_POLICY_INFERENCE_SIM2SIM.md",
+      "bytes": 14949,
+      "sha256": "27d400119688c19616e648f59e4ab4d1b639cc5ee9c34925cd5209d8e5f5a2bc"
+    },
+    "docs/REVIEW_G4_I0.md": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/docs/REVIEW_G4_I0.md",
+      "bytes": 16706,
+      "sha256": "eedf8fc94d12123f6dc3a760b7996f8e19bc31dd8c7c581f9a9a5772fba63c3d"
+    },
+    "docs/REVIEW_G4_I1.md": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/docs/REVIEW_G4_I1.md",
+      "bytes": 14384,
+      "sha256": "cc867ffbc0f1f9266490eb5129516d77b6ff409f01a0bf81191311a22841e852"
+    },
+    "docs/G4_I1_ACCEPTANCE_PLAN.md": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/docs/G4_I1_ACCEPTANCE_PLAN.md",
+      "bytes": 4346,
+      "sha256": "a696d9a06f14e2c2231d75e63711398a6e56dd8d4af6f89fd8c55be316ee9107"
+    },
+    "docs/G4_I1_USAGE.md": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/docs/G4_I1_USAGE.md",
+      "bytes": 5135,
+      "sha256": "c26b75abf9e05e05208130760d91336f9c4d788c49e854592478a80ebe6e55f5"
+    },
+    "docs/ENGINEERING_LEARNING_GATE.md": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/docs/ENGINEERING_LEARNING_GATE.md",
+      "bytes": 6794,
+      "sha256": "4f99b454b6667fa11336171bc2e8b9dd360caf894af0daea89cba85eb1223015"
+    },
+    "docs/RESULTS_G2.md": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/docs/RESULTS_G2.md",
+      "bytes": 17868,
+      "sha256": "0afa0ebbac2736e24ece6bdffcea41eae4f82f2282a9c59ce360410783177e30"
+    },
+    "docs/G2_ANALYSIS_PROTOCOL.md": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/docs/G2_ANALYSIS_PROTOCOL.md",
+      "bytes": 12093,
+      "sha256": "8c0a08e410383b985eb8194ec051e8bc2a93d6bb566de7dd56068d783b9eda6e"
+    },
+    "docs/G2_COMMANDS.md": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/docs/G2_COMMANDS.md",
+      "bytes": 13539,
+      "sha256": "c28173d9b44a25e82c1bf0514066f9be16692bf7025054516cbf997dfe51d33f"
+    },
+    "docs/G3B_FAILURE_ANALYSIS.md": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/docs/G3B_FAILURE_ANALYSIS.md",
+      "bytes": 2623,
+      "sha256": "98ac82a90d197e37df42556690a344cad54652b040f23e72caa8f54613c3de7d"
+    },
+    "docs/REVIEW_G3B.md": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/docs/REVIEW_G3B.md",
+      "bytes": 5276,
+      "sha256": "9929e5f01a414cc55ddf1e272e33a9ab1aa35799442bc55e8a3958eb5136b416"
+    },
+    "docs/SUCCESS_METRICS.md": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/docs/SUCCESS_METRICS.md",
+      "bytes": 10157,
+      "sha256": "ef7a5752c85030f4077fea962a1ae8839dc3afb21a44cb1d4a2b2b29fd1e3f64"
+    },
+    "evidence/g4_i/i0/interface_spec.json": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_i/i0/interface_spec.json",
+      "bytes": 19263,
+      "sha256": "8922f1aac1294398cbfa5a157b28b58a822a03906036e984cf8e8686163ea47b"
+    },
+    "evidence/g4_i/i0/checkpoint_and_source_identity.json": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_i/i0/checkpoint_and_source_identity.json",
+      "bytes": 25806,
+      "sha256": "f42647d510f1aa72b382eddce139f426442b02305c1094865257c3bb4e04d06d"
+    },
+    "evidence/g4_i/i1/run_manifest.json": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_i/i1/run_manifest.json",
+      "bytes": 1714,
+      "sha256": "e9f5de02d344de26e3262d9c48fa984b497e7e45e4f842c6f9c62411987e8a40"
+    },
+    "evidence/g4_i/i1/episode_verified/result.json": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_i/i1/episode_verified/result.json",
+      "bytes": 11537,
+      "sha256": "3f84798b985d1168c5bba4d3433dcae20e5d37a03b9f104bdfd4d65754cb40ee"
+    },
+    "evidence/g3b/protocol_frozen.json": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g3b/protocol_frozen.json",
+      "bytes": 12100,
+      "sha256": "595a2a58ec063262c7e6b478be6a96a310a72eb14d17cb7cb1eb7ebbf4837d58"
+    },
+    "evidence/g3b/run_receipts.json": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g3b/run_receipts.json",
+      "bytes": 4449,
+      "sha256": "b608680e1c9000f4bd2f18931d7e355f3f943c687eba2836074d1da87cba113e"
+    },
+    "evidence/g3b/summaries/summary_compact.json": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g3b/summaries/summary_compact.json",
+      "bytes": 9548,
+      "sha256": "9404f4210f44b8fe06b50289ae507786e6f510c58acb02131a73ccc16f326dea"
+    },
+    "scripts/evaluate_checkpoint.py": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/evaluate_checkpoint.py",
+      "bytes": 18441,
+      "sha256": "415dff9b59ece8a21e6bbe0a6c9fff08e2ea594cb8dc2ef8fe73e299c94af707"
+    },
+    "scripts/diagnose_checkpoint.py": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/diagnose_checkpoint.py",
+      "bytes": 10280,
+      "sha256": "c39094620578beeae1b8b94f0e14976a2097285b19db30f961f24db851c82fc2"
+    },
+    "scripts/success_metrics.py": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/success_metrics.py",
+      "bytes": 7768,
+      "sha256": "bd3233876429dcce64bee52be11b9f03a69b1e35279b4e285dab4e81151bbfa2"
+    },
+    "scripts/evaluation_runtime.py": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/evaluation_runtime.py",
+      "bytes": 1179,
+      "sha256": "c42644f7c1572922c34d925b6bdc1bc45b7f2d1156362aeec71c9b79cd868e69"
+    },
+    "scripts/g4i1_policy.py": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4i1_policy.py",
+      "bytes": 13453,
+      "sha256": "fcead0d2d1ef19b6b6dcb2efee3be8a289b99e755f3c10889fc576725a6937ab"
+    },
+    "scripts/g4i1_runtime.py": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4i1_runtime.py",
+      "bytes": 23933,
+      "sha256": "53414f5dda87b21a4984d222fb22a0ec78e4b307bc13b5a3556a463f504a903f"
+    }
+  }
+}

@@ -1,0 +1,454 @@
+{
+  "schema_version": "g4_i2_runtime_source_snapshots_v1",
+  "created_utc": "2026-10-26T09:55:29.104400+00:00",
+  "scope": "No GPU/simulator execution; no source, manifest, historical raw files or original worktree edits. Exact source copies are newly added only when absent under each external raw root/source_snapshot.",
+  "snapshot_timing_note": "These preservation snapshots were created/rechecked after R1 engineering repair; their bytes are verified against the previously frozen R0/R1 manifest hashes, not claimed to have existed before original execution.",
+  "revisions": [
+    {
+      "revision": "R0",
+      "manifest": {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_i/i2/experiment_manifest.json",
+        "bytes": 5868,
+        "sha256": "a7cfef3a6584b381dc4aaaf2698f62ca011677c8f43cb8d2fe302cd14156ab71"
+      },
+      "raw_root": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z",
+      "source_snapshot_root": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/source_snapshot",
+      "expected_source_count": 11,
+      "verified_snapshot_count": 11,
+      "all_expected_sources_snapshotted": true,
+      "files": [
+        {
+          "source": "scripts/g4i1_acceptance.py",
+          "source_current_sha256": "356d3f0766f2386941622486c8b82d17a37cf5aa230bedad3363232064cd05d8",
+          "preregistered_sha256": "356d3f0766f2386941622486c8b82d17a37cf5aa230bedad3363232064cd05d8",
+          "snapshot": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/source_snapshot/scripts/g4i1_acceptance.py",
+            "bytes": 6006,
+            "sha256": "356d3f0766f2386941622486c8b82d17a37cf5aa230bedad3363232064cd05d8"
+          },
+          "matches_manifest": true,
+          "method": "current_source_exact_hash_match",
+          "disposition": "new_exact_snapshot_created"
+        },
+        {
+          "source": "scripts/g4i1_cpu_check.py",
+          "source_current_sha256": "d797479851e0458a56f449f8df2fa55321bce5894f67ee68e3a3d5c99feb36ae",
+          "preregistered_sha256": "d797479851e0458a56f449f8df2fa55321bce5894f67ee68e3a3d5c99feb36ae",
+          "snapshot": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/source_snapshot/scripts/g4i1_cpu_check.py",
+            "bytes": 4496,
+            "sha256": "d797479851e0458a56f449f8df2fa55321bce5894f67ee68e3a3d5c99feb36ae"
+          },
+          "matches_manifest": true,
+          "method": "current_source_exact_hash_match",
+          "disposition": "new_exact_snapshot_created"
+        },
+        {
+          "source": "scripts/g4i1_edge_cpu.py",
+          "source_current_sha256": "84e909c3cf500fac6f13a3b6678b1013692ea70ec5cb459e0ecbba311b5b5bb7",
+          "preregistered_sha256": "84e909c3cf500fac6f13a3b6678b1013692ea70ec5cb459e0ecbba311b5b5bb7",
+          "snapshot": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/source_snapshot/scripts/g4i1_edge_cpu.py",
+            "bytes": 6114,
+            "sha256": "84e909c3cf500fac6f13a3b6678b1013692ea70ec5cb459e0ecbba311b5b5bb7"
+          },
+          "matches_manifest": true,
+          "method": "current_source_exact_hash_match",
+          "disposition": "new_exact_snapshot_created"
+        },
+        {
+          "source": "scripts/g4i1_parity.py",
+          "source_current_sha256": "e13bd11ef4f3204caec683bb992a490d2a05cb4c076004e6cc17c12422f27230",
+          "preregistered_sha256": "e13bd11ef4f3204caec683bb992a490d2a05cb4c076004e6cc17c12422f27230",
+          "snapshot": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/source_snapshot/scripts/g4i1_parity.py",
+            "bytes": 10789,
+            "sha256": "e13bd11ef4f3204caec683bb992a490d2a05cb4c076004e6cc17c12422f27230"
+          },
+          "matches_manifest": true,
+          "method": "current_source_exact_hash_match",
+          "disposition": "new_exact_snapshot_created"
+        },
+        {
+          "source": "scripts/g4i1_policy.py",
+          "source_current_sha256": "6f22926b1a5acff28a2a0cf774b74cbc3e97d4221b36ee639d744dbe249489e2",
+          "preregistered_sha256": "6f22926b1a5acff28a2a0cf774b74cbc3e97d4221b36ee639d744dbe249489e2",
+          "snapshot": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/source_snapshot/scripts/g4i1_policy.py",
+            "bytes": 13920,
+            "sha256": "6f22926b1a5acff28a2a0cf774b74cbc3e97d4221b36ee639d744dbe249489e2"
+          },
+          "matches_manifest": true,
+          "method": "current_source_exact_hash_match",
+          "disposition": "new_exact_snapshot_created"
+        },
+        {
+          "source": "scripts/g4i1_runtime.py",
+          "source_current_sha256": "8828e98799a4da8155dfa9ff018ef80a2e5122142d7c9e0f871e0b3e1548d4fe",
+          "preregistered_sha256": "22b0092691a2c5a49cf129945fc9bbf39cbc2b64eec5b26b2a4428e5b0b1b21e",
+          "snapshot": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/source_snapshot/scripts/g4i1_runtime.py",
+            "bytes": 26848,
+            "sha256": "22b0092691a2c5a49cf129945fc9bbf39cbc2b64eec5b26b2a4428e5b0b1b21e"
+          },
+          "matches_manifest": true,
+          "method": "exact_reverse_of_documented_R1_repairs_verified_against_original_preregistered_SHA256",
+          "disposition": "new_exact_snapshot_created"
+        },
+        {
+          "source": "scripts/g4i2_analysis.py",
+          "source_current_sha256": "5abacd37033528edb14cc6b866cf54e9bf328de8a06f61db7fef72357c518ffd",
+          "preregistered_sha256": "5abacd37033528edb14cc6b866cf54e9bf328de8a06f61db7fef72357c518ffd",
+          "snapshot": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/source_snapshot/scripts/g4i2_analysis.py",
+            "bytes": 22460,
+            "sha256": "5abacd37033528edb14cc6b866cf54e9bf328de8a06f61db7fef72357c518ffd"
+          },
+          "matches_manifest": true,
+          "method": "current_source_exact_hash_match",
+          "disposition": "new_exact_snapshot_created"
+        },
+        {
+          "source": "scripts/g4i2_controller_probe.py",
+          "source_current_sha256": "61b361b61c9226eb4b401bb368d57fd974e5a64301dea790a952ce3e05926f62",
+          "preregistered_sha256": "61b361b61c9226eb4b401bb368d57fd974e5a64301dea790a952ce3e05926f62",
+          "snapshot": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/source_snapshot/scripts/g4i2_controller_probe.py",
+            "bytes": 6397,
+            "sha256": "61b361b61c9226eb4b401bb368d57fd974e5a64301dea790a952ce3e05926f62"
+          },
+          "matches_manifest": true,
+          "method": "current_source_exact_hash_match",
+          "disposition": "new_exact_snapshot_created"
+        },
+        {
+          "source": "scripts/g4i2_performance.py",
+          "source_current_sha256": "2ca14dd53ec767e7d05b44e9c29b38f083efe74f40640c49f56b74f4128fd971",
+          "preregistered_sha256": "2ca14dd53ec767e7d05b44e9c29b38f083efe74f40640c49f56b74f4128fd971",
+          "snapshot": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/source_snapshot/scripts/g4i2_performance.py",
+            "bytes": 14612,
+            "sha256": "2ca14dd53ec767e7d05b44e9c29b38f083efe74f40640c49f56b74f4128fd971"
+          },
+          "matches_manifest": true,
+          "method": "current_source_exact_hash_match",
+          "disposition": "new_exact_snapshot_created"
+        },
+        {
+          "source": "scripts/g4i2_run_registered.py",
+          "source_current_sha256": "0599f9b5b63f49c92609019a4914a2765247426e4d87415b12ee02f6b2e9fb34",
+          "preregistered_sha256": "0599f9b5b63f49c92609019a4914a2765247426e4d87415b12ee02f6b2e9fb34",
+          "snapshot": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/source_snapshot/scripts/g4i2_run_registered.py",
+            "bytes": 4906,
+            "sha256": "0599f9b5b63f49c92609019a4914a2765247426e4d87415b12ee02f6b2e9fb34"
+          },
+          "matches_manifest": true,
+          "method": "current_source_exact_hash_match",
+          "disposition": "new_exact_snapshot_created"
+        },
+        {
+          "source": "scripts/g4i2_runtime.py",
+          "source_current_sha256": "70dc7e2bda5159e63da22877a7f860b4cd48d2be6fd68362fd8b88ef56935a1e",
+          "preregistered_sha256": "70dc7e2bda5159e63da22877a7f860b4cd48d2be6fd68362fd8b88ef56935a1e",
+          "snapshot": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/source_snapshot/scripts/g4i2_runtime.py",
+            "bytes": 13800,
+            "sha256": "70dc7e2bda5159e63da22877a7f860b4cd48d2be6fd68362fd8b88ef56935a1e"
+          },
+          "matches_manifest": true,
+          "method": "current_source_exact_hash_match",
+          "disposition": "new_exact_snapshot_created"
+        }
+      ]
+    },
+    {
+      "revision": "R1",
+      "manifest": {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_i/i2/experiment_manifest_r1.json",
+        "bytes": 5987,
+        "sha256": "4b86272d9a39071703726d542daf09d2f99344748eca81eca20366d9bc83af84"
+      },
+      "raw_root": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1",
+      "source_snapshot_root": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot",
+      "expected_source_count": 12,
+      "verified_snapshot_count": 12,
+      "all_expected_sources_snapshotted": true,
+      "files": [
+        {
+          "source": "scripts/g4i1_acceptance.py",
+          "source_current_sha256": "356d3f0766f2386941622486c8b82d17a37cf5aa230bedad3363232064cd05d8",
+          "preregistered_sha256": "356d3f0766f2386941622486c8b82d17a37cf5aa230bedad3363232064cd05d8",
+          "snapshot": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot/scripts/g4i1_acceptance.py",
+            "bytes": 6006,
+            "sha256": "356d3f0766f2386941622486c8b82d17a37cf5aa230bedad3363232064cd05d8"
+          },
+          "matches_manifest": true,
+          "method": "current_source_exact_hash_match",
+          "disposition": "new_exact_snapshot_created"
+        },
+        {
+          "source": "scripts/g4i1_cpu_check.py",
+          "source_current_sha256": "d797479851e0458a56f449f8df2fa55321bce5894f67ee68e3a3d5c99feb36ae",
+          "preregistered_sha256": "d797479851e0458a56f449f8df2fa55321bce5894f67ee68e3a3d5c99feb36ae",
+          "snapshot": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot/scripts/g4i1_cpu_check.py",
+            "bytes": 4496,
+            "sha256": "d797479851e0458a56f449f8df2fa55321bce5894f67ee68e3a3d5c99feb36ae"
+          },
+          "matches_manifest": true,
+          "method": "current_source_exact_hash_match",
+          "disposition": "new_exact_snapshot_created"
+        },
+        {
+          "source": "scripts/g4i1_edge_cpu.py",
+          "source_current_sha256": "84e909c3cf500fac6f13a3b6678b1013692ea70ec5cb459e0ecbba311b5b5bb7",
+          "preregistered_sha256": "84e909c3cf500fac6f13a3b6678b1013692ea70ec5cb459e0ecbba311b5b5bb7",
+          "snapshot": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot/scripts/g4i1_edge_cpu.py",
+            "bytes": 6114,
+            "sha256": "84e909c3cf500fac6f13a3b6678b1013692ea70ec5cb459e0ecbba311b5b5bb7"
+          },
+          "matches_manifest": true,
+          "method": "current_source_exact_hash_match",
+          "disposition": "new_exact_snapshot_created"
+        },
+        {
+          "source": "scripts/g4i1_parity.py",
+          "source_current_sha256": "e13bd11ef4f3204caec683bb992a490d2a05cb4c076004e6cc17c12422f27230",
+          "preregistered_sha256": "e13bd11ef4f3204caec683bb992a490d2a05cb4c076004e6cc17c12422f27230",
+          "snapshot": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot/scripts/g4i1_parity.py",
+            "bytes": 10789,
+            "sha256": "e13bd11ef4f3204caec683bb992a490d2a05cb4c076004e6cc17c12422f27230"
+          },
+          "matches_manifest": true,
+          "method": "current_source_exact_hash_match",
+          "disposition": "new_exact_snapshot_created"
+        },
+        {
+          "source": "scripts/g4i1_policy.py",
+          "source_current_sha256": "6f22926b1a5acff28a2a0cf774b74cbc3e97d4221b36ee639d744dbe249489e2",
+          "preregistered_sha256": "6f22926b1a5acff28a2a0cf774b74cbc3e97d4221b36ee639d744dbe249489e2",
+          "snapshot": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot/scripts/g4i1_policy.py",
+            "bytes": 13920,
+            "sha256": "6f22926b1a5acff28a2a0cf774b74cbc3e97d4221b36ee639d744dbe249489e2"
+          },
+          "matches_manifest": true,
+          "method": "current_source_exact_hash_match",
+          "disposition": "new_exact_snapshot_created"
+        },
+        {
+          "source": "scripts/g4i1_runtime.py",
+          "source_current_sha256": "8828e98799a4da8155dfa9ff018ef80a2e5122142d7c9e0f871e0b3e1548d4fe",
+          "preregistered_sha256": "8828e98799a4da8155dfa9ff018ef80a2e5122142d7c9e0f871e0b3e1548d4fe",
+          "snapshot": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot/scripts/g4i1_runtime.py",
+            "bytes": 27287,
+            "sha256": "8828e98799a4da8155dfa9ff018ef80a2e5122142d7c9e0f871e0b3e1548d4fe"
+          },
+          "matches_manifest": true,
+          "method": "current_source_exact_hash_match",
+          "disposition": "new_exact_snapshot_created"
+        },
+        {
+          "source": "scripts/g4i2_analysis.py",
+          "source_current_sha256": "5abacd37033528edb14cc6b866cf54e9bf328de8a06f61db7fef72357c518ffd",
+          "preregistered_sha256": "5abacd37033528edb14cc6b866cf54e9bf328de8a06f61db7fef72357c518ffd",
+          "snapshot": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot/scripts/g4i2_analysis.py",
+            "bytes": 22460,
+            "sha256": "5abacd37033528edb14cc6b866cf54e9bf328de8a06f61db7fef72357c518ffd"
+          },
+          "matches_manifest": true,
+          "method": "current_source_exact_hash_match",
+          "disposition": "new_exact_snapshot_created"
+        },
+        {
+          "source": "scripts/g4i2_controller_probe.py",
+          "source_current_sha256": "61b361b61c9226eb4b401bb368d57fd974e5a64301dea790a952ce3e05926f62",
+          "preregistered_sha256": "61b361b61c9226eb4b401bb368d57fd974e5a64301dea790a952ce3e05926f62",
+          "snapshot": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot/scripts/g4i2_controller_probe.py",
+            "bytes": 6397,
+            "sha256": "61b361b61c9226eb4b401bb368d57fd974e5a64301dea790a952ce3e05926f62"
+          },
+          "matches_manifest": true,
+          "method": "current_source_exact_hash_match",
+          "disposition": "new_exact_snapshot_created"
+        },
+        {
+          "source": "scripts/g4i2_episode_statistics.py",
+          "source_current_sha256": "74f0fcf3ec97117c09ac6b512e401f4d0b3532da7eafb2678b42a2a31847b77d",
+          "preregistered_sha256": "74f0fcf3ec97117c09ac6b512e401f4d0b3532da7eafb2678b42a2a31847b77d",
+          "snapshot": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot/scripts/g4i2_episode_statistics.py",
+            "bytes": 20129,
+            "sha256": "74f0fcf3ec97117c09ac6b512e401f4d0b3532da7eafb2678b42a2a31847b77d"
+          },
+          "matches_manifest": true,
+          "method": "current_source_exact_hash_match",
+          "disposition": "new_exact_snapshot_created"
+        },
+        {
+          "source": "scripts/g4i2_performance.py",
+          "source_current_sha256": "2ca14dd53ec767e7d05b44e9c29b38f083efe74f40640c49f56b74f4128fd971",
+          "preregistered_sha256": "2ca14dd53ec767e7d05b44e9c29b38f083efe74f40640c49f56b74f4128fd971",
+          "snapshot": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot/scripts/g4i2_performance.py",
+            "bytes": 14612,
+            "sha256": "2ca14dd53ec767e7d05b44e9c29b38f083efe74f40640c49f56b74f4128fd971"
+          },
+          "matches_manifest": true,
+          "method": "current_source_exact_hash_match",
+          "disposition": "new_exact_snapshot_created"
+        },
+        {
+          "source": "scripts/g4i2_run_registered.py",
+          "source_current_sha256": "0599f9b5b63f49c92609019a4914a2765247426e4d87415b12ee02f6b2e9fb34",
+          "preregistered_sha256": "0599f9b5b63f49c92609019a4914a2765247426e4d87415b12ee02f6b2e9fb34",
+          "snapshot": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot/scripts/g4i2_run_registered.py",
+            "bytes": 4906,
+            "sha256": "0599f9b5b63f49c92609019a4914a2765247426e4d87415b12ee02f6b2e9fb34"
+          },
+          "matches_manifest": true,
+          "method": "current_source_exact_hash_match",
+          "disposition": "new_exact_snapshot_created"
+        },
+        {
+          "source": "scripts/g4i2_runtime.py",
+          "source_current_sha256": "70dc7e2bda5159e63da22877a7f860b4cd48d2be6fd68362fd8b88ef56935a1e",
+          "preregistered_sha256": "70dc7e2bda5159e63da22877a7f860b4cd48d2be6fd68362fd8b88ef56935a1e",
+          "snapshot": {
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot/scripts/g4i2_runtime.py",
+            "bytes": 13800,
+            "sha256": "70dc7e2bda5159e63da22877a7f860b4cd48d2be6fd68362fd8b88ef56935a1e"
+          },
+          "matches_manifest": true,
+          "method": "current_source_exact_hash_match",
+          "disposition": "new_exact_snapshot_created"
+        }
+      ]
+    }
+  ],
+  "R0_runtime_reconstruction": {
+    "current_R1_sha256": "8828e98799a4da8155dfa9ff018ef80a2e5122142d7c9e0f871e0b3e1548d4fe",
+    "reconstructed_R0_sha256": "22b0092691a2c5a49cf129945fc9bbf39cbc2b64eec5b26b2a4428e5b0b1b21e",
+    "expected_R0_sha256": "22b0092691a2c5a49cf129945fc9bbf39cbc2b64eec5b26b2a4428e5b0b1b21e",
+    "matches_original_manifest": true,
+    "method": "Reverse only the two documented R1 repairs in memory; save only after complete bytes hash exactly matches the original manifest.",
+    "reverse_edits": [
+      {
+        "reverse_edit": "loop-finally wrapper reference clear",
+        "exact_removed_text": "        _ACTIVE_WRAPPER = None\n"
+      },
+      {
+        "reverse_edit": "module-level active wrapper slot",
+        "exact_removed_text": "_ACTIVE_WRAPPER = None\n"
+      },
+      {
+        "reverse_edit": "run global declaration",
+        "exact_removed_text": "    global _ACTIVE_WRAPPER\n"
+      },
+      {
+        "reverse_edit": "run wrapper reference assignment",
+        "exact_removed_text": "    _ACTIVE_WRAPPER = wrapper\n"
+      },
+      {
+        "reverse_edit": "outer setup-failure cleanup block",
+        "exact_removed_text": "        # Setup can fail before the episode-loop finally; release the original\n        # environment before Kit shutdown, retaining the original failure code.\n        if _ACTIVE_WRAPPER is not None:\n            try: _ACTIVE_WRAPPER.close()\n            except BaseException: traceback.print_exc(file=sys.stderr)\n"
+      },
+      {
+        "reverse_edit": "batched diagnostic quaternion repeat",
+        "exact_removed_text": ".repeat(count, 1)"
+      }
+    ]
+  },
+  "original_worktree_preservation_recheck": {
+    "prior_evidence": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_i/i2/original_worktree_preservation.json",
+      "bytes": 1765,
+      "sha256": "03b864a27980d1d4ea1a468e969f74056b4397feff87295e1c1edc3df257c7f9"
+    },
+    "original_repo": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+    "expected_head": "ed0310d074254a5110c5f3895aaf09f2a6829be5",
+    "current_head": "ed0310d074254a5110c5f3895aaf09f2a6829be5",
+    "head_unchanged": true,
+    "expected_status": "## main...origin/main\n?? docs/DEMO_G3V.md\n?? evidence/g3v/\n?? scripts/g3v_playback.sh\n",
+    "current_status": "## main...origin/main\n?? docs/DEMO_G3V.md\n?? evidence/g3v/\n?? scripts/g3v_playback.sh\n",
+    "status_unchanged": true,
+    "unrelated_files": [
+      {
+        "original": {
+          "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/docs/DEMO_G3V.md",
+          "sha256": "f1d20d8111cf39a90a62b096fd15a1c581916dcbb559d7082ec8d662b906f0a2",
+          "bytes": 7147
+        },
+        "current": {
+          "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/docs/DEMO_G3V.md",
+          "bytes": 7147,
+          "sha256": "f1d20d8111cf39a90a62b096fd15a1c581916dcbb559d7082ec8d662b906f0a2"
+        },
+        "unchanged": true
+      },
+      {
+        "original": {
+          "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g3v_playback.sh",
+          "sha256": "d0f71a7c9ba147bf85b3ae39e62e0ba66ac90ffbbf5ff06779c49495b9642b90",
+          "bytes": 3130
+        },
+        "current": {
+          "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g3v_playback.sh",
+          "bytes": 3130,
+          "sha256": "d0f71a7c9ba147bf85b3ae39e62e0ba66ac90ffbbf5ff06779c49495b9642b90"
+        },
+        "unchanged": true
+      },
+      {
+        "original": {
+          "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3v/README.md",
+          "sha256": "b6523f2fd4b87ceea7f2f4109fb7c153d15d95029f9ef32e8d28fd750d99f84b",
+          "bytes": 2621
+        },
+        "current": {
+          "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3v/README.md",
+          "bytes": 2621,
+          "sha256": "b6523f2fd4b87ceea7f2f4109fb7c153d15d95029f9ef32e8d28fd750d99f84b"
+        },
+        "unchanged": true
+      },
+      {
+        "original": {
+          "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3v/checkpoint_identity.json",
+          "sha256": "e080a739122fd1505ea90f054e0a3edd6481b95fc135c13cec7a44569a0cf364",
+          "bytes": 1778
+        },
+        "current": {
+          "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3v/checkpoint_identity.json",
+          "bytes": 1778,
+          "sha256": "e080a739122fd1505ea90f054e0a3edd6481b95fc135c13cec7a44569a0cf364"
+        },
+        "unchanged": true
+      },
+      {
+        "original": {
+          "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3v/playback_config.json",
+          "sha256": "8b2ec76c670187b11181640c295984bc2b8cc69b8c203bb42f8bfbd2acb63c6b",
+          "bytes": 2776
+        },
+        "current": {
+          "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3v/playback_config.json",
+          "bytes": 2776,
+          "sha256": "8b2ec76c670187b11181640c295984bc2b8cc69b8c203bb42f8bfbd2acb63c6b"
+        },
+        "unchanged": true
+      }
+    ],
+    "all_five_file_hashes_and_sizes_unchanged": true
+  },
+  "errors": [],
+  "all_runtime_source_snapshots_verified": true
+}

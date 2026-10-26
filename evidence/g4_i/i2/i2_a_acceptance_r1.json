@@ -1,0 +1,582 @@
+{
+  "passed": true,
+  "status": "I2_A_R1_PASS",
+  "checks": {
+    "exit_zero": true,
+    "guard": true,
+    "no_error": true,
+    "parity": true,
+    "rng": true,
+    "rms": true,
+    "gpu_forward_n": true,
+    "completed_success": true,
+    "cpu": true,
+    "minimal_reference": true
+  },
+  "revision": "engineering_revision_r1.json",
+  "minimal_reference": "original a_minimal passed before R1; R1 only expands diagnostic quaternion batch and closes env on setup failure",
+  "gpu_forward_ms": {
+    "mean": 0.5626685527654794,
+    "p50": 0.5190559923648834,
+    "p95": 0.8091023892164229,
+    "p99": 1.150256608128546,
+    "max": 1.2542719841003418,
+    "std": 0.12211961693995545,
+    "n": 130
+  },
+  "timing": {
+    "records_total": 150,
+    "warmup_records": 20,
+    "measured_records": 130,
+    "statistics_convention": "linear percentiles; population std ddof=0",
+    "deadline_ms": 66.66666666666667,
+    "stages_ms": {
+      "action_postprocess": {
+        "n": 130,
+        "mean": 0.8979923692307691,
+        "p50": 0.7057150000000001,
+        "p95": 1.7994918,
+        "p99": 2.382677489999997,
+        "min": 0.672701,
+        "max": 2.87103,
+        "std": 0.409262966459579
+      },
+      "available_observation_to_command": {
+        "n": 130,
+        "mean": 7.322309838461538,
+        "p50": 7.1495245,
+        "p95": 8.409866,
+        "p99": 10.32552477999999,
+        "min": 6.457466,
+        "max": 13.648878,
+        "std": 0.8736281315311082
+      },
+      "controller_target": {
+        "n": 130,
+        "mean": 24.719121946153848,
+        "p50": 24.430875,
+        "p95": 28.04907005,
+        "p99": 29.128371069999993,
+        "min": 22.473169,
+        "max": 29.955578,
+        "std": 1.6270241311540823
+      },
+      "cpu_gpu_transfer_d2h": {
+        "n": 130,
+        "mean": 1.2163836692307692,
+        "p50": 1.202631,
+        "p95": 1.32833695,
+        "p99": 1.3691243899999999,
+        "min": 1.154747,
+        "max": 1.484356,
+        "std": 0.049652743711840024
+      },
+      "cpu_gpu_transfer_h2d": {
+        "n": 130,
+        "mean": 0.0013602615384615384,
+        "p50": 0.0013484999999999999,
+        "p95": 0.00148905,
+        "p99": 0.0018525299999999996,
+        "min": 0.001237,
+        "max": 0.001875,
+        "std": 9.988289711504504e-05
+      },
+      "ema": {
+        "n": 130,
+        "mean": 0.2093900230769231,
+        "p50": 0.188293,
+        "p95": 0.30659404999999995,
+        "p99": 0.5352599399999995,
+        "min": 0.17556,
+        "max": 0.83073,
+        "std": 0.07779022922899421
+      },
+      "forward": {
+        "n": 130,
+        "mean": 0.5641633461538461,
+        "p50": 0.5420834999999999,
+        "p95": 0.6829921999999999,
+        "p99": 0.8147476499999998,
+        "min": 0.518465,
+        "max": 1.013383,
+        "std": 0.06636828723972032
+      },
+      "normalization": {
+        "n": 130,
+        "mean": 0.21382857692307689,
+        "p50": 0.19535000000000002,
+        "p95": 0.2615937499999999,
+        "p99": 0.58817431,
+        "min": 0.185994,
+        "max": 1.042513,
+        "std": 0.08983312024867729
+      },
+      "observation_construction": {
+        "n": 130,
+        "mean": 0.16423009230769228,
+        "p50": 0.162762,
+        "p95": 0.18270255,
+        "p99": 0.19698505,
+        "min": 0.148612,
+        "max": 0.230757,
+        "std": 0.012216103110520307
+      },
+      "observation_to_command": {
+        "n": 130,
+        "mean": 13.872127630769231,
+        "p50": 13.805015000000001,
+        "p95": 15.305971999999999,
+        "p99": 18.00973335999998,
+        "min": 12.430963,
+        "max": 20.854193,
+        "std": 1.0506993676299985
+      },
+      "physics_step": {
+        "n": 130,
+        "mean": 182.17106725384616,
+        "p50": 174.1298275,
+        "p95": 179.80320655000003,
+        "p99": 182.7580832,
+        "min": 150.33676400000002,
+        "max": 1290.796862,
+        "std": 97.73353951150222
+      },
+      "wrapper_admission": {
+        "n": 130,
+        "mean": 7.5034335230769225,
+        "p50": 7.336655,
+        "p95": 8.58295665,
+        "p99": 10.534423439999989,
+        "min": 6.639243,
+        "max": 13.839671,
+        "std": 0.8767740653303598
+      }
+    },
+    "command_intervals_ms": {
+      "n": 129,
+      "mean": 283.02693031782945,
+      "p50": 270.533673,
+      "p95": 280.0159146,
+      "p99": 283.82126276,
+      "min": 253.225242,
+      "max": 1837.568883,
+      "std": 137.51976747330104
+    },
+    "command_deadline_misses": {
+      "count": 129,
+      "n": 129,
+      "rate": 1.0
+    },
+    "observation_to_command_deadline_misses": {
+      "count": 0,
+      "n": 130,
+      "rate": 0.0
+    },
+    "control_loop_ms": {
+      "n": 130,
+      "mean": 282.9218908461538,
+      "p50": 270.521277,
+      "p95": 279.97243255,
+      "p99": 283.81559368,
+      "min": 253.225242,
+      "max": 1837.568883,
+      "std": 136.99501899440386
+    },
+    "wall_clock_command_frequency_hz": 3.533232681699351,
+    "real_time_factor": 0.23563629688491775,
+    "real_time_factor_aligned_samples": 130,
+    "simulated_policy_frequency_hz": 15,
+    "simulated_physics_frequency_hz": 120,
+    "deadline_behavior": "diagnostic only; no holding, rejecting, stopping, or hardware safety inferred",
+    "timing_scope": "timer names and synchronization semantics are defined by the runtime manifest"
+  },
+  "parity": {
+    "schema_version": "g4_i1_parity_v1",
+    "passed": true,
+    "status": "PASS",
+    "device_kind": "gpu",
+    "tolerances": {
+      "atol": 1e-05,
+      "rtol": 1e-05,
+      "quaternion_angle_rad": 0.0001
+    },
+    "relative_error_reporting_denominator_floor": 1e-12,
+    "comparison_count": 832800,
+    "violation_count": 0,
+    "orientation_violation_count": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0,
+    "coverage": {
+      "passed": true,
+      "required_all_stages": true,
+      "missing_stages": [],
+      "cases": [
+        "action_clipping",
+        "near_zero_rotation",
+        "normal",
+        "position_saturation",
+        "post_reset_first_action",
+        "timeout"
+      ],
+      "required_cases": [
+        "action_clipping",
+        "near_zero_rotation",
+        "normal",
+        "position_saturation",
+        "post_reset_first_action",
+        "timeout"
+      ],
+      "missing_cases": [],
+      "missing_in_actual": [],
+      "missing_in_reference": []
+    },
+    "stages": {
+      "c": {
+        "passed": true,
+        "comparison_count": 307200,
+        "sample_count": 300,
+        "shape": [
+          150,
+          2,
+          1,
+          1024
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "clipped": {
+        "passed": true,
+        "comparison_count": 900,
+        "sample_count": 150,
+        "shape": [
+          150,
+          1,
+          6
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__applied_wrench": {
+        "passed": true,
+        "comparison_count": 7200,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          6
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__arm_mass_matrix": {
+        "passed": true,
+        "comparison_count": 58800,
+        "sample_count": 8400,
+        "shape": [
+          1200,
+          1,
+          7,
+          7
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__ctrl_target_fingertip_midpoint_pos": {
+        "passed": true,
+        "comparison_count": 3600,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          3
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__ctrl_target_fingertip_midpoint_quat": {
+        "passed": true,
+        "comparison_count": 4800,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          4
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__dof_pos": {
+        "passed": true,
+        "comparison_count": 10800,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          9
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__dof_vel": {
+        "passed": true,
+        "comparison_count": 10800,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          9
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__finger_position_target": {
+        "passed": true,
+        "comparison_count": 2400,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          2
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__fingertip_midpoint_angvel": {
+        "passed": true,
+        "comparison_count": 3600,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          3
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__fingertip_midpoint_linvel": {
+        "passed": true,
+        "comparison_count": 3600,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          3
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__fingertip_midpoint_pos": {
+        "passed": true,
+        "comparison_count": 3600,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          3
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__fingertip_midpoint_quat": {
+        "passed": true,
+        "comparison_count": 4800,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          4
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__gripper_target": {
+        "passed": true,
+        "comparison_count": 1200,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__jacobian": {
+        "passed": true,
+        "comparison_count": 50400,
+        "sample_count": 7200,
+        "shape": [
+          1200,
+          1,
+          6,
+          7
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__joint_effort": {
+        "passed": true,
+        "comparison_count": 10800,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          9
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__joint_position_target": {
+        "passed": true,
+        "comparison_count": 10800,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          9
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__task_deriv_gains": {
+        "passed": true,
+        "comparison_count": 7200,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          6
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "controller__task_prop_gains": {
+        "passed": true,
+        "comparison_count": 7200,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          6
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "ema": {
+        "passed": true,
+        "comparison_count": 900,
+        "sample_count": 150,
+        "shape": [
+          150,
+          1,
+          6
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "h": {
+        "passed": true,
+        "comparison_count": 307200,
+        "sample_count": 300,
+        "shape": [
+          150,
+          2,
+          1,
+          1024
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "mu": {
+        "passed": true,
+        "comparison_count": 900,
+        "sample_count": 150,
+        "shape": [
+          150,
+          1,
+          6
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "normalized": {
+        "passed": true,
+        "comparison_count": 2850,
+        "sample_count": 150,
+        "shape": [
+          150,
+          1,
+          19
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "observation": {
+        "passed": true,
+        "comparison_count": 2850,
+        "sample_count": 150,
+        "shape": [
+          150,
+          1,
+          19
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "target_position": {
+        "passed": true,
+        "comparison_count": 3600,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          3
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0
+      },
+      "target_quaternion": {
+        "passed": true,
+        "comparison_count": 4800,
+        "sample_count": 1200,
+        "shape": [
+          1200,
+          1,
+          4
+        ],
+        "max_absolute_error": 0.0,
+        "max_relative_error": 0.0,
+        "violation_count": 0,
+        "orientation_comparison_count": 1200,
+        "max_orientation_error_rad": 0.0,
+        "orientation_tolerance_rad": 0.0001,
+        "orientation_violation_count": 0,
+        "orientation_passed": true
+      }
+    }
+  }
+}

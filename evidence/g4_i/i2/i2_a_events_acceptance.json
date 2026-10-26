@@ -1,0 +1,31 @@
+{
+  "status": "I2_A_EVENTS_PASS",
+  "passed": true,
+  "checks": {
+    "process_exit": true,
+    "guard": true,
+    "no_runtime_error": true,
+    "parity": true,
+    "rng": true,
+    "rms": true,
+    "source_preservation": true,
+    "denominator": true,
+    "gpu_events": true,
+    "clock_distribution": true,
+    "action_controller": true,
+    "cpu": true
+  },
+  "source": "actual guarded single-environment a_events; no failure/retry",
+  "mandatory_stop_rule_satisfied": true,
+  "max_parity_error": 0.0,
+  "device_forward_ms": {
+    "mean": 0.5556676917351209,
+    "p50": 0.5163839757442474,
+    "p95": 0.7374896168708801,
+    "p99": 0.8938636660575865,
+    "max": 1.2146559953689575,
+    "std": 0.09853814248087985,
+    "n": 130
+  },
+  "output": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events"
+}

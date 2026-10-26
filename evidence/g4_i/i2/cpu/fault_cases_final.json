@@ -1,0 +1,154 @@
+{
+  "schema": "g4i2.cpu_synthetic_fault_controls.v1",
+  "scope": "CPU synthetic composed software gates; no GPU/simulator/hardware fault execution",
+  "clock": "manually advanced synthetic monotonic nanoseconds; not measured latency",
+  "hold_implemented": false,
+  "hardware_safety_certification": false,
+  "expected_case_count": 11,
+  "recorded_case_count": 11,
+  "status": "COMPLETE",
+  "cases": [
+    {
+      "case": "delayed_inference_reject",
+      "passed": true,
+      "submit_count": 0,
+      "reason": "controller command rejected before submission",
+      "hold_implemented": false,
+      "scope": "CPU synthetic software contract",
+      "deadline_decision": {
+        "allowed": false,
+        "deadline_missed": true,
+        "stop_requested": false,
+        "reason": "INFERENCE_DEADLINE_MISSED",
+        "action": "reject",
+        "observation_age_ms": 11.0,
+        "inference_wall_ms": 11.0,
+        "deadline_ms": 10.0
+      }
+    },
+    {
+      "case": "nan_observation",
+      "passed": true,
+      "submit_count": 0,
+      "reason": "observation contains NaN/Inf",
+      "hold_implemented": false,
+      "scope": "CPU synthetic software contract"
+    },
+    {
+      "case": "nonfinite_policy_output",
+      "passed": true,
+      "submit_count": 0,
+      "reason": "controller action contains NaN/Inf",
+      "hold_implemented": false,
+      "scope": "CPU synthetic software contract"
+    },
+    {
+      "case": "incorrect_action_dimensions",
+      "passed": true,
+      "submit_count": 0,
+      "reason": "controller action shape must be (1, 6)",
+      "hold_implemented": false,
+      "scope": "CPU synthetic software contract"
+    },
+    {
+      "case": "stale_observation",
+      "passed": true,
+      "submit_count": 0,
+      "reason": "controller command rejected before submission",
+      "hold_implemented": false,
+      "scope": "CPU synthetic software contract",
+      "deadline_decision": {
+        "allowed": false,
+        "deadline_missed": false,
+        "stop_requested": false,
+        "reason": "STALE_OBSERVATION",
+        "action": "reject",
+        "observation_age_ms": 31.0,
+        "inference_wall_ms": 0.0,
+        "deadline_ms": 10.0
+      }
+    },
+    {
+      "case": "incorrect_lstm_state",
+      "passed": true,
+      "submit_count": 0,
+      "reason": "recurrent shape mismatch",
+      "hold_implemented": false,
+      "scope": "CPU synthetic software contract"
+    },
+    {
+      "case": "controller_command_rejection",
+      "passed": true,
+      "submit_count": 0,
+      "reason": "controller command rejected before submission",
+      "hold_implemented": false,
+      "scope": "CPU synthetic software contract"
+    },
+    {
+      "case": "checkpoint_sha_mismatch",
+      "passed": true,
+      "submit_count": 0,
+      "reason": "checkpoint SHA-256 identity mismatch; do not deserialize",
+      "hold_implemented": false,
+      "scope": "CPU synthetic software contract",
+      "checkpoint_deserialization_count": 0
+    },
+    {
+      "case": "delayed_inference_log_only",
+      "passed": true,
+      "submit_count": 1,
+      "reason": "INFERENCE_DEADLINE_MISSED",
+      "hold_implemented": false,
+      "scope": "CPU synthetic software contract",
+      "deadline_decision": {
+        "allowed": true,
+        "deadline_missed": true,
+        "stop_requested": false,
+        "reason": "INFERENCE_DEADLINE_MISSED",
+        "action": "log_only",
+        "observation_age_ms": 11.0,
+        "inference_wall_ms": 11.0,
+        "deadline_ms": 10.0
+      }
+    },
+    {
+      "case": "deadline_stop_latch",
+      "passed": true,
+      "submit_count": 0,
+      "reason": "STOP_LATCHED",
+      "hold_implemented": false,
+      "scope": "CPU synthetic software contract",
+      "deadline_decisions": [
+        {
+          "allowed": false,
+          "deadline_missed": true,
+          "stop_requested": true,
+          "reason": "INFERENCE_DEADLINE_MISSED",
+          "action": "stop",
+          "observation_age_ms": 11.0,
+          "inference_wall_ms": 11.0,
+          "deadline_ms": 10.0
+        },
+        {
+          "allowed": false,
+          "deadline_missed": false,
+          "stop_requested": true,
+          "reason": "STOP_LATCHED",
+          "action": "stop",
+          "observation_age_ms": 0.0,
+          "inference_wall_ms": 0.0,
+          "deadline_ms": 10.0
+        }
+      ],
+      "actual_simulator_stop_performed": false
+    },
+    {
+      "case": "hold_not_implemented",
+      "passed": true,
+      "submit_count": 0,
+      "reason": "HOLD_NOT_IMPLEMENTED; rejection is no new submission, not physical hold",
+      "hold_implemented": false,
+      "scope": "CPU synthetic software contract"
+    }
+  ]
+}

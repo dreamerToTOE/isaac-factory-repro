@@ -1,0 +1,6 @@
+{
+  "actual_wait_returncode": 0,
+  "CUDA_VISIBLE_DEVICES": "",
+  "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+  "scope": "CPU; no Isaac launch"
+}

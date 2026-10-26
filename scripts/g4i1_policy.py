@@ -7,6 +7,7 @@ The caller owns the original Factory EMA, target generation and controller.
 from __future__ import annotations
 
 import copy
+from contextlib import nullcontext
 from dataclasses import dataclass
 import json
 from pathlib import Path
@@ -146,7 +147,7 @@ class FrozenPolicy:
         self.states = self.reset_state(self.states, done)
         return self.states
 
-    def infer(self, obs, state, *, consume_rng=True):
+    def infer(self, obs, state, *, consume_rng=True, profiler=None):
         batch_size = _batch(obs)
         _tensor(obs, (batch_size, 19), self.device, "observation")
         STATE_SPEC.validate(state, batch_size, device=self.device)
@@ -154,33 +155,36 @@ class FrozenPolicy:
             raise RuntimeError("model/RMS must remain frozen in evaluation mode")
         rms = self.model.running_mean_std
         with torch.inference_mode():
-            normalized = torch.clamp((obs - rms.running_mean.float()) /
-                                     torch.sqrt(rms.running_var.float() + 1e-5), -5.0, 5.0)
-            _tensor(normalized, (batch_size, 19), self.device, "normalized observation")
+            with profiler.section("normalization", cuda=True) if profiler is not None else nullcontext():
+                normalized = torch.clamp((obs - rms.running_mean.float()) /
+                                         torch.sqrt(rms.running_var.float() + 1e-5), -5.0, 5.0)
+                _tensor(normalized, (batch_size, 19), self.device, "normalized observation")
             # The inner network receives an already-normalized observation;
             # calling the outer model here would apply normalization twice.
-            mu, logstd, _value, out_state = self.model.a2c_network({
-                "is_train": False, "prev_actions": None, "obs": normalized,
-                "rnn_states": state,
-            })
-            _tensor(mu, (batch_size, 6), self.device, "policy mean")
-            _tensor(logstd, (batch_size, 6), self.device, "policy logstd")
-            STATE_SPEC.validate(out_state, batch_size, device=self.device)
-            sigma = torch.exp(logstd)
-            _tensor(sigma, (batch_size, 6), self.device, "policy sigma")
-            if (sigma <= 0).any().item():
-                raise ValueError("policy sigma must remain positive")
-            if consume_rng:
-                # ModelA2CContinuousLogStd.forward samples even when Player
-                # ultimately selects mu. Preserve exactly that RNG effect.
-                torch.distributions.Normal(mu, sigma, validate_args=False).sample()
-            clipped = torch.clamp(mu, -1.0, 1.0)
-            if not self.rms_unchanged():
-                raise RuntimeError("RMS changed during inference")
-            return PolicyStep(obs.detach().clone(), normalized.detach().clone(),
-                              mu.detach().clone(), logstd.detach().clone(),
-                              tuple(value.detach().clone() for value in out_state),
-                              clipped.detach().clone(), bool(consume_rng))
+            with profiler.section("forward", cuda=True) if profiler is not None else nullcontext():
+                mu, logstd, _value, out_state = self.model.a2c_network({
+                    "is_train": False, "prev_actions": None, "obs": normalized,
+                    "rnn_states": state,
+                })
+            with profiler.section("action_postprocess", cuda=True) if profiler is not None else nullcontext():
+                _tensor(mu, (batch_size, 6), self.device, "policy mean")
+                _tensor(logstd, (batch_size, 6), self.device, "policy logstd")
+                STATE_SPEC.validate(out_state, batch_size, device=self.device)
+                sigma = torch.exp(logstd)
+                _tensor(sigma, (batch_size, 6), self.device, "policy sigma")
+                if (sigma <= 0).any().item():
+                    raise ValueError("policy sigma must remain positive")
+                if consume_rng:
+                    # ModelA2CContinuousLogStd.forward samples even when Player
+                    # ultimately selects mu. Preserve exactly that RNG effect.
+                    torch.distributions.Normal(mu, sigma, validate_args=False).sample()
+                clipped = torch.clamp(mu, -1.0, 1.0)
+                if not self.rms_unchanged():
+                    raise RuntimeError("RMS changed during inference")
+                return PolicyStep(obs.detach().clone(), normalized.detach().clone(),
+                                  mu.detach().clone(), logstd.detach().clone(),
+                                  tuple(value.detach().clone() for value in out_state),
+                                  clipped.detach().clone(), bool(consume_rng))
 
     def step(self, obs, *, consume_rng=True):
         if self.states is None:

@@ -1,0 +1,85 @@
+{
+  "schema": "g4i2.timing_review.v1",
+  "status": "PASS_WITH_EXPLICIT_SCOPE_LIMITATIONS",
+  "blocking_findings": [],
+  "review_scope": "Read-only source and completed actual R1 A-events artifacts; no new GPU run or CPU suite executed by this review",
+  "source_manifest": "evidence/g4_i/i2/experiment_manifest_r1.json",
+  "all_registered_source_hashes_match": true,
+  "a_events": {
+    "raw_root": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events",
+    "trace_sha256": "d54dba7731096dd709eba52da13290c6078daf86d108701fcf4e078e8865835d",
+    "timing_records": 150,
+    "warmup_records": 20,
+    "measured_records": 130,
+    "all_trace_and_summary_floating_values_checked": 92375,
+    "nonfinite_or_invalid_event_locations": [],
+    "all_timing_values_finite_nonnegative": true,
+    "command_timestamps_distinct_increasing": true,
+    "raw_record_counts": {
+      "initial_state": 2,
+      "action": 150,
+      "controller": 1200,
+      "success_state": 150,
+      "timing": 150,
+      "pre_reset_state": 150,
+      "episode": 1
+    },
+    "raw_event_stage_counts": {
+      "cpu_gpu_transfer_h2d": 150,
+      "normalization": 150,
+      "forward": 150,
+      "action_postprocess": 150,
+      "ema": 150,
+      "controller_target": 1200,
+      "physics_step": 1267,
+      "observation_construction": 150,
+      "cpu_gpu_transfer_d2h": 150
+    },
+    "device_ms_null_counts": {
+      "cpu_gpu_transfer_h2d": 150
+    },
+    "forward_measured_cuda_events": {
+      "mean": 0.5626685527654794,
+      "p50": 0.5190559923648834,
+      "p95": 0.8091023892164229,
+      "p99": 1.150256608128546,
+      "max": 1.2542719841003418,
+      "std": 0.12211961693995545,
+      "n": 130
+    },
+    "parity_zero_max_absolute_error": true,
+    "actual_supervised_child_exit_code": 0,
+    "supervisor_termination_reason": "child_exit"
+  },
+  "required_report_definitions": {
+    "forward_cuda_events": "Same current-stream elapsed between events around the unchanged original network call; includes possible host launch/idle gaps. It is not pure isolated kernel time or an uninstrumented latency claim.",
+    "wall_sections": "Host perf_counter_ns elapsed; include event record/creation and blocking inside scope. Deferred final-event synchronization is measured separately at step end. Nested scopes overlap and cannot be summed as exclusive components.",
+    "observation_to_command": "Observation-construction start captured for current input through first original controller software joint-effort-target submission callback; neither physical actuator execution nor device command completion.",
+    "wrapper_admission": "Earlier software wrapper-entry admission timestamp; it is distinct from first effort-target callback.",
+    "available_observation_to_command": "Observation available timestamp through earlier wrapper admission; does not include observation construction or final effort-target computation.",
+    "command_intervals": "Consecutive first-effort-target host timestamps. These include full intervening physics, controller, diagnostics, parity work, synchronization, reset work and logging; not inverse network-forward time.",
+    "control_loop": "Command-to-command wall interval recorded per decision, not a bare network interval. Selected n=130 contains warmup-boundary interval, while wholly postwarmup command intervals n=129.",
+    "h2d": "No policy H2D transfer occurs: observations already live on GPU. cpu_gpu_transfer_h2d is an empty host scope placeholder; its small wall overhead must not be presented as actual transfer latency.",
+    "d2h": "Diagnostic tensor .cpu().tolist conversion scope, including host preparation and potential synchronization; not a policy-path input transfer or isolated DMA benchmark. Additional snapshot/logging overhead is covered by command intervals.",
+    "real_time_factor": "Summary computes nominal policy simulated time (15Hz interval per record) divided by aligned wall intervals; excludes auxiliary reset physics advancement. Label nominal policy-time real-time factor rather than total simulator-time factor.",
+    "a_stage_totals": "Controller-target and physics wall summaries aggregate multiple substeps per decision; raw event rows retain per-invocation data. Extra reset calls are included in physics scopes.",
+    "off_mode": "StepProfiler off makes no profiler clock/CUDA calls, but I2 adapter still records diagnostics and outer host timestamps. Events-off with diagnostics is not an entirely uninstrumented runtime."
+  },
+  "default_behavior_preservation": {
+    "profiler_none": "FrozenPolicy.infer optional profiler=None wraps original three stages in nullcontext; all computations, checks, RNG consumption, clones and model call remain in original order.",
+    "default_i1_runtime": "Without --i2, no Telemetry adapter is constructed. Default seed/count and original action/EMA/controller/success path remain available.",
+    "evidence": "Prior CPU probe parity tests and actual R1 A-events exact numerical/RNG/RMS parity; no new test execution in this review."
+  },
+  "fault_contract": {
+    "artifact": "evidence/g4_i/i2/cpu/fault_cases.json",
+    "recorded_cases": 11,
+    "all_cases_passed": true,
+    "all_reject_cases_submit_zero": true,
+    "scope": "Synthetic CPU fake-clock software admission and validation. No actual runtime fault-injection, physical hold, real safety or hardware stop claim.",
+    "hold_implemented": false,
+    "production_preregistered_policy": "Late but fresh commands log only; >60s software observation age rejects. Clock starts at decision preparation, so inference_wall_ms is broader than bare neural forward.",
+    "stop_policy": "CPU-tested stop request latch only; actual simulator stopping under injected deadline was not executed."
+  },
+  "extra_reset_simulated_physics_s": 0.5583333333333425,
+  "no_new_gpu_or_long_cpu_work": true
+}

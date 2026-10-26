@@ -1,0 +1,584 @@
+{
+  "schema": "g4i2_scientific_protocol_review_v1",
+  "review_scope": "Read-only CPU source/document review before completion of I2-B; no GPU execution, no raw-trace aggregation, no independent numerical equivalence experiment.",
+  "decision": {
+    "scientific_protocol_comparison": "same frozen task/checkpoint and reconstructed episode allocation; bootstrap is not an exact historical replay proof",
+    "paired_historical_comparison_allowed": false,
+    "required_comparison": "descriptive unpaired, with separate G2/G3B/I2 denominators",
+    "policy_or_rng_causal_attribution_allowed": false
+  },
+  "frozen_protocol": {
+    "checkpoint_sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+    "training_seed": 0,
+    "evaluation_seeds": [
+      1001,
+      1002,
+      1003
+    ],
+    "num_envs": 32,
+    "episodes_per_env": 3,
+    "episodes_per_seed": 96,
+    "total_episodes": 288,
+    "physics_dt_s": 0.008333333333333333,
+    "decimation": 8,
+    "policy_interval_s": 0.06666666666666667,
+    "episode_policy_steps": 149,
+    "evaluation_policy_steps_per_seed": 447,
+    "historical_g2_max_step_budget": 480,
+    "registered_i2b_max_step_budget": 450,
+    "budget_vs_executed": "480/450 are guards; completion after three synchronous 149-step episodes is 447, not an episode-horizon change"
+  },
+  "facts": [
+    {
+      "id": "F01",
+      "topic": "historical bootstrap order",
+      "evidence": "scripts/evaluate_checkpoint.py main",
+      "ordered_calls": [
+        "parse_env_cfg; env_cfg.seed=eval_seed",
+        "gym.make(task,cfg=env_cfg)",
+        "construct unchanged RlGamesVecEnvWrapper",
+        "Runner(); runner.load(agent_cfg)",
+        "runner.create_player(); agent.restore(checkpoint); agent.reset()",
+        "env.reset(); agent.get_batch_size(...); agent.init_rnn()"
+      ],
+      "meaning": "Historical harness itself does not explicitly torch.manual_seed after creating the Player and before env.reset."
+    },
+    {
+      "id": "F02",
+      "topic": "historical Runner seeds",
+      "evidence": "rl_games/torch_runner.py Runner.load_config",
+      "statement": "For nonzero registered evaluation seed, runner.load seeds torch.manual_seed, torch.cuda.manual_seed_all, NumPy and Python random. Runner constructor sets cudnn.benchmark=True; this is not a strict deterministic-algorithm certificate."
+    },
+    {
+      "id": "F03",
+      "topic": "current bootstrap order",
+      "evidence": "scripts/g4i1_runtime.py run; scripts/g4i1_policy.py FrozenPolicy.from_checkpoint",
+      "ordered_calls": [
+        "verify/load frozen checkpoint and build standalone policy under CPU fork_rng(devices=[])",
+        "initialize zero LSTM h/c; optional validation Player created only with --validate",
+        "torch.manual_seed(eval_seed); np.random.seed(eval_seed)",
+        "parse_env_cfg; cfg.seed=eval_seed; gym.make frozen PegInsert",
+        "construct unchanged RlGamesVecEnvWrapper(infinite raw-observation clip, action clip1)",
+        "torch.manual_seed(eval_seed) immediately before wrapper.reset()"
+      ],
+      "meaning": "Registered I2-B --validate=false omits Player/Runner construction; no training Runner, optimizer or update is instantiated."
+    },
+    {
+      "id": "F04",
+      "topic": "environment-wide seed effects",
+      "evidence": "DirectRLEnv.__init__/seed and isaacsim.core.utils.torch.maths.set_seed",
+      "statement": "Both cfg.seed values pass through DirectRLEnv.seed during environment construction. That function sets Replicator global seed when available, then Python random, NumPy, torch CPU, CUDA current/all generators, Warp random seed and PYTHONHASHSEED environment value. Setting PYTHONHASHSEED after Python startup is not a proof of changing that process hash randomization."
+    },
+    {
+      "id": "F05",
+      "topic": "CPU versus CUDA model initialization",
+      "evidence": "PpoPlayerContinuous.__init__, network_builder.py",
+      "statement": "Official Player builds the model through network.build(config) before calling model.to(self.device). The reviewed network uses ordinary default CPU nn layers/parameters/initializers; its initial weights consume CPU RNG. This ordering is not evidence of a CUDA random draw merely because the model is subsequently copied to CUDA."
+    },
+    {
+      "id": "F06",
+      "topic": "streams at first reset",
+      "evidence": "F01-F05 plus FactoryEnv.randomize_initial_state",
+      "statement": "Historical and current construction/reseeding sequences differ. CPU generator consumption/state at reset has not been compared and may differ. CUDA generator state may still match because official CPU model construction need not consume CUDA RNG and both paths seed CUDA. Factory reset uses torch.rand/randn on self.device, including variable-count IK retries. Neither equality nor inequality of actual reset CUDA streams/initial conditions is established by this source review.",
+      "not_a_claim": "Do not state that all actual reset streams definitely differ; do not state that same numeric seed proves paired episodes."
+    },
+    {
+      "id": "F07",
+      "topic": "discarded stochastic sample",
+      "evidence": "ModelA2CContinuousLogStd.Network.forward; PpoPlayerContinuous.get_action; FrozenPolicy.infer",
+      "statement": "Official model evaluation forward constructs Normal(mu,sigma) and calls sample even when deterministic Player later selects mu. Standalone deliberately performs the same discarded Normal.sample, then clips mu to [-1,1]. It does not substitute a no-RNG mean-only forward."
+    },
+    {
+      "id": "F08",
+      "topic": "scope of RNG parity evidence",
+      "evidence": "g4i1_runtime.py oracle fork_rng and rng_checks",
+      "statement": "Validation mode runs official oracle in an isolated fork_rng and compares live CPU/CUDA states after standalone inference on the same supplied observation/state. The accepted I1/I2-A B=1 evidence is not an archived-history B=32 reset pairing proof. Registered I2-B disables oracle; rng_comparisons=0 and rng_all_equal=all([])=true are vacuous, not measured B=32 RNG agreement."
+    },
+    {
+      "id": "F09",
+      "topic": "observation semantics",
+      "evidence": "FactoryEnv._get_observations; g4i1_policy FrozenPolicy.infer",
+      "statement": "Both use original 19-dimensional Factory observation, original noisy fixed frame, wxyz world quaternion, finite-difference velocities and six-dimensional EMA cache. Historical wrapper defaults to infinite raw-observation clipping because agent env config specifies only clip_actions=1. Current wrapper also uses infinity and action bound1. Frozen RMS normalization remains FP32 arithmetic with float64 stored buffers, clip±5; no new sensor observation model is introduced."
+    },
+    {
+      "id": "F10",
+      "topic": "action/controller semantics",
+      "evidence": "FactoryEnv._pre_physics_step/_apply_action/generate_ctrl_signals; current runtime wrappers",
+      "statement": "Actual simulation calls original Factory methods for EMA, target generation, controller, physics, rewards and success. Standalone clipped mu is passed through the same wrapper. Per physics substep the original target uses actual current fingertip pose, original translation/rotation scales and upright roll/pitch restrictions. Diagnostic TorqueProbe invokes the original controller code through a private torch proxy and copies requested/postclip values; it adds synchronization/serialization overhead but does not change controller gain, clamp or effort limit.",
+      "boundary": "A source review plus B=1 action/controller parity is not a proof that every B=32 simulated trajectory matches historical floating-point contact evolution."
+    },
+    {
+      "id": "F11",
+      "topic": "reset and episode counting",
+      "evidence": "evaluate_checkpoint.py SuccessTracker loop; g4i1_runtime.py reset branch",
+      "statement": "Both capture the original success predicate during reward before automatic reset, success does not terminate, and clear h/c for done environment columns. Current boundary verifies pose-derived cache only for reset columns and preserves other h/c columns. Historical baseline enforces synchronous done. Both scientific evaluators target 32env×3 completed149-step episodes=96/seed and stop at447 decisions when the denominator is reached."
+    },
+    {
+      "id": "F12",
+      "topic": "150 versus447 distinction",
+      "evidence": "I1 report; current max-step/denominator break conditions; historical protocol_audit",
+      "statement": "150-step single-environment I1/I2-A coverage consists of one complete149-step timeout episode plus the first action of the next episode to test reset. It has denominator1, not3 or96. I2-B uses447 policy decisions to complete three episodes in each of32 environments. The different lengths reflect different registered purposes, not modified success thresholds or episode duration."
+    },
+    {
+      "id": "F13",
+      "topic": "performance instrumentation scope",
+      "evidence": "g4i2_runtime.py and StepProfiler",
+      "statement": "CUDA events, finite checks, detached clone/CPU conversion, official-state capture, disk traces and optional oracle create measured overhead. Deferred CUDA-event synchronization does not imply hard real-time operation or uninstrumented latency. Wall command timestamps are software target-submission boundaries, not measured actuator execution."
+    }
+  ],
+  "differences_and_unknowns": [
+    {
+      "dimension": "bootstrapping",
+      "status": "KNOWN_SOURCE_ORDER_DIFFERENCE",
+      "consequence": "Different CPU construction/seed order; do not infer paired reset streams from seed IDs alone."
+    },
+    {
+      "dimension": "first reset CUDA RNG",
+      "status": "UNVERIFIED_MAY_MATCH",
+      "consequence": "CPU initialization does not prove CUDA consumption; no archived initial CUDA state available for direct comparison."
+    },
+    {
+      "dimension": "Python/NumPy/Warp stream positions",
+      "status": "UNVERIFIED",
+      "consequence": "Different explicit seed call schedule; environment seeding covers these libraries, but archived per-reset states were not saved."
+    },
+    {
+      "dimension": "historical initial randomized configurations",
+      "status": "NOT_COMPLETELY_ARCHIVED",
+      "consequence": "Original G2 has summaries and limited successful geometric snapshots, not complete per-episode initial states/RNG/failure traces."
+    },
+    {
+      "dimension": "per-observation inference arithmetic",
+      "status": "ACCEPTED_SAME_INPUT_B1_PARITY_SCOPE",
+      "consequence": "Supports frozen actor equivalence on tested observations/states, not exact B32 historical trajectory pairing."
+    },
+    {
+      "dimension": "contact/physics determinism",
+      "status": "UNVERIFIED_CONTINUOUS_TRAJECTORY_EQUIVALENCE",
+      "consequence": "Same model/seed alone does not establish deterministic PhysX contact replay; no new physical or Sim2Sim result is claimed."
+    },
+    {
+      "dimension": "performance versus science",
+      "status": "SEPARATE_CONCLUSIONS_REQUIRED",
+      "consequence": "Deadline misses and logging overhead do not alone show a policy failure; high success does not prove real-time control or contact safety."
+    }
+  ],
+  "recommended_interpretation": [
+    "Keep original G2 280/288, separate G3B pool and new standalone pool distinct. Compare per-seed/pooled rates descriptively with actual completed denominators.",
+    "Do not report paired significance, historical episode agreement, or an exact reproduction claim unless initial states and random-stream histories are actually matched.",
+    "When outcomes differ, consider bootstrap/reset state, observation construction, discarded-sample consumption, action/controller timing, floating-point/physics evolution and instrumentation before any policy-causal explanation.",
+    "Record failure classifications as never-success or lost-success-before-terminal, with actual geometric residuals; do not label those residuals as proven causes.",
+    "Preserve the accepted frozen policy/scientific protocol and all failed engineering attempts; do not tune or reseed to approach97.22%."
+  ],
+  "sources": {
+    "historical_evaluator": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/evaluate_checkpoint.py",
+      "sha256": "415dff9b59ece8a21e6bbe0a6c9fff08e2ea594cb8dc2ef8fe73e299c94af707",
+      "anchors": [
+        {
+          "text": "env_cfg.seed =",
+          "lines": [
+            104
+          ]
+        },
+        {
+          "text": "raw_env = gym.make",
+          "lines": [
+            114
+          ]
+        },
+        {
+          "text": "runner.load(agent_cfg)",
+          "lines": [
+            131
+          ]
+        },
+        {
+          "text": "agent = runner.create_player()",
+          "lines": [
+            132
+          ]
+        },
+        {
+          "text": "obs = env.reset()",
+          "lines": [
+            135
+          ]
+        },
+        {
+          "text": "while len(tracker.completed)",
+          "lines": [
+            243
+          ]
+        }
+      ]
+    },
+    "current_runtime": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4i1_runtime.py",
+      "sha256": "8828e98799a4da8155dfa9ff018ef80a2e5122142d7c9e0f871e0b3e1548d4fe",
+      "anchors": [
+        {
+          "text": "policy = FrozenPolicy.from_checkpoint",
+          "lines": [
+            74
+          ]
+        },
+        {
+          "text": "torch.manual_seed(seed)",
+          "lines": [
+            93,
+            107
+          ]
+        },
+        {
+          "text": "np.random.seed(seed)",
+          "lines": [
+            94
+          ]
+        },
+        {
+          "text": "cfg.seed = seed",
+          "lines": [
+            96
+          ]
+        },
+        {
+          "text": "obs = wrapper.reset()",
+          "lines": [
+            108
+          ]
+        },
+        {
+          "text": "policy.infer(current, state",
+          "lines": [
+            278
+          ]
+        },
+        {
+          "text": "len(tracker.completed) >=",
+          "lines": [
+            319
+          ]
+        },
+        {
+          "text": "rng_comparisons",
+          "lines": [
+            346
+          ]
+        }
+      ]
+    },
+    "current_policy": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4i1_policy.py",
+      "sha256": "6f22926b1a5acff28a2a0cf774b74cbc3e97d4221b36ee639d744dbe249489e2",
+      "anchors": [
+        {
+          "text": "with torch.random.fork_rng(devices=[]):",
+          "lines": [
+            115
+          ]
+        },
+        {
+          "text": "torch.distributions.Normal(mu, sigma",
+          "lines": [
+            180
+          ]
+        },
+        {
+          "text": "clipped = torch.clamp(mu",
+          "lines": [
+            181
+          ]
+        }
+      ]
+    },
+    "current_telemetry": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4i2_runtime.py",
+      "sha256": "70dc7e2bda5159e63da22877a7f860b4cd48d2be6fd68362fd8b88ef56935a1e",
+      "anchors": [
+        {
+          "text": "initial_rng.pt",
+          "lines": [
+            49
+          ]
+        },
+        {
+          "text": "first_effort_target_ns",
+          "lines": [
+            86,
+            104,
+            105,
+            106,
+            107
+          ]
+        },
+        {
+          "text": "success_state",
+          "lines": [
+            152
+          ]
+        }
+      ]
+    },
+    "shared_success_accounting": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/success_metrics.py",
+      "sha256": "bd3233876429dcce64bee52be11b9f03a69b1e35279b4e285dab4e81151bbfa2",
+      "anchors": [
+        {
+          "text": "class PreResetSuccessCapture",
+          "lines": [
+            16
+          ]
+        },
+        {
+          "text": "class SuccessTracker",
+          "lines": [
+            82
+          ]
+        }
+      ]
+    },
+    "historical_runner": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/torch_runner.py",
+      "sha256": "363c484360ac01ee72f88c4eaf61158348a824b868c894c7c0db77c7aebbb6ad",
+      "anchors": [
+        {
+          "text": "torch.manual_seed(self.seed)",
+          "lines": [
+            86
+          ]
+        },
+        {
+          "text": "torch.cuda.manual_seed_all(self.seed)",
+          "lines": [
+            87
+          ]
+        },
+        {
+          "text": "np.random.seed(self.seed)",
+          "lines": [
+            88
+          ]
+        },
+        {
+          "text": "random.seed(self.seed)",
+          "lines": [
+            88,
+            89
+          ]
+        }
+      ]
+    },
+    "official_player": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/players.py",
+      "sha256": "e22d083c540b479b31fefc2bbd05d132a54e3f97d14bf21421498e011942c043",
+      "anchors": [
+        {
+          "text": "self.model = self.network.build(config)",
+          "lines": [
+            40,
+            111,
+            212
+          ]
+        },
+        {
+          "text": "self.model.to(self.device)",
+          "lines": [
+            41,
+            112,
+            213
+          ]
+        },
+        {
+          "text": "def get_action",
+          "lines": [
+            45,
+            147,
+            229
+          ]
+        },
+        {
+          "text": "def restore",
+          "lines": [
+            72,
+            176,
+            217
+          ]
+        }
+      ]
+    },
+    "official_model": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/models.py",
+      "sha256": "78a806701b3099ea45de5c9c1e00c761d0a9443b4b39d6cce087680fc4e62f37",
+      "anchors": [
+        {
+          "text": "selected_action = distr.sample()",
+          "lines": [
+            225,
+            278
+          ]
+        }
+      ]
+    },
+    "official_network_builder": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/network_builder.py",
+      "sha256": "6a03fe980305921dd4c133fe7b35641434e3c636b441bbc1436411094ad66193",
+      "anchors": [
+        {
+          "text": "nn.Parameter(torch.zeros",
+          "lines": [
+            279,
+            560,
+            670
+          ]
+        },
+        {
+          "text": "get_default_rnn_state",
+          "lines": [
+            66,
+            460,
+            816
+          ]
+        }
+      ]
+    },
+    "official_player_base": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/player.py",
+      "sha256": "db45d52106f3bff3b4b117d037f72c76f01f0a862b051d490a837232b4e2683f",
+      "anchors": [
+        {
+          "text": "def init_rnn",
+          "lines": [
+            267
+          ]
+        }
+      ]
+    },
+    "environment_seed": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/envs/direct_rl_env.py",
+      "sha256": "0c919fdc93e9198562edaaa3c29627a8dc0e123f581f41cdffc75641f9033fc1",
+      "anchors": [
+        {
+          "text": "self.cfg.seed = self.seed(self.cfg.seed)",
+          "lines": [
+            94
+          ]
+        },
+        {
+          "text": "return torch_utils.set_seed(seed)",
+          "lines": [
+            412
+          ]
+        }
+      ]
+    },
+    "factory_environment": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py",
+      "sha256": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81",
+      "anchors": [
+        {
+          "text": "def _get_observations",
+          "lines": [
+            254
+          ]
+        },
+        {
+          "text": "def _pre_physics_step",
+          "lines": [
+            296
+          ]
+        },
+        {
+          "text": "def _apply_action",
+          "lines": [
+            342
+          ]
+        },
+        {
+          "text": "def generate_ctrl_signals",
+          "lines": [
+            399
+          ]
+        },
+        {
+          "text": "def randomize_initial_state",
+          "lines": [
+            658
+          ]
+        },
+        {
+          "text": "torch.rand(",
+          "lines": [
+            667,
+            677,
+            725,
+            736,
+            805
+          ]
+        }
+      ]
+    },
+    "factory_controller": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_control.py",
+      "sha256": "7ef611d530a86fa2aba9db222361b0fe8b64d34037f204ad622a17051ad5e163",
+      "anchors": [
+        {
+          "text": "def compute_dof_torque",
+          "lines": [
+            19
+          ]
+        }
+      ]
+    },
+    "sim_seed_utility": {
+      "path": "/home/ubuntu2004/isaacsim-4.5.0/exts/isaacsim.core.utils/isaacsim/core/utils/torch/maths.py",
+      "sha256": "25eb6af449529061369ccb627714557ee133dde2d03d3e2bd1eef85c49d7a21c",
+      "anchors": [
+        {
+          "text": "def set_seed",
+          "lines": [
+            103
+          ]
+        },
+        {
+          "text": "random.seed(seed)",
+          "lines": [
+            111,
+            112
+          ]
+        },
+        {
+          "text": "np.random.seed(seed)",
+          "lines": [
+            112
+          ]
+        },
+        {
+          "text": "torch.manual_seed(seed)",
+          "lines": [
+            113
+          ]
+        },
+        {
+          "text": "wp.rand_init(seed)",
+          "lines": [
+            117
+          ]
+        }
+      ]
+    },
+    "protocol_audit": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_i/i2/protocol_audit.json",
+      "sha256": "1d150bf910a2ae751c5d8738315461565d195dc409bf4f3f6b7ca264936fe67f",
+      "anchors": []
+    },
+    "preregistered_manifest": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_i/i2/experiment_manifest_r1.json",
+      "sha256": "4b86272d9a39071703726d542daf09d2f99344748eca81eca20366d9bc83af84",
+      "anchors": []
+    }
+  },
+  "execution_results": "Not inspected or aggregated for this source review; B seed1001 was in progress when requested. No additional run, heavy analysis or aggregate was started.",
+  "learning_status": "PENDING",
+  "stop_boundary": "G4-I2 only; no G4-S0/Sim2Sim, training, other tasks or physical claims"
+}

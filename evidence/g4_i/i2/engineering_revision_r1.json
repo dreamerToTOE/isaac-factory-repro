@@ -1,0 +1,170 @@
+{
+  "revision": "R1",
+  "created_utc": "2026-10-26T09:52:34.619510+00:00",
+  "original_manifest_sha256": "a7cfef3a6584b381dc4aaaf2698f62ca011677c8f43cb8d2fe302cd14156ab71",
+  "trigger": "I2-B1001 startup failed before first policy action: reset diagnostic quaternion[1,4] does not broadcast in tu.quat_mul to[32,4]",
+  "mandatory_I2_A_status": "A-events and A-minimal both PASSED; no I2-A failure and no large evaluation after a failed A",
+  "failed_execution": {
+    "phase": "b_1001",
+    "launcher_returncode": 124,
+    "wall_s": 227.5943356300013,
+    "supervisor": {
+      "child_exit_code": 1,
+      "child_identity": {
+        "birth_ticks": "3267002",
+        "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+        "pgid": 159570,
+        "pid": 159570,
+        "state": "R"
+      },
+      "child_signal": null,
+      "command": [
+        "bash",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/run_sim.sh",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4i1_runtime.py",
+        "--headless",
+        "--device",
+        "cuda:0",
+        "--i2",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001",
+        "--seed",
+        "1001",
+        "--num-envs",
+        "32",
+        "--episodes-per-env",
+        "3",
+        "--max-steps",
+        "450",
+        "--warmup",
+        "20",
+        "--profiling",
+        "events",
+        "--diagnostics",
+        "full"
+      ],
+      "ended": {
+        "monotonic_seconds": 32897.290350428,
+        "unix_seconds": 1793008267.8289897,
+        "utc": "2026-10-26T09:51:07.828983+00:00"
+      },
+      "error": null,
+      "exec_released": {
+        "monotonic_seconds": 32670.105647173,
+        "unix_seconds": 1793008040.6442864,
+        "utc": "2026-10-26T09:47:20.644281+00:00"
+      },
+      "finalized": true,
+      "guard_identity": {
+        "birth_ticks": "3266994",
+        "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+        "pgid": 159566,
+        "pid": 159566,
+        "state": "R"
+      },
+      "guard_required": true,
+      "identity": {
+        "birth_ticks": "3266996",
+        "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+        "pgid": 159568,
+        "pid": 159568,
+        "state": "R"
+      },
+      "raw_wait_returncode": 1,
+      "received_supervisor_signals": [
+        15
+      ],
+      "schema_version": 2,
+      "started": {
+        "monotonic_seconds": 32669.991711667,
+        "unix_seconds": 1793008040.5303507,
+        "utc": "2026-10-26T09:47:20.530337+00:00"
+      },
+      "stop_signals": [
+        {
+          "monotonic_seconds": 32896.982547245,
+          "signal": "SIGTERM",
+          "unix_seconds": 1793008267.5211866,
+          "utc": "2026-10-26T09:51:07.521181+00:00"
+        }
+      ],
+      "termination_reason": "supervisor_signal",
+      "wall_seconds": 227.29863930999636
+    },
+    "guard": {
+      "continuous_monitoring": true,
+      "coverage_note": "Sampled coverage: regular intervals are not continuous measurement.",
+      "ended": {
+        "monotonic_seconds": 32897.303449388,
+        "unix_seconds": 1793008267.842088,
+        "utc": "2026-10-26T09:51:07.842072+00:00"
+      },
+      "error": null,
+      "finalized": true,
+      "first_sample": {
+        "monotonic_seconds": 32670.000405992,
+        "unix_seconds": 1793008040.539045,
+        "utc": "2026-10-26T09:47:20.539033+00:00"
+      },
+      "identity": {
+        "birth_ticks": "3266994",
+        "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+        "pgid": 159566,
+        "pid": 159566,
+        "state": "R"
+      },
+      "last_sample": {
+        "monotonic_seconds": 32897.300525571,
+        "unix_seconds": 1793008267.8391645,
+        "utc": "2026-10-26T09:51:07.839154+00:00"
+      },
+      "low_memory_stop_condition_observed": false,
+      "max_low_consecutive": 0,
+      "min_free_MiB": 2514.375,
+      "monitoring_gaps": [],
+      "peak_used_MiB": 5303.25,
+      "policy": {
+        "consecutive_samples": 3,
+        "floor_MiB": 1024,
+        "gap_limit_seconds": 0.5,
+        "interval_seconds": 0.1,
+        "stale_seconds": 2
+      },
+      "sample_count": 2274,
+      "schema_version": 2,
+      "started": {
+        "monotonic_seconds": 32669.98567743,
+        "unix_seconds": 1793008040.524316,
+        "utc": "2026-10-26T09:47:20.524301+00:00"
+      },
+      "stop_reason": "child_wait_observed",
+      "stop_signals": [],
+      "supervisor_identity": {
+        "birth_ticks": "3266996",
+        "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+        "pgid": 159568,
+        "pid": 159568,
+        "state": "R"
+      },
+      "target_identity": {
+        "birth_ticks": "3267002",
+        "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+        "pgid": 159570,
+        "pid": 159570,
+        "state": "R"
+      }
+    },
+    "durable_supervision": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_supervision",
+    "runtime_error_exists": true,
+    "result_exists": false
+  },
+  "correction": "repeat diagnostic reset reference quaternion count times; same literal pose math; add outer setup-failure wrapper.close before Kit shutdown",
+  "scientific_changes": false,
+  "old_failed_run_denominator": 0,
+  "original_evidence_preserved": true,
+  "new_CPU_controls": "test_g4i2_reset_batch.py 10 cases, including strict shape and partial reset",
+  "new_gate": "repeat mandatory bounded single-env events+oracle before any revised B run; no automatic retries",
+  "new_raw_root": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1",
+  "global_wall_budget_revision_s": 9000,
+  "scope": "Only I2 adapter engineering repair, no policy/EMA/controller/physics/reward/success edits"
+}

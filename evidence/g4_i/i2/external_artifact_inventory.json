@@ -1,0 +1,1421 @@
+{
+  "files": [
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events/edge_fixtures.json",
+      "bytes": 10138,
+      "sha256": "dea5347a03c35ecb6573c0f738bb10021d1462ab37d27ca402e32be6efd3c83f"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events/env.yaml",
+      "bytes": 12080,
+      "sha256": "8e25e190e79aca22a498760aa0e9cd2a07329b181a8edcb95703c2b4b5bc7e3d"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events/episodes.csv",
+      "bytes": 25735,
+      "sha256": "cd182f10a7ea2db68d6facf7c6135201b1f364950f373ce1e3eafaa9bef5b0cf"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events/episodes.json",
+      "bytes": 137093,
+      "sha256": "e37d8d3e71561d9f4a9bbf16b998b1763c69d8b33ac28ab2f193755e505ba74b"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events/failures.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events/i2_trace.jsonl",
+      "bytes": 2618225,
+      "sha256": "aa709eae13dadf7408dc19b5c56babaafa4981396b41ae106b320c3a033981a4"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events/initial_rng.pt",
+      "bytes": 6917,
+      "sha256": "ec412cc5d80c2bd9a02519524357ef805becc122d6a47fd637ef66b7c1380e1a"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events/invocation.json",
+      "bytes": 852,
+      "sha256": "90a86b3180c94819a642393f0ebc821304c667724f57a4515eb639bdcc93c1c5"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events/paired_trace.npz",
+      "bytes": 5703966,
+      "sha256": "be3ae0d38d367c81ed641a31e1dda29e5049f28284768aa6396ff1e7697390b2"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events/parity.json",
+      "bytes": 8352,
+      "sha256": "2ed8fdef3d6d8f33ba3a42b29314345cef9caceb43a30be1e4f06a0cf19d3d20"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events/process_outcome.json",
+      "bytes": 97,
+      "sha256": "52d1cfd390ef80d5c36c1a76be55aa73076b89749d62e39947585b442654324b"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events/result.json",
+      "bytes": 11890,
+      "sha256": "3e7a09e86dbc9cb89310b3ac39d4d26f1eb801ffd7a86a10f21e299a636e66ba"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events/summary.json",
+      "bytes": 213209,
+      "sha256": "708e83ba5aed40a677398aaffce244ed9cfcc0bdc209f8f604c987bff7c3b239"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events/trace.jsonl",
+      "bytes": 22792,
+      "sha256": "3d6d5f0cb81237e058c3706849698d8ba6bdac35e873e0d65c1238105f2945f2"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events_command.json",
+      "bytes": 1675,
+      "sha256": "e78fdaecf431e0f03d85601fa0523797fcc04d047f2053d3aeec9a676c695ebd"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events_execution.json",
+      "bytes": 4297,
+      "sha256": "bfa3dd850a8f4a152ec8827be6a6281c29f08a87e7d5ee28770c4bb54e3d99e1"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events_launcher_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events_launcher_stdout.txt",
+      "bytes": 40,
+      "sha256": "be64ddc9f1a85db446da9fd0fc68948e9795a0eddbe035e02928f77ac59f6f2c"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events_resource_preflight.json",
+      "bytes": 1273,
+      "sha256": "ce9bf108a7e343c416791129088e13037468f3a13edc3653f5c397ee2309ef27"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events_supervision/guard/attached_identity.json",
+      "bytes": 466,
+      "sha256": "aa4c9c89f2d16735e62c90986571b44d2eda8024f94bd586999bcbf397308775"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events_supervision/guard/heartbeat.json",
+      "bytes": 774,
+      "sha256": "f0aa55dcd3774862e9ca3c4c2aa89f2db58ca452235bae69fd0606edecf4123c"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events_supervision/guard/metadata.json",
+      "bytes": 646,
+      "sha256": "cc2c2070296cd65697ba4f173e44ae6b0e74aee8cf69f65cee49eea3bbd82bc6"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events_supervision/guard/samples.csv",
+      "bytes": 72030,
+      "sha256": "73a4d33a42aa5482e43a3e60b273959c1604b258b8022849c580648942e68918"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events_supervision/guard/status.json",
+      "bytes": 1687,
+      "sha256": "9597185402d012249974458a57815de94fdbbd07df4a5245761f22ab09ffc048"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events_supervision/guard_submission.json",
+      "bytes": 249,
+      "sha256": "4bce47aa53a4a40c044f91f65ce334c3f7ce8f327b944659e0448edb8fada400"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events_supervision/launch.json",
+      "bytes": 5198,
+      "sha256": "58743606a5bff0a7b472e8fa234999cda82ac4540497a9dc443fd1ab86f7a10a"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events_supervision/supervisor/child_exit.json",
+      "bytes": 368,
+      "sha256": "3f9f4bac884242f6b3cabe369debda88799b49800776907a61ada0110529c885"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events_supervision/supervisor/child_identity.json",
+      "bytes": 341,
+      "sha256": "1428de6710732d80b7435b0554df768f7b098a3aa5162e90b393156194dd88a8"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events_supervision/supervisor/command.json",
+      "bytes": 1785,
+      "sha256": "a61ee441044db119ff06b35822e1dafa6609901d8e0ceafe91d1291c33daa289"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events_supervision/supervisor/console.txt",
+      "bytes": 6325,
+      "sha256": "ddcc8236a0077cf727f2e0dbcf4bd2a279c113c2e1fe034d24553357ff1807ab"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events_supervision/supervisor/events.jsonl",
+      "bytes": 855,
+      "sha256": "fd9d6e3354939e66d449b9e094d292e7ff464cd5180418e2b91c75c042ddd509"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events_supervision/supervisor/exec_release.json",
+      "bytes": 340,
+      "sha256": "f7f149b8d00faaf58d1d282bc4840a0b02cc4f2fc6b5d2d113c46aaecb303636"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events_supervision/supervisor/heartbeat.json",
+      "bytes": 531,
+      "sha256": "ba9b8b7bd8afb19128b8879214029464c4284851346682353837be2ff4ba67b7"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events_supervision/supervisor/identity.json",
+      "bytes": 340,
+      "sha256": "cee393e0736b6c7b15d5151e3f321ae4e5b81906dccd1575ee080e15cfc4f8e2"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events_supervision/supervisor/status.json",
+      "bytes": 1997,
+      "sha256": "fd366792d0dd9c58b3b8e36750d2ec4f464ec38623ec8993a449dae6495882c8"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events_supervision/supervisor_submission.json",
+      "bytes": 259,
+      "sha256": "499c64b07b666b0d001638fff209abd48e73887ab69c1362e55345c126fa5ddb"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal/edge_fixtures.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal/env.yaml",
+      "bytes": 12080,
+      "sha256": "8e25e190e79aca22a498760aa0e9cd2a07329b181a8edcb95703c2b4b5bc7e3d"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal/episodes.csv",
+      "bytes": 25734,
+      "sha256": "ba45a472638e0d4b294eedf879f399b1961b507c9dac3b0154fb94f116e87608"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal/episodes.json",
+      "bytes": 137093,
+      "sha256": "4b3f89426d01bc7102476ad4066eb89664d801e0a322cf35e80186dfce2f4446"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal/failures.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal/i2_trace.jsonl",
+      "bytes": 469662,
+      "sha256": "63e6e3815f868b983af32cb1bdb45011d1cb3f797a9e1adc3161bcb02f69eed7"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal/initial_rng.pt",
+      "bytes": 6917,
+      "sha256": "ec412cc5d80c2bd9a02519524357ef805becc122d6a47fd637ef66b7c1380e1a"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal/invocation.json",
+      "bytes": 833,
+      "sha256": "10953c3ce4e220858c0305ddef47af6a755cf0c353dfc1ad2c928fb1bdbec900"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal/paired_trace.npz",
+      "bytes": 22,
+      "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal/process_outcome.json",
+      "bytes": 97,
+      "sha256": "52d1cfd390ef80d5c36c1a76be55aa73076b89749d62e39947585b442654324b"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal/result.json",
+      "bytes": 2671,
+      "sha256": "3b2b224835805aebcf7a3fb3f2e88a0cff53201dc605d91080bbab1d5870a863"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal/summary.json",
+      "bytes": 186432,
+      "sha256": "14b64a339dfc47483d5392ec39711f32194c8bb5d2b681c4451610183044903a"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal/trace.jsonl",
+      "bytes": 22794,
+      "sha256": "019518de6fe876dc869b9ac785e2044431faebc85d4872ee8f909d233eb82972"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal_command.json",
+      "bytes": 1660,
+      "sha256": "3f6fb8ffd47211ac146ae1b898fa598471208361976829b42336a8df57ac3d50"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal_execution.json",
+      "bytes": 4278,
+      "sha256": "d65ab05944f7c0b6ba8c4a0b5c7f9c8da7e7a9bfeb46fb5b1b2b9517138b75bf"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal_launcher_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal_launcher_stdout.txt",
+      "bytes": 41,
+      "sha256": "6ab2e83f23457f178ee8dacf3f6549fbbed8fd6ce21cf0b4b9ca1dd9522b7c52"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal_resource_preflight.json",
+      "bytes": 1274,
+      "sha256": "5f37a04d1ef57741b02e5cff02171b0f15bbb0291acab201a81d73cddb5bf310"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal_supervision/guard/attached_identity.json",
+      "bytes": 467,
+      "sha256": "0f2dfd99f4d17f0800e931044bfc7c4edf9109ca3bca093030d395b7707c0e2a"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal_supervision/guard/heartbeat.json",
+      "bytes": 772,
+      "sha256": "2fe7bb1bc2f90044cd1dd25ee3db253ff0d4b9718797f7965b0a9d8106a809f6"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal_supervision/guard/metadata.json",
+      "bytes": 647,
+      "sha256": "f0d1555afeb2631490d934a538e52a2c7c7101414d0b39a898fd61b304e983ce"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal_supervision/guard/samples.csv",
+      "bytes": 62950,
+      "sha256": "c4b1c8246278eab133105e1006584fe5ca7c4235d87093cd2f90391824cd64ec"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal_supervision/guard/status.json",
+      "bytes": 1685,
+      "sha256": "8d8efa017453b95428c59be2f08085f7fac11c050c3af88d5bef406a4d01d878"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal_supervision/guard_submission.json",
+      "bytes": 249,
+      "sha256": "6aba1194bd4bd238e11055fcaccfe7d3e597bd27d6a6a7c8679db0ba3fd131d0"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal_supervision/launch.json",
+      "bytes": 5170,
+      "sha256": "e7bd4e19b36aa51fdb48e6261f2bbc611f37e4559d91f6e2186c9af91b4b5adc"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal_supervision/supervisor/child_exit.json",
+      "bytes": 368,
+      "sha256": "2bc41036c4095ae99f88e115669018ef8af3e6d8a28c529427c01ace776e0353"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal_supervision/supervisor/child_identity.json",
+      "bytes": 341,
+      "sha256": "91c5cb0fd43242da98be80496c00ce9ffc200230b917f6d2961425270b543c50"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal_supervision/supervisor/command.json",
+      "bytes": 1770,
+      "sha256": "4dd04a21786a414b2f10c75b6326f6e7b788cfecd06501b2a24d9e12950effc4"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal_supervision/supervisor/console.txt",
+      "bytes": 6264,
+      "sha256": "7e1b2a6bc3c10707251243ea711c122c83709009f23e87cf81dc644e9b75acbd"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal_supervision/supervisor/events.jsonl",
+      "bytes": 854,
+      "sha256": "c91c7987ecc2a62c61acb1192339e82bc01ac18587c7073683c2ab57242725bc"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal_supervision/supervisor/exec_release.json",
+      "bytes": 340,
+      "sha256": "7c3480b2349ecdb52d2f71f8f0a3a4bd27c2701d9c2e348517305350fc9a8883"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal_supervision/supervisor/heartbeat.json",
+      "bytes": 532,
+      "sha256": "b9184204f62d4b6c79e2df0a123835001085363069547d5a9cd40027b02f6251"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal_supervision/supervisor/identity.json",
+      "bytes": 341,
+      "sha256": "6a2a1d0c27600f8e93b2d01445ced794322387ad71612c94effd07e4a5c5b719"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal_supervision/supervisor/status.json",
+      "bytes": 1981,
+      "sha256": "eedb110f0d3db9e9c63e16d63d2fccad26aacd75151df930e3275db6fa22fe6f"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal_supervision/supervisor_submission.json",
+      "bytes": 259,
+      "sha256": "d88b8249182fa8100df111a6967ab131e2f675b5f98c8412ff9ceb627f75df10"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001/env.yaml",
+      "bytes": 12081,
+      "sha256": "d3c979622d77812acce358f81a6400328a6219309945c301703687153c0ec370"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001/i2_trace.jsonl",
+      "bytes": 770135,
+      "sha256": "31c3423e4b5842dd3203162391184cbbd83311ceb59e43b3b2e3e273a6967c80"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001/initial_rng.pt",
+      "bytes": 6917,
+      "sha256": "ec412cc5d80c2bd9a02519524357ef805becc122d6a47fd637ef66b7c1380e1a"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001/invocation.json",
+      "bytes": 835,
+      "sha256": "c9bb4e07b0c2aedf5a9aa472b75b2f03cadd14ad82798802070b4f44c8177beb"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001/process_outcome.json",
+      "bytes": 97,
+      "sha256": "765664f55ed9a74de060b75570bd995d23ac395f780a4c4c943861d17d83e9cc"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001/runtime_error.json",
+      "bytes": 1655,
+      "sha256": "6f701bf4cbed666ac235640d8a53681491048dcaaa70ec11823bcd3dfdc8e0c0"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001/trace.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_command.json",
+      "bytes": 1653,
+      "sha256": "cb4b8c7c6105b8fb47861694c399f537a1c7f71b4826e39e8b053c6a1c59070d"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_execution.json",
+      "bytes": 4482,
+      "sha256": "48e991e886eb22663350a59f901e608d7edafe90f832be4828413acd345dda05"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_launcher_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_launcher_stdout.txt",
+      "bytes": 38,
+      "sha256": "ed576ba07ea5d022aa829f6f032cbb145fc4d2c7f7ee1ae95873f57808a92fc1"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_manual_abort.json",
+      "bytes": 540,
+      "sha256": "04974719622c8b691f03aa9676e00994b6858700944c3cecaf5febec38396b25"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_manual_abort_supported_cli.json",
+      "bytes": 352,
+      "sha256": "2cc1f86a53c4cfc6189d0bd8976f423280f508ee718b670ccc6b9528b305c090"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_resource_preflight.json",
+      "bytes": 1271,
+      "sha256": "8d588982fd8b5951a69c55d35dc2c110c49081d57b94ecbbdeb1f52b6cc2abde"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_supervision/guard/attached_identity.json",
+      "bytes": 468,
+      "sha256": "473a4ad691b85e148a83940aa03f97d7f49a1386289c9e4b0b9a7c0c0304f773"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_supervision/guard/heartbeat.json",
+      "bytes": 776,
+      "sha256": "c52f1a090bbafd5af70ee82fc9aa91555399b26693bcb692af21aa557da3518e"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_supervision/guard/metadata.json",
+      "bytes": 642,
+      "sha256": "2f66e094af2a88f0a21b5ab9b41d9bba40cbd43d350fd6129802646c98516592"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_supervision/guard/samples.csv",
+      "bytes": 293594,
+      "sha256": "454a7721118b2cc576a51e429f3fd78835456fd4d1623788105fd66ab620bbe7"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_supervision/guard/status.json",
+      "bytes": 1682,
+      "sha256": "dbe76c716d7c8432e7724e8eb667644b987df15ee9a7850de593303b0df1a7e9"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_supervision/guard_submission.json",
+      "bytes": 247,
+      "sha256": "7c44ae9ab83b4a7ddbe0d6bda6372c742ebeadf81b5443b06f3171ae75247829"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_supervision/launch.json",
+      "bytes": 5142,
+      "sha256": "ffe73fe36efea50e7634f8aac6020f509fab7c2d6adcce47c8adb01fb90f7178"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_supervision/supervisor/child_exit.json",
+      "bytes": 369,
+      "sha256": "3ca81057d8a9ecc2a31c46c4d0a81a6c2256d0c61dffe3aef6e48932c983350f"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_supervision/supervisor/child_identity.json",
+      "bytes": 341,
+      "sha256": "d1f77d5baf20c6e7482a9f2752e94a3ea15f10fdbf505a2ad79750af39043ed3"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_supervision/supervisor/command.json",
+      "bytes": 1766,
+      "sha256": "3da4f7fc20b59cccf418347fb3eaa1fec7a6bb9429b09cf4ed9efa219c021bf8"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_supervision/supervisor/console.txt",
+      "bytes": 7143,
+      "sha256": "17f184ff49e169ebd81c361bb313fece8718cd62296c01f3b0f342045cc0ef1b"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_supervision/supervisor/events.jsonl",
+      "bytes": 854,
+      "sha256": "cb601421f523bf101c3531137036b288cdf3e52e26a8f9e5b115b46433881689"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_supervision/supervisor/exec_release.json",
+      "bytes": 341,
+      "sha256": "774ada4f00c2aa5272115d8fd7726fa69637730fff7a712d8e614250e8827bdb"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_supervision/supervisor/heartbeat.json",
+      "bytes": 532,
+      "sha256": "84232051b71a522d8f9fd237ce3a4cb5a7de86a1562e4ee7e131d4f2b6067ba1"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_supervision/supervisor/identity.json",
+      "bytes": 341,
+      "sha256": "63df218769014a8d5ea7885faf1a4081e781592e502a85fad86fa9258edf9286"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_supervision/supervisor/status.json",
+      "bytes": 2174,
+      "sha256": "8fa3c566045f2931492f8ba0067e4a782ef83f22e40525b13d40f35ca4a14454"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/b_1001_supervision/supervisor_submission.json",
+      "bytes": 257,
+      "sha256": "2f038ba697b296de8b825ffd7df841fea5a5c38956d4c7b78e104ade42ad83ea"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/i2_a_acceptance.json",
+      "bytes": 951,
+      "sha256": "a2e92589e874e69394d56fe739e77ae337ef161e6e0870b7281919e996c92502"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/i2_a_events_acceptance.json",
+      "bytes": 880,
+      "sha256": "0baa41f28c112a24dea933ab293c853bdc7c92c0272eee27028e420500f6fcd4"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/source_snapshot/scripts/g4i1_acceptance.py",
+      "bytes": 6006,
+      "sha256": "356d3f0766f2386941622486c8b82d17a37cf5aa230bedad3363232064cd05d8"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/source_snapshot/scripts/g4i1_cpu_check.py",
+      "bytes": 4496,
+      "sha256": "d797479851e0458a56f449f8df2fa55321bce5894f67ee68e3a3d5c99feb36ae"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/source_snapshot/scripts/g4i1_edge_cpu.py",
+      "bytes": 6114,
+      "sha256": "84e909c3cf500fac6f13a3b6678b1013692ea70ec5cb459e0ecbba311b5b5bb7"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/source_snapshot/scripts/g4i1_parity.py",
+      "bytes": 10789,
+      "sha256": "e13bd11ef4f3204caec683bb992a490d2a05cb4c076004e6cc17c12422f27230"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/source_snapshot/scripts/g4i1_policy.py",
+      "bytes": 13920,
+      "sha256": "6f22926b1a5acff28a2a0cf774b74cbc3e97d4221b36ee639d744dbe249489e2"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/source_snapshot/scripts/g4i1_runtime.py",
+      "bytes": 26848,
+      "sha256": "22b0092691a2c5a49cf129945fc9bbf39cbc2b64eec5b26b2a4428e5b0b1b21e"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/source_snapshot/scripts/g4i2_analysis.py",
+      "bytes": 22460,
+      "sha256": "5abacd37033528edb14cc6b866cf54e9bf328de8a06f61db7fef72357c518ffd"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/source_snapshot/scripts/g4i2_controller_probe.py",
+      "bytes": 6397,
+      "sha256": "61b361b61c9226eb4b401bb368d57fd974e5a64301dea790a952ce3e05926f62"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/source_snapshot/scripts/g4i2_performance.py",
+      "bytes": 14612,
+      "sha256": "2ca14dd53ec767e7d05b44e9c29b38f083efe74f40640c49f56b74f4128fd971"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/source_snapshot/scripts/g4i2_run_registered.py",
+      "bytes": 4906,
+      "sha256": "0599f9b5b63f49c92609019a4914a2765247426e4d87415b12ee02f6b2e9fb34"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/source_snapshot/scripts/g4i2_runtime.py",
+      "bytes": 13800,
+      "sha256": "70dc7e2bda5159e63da22877a7f860b4cd48d2be6fd68362fd8b88ef56935a1e"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events/edge_fixtures.json",
+      "bytes": 10138,
+      "sha256": "dea5347a03c35ecb6573c0f738bb10021d1462ab37d27ca402e32be6efd3c83f"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events/env.yaml",
+      "bytes": 12080,
+      "sha256": "8e25e190e79aca22a498760aa0e9cd2a07329b181a8edcb95703c2b4b5bc7e3d"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events/episodes.csv",
+      "bytes": 25735,
+      "sha256": "e5e9f1748c71cb90070f1ada64d29f3ac48cfb59711f9ff0940126323a5bc7d9"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events/episodes.json",
+      "bytes": 137096,
+      "sha256": "c3c2e0ad349ec925dd29abee8b6e6a7c042ce1b2e47b2156cbabb18832fae93f"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events/failures.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events/i2_trace.jsonl",
+      "bytes": 2618459,
+      "sha256": "d54dba7731096dd709eba52da13290c6078daf86d108701fcf4e078e8865835d"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events/initial_rng.pt",
+      "bytes": 6917,
+      "sha256": "ec412cc5d80c2bd9a02519524357ef805becc122d6a47fd637ef66b7c1380e1a"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events/invocation.json",
+      "bytes": 855,
+      "sha256": "3091406fb37d7369c993a33ebc2a8d846e2a245719659473bf359e8fedae85a9"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events/paired_trace.npz",
+      "bytes": 5703966,
+      "sha256": "be3ae0d38d367c81ed641a31e1dda29e5049f28284768aa6396ff1e7697390b2"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events/parity.json",
+      "bytes": 8352,
+      "sha256": "2ed8fdef3d6d8f33ba3a42b29314345cef9caceb43a30be1e4f06a0cf19d3d20"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events/process_outcome.json",
+      "bytes": 97,
+      "sha256": "52d1cfd390ef80d5c36c1a76be55aa73076b89749d62e39947585b442654324b"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events/result.json",
+      "bytes": 11895,
+      "sha256": "3015e46f6c56801b2511b834704d545b44136e817150ef00f6b9f9f53f8e55cc"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events/summary.json",
+      "bytes": 213168,
+      "sha256": "619fe3c48ba3e178fd7a8d44660002957ca621137c268460ed97adc130f15221"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events/trace.jsonl",
+      "bytes": 22794,
+      "sha256": "75246fd9cdbe4f3789bcfca0f223df79e94a5b844b0502f76bb551ed7a685dbb"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events_command.json",
+      "bytes": 1684,
+      "sha256": "06d510d3a175ffdbfdd68a5300e3b9c89e5cc88ecb7a88f25726e2d281452dfe"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events_execution.json",
+      "bytes": 4296,
+      "sha256": "e70ae6df5dc31fb4ac85b277a973837ef8cad757c368f6ec67449e5de8208f8c"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events_launcher_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events_launcher_stdout.txt",
+      "bytes": 43,
+      "sha256": "56c03b5b62dca4dfcf06ac2e566efefbb6400030489d03c32f862281e391b698"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events_resource_preflight.json",
+      "bytes": 1276,
+      "sha256": "0d34bde9e6002902fc6ecf27e76948e14f0a4f533a670b02729e148e1607fe4e"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events_supervision/guard/attached_identity.json",
+      "bytes": 468,
+      "sha256": "cece82e649d046e7c5717679c82fd93e9bf45f996035fc29610ecb5a1c52f27f"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events_supervision/guard/heartbeat.json",
+      "bytes": 775,
+      "sha256": "f89de14bd3bb73a14d7a526b85156d39a719920649717d197dc0e60643b2090c"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events_supervision/guard/metadata.json",
+      "bytes": 648,
+      "sha256": "a53b589d61df6f7aa2f5e912b989cf2b8470b44aecb44f736a7a598425e46779"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events_supervision/guard/samples.csv",
+      "bytes": 71732,
+      "sha256": "ee2a2e014e084c7fe155a605c53badb9a2bcf97e6705f23717950a035facd4fb"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events_supervision/guard/status.json",
+      "bytes": 1681,
+      "sha256": "e09e9941860c9172450f3cb05fd198d750f2e32446e8797db4fded00c443da13"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events_supervision/guard_submission.json",
+      "bytes": 252,
+      "sha256": "d2aee2ccd0a7958933d219957b1793db05cede0b5afc94859f4fdccaa7c72af8"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events_supervision/launch.json",
+      "bytes": 5228,
+      "sha256": "74180fc465a5b98e3b05a08488b838cb6ac3b9a577f527a34d3944769afd2228"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events_supervision/supervisor/child_exit.json",
+      "bytes": 368,
+      "sha256": "db74e32d4a5a695b2b356bf04a691735312500d9e3a8e6860a57082f96ce1200"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events_supervision/supervisor/child_identity.json",
+      "bytes": 341,
+      "sha256": "813d19ed804532252b64687bde923a03bab22c897f832426c35ce75bb66d5b9c"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events_supervision/supervisor/command.json",
+      "bytes": 1791,
+      "sha256": "96f82a1a77fd1513239f52d474d95bb275d6eb2eb955db220728230ad6effc7d"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events_supervision/supervisor/console.txt",
+      "bytes": 6325,
+      "sha256": "d1d51949dd98ae9655017ed8c84837cbe2f3d3fb5a0829a098b81ecfbf9f30bf"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events_supervision/supervisor/events.jsonl",
+      "bytes": 856,
+      "sha256": "5d0bd4166e28b94d0970b3a6bc78c072fa76350d805ed655d5d3e6cb246b4a0e"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events_supervision/supervisor/exec_release.json",
+      "bytes": 341,
+      "sha256": "537a768e28bee1a399f6641c28634c1854705fec19530aead3979e28e9cb74ac"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events_supervision/supervisor/heartbeat.json",
+      "bytes": 530,
+      "sha256": "025204cb8a8d01e0cbba15907efbf07b7aca04e450747b5ea0ab092a58879b93"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events_supervision/supervisor/identity.json",
+      "bytes": 340,
+      "sha256": "31a9569d889b01331410a7720b2aceaf14b1bdf07f09ec4dadf2d92d37ff07d6"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events_supervision/supervisor/status.json",
+      "bytes": 2000,
+      "sha256": "f135e03c0d3e995bcef113921089f91538e9f39ebd8d3672d8b53e0a481c6f68"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events_supervision/supervisor_submission.json",
+      "bytes": 262,
+      "sha256": "1c46a0211c5cae2299f4b6ec093ebc2dfae0290484156a2ccfc3f92d4ae53f46"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/analysis_failed_timing_export/scopes.csv.gz",
+      "bytes": 237138,
+      "sha256": "7dca3735f93d42935c9c3b794b845c400ec5840cea78eb7e769d29af39bdb455"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/analysis_failed_timing_export/timings_decision.csv",
+      "bytes": 476736,
+      "sha256": "4f4c9a125f48b7a4a0d44d5799737a65e8783645c91d2fd16ebb87c0e111d86e"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001/edge_fixtures.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001/env.yaml",
+      "bytes": 12081,
+      "sha256": "d3c979622d77812acce358f81a6400328a6219309945c301703687153c0ec370"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001/episodes.csv",
+      "bytes": 2448285,
+      "sha256": "fef2a1e792d1d68c998a810796e78569dc1f182d298d89124065af8c1206ce3c"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001/episodes.json",
+      "bytes": 13157103,
+      "sha256": "ee0b5918809eabf9d20706a8af10a87d8dc2a63aa1b973229696d90e80204fd5"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001/failures.json",
+      "bytes": 137063,
+      "sha256": "a253b4517b626a747cf5f7bc76043d6134e38b8dd116791f71aa98bcc9b5d836"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001/i2_trace.jsonl",
+      "bytes": 128516741,
+      "sha256": "75d2d92f0f917a742a447836318dca885924175bd1ad14e5802cd584d5bdcb0b"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001/initial_rng.pt",
+      "bytes": 6917,
+      "sha256": "ec412cc5d80c2bd9a02519524357ef805becc122d6a47fd637ef66b7c1380e1a"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001/invocation.json",
+      "bytes": 838,
+      "sha256": "6ece2db4c102b07d64372fad4710dc5c1a6966da3128b1293045f5fe00fcdd79"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001/paired_trace.npz",
+      "bytes": 22,
+      "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001/process_outcome.json",
+      "bytes": 97,
+      "sha256": "52d1cfd390ef80d5c36c1a76be55aa73076b89749d62e39947585b442654324b"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001/result.json",
+      "bytes": 23380,
+      "sha256": "e0049fde7b2f3e4742c6f64c465c9c07bd30d8f1f54d0d9408d6e79d43e9a158"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001/summary.json",
+      "bytes": 16810472,
+      "sha256": "0fb27f0450e1111d48d07d8f6f7da898aa7062fc724dc2db77045492018f8c95"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001/trace.jsonl",
+      "bytes": 707014,
+      "sha256": "5dc452a4df8fd2e40fa976db64e613d314ff7a3edcfc509a3475340c75a02b18"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001_command.json",
+      "bytes": 1662,
+      "sha256": "dbdc456f7c6e489fc1d1e78a8c086a34db7ef3d1fefed2e977eb1b4a50f191bd"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001_execution.json",
+      "bytes": 4278,
+      "sha256": "10127bd4465b3ab6981e9b5222de272e48d2bb2426658a5f8b1eb703bcb7bc49"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001_launcher_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001_launcher_stdout.txt",
+      "bytes": 41,
+      "sha256": "467f6cfe609654547e11776a795ef451c96fddfc1724f84781ddbcb8c82d9549"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001_resource_preflight.json",
+      "bytes": 1274,
+      "sha256": "2c6c9dd5c07fc98e1d70784b938421314a3e7cdf883cc6b81d7b4c23ae8ae8c5"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001_supervision/guard/attached_identity.json",
+      "bytes": 468,
+      "sha256": "538e95e2598003ba5f99fcc9881bf2ee46c2438361556b31ac642df7ee4865a5"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001_supervision/guard/heartbeat.json",
+      "bytes": 776,
+      "sha256": "934949305bbf02ba6387259a7f562456639e48d989fde8e6b5b408e3a9c14afa"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001_supervision/guard/metadata.json",
+      "bytes": 647,
+      "sha256": "e0a0fb43413e02e13aeb990f5bf920f51b65bd1fb938509d5837003fd02e82ae"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001_supervision/guard/samples.csv",
+      "bytes": 194846,
+      "sha256": "126429db45313f932eab4568419bcb5988533371acd11ced6b4e468869e47a4f"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001_supervision/guard/status.json",
+      "bytes": 1686,
+      "sha256": "8e6dd03e6810cb1746c8b111c7b1309a176c1764a3359dc51b68d686cabd846c"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001_supervision/guard_submission.json",
+      "bytes": 250,
+      "sha256": "8df12792f48427adb8f5de40c581249ba61aa6f4d191b0086ccc47efabcae7c3"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001_supervision/launch.json",
+      "bytes": 5173,
+      "sha256": "f7eb8d03447438cc9d0bf90ad9a9c45ce0230955f30c1ab81e4cbc06237ed07f"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001_supervision/supervisor/child_exit.json",
+      "bytes": 369,
+      "sha256": "f63573d75fe6c61c61bf08666fa7888c472a54b6b4a943a2f9433fd61395271b"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001_supervision/supervisor/child_identity.json",
+      "bytes": 341,
+      "sha256": "4c1cec5beae99e4e4655e36fa4f3aef741fe08972b992735a9097581ccfe1941"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001_supervision/supervisor/command.json",
+      "bytes": 1772,
+      "sha256": "a8e4fbde3339cd55d71d2f4e70d1f0e8fd45b926d0654d08ca7786c432200e13"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001_supervision/supervisor/console.txt",
+      "bytes": 6520,
+      "sha256": "f56e0320c3454c610d19be782033361a9ff5dc35675f6113e1c49f85fbb0fa23"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001_supervision/supervisor/events.jsonl",
+      "bytes": 856,
+      "sha256": "eaeff3b178995991e295df912258e483fdcd9d3f6d2ac39755f1a32767c65879"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001_supervision/supervisor/exec_release.json",
+      "bytes": 340,
+      "sha256": "583a0aae4d37198d8bb8f3f5091ea95b71c3bcd4e3bc8dde950983d7026bcdb6"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001_supervision/supervisor/heartbeat.json",
+      "bytes": 532,
+      "sha256": "4aa4d498a0f01fd4dddcf16afecd69573000b3aa1c7bbea9df5567dad8f3826c"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001_supervision/supervisor/identity.json",
+      "bytes": 341,
+      "sha256": "87fca251351bc886599381369dc87954879e72f00e7b28a81b38be486dc6855c"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001_supervision/supervisor/status.json",
+      "bytes": 1982,
+      "sha256": "2d56ea0cb911785cef59d08dc0737eea44f62a59f58eb4cd284a9e62b789561a"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1001_supervision/supervisor_submission.json",
+      "bytes": 260,
+      "sha256": "f576287639408553d43789db35b0215b0db416f51dac672c2bbcaf9b21a6cf23"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002/edge_fixtures.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002/env.yaml",
+      "bytes": 12081,
+      "sha256": "e8769914c2297138c5cf6381b0f14160a734bfe97d9e55f980d42594c05e85bd"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002/episodes.csv",
+      "bytes": 2448419,
+      "sha256": "07997260a567bcb9844afcb92882953798d6f8953f1fa45c1297826b9c4dd559"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002/episodes.json",
+      "bytes": 13157113,
+      "sha256": "91232a7bbdb1f259d53e73837c46230e77c81ea82a21a9d3c6820ac26d0a7f25"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002/failures.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002/i2_trace.jsonl",
+      "bytes": 128549267,
+      "sha256": "ebece4041bf5fc6e2469bcf7a8b27e48628a74581041e402f2a0fd81c611caae"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002/initial_rng.pt",
+      "bytes": 6917,
+      "sha256": "6701f2bcd83424d59a576c77c1529bb1bb9ff91064d1e2e78e00ee56ec959171"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002/invocation.json",
+      "bytes": 838,
+      "sha256": "1017b28e488bab42ab6be5015e26458bd078152be48b45e79c90088346a17d52"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002/paired_trace.npz",
+      "bytes": 22,
+      "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002/process_outcome.json",
+      "bytes": 97,
+      "sha256": "52d1cfd390ef80d5c36c1a76be55aa73076b89749d62e39947585b442654324b"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002/result.json",
+      "bytes": 23565,
+      "sha256": "686410d4c19360b98d513ff89b8ab62b97afa014eb850dcdecdaeffd176f65cd"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002/summary.json",
+      "bytes": 16810715,
+      "sha256": "8c555d2bde598ce464695e73c25d1b07f4122dc595fb8f59509c7792706b3249"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002/trace.jsonl",
+      "bytes": 706943,
+      "sha256": "e0970b98f5beb5f90a073ae8b0c8913318e5037e124fec16fe92a018039cb8fb"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002_command.json",
+      "bytes": 1662,
+      "sha256": "de6b372258af5e9ae34846c9e35d690ad61049daca0f766c4c2f48e7edc29c47"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002_execution.json",
+      "bytes": 4280,
+      "sha256": "9a4984acc29121fce282272139aaf8d74c6300ad37a67f9e4e85ea8f58e47747"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002_launcher_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002_launcher_stdout.txt",
+      "bytes": 41,
+      "sha256": "80b3a8d39f1fd3b73b0d97af283645d8800f5774f9df30dea1e8083fa5ef323e"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002_resource_preflight.json",
+      "bytes": 1274,
+      "sha256": "af52ae3b0ddc1bc8b9626be82eafe041b6d32ff33973f987e9cb081342aab786"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002_supervision/guard/attached_identity.json",
+      "bytes": 468,
+      "sha256": "b9c45cac255012fd9c926ac13b35474c801910e740a38f3d7354da9b203ce32f"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002_supervision/guard/heartbeat.json",
+      "bytes": 776,
+      "sha256": "83d2ce3f1ed2d9d04bf3f41e1afc30f57faafae661ea186ee94886d05c2e2e91"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002_supervision/guard/metadata.json",
+      "bytes": 647,
+      "sha256": "14ee0b14cf6710110179801fc07719a9de62b82f957e79e763f9f558c5e1c964"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002_supervision/guard/samples.csv",
+      "bytes": 196552,
+      "sha256": "d25c2c255281857aa11679883105e7dcbf613fa427289ea926c39a2be636855b"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002_supervision/guard/status.json",
+      "bytes": 1686,
+      "sha256": "06d5a7e9bafec7d459f590bff5ef26eedbe8d0c674bd06a53b6aff82efc914e4"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002_supervision/guard_submission.json",
+      "bytes": 249,
+      "sha256": "68849c2f3637a146800521209d566739bf96ddd05f5627cd8f16dbea99789d87"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002_supervision/launch.json",
+      "bytes": 5173,
+      "sha256": "5238d46d92c0c79a44e43aa9e7b0d0f9f02437da19270c9456a996442c20d2df"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002_supervision/supervisor/child_exit.json",
+      "bytes": 369,
+      "sha256": "7feb51f943281733d478f1291b1959ca173e9912231c5f1fdc5fa5b45df93719"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002_supervision/supervisor/child_identity.json",
+      "bytes": 341,
+      "sha256": "46a0f7450915893c5e3f0714d7ab0b805f5511c6d5b356295ded6708627d1968"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002_supervision/supervisor/command.json",
+      "bytes": 1772,
+      "sha256": "13a1c27988f2493e4a2504eac44b96344df8c1cae2d90d67dd3ece17ddd60e26"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002_supervision/supervisor/console.txt",
+      "bytes": 6520,
+      "sha256": "ef549ffaef336459954eea56e510d52ef139097cfd0d9d961ac410adcb94a46f"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002_supervision/supervisor/events.jsonl",
+      "bytes": 855,
+      "sha256": "8f73bd23fc352c4fdd9a623d4641fb9cf5bf45bf42e699d5bf5ddf4c644d6bd4"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002_supervision/supervisor/exec_release.json",
+      "bytes": 341,
+      "sha256": "658fcd27feb51d2ba3f20ff82bb5bf1c985093826efe1accf61fd81a4db54036"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002_supervision/supervisor/heartbeat.json",
+      "bytes": 532,
+      "sha256": "10d7bff8abf36651bbfc1ecb01a3060e98d1e2881c785e6bfaa5b6bd8ab8248c"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002_supervision/supervisor/identity.json",
+      "bytes": 341,
+      "sha256": "1040392785c178b5c77e45ad1094b2fe5c58a6572902205cce47ec3792b58907"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002_supervision/supervisor/status.json",
+      "bytes": 1984,
+      "sha256": "b7235049f6fa0b8d220e1bf12636ee5d8a06eca1856fd8d5c7f218783af5a05e"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1002_supervision/supervisor_submission.json",
+      "bytes": 260,
+      "sha256": "a4945ca43cab88c554769c02a4ad13c4332c655b13b4b4f20addb5bf1388ddd4"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003/edge_fixtures.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003/env.yaml",
+      "bytes": 12081,
+      "sha256": "477b5e115cc8d32b0b0816d9f8666f4da31db44271e309488c7f40df154147fa"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003/episodes.csv",
+      "bytes": 2448245,
+      "sha256": "76f4d38d7574616f659b28016fb100f3553c333bec7a042a13c9744bfd74a644"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003/episodes.json",
+      "bytes": 13157237,
+      "sha256": "3a00da2c3cb8232b7d74403103ee4f3494e349ee4badf832a7f12940c7deae11"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003/failures.json",
+      "bytes": 959362,
+      "sha256": "f0d27be7222e7f4f91cd964366a8ae558df9be3c107d912779d8684b51976e77"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003/i2_trace.jsonl",
+      "bytes": 128482573,
+      "sha256": "5bf7be65ed44f503f8b47ee2d59a78d167cd83f1b4782d1fe6d6ff6a66313c2b"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003/initial_rng.pt",
+      "bytes": 6917,
+      "sha256": "4e054c905deb36ddc5e089dc1f28642a9fffb0319a85233a4546282bf481e36f"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003/invocation.json",
+      "bytes": 838,
+      "sha256": "91aca6d72be317cda2f6d0e623126a16521bd01115e4551e6d9628153d2b08a4"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003/paired_trace.npz",
+      "bytes": 22,
+      "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003/process_outcome.json",
+      "bytes": 97,
+      "sha256": "52d1cfd390ef80d5c36c1a76be55aa73076b89749d62e39947585b442654324b"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003/result.json",
+      "bytes": 23475,
+      "sha256": "456ceff44fc3c7a1f0d73415d5dec9eb29fb6d81d6e4101b6c0168265325eceb"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003/summary.json",
+      "bytes": 16810687,
+      "sha256": "615217628d20477955c2dbfa92cdcfdbe24bd2c130e803042e50477fc8db2daa"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003/trace.jsonl",
+      "bytes": 707009,
+      "sha256": "87475d024b0a80373b5f8c2851afd9a11f1478e289fcf5f8b687968fa8f48f34"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003_command.json",
+      "bytes": 1662,
+      "sha256": "69f56704dd1f8257c47c07b41e9f5d92148c0fee8c4ecd684584811be8afb0ec"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003_execution.json",
+      "bytes": 4280,
+      "sha256": "d68656a7628bfb2eae8d27612f1f7b9d380f78f4504fe58a75ecb2804d68d161"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003_launcher_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003_launcher_stdout.txt",
+      "bytes": 41,
+      "sha256": "86d04090239a34d69df150145bbc134158f5dc1a50a65b367c00de01deb6e370"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003_resource_preflight.json",
+      "bytes": 1274,
+      "sha256": "49affd62831869f06d3466ca055c4f4b080e2b27442cf14c28459fb465c1db55"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003_supervision/guard/attached_identity.json",
+      "bytes": 468,
+      "sha256": "854ebab35adf8b1c415f94be8afe09caf5b3830a476e4bddddf0c596304e27c0"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003_supervision/guard/heartbeat.json",
+      "bytes": 773,
+      "sha256": "e55885b352043ed933bc8243feaefa9d93286e8e2941410396f4829e551a7763"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003_supervision/guard/metadata.json",
+      "bytes": 647,
+      "sha256": "b0c77023151eec27a0f42ca84909d90d94477cdcfdf2fee94530ebd3678a47d7"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003_supervision/guard/samples.csv",
+      "bytes": 193365,
+      "sha256": "636ea31d810e4da5cb95818d3f9ca63d8792999b8f55f7fc4203ff5315374352"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003_supervision/guard/status.json",
+      "bytes": 1688,
+      "sha256": "ddade173fe336f48e27d50320242a22c8ff29d0117b052086b5e476fc85eb4ca"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003_supervision/guard_submission.json",
+      "bytes": 250,
+      "sha256": "ff93bda9973e28569af9ce6edaf4ca48d4c56a6370ae84204580e12d39d3340c"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003_supervision/launch.json",
+      "bytes": 5172,
+      "sha256": "bad9783beb2f091a48459a73464849603313269bb35493f43a89616502ba6afa"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003_supervision/supervisor/child_exit.json",
+      "bytes": 369,
+      "sha256": "3a78a16b392b7b113be4e26b17aa85fc4a9556b54a4949d4b861b56fdc142291"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003_supervision/supervisor/child_identity.json",
+      "bytes": 340,
+      "sha256": "825d965743d0b48b4b7bc186b3a3d30fdbdf96026157a82d452bdfc5fd7e891e"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003_supervision/supervisor/command.json",
+      "bytes": 1772,
+      "sha256": "08afd949c96bc672d7e73d90a939b5a063a0636b8edcf95068ffe8d561d0d577"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003_supervision/supervisor/console.txt",
+      "bytes": 6520,
+      "sha256": "7c57a70530cd53066dca3b32faec678d280244272639c70c50378399888e6469"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003_supervision/supervisor/events.jsonl",
+      "bytes": 854,
+      "sha256": "9942665d1045de5f6991e48f749dcf1cf78bd7dc1b7dd2671f2249202703cf03"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003_supervision/supervisor/exec_release.json",
+      "bytes": 341,
+      "sha256": "fd650cd1a2426d3a2e188e2e0d25f920b4f9505b7b5e580ef63014a5c4b35979"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003_supervision/supervisor/heartbeat.json",
+      "bytes": 532,
+      "sha256": "8875e75d60cda3cddd238ec57b94dec050bd84f35b84a52510b75008a7ecfc8c"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003_supervision/supervisor/identity.json",
+      "bytes": 341,
+      "sha256": "1a2ae0ff4467ed83f79cae015d433bfed8ea874240cab1ca5ce43b73ea4d78a2"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003_supervision/supervisor/status.json",
+      "bytes": 1982,
+      "sha256": "029c73be2aa543b9997acd9821ba022b3c206e5b8818c19611c3a2d99718dbf8"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/b_1003_supervision/supervisor_submission.json",
+      "bytes": 260,
+      "sha256": "9edfa21316d3056bb4af4504de8e4bb1738f8f15c782de0f41c23ad28b33f4b8"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/episode_statistics/episodes_with_statistics.csv",
+      "bytes": 14246238,
+      "sha256": "ad805a8c1f04071076385cb3786233617159f414cd901492e23885c26f4b923b"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/episode_statistics/episodes_with_statistics.json",
+      "bytes": 55462452,
+      "sha256": "1f0a33a6ddd5ca51f8514ab53b3b45ad5aa4ffe6d20283dd212d6c51a2c2343c"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/episode_statistics/seed_00/coverage.json",
+      "bytes": 53809,
+      "sha256": "eb0aa62528ded9cfbf20af03e53221075189a11b7ed8bdb88ecd832ad6f0981f"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/episode_statistics/seed_00/episodes_with_statistics.csv",
+      "bytes": 4749076,
+      "sha256": "05f0650f7c7e7776fe5e772aa6e666831ceef808dc26e82c94228ed873ce37dd"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/episode_statistics/seed_00/episodes_with_statistics.json",
+      "bytes": 18487573,
+      "sha256": "967717c6dcd5f9b6185c1efdecabd3ae24b2a84e53ab36e4660a6803d93a2cc0"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/episode_statistics/seed_01/coverage.json",
+      "bytes": 53809,
+      "sha256": "eb0aa62528ded9cfbf20af03e53221075189a11b7ed8bdb88ecd832ad6f0981f"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/episode_statistics/seed_01/episodes_with_statistics.csv",
+      "bytes": 4750195,
+      "sha256": "80a2bd1246f8274dbcddaef253ef81b7aa6fdb06e82ea5c2e98475f11d0f0a8e"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/episode_statistics/seed_01/episodes_with_statistics.json",
+      "bytes": 18488568,
+      "sha256": "c539aed0a11d969b44d038c3a0491dbad9e53148e474221c8279d3eba865b8a9"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/episode_statistics/seed_02/coverage.json",
+      "bytes": 53809,
+      "sha256": "eb0aa62528ded9cfbf20af03e53221075189a11b7ed8bdb88ecd832ad6f0981f"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/episode_statistics/seed_02/episodes_with_statistics.csv",
+      "bytes": 4747589,
+      "sha256": "65c032d702da4a6742c4885cf56a587d8c6f9a53bbe4d586f903cc817989e1c8"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/episode_statistics/seed_02/episodes_with_statistics.json",
+      "bytes": 18486260,
+      "sha256": "29d28153406589192bb49210733b2816c67caa30306fedd2e5524eb01aa6f6b1"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/i2_a_acceptance.json",
+      "bytes": 14471,
+      "sha256": "f680726f3ab701daf38c391bc3dfa0fc6f29137510315023b6f61a48546ffee7"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/i2_a_events_acceptance.json",
+      "bytes": 14471,
+      "sha256": "f680726f3ab701daf38c391bc3dfa0fc6f29137510315023b6f61a48546ffee7"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot/scripts/g4i1_acceptance.py",
+      "bytes": 6006,
+      "sha256": "356d3f0766f2386941622486c8b82d17a37cf5aa230bedad3363232064cd05d8"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot/scripts/g4i1_cpu_check.py",
+      "bytes": 4496,
+      "sha256": "d797479851e0458a56f449f8df2fa55321bce5894f67ee68e3a3d5c99feb36ae"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot/scripts/g4i1_edge_cpu.py",
+      "bytes": 6114,
+      "sha256": "84e909c3cf500fac6f13a3b6678b1013692ea70ec5cb459e0ecbba311b5b5bb7"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot/scripts/g4i1_parity.py",
+      "bytes": 10789,
+      "sha256": "e13bd11ef4f3204caec683bb992a490d2a05cb4c076004e6cc17c12422f27230"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot/scripts/g4i1_policy.py",
+      "bytes": 13920,
+      "sha256": "6f22926b1a5acff28a2a0cf774b74cbc3e97d4221b36ee639d744dbe249489e2"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot/scripts/g4i1_runtime.py",
+      "bytes": 27287,
+      "sha256": "8828e98799a4da8155dfa9ff018ef80a2e5122142d7c9e0f871e0b3e1548d4fe"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot/scripts/g4i2_analysis.py",
+      "bytes": 22460,
+      "sha256": "5abacd37033528edb14cc6b866cf54e9bf328de8a06f61db7fef72357c518ffd"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot/scripts/g4i2_controller_probe.py",
+      "bytes": 6397,
+      "sha256": "61b361b61c9226eb4b401bb368d57fd974e5a64301dea790a952ce3e05926f62"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot/scripts/g4i2_episode_statistics.py",
+      "bytes": 20129,
+      "sha256": "74f0fcf3ec97117c09ac6b512e401f4d0b3532da7eafb2678b42a2a31847b77d"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot/scripts/g4i2_performance.py",
+      "bytes": 14612,
+      "sha256": "2ca14dd53ec767e7d05b44e9c29b38f083efe74f40640c49f56b74f4128fd971"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot/scripts/g4i2_run_registered.py",
+      "bytes": 4906,
+      "sha256": "0599f9b5b63f49c92609019a4914a2765247426e4d87415b12ee02f6b2e9fb34"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/source_snapshot/scripts/g4i2_runtime.py",
+      "bytes": 13800,
+      "sha256": "70dc7e2bda5159e63da22877a7f860b4cd48d2be6fd68362fd8b88ef56935a1e"
+    }
+  ],
+  "bytes": 647242228,
+  "policy": "external raw artifacts including preserved failures; no simulator execution during inventory"
+}

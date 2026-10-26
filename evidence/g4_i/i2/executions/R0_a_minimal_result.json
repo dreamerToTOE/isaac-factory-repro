@@ -1,0 +1,80 @@
+{
+  "mode": "episode",
+  "checkpoint_identity": {
+    "role": "g2_epoch200_primary",
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+    "sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+    "epoch": 200,
+    "frame": 1638400,
+    "strict_state_dict": true,
+    "frozen_rms_exact": true,
+    "fp32": true,
+    "optimizer_restored": false,
+    "rng_policy": "discard the same Normal.sample as official deterministic Player"
+  },
+  "seed": 1001,
+  "torch_seed": 1001,
+  "num_envs": 1,
+  "fp32": true,
+  "deterministic": true,
+  "training_runner_instantiated": false,
+  "optimizer_restored": false,
+  "policy_steps": 149,
+  "physics_substeps": 1192,
+  "physics_dt": 0.008333333333333333,
+  "step_dt": 0.06666666666666667,
+  "episode_loop_wall_s": 35.41024961400035,
+  "torch_peak_allocated_bytes": 112514560,
+  "torch_peak_reserved_bytes": 161480704,
+  "training_runner_module_loaded": false,
+  "episodes": [
+    {
+      "env_id": 0,
+      "episode_id": 0,
+      "steps": 149,
+      "first_success_step": 37,
+      "ever_success": true,
+      "terminal_success": true,
+      "terminal_kind": "timeout"
+    }
+  ],
+  "denominator": 1,
+  "ever_success": 1,
+  "terminal_success": 1,
+  "first_success_seconds": [
+    2.466666666666667
+  ],
+  "initial_timestamp": {
+    "robot_scene_timestamp_s": 0.5666666666666671,
+    "simulation_context_time_s": 0.5750000299885869,
+    "policy_physics_step_counter": 0,
+    "wall_monotonic_s": 32538.119523721
+  },
+  "final_timestamp": {
+    "robot_scene_timestamp_s": 11.058333333333346,
+    "simulation_context_time_s": 11.06666724383831,
+    "policy_physics_step_counter": 1192,
+    "wall_monotonic_s": 32573.541880457
+  },
+  "auxiliary_physics_s_during_loop": 0.558333333333346,
+  "auxiliary_controller_calls": 31,
+  "reset_count": 1,
+  "post_reset_first_action_recorded": false,
+  "rng_policy": "replicate discarded Normal sample; oracle isolated via fork_rng",
+  "rng_comparisons": 0,
+  "rng_all_equal": true,
+  "rms_unchanged": true,
+  "parity": null,
+  "edge_cases": [],
+  "status": "COMPLETED",
+  "scope": "G4-I2 inference profiling and fixed evaluation; no Sim2Sim or training",
+  "i2": {
+    "profiling": "off",
+    "warmup": 20,
+    "episodes": 1,
+    "failures": 0,
+    "scope": "all diagnostics measured; events-off still has trace overhead",
+    "timing_finite": true,
+    "summary_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_minimal/summary.json"
+  }
+}

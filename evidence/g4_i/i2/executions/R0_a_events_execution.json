@@ -1,0 +1,146 @@
+{
+  "phase": "a_events",
+  "launcher_returncode": 0,
+  "wall_s": 55.932504344000336,
+  "supervisor": {
+    "child_exit_code": 0,
+    "child_identity": {
+      "birth_ticks": "3242546",
+      "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+      "pgid": 156352,
+      "pid": 156352,
+      "state": "R"
+    },
+    "child_signal": null,
+    "command": [
+      "bash",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/run_sim.sh",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4i1_runtime.py",
+      "--headless",
+      "--device",
+      "cuda:0",
+      "--i2",
+      "--output",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events",
+      "--seed",
+      "1001",
+      "--num-envs",
+      "1",
+      "--episodes-per-env",
+      "1",
+      "--max-steps",
+      "150",
+      "--warmup",
+      "20",
+      "--profiling",
+      "events",
+      "--diagnostics",
+      "full",
+      "--validate"
+    ],
+    "ended": {
+      "monotonic_seconds": 32481.194962518,
+      "unix_seconds": 1793007851.7336018,
+      "utc": "2026-10-26T09:44:11.733596+00:00"
+    },
+    "error": null,
+    "exec_released": {
+      "monotonic_seconds": 32425.549889884,
+      "unix_seconds": 1793007796.088529,
+      "utc": "2026-10-26T09:43:16.088524+00:00"
+    },
+    "finalized": true,
+    "guard_identity": {
+      "birth_ticks": "3242539",
+      "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+      "pgid": 156345,
+      "pid": 156345,
+      "state": "R"
+    },
+    "guard_required": true,
+    "identity": {
+      "birth_ticks": "3242540",
+      "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+      "pgid": 156347,
+      "pid": 156347,
+      "state": "R"
+    },
+    "raw_wait_returncode": 0,
+    "received_supervisor_signals": [],
+    "schema_version": 2,
+    "started": {
+      "monotonic_seconds": 32425.43607383,
+      "unix_seconds": 1793007795.9747102,
+      "utc": "2026-10-26T09:43:15.974696+00:00"
+    },
+    "stop_signals": [],
+    "termination_reason": "child_exit",
+    "wall_seconds": 55.75888933600072
+  },
+  "guard": {
+    "continuous_monitoring": true,
+    "coverage_note": "Sampled coverage: regular intervals are not continuous measurement.",
+    "ended": {
+      "monotonic_seconds": 32481.245846334,
+      "unix_seconds": 1793007851.784485,
+      "utc": "2026-10-26T09:44:11.784477+00:00"
+    },
+    "error": null,
+    "finalized": true,
+    "first_sample": {
+      "monotonic_seconds": 32425.443730917,
+      "unix_seconds": 1793007795.9823701,
+      "utc": "2026-10-26T09:43:15.982360+00:00"
+    },
+    "identity": {
+      "birth_ticks": "3242539",
+      "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+      "pgid": 156345,
+      "pid": 156345,
+      "state": "R"
+    },
+    "last_sample": {
+      "monotonic_seconds": 32481.243885611,
+      "unix_seconds": 1793007851.7825243,
+      "utc": "2026-10-26T09:44:11.782511+00:00"
+    },
+    "low_memory_stop_condition_observed": false,
+    "max_low_consecutive": 0,
+    "min_free_MiB": 2438.1875,
+    "monitoring_gaps": [],
+    "peak_used_MiB": 5379.4375,
+    "policy": {
+      "consecutive_samples": 3,
+      "floor_MiB": 1024,
+      "gap_limit_seconds": 0.5,
+      "interval_seconds": 0.1,
+      "stale_seconds": 2
+    },
+    "sample_count": 559,
+    "schema_version": 2,
+    "started": {
+      "monotonic_seconds": 32425.431132704,
+      "unix_seconds": 1793007795.9697716,
+      "utc": "2026-10-26T09:43:15.969760+00:00"
+    },
+    "stop_reason": "child_wait_observed",
+    "stop_signals": [],
+    "supervisor_identity": {
+      "birth_ticks": "3242540",
+      "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+      "pgid": 156347,
+      "pid": 156347,
+      "state": "R"
+    },
+    "target_identity": {
+      "birth_ticks": "3242546",
+      "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+      "pgid": 156352,
+      "pid": 156352,
+      "state": "R"
+    }
+  },
+  "durable_supervision": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z/a_events_supervision",
+  "runtime_error_exists": false,
+  "result_exists": true
+}
