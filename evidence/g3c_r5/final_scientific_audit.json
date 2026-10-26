@@ -1,0 +1,1547 @@
+{
+  "schema_version": "g3cr5_independent_final_scientific_audit_v1",
+  "created_utc": "2026-10-26T06:45:07.548028+00:00",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "All frozen scientific and supervision source hashes unchanged",
+      "pass_": true,
+      "detail": {
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/complete_g3cr4.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/complete_g3cr5.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/durable_supervisor.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/evaluate_checkpoint.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/evaluation_reporting.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g2_training_observer.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g3a_launch_smoke.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g3cr4_launch.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g3cr5_launch.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/gpu_guard.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/python_entry.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/success_metrics.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/supervised_exec.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/supervision_common.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/tensorboard_finalizer.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/tensorboard_tail.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/a2c_continuous.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/central_value.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/models.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/players.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/running_mean_std.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/a2c_common.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/envs/direct_rl_env.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/agents/rl_games_ppo_cfg.yaml": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_control.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env_cfg.py": true,
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_tasks_cfg.py": true
+      }
+    },
+    {
+      "name": "R4 analysis original SHA retained",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "Manifest scientific seed change only",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "Training specification is fresh 32-env seed1 400-epoch horizon128",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "Training exact normal exit",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "Training uses approved no-guard supervision",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "Training contains no checkpoint restore event or checkpoint CLI argument",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "400 contiguous completed epochs and exact transitions",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "All observed epoch loss arrays finite; no observer errors",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "AMP and optimizer counters internally consistent",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "Runtime actor/horizon/minibatch/observations/actions agree with baseline",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "Actual actor and central-value network structures equal R4",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "Initial failed evaluation has no complete samples and is excluded",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "Manual recovery evaluation only, same completed training",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1001 complete denominator",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1001 official pre-reset capture",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1001 exact normal exit",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1001 approved no guard",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1001 unique full environment episodes",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1001 row success consistency",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1001 time-step conversion",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1001 raw counts equal stored aggregate",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1001 all evaluation scientific fields identical to R4",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1001 exact registered checkpoint identity",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1002 complete denominator",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1002 official pre-reset capture",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1002 exact normal exit",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1002 approved no guard",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1002 unique full environment episodes",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1002 row success consistency",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1002 time-step conversion",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1002 raw counts equal stored aggregate",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1002 all evaluation scientific fields identical to R4",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1002 exact registered checkpoint identity",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1003 complete denominator",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1003 official pre-reset capture",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1003 exact normal exit",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1003 approved no guard",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1003 unique full environment episodes",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1003 row success consistency",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1003 time-step conversion",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1003 raw counts equal stored aggregate",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1003 all evaluation scientific fields identical to R4",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100/s1003 exact registered checkpoint identity",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e100 CPU-inspected checkpoint retained byte-identical",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1001 complete denominator",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1001 official pre-reset capture",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1001 exact normal exit",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1001 approved no guard",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1001 unique full environment episodes",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1001 row success consistency",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1001 time-step conversion",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1001 raw counts equal stored aggregate",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1001 all evaluation scientific fields identical to R4",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1001 exact registered checkpoint identity",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1002 complete denominator",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1002 official pre-reset capture",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1002 exact normal exit",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1002 approved no guard",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1002 unique full environment episodes",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1002 row success consistency",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1002 time-step conversion",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1002 raw counts equal stored aggregate",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1002 all evaluation scientific fields identical to R4",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1002 exact registered checkpoint identity",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1003 complete denominator",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1003 official pre-reset capture",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1003 exact normal exit",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1003 approved no guard",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1003 unique full environment episodes",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1003 row success consistency",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1003 time-step conversion",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1003 raw counts equal stored aggregate",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1003 all evaluation scientific fields identical to R4",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200/s1003 exact registered checkpoint identity",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e200 CPU-inspected checkpoint retained byte-identical",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1001 complete denominator",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1001 official pre-reset capture",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1001 exact normal exit",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1001 approved no guard",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1001 unique full environment episodes",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1001 row success consistency",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1001 time-step conversion",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1001 raw counts equal stored aggregate",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1001 all evaluation scientific fields identical to R4",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1001 exact registered checkpoint identity",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1002 complete denominator",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1002 official pre-reset capture",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1002 exact normal exit",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1002 approved no guard",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1002 unique full environment episodes",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1002 row success consistency",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1002 time-step conversion",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1002 raw counts equal stored aggregate",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1002 all evaluation scientific fields identical to R4",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1002 exact registered checkpoint identity",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1003 complete denominator",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1003 official pre-reset capture",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1003 exact normal exit",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1003 approved no guard",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1003 unique full environment episodes",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1003 row success consistency",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1003 time-step conversion",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1003 raw counts equal stored aggregate",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1003 all evaluation scientific fields identical to R4",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300/s1003 exact registered checkpoint identity",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e300 CPU-inspected checkpoint retained byte-identical",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1001 complete denominator",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1001 official pre-reset capture",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1001 exact normal exit",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1001 approved no guard",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1001 unique full environment episodes",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1001 row success consistency",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1001 time-step conversion",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1001 raw counts equal stored aggregate",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1001 all evaluation scientific fields identical to R4",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1001 exact registered checkpoint identity",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1002 complete denominator",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1002 official pre-reset capture",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1002 exact normal exit",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1002 approved no guard",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1002 unique full environment episodes",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1002 row success consistency",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1002 time-step conversion",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1002 raw counts equal stored aggregate",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1002 all evaluation scientific fields identical to R4",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1002 exact registered checkpoint identity",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1003 complete denominator",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1003 official pre-reset capture",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1003 exact normal exit",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1003 approved no guard",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1003 unique full environment episodes",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1003 row success consistency",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1003 time-step conversion",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1003 raw counts equal stored aggregate",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1003 all evaluation scientific fields identical to R4",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400/s1003 exact registered checkpoint identity",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "e400 CPU-inspected checkpoint retained byte-identical",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "Recovery completion controller finalized complete",
+      "pass_": true,
+      "detail": {
+        "controller_exit_code": 0,
+        "ended": {
+          "monotonic_seconds": 21718.47294015,
+          "unix_seconds": 1792997089.0115788,
+          "utc": "2026-10-26T06:44:49.011567+00:00"
+        },
+        "evaluations": [
+          {
+            "aggregate": {
+              "episodes_completed": 32,
+              "episodes_requested": 32,
+              "ever_success_count": 24,
+              "ever_success_rate": 0.75,
+              "ever_success_wilson95": [
+                0.5789344100575552,
+                0.8674759908149096
+              ],
+              "first_success_count": 24,
+              "first_success_rate": 0.75,
+              "mean_first_success_step": 42.5,
+              "terminal_success_count": 24,
+              "terminal_success_rate": 0.75,
+              "terminal_success_wilson95": [
+                0.5789344100575552,
+                0.8674759908149096
+              ],
+              "transient_only_count": 0
+            },
+            "checkpoint_sha256": "d152a4fadf28b06807d9396d8979602984f4c736670122453fe2d801224a2fb6",
+            "episodes_completed": 32,
+            "epoch": 100,
+            "metrics": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch100/seed1001/metrics.json",
+            "seed": 1001
+          },
+          {
+            "aggregate": {
+              "episodes_completed": 32,
+              "episodes_requested": 32,
+              "ever_success_count": 30,
+              "ever_success_rate": 0.9375,
+              "ever_success_wilson95": [
+                0.7985287685584542,
+                0.982689432968359
+              ],
+              "first_success_count": 30,
+              "first_success_rate": 0.9375,
+              "mean_first_success_step": 36.8,
+              "terminal_success_count": 30,
+              "terminal_success_rate": 0.9375,
+              "terminal_success_wilson95": [
+                0.7985287685584542,
+                0.982689432968359
+              ],
+              "transient_only_count": 0
+            },
+            "checkpoint_sha256": "d152a4fadf28b06807d9396d8979602984f4c736670122453fe2d801224a2fb6",
+            "episodes_completed": 32,
+            "epoch": 100,
+            "metrics": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch100/seed1002/metrics.json",
+            "seed": 1002
+          },
+          {
+            "aggregate": {
+              "episodes_completed": 32,
+              "episodes_requested": 32,
+              "ever_success_count": 25,
+              "ever_success_rate": 0.78125,
+              "ever_success_wilson95": [
+                0.6124500635075647,
+                0.8897616374739581
+              ],
+              "first_success_count": 25,
+              "first_success_rate": 0.78125,
+              "mean_first_success_step": 41.4,
+              "terminal_success_count": 25,
+              "terminal_success_rate": 0.78125,
+              "terminal_success_wilson95": [
+                0.6124500635075647,
+                0.8897616374739581
+              ],
+              "transient_only_count": 0
+            },
+            "checkpoint_sha256": "d152a4fadf28b06807d9396d8979602984f4c736670122453fe2d801224a2fb6",
+            "episodes_completed": 32,
+            "epoch": 100,
+            "metrics": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch100/seed1003/metrics.json",
+            "seed": 1003
+          },
+          {
+            "aggregate": {
+              "episodes_completed": 32,
+              "episodes_requested": 32,
+              "ever_success_count": 27,
+              "ever_success_rate": 0.84375,
+              "ever_success_wilson95": [
+                0.682458504024696,
+                0.9313557971749429
+              ],
+              "first_success_count": 27,
+              "first_success_rate": 0.84375,
+              "mean_first_success_step": 41.370370370370374,
+              "terminal_success_count": 27,
+              "terminal_success_rate": 0.84375,
+              "terminal_success_wilson95": [
+                0.682458504024696,
+                0.9313557971749429
+              ],
+              "transient_only_count": 0
+            },
+            "checkpoint_sha256": "b90b4667c3f205c67d79718a4f5556e7cc0a95ae0086246c7e9ece75e97fd1f3",
+            "episodes_completed": 32,
+            "epoch": 200,
+            "metrics": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch200/seed1001/metrics.json",
+            "seed": 1001
+          },
+          {
+            "aggregate": {
+              "episodes_completed": 32,
+              "episodes_requested": 32,
+              "ever_success_count": 30,
+              "ever_success_rate": 0.9375,
+              "ever_success_wilson95": [
+                0.7985287685584542,
+                0.982689432968359
+              ],
+              "first_success_count": 30,
+              "first_success_rate": 0.9375,
+              "mean_first_success_step": 34.5,
+              "terminal_success_count": 30,
+              "terminal_success_rate": 0.9375,
+              "terminal_success_wilson95": [
+                0.7985287685584542,
+                0.982689432968359
+              ],
+              "transient_only_count": 0
+            },
+            "checkpoint_sha256": "b90b4667c3f205c67d79718a4f5556e7cc0a95ae0086246c7e9ece75e97fd1f3",
+            "episodes_completed": 32,
+            "epoch": 200,
+            "metrics": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch200/seed1002/metrics.json",
+            "seed": 1002
+          },
+          {
+            "aggregate": {
+              "episodes_completed": 32,
+              "episodes_requested": 32,
+              "ever_success_count": 29,
+              "ever_success_rate": 0.90625,
+              "ever_success_wilson95": [
+                0.7578184527161212,
+                0.9675984487016337
+              ],
+              "first_success_count": 29,
+              "first_success_rate": 0.90625,
+              "mean_first_success_step": 41.6551724137931,
+              "terminal_success_count": 29,
+              "terminal_success_rate": 0.90625,
+              "terminal_success_wilson95": [
+                0.7578184527161212,
+                0.9675984487016337
+              ],
+              "transient_only_count": 0
+            },
+            "checkpoint_sha256": "b90b4667c3f205c67d79718a4f5556e7cc0a95ae0086246c7e9ece75e97fd1f3",
+            "episodes_completed": 32,
+            "epoch": 200,
+            "metrics": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch200/seed1003/metrics.json",
+            "seed": 1003
+          },
+          {
+            "aggregate": {
+              "episodes_completed": 32,
+              "episodes_requested": 32,
+              "ever_success_count": 31,
+              "ever_success_rate": 0.96875,
+              "ever_success_wilson95": [
+                0.8425573617998744,
+                0.9944621398359969
+              ],
+              "first_success_count": 31,
+              "first_success_rate": 0.96875,
+              "mean_first_success_step": 41.225806451612904,
+              "terminal_success_count": 31,
+              "terminal_success_rate": 0.96875,
+              "terminal_success_wilson95": [
+                0.8425573617998744,
+                0.9944621398359969
+              ],
+              "transient_only_count": 0
+            },
+            "checkpoint_sha256": "2292bbac234384ebd48246e85797b0a08a7887db93e25c3cbbffe6e3e036826d",
+            "episodes_completed": 32,
+            "epoch": 300,
+            "metrics": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch300/seed1001/metrics.json",
+            "seed": 1001
+          },
+          {
+            "aggregate": {
+              "episodes_completed": 32,
+              "episodes_requested": 32,
+              "ever_success_count": 31,
+              "ever_success_rate": 0.96875,
+              "ever_success_wilson95": [
+                0.8425573617998744,
+                0.9944621398359969
+              ],
+              "first_success_count": 31,
+              "first_success_rate": 0.96875,
+              "mean_first_success_step": 32.354838709677416,
+              "terminal_success_count": 31,
+              "terminal_success_rate": 0.96875,
+              "terminal_success_wilson95": [
+                0.8425573617998744,
+                0.9944621398359969
+              ],
+              "transient_only_count": 0
+            },
+            "checkpoint_sha256": "2292bbac234384ebd48246e85797b0a08a7887db93e25c3cbbffe6e3e036826d",
+            "episodes_completed": 32,
+            "epoch": 300,
+            "metrics": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch300/seed1002/metrics.json",
+            "seed": 1002
+          },
+          {
+            "aggregate": {
+              "episodes_completed": 32,
+              "episodes_requested": 32,
+              "ever_success_count": 29,
+              "ever_success_rate": 0.90625,
+              "ever_success_wilson95": [
+                0.7578184527161212,
+                0.9675984487016337
+              ],
+              "first_success_count": 29,
+              "first_success_rate": 0.90625,
+              "mean_first_success_step": 40.206896551724135,
+              "terminal_success_count": 29,
+              "terminal_success_rate": 0.90625,
+              "terminal_success_wilson95": [
+                0.7578184527161212,
+                0.9675984487016337
+              ],
+              "transient_only_count": 0
+            },
+            "checkpoint_sha256": "2292bbac234384ebd48246e85797b0a08a7887db93e25c3cbbffe6e3e036826d",
+            "episodes_completed": 32,
+            "epoch": 300,
+            "metrics": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch300/seed1003/metrics.json",
+            "seed": 1003
+          },
+          {
+            "aggregate": {
+              "episodes_completed": 96,
+              "episodes_requested": 96,
+              "ever_success_count": 93,
+              "ever_success_rate": 0.96875,
+              "ever_success_wilson95": [
+                0.9121132067546303,
+                0.989315929628799
+              ],
+              "first_success_count": 93,
+              "first_success_rate": 0.96875,
+              "mean_first_success_step": 34.72043010752688,
+              "terminal_success_count": 93,
+              "terminal_success_rate": 0.96875,
+              "terminal_success_wilson95": [
+                0.9121132067546303,
+                0.989315929628799
+              ],
+              "transient_only_count": 0
+            },
+            "checkpoint_sha256": "2b266c9b64574dc075634e10e3c6b9856899870cbabe54b157a70b7a8c9de54e",
+            "episodes_completed": 96,
+            "epoch": 400,
+            "metrics": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch400/seed1001/metrics.json",
+            "seed": 1001
+          },
+          {
+            "aggregate": {
+              "episodes_completed": 96,
+              "episodes_requested": 96,
+              "ever_success_count": 95,
+              "ever_success_rate": 0.9895833333333334,
+              "ever_success_wilson95": [
+                0.9433338237728424,
+                0.9981588297831838
+              ],
+              "first_success_count": 95,
+              "first_success_rate": 0.9895833333333334,
+              "mean_first_success_step": 34.526315789473685,
+              "terminal_success_count": 95,
+              "terminal_success_rate": 0.9895833333333334,
+              "terminal_success_wilson95": [
+                0.9433338237728424,
+                0.9981588297831838
+              ],
+              "transient_only_count": 0
+            },
+            "checkpoint_sha256": "2b266c9b64574dc075634e10e3c6b9856899870cbabe54b157a70b7a8c9de54e",
+            "episodes_completed": 96,
+            "epoch": 400,
+            "metrics": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch400/seed1002/metrics.json",
+            "seed": 1002
+          },
+          {
+            "aggregate": {
+              "episodes_completed": 96,
+              "episodes_requested": 96,
+              "ever_success_count": 90,
+              "ever_success_rate": 0.9375,
+              "ever_success_wilson95": [
+                0.8702905349355852,
+                0.9710433256889488
+              ],
+              "first_success_count": 90,
+              "first_success_rate": 0.9375,
+              "mean_first_success_step": 38.91111111111111,
+              "terminal_success_count": 90,
+              "terminal_success_rate": 0.9375,
+              "terminal_success_wilson95": [
+                0.8702905349355852,
+                0.9710433256889488
+              ],
+              "transient_only_count": 0
+            },
+            "checkpoint_sha256": "2b266c9b64574dc075634e10e3c6b9856899870cbabe54b157a70b7a8c9de54e",
+            "episodes_completed": 96,
+            "epoch": 400,
+            "metrics": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch400/seed1003/metrics.json",
+            "seed": 1003
+          }
+        ],
+        "phase": "training_and_evaluation_complete",
+        "schema_version": "g3cr5_completion_v1",
+        "selected_checkpoints": {
+          "100": {
+            "actor_model_present": true,
+            "all_tensors_and_numeric_arrays_finite": true,
+            "central_value_present": true,
+            "epoch": 100,
+            "frame": 409600,
+            "nonzero_adam_exp_avg_states": 22,
+            "optimizer_state_count": 22,
+            "optimizer_step_max": 3198,
+            "optimizer_step_min": 3198,
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_100_rew_313.37598.pth",
+            "selection": {
+              "all_candidates_preserved": true,
+              "all_milestone_candidate_paths": [
+                "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_100_rew_313.37598.pth"
+              ],
+              "basis": "last matching checkpoint save in chronological training audit",
+              "selected_save_event": {
+                "epoch": 100,
+                "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_100_rew_313.37598",
+                "frame": 409600,
+                "operation": "save"
+              }
+            },
+            "sha256": "d152a4fadf28b06807d9396d8979602984f4c736670122453fe2d801224a2fb6",
+            "size_bytes": 212889115
+          },
+          "200": {
+            "actor_model_present": true,
+            "all_tensors_and_numeric_arrays_finite": true,
+            "central_value_present": true,
+            "epoch": 200,
+            "frame": 819200,
+            "nonzero_adam_exp_avg_states": 22,
+            "optimizer_state_count": 22,
+            "optimizer_step_max": 6397,
+            "optimizer_step_min": 6397,
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_200_rew_335.51993.pth",
+            "selection": {
+              "all_candidates_preserved": true,
+              "all_milestone_candidate_paths": [
+                "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_200_rew_335.51993.pth"
+              ],
+              "basis": "last matching checkpoint save in chronological training audit",
+              "selected_save_event": {
+                "epoch": 200,
+                "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_200_rew_335.51993",
+                "frame": 819200,
+                "operation": "save"
+              }
+            },
+            "sha256": "b90b4667c3f205c67d79718a4f5556e7cc0a95ae0086246c7e9ece75e97fd1f3",
+            "size_bytes": 212889115
+          },
+          "300": {
+            "actor_model_present": true,
+            "all_tensors_and_numeric_arrays_finite": true,
+            "central_value_present": true,
+            "epoch": 300,
+            "frame": 1228800,
+            "nonzero_adam_exp_avg_states": 22,
+            "optimizer_state_count": 22,
+            "optimizer_step_max": 9593,
+            "optimizer_step_min": 9593,
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_300_rew_342.33563.pth",
+            "selection": {
+              "all_candidates_preserved": true,
+              "all_milestone_candidate_paths": [
+                "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_300_rew_342.33563.pth"
+              ],
+              "basis": "last matching checkpoint save in chronological training audit",
+              "selected_save_event": {
+                "epoch": 300,
+                "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_300_rew_342.33563",
+                "frame": 1228800,
+                "operation": "save"
+              }
+            },
+            "sha256": "2292bbac234384ebd48246e85797b0a08a7887db93e25c3cbbffe6e3e036826d",
+            "size_bytes": 212889115
+          },
+          "400": {
+            "actor_model_present": true,
+            "all_tensors_and_numeric_arrays_finite": true,
+            "central_value_present": true,
+            "epoch": 400,
+            "frame": 1638400,
+            "nonzero_adam_exp_avg_states": 22,
+            "optimizer_state_count": 22,
+            "optimizer_step_max": 12790,
+            "optimizer_step_min": 12790,
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_400_rew__346.54318_.pth",
+            "selection": {
+              "all_candidates_preserved": true,
+              "all_milestone_candidate_paths": [
+                "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_400_rew_346.54318.pth",
+                "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_400_rew__346.54318_.pth"
+              ],
+              "basis": "last matching checkpoint save in chronological training audit",
+              "selected_save_event": {
+                "epoch": 400,
+                "filename": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_400_rew__346.54318_",
+                "frame": 1638400,
+                "operation": "save"
+              }
+            },
+            "sha256": "2b266c9b64574dc075634e10e3c6b9856899870cbabe54b157a70b7a8c9de54e",
+            "size_bytes": 212889335
+          }
+        },
+        "started": {
+          "monotonic_seconds": 20751.609780983,
+          "unix_seconds": 1792996122.1484199,
+          "utc": "2026-10-26T06:28:42.148404+00:00"
+        },
+        "training": {
+          "automatic_resume": false,
+          "completed_epochs": 400,
+          "completed_transitions": 1638400,
+          "gradient_finiteness_measured": false,
+          "observed_epoch_loss_arrays_finite": true,
+          "tensorboard_tail_complete": true
+        }
+      }
+    }
+  ],
+  "training": {
+    "completed_epochs": 400,
+    "completed_transitions": 1638400,
+    "supervisor_wall_seconds": 14248.195641359,
+    "official_ppo_total_seconds": 14047.518640995026,
+    "ppo_transitions_per_second": 116.63269804950744,
+    "end_to_end_transitions_per_second": 114.98999882091236,
+    "amp_skips": 10,
+    "actor_attempts": 12800,
+    "actual_optimizer_steps": {
+      "actor": 12790,
+      "central_value": 12800
+    },
+    "applied_gradient_finiteness_measured": false
+  },
+  "checkpoints": [
+    {
+      "epoch": 100,
+      "matched_training_transitions": 409600,
+      "training_seed1": {
+        "episodes": 96,
+        "ever_count": 79,
+        "terminal_count": 79,
+        "ever_rate": 0.8229166666666666,
+        "terminal_rate": 0.8229166666666666,
+        "transient_only_count": 0,
+        "successful_first_time_n": 79,
+        "first_time_mean": 2.6658227848101266,
+        "first_time_median": 2.1333333333333333
+      },
+      "per_evaluation_seed": [
+        {
+          "evaluation_seed": 1001,
+          "episodes": 32,
+          "ever_count": 24,
+          "terminal_count": 24,
+          "ever_rate": 0.75,
+          "terminal_rate": 0.75,
+          "transient_only_count": 0,
+          "successful_first_time_n": 24,
+          "first_time_mean": 2.8333333333333335,
+          "first_time_median": 2.533333333333333,
+          "seed0_ever_count": 25,
+          "seed0_terminal_count": 25
+        },
+        {
+          "evaluation_seed": 1002,
+          "episodes": 32,
+          "ever_count": 30,
+          "terminal_count": 30,
+          "ever_rate": 0.9375,
+          "terminal_rate": 0.9375,
+          "transient_only_count": 0,
+          "successful_first_time_n": 30,
+          "first_time_mean": 2.453333333333333,
+          "first_time_median": 1.9333333333333333,
+          "seed0_ever_count": 29,
+          "seed0_terminal_count": 29
+        },
+        {
+          "evaluation_seed": 1003,
+          "episodes": 32,
+          "ever_count": 25,
+          "terminal_count": 25,
+          "ever_rate": 0.78125,
+          "terminal_rate": 0.78125,
+          "transient_only_count": 0,
+          "successful_first_time_n": 25,
+          "first_time_mean": 2.76,
+          "first_time_median": 1.9333333333333333,
+          "seed0_ever_count": 20,
+          "seed0_terminal_count": 20
+        }
+      ],
+      "training_seed0": {
+        "episodes": 96,
+        "ever_count": 74,
+        "terminal_count": 74,
+        "ever_rate": 0.7708333333333334,
+        "terminal_rate": 0.7708333333333334,
+        "first_time_mean": 2.651351351351351,
+        "first_time_median": 2.0666666666666664
+      },
+      "delta_ever_percentage_points": 5.208333333333326,
+      "delta_terminal_percentage_points": 5.208333333333326
+    },
+    {
+      "epoch": 200,
+      "matched_training_transitions": 819200,
+      "training_seed1": {
+        "episodes": 96,
+        "ever_count": 86,
+        "terminal_count": 86,
+        "ever_rate": 0.8958333333333334,
+        "terminal_rate": 0.8958333333333334,
+        "transient_only_count": 0,
+        "successful_first_time_n": 86,
+        "first_time_mean": 2.604651162790698,
+        "first_time_median": 2.0666666666666664
+      },
+      "per_evaluation_seed": [
+        {
+          "evaluation_seed": 1001,
+          "episodes": 32,
+          "ever_count": 27,
+          "terminal_count": 27,
+          "ever_rate": 0.84375,
+          "terminal_rate": 0.84375,
+          "transient_only_count": 0,
+          "successful_first_time_n": 27,
+          "first_time_mean": 2.758024691358025,
+          "first_time_median": 2.0666666666666664,
+          "seed0_ever_count": 28,
+          "seed0_terminal_count": 28
+        },
+        {
+          "evaluation_seed": 1002,
+          "episodes": 32,
+          "ever_count": 30,
+          "terminal_count": 30,
+          "ever_rate": 0.9375,
+          "terminal_rate": 0.9375,
+          "transient_only_count": 0,
+          "successful_first_time_n": 30,
+          "first_time_mean": 2.3,
+          "first_time_median": 2.0,
+          "seed0_ever_count": 31,
+          "seed0_terminal_count": 31
+        },
+        {
+          "evaluation_seed": 1003,
+          "episodes": 32,
+          "ever_count": 29,
+          "terminal_count": 29,
+          "ever_rate": 0.90625,
+          "terminal_rate": 0.90625,
+          "transient_only_count": 0,
+          "successful_first_time_n": 29,
+          "first_time_mean": 2.7770114942528736,
+          "first_time_median": 2.2666666666666666,
+          "seed0_ever_count": 24,
+          "seed0_terminal_count": 24
+        }
+      ],
+      "training_seed0": {
+        "episodes": 96,
+        "ever_count": 83,
+        "terminal_count": 83,
+        "ever_rate": 0.8645833333333334,
+        "terminal_rate": 0.8645833333333334,
+        "first_time_mean": 2.5453815261044177,
+        "first_time_median": 2.2
+      },
+      "delta_ever_percentage_points": 3.125,
+      "delta_terminal_percentage_points": 3.125
+    },
+    {
+      "epoch": 300,
+      "matched_training_transitions": 1228800,
+      "training_seed1": {
+        "episodes": 96,
+        "ever_count": 91,
+        "terminal_count": 91,
+        "ever_rate": 0.9479166666666666,
+        "terminal_rate": 0.9479166666666666,
+        "transient_only_count": 0,
+        "successful_first_time_n": 91,
+        "first_time_mean": 2.525274725274725,
+        "first_time_median": 2.1333333333333333
+      },
+      "per_evaluation_seed": [
+        {
+          "evaluation_seed": 1001,
+          "episodes": 32,
+          "ever_count": 31,
+          "terminal_count": 31,
+          "ever_rate": 0.96875,
+          "terminal_rate": 0.96875,
+          "transient_only_count": 0,
+          "successful_first_time_n": 31,
+          "first_time_mean": 2.7483870967741937,
+          "first_time_median": 2.2666666666666666,
+          "seed0_ever_count": 32,
+          "seed0_terminal_count": 32
+        },
+        {
+          "evaluation_seed": 1002,
+          "episodes": 32,
+          "ever_count": 31,
+          "terminal_count": 31,
+          "ever_rate": 0.96875,
+          "terminal_rate": 0.96875,
+          "transient_only_count": 0,
+          "successful_first_time_n": 31,
+          "first_time_mean": 2.156989247311828,
+          "first_time_median": 2.0666666666666664,
+          "seed0_ever_count": 32,
+          "seed0_terminal_count": 32
+        },
+        {
+          "evaluation_seed": 1003,
+          "episodes": 32,
+          "ever_count": 29,
+          "terminal_count": 29,
+          "ever_rate": 0.90625,
+          "terminal_rate": 0.90625,
+          "transient_only_count": 0,
+          "successful_first_time_n": 29,
+          "first_time_mean": 2.6804597701149424,
+          "first_time_median": 2.1333333333333333,
+          "seed0_ever_count": 28,
+          "seed0_terminal_count": 28
+        }
+      ],
+      "training_seed0": {
+        "episodes": 96,
+        "ever_count": 92,
+        "terminal_count": 92,
+        "ever_rate": 0.9583333333333334,
+        "terminal_rate": 0.9583333333333334,
+        "first_time_mean": 2.5847826086956522,
+        "first_time_median": 2.0666666666666664
+      },
+      "delta_ever_percentage_points": -1.041666666666674,
+      "delta_terminal_percentage_points": -1.041666666666674
+    },
+    {
+      "epoch": 400,
+      "matched_training_transitions": 1638400,
+      "training_seed1": {
+        "episodes": 288,
+        "ever_count": 278,
+        "terminal_count": 278,
+        "ever_rate": 0.9652777777777778,
+        "terminal_rate": 0.9652777777777778,
+        "transient_only_count": 0,
+        "successful_first_time_n": 278,
+        "first_time_mean": 2.4007194244604317,
+        "first_time_median": 2.0666666666666664
+      },
+      "per_evaluation_seed": [
+        {
+          "evaluation_seed": 1001,
+          "episodes": 96,
+          "ever_count": 93,
+          "terminal_count": 93,
+          "ever_rate": 0.96875,
+          "terminal_rate": 0.96875,
+          "transient_only_count": 0,
+          "successful_first_time_n": 93,
+          "first_time_mean": 2.314695340501792,
+          "first_time_median": 2.1333333333333333,
+          "seed0_ever_count": 91,
+          "seed0_terminal_count": 90
+        },
+        {
+          "evaluation_seed": 1002,
+          "episodes": 96,
+          "ever_count": 95,
+          "terminal_count": 95,
+          "ever_rate": 0.9895833333333334,
+          "terminal_rate": 0.9895833333333334,
+          "transient_only_count": 0,
+          "successful_first_time_n": 95,
+          "first_time_mean": 2.3017543859649123,
+          "first_time_median": 2.0,
+          "seed0_ever_count": 91,
+          "seed0_terminal_count": 91
+        },
+        {
+          "evaluation_seed": 1003,
+          "episodes": 96,
+          "ever_count": 90,
+          "terminal_count": 90,
+          "ever_rate": 0.9375,
+          "terminal_rate": 0.9375,
+          "transient_only_count": 0,
+          "successful_first_time_n": 90,
+          "first_time_mean": 2.594074074074074,
+          "first_time_median": 2.1333333333333333,
+          "seed0_ever_count": 86,
+          "seed0_terminal_count": 86
+        }
+      ],
+      "training_seed0": {
+        "episodes": 288,
+        "ever_count": 268,
+        "terminal_count": 267,
+        "ever_rate": 0.9305555555555556,
+        "terminal_rate": 0.9270833333333334,
+        "first_time_mean": 2.4109452736318406,
+        "first_time_median": 2.2666666666666666
+      },
+      "delta_ever_percentage_points": 3.472222222222221,
+      "delta_terminal_percentage_points": 3.819444444444442
+    }
+  ],
+  "raw_input_identities": [
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch100/seed1001/metrics.json",
+      "sha256": "a110b43033c151a9cd3dcef1a09a279c4bf0d027a7b5426099ddd13d58bbf1a9"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch100/seed1002/metrics.json",
+      "sha256": "b896b0df3a1feadaab542358b9218eb8cd48676dde1e43461ded5a4136d68192"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch100/seed1003/metrics.json",
+      "sha256": "5488a7f7be39a2dc736a7f24cd5b0701914c01b8ff7a1827dbaeb0d79b3b87db"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch200/seed1001/metrics.json",
+      "sha256": "c8eb0277249429ca4402bcb970446b6afca0179ae64a2b5137a18f29d975b29f"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch200/seed1002/metrics.json",
+      "sha256": "c8f40f03328a7e826c395a20942e44d1528ab0ff012623fbbae7f77a714a14e1"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch200/seed1003/metrics.json",
+      "sha256": "67c30ec4ec717ad9ab182d82e17e88dd15d1859201075739a524970e21b871fe"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch300/seed1001/metrics.json",
+      "sha256": "24fe2cb235c6a25b3128c3ee83b9af1e08b1878a07047f7e61c41fafcfef124a"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch300/seed1002/metrics.json",
+      "sha256": "0de94141b3b9544f902cf64f0c7cb499b75e9bc84eb3df6b71e15df71da45f81"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch300/seed1003/metrics.json",
+      "sha256": "9d5f42a67b8695b404db21207bf520ff86c8d275c5d29b99e25f1f2b3b04cf85"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch400/seed1001/metrics.json",
+      "sha256": "d152cff5d2eb4e5ed16fc38fe128178630bb0d296598afdf4d6976ec2d4fab60"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch400/seed1002/metrics.json",
+      "sha256": "24dca8ea9d146cd27bb9b482c57ddc95a76581c33d48b9d8018c3a76575d582a"
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch400/seed1003/metrics.json",
+      "sha256": "92c0e78ad747e6f64869366c9af1e1130d9034ad75fd776fe3edfa35f9f53861"
+    }
+  ],
+  "no_64env_pooling": true,
+  "no_cross_training_seed_episode_pooling": true,
+  "no_failed_attempt_episode_pooling": true,
+  "training_seed_roles": "0 and 1 identify separately initialized and optimized training runs.",
+  "evaluation_seed_roles": "1001/1002/1003 identify evaluation initial-condition streams, not extra training replicates.",
+  "statistical_limit": "Episode-level Wilson intervals describe conditional evaluation sampling for a fixed checkpoint, assuming binomial observations. Repeated episodes share environments and the same trained policy; these intervals do not quantify population training-seed variance. Two training seeds allow descriptive comparison only.",
+  "first_success_limit": "First-success timing is conditional on ever-success episodes; failed episodes are not assigned zero or finite first-success times.",
+  "seed2_recommendation": "Run one separately authorized fresh training seed2 with all scientific settings frozen to add an independent replicate; do not launch automatically or adapt hyperparameters."
+}

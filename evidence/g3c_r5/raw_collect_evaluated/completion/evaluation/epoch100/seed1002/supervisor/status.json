@@ -1,0 +1,71 @@
+{
+  "child_exit_code": 0,
+  "child_identity": {
+    "birth_ticks": "2082753",
+    "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+    "pgid": 72844,
+    "pid": 72844,
+    "state": "R"
+  },
+  "child_signal": null,
+  "command": [
+    "env",
+    "TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1",
+    "bash",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/evaluate_checkpoint.py",
+    "--headless",
+    "--device",
+    "cuda:0",
+    "--task",
+    "Isaac-Factory-PegInsert-Direct-v0",
+    "--checkpoint",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_100_rew_313.37598.pth",
+    "--num_envs",
+    "32",
+    "--episodes",
+    "1",
+    "--seed",
+    "1002",
+    "--max_steps",
+    "160",
+    "--snapshot-limit",
+    "12",
+    "--progress-interval",
+    "10",
+    "--output",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/evaluation/epoch100/seed1002/metrics.json"
+  ],
+  "ended": {
+    "monotonic_seconds": 20883.520040901,
+    "unix_seconds": 1792996254.05868,
+    "utc": "2026-10-26T06:30:54.058673+00:00"
+  },
+  "error": null,
+  "exec_released": {
+    "monotonic_seconds": 20827.93891745,
+    "unix_seconds": 1792996198.4775562,
+    "utc": "2026-10-26T06:29:58.477541+00:00"
+  },
+  "finalized": true,
+  "guard_identity": null,
+  "guard_required": false,
+  "identity": {
+    "birth_ticks": "2082701",
+    "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+    "pgid": 72835,
+    "pid": 72835,
+    "state": "R"
+  },
+  "raw_wait_returncode": 0,
+  "received_supervisor_signals": [],
+  "schema_version": 2,
+  "started": {
+    "monotonic_seconds": 20827.055756141,
+    "unix_seconds": 1792996197.5943952,
+    "utc": "2026-10-26T06:29:57.594379+00:00"
+  },
+  "stop_signals": [],
+  "termination_reason": "child_exit",
+  "wall_seconds": 56.46428531000129
+}

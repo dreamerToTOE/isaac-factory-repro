@@ -1,0 +1,61 @@
+{
+  "child_exit_code": 0,
+  "child_identity": {
+    "birth_ticks": "461544",
+    "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+    "pgid": 34817,
+    "pid": 34817,
+    "state": "R"
+  },
+  "child_signal": null,
+  "command": [
+    "bash",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py",
+    "--headless",
+    "--device",
+    "cuda:0",
+    "--task",
+    "Isaac-Factory-PegInsert-Direct-v0",
+    "--num_envs",
+    "32",
+    "--seed",
+    "1",
+    "--max_iterations",
+    "400",
+    "agent.params.config.full_experiment_name=g3cr5_peginsert_32env_seed1_400ep_20261026t015040z",
+    "agent.params.config.save_frequency=25"
+  ],
+  "ended": {
+    "monotonic_seconds": 18863.456134389,
+    "unix_seconds": 1792994233.9947734,
+    "utc": "2026-10-26T05:57:13.994767+00:00"
+  },
+  "error": null,
+  "exec_released": {
+    "monotonic_seconds": 4615.59765665,
+    "unix_seconds": 1792979986.1362953,
+    "utc": "2026-10-26T01:59:46.136280+00:00"
+  },
+  "finalized": true,
+  "guard_identity": null,
+  "guard_required": false,
+  "identity": {
+    "birth_ticks": "461523",
+    "boot_id": "2047585a-6b85-4f3a-a023-05c90d99373b",
+    "pgid": 34805,
+    "pid": 34805,
+    "state": "R"
+  },
+  "raw_wait_returncode": 0,
+  "received_supervisor_signals": [],
+  "schema_version": 2,
+  "started": {
+    "monotonic_seconds": 4615.260493558,
+    "unix_seconds": 1792979985.7991307,
+    "utc": "2026-10-26T01:59:45.799115+00:00"
+  },
+  "stop_signals": [],
+  "termination_reason": "child_exit",
+  "wall_seconds": 14248.195641359
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": "g3cr5_final_delivery_review_v1",
+  "created_utc": "2026-10-26T06:50:43.774088+00:00",
+  "engineering_status": "COMPLETE",
+  "scientific_status": "ASSESSED_DESCRIPTIVELY",
+  "cpu_regression": {
+    "passed": 220,
+    "failed": 0,
+    "seconds_reported": 14.15,
+    "source": "artifact_execution_evaluated/cpu_regression.stdout.txt"
+  },
+  "independent_scientific_audit": {
+    "passed": 139,
+    "total": 139,
+    "source": "final_scientific_audit.json"
+  },
+  "preservation_before_remote_document_merge": {
+    "frozen_sources": {
+      "count": 30,
+      "match_count": 30,
+      "passed": true
+    },
+    "preexisting_g3v": {
+      "count": 5,
+      "match_count": 5,
+      "passed": true
+    },
+    "prior_historical_artifacts": {
+      "count": 347,
+      "match_count": 347,
+      "passed": true
+    },
+    "r4_evidence_files": {
+      "count": 285,
+      "match_count": 285,
+      "passed": true
+    },
+    "r4_raw_artifacts": {
+      "count": 277,
+      "match_count": 277,
+      "passed": true
+    },
+    "starting_tracked_files": {
+      "count": 938,
+      "match_count": 938,
+      "passed": true
+    }
+  },
+  "scientific_plot_visual_qa": {
+    "passed": true,
+    "plots": [
+      "analysis_evaluated/training_scalars.png",
+      "analysis_evaluated/matched_transition_success.png",
+      "analysis_evaluated/first_success_timing.png"
+    ],
+    "checks": [
+      "readable axes and legends",
+      "matching denominators and seed roles",
+      "conditional first-success timing labelled"
+    ]
+  },
+  "final_markdown_editorial_polish": {
+    "generated_markdown_sha256": "d2c4457701724ee1bbf4b1ffa931da15fe11188e2cc588f36b816a3bd714e467",
+    "polished_markdown_sha256": "5413ffdb5f10989bae4515901dff25cddfb8378f5fd02acaeec52262aa650bda",
+    "scope": "Replace full provenance JSON with evidence links; correct final artifact paths; add actual CPU/audit/preservation and timing caveats. No numeric results changed."
+  },
+  "remote_document_integration": {
+    "expected_remote_tip": "3d7d65fba08709e692a13e41b431616533f8ded4",
+    "scope": "README.md, docs/OPEN_ISSUES.md, docs/ENGINEERING_LEARNING_GATE.md, docs/ROADMAP_POLICY_INFERENCE_SIM2SIM.md",
+    "method": "Normal merge preserving both histories; verify final remote HEAD after normal fast-forward push"
+  },
+  "seed2_launched": false,
+  "other_factory_tasks_launched": false
+}

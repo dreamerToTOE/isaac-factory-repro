@@ -1,0 +1,35 @@
+{
+  "checkpoint_count": 18,
+  "control_actions": [],
+  "copied_count": 256,
+  "cpu_only": true,
+  "created_utc": "2026-10-26T06:45:32.358792+00:00",
+  "manifest": {
+    "bytes": 22568,
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r5/manifest_evaluation_recovery.json",
+    "sha256": "826fc269feab1f7eb1ed9a481a265bd98d0a4017637ce0756ba2db4d6bd13eb1"
+  },
+  "missing_raw_roots": [],
+  "preservation_passed": true,
+  "raw_artifact_status": "complete",
+  "raw_file_count": 277,
+  "schema_version": "g3cr5_collection_v1",
+  "status": "complete",
+  "tensorboard_event_file_count": 1,
+  "terminal_records": {
+    "completion_phase": "training_and_evaluation_complete",
+    "completion_status": {
+      "bytes": 19000,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/completion_32env_seed1_400ep_evaluation_recovery_20261026t062700z/status.json",
+      "sha256": "89d337507278291a932ac848e701488f40cb655bc47272c35df54c12e5a3364d"
+    },
+    "controller_exit_code": 0,
+    "raw_wait_returncode": 0,
+    "supervisor_status": {
+      "bytes": 1749,
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/train_32env_seed1_400ep_20261026t015040z/supervisor/status.json",
+      "sha256": "df4a2324d81b1192554b1666e8da1d8ff18fa26d63d1adcb63a788e5badb80df"
+    },
+    "training_termination_reason": "child_exit"
+  }
+}
