@@ -5,12 +5,14 @@
 性质：**用户批准的未来工作顺序；不是实验结果或自动执行许可。**
 目标仓库：`dreamerToTOE/isaac-factory-repro`
 
+**Current status (2026-10-26): G3C-R5 has completed and been archived. G4-I0 is now the active next stage.**
+
 ## 0. 当前证据和冻结边界
 
 - 官方 Isaac Lab v2.1.1 固定于 `90b79bb2d44feb8d833f260f2bf37da3487180ba`；Isaac Sim 4.5.0，RL-Games PPO、双层 LSTM、Franka PegInsert；既有来源审计见 [`SOURCE_AUDIT.md`](SOURCE_AUDIT.md)。
 - G2：训练 seed 0，64 env × 200 epochs，1,638,400 transitions；独立 deterministic evaluation，ever/terminal = 280/288 = 97.22%。这是官方几何成功定义下的结果，不等于完整装配质量/真机可靠性。
 - G3C-R4：另一个全新训练实验，seed 0，32 env × 400 epochs，同为 1,638,400 transitions；epoch 400 ever = 268/288 = 93.06%，terminal = 267/288 = 92.71%。环境数、每轮更新与随机流不同；不能从 G2 vs R4 的单 seed 比较推断 32/64 env 因果优劣。见 [`REVIEW_G3C_R4.md`](REVIEW_G3C_R4.md)。
-- **G3C-R5**：`PROTOCOL_G3C_R5.md` 已预注册 **32 env、training seed 1、400 epochs**，已有真实启动回执和早期配置审计；仓库截至本路线制定时尚无完训验收结果。不得将“已启动”写作“已完成”。**先让已启动的任务自然结束或由其原协议处理异常，完整归档后再开始占用 GPU 的新任务。** 不抢占、不修改其 manifest、运行时、检查点、监督服务或科学配置。
+- **G3C-R5（已完成并归档）**：32 env、training seed 1、400/400 epochs、1,638,400 transitions，child exit 0；独立确定性评估最终 ever/terminal success 均为 278/288（96.53%）。完整结果及评估期间 SSL 故障的独立恢复证据见 [`REVIEW_G3C_R5_FINAL.md`](REVIEW_G3C_R5_FINAL.md)。状态为工程 `COMPLETE`、科学 `ASSESSED_DESCRIPTIVELY`；未启动 training seed 2，两个训练 seed 不足以可靠估计种子总体方差。原路线制定时的“R5 运行中”已由本状态更新取代，历史原始证据不修改。
 - `G3V` 可能存在本地未跟踪演示资产；未来须由运行该任务的窗口核实，不推断其已完成，也不删除或覆盖这些文件。
 
 历史报告中的“下一步”均是其成文时的建议，不应修改为新决策。本文是新的前瞻性导航文件，不能追溯更改 G0–G3C 的科学记录。不能把训练 seed 和评估 seed 混为一谈。
@@ -19,7 +21,7 @@
 
 | 优先级 | 阶段 | 核心产物 | 门禁与下一步 |
 | --- | --- | --- | --- |
-| 0 | G3C-R5 归档 | 真实 child wait/status、完整/不完整判定、checkpoint、评估和限制 | 先验收已启动工作；不自动补跑、续训或启动 seed 2 |
+| 0 | G3C-R5 归档（已完成） | 真实 child wait/status、checkpoint、独立评估与限制已归档 | `COMPLETE / ASSESSED_DESCRIPTIVELY`；不自动补跑、续训或启动 seed 2 |
 | 1 | **G4-I：独立策略推理与控制回路测试** | 与 PPO 训练器解耦的推理入口、延迟/控制周期/限幅/失败轨迹基准、成功率对照 | **独立审阅 GO** 后才进入 G4-S；不等同真正 Sim2Sim |
 | 2 | **G4-S：真正的跨引擎 Sim2Sim** | Isaac Lab/PhysX 训练的同一 policy 在第二种物理引擎中的无重训运行、接触与动力学差异审计 | 分层门禁；若资产或控制接口无法忠实映射可 PARTIAL/STOP，禁止包装为跨引擎成功 |
 | 3 | GearMesh | 复用已审阅的训练/独立评估链，得到任务级结果和真实失败分析 | 需要用户在 G4-S 审阅后单独批准 GPU 长训练 |
@@ -63,7 +65,7 @@
 | 失败轨迹 | 固定 seeds 与 episode ID，保存 pre-reset 前状态/观测、动作、末端与 peg/hole 几何、成功真假/首次成功、episode 终止原因；无法获取接触力时明确 `unsupported` |
 | 策略有效性 | 固定预注册测试集（建议最终至少 288 episodes，3 evaluation seeds），与原评估器同 checkpoint、同成功定义/分母比较，记录不匹配根因及差异，不设靠改成功判据的“宽松通过” |
 
-如果墙钟周期达不到期望值，报告 missed deadline 和限幅处理，而不是将仿真 FPS 冒充硬实时部署。异常输入/超时的 `no-command` 或预先定义的安全降级行为须有 mock 测试；此仿真安全逻辑不是经过真机安全认证的机制。RTX 3070 8GB 上的新 GPU 工作必须独立做资源预检，不自动继承 G3C-R4/R5 的 `user-authorized-no-gpu-guard` 例外；不得与未结束的 R5 抢 GPU。
+如果墙钟周期达不到期望值，报告 missed deadline 和限幅处理，而不是将仿真 FPS 冒充硬实时部署。异常输入/超时的 `no-command` 或预先定义的安全降级行为须有 mock 测试；此仿真安全逻辑不是经过真机安全认证的机制。RTX 3070 8GB 上的新 GPU 工作必须独立做资源预检，不自动继承 G3C-R4/R5 的 `user-authorized-no-gpu-guard` 例外；开始前确认没有其他正在运行的 GPU 任务。
 
 **G4-I 最终 PASS** 需要：I0/I1/I2 证据、可重复命令、raw traces、时延分布、限幅统计、失败分类、成功率对照、退出状态，以及 [`ENGINEERING_LEARNING_GATE.md`](ENGINEERING_LEARNING_GATE.md) 中用户独立解释的学习验收。任何缺失项报告 `PARTIAL/FAIL`，不得凭可视化视频替代。
 
