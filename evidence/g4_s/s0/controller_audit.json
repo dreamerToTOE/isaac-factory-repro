@@ -1,0 +1,941 @@
+{
+  "schema_version": "g4_s0_controller_audit_v1",
+  "created_utc": "2026-10-26T11:14:27.191162+00:00",
+  "scope": "Read-only original source/configuration audit plus proposed MuJoCo mapping; no simulator, robot, GPU, policy rollout, checkpoint modification, package installation or asset download",
+  "repository": "dreamerToTOE/isaac-factory-repro",
+  "starting_commit": "280634679633bf127e13349741379b3d38a27a1f",
+  "isaaclab_commit": "90b79bb2d44feb8d833f260f2bf37da3487180ba",
+  "isaaclab_tag": "v2.1.1",
+  "isaacsim_version": "4.5.0",
+  "isaacsim_tensor_extension_version": "106.5.7",
+  "sources": [
+    {
+      "label": "factory_env.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py",
+      "sha256": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81",
+      "bytes": 43992,
+      "line_refs": [
+        "41-47",
+        "49-73",
+        "191-225",
+        "254-290",
+        "296-304",
+        "342-423",
+        "425-456",
+        "527-537",
+        "605-633",
+        "635-656",
+        "658-765",
+        "784-886"
+      ],
+      "g4_i0_frozen_sha256": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81",
+      "matches_g4_i0": true
+    },
+    {
+      "label": "factory_control.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_control.py",
+      "sha256": "7ef611d530a86fa2aba9db222361b0fe8b64d34037f204ad622a17051ad5e163",
+      "bytes": 8326,
+      "line_refs": [
+        "19-91",
+        "94-135",
+        "178-196"
+      ],
+      "g4_i0_frozen_sha256": "7ef611d530a86fa2aba9db222361b0fe8b64d34037f204ad622a17051ad5e163",
+      "matches_g4_i0": true
+    },
+    {
+      "label": "factory_env_cfg.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env_cfg.py",
+      "sha256": "5f804ba3f6e3d96f352490a9b5e2e1e239d308ff7eeab7ae3aad0ca6aa8daed8",
+      "bytes": 6419,
+      "line_refs": [
+        "49-67",
+        "71-116",
+        "120-183"
+      ],
+      "g4_i0_frozen_sha256": "5f804ba3f6e3d96f352490a9b5e2e1e239d308ff7eeab7ae3aad0ca6aa8daed8",
+      "matches_g4_i0": true
+    },
+    {
+      "label": "factory_tasks_cfg.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_tasks_cfg.py",
+      "sha256": "7510b6cbed1e5bdd297723cabf7d25cef6a00b94bb3804b7578f2925a6a43971",
+      "bytes": 16331,
+      "line_refs": [
+        "14-37",
+        "41-84",
+        "87-183"
+      ],
+      "g4_i0_frozen_sha256": "7510b6cbed1e5bdd297723cabf7d25cef6a00b94bb3804b7578f2925a6a43971",
+      "matches_g4_i0": true
+    },
+    {
+      "label": "direct_rl_env.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/envs/direct_rl_env.py",
+      "sha256": "0c919fdc93e9198562edaaa3c29627a8dc0e123f581f41cdffc75641f9033fc1",
+      "bytes": 29922,
+      "line_refs": [
+        "329-392"
+      ],
+      "g4_i0_frozen_sha256": "0c919fdc93e9198562edaaa3c29627a8dc0e123f581f41cdffc75641f9033fc1",
+      "matches_g4_i0": true
+    },
+    {
+      "label": "isaaclab_rl_rl_games.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_rl/isaaclab_rl/rl_games.py",
+      "sha256": "512af373b28e659308bc98d54cb9f646fe1870d8ad087019ce2d54a5deee2623",
+      "bytes": 14120,
+      "line_refs": [
+        "238-256"
+      ],
+      "g4_i0_frozen_sha256": "512af373b28e659308bc98d54cb9f646fe1870d8ad087019ce2d54a5deee2623",
+      "matches_g4_i0": true
+    },
+    {
+      "label": "implicit_actuator",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/actuators/actuator_pd.py",
+      "sha256": "3cc59c456c4ed6e12581a7e5dfe37e007cd7f6128150d6f1aff3f074198cf012",
+      "bytes": 20517,
+      "line_refs": [
+        "34-50",
+        "115-140"
+      ]
+    },
+    {
+      "label": "articulation",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/assets/articulation/articulation.py",
+      "sha256": "da73833f620c14fb4cf75c5191d1b925506ef49b2d6b92ecf0300391d0266106",
+      "bytes": 85414,
+      "line_refs": [
+        "203-210",
+        "1385-1449",
+        "1512-1544"
+      ]
+    },
+    {
+      "label": "physics_config",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/sim/simulation_cfg.py",
+      "sha256": "ab29593e8cf5e16faf9c91d29e427d1d06df98930222bb11c54658eb7c42f8ba",
+      "bytes": 14541,
+      "line_refs": [
+        "37-86"
+      ]
+    },
+    {
+      "label": "physics_material_config",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/sim/spawners/materials/physics_materials_cfg.py",
+      "sha256": "0f2f94b60b26ee412fe38d6177df0cafe77072e3695650e2db1e1b022f4e65b7",
+      "bytes": 5141,
+      "line_refs": [
+        "42-85"
+      ]
+    },
+    {
+      "label": "physics_schema_units",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/sim/schemas/schemas_cfg.py",
+      "sha256": "add99b8c64fd6a47c18e7db7685ea4f1efa03e2fca5a3e667671d504fd252218",
+      "bytes": 15754,
+      "line_refs": [
+        "77-95"
+      ]
+    },
+    {
+      "label": "isaacsim_tensor_api",
+      "path": "/home/ubuntu2004/isaacsim-4.5.0/extsPhysics/omni.physics.tensors/omni/physics/tensors/impl/api.py",
+      "sha256": "bb5e684dce25e0ad7f3e03ec395ec4729d55203f3b3a58bfa824b8d106c0e54b",
+      "bytes": 354467,
+      "line_refs": [
+        "1762-1793",
+        "1825-1858"
+      ]
+    },
+    {
+      "label": "g4i1_runtime",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4i1_runtime.py",
+      "sha256": "8828e98799a4da8155dfa9ff018ef80a2e5122142d7c9e0f871e0b3e1548d4fe",
+      "bytes": 27287,
+      "line_refs": [
+        "95-107",
+        "122-140",
+        "143-212",
+        "283-314"
+      ]
+    },
+    {
+      "label": "g4i2_controller_probe",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4i2_controller_probe.py",
+      "sha256": "61b361b61c9226eb4b401bb368d57fd974e5a64301dea790a952ce3e05926f62",
+      "bytes": 6397,
+      "line_refs": [
+        "34-76",
+        "79-122"
+      ]
+    },
+    {
+      "label": "g2_resolved_env",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/params/env.yaml",
+      "sha256": "9b07adc49a4ec46b41e7ae789510e47f5c20dd001ae32b22e18b5f7cc29bc876",
+      "bytes": 12078,
+      "line_refs": []
+    },
+    {
+      "label": "g4i2_resolved_env",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_i/i2/g4i2_20261026T094103Z_r1/a_events/env.yaml",
+      "sha256": "8e25e190e79aca22a498760aa0e9cd2a07329b181a8edcb95703c2b4b5bc7e3d",
+      "bytes": 12080,
+      "line_refs": []
+    },
+    {
+      "label": "g4i2_timing",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_i/i2/timing/timing_summary.json",
+      "sha256": "f839779db5737b646d31a7e1d2526b727a72034cf2ceab43b39dbf0dad85dc61",
+      "bytes": 82307,
+      "line_refs": []
+    },
+    {
+      "label": "g4i2_summary",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_i/i2/results/summary.json",
+      "sha256": "40f10c397c6a52478485d2b76481b570fadea0f9a664f845fc7dcd60d79d0734",
+      "bytes": 25651,
+      "line_refs": []
+    },
+    {
+      "label": "g4i0_contract",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_i/i0/interface_spec.json",
+      "sha256": "8922f1aac1294398cbfa5a157b28b58a822a03906036e984cf8e8686163ea47b",
+      "bytes": 19263,
+      "line_refs": []
+    }
+  ],
+  "source_hashes_match_frozen_g4_i0": true,
+  "archived_configuration_check": {
+    "parser": "yaml.BaseLoader; inert strings only; no Isaac import",
+    "G2_original_vs_G4I2_A_sim_ctrl_task_robot_equal": true,
+    "g2_num_envs": "64",
+    "g4i2_a_num_envs": "1",
+    "same_sections": [
+      "sim",
+      "decimation",
+      "episode_length_s",
+      "obs_order",
+      "ctrl",
+      "task_name",
+      "task",
+      "robot"
+    ],
+    "selected_configuration_strings": {
+      "sim": {
+        "physics_prim_path": "/physicsScene",
+        "device": "cuda:0",
+        "dt": "0.008333333333333333",
+        "render_interval": "1",
+        "gravity": [
+          "0.0",
+          "0.0",
+          "-9.81"
+        ],
+        "enable_scene_query_support": "false",
+        "use_fabric": "true",
+        "physx": {
+          "solver_type": "1",
+          "min_position_iteration_count": "1",
+          "max_position_iteration_count": "192",
+          "min_velocity_iteration_count": "0",
+          "max_velocity_iteration_count": "1",
+          "enable_ccd": "false",
+          "enable_stabilization": "false",
+          "enable_enhanced_determinism": "false",
+          "bounce_threshold_velocity": "0.2",
+          "friction_offset_threshold": "0.01",
+          "friction_correlation_distance": "0.00625",
+          "gpu_max_rigid_contact_count": "8388608",
+          "gpu_max_rigid_patch_count": "8388608",
+          "gpu_found_lost_pairs_capacity": "2097152",
+          "gpu_found_lost_aggregate_pairs_capacity": "33554432",
+          "gpu_total_aggregate_pairs_capacity": "2097152",
+          "gpu_collision_stack_size": "67108864",
+          "gpu_heap_capacity": "67108864",
+          "gpu_temp_buffer_capacity": "16777216",
+          "gpu_max_num_partitions": "1",
+          "gpu_max_soft_body_contacts": "1048576",
+          "gpu_max_particle_contacts": "1048576"
+        },
+        "physics_material": {
+          "func": "isaaclab.sim.spawners.materials.physics_materials:spawn_rigid_body_material",
+          "static_friction": "1.0",
+          "dynamic_friction": "1.0",
+          "restitution": "0.0",
+          "improve_patch_friction": "true",
+          "friction_combine_mode": "average",
+          "restitution_combine_mode": "average",
+          "compliant_contact_stiffness": "0.0",
+          "compliant_contact_damping": "0.0"
+        },
+        "render": {
+          "enable_translucency": "null",
+          "enable_reflections": "null",
+          "enable_global_illumination": "null",
+          "antialiasing_mode": "null",
+          "enable_dlssg": "null",
+          "enable_dl_denoiser": "null",
+          "dlss_mode": "null",
+          "enable_direct_lighting": "null",
+          "samples_per_pixel": "null",
+          "enable_shadows": "null",
+          "enable_ambient_occlusion": "null",
+          "carb_settings": "null",
+          "rendering_mode": "null"
+        }
+      },
+      "decimation": "8",
+      "episode_length_s": "10.0",
+      "obs_order": [
+        "fingertip_pos_rel_fixed",
+        "fingertip_quat",
+        "ee_linvel",
+        "ee_angvel"
+      ],
+      "ctrl": {
+        "ema_factor": "0.2",
+        "pos_action_bounds": [
+          "0.05",
+          "0.05",
+          "0.05"
+        ],
+        "rot_action_bounds": [
+          "1.0",
+          "1.0",
+          "1.0"
+        ],
+        "pos_action_threshold": [
+          "0.02",
+          "0.02",
+          "0.02"
+        ],
+        "rot_action_threshold": [
+          "0.097",
+          "0.097",
+          "0.097"
+        ],
+        "reset_joints": [
+          "0.0015178",
+          "-0.19651",
+          "-0.0014364",
+          "-1.9761",
+          "-0.00027717",
+          "1.7796",
+          "0.78556"
+        ],
+        "reset_task_prop_gains": [
+          "300",
+          "300",
+          "300",
+          "20",
+          "20",
+          "20"
+        ],
+        "reset_rot_deriv_scale": "10.0",
+        "default_task_prop_gains": [
+          "100",
+          "100",
+          "100",
+          "30",
+          "30",
+          "30"
+        ],
+        "default_dof_pos_tensor": [
+          "-1.3003",
+          "-0.4015",
+          "1.1791",
+          "-2.1493",
+          "0.4001",
+          "1.9425",
+          "0.4754"
+        ],
+        "kp_null": "10.0",
+        "kd_null": "6.3246"
+      },
+      "task_name": "peg_insert"
+    }
+  },
+  "action": {
+    "status": "VERIFIED",
+    "shape": [
+      null,
+      6
+    ],
+    "normalized_units": "dimensionless",
+    "world_position_scale_m": [
+      0.02,
+      0.02,
+      0.02
+    ],
+    "rotation_scale_rad": [
+      0.097,
+      0.097,
+      0.097
+    ],
+    "ema_alpha": 0.2,
+    "clip_raw_mu": [
+      -1,
+      1
+    ],
+    "clip_after_ema": false,
+    "authoritative_order": [
+      "deterministic frozen FP32 mu",
+      "player/standalone clip[-1,1]",
+      "wrapper clip[-1,1]",
+      "EMA a_t=.2 clip(mu_t)+.8 a_(t-1)",
+      "per physics step: position scale.02 / rotation scale.097",
+      "world target p*=p_current+.02*a_xyz",
+      "clip p*-fixed_pos_action_frame elementwise[-.05,.05]",
+      "axis angle delta quaternion (identity if norm<=1e-6)",
+      "q*=delta_q WORLD LEFT MULTIPLY q_current",
+      "EulerXYZ(q*) then set roll=3.14159,pitch=0,yaw retained",
+      "closed gripper target0",
+      "original torque controller",
+      "software±100 clamp",
+      "original implicit actuator route"
+    ],
+    "position_bound_source_quirk": "torch.clip uses -pos_action_bounds[0],+pos_action_bounds[1] scalar for ALL three axes; frozen entries all.05",
+    "rot_action_bounds_used": false,
+    "unidirectional_rotation": false,
+    "pose_constraint_is_yaw_lock": false,
+    "orientation_multiplication_order": "q_target_preconstraint=delta_world ⊗ q_current, not q_current⊗delta",
+    "target_is_integrated_at_policy_rate": false,
+    "source": [
+      "factory_env.py:296-304,342-391",
+      "factory_env_cfg.py:49-67",
+      "isaaclab_rl_rl_games.py:238-244"
+    ]
+  },
+  "reset_cache": {
+    "status": "VERIFIED",
+    "position": "a_xyz=(p_fingertip−fixed_pos_action_frame)/.05",
+    "orientation_xy": [
+      0,
+      0
+    ],
+    "yaw": "q_unrot=quat_euler(-pi,0,0); y=euler_yaw(q_unrot ⊗ q_current); if y>pi/2:y-=2pi; if y<-pi:y+=2pi; a_zrot=2*(y+pi)/(3pi/2)-1",
+    "cache_clipped": false,
+    "example_historical_cache_exceeds_1": 1.0918008089065552,
+    "source_example": "G4I2 R1 a_events/trace.jsonl initial_reset cache[0][2]",
+    "finite_difference_linear_angular_velocity_after_reset": [
+      0,
+      0,
+      0
+    ],
+    "lstm_hidden_cell": "zero done actor columns separately; never substitute zero EMA cache",
+    "source": [
+      "factory_env.py:845-884",
+      "g4i1_runtime:199-212"
+    ]
+  },
+  "controller": {
+    "status": "VERIFIED",
+    "dof_input_shape": [
+      null,
+      9
+    ],
+    "task_error_shape": [
+      null,
+      6
+    ],
+    "jacobian_shape": [
+      null,
+      6,
+      7
+    ],
+    "mass_shape": [
+      null,
+      7,
+      7
+    ],
+    "output_shape": [
+      null,
+      9
+    ],
+    "arm_output_slice": [
+      0,
+      7
+    ],
+    "finger_output_effort": [
+      0,
+      0
+    ],
+    "task_proportional_gains": [
+      100,
+      100,
+      100,
+      30,
+      30,
+      30
+    ],
+    "task_derivative_gains": [
+      20,
+      20,
+      20,
+      10.954451150103322,
+      10.954451150103322,
+      10.954451150103322
+    ],
+    "target_task_velocity": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "position_error": "p_target−p_current",
+    "quaternion_error": "target sign chosen using dot(target,current)>=0; q_error=q_target⊗inverse(q_current), inverse=conjugate(q)/||q||²",
+    "orientation_error": "world shortest axis-angle from quaternion error",
+    "task_wrench": "F=Kp*[position_error,axis_angle_error]−Kd*[world FD linear vel,world FD angular vel]",
+    "arm_task_torque": "J.T @ F (NOT Lambda-weighted task wrench)",
+    "nullspace": {
+      "default_q_rad": [
+        -1.3003,
+        -0.4015,
+        1.1791,
+        -2.1493,
+        0.4001,
+        1.9425,
+        0.4754
+      ],
+      "kp": 10,
+      "kd": 6.3246,
+      "dq": "wrap_to_[−pi,pi)(q_default−q_arm)",
+      "u": "M*(10*dq−6.3246*simulator_raw_arm_qdot)",
+      "Lambda": "inverse(J*inverse(M)*J.T)",
+      "J_hash": "Lambda*J*inverse(M)",
+      "tau_null": "(I7−J.T*J_hash)*u"
+    },
+    "total": "clamp(J.T*F+tau_null,−100,+100); finger torque0; finger position target0",
+    "gravity_compensation_term": false,
+    "coriolis_centrifugal_feedforward_term": false,
+    "matrix_inverse_damping_regularization": false,
+    "source": [
+      "factory_control.py:19-135,178-196",
+      "factory_env.py:393-423"
+    ],
+    "input_mapping_proposed": {
+      "joint_map": "resolve original panda_joint1..7 by name; use joint qpos and dof addresses separately, never assume all qpos indices equal qvel indices",
+      "task_pose": "panda_fingertip_centered body pose relative environment translation, orientation world wxyz",
+      "J": "mj_jac for exact original left/right finger link origins, stack jacp above jacr, select seven arm dof columns, average left/right; do NOT silently use site J",
+      "M": "mj_fullM corresponding version API on full sparse qM, then principal7x7 arm dof submatrix including all attached robot-body inertial effects",
+      "joint_velocity": "qvel at mapped seven dof indices, not task FD and not numerical diff of qpos",
+      "task_velocity": "finite difference of exact original fingertip pose per1/120s, world axis-angle sign convention, reset zero",
+      "torque_transmission": "identity gear torque motors with unit Nm, full source mimic/limits/gripper preserved; prove actual force limit path before claiming effort parity"
+    },
+    "mapping_status": "PROPOSED"
+  },
+  "jacobian": {
+    "status": "VERIFIED",
+    "PhysX_frame": "world",
+    "rows": [
+      "vx",
+      "vy",
+      "vz",
+      "wx",
+      "wy",
+      "wz"
+    ],
+    "body_indices": "left/right finger body index−1 because original fixed-base articulation Jacobian omits root",
+    "mean": "(J_leftfinger + J_rightfinger)/2",
+    "pose_link": "panda_fingertip_centered",
+    "velocity_map": "J maps original ordered arm joint velocities to world link-origin geometric twist",
+    "root_rotation_transform_in_original": false,
+    "source": [
+      "factory_env.py:200-212",
+      "isaacsim_tensor_api:1762-1793"
+    ],
+    "mujoco_status": "PROPOSED; same geometric points and frame required; raw spatial velocity arrays must not be assumed identical"
+  },
+  "physics_compatibility_matrix": [
+    {
+      "parameter": "gravity",
+      "original_status": "VERIFIED",
+      "original": {
+        "scene_m_s2": [
+          0,
+          0,
+          -9.81
+        ],
+        "robot_disable_gravity": true,
+        "held_peg_disable_gravity": true,
+        "fixed_hole_disable_gravity": false,
+        "during_randomize_scene_gravity": [
+          0,
+          0,
+          0
+        ]
+      },
+      "source": [
+        "factory_env_cfg.py:99-100,125-126",
+        "factory_tasks_cfg.py:139-140,164-165",
+        "factory_env.py:658-662,886"
+      ],
+      "mujoco_status": "PROPOSED",
+      "mujoco_mapping": "Scene gravity preserved; compensate only original disabled-gravity bodies (e.g. explicit per-body gravcomp=1 after validating its force route); fixed hole welded per original USD",
+      "equivalence_gap": "Do not add whole-chain bias/Coriolis compensation to the original controller; gravity compensation model must not absorb unrelated Coriolis/centrifugal forces."
+    },
+    {
+      "parameter": "time_schedule",
+      "original_status": "VERIFIED",
+      "original": {
+        "dt_s": 0.008333333333333333,
+        "physics_hz": 120,
+        "decimation": 8,
+        "policy_hz": 15,
+        "outer_calls_per_policy": 8
+      },
+      "source": [
+        "factory_env_cfg.py:72,97-100",
+        "direct_rl_env.py:334-356"
+      ],
+      "mujoco_status": "PROPOSED",
+      "mujoco_mapping": "MJCF timestep=1/120; eight CPU physics steps per policy decision; recompute pose/FD velocity/J/M/targets/torque before each step",
+      "equivalence_gap": "Preserving simulation-time schedule is feasible; MuJoCo solver iterations are not PhysX substeps; no wall-time guarantee."
+    },
+    {
+      "parameter": "wall_schedule",
+      "original_status": "VERIFIED",
+      "original": {
+        "measured_complete_command_hz": 3.4699399575795047,
+        "mean_command_interval_ms": 288.1894246658842,
+        "command_deadline_misses": {
+          "count": 1278,
+          "n": 1278,
+          "rate": 1.0
+        },
+        "real_time_factor": 0.23135753928411706
+      },
+      "source": [
+        "g4i2_timing:pooled_evaluation.timing"
+      ],
+      "mujoco_status": "PROPOSED",
+      "mujoco_mapping": "Measure target implementation independently",
+      "equivalence_gap": "3.4699399575795047Hz historical complete wall command rate remains separate from the15Hz simulation schedule."
+    },
+    {
+      "parameter": "solver",
+      "original_status": "VERIFIED",
+      "original": {
+        "type": 1,
+        "name": "TGS",
+        "position_iterations": 192,
+        "velocity_iterations": 1,
+        "enable_ccd": false,
+        "enable_stabilization": false,
+        "enable_enhanced_determinism": false
+      },
+      "source": [
+        "factory_env_cfg.py:101-110,133-140",
+        "physics_config:37-86",
+        "g2_resolved_env:sim.physx"
+      ],
+      "mujoco_status": "PROPOSED",
+      "mujoco_mapping": "Select and preregister MuJoCo solver, integrator, iterations/tolerance; no exact numeric translation asserted",
+      "equivalence_gap": "MuJoCo convex constraint solve/contact regularization differs; setting iterations=192 does not make the engines equivalent."
+    },
+    {
+      "parameter": "arm_actuation",
+      "original_status": "VERIFIED",
+      "original": {
+        "joint_order": [
+          "panda_joint1",
+          "panda_joint2",
+          "panda_joint3",
+          "panda_joint4",
+          "panda_joint5",
+          "panda_joint6",
+          "panda_joint7"
+        ],
+        "implicit_stiffness": 0,
+        "implicit_damping": 0,
+        "friction": 0,
+        "armature": 0,
+        "software_clamp_Nm": [
+          -100,
+          100
+        ],
+        "configured_sim_effort_limits_Nm": [
+          87,
+          87,
+          87,
+          87,
+          12,
+          12,
+          12
+        ]
+      },
+      "source": [
+        "factory_env_cfg.py:159-174",
+        "factory_control.py:90",
+        "implicit_actuator:115-140",
+        "articulation:203-210,1427-1442,1512-1544"
+      ],
+      "mujoco_status": "PROPOSED",
+      "mujoco_mapping": "Seven direct torque motors with audited joint transmissions; retain software clamp±100 separately from explicit actuator force limits; do not use arm position actuators",
+      "equivalence_gap": "Actual applied torque UNKNOWN. Implicit actuator returns original requested feedforward action; diagnostic applied_effort is not a measured backend force. Need validate how PhysX max force affects direct effort and compare MuJoCo actuator force path."
+    },
+    {
+      "parameter": "finger_actuation",
+      "original_status": "VERIFIED",
+      "original": {
+        "names": [
+          "panda_finger_joint1",
+          "panda_finger_joint2"
+        ],
+        "mode": "implicit PD position target0, effort target0",
+        "stiffness": 7500,
+        "damping": 173,
+        "effort_limit_N": 40,
+        "joint_friction": 0.1,
+        "armature": 0
+      },
+      "source": [
+        "factory_env_cfg.py:175-182",
+        "factory_env.py:390,418-423"
+      ],
+      "mujoco_status": "PROPOSED",
+      "mujoco_mapping": "Represent original mimic constraint and both finger coordinates; closed finger target0; a dedicated matched PD actuator only for fingers",
+      "equivalence_gap": "PhysX implicit PD and MuJoCo integration/force clipping need numerical characterization; tendon/one-actuator Menagerie gripper cannot silently replace original mimic/dual-target route."
+    },
+    {
+      "parameter": "body_inertia",
+      "original_status": "VERIFIED",
+      "original": {
+        "runtime_robot_each_body_diagonal_addition_kg_m2": 0.01,
+        "dof_armature": 0
+      },
+      "source": [
+        "factory_env.py:41-47",
+        "factory_env_cfg.py:159-182"
+      ],
+      "mujoco_status": "PROPOSED",
+      "mujoco_mapping": "Convert authored masses/CoM/full inertias and add0.01I to each robot body inertia in the correct inertial frame before compiling",
+      "equivalence_gap": "This is NOT a joint armature=0.01; standard Panda model dynamics differ. Exact authored tensors and transformed compiled values still require asset audit and S1 parity tests."
+    },
+    {
+      "parameter": "masses",
+      "original_status": "VERIFIED",
+      "original": {
+        "peg_kg": 0.019,
+        "fixed_hole_kg": 0.05,
+        "robot_body_masses": "authored USD; no mass override in FactoryEnv"
+      },
+      "source": [
+        "factory_tasks_cfg.py:20-21,88-100,151,176",
+        "factory_env.py:41-47"
+      ],
+      "mujoco_status": "PROPOSED",
+      "mujoco_mapping": "Explicit inertial masses and CoM/inertia in MJCF, no inference from simplified collision geom",
+      "equivalence_gap": "Nominal peg mass alone does not identify its full authored/cooked inertia or robot inertias."
+    },
+    {
+      "parameter": "contact_geometry",
+      "original_status": "VERIFIED",
+      "original": {
+        "robot_self_collisions": false,
+        "contact_offset_m": 0.005,
+        "rest_offset_m": 0,
+        "peg_diameter_m": 0.007986,
+        "hole_diameter_m": 0.0081,
+        "nominal_diametral_clearance_m": 0.00011399999999999952,
+        "nominal_radial_clearance_m": 5.699999999999976e-05
+      },
+      "source": [
+        "factory_env_cfg.py:138,142",
+        "factory_tasks_cfg.py:90,98,152,177"
+      ],
+      "mujoco_status": "PROPOSED",
+      "mujoco_mapping": "Preserve original mesh/convex decomposition/open bore, collision filters and physical dimensions; retain all relevant finger/peg/hole collisions",
+      "equivalence_gap": "A single convex hull would seal the hole. PhysX contact_offset is not a direct MuJoCo margin/gap equivalence;0.114mm diametral/0.057mm radial nominal clearance is not proof of actual cooked mesh tolerance."
+    },
+    {
+      "parameter": "friction",
+      "original_status": "VERIFIED",
+      "original": {
+        "default_material_static": 1,
+        "default_material_dynamic": 1,
+        "runtime_robot_static_dynamic": 0.75,
+        "runtime_peg_static_dynamic": 0.75,
+        "runtime_hole_static_dynamic": 0.75,
+        "combine_default": "average",
+        "patch_friction": true,
+        "friction_offset_threshold_m": 0.01,
+        "friction_correlation_distance_m": 0.00625
+      },
+      "source": [
+        "factory_env.py:62-73",
+        "factory_tasks_cfg.py:20,29,37",
+        "factory_env_cfg.py:106-115",
+        "physics_material_config:42-61",
+        "g2_resolved_env:sim.physics_material"
+      ],
+      "mujoco_status": "PROPOSED",
+      "mujoco_mapping": "Record explicit MuJoCo sliding/torsional/rolling coefficients and contact pair rules; use sliding coefficient0.75 only as preregistered starting correspondence",
+      "equivalence_gap": "PhysX static/dynamic patch friction and pair material modes do not equal MuJoCo condim/cone/sliding/torsion/rolling model. USD other-material overrides and contact pair mixing must be extracted; no validated contact equivalence."
+    },
+    {
+      "parameter": "contact_compliance",
+      "original_status": "VERIFIED",
+      "original": {
+        "default_material_compliant_contact_stiffness": 0,
+        "default_material_compliant_contact_damping": 0,
+        "restitution": 0,
+        "bounce_threshold_velocity_m_s": 0.2,
+        "max_depenetration_velocity_m_s": 5,
+        "max_contact_impulse": 1e+32
+      },
+      "source": [
+        "factory_env_cfg.py:105,127,135",
+        "factory_tasks_cfg.py:141,149,166,174",
+        "physics_material_config:48-85",
+        "g2_resolved_env:sim.physics_material"
+      ],
+      "mujoco_status": "PROPOSED",
+      "mujoco_mapping": "Document MuJoCo solref/solimp and contact margin/gap; derive or experimentally characterize them in separately authorized S1",
+      "equivalence_gap": "Zero PhysX compliant stiffness selects rigid contact, not MuJoCo zero stiffness. Finite MuJoCo contact regularization does not translate uniquely; leave numeric correspondence UNKNOWN."
+    },
+    {
+      "parameter": "damping_and_gyro",
+      "original_status": "VERIFIED",
+      "original": {
+        "robot_peg_hole_linear_damping": 0,
+        "robot_peg_hole_angular_damping": 0,
+        "gyroscopic_forces": true,
+        "body_max_linear_velocity_m_s": 1000,
+        "body_max_angular_velocity_deg_s": 3666
+      },
+      "source": [
+        "factory_env_cfg.py:128-132",
+        "factory_tasks_cfg.py:142-146,167-171",
+        "physics_schema_units:86-93"
+      ],
+      "mujoco_status": "PROPOSED",
+      "mujoco_mapping": "No added viscous body/joint damping except source finger PD and explicit specified friction; preserve rigid-body inertial dynamics",
+      "equivalence_gap": "MuJoCo integrator/velocity limits and implicit damping differ;3666 is degrees/s per source schema, not radians/s."
+    },
+    {
+      "parameter": "joint_limits",
+      "original_status": "VERIFIED",
+      "original": {
+        "joint_limits": "authored USD; resolved env does not override numeric hard ranges",
+        "control_action_joint_clip": false,
+        "nullspace_angle_wrap": "[-pi,pi)"
+      },
+      "source": [
+        "factory_env_cfg.py:120-183",
+        "factory_control.py:78-90"
+      ],
+      "mujoco_status": "PROPOSED",
+      "mujoco_mapping": "Map exact authored joint axes/limits by names to MuJoCo hinge/slide addresses; preserve source torque controller without adding joint-position clamping",
+      "equivalence_gap": "An unrelated Panda range is not evidence of original limits; soft limit solver effects still differ even when numbers match."
+    },
+    {
+      "parameter": "reset",
+      "original_status": "VERIFIED",
+      "original": {
+        "gravity_during_randomization": 0,
+        "fixed_position_uniform_half_width_m": [
+          0.05,
+          0.05,
+          0.05
+        ],
+        "fixed_yaw_uniform_rad": [
+          0,
+          6.283185307179586
+        ],
+        "obs_frame_noise_gaussian_sigma_m": [
+          0.001,
+          0.001,
+          0.001
+        ],
+        "hand_position_relative_hole_tip_m": [
+          0,
+          0,
+          0.047
+        ],
+        "hand_position_uniform_half_width_m": [
+          0.02,
+          0.02,
+          0.01
+        ],
+        "hand_yaw_uniform_half_width_rad": 0.785,
+        "held_in_hand_position_uniform_half_width_m": [
+          0.003,
+          0,
+          0.003
+        ],
+        "close_gripper_s": 0.25,
+        "reset_prop_gains": [
+          300,
+          300,
+          300,
+          20,
+          20,
+          20
+        ],
+        "reset_rot_deriv_scale": 10
+      },
+      "source": [
+        "factory_env_cfg.py:45-61",
+        "factory_tasks_cfg.py:112-124",
+        "factory_env.py:635-765,784-886"
+      ],
+      "mujoco_status": "PROPOSED",
+      "mujoco_mapping": "Preserve random variable distribution and frame semantics, IK reject/retry criterion1e-3m/rad, physically close fingers for same simulation duration before episode starts; capture seed/RNG state separately",
+      "equivalence_gap": "Equal seed across different libraries/engines is not identical initial condition. Reset includes auxiliary dynamics outside149-step episode; simply teleporting a welded peg would change experiment."
+    }
+  ],
+  "historical_applied_joint_torque": {
+    "status": "UNKNOWN",
+    "records": 0,
+    "reason": "Source/controller/software target and configured effort limits do not measure solver actual applied joint torque; ImplicitActuator applied_effort is approximate",
+    "evidence": "evidence/g4_i/i2/results/summary.json controller.applied_sim_effort"
+  },
+  "official_mujoco_primary_sources": [
+    {
+      "url": "https://mujoco.readthedocs.io/en/stable/APIreference/APIfunctions.html#mj-jac",
+      "claim": "Point/body/site translational and rotational Jacobians, dense inertia API; exact signature must follow selected installed release",
+      "status": "VERIFIED_DOCUMENTATION_CAPABILITY_NOT_EXECUTED"
+    },
+    {
+      "url": "https://mujoco.readthedocs.io/en/stable/XMLreference.html#body",
+      "claim": "Body inertial/gravity compensation and motor/gear/force range modeling fields exist; mapping remains proposed",
+      "status": "VERIFIED_DOCUMENTATION_CAPABILITY_NOT_EXECUTED"
+    },
+    {
+      "url": "https://mujoco.readthedocs.io/en/stable/modeling.html#solver-parameters",
+      "claim": "Constraint/contact regularization uses MuJoCo solver parameters; no automatic PhysX equivalence",
+      "status": "VERIFIED_DOCUMENTATION_CAPABILITY_NOT_EXECUTED"
+    }
+  ],
+  "unresolved": [
+    {
+      "status": "UNKNOWN",
+      "issue": "Authored original USD joint limits/mimic and robot inertial metadata were subsequently extracted by assets_audit.json. Actual runtime mass-overridden inertia, PhysX cooked collision representation, and faithful MuJoCo equivalents remain unverified; no generic Franka substitution."
+    },
+    {
+      "status": "UNKNOWN",
+      "issue": "Actual historical applied torque and how PhysX DOF max force limits direct feed-forward actuation."
+    },
+    {
+      "status": "PROPOSED",
+      "issue": "Version-pinned MuJoCo torque controller, reset/FD/Jacobian/inertia parity fixtures and implicit finger actuator reconstruction are not implemented in S0."
+    },
+    {
+      "status": "UNKNOWN",
+      "issue": "Contact/friction/compliance equivalence at57µm nominal radial clearance; solver defaults or matching scalar friction do not establish parity."
+    }
+  ],
+  "feasibility": "CONDITIONAL: auditable mathematical controller/interface path exists; no target rollout or dynamics parity established",
+  "post_review_integration": {
+    "asset_metadata_available": true,
+    "source": "evidence/g4_s/s0/assets_audit.json",
+    "note": "This clarifies authored metadata availability after the asset sub-audit; no controller source, configuration, test input or historical torque claim changed."
+  }
+}

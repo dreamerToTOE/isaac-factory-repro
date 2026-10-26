@@ -1,0 +1,219 @@
+{
+  "schema": "g4_s0_delivery_v1",
+  "task": "G4-S0",
+  "engineering_status": "COMPLETE",
+  "decision": "CONDITIONAL",
+  "sim2sim_status": "NOT_RUN_NOT_ASSESSED",
+  "repository": "dreamerToTOE/isaac-factory-repro",
+  "branch": "main",
+  "starting_commit": "280634679633bf127e13349741379b3d38a27a1f",
+  "latest_audited_g4_i2_commit": "85b49ef547e07df063d2efe58457488c99935a70",
+  "checkpoint": {
+    "role": "g2_epoch200_primary",
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+    "bytes": 212889225,
+    "sha256_before_and_after_cpu_metadata_read": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+    "matches_frozen": true,
+    "epoch": 200,
+    "frame": 1638400,
+    "training_seed": 0,
+    "num_training_envs": 64
+  },
+  "target_engine": {
+    "name": "MuJoCo",
+    "version": "3.5.0",
+    "status": "VERIFIED_IMPORT_AND_CANDIDATE_PARSING_ONLY",
+    "physics_steps": 0,
+    "full_factory_model_implemented": false,
+    "full_policy_rollouts": 0
+  },
+  "acceptance_gate": {
+    "second_engine": "VERIFIED",
+    "robot_and_assembly_feasibility": "CONDITIONAL",
+    "original_19d_contract": "VERIFIED",
+    "target_observation_implementation": "PROPOSED",
+    "original_6d_controller": "VERIFIED",
+    "target_controller_implementation": "PROPOSED",
+    "official_success_source_and_boundary_controls": "VERIFIED",
+    "cross_engine_policy_performance": "UNKNOWN",
+    "critical_mismatches_identified": "VERIFIED",
+    "original_factory_conversion_and_redistribution_scope": "UNKNOWN",
+    "original_factory_derivative_public_redistribution": "BLOCKED"
+  },
+  "cpu_tests": {
+    "full": {
+      "command": [
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp=/dev/shm/g4s0_cpu_n6ao2utw/pytest",
+        "--junitxml=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s0/cpu_validation_20261026T_g4s0/full_cpu.xml"
+      ],
+      "exit_code": 0,
+      "passed": 559,
+      "skipped": 1,
+      "failed": 0,
+      "duration_s": 15.85557646700181,
+      "log": "evidence/g4_s/s0/cpu_validation_20261026T_g4s0/full_cpu.txt",
+      "junit": "evidence/g4_s/s0/cpu_validation_20261026T_g4s0/full_cpu.xml"
+    },
+    "new_s0_passed": 25,
+    "system_plot": {
+      "command": [
+        "/usr/bin/python3",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_g4i2_analysis.py::test_plots_are_real_files_and_cannot_overwrite",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp=/dev/shm/g4s0_cpu_cvxrz1dj/pytest",
+        "--junitxml=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s0/cpu_validation_20261026T_g4s0/system_plot.xml"
+      ],
+      "exit_code": 0,
+      "passed": 1,
+      "skipped": 0,
+      "failed": 0,
+      "duration_s": 1.3173895150030148,
+      "log": "evidence/g4_s/s0/cpu_validation_20261026T_g4s0/system_plot.txt",
+      "junit": "evidence/g4_s/s0/cpu_validation_20261026T_g4s0/system_plot.xml"
+    },
+    "unique_cases_passed_including_plot_supplement": 560,
+    "failed": 0
+  },
+  "preservation": {
+    "equal_before_after": true,
+    "tracked_files": 1616,
+    "checkpoint_count": 3,
+    "unrelated_g3v_file_count": 5
+  },
+  "historical_actual_applied_torque": "UNKNOWN",
+  "historical_wall_command_hz": 3.4699399575795047,
+  "simulation_policy_hz": 15,
+  "physics_hz": 120,
+  "decimation": 8,
+  "principal_risks": [
+    "exact Factory asset conversion/public redistribution license scope",
+    "complete table/visual dependency closure",
+    "SDF/concave insertion geometry with bounded conversion error",
+    "runtime mass-overridden inertia and body +0.01I mapping",
+    "raw quaternion sign, TCP/finger Jacobian/M parity",
+    "finger mimic/contact grasp, actual actuator effort/limits",
+    "cross-engine reset/random streams and contact solver differences"
+  ],
+  "restrictions": {
+    "s1_started": false,
+    "s2_started": false,
+    "training_or_finetuning": false,
+    "checkpoints_modified": false,
+    "isaac_sim_started": false,
+    "mujoco_physics_executed": false,
+    "large_packages_installed": false,
+    "substantial_assets_downloaded": false,
+    "original_asset_binaries_redistributed": false,
+    "gearmesh_or_nutthread_started": false,
+    "learning_exam_deferred": true
+  },
+  "negative_evidence": [
+    "default/Factory Python MuJoCo dependency absence in CPU summary",
+    "assets_audit_initial_failed.json",
+    "assets_audit_serialization_failed.json",
+    "Factory license HTTP404 probes in assets_audit.json"
+  ],
+  "s1_entry_conditions": [
+    "per-asset usage/conversion/redistribution authority and full dependency/hash closure",
+    "original coordinate/joint/TCP/finger/body inertia reconstruction with runtime +0.01I and mass overrides",
+    "hole topology/collision error bounds relative to nominal57um radial clearance",
+    "matched-pose FK/J/M,19D/quaternion sign/FD/normalization/reset and source torque parity",
+    "direct actuation/gravity-disable/finger mimic and actual force path checks",
+    "separate explicit G4-S1 authorization"
+  ],
+  "review": "Independent observation, controller and asset read-only reviews completed; no blocking findings.",
+  "report": {
+    "path": "docs/REVIEW_G4_S0.md",
+    "sha256": "46dadab076f4934dd094a83f108c9a83b8c03d5d11b4e736ecaee4a74193dd1b"
+  },
+  "receipts": {
+    "evidence/g4_s/s0/assets_audit.json": {
+      "sha256": "48880ac31be9bb92be6e1ca34820292308b1bc1533b7b91f99130ebd924c951f",
+      "bytes": 291461
+    },
+    "evidence/g4_s/s0/assets_audit.md": {
+      "sha256": "b519958489c18840dbc72f3cd3ebb7a751f0b57c95efc261b704cda37045dd37",
+      "bytes": 9314
+    },
+    "evidence/g4_s/s0/assets_audit_initial_failed.json": {
+      "sha256": "4fff0a6138f0b482aede715d983974d9aeecb8e81addf7caf758e8f53e80dfca",
+      "bytes": 107417
+    },
+    "evidence/g4_s/s0/assets_audit_serialization_failed.json": {
+      "sha256": "83439802862e125acdc7ef4c231f6992c19d46f154aad2833bb6ccc133d94b3b",
+      "bytes": 110123
+    },
+    "evidence/g4_s/s0/controller_audit.json": {
+      "sha256": "e597d8ead6ec1871b6c1fc193bbd321f82c81ac658006289a1c60c5c0b3e9e33",
+      "bytes": 35172
+    },
+    "evidence/g4_s/s0/controller_audit.md": {
+      "sha256": "49523f2632ae7215949cc01c93aaf1c9bf010aecb5a5e4c4800dfcf111207d99",
+      "bytes": 18964
+    },
+    "evidence/g4_s/s0/cpu_validation_20261026T_g4s0/full_cpu.txt": {
+      "sha256": "35c93bb9c0941e6eb3f3849aa66c09ba9ed8081063623fde29eedc7cd9c08264",
+      "bytes": 672
+    },
+    "evidence/g4_s/s0/cpu_validation_20261026T_g4s0/full_cpu.xml": {
+      "sha256": "46fe466325bc42f24f29102efaa212938672bfadc9bc6708ddca2afab9043882",
+      "bytes": 73948
+    },
+    "evidence/g4_s/s0/cpu_validation_20261026T_g4s0/preservation_after.json": {
+      "sha256": "d9225951a9a7db4d09f5e9f2f43065086382b7cf75ab5ce1e75072bf209e098f",
+      "bytes": 309454
+    },
+    "evidence/g4_s/s0/cpu_validation_20261026T_g4s0/preservation_before.json": {
+      "sha256": "d9225951a9a7db4d09f5e9f2f43065086382b7cf75ab5ce1e75072bf209e098f",
+      "bytes": 309454
+    },
+    "evidence/g4_s/s0/cpu_validation_20261026T_g4s0/summary.json": {
+      "sha256": "48b47be41cd83e6263ac5936971757a2b4a05020020fedf137bfd14dc88d9487",
+      "bytes": 4113
+    },
+    "evidence/g4_s/s0/cpu_validation_20261026T_g4s0/system_plot.txt": {
+      "sha256": "b4d6d1b21d25a138737dac32afcbf52010ee319081397f414aaf957ffddbdd63",
+      "bytes": 298
+    },
+    "evidence/g4_s/s0/cpu_validation_20261026T_g4s0/system_plot.xml": {
+      "sha256": "7372e551de7abc6250c5be719604ea71baaa72040da9f1743afbbf212a2c09f7",
+      "bytes": 336
+    },
+    "evidence/g4_s/s0/observation_success_audit.json": {
+      "sha256": "63852061c15daf33233caba0597cfcb9166e9dc685a8a6dfc24a0389caf8ee90",
+      "bytes": 41405
+    },
+    "evidence/g4_s/s0/observation_success_audit.md": {
+      "sha256": "431e27069d62cc0d76eff21ce1f13d7c9bf22cc38166f5f8d36a2af280ea723c",
+      "bytes": 11556
+    },
+    "scripts/audit_g4s0.py": {
+      "sha256": "eee997929dfbca85f153447d1a8f716ca98a4b026d7824829a20cb0882f97b1e",
+      "bytes": 6764
+    },
+    "scripts/g4s0_asset_audit.py": {
+      "sha256": "64f725171ab41330d6b863914ad265cbc029a04928830cd03c99ea4995a8a0f9",
+      "bytes": 19950
+    },
+    "scripts/g4s0_mapping.py": {
+      "sha256": "677bb981478e400b4ded5d5ccb841079db338c5b3d5d0b8e850f433ad1011df5",
+      "bytes": 5180
+    },
+    "tests/test_g4s0_mapping.py": {
+      "sha256": "dd6a811ab7c44bdf02881dcbeb8168474701ee045552043e932c434c60ce725e",
+      "bytes": 10125
+    }
+  },
+  "git_delivery": "Fast-forward-safe push and independent remote-SHA verification required; actual final SHA is reported in delivery response."
+}

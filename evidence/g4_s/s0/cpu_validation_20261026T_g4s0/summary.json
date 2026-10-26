@@ -1,0 +1,102 @@
+{
+  "task": "G4-S0",
+  "starting_commit": "280634679633bf127e13349741379b3d38a27a1f",
+  "engineering_status": "COMPLETE",
+  "decision": "CONDITIONAL",
+  "sim2sim_status": "NOT_RUN_NOT_ASSESSED",
+  "full_cpu": {
+    "command": [
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "tests",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp=/dev/shm/g4s0_cpu_n6ao2utw/pytest",
+      "--junitxml=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s0/cpu_validation_20261026T_g4s0/full_cpu.xml"
+    ],
+    "exit_code": 0,
+    "passed": 559,
+    "skipped": 1,
+    "failed": 0,
+    "duration_s": 15.85557646700181,
+    "log": "evidence/g4_s/s0/cpu_validation_20261026T_g4s0/full_cpu.txt",
+    "junit": "evidence/g4_s/s0/cpu_validation_20261026T_g4s0/full_cpu.xml"
+  },
+  "system_plot": {
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_g4i2_analysis.py::test_plots_are_real_files_and_cannot_overwrite",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp=/dev/shm/g4s0_cpu_cvxrz1dj/pytest",
+      "--junitxml=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s0/cpu_validation_20261026T_g4s0/system_plot.xml"
+    ],
+    "exit_code": 0,
+    "passed": 1,
+    "skipped": 0,
+    "failed": 0,
+    "duration_s": 1.3173895150030148,
+    "log": "evidence/g4_s/s0/cpu_validation_20261026T_g4s0/system_plot.txt",
+    "junit": "evidence/g4_s/s0/cpu_validation_20261026T_g4s0/system_plot.xml"
+  },
+  "current_python": "/usr/bin/python3",
+  "python_version": "3.10.12",
+  "default_python_dependency_availability": {
+    "mujoco": false,
+    "torch": false,
+    "numpy": true,
+    "pxr": false
+  },
+  "factory_python": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+  "preservation": {
+    "equal_before_after": true,
+    "tracked_files": 1616,
+    "checkpoint_count": 3,
+    "unrelated_g3v_file_count": 5
+  },
+  "audit_receipts": {
+    "assets_audit.json": {
+      "path": "evidence/g4_s/s0/assets_audit.json",
+      "sha256": "48880ac31be9bb92be6e1ca34820292308b1bc1533b7b91f99130ebd924c951f"
+    },
+    "controller_audit.json": {
+      "path": "evidence/g4_s/s0/controller_audit.json",
+      "sha256": "e597d8ead6ec1871b6c1fc193bbd321f82c81ac658006289a1c60c5c0b3e9e33"
+    },
+    "observation_success_audit.json": {
+      "path": "evidence/g4_s/s0/observation_success_audit.json",
+      "sha256": "63852061c15daf33233caba0597cfcb9166e9dc685a8a6dfc24a0389caf8ee90"
+    }
+  },
+  "duration_s": 19.87564550800016,
+  "restrictions": {
+    "physics_steps": 0,
+    "rollouts": 0,
+    "training": false,
+    "packages_installed": false,
+    "checkpoint_modified": false,
+    "s1_started": false,
+    "s2_started": false
+  },
+  "unresolved": [
+    "exact Factory asset conversion/public redistribution license scope",
+    "complete table/visual dependency closure",
+    "SDF/concave insertion geometry with bounded conversion error",
+    "runtime mass-overridden inertia and body +0.01I mapping",
+    "raw quaternion sign, TCP/finger Jacobian/M parity",
+    "finger mimic/contact grasp, actual actuator effort/limits",
+    "cross-engine reset/random streams and contact solver differences"
+  ],
+  "source_sha256": {
+    "scripts/audit_g4s0.py": "eee997929dfbca85f153447d1a8f716ca98a4b026d7824829a20cb0882f97b1e",
+    "scripts/g4s0_mapping.py": "677bb981478e400b4ded5d5ccb841079db338c5b3d5d0b8e850f433ad1011df5",
+    "scripts/g4s0_asset_audit.py": "64f725171ab41330d6b863914ad265cbc029a04928830cd03c99ea4995a8a0f9",
+    "tests/test_g4s0_mapping.py": "dd6a811ab7c44bdf02881dcbeb8168474701ee045552043e932c434c60ce725e"
+  },
+  "final_review_note": "Controller unresolved metadata wording reconciled with later asset extraction; audit receipts updated to reviewed additions. Runtime/source/test code and historical protected files unchanged."
+}

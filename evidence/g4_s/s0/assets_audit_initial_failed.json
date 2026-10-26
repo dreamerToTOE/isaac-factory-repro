@@ -1,0 +1,2531 @@
+{
+  "candidate_inventories": [
+    {
+      "all_direct_model_references_exist": true,
+      "license": {
+        "bytes": 10173,
+        "exists": true,
+        "md5": "e23fadd6ceef8c618fc1c65191d846fa",
+        "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/LICENSE",
+        "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+      },
+      "model_files": [
+        {
+          "bytes": 4547,
+          "exists": true,
+          "md5": "97bde2a661a83156dee64cd09bc76705",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/hand.xml",
+          "sha256": "d2a6539d0fd7c55c75c14f11c78f04505ee33f31d93e6112e3ad7120e5ee786a"
+        },
+        {
+          "bytes": 4222,
+          "exists": true,
+          "md5": "f94dc2175facc8aee08b89459e56d51d",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/mjx_hand.xml",
+          "sha256": "cf1d16467d4bd5c69f77cdcc5af2e7e1ad957416661f20d3c4029b73622b4068"
+        },
+        {
+          "bytes": 14387,
+          "exists": true,
+          "md5": "d015737c30e105c332e875cdcacbaa4a",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/mjx_panda.xml",
+          "sha256": "8c0f15b755f686a09f04a2cae4afa3b8444d61d3318ea36cee87cc8bb98f9098"
+        },
+        {
+          "bytes": 10468,
+          "exists": true,
+          "md5": "5e1a6038084a79e3fbfdd47542b2eef5",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/mjx_panda_nohand.xml",
+          "sha256": "92a6ff0be23a90f3a5888e57067f0ecad1b2bda95c58aa30c4284750da97d075"
+        },
+        {
+          "bytes": 1163,
+          "exists": true,
+          "md5": "71d5a5711d84ee5395d100460c411844",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/mjx_scene.xml",
+          "sha256": "7877363e91409da51973cc042209b34257354c17c8e7b4eccde8353e88398af7"
+        },
+        {
+          "bytes": 1180,
+          "exists": true,
+          "md5": "8607451a18a17d7b7faa1d102752fe3d",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/mjx_single_cube.xml",
+          "sha256": "333997ddcb065ff94871247fb2b96e1847119549bfba7a6db645fdb6cdc5199b"
+        },
+        {
+          "bytes": 14438,
+          "exists": true,
+          "md5": "b2f92e110758b6cb594a3a4d0ad0ddbb",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/panda.xml",
+          "sha256": "96ad67da03710f17f798c9478fd9e9efdf24a3bf8359f05e456dd9fb158ea273"
+        },
+        {
+          "bytes": 11246,
+          "exists": true,
+          "md5": "a8293230ac2661b34c2653d38223ff0a",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/panda_nohand.xml",
+          "sha256": "e7090a5e2384b18a223ef532d98bf914f7f9a6b74dc8bc9f74c8291201074071"
+        },
+        {
+          "bytes": 819,
+          "exists": true,
+          "md5": "978114676ca0c2506172db8fe145af7a",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/scene.xml",
+          "sha256": "4b08c2e5108f0ed67fa689e096e58850210130c3e6ef889b1e22822d369fd8c3"
+        }
+      ],
+      "origin": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda",
+      "readme": {
+        "bytes": 2908,
+        "exists": true,
+        "md5": "d19167d418793538999247a9123f8e17",
+        "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/README.md",
+        "sha256": "e12684556d0154bdf2a9e77e7009ed680cd06ca89904f9e6303050f9fe59300c"
+      },
+      "referenced_geometry": [
+        {
+          "bytes": 87872,
+          "exists": true,
+          "md5": "986967e4b956b8108a62956b703b9a00",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/finger_0.obj",
+          "sha256": "215098c0fcdf7192f6c503a37cf49e3efecf8a9e1320f02b17c5584d89cc5b2c"
+        },
+        {
+          "bytes": 64651,
+          "exists": true,
+          "md5": "50023a094cfd69f08fe5579453511079",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/finger_1.obj",
+          "sha256": "cf239e9aca26bba09dbbf1c544c47d87cfc9a2f0637c8bb786af750b6d4eca44"
+        },
+        {
+          "bytes": 10084,
+          "exists": true,
+          "md5": "2f042d5ab7ddc72b59ae9464b1ba521a",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/hand.stl",
+          "sha256": "94493e94f30fe940f2c8ca2f155c3bbe67bbff406d3edf5e261670d2f0f6e2ed"
+        },
+        {
+          "bytes": 9091,
+          "exists": true,
+          "md5": "a8c4b35b72afb3c0ed74e30e5a9271b0",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/hand_0.obj",
+          "sha256": "b94aab901086f85df04c019b30f43bf9aa23a7ad0443ec80a8c14662a41cabd2"
+        },
+        {
+          "bytes": 121863,
+          "exists": true,
+          "md5": "7d71885ced900f98e5f9617c4ac3da35",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/hand_1.obj",
+          "sha256": "cd76f7494bb314406a1819c46eb826ee254894f87235714f604a470653d9badb"
+        },
+        {
+          "bytes": 596001,
+          "exists": true,
+          "md5": "b1417e772b3d7ffecbb7fdacb28d9ee7",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/hand_2.obj",
+          "sha256": "e0f44a71712afa5b98eb20355eff17763d3e2e19f459b2bef19abed3727e64b3"
+        },
+        {
+          "bytes": 902145,
+          "exists": true,
+          "md5": "c9f0fb4c27b3a978155c1bc17e26f031",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/hand_3.obj",
+          "sha256": "a431a06d99e88a1b322b3122a01424ee7704daeaad0bc343b90b9604f014ad0c"
+        },
+        {
+          "bytes": 151988,
+          "exists": true,
+          "md5": "2498bdcbe5a3706c845a6546d25d3357",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/hand_4.obj",
+          "sha256": "21f96ef6a8de082e41b1ea9834f1043de359e5d60305541bcb63539581f53bff"
+        },
+        {
+          "bytes": 10084,
+          "exists": true,
+          "md5": "8083bb663278b89c9a32859a24ab9ec6",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link0.stl",
+          "sha256": "dfc6d94330de8ddb005b311bfdba9f3b8e1aa7c256b71592ee7ff32cb9a9a5aa"
+        },
+        {
+          "bytes": 296497,
+          "exists": true,
+          "md5": "446ef6ca2303e23149fe86d5673e418a",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link0_0.obj",
+          "sha256": "6b9f41a4c203540daaeb7a33cc3d0d6c6a32dc8bba187074eeaf97b3e36b3f9c"
+        },
+        {
+          "bytes": 103978,
+          "exists": true,
+          "md5": "83319508250ac41989943b2bf0ef1963",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link0_1.obj",
+          "sha256": "57673d2ee2a9db2e10c8986ae57c56a7c39c012b60fd26d7d8549553b664a5ed"
+        },
+        {
+          "bytes": 343308,
+          "exists": true,
+          "md5": "9807358b28d520635420998ccf12e64e",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link0_10.obj",
+          "sha256": "c9198b9d8534d628d097b0f2b239bb30343353182df098ce0d9db6bc13326848"
+        },
+        {
+          "bytes": 22295,
+          "exists": true,
+          "md5": "fa9426eb40f2171327a5d49112fd7c2b",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link0_11.obj",
+          "sha256": "f0adec78d6677b7799d25121981270e8bfe119b5c18d08a91ee37a54ad75f65c"
+        },
+        {
+          "bytes": 590892,
+          "exists": true,
+          "md5": "2c4c7bd4f3f8aa3c04159f4a87b106f7",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link0_2.obj",
+          "sha256": "1ca435a2a87a9608a146a47955724d43dd7ce10fc3dd3018800aa98f8ba86e05"
+        },
+        {
+          "bytes": 47588,
+          "exists": true,
+          "md5": "7343844e6bb19590d3eba7c25be1c2c6",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link0_3.obj",
+          "sha256": "3e9c6334d2b3b47944af3458ee5f20519abc20fe7ee23063bb53405ccab28046"
+        },
+        {
+          "bytes": 211200,
+          "exists": true,
+          "md5": "6e4f6f1550df5208615b08be95415eb7",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link0_4.obj",
+          "sha256": "215d25789704936120f119c0bc1cc7f68516dd3f8f1df61457b71acac3873f26"
+        },
+        {
+          "bytes": 17023,
+          "exists": true,
+          "md5": "029af1ae6a4006cea66d84c3786c816f",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link0_5.obj",
+          "sha256": "9361b104e93743045107aa5b15fb1a0835ba9c1f355aae71f56403cf6a9c33f6"
+        },
+        {
+          "bytes": 30699,
+          "exists": true,
+          "md5": "b2957d48a3f76cd37b89858ef2f191b1",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link0_7.obj",
+          "sha256": "2dc0b8ebbbc80e4c065d71e195adbc384f673438641fac82b07b801b4d2837cb"
+        },
+        {
+          "bytes": 3263194,
+          "exists": true,
+          "md5": "eb3f5bbc1ab5a4ca51f32e94e0a0e4a0",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link0_8.obj",
+          "sha256": "3b8c436999db5586b8eb47bed2b0aa7de6993868b2681b4c04246eeac42fdb7a"
+        },
+        {
+          "bytes": 105629,
+          "exists": true,
+          "md5": "4f7487a8e06c7bccf6a41e01673e4f00",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link0_9.obj",
+          "sha256": "45178f97d2b5da6bce11f610212c4ef7d08c73db33a4fc38e1b7f66b93d023f5"
+        },
+        {
+          "bytes": 3274995,
+          "exists": true,
+          "md5": "1572a39c9edabe930507feeac5d45938",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link1.obj",
+          "sha256": "51091e776b16babdbe2f3849b5c041f921d1f11dd94ac19a0f1c81abf496fbae"
+        },
+        {
+          "bytes": 15084,
+          "exists": true,
+          "md5": "ef4f4162d69b67b3f4697e1093527a04",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link1.stl",
+          "sha256": "e41a39a94108fcf56aacff603fc91ec80541f4c1af17b51a0de5617f5566e6d2"
+        },
+        {
+          "bytes": 3295608,
+          "exists": true,
+          "md5": "e9b953e03ca2dc08cc84666785f12112",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link2.obj",
+          "sha256": "5c9f8e715de52c3eb71b475de35993b3b96081e02abea9f28c414768877fc59b"
+        },
+        {
+          "bytes": 15084,
+          "exists": true,
+          "md5": "b73d7abd7792815b31e256bd9038300b",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link2.stl",
+          "sha256": "370f7605a0fae3529db169ded50f52f171024aa792d4d773bc84197301f6a039"
+        },
+        {
+          "bytes": 15084,
+          "exists": true,
+          "md5": "f3cdd5a440e06001aad7c8e15509da05",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link3.stl",
+          "sha256": "0a8d638b9349c6c0eefc4e888636ac4838c4b27170f18a51699321118af709c1"
+        },
+        {
+          "bytes": 3046804,
+          "exists": true,
+          "md5": "542eb8ede0561d3e795fa7f33e0ce613",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link3_0.obj",
+          "sha256": "ce2da87f51708e11b189249d41401065dabe89a06e251185a06cef4d5ff27178"
+        },
+        {
+          "bytes": 65260,
+          "exists": true,
+          "md5": "13c34cc344181e22f814ede5734ce634",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link3_1.obj",
+          "sha256": "2880b7753a7173f38fa87ee21da4dfc7fa7be46fbe07bac5aef9e128513cb118"
+        },
+        {
+          "bytes": 83591,
+          "exists": true,
+          "md5": "c80c8332014bc697f35c5ef835c80902",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link3_2.obj",
+          "sha256": "670cff81ae84693769ca4ae658c154cf909d81167e7c8d22b70ea977f2504efa"
+        },
+        {
+          "bytes": 457684,
+          "exists": true,
+          "md5": "a24d94b38e8cb570df56e444cedaee65",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link3_3.obj",
+          "sha256": "30ede0c812efd0e0b767d134a4eae0b84e0fa407bb6325a5a555e0569b3a3ffd"
+        },
+        {
+          "bytes": 15084,
+          "exists": true,
+          "md5": "d6a1ae176777b86aa6828abfcdbad134",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link4.stl",
+          "sha256": "0180ebb5772ec9840cb049750cffb29a9ddc90311752a16ea34757782ef9e48d"
+        },
+        {
+          "bytes": 83486,
+          "exists": true,
+          "md5": "d87bf9202dfc73bbca6c9a545579e59e",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link4_0.obj",
+          "sha256": "443bf6d178177cf347951ecf107ccd10ca444e605e375b67304579e5f948806f"
+        },
+        {
+          "bytes": 3148001,
+          "exists": true,
+          "md5": "de46a294b4614a7d020728bfa7f1e8b9",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link4_1.obj",
+          "sha256": "ca935ec7cc8b3f0e86aa079c76b0b3bf593b1e9830bab0fa7131ac51577c74f0"
+        },
+        {
+          "bytes": 455522,
+          "exists": true,
+          "md5": "5a3972e82700adfa35d4e6b0248c30de",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link4_2.obj",
+          "sha256": "c89caf26d379c35bb9e191ee2d91d09ab29ecc792b48d8bc10b39e5b38222175"
+        },
+        {
+          "bytes": 67497,
+          "exists": true,
+          "md5": "0cb8914c3ee04f03679fd864e3bccca3",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link4_3.obj",
+          "sha256": "1495d17f45bdb230cf58b0beef9da4e8c9cfe76a3d2d38da89017efe5e093136"
+        },
+        {
+          "bytes": 824158,
+          "exists": true,
+          "md5": "2c7e05e88e3a1dc3b4eeda8b5b1ad4bd",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link5_0.obj",
+          "sha256": "a3238b8f2af0f2eb66d9fe63dc5d41ac52d5d38507241b5ed10e3cb019ab3e71"
+        },
+        {
+          "bytes": 63174,
+          "exists": true,
+          "md5": "74ad13ec43aec672922f61a2b8f814b0",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link5_1.obj",
+          "sha256": "9d994bbf83ec241e301b5197a6846da13f2a4a0582edb2c0f76962c5549649d6"
+        },
+        {
+          "bytes": 3856621,
+          "exists": true,
+          "md5": "92a426152e1c3f65e70521711aa59975",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link5_2.obj",
+          "sha256": "83b4ffe9f772cd7fe182e98640650eebc899aaf01842656574b0416c90dd40a4"
+        },
+        {
+          "bytes": 3861,
+          "exists": true,
+          "md5": "cbb36aa0246d2d54ab904c3e4f68a466",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link5_collision_0.obj",
+          "sha256": "3e5aa75fb13f193555c3dfb999df91d81df25006a5c3af5338297d78137c129b"
+        },
+        {
+          "bytes": 2412,
+          "exists": true,
+          "md5": "f92c5a61be5b533ec2b86a9dcf4633e0",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link5_collision_1.obj",
+          "sha256": "87cd8f621071df010f774cbde789282b8463840dfe704f8bdfa2e29be0142e15"
+        },
+        {
+          "bytes": 3786,
+          "exists": true,
+          "md5": "5ffdaa2a70f7a1389d6a1f8a7e2f8a97",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link5_collision_2.obj",
+          "sha256": "823ab6c8f7b1d79e0844fa071d82a03499ff68e34fddb1ba3451032c22736040"
+        },
+        {
+          "bytes": 10084,
+          "exists": true,
+          "md5": "834c823996f5ba11cd9c2843ff024138",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6.stl",
+          "sha256": "20b768e99a0e0440b5754dcca108016434e57937cc356acd9c352ccd3cb27f77"
+        },
+        {
+          "bytes": 157563,
+          "exists": true,
+          "md5": "89b1669644823693fead5dcb6ecc5f35",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_0.obj",
+          "sha256": "0504c70ebf1b284ee8faae7dcb896b8830bc672a6552015dd5dbd121fa031fb9"
+        },
+        {
+          "bytes": 27106,
+          "exists": true,
+          "md5": "ef37762c26e255812c2f0e4a5bf7f0d0",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_1.obj",
+          "sha256": "45f7ca77695198b6d86ec2417ad4e42e6275044f0f96266699ee8e1057757ac1"
+        },
+        {
+          "bytes": 368502,
+          "exists": true,
+          "md5": "5a759dd45f50b7e8f820792f66edd147",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_10.obj",
+          "sha256": "365f26c21d10332cab8d8704645cb46930c30b3085956f2d097498c793f24db4"
+        },
+        {
+          "bytes": 32653,
+          "exists": true,
+          "md5": "6f30d499f069aa070f49901c17426ed5",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_11.obj",
+          "sha256": "8ae61e08b3ad064f25bbf03b22e59cc15d65883b5a7ce92711aff29df2493901"
+        },
+        {
+          "bytes": 3894,
+          "exists": true,
+          "md5": "9f863e893fb0190b321cb42ee2081f06",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_12.obj",
+          "sha256": "f28d1bfd62b0244ffd19fb35fe9edefdf583d3c9167db944e87185d919e1d021"
+        },
+        {
+          "bytes": 3798,
+          "exists": true,
+          "md5": "6397cf2bbe85446811ca47093eef4500",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_13.obj",
+          "sha256": "0a55fa92dccb261d07200e6565fca4c850fd17f0c1ecf38821c0b97d51796c7d"
+        },
+        {
+          "bytes": 444469,
+          "exists": true,
+          "md5": "284750132855c4fa48dbde368cee3080",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_14.obj",
+          "sha256": "750ae3ee4781e62e3a045c662195247b03f6642b05aa93104f08258e5f6eba26"
+        },
+        {
+          "bytes": 668552,
+          "exists": true,
+          "md5": "be233dddb1e90e2eb520e2acbaacbcee",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_15.obj",
+          "sha256": "5999c1c2497a004a7c4bbe034cdf13744f839d85ae7a11b1bc386c48a3e642e6"
+        },
+        {
+          "bytes": 3675358,
+          "exists": true,
+          "md5": "3bca7b7c6969aeb7a3b55f0b4390e3b2",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_16.obj",
+          "sha256": "551d7a8b37c53e7a152d008b4e36992e5b5abe74a4be18b57ee6319c27def09f"
+        },
+        {
+          "bytes": 9916,
+          "exists": true,
+          "md5": "ca37432622587d27ed2f632a041c586b",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_2.obj",
+          "sha256": "e54eee4d8232947ee8af65afd5a067e09dac2da6e7e585cb1dccb65496457da0"
+        },
+        {
+          "bytes": 11943,
+          "exists": true,
+          "md5": "505e03ff00f48f7de7cfdacde95a5439",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_3.obj",
+          "sha256": "d4f6a25ef32fa1fa4734146981994ee760232cb077c80fea6487d78a077c7f27"
+        },
+        {
+          "bytes": 13846,
+          "exists": true,
+          "md5": "c60beab8228538640bec19edacea1577",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_4.obj",
+          "sha256": "be353480fe71d46f7a96f0a3cbb7e112caaf8d88368826f321a36a253c8749b2"
+        },
+        {
+          "bytes": 11841,
+          "exists": true,
+          "md5": "0aef2129725c6f05b58f0ac75feaa5eb",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_5.obj",
+          "sha256": "7c87664623c3e1a6cb330db273227a69626dc5e53b4caff1d4ee7911eb3340c6"
+        },
+        {
+          "bytes": 12597,
+          "exists": true,
+          "md5": "c44e44817d07e53d8b2dd291d56832d9",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_6.obj",
+          "sha256": "8fbc031e0d07b795ebf99115c75223141caaba317cab569159f3d477a7821681"
+        },
+        {
+          "bytes": 4382,
+          "exists": true,
+          "md5": "038b988d12fdafd4792a186a98e5b979",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_7.obj",
+          "sha256": "7dc5ebb799fe281aab27d6e84e7a4efa0a8e42da2369ec83de3ea3f206f62d73"
+        },
+        {
+          "bytes": 9131,
+          "exists": true,
+          "md5": "e79d2c8e48cf817ae48a83b788283269",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_8.obj",
+          "sha256": "e3f77381817a341030f9dcc4c4aa7c559f80411b453fd87eb0fefecca82151bf"
+        },
+        {
+          "bytes": 17616,
+          "exists": true,
+          "md5": "0033454cd571f765b57d464c732d11da",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link6_9.obj",
+          "sha256": "25a56ea9b02a03b6cb5a81f31c54f54d0185e1a0b3937c37e4289d896e50215a"
+        },
+        {
+          "bytes": 10084,
+          "exists": true,
+          "md5": "76aadc76234b6edcaa1607f75d5723fe",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link7.stl",
+          "sha256": "92ac6afcf7574c034d3170d8a68e95ac9048ab9d0dd5bbd8311b86e551b9ab1c"
+        },
+        {
+          "bytes": 1362355,
+          "exists": true,
+          "md5": "d5310ced11cb5b84f8cea0ac50351121",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link7_0.obj",
+          "sha256": "04586b0bde011715cfc22072ac72fe0717eb4d4817bcf665987ce6cd88eb2b93"
+        },
+        {
+          "bytes": 121358,
+          "exists": true,
+          "md5": "69abbc6f35675faa68bcf235a4e6b154",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link7_1.obj",
+          "sha256": "c3f72289f394c9d6749a4a327fb11f05b203c37c95032c92f28019b40ebe7e00"
+        },
+        {
+          "bytes": 208907,
+          "exists": true,
+          "md5": "ce187486be50b29c8892f59bd00f2351",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link7_2.obj",
+          "sha256": "d2faecedb304d0989040d082410378dc949dbbda23bd18c05134f08aae984db5"
+        },
+        {
+          "bytes": 123684,
+          "exists": true,
+          "md5": "3a1df6171717df6cd8174988723fc80a",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link7_3.obj",
+          "sha256": "b62d87c4d4bdb7b281ed341d347c39dad0e50bf36aed8ac11d050073701d5f70"
+        },
+        {
+          "bytes": 85732,
+          "exists": true,
+          "md5": "cf3aaa55a8c82a3d7943b0b707691785",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link7_4.obj",
+          "sha256": "cb78ccb61fd4ad6c7bff4c4d2e6cb41e1964a5a3e1a28e67c0c6202371cfc018"
+        },
+        {
+          "bytes": 226402,
+          "exists": true,
+          "md5": "51d1f125f21a63d0045afe8943217022",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link7_5.obj",
+          "sha256": "099071d3090b51471ba52f4f90814fd3089f4975d196e4d488117073d0bfe491"
+        },
+        {
+          "bytes": 99900,
+          "exists": true,
+          "md5": "19214d75d8aa9abfa3b16d6e4eec9c8e",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link7_6.obj",
+          "sha256": "99469e2d95ab74ce0292f2f16954c87a8a7dc16652e62e970fe37c94330a81bb"
+        },
+        {
+          "bytes": 792162,
+          "exists": true,
+          "md5": "92cfcbd593f208a0bf3ae1474a5d027e",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/assets/link7_7.obj",
+          "sha256": "426c3db8a19373f3dc73d4bec672e948121b2914c10e2e7b9c7ea80643a19e54"
+        }
+      ]
+    },
+    {
+      "all_direct_model_references_exist": true,
+      "license": {
+        "bytes": 12927,
+        "exists": true,
+        "md5": "8db2366dbbe2f99a82e4d52cdb09d5b0",
+        "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/LICENSE",
+        "sha256": "5e15554a918bf661583d7df7a1014177be4fed561532aaaee852dca06c71821a"
+      },
+      "model_files": [
+        {
+          "bytes": 8843,
+          "exists": true,
+          "md5": "8072b506060b89a782e50f770c004ebc",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/fr3.xml",
+          "sha256": "8f33d865ea6fb9596bea5cc242c8de43dbf3dd372e323b44e229e7840fecd47d"
+        },
+        {
+          "bytes": 815,
+          "exists": true,
+          "md5": "ca24950f734e290b290901898f0d3b2a",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/scene.xml",
+          "sha256": "8f17f883872d6c95b63239bd82ca4374771deca9949b8fc9577356209f662ebe"
+        }
+      ],
+      "origin": "/home/ubuntu2004/mujoco_menagerie/franka_fr3",
+      "readme": {
+        "bytes": 1767,
+        "exists": true,
+        "md5": "c790771bf243f4fbd7896baf3934eae8",
+        "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/README.md",
+        "sha256": "19c8ad2e78fb0d046bd9db23a64448a81f046d5b4fe0bdd0eeebeec6759fab41"
+      },
+      "referenced_geometry": [
+        {
+          "bytes": 10084,
+          "exists": true,
+          "md5": "8083bb663278b89c9a32859a24ab9ec6",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link0.stl",
+          "sha256": "dfc6d94330de8ddb005b311bfdba9f3b8e1aa7c256b71592ee7ff32cb9a9a5aa"
+        },
+        {
+          "bytes": 1444419,
+          "exists": true,
+          "md5": "8958d2611ac0e29f7d5b4dfd7a258bcb",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link0_0.obj",
+          "sha256": "c830c25874a8a5736580cfce6f247fd145782d0b050fa424b00dd8194d8b2872"
+        },
+        {
+          "bytes": 134554,
+          "exists": true,
+          "md5": "a9eacf4a9647d855733c305a761ab373",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link0_1.obj",
+          "sha256": "12f0affb9b540574f28ddf579413455a4728a093498457c9408539c31e2efcb8"
+        },
+        {
+          "bytes": 949120,
+          "exists": true,
+          "md5": "95bcb129eb14536eec8cada2c074b442",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link0_2.obj",
+          "sha256": "19a4d2fd6fef4fa09e109349bdaa315a00a00b17c814392902665bd92217f94c"
+        },
+        {
+          "bytes": 2281227,
+          "exists": true,
+          "md5": "d7e2b4254993a7328fa5125c45f9fbf5",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link0_3.obj",
+          "sha256": "ed22c0de7adbc10618321715e047d1d9a36acca3260bc9497acd3ebda998e4e0"
+        },
+        {
+          "bytes": 291361,
+          "exists": true,
+          "md5": "c93bab77ec35ea42b1c12ed611de01b8",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link0_4.obj",
+          "sha256": "bc99c6e6b4752daa010ec2ac4ab38457eca0a1b75fcb4a60139b8200e186454d"
+        },
+        {
+          "bytes": 2729951,
+          "exists": true,
+          "md5": "e47b43a2ce5ed6b9f53611ad1a7422e4",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link0_5.obj",
+          "sha256": "dbccb46d8a3bfd602cd110a0bf69036e42661ec89c0074f18dc10dbdd2c0325e"
+        },
+        {
+          "bytes": 1448529,
+          "exists": true,
+          "md5": "2c960a1f36ad93618e3790b36a3900d3",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link0_6.obj",
+          "sha256": "9205596427463353249ab5acc7c7b4f5eb8be358527cd9e229b656b16f5bd1fe"
+        },
+        {
+          "bytes": 862466,
+          "exists": true,
+          "md5": "cf832fe81d6368810042e96796e4b899",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link1.obj",
+          "sha256": "a9e73987b774f3fb76ec640c2f6e172b128736363792f1697a13d7795f745663"
+        },
+        {
+          "bytes": 15084,
+          "exists": true,
+          "md5": "ef4f4162d69b67b3f4697e1093527a04",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link1.stl",
+          "sha256": "e41a39a94108fcf56aacff603fc91ec80541f4c1af17b51a0de5617f5566e6d2"
+        },
+        {
+          "bytes": 853861,
+          "exists": true,
+          "md5": "46332083cb2f910e3a32508558f23c87",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link2.obj",
+          "sha256": "1818f1eed57552d006a3e9353a670a39c271ac67833274efcee2403db7e4fa92"
+        },
+        {
+          "bytes": 15084,
+          "exists": true,
+          "md5": "b73d7abd7792815b31e256bd9038300b",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link2.stl",
+          "sha256": "370f7605a0fae3529db169ded50f52f171024aa792d4d773bc84197301f6a039"
+        },
+        {
+          "bytes": 15084,
+          "exists": true,
+          "md5": "f3cdd5a440e06001aad7c8e15509da05",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link3.stl",
+          "sha256": "0a8d638b9349c6c0eefc4e888636ac4838c4b27170f18a51699321118af709c1"
+        },
+        {
+          "bytes": 954393,
+          "exists": true,
+          "md5": "46c1cd3ef4378f98d08985f734d5bd96",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link3_0.obj",
+          "sha256": "d15c6360be859d55ed1e0d5b08317c4c26d5b3a2a4743c04faf4cc07080f5c9a"
+        },
+        {
+          "bytes": 2148256,
+          "exists": true,
+          "md5": "dfbc0f999cc43e471628f7f11bc2b0b0",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link3_1.obj",
+          "sha256": "89c2c02bdb1c5175d42c5181b4dcc0bb282fab1c5a0c2f99183c156ad45c2f6d"
+        },
+        {
+          "bytes": 15084,
+          "exists": true,
+          "md5": "d6a1ae176777b86aa6828abfcdbad134",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link4.stl",
+          "sha256": "0180ebb5772ec9840cb049750cffb29a9ddc90311752a16ea34757782ef9e48d"
+        },
+        {
+          "bytes": 957444,
+          "exists": true,
+          "md5": "7567da6bed5bb5e406d307211525dd57",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link4_0.obj",
+          "sha256": "8da93d2b65258890be3dfaa39f3cef5acd3d85e7e4e515eb6eb7e1284c3af795"
+        },
+        {
+          "bytes": 2145586,
+          "exists": true,
+          "md5": "e334796181df6f5472f46a244616b388",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link4_1.obj",
+          "sha256": "0428a185f74edb3a23c81d71adc9269c8b63f73805f9d210960a5d425fee060d"
+        },
+        {
+          "bytes": 15084,
+          "exists": true,
+          "md5": "269021cf4269ccbbad2fb2ef1e5ecb3b",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link5.stl",
+          "sha256": "dd17e688c7870e722283525879643d53a74c0024d328b0e14b034b54c8b6c31a"
+        },
+        {
+          "bytes": 1235806,
+          "exists": true,
+          "md5": "f3f5cff28dcbfde27e259e7f5f824e5f",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link5_0.obj",
+          "sha256": "bcc32346b6558d8a1c42594b6988d4f6f68ece2e0a769c28b0242d5b398e1f86"
+        },
+        {
+          "bytes": 186395,
+          "exists": true,
+          "md5": "abe1d33e5beb72a062d37c46b2be3848",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link5_1.obj",
+          "sha256": "d2ef3af3be96ebb7c3f78cf3cedbdfb36b375db8dc32068c5dca613d9086e5e5"
+        },
+        {
+          "bytes": 2847962,
+          "exists": true,
+          "md5": "4ab2191879ea561a189b9daf83c86ad5",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link5_2.obj",
+          "sha256": "a897831482eed642e5d441d1a1abf0ede89d37672f8168ce2cd40d620e25daca"
+        },
+        {
+          "bytes": 10084,
+          "exists": true,
+          "md5": "834c823996f5ba11cd9c2843ff024138",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link6.stl",
+          "sha256": "20b768e99a0e0440b5754dcca108016434e57937cc356acd9c352ccd3cb27f77"
+        },
+        {
+          "bytes": 544,
+          "exists": true,
+          "md5": "f5800a95e9543af1881c711307fbe366",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link6_0.obj",
+          "sha256": "f2a77f8890b3c24de62c6f23c2c63e59cb95b0e3986741d00ac12ec733156635"
+        },
+        {
+          "bytes": 15225,
+          "exists": true,
+          "md5": "ef1593f5f9bacdd6745167a1c6afa89e",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link6_1.obj",
+          "sha256": "4165ccedf27ec576c8fe3ec86702a43cbdacfb2a25328f6762721a92d22ca8fc"
+        },
+        {
+          "bytes": 2447199,
+          "exists": true,
+          "md5": "07b3d1efd8e402b5a4e9c2dfa3d6104e",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link6_2.obj",
+          "sha256": "1111395c7a1c4a1c803e35969fb4cdd5a183a21292a0da5f0519f6d684083445"
+        },
+        {
+          "bytes": 23993,
+          "exists": true,
+          "md5": "b91def04ca3a0f10467f28d465f6fc35",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link6_3.obj",
+          "sha256": "86fc49381273ccc0079b1f7ce5a77ce363e85ef4df5ebcf2b07c1ae6173043e6"
+        },
+        {
+          "bytes": 1378,
+          "exists": true,
+          "md5": "63a1347b7d807f9571ed01c6ba361e48",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link6_4.obj",
+          "sha256": "ed3f2d2a05b7d7704f4d04f38b99ce59792a8ef79e2f989567a0319a9f029599"
+        },
+        {
+          "bytes": 345691,
+          "exists": true,
+          "md5": "a9bc34676678f5c65c3e93eec4b31327",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link6_5.obj",
+          "sha256": "435abeff7bded0c6e9af1e3f98857413fd3964a65c138efc9d99703d9dfffbbb"
+        },
+        {
+          "bytes": 3762367,
+          "exists": true,
+          "md5": "642aa5da664f8bf0484b238a0ef1825c",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link6_6.obj",
+          "sha256": "b76323550be892e32482f5dee5ca0631b080cf6543404495961834de19f89e71"
+        },
+        {
+          "bytes": 13910,
+          "exists": true,
+          "md5": "cca66a79b290c107a5e53efc979bd90a",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link6_7.obj",
+          "sha256": "5189566a36197a91792e8704f9dd0097e63a1141c5aca72427fb977d4389c72a"
+        },
+        {
+          "bytes": 10084,
+          "exists": true,
+          "md5": "76aadc76234b6edcaa1607f75d5723fe",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link7.stl",
+          "sha256": "92ac6afcf7574c034d3170d8a68e95ac9048ab9d0dd5bbd8311b86e551b9ab1c"
+        },
+        {
+          "bytes": 887197,
+          "exists": true,
+          "md5": "510a12aa2a7bb10769fba85e56b41a30",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link7_0.obj",
+          "sha256": "bc0953056e78a063c0de7c81f7ba320b74f7957ee5e7da0786e678be64769ab2"
+        },
+        {
+          "bytes": 933413,
+          "exists": true,
+          "md5": "f4b1c45d502c4c3e9bcfbb0a5d7944f2",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link7_1.obj",
+          "sha256": "bab975d59b724a0fac020d80c4483b77d29b9217485f0aae0b866a1b70b56fad"
+        },
+        {
+          "bytes": 2409912,
+          "exists": true,
+          "md5": "ca2bcc537632ecff1a3698edce604840",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link7_2.obj",
+          "sha256": "7f7b27bab891757731d78c0b717a1da3fc48cebb6db5d3cd37994d768ce9b509"
+        },
+        {
+          "bytes": 1310980,
+          "exists": true,
+          "md5": "a0bf6d12156bfc93dbd6044339108b9a",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/assets/link7_3.obj",
+          "sha256": "3ccfdcf6043602577da37969244a660ebd72bc4bd172b7fbeb542809b62dccff"
+        }
+      ]
+    }
+  ],
+  "candidate_parse_probes": [
+    {
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s0_asset_audit.py",
+        "--probe-mujoco",
+        "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/panda.xml"
+      ],
+      "result": {
+        "actuators": [
+          {
+            "bias_parameters": [
+              0.0,
+              -4500.0,
+              -450.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "bias_type": 1,
+            "control_range": [
+              -2.8973,
+              2.8973
+            ],
+            "force_range": [
+              -87.0,
+              87.0
+            ],
+            "gain_parameters": [
+              4500.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "gain_type": 0,
+            "name": "actuator1",
+            "transmission_id": [
+              0,
+              -1
+            ],
+            "transmission_type": 0
+          },
+          {
+            "bias_parameters": [
+              0.0,
+              -4500.0,
+              -450.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "bias_type": 1,
+            "control_range": [
+              -1.7628,
+              1.7628
+            ],
+            "force_range": [
+              -87.0,
+              87.0
+            ],
+            "gain_parameters": [
+              4500.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "gain_type": 0,
+            "name": "actuator2",
+            "transmission_id": [
+              1,
+              -1
+            ],
+            "transmission_type": 0
+          },
+          {
+            "bias_parameters": [
+              0.0,
+              -3500.0,
+              -350.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "bias_type": 1,
+            "control_range": [
+              -2.8973,
+              2.8973
+            ],
+            "force_range": [
+              -87.0,
+              87.0
+            ],
+            "gain_parameters": [
+              3500.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "gain_type": 0,
+            "name": "actuator3",
+            "transmission_id": [
+              2,
+              -1
+            ],
+            "transmission_type": 0
+          },
+          {
+            "bias_parameters": [
+              0.0,
+              -3500.0,
+              -350.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "bias_type": 1,
+            "control_range": [
+              -3.0718,
+              -0.0698
+            ],
+            "force_range": [
+              -87.0,
+              87.0
+            ],
+            "gain_parameters": [
+              3500.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "gain_type": 0,
+            "name": "actuator4",
+            "transmission_id": [
+              3,
+              -1
+            ],
+            "transmission_type": 0
+          },
+          {
+            "bias_parameters": [
+              0.0,
+              -2000.0,
+              -200.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "bias_type": 1,
+            "control_range": [
+              -2.8973,
+              2.8973
+            ],
+            "force_range": [
+              -12.0,
+              12.0
+            ],
+            "gain_parameters": [
+              2000.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "gain_type": 0,
+            "name": "actuator5",
+            "transmission_id": [
+              4,
+              -1
+            ],
+            "transmission_type": 0
+          },
+          {
+            "bias_parameters": [
+              0.0,
+              -2000.0,
+              -200.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "bias_type": 1,
+            "control_range": [
+              -0.0175,
+              3.7525
+            ],
+            "force_range": [
+              -12.0,
+              12.0
+            ],
+            "gain_parameters": [
+              2000.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "gain_type": 0,
+            "name": "actuator6",
+            "transmission_id": [
+              5,
+              -1
+            ],
+            "transmission_type": 0
+          },
+          {
+            "bias_parameters": [
+              0.0,
+              -2000.0,
+              -200.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "bias_type": 1,
+            "control_range": [
+              -2.8973,
+              2.8973
+            ],
+            "force_range": [
+              -12.0,
+              12.0
+            ],
+            "gain_parameters": [
+              2000.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "gain_type": 0,
+            "name": "actuator7",
+            "transmission_id": [
+              6,
+              -1
+            ],
+            "transmission_type": 0
+          },
+          {
+            "bias_parameters": [
+              0.0,
+              -100.0,
+              -10.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "bias_type": 1,
+            "control_range": [
+              0.0,
+              255.0
+            ],
+            "force_range": [
+              -100.0,
+              100.0
+            ],
+            "gain_parameters": [
+              0.01568627451,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "gain_type": 0,
+            "name": "actuator8",
+            "transmission_id": [
+              0,
+              -1
+            ],
+            "transmission_type": 3
+          }
+        ],
+        "bodies": [
+          {
+            "center_of_mass": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "diagonal_inertia": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mass": 0.0,
+            "name": "world",
+            "principal_axes_wxyz": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "center_of_mass": [
+              -0.041018,
+              -0.00014,
+              0.049974
+            ],
+            "diagonal_inertia": [
+              0.004304650123430994,
+              0.0038798390919025367,
+              0.0031305107846664564
+            ],
+            "mass": 0.629769,
+            "name": "link0",
+            "principal_axes_wxyz": [
+              0.006304742250265338,
+              0.7512445646566475,
+              0.007417744420410821,
+              0.6599521432397345
+            ]
+          },
+          {
+            "center_of_mass": [
+              0.003875,
+              0.002081,
+              -0.04762
+            ],
+            "diagonal_inertia": [
+              0.7071370144883009,
+              0.7034354292338564,
+              0.00852455627784294
+            ],
+            "mass": 4.970684,
+            "name": "link1",
+            "principal_axes_wxyz": [
+              0.7115491548439588,
+              0.0063437712335342065,
+              -0.013112389998375933,
+              0.7024853180216057
+            ]
+          },
+          {
+            "center_of_mass": [
+              -0.003141,
+              -0.02872,
+              0.003495
+            ],
+            "diagonal_inertia": [
+              0.03103264256517663,
+              0.02830010693683385,
+              0.0027342504979895274
+            ],
+            "mass": 0.646926,
+            "name": "link2",
+            "principal_axes_wxyz": [
+              -0.16817480155429798,
+              0.8283658778649345,
+              -0.12287755442070392,
+              0.5200272253746144
+            ]
+          },
+          {
+            "center_of_mass": [
+              0.027518,
+              0.039252,
+              -0.066502
+            ],
+            "diagonal_inertia": [
+              0.04150138828861061,
+              0.041479257270665607,
+              0.0012463544407238245
+            ],
+            "mass": 3.228604,
+            "name": "link3",
+            "principal_axes_wxyz": [
+              0.6627687684234549,
+              -0.006783314734544799,
+              0.25205316921967597,
+              0.7050962672784391
+            ]
+          },
+          {
+            "center_of_mass": [
+              -0.05317,
+              0.104419,
+              0.027454
+            ],
+            "diagonal_inertia": [
+              0.03495964042412706,
+              0.028148276242039156,
+              0.010620083333833793
+            ],
+            "mass": 3.587895,
+            "name": "link4",
+            "principal_axes_wxyz": [
+              0.6505803874881221,
+              0.5298216601916185,
+              -0.0962034215397457,
+              0.5355175715993369
+            ]
+          },
+          {
+            "center_of_mass": [
+              -0.011953,
+              0.041065,
+              -0.038437
+            ],
+            "diagonal_inertia": [
+              0.036762538266730406,
+              0.028853091260661545,
+              0.008034370472607986
+            ],
+            "mass": 1.225946,
+            "name": "link5",
+            "principal_axes_wxyz": [
+              0.9873132613697035,
+              -0.012195351287934265,
+              0.0719186669438179,
+              -0.1410372386127408
+            ]
+          },
+          {
+            "center_of_mass": [
+              0.060149,
+              -0.014117,
+              -0.010517
+            ],
+            "diagonal_inertia": [
+              0.005842761226567758,
+              0.004310373704197247,
+              0.001597865069234999
+            ],
+            "mass": 1.666555,
+            "name": "link6",
+            "principal_axes_wxyz": [
+              0.10107538124240018,
+              0.5933199069415573,
+              0.028722697180501022,
+              0.7980791076079152
+            ]
+          },
+          {
+            "center_of_mass": [
+              0.010517,
+              -0.004252,
+              0.061597
+            ],
+            "diagonal_inertia": [
+              0.012734492874724473,
+              0.01010547714435622,
+              0.004518029980919309
+            ],
+            "mass": 0.735522,
+            "name": "link7",
+            "principal_axes_wxyz": [
+              0.9929385217915908,
+              -0.07620412050311047,
+              0.07335952004856763,
+              -0.05370665488486283
+            ]
+          },
+          {
+            "center_of_mass": [
+              -0.01,
+              0.0,
+              0.03
+            ],
+            "diagonal_inertia": [
+              0.001,
+              0.0025,
+              0.0017
+            ],
+            "mass": 0.73,
+            "name": "hand",
+            "principal_axes_wxyz": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "center_of_mass": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "diagonal_inertia": [
+              2.375e-06,
+              2.375e-06,
+              7.5e-07
+            ],
+            "mass": 0.015,
+            "name": "left_finger",
+            "principal_axes_wxyz": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "center_of_mass": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "diagonal_inertia": [
+              2.375e-06,
+              2.375e-06,
+              7.5e-07
+            ],
+            "mass": 0.015,
+            "name": "right_finger",
+            "principal_axes_wxyz": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "compiled_gravity": [
+          0.0,
+          0.0,
+          -9.81
+        ],
+        "compiled_timestep": 0.002,
+        "does_not_verify": [
+          "frozen Factory equivalence",
+          "closed-loop performance",
+          "contact behavior"
+        ],
+        "dof_armature": [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ],
+        "dof_damping": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "dof_frictionloss": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "engine_version": "3.5.0",
+        "joints": [
+          {
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "dof_address": 0,
+            "name": "joint1",
+            "qpos_address": 0,
+            "range": [
+              -2.8973,
+              2.8973
+            ],
+            "type": 3
+          },
+          {
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "dof_address": 1,
+            "name": "joint2",
+            "qpos_address": 1,
+            "range": [
+              -1.7628,
+              1.7628
+            ],
+            "type": 3
+          },
+          {
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "dof_address": 2,
+            "name": "joint3",
+            "qpos_address": 2,
+            "range": [
+              -2.8973,
+              2.8973
+            ],
+            "type": 3
+          },
+          {
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "dof_address": 3,
+            "name": "joint4",
+            "qpos_address": 3,
+            "range": [
+              -3.0718,
+              -0.0698
+            ],
+            "type": 3
+          },
+          {
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "dof_address": 4,
+            "name": "joint5",
+            "qpos_address": 4,
+            "range": [
+              -2.8973,
+              2.8973
+            ],
+            "type": 3
+          },
+          {
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "dof_address": 5,
+            "name": "joint6",
+            "qpos_address": 5,
+            "range": [
+              -0.0175,
+              3.7525
+            ],
+            "type": 3
+          },
+          {
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "dof_address": 6,
+            "name": "joint7",
+            "qpos_address": 6,
+            "range": [
+              -2.8973,
+              2.8973
+            ],
+            "type": 3
+          },
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "dof_address": 7,
+            "name": "finger_joint1",
+            "qpos_address": 7,
+            "range": [
+              0.0,
+              0.04
+            ],
+            "type": 2
+          },
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "dof_address": 8,
+            "name": "finger_joint2",
+            "qpos_address": 8,
+            "range": [
+              0.0,
+              0.04
+            ],
+            "type": 2
+          }
+        ],
+        "model": {
+          "bytes": 14438,
+          "exists": true,
+          "md5": "b2f92e110758b6cb594a3a4d0ad0ddbb",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/panda.xml",
+          "sha256": "96ad67da03710f17f798c9478fd9e9efdf24a3bf8359f05e456dd9fb158ea273"
+        },
+        "module": {
+          "bytes": 7639,
+          "exists": true,
+          "md5": "03f0997598ebe642747e48f54eb7c659",
+          "path": "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/lib/python3.11/site-packages/mujoco/__init__.py",
+          "sha256": "a534c5a9685e271c634f2596284e4a4fa337ec0bfe41dfaffab89bb3162cb0db"
+        },
+        "nbody": 12,
+        "ngeom": 81,
+        "no_MjData_no_forward_no_step_no_viewer": true,
+        "nq": 9,
+        "nu": 8,
+        "nv": 9,
+        "peak_rss_kib": 312456,
+        "python": "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "python_version": "3.11.15 (main, Jun 11 2026, 15:20:16) [GCC 14.3.0]",
+        "runtime_s": 0.1816185920033604,
+        "runtime_version": "3.5.0",
+        "scope": "import_and_compile_candidate_only",
+        "status": "VERIFIED"
+      },
+      "returncode": 0,
+      "runtime_s": 0.9930982410005527,
+      "stderr": "",
+      "stdout": "{\n  \"actuators\": [\n    {\n      \"bias_parameters\": [\n        0.0,\n        -4500.0,\n        -450.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"bias_type\": 1,\n      \"control_range\": [\n        -2.8973,\n        2.8973\n      ],\n      \"force_range\": [\n        -87.0,\n        87.0\n      ],\n      \"gain_parameters\": [\n        4500.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"gain_type\": 0,\n      \"name\": \"actuator1\",\n      \"transmission_id\": [\n        0,\n        -1\n      ],\n      \"transmission_type\": 0\n    },\n    {\n      \"bias_parameters\": [\n        0.0,\n        -4500.0,\n        -450.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"bias_type\": 1,\n      \"control_range\": [\n        -1.7628,\n        1.7628\n      ],\n      \"force_range\": [\n        -87.0,\n        87.0\n      ],\n      \"gain_parameters\": [\n        4500.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"gain_type\": 0,\n      \"name\": \"actuator2\",\n      \"transmission_id\": [\n        1,\n        -1\n      ],\n      \"transmission_type\": 0\n    },\n    {\n      \"bias_parameters\": [\n        0.0,\n        -3500.0,\n        -350.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"bias_type\": 1,\n      \"control_range\": [\n        -2.8973,\n        2.8973\n      ],\n      \"force_range\": [\n        -87.0,\n        87.0\n      ],\n      \"gain_parameters\": [\n        3500.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"gain_type\": 0,\n      \"name\": \"actuator3\",\n      \"transmission_id\": [\n        2,\n        -1\n      ],\n      \"transmission_type\": 0\n    },\n    {\n      \"bias_parameters\": [\n        0.0,\n        -3500.0,\n        -350.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"bias_type\": 1,\n      \"control_range\": [\n        -3.0718,\n        -0.0698\n      ],\n      \"force_range\": [\n        -87.0,\n        87.0\n      ],\n      \"gain_parameters\": [\n        3500.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"gain_type\": 0,\n      \"name\": \"actuator4\",\n      \"transmission_id\": [\n        3,\n        -1\n      ],\n      \"transmission_type\": 0\n    },\n    {\n      \"bias_parameters\": [\n        0.0,\n        -2000.0,\n        -200.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"bias_type\": 1,\n      \"control_range\": [\n        -2.8973,\n        2.8973\n      ],\n      \"force_range\": [\n        -12.0,\n        12.0\n      ],\n      \"gain_parameters\": [\n        2000.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"gain_type\": 0,\n      \"name\": \"actuator5\",\n      \"transmission_id\": [\n        4,\n        -1\n      ],\n      \"transmission_type\": 0\n    },\n    {\n      \"bias_parameters\": [\n        0.0,\n        -2000.0,\n        -200.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"bias_type\": 1,\n      \"control_range\": [\n        -0.0175,\n        3.7525\n      ],\n      \"force_range\": [\n        -12.0,\n        12.0\n      ],\n      \"gain_parameters\": [\n        2000.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"gain_type\": 0,\n      \"name\": \"actuator6\",\n      \"transmission_id\": [\n        5,\n        -1\n      ],\n      \"transmission_type\": 0\n    },\n    {\n      \"bias_parameters\": [\n        0.0,\n        -2000.0,\n        -200.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"bias_type\": 1,\n      \"control_range\": [\n        -2.8973,\n        2.8973\n      ],\n      \"force_range\": [\n        -12.0,\n        12.0\n      ],\n      \"gain_parameters\": [\n        2000.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"gain_type\": 0,\n      \"name\": \"actuator7\",\n      \"transmission_id\": [\n        6,\n        -1\n      ],\n      \"transmission_type\": 0\n    },\n    {\n      \"bias_parameters\": [\n        0.0,\n        -100.0,\n        -10.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"bias_type\": 1,\n      \"control_range\": [\n        0.0,\n        255.0\n      ],\n      \"force_range\": [\n        -100.0,\n        100.0\n      ],\n      \"gain_parameters\": [\n        0.01568627451,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"gain_type\": 0,\n      \"name\": \"actuator8\",\n      \"transmission_id\": [\n        0,\n        -1\n      ],\n      \"transmission_type\": 3\n    }\n  ],\n  \"bodies\": [\n    {\n      \"center_of_mass\": [\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"diagonal_inertia\": [\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"mass\": 0.0,\n      \"name\": \"world\",\n      \"principal_axes_wxyz\": [\n        1.0,\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"center_of_mass\": [\n        -0.041018,\n        -0.00014,\n        0.049974\n      ],\n      \"diagonal_inertia\": [\n        0.004304650123430994,\n        0.0038798390919025367,\n        0.0031305107846664564\n      ],\n      \"mass\": 0.629769,\n      \"name\": \"link0\",\n      \"principal_axes_wxyz\": [\n        0.006304742250265338,\n        0.7512445646566475,\n        0.007417744420410821,\n        0.6599521432397345\n      ]\n    },\n    {\n      \"center_of_mass\": [\n        0.003875,\n        0.002081,\n        -0.04762\n      ],\n      \"diagonal_inertia\": [\n        0.7071370144883009,\n        0.7034354292338564,\n        0.00852455627784294\n      ],\n      \"mass\": 4.970684,\n      \"name\": \"link1\",\n      \"principal_axes_wxyz\": [\n        0.7115491548439588,\n        0.0063437712335342065,\n        -0.013112389998375933,\n        0.7024853180216057\n      ]\n    },\n    {\n      \"center_of_mass\": [\n        -0.003141,\n        -0.02872,\n        0.003495\n      ],\n      \"diagonal_inertia\": [\n        0.03103264256517663,\n        0.02830010693683385,\n        0.0027342504979895274\n      ],\n      \"mass\": 0.646926,\n      \"name\": \"link2\",\n      \"principal_axes_wxyz\": [\n        -0.16817480155429798,\n        0.8283658778649345,\n        -0.12287755442070392,\n        0.5200272253746144\n      ]\n    },\n    {\n      \"center_of_mass\": [\n        0.027518,\n        0.039252,\n        -0.066502\n      ],\n      \"diagonal_inertia\": [\n        0.04150138828861061,\n        0.041479257270665607,\n        0.0012463544407238245\n      ],\n      \"mass\": 3.228604,\n      \"name\": \"link3\",\n      \"principal_axes_wxyz\": [\n        0.6627687684234549,\n        -0.006783314734544799,\n        0.25205316921967597,\n        0.7050962672784391\n      ]\n    },\n    {\n      \"center_of_mass\": [\n        -0.05317,\n        0.104419,\n        0.027454\n      ],\n      \"diagonal_inertia\": [\n        0.03495964042412706,\n        0.028148276242039156,\n        0.010620083333833793\n      ],\n      \"mass\": 3.587895,\n      \"name\": \"link4\",\n      \"principal_axes_wxyz\": [\n        0.6505803874881221,\n        0.5298216601916185,\n        -0.0962034215397457,\n        0.5355175715993369\n      ]\n    },\n    {\n      \"center_of_mass\": [\n        -0.011953,\n        0.041065,\n        -0.038437\n      ],\n      \"diagonal_inertia\": [\n        0.036762538266730406,\n        0.028853091260661545,\n        0.008034370472607986\n      ],\n      \"mass\": 1.225946,\n      \"name\": \"link5\",\n      \"principal_axes_wxyz\": [\n        0.9873132613697035,\n        -0.012195351287934265,\n        0.0719186669438179,\n        -0.1410372386127408\n      ]\n    },\n    {\n      \"center_of_mass\": [\n        0.060149,\n        -0.014117,\n        -0.010517\n      ],\n      \"diagonal_inertia\": [\n        0.005842761226567758,\n        0.004310373704197247,\n        0.001597865069234999\n      ],\n      \"mass\": 1.666555,\n      \"name\": \"link6\",\n      \"principal_axes_wxyz\": [\n        0.10107538124240018,\n        0.5933199069415573,\n        0.028722697180501022,\n        0.7980791076079152\n      ]\n    },\n    {\n      \"center_of_mass\": [\n        0.010517,\n        -0.004252,\n        0.061597\n      ],\n      \"diagonal_inertia\": [\n        0.012734492874724473,\n        0.01010547714435622,\n        0.004518029980919309\n      ],\n      \"mass\": 0.735522,\n      \"name\": \"link7\",\n      \"principal_axes_wxyz\": [\n        0.9929385217915908,\n        -0.07620412050311047,\n        0.07335952004856763,\n        -0.05370665488486283\n      ]\n    },\n    {\n      \"center_of_mass\": [\n        -0.01,\n        0.0,\n        0.03\n      ],\n      \"diagonal_inertia\": [\n        0.001,\n        0.0025,\n        0.0017\n      ],\n      \"mass\": 0.73,\n      \"name\": \"hand\",\n      \"principal_axes_wxyz\": [\n        1.0,\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"center_of_mass\": [\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"diagonal_inertia\": [\n        2.375e-06,\n        2.375e-06,\n        7.5e-07\n      ],\n      \"mass\": 0.015,\n      \"name\": \"left_finger\",\n      \"principal_axes_wxyz\": [\n        1.0,\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"center_of_mass\": [\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"diagonal_inertia\": [\n        2.375e-06,\n        2.375e-06,\n        7.5e-07\n      ],\n      \"mass\": 0.015,\n      \"name\": \"right_finger\",\n      \"principal_axes_wxyz\": [\n        1.0,\n        0.0,\n        0.0,\n        0.0\n      ]\n    }\n  ],\n  \"compiled_gravity\": [\n    0.0,\n    0.0,\n    -9.81\n  ],\n  \"compiled_timestep\": 0.002,\n  \"does_not_verify\": [\n    \"frozen Factory equivalence\",\n    \"closed-loop performance\",\n    \"contact behavior\"\n  ],\n  \"dof_armature\": [\n    0.1,\n    0.1,\n    0.1,\n    0.1,\n    0.1,\n    0.1,\n    0.1,\n    0.1,\n    0.1\n  ],\n  \"dof_damping\": [\n    1.0,\n    1.0,\n    1.0,\n    1.0,\n    1.0,\n    1.0,\n    1.0,\n    1.0,\n    1.0\n  ],\n  \"dof_frictionloss\": [\n    0.0,\n    0.0,\n    0.0,\n    0.0,\n    0.0,\n    0.0,\n    0.0,\n    0.0,\n    0.0\n  ],\n  \"engine_version\": \"3.5.0\",\n  \"joints\": [\n    {\n      \"axis\": [\n        0.0,\n        0.0,\n        1.0\n      ],\n      \"dof_address\": 0,\n      \"name\": \"joint1\",\n      \"qpos_address\": 0,\n      \"range\": [\n        -2.8973,\n        2.8973\n      ],\n      \"type\": 3\n    },\n    {\n      \"axis\": [\n        0.0,\n        0.0,\n        1.0\n      ],\n      \"dof_address\": 1,\n      \"name\": \"joint2\",\n      \"qpos_address\": 1,\n      \"range\": [\n        -1.7628,\n        1.7628\n      ],\n      \"type\": 3\n    },\n    {\n      \"axis\": [\n        0.0,\n        0.0,\n        1.0\n      ],\n      \"dof_address\": 2,\n      \"name\": \"joint3\",\n      \"qpos_address\": 2,\n      \"range\": [\n        -2.8973,\n        2.8973\n      ],\n      \"type\": 3\n    },\n    {\n      \"axis\": [\n        0.0,\n        0.0,\n        1.0\n      ],\n      \"dof_address\": 3,\n      \"name\": \"joint4\",\n      \"qpos_address\": 3,\n      \"range\": [\n        -3.0718,\n        -0.0698\n      ],\n      \"type\": 3\n    },\n    {\n      \"axis\": [\n        0.0,\n        0.0,\n        1.0\n      ],\n      \"dof_address\": 4,\n      \"name\": \"joint5\",\n      \"qpos_address\": 4,\n      \"range\": [\n        -2.8973,\n        2.8973\n      ],\n      \"type\": 3\n    },\n    {\n      \"axis\": [\n        0.0,\n        0.0,\n        1.0\n      ],\n      \"dof_address\": 5,\n      \"name\": \"joint6\",\n      \"qpos_address\": 5,\n      \"range\": [\n        -0.0175,\n        3.7525\n      ],\n      \"type\": 3\n    },\n    {\n      \"axis\": [\n        0.0,\n        0.0,\n        1.0\n      ],\n      \"dof_address\": 6,\n      \"name\": \"joint7\",\n      \"qpos_address\": 6,\n      \"range\": [\n        -2.8973,\n        2.8973\n      ],\n      \"type\": 3\n    },\n    {\n      \"axis\": [\n        0.0,\n        1.0,\n        0.0\n      ],\n      \"dof_address\": 7,\n      \"name\": \"finger_joint1\",\n      \"qpos_address\": 7,\n      \"range\": [\n        0.0,\n        0.04\n      ],\n      \"type\": 2\n    },\n    {\n      \"axis\": [\n        0.0,\n        1.0,\n        0.0\n      ],\n      \"dof_address\": 8,\n      \"name\": \"finger_joint2\",\n      \"qpos_address\": 8,\n      \"range\": [\n        0.0,\n        0.04\n      ],\n      \"type\": 2\n    }\n  ],\n  \"model\": {\n    \"bytes\": 14438,\n    \"exists\": true,\n    \"md5\": \"b2f92e110758b6cb594a3a4d0ad0ddbb\",\n    \"path\": \"/home/ubuntu2004/mujoco_menagerie/franka_emika_panda/panda.xml\",\n    \"sha256\": \"96ad67da03710f17f798c9478fd9e9efdf24a3bf8359f05e456dd9fb158ea273\"\n  },\n  \"module\": {\n    \"bytes\": 7639,\n    \"exists\": true,\n    \"md5\": \"03f0997598ebe642747e48f54eb7c659\",\n    \"path\": \"/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/lib/python3.11/site-packages/mujoco/__init__.py\",\n    \"sha256\": \"a534c5a9685e271c634f2596284e4a4fa337ec0bfe41dfaffab89bb3162cb0db\"\n  },\n  \"nbody\": 12,\n  \"ngeom\": 81,\n  \"no_MjData_no_forward_no_step_no_viewer\": true,\n  \"nq\": 9,\n  \"nu\": 8,\n  \"nv\": 9,\n  \"peak_rss_kib\": 312456,\n  \"python\": \"/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python\",\n  \"python_version\": \"3.11.15 (main, Jun 11 2026, 15:20:16) [GCC 14.3.0]\",\n  \"runtime_s\": 0.1816185920033604,\n  \"runtime_version\": \"3.5.0\",\n  \"scope\": \"import_and_compile_candidate_only\",\n  \"status\": \"VERIFIED\"\n}\n"
+    },
+    {
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s0_asset_audit.py",
+        "--probe-mujoco",
+        "/home/ubuntu2004/mujoco_menagerie/franka_fr3/fr3.xml"
+      ],
+      "result": {
+        "actuators": [
+          {
+            "bias_parameters": [
+              0.0,
+              -4500.0,
+              -450.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "bias_type": 1,
+            "control_range": [
+              -2.7437,
+              2.7437
+            ],
+            "force_range": [
+              0.0,
+              0.0
+            ],
+            "gain_parameters": [
+              4500.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "gain_type": 0,
+            "name": "fr3_joint1",
+            "transmission_id": [
+              0,
+              -1
+            ],
+            "transmission_type": 0
+          },
+          {
+            "bias_parameters": [
+              0.0,
+              -4500.0,
+              -450.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "bias_type": 1,
+            "control_range": [
+              -1.7837,
+              1.7837
+            ],
+            "force_range": [
+              0.0,
+              0.0
+            ],
+            "gain_parameters": [
+              4500.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "gain_type": 0,
+            "name": "fr3_joint2",
+            "transmission_id": [
+              1,
+              -1
+            ],
+            "transmission_type": 0
+          },
+          {
+            "bias_parameters": [
+              0.0,
+              -3500.0,
+              -350.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "bias_type": 1,
+            "control_range": [
+              -2.9007,
+              2.9007
+            ],
+            "force_range": [
+              0.0,
+              0.0
+            ],
+            "gain_parameters": [
+              3500.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "gain_type": 0,
+            "name": "fr3_joint3",
+            "transmission_id": [
+              2,
+              -1
+            ],
+            "transmission_type": 0
+          },
+          {
+            "bias_parameters": [
+              0.0,
+              -3500.0,
+              -350.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "bias_type": 1,
+            "control_range": [
+              -3.0421,
+              -0.15180000000000016
+            ],
+            "force_range": [
+              0.0,
+              0.0
+            ],
+            "gain_parameters": [
+              3500.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "gain_type": 0,
+            "name": "fr3_joint4",
+            "transmission_id": [
+              3,
+              -1
+            ],
+            "transmission_type": 0
+          },
+          {
+            "bias_parameters": [
+              0.0,
+              -2000.0,
+              -200.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "bias_type": 1,
+            "control_range": [
+              -2.8065,
+              2.8065
+            ],
+            "force_range": [
+              0.0,
+              0.0
+            ],
+            "gain_parameters": [
+              2000.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "gain_type": 0,
+            "name": "fr3_joint5",
+            "transmission_id": [
+              4,
+              -1
+            ],
+            "transmission_type": 0
+          },
+          {
+            "bias_parameters": [
+              0.0,
+              -2000.0,
+              -200.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "bias_type": 1,
+            "control_range": [
+              0.5445000000000002,
+              4.5169
+            ],
+            "force_range": [
+              0.0,
+              0.0
+            ],
+            "gain_parameters": [
+              2000.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "gain_type": 0,
+            "name": "fr3_joint6",
+            "transmission_id": [
+              5,
+              -1
+            ],
+            "transmission_type": 0
+          },
+          {
+            "bias_parameters": [
+              0.0,
+              -2000.0,
+              -200.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "bias_type": 1,
+            "control_range": [
+              -3.0159,
+              3.0159
+            ],
+            "force_range": [
+              0.0,
+              0.0
+            ],
+            "gain_parameters": [
+              2000.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "gain_type": 0,
+            "name": "fr3_joint7",
+            "transmission_id": [
+              6,
+              -1
+            ],
+            "transmission_type": 0
+          }
+        ],
+        "bodies": [
+          {
+            "center_of_mass": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "diagonal_inertia": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mass": 0.0,
+            "name": "world",
+            "principal_axes_wxyz": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "center_of_mass": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "diagonal_inertia": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mass": 0.0,
+            "name": "base",
+            "principal_axes_wxyz": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "center_of_mass": [
+              -0.02985481854221879,
+              -0.0002483547195708937,
+              0.05757928697527629
+            ],
+            "diagonal_inertia": [
+              0.011467894078245593,
+              0.011257366489891367,
+              0.007685106916899779
+            ],
+            "mass": 2.8206720543557333,
+            "name": "fr3_link0",
+            "principal_axes_wxyz": [
+              0.6214535863925641,
+              0.3450412562921718,
+              0.36086847055954446,
+              0.6037515369522114
+            ]
+          },
+          {
+            "center_of_mass": [
+              4.128e-07,
+              -0.0181251,
+              -0.0386036
+            ],
+            "diagonal_inertia": [
+              0.0239286,
+              0.0227246,
+              0.00610634
+            ],
+            "mass": 2.92747,
+            "name": "fr3_link1",
+            "principal_axes_wxyz": [
+              0.998098004393293,
+              -0.06053640026646095,
+              0.003804990016748291,
+              0.011010900048466292
+            ]
+          },
+          {
+            "center_of_mass": [
+              0.00318289,
+              -0.0743222,
+              0.00881461
+            ],
+            "diagonal_inertia": [
+              0.0629567,
+              0.0411924,
+              0.0246371
+            ],
+            "mass": 2.93554,
+            "name": "fr3_link2",
+            "principal_axes_wxyz": [
+              0.5025989196520302,
+              0.5844369065690014,
+              -0.4659979255032476,
+              0.43436593056009604
+            ]
+          },
+          {
+            "center_of_mass": [
+              0.0407016,
+              -0.00482006,
+              -0.0289731
+            ],
+            "diagonal_inertia": [
+              0.0267409,
+              0.0189869,
+              0.0171587
+            ],
+            "mass": 2.2449,
+            "name": "fr3_link3",
+            "principal_axes_wxyz": [
+              0.9210254634808529,
+              -0.24416112286740155,
+              0.155272078136423,
+              0.2607451312128498
+            ]
+          },
+          {
+            "center_of_mass": [
+              -0.0459101,
+              0.0630493,
+              -0.00851879
+            ],
+            "diagonal_inertia": [
+              0.05139,
+              0.0372717,
+              0.0160047
+            ],
+            "mass": 2.6156,
+            "name": "fr3_link4",
+            "principal_axes_wxyz": [
+              0.43801818931681674,
+              0.8033113472009857,
+              0.009378124053339876,
+              0.4034141743605384
+            ]
+          },
+          {
+            "center_of_mass": [
+              -0.00160396,
+              0.0292536,
+              -0.0972966
+            ],
+            "diagonal_inertia": [
+              0.0579335,
+              0.0449144,
+              0.0130634
+            ],
+            "mass": 2.32712,
+            "name": "fr3_link5",
+            "principal_axes_wxyz": [
+              0.9190307572722409,
+              0.12560396682638839,
+              0.07515308015111181,
+              -0.36600290333395935
+            ]
+          },
+          {
+            "center_of_mass": [
+              0.0597131,
+              -0.0410295,
+              -0.0101693
+            ],
+            "diagonal_inertia": [
+              0.0175039,
+              0.0161123,
+              0.00193529
+            ],
+            "mass": 1.81704,
+            "name": "fr3_link6",
+            "principal_axes_wxyz": [
+              0.6213008752713766,
+              0.552664889050324,
+              0.5100108976132826,
+              0.2200809558178722
+            ]
+          },
+          {
+            "center_of_mass": [
+              0.00452258,
+              0.00862619,
+              -0.0161633
+            ],
+            "diagonal_inertia": [
+              0.000223836,
+              0.000223642,
+              5.64132e-07
+            ],
+            "mass": 0.627143,
+            "name": "fr3_link7",
+            "principal_axes_wxyz": [
+              0.7275789966333319,
+              0.09786879954713955,
+              -0.24905999884754462,
+              0.6316799970770778
+            ]
+          }
+        ],
+        "compiled_gravity": [
+          0.0,
+          0.0,
+          -9.81
+        ],
+        "compiled_timestep": 0.002,
+        "does_not_verify": [
+          "frozen Factory equivalence",
+          "closed-loop performance",
+          "contact behavior"
+        ],
+        "dof_armature": [
+          0.195,
+          0.195,
+          0.195,
+          0.195,
+          0.074,
+          0.074,
+          0.074
+        ],
+        "dof_damping": [
+          0.21,
+          0.21,
+          0.21,
+          0.21,
+          0.21,
+          0.21,
+          0.21
+        ],
+        "dof_frictionloss": [
+          1.137,
+          1.137,
+          1.137,
+          1.137,
+          0.763,
+          0.44,
+          0.248
+        ],
+        "engine_version": "3.5.0",
+        "joints": [
+          {
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "dof_address": 0,
+            "name": "fr3_joint1",
+            "qpos_address": 0,
+            "range": [
+              -2.7437,
+              2.7437
+            ],
+            "type": 3
+          },
+          {
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "dof_address": 1,
+            "name": "fr3_joint2",
+            "qpos_address": 1,
+            "range": [
+              -1.7837,
+              1.7837
+            ],
+            "type": 3
+          },
+          {
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "dof_address": 2,
+            "name": "fr3_joint3",
+            "qpos_address": 2,
+            "range": [
+              -2.9007,
+              2.9007
+            ],
+            "type": 3
+          },
+          {
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "dof_address": 3,
+            "name": "fr3_joint4",
+            "qpos_address": 3,
+            "range": [
+              -3.0421,
+              -0.1518
+            ],
+            "type": 3
+          },
+          {
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "dof_address": 4,
+            "name": "fr3_joint5",
+            "qpos_address": 4,
+            "range": [
+              -2.8065,
+              2.8065
+            ],
+            "type": 3
+          },
+          {
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "dof_address": 5,
+            "name": "fr3_joint6",
+            "qpos_address": 5,
+            "range": [
+              0.5445,
+              4.5169
+            ],
+            "type": 3
+          },
+          {
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "dof_address": 6,
+            "name": "fr3_joint7",
+            "qpos_address": 6,
+            "range": [
+              -3.0159,
+              3.0159
+            ],
+            "type": 3
+          }
+        ],
+        "model": {
+          "bytes": 8843,
+          "exists": true,
+          "md5": "8072b506060b89a782e50f770c004ebc",
+          "path": "/home/ubuntu2004/mujoco_menagerie/franka_fr3/fr3.xml",
+          "sha256": "8f33d865ea6fb9596bea5cc242c8de43dbf3dd372e323b44e229e7840fecd47d"
+        },
+        "module": {
+          "bytes": 7639,
+          "exists": true,
+          "md5": "03f0997598ebe642747e48f54eb7c659",
+          "path": "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/lib/python3.11/site-packages/mujoco/__init__.py",
+          "sha256": "a534c5a9685e271c634f2596284e4a4fa337ec0bfe41dfaffab89bb3162cb0db"
+        },
+        "nbody": 10,
+        "ngeom": 36,
+        "no_MjData_no_forward_no_step_no_viewer": true,
+        "nq": 7,
+        "nu": 7,
+        "nv": 7,
+        "peak_rss_kib": 412156,
+        "python": "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "python_version": "3.11.15 (main, Jun 11 2026, 15:20:16) [GCC 14.3.0]",
+        "runtime_s": 0.21250417600094806,
+        "runtime_version": "3.5.0",
+        "scope": "import_and_compile_candidate_only",
+        "status": "VERIFIED"
+      },
+      "returncode": 0,
+      "runtime_s": 0.4821787670007325,
+      "stderr": "",
+      "stdout": "{\n  \"actuators\": [\n    {\n      \"bias_parameters\": [\n        0.0,\n        -4500.0,\n        -450.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"bias_type\": 1,\n      \"control_range\": [\n        -2.7437,\n        2.7437\n      ],\n      \"force_range\": [\n        0.0,\n        0.0\n      ],\n      \"gain_parameters\": [\n        4500.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"gain_type\": 0,\n      \"name\": \"fr3_joint1\",\n      \"transmission_id\": [\n        0,\n        -1\n      ],\n      \"transmission_type\": 0\n    },\n    {\n      \"bias_parameters\": [\n        0.0,\n        -4500.0,\n        -450.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"bias_type\": 1,\n      \"control_range\": [\n        -1.7837,\n        1.7837\n      ],\n      \"force_range\": [\n        0.0,\n        0.0\n      ],\n      \"gain_parameters\": [\n        4500.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"gain_type\": 0,\n      \"name\": \"fr3_joint2\",\n      \"transmission_id\": [\n        1,\n        -1\n      ],\n      \"transmission_type\": 0\n    },\n    {\n      \"bias_parameters\": [\n        0.0,\n        -3500.0,\n        -350.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"bias_type\": 1,\n      \"control_range\": [\n        -2.9007,\n        2.9007\n      ],\n      \"force_range\": [\n        0.0,\n        0.0\n      ],\n      \"gain_parameters\": [\n        3500.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"gain_type\": 0,\n      \"name\": \"fr3_joint3\",\n      \"transmission_id\": [\n        2,\n        -1\n      ],\n      \"transmission_type\": 0\n    },\n    {\n      \"bias_parameters\": [\n        0.0,\n        -3500.0,\n        -350.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"bias_type\": 1,\n      \"control_range\": [\n        -3.0421,\n        -0.15180000000000016\n      ],\n      \"force_range\": [\n        0.0,\n        0.0\n      ],\n      \"gain_parameters\": [\n        3500.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"gain_type\": 0,\n      \"name\": \"fr3_joint4\",\n      \"transmission_id\": [\n        3,\n        -1\n      ],\n      \"transmission_type\": 0\n    },\n    {\n      \"bias_parameters\": [\n        0.0,\n        -2000.0,\n        -200.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"bias_type\": 1,\n      \"control_range\": [\n        -2.8065,\n        2.8065\n      ],\n      \"force_range\": [\n        0.0,\n        0.0\n      ],\n      \"gain_parameters\": [\n        2000.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"gain_type\": 0,\n      \"name\": \"fr3_joint5\",\n      \"transmission_id\": [\n        4,\n        -1\n      ],\n      \"transmission_type\": 0\n    },\n    {\n      \"bias_parameters\": [\n        0.0,\n        -2000.0,\n        -200.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"bias_type\": 1,\n      \"control_range\": [\n        0.5445000000000002,\n        4.5169\n      ],\n      \"force_range\": [\n        0.0,\n        0.0\n      ],\n      \"gain_parameters\": [\n        2000.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"gain_type\": 0,\n      \"name\": \"fr3_joint6\",\n      \"transmission_id\": [\n        5,\n        -1\n      ],\n      \"transmission_type\": 0\n    },\n    {\n      \"bias_parameters\": [\n        0.0,\n        -2000.0,\n        -200.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"bias_type\": 1,\n      \"control_range\": [\n        -3.0159,\n        3.0159\n      ],\n      \"force_range\": [\n        0.0,\n        0.0\n      ],\n      \"gain_parameters\": [\n        2000.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"gain_type\": 0,\n      \"name\": \"fr3_joint7\",\n      \"transmission_id\": [\n        6,\n        -1\n      ],\n      \"transmission_type\": 0\n    }\n  ],\n  \"bodies\": [\n    {\n      \"center_of_mass\": [\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"diagonal_inertia\": [\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"mass\": 0.0,\n      \"name\": \"world\",\n      \"principal_axes_wxyz\": [\n        1.0,\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"center_of_mass\": [\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"diagonal_inertia\": [\n        0.0,\n        0.0,\n        0.0\n      ],\n      \"mass\": 0.0,\n      \"name\": \"base\",\n      \"principal_axes_wxyz\": [\n        1.0,\n        0.0,\n        0.0,\n        0.0\n      ]\n    },\n    {\n      \"center_of_mass\": [\n        -0.02985481854221879,\n        -0.0002483547195708937,\n        0.05757928697527629\n      ],\n      \"diagonal_inertia\": [\n        0.011467894078245593,\n        0.011257366489891367,\n        0.007685106916899779\n      ],\n      \"mass\": 2.8206720543557333,\n      \"name\": \"fr3_link0\",\n      \"principal_axes_wxyz\": [\n        0.6214535863925641,\n        0.3450412562921718,\n        0.36086847055954446,\n        0.6037515369522114\n      ]\n    },\n    {\n      \"center_of_mass\": [\n        4.128e-07,\n        -0.0181251,\n        -0.0386036\n      ],\n      \"diagonal_inertia\": [\n        0.0239286,\n        0.0227246,\n        0.00610634\n      ],\n      \"mass\": 2.92747,\n      \"name\": \"fr3_link1\",\n      \"principal_axes_wxyz\": [\n        0.998098004393293,\n        -0.06053640026646095,\n        0.003804990016748291,\n        0.011010900048466292\n      ]\n    },\n    {\n      \"center_of_mass\": [\n        0.00318289,\n        -0.0743222,\n        0.00881461\n      ],\n      \"diagonal_inertia\": [\n        0.0629567,\n        0.0411924,\n        0.0246371\n      ],\n      \"mass\": 2.93554,\n      \"name\": \"fr3_link2\",\n      \"principal_axes_wxyz\": [\n        0.5025989196520302,\n        0.5844369065690014,\n        -0.4659979255032476,\n        0.43436593056009604\n      ]\n    },\n    {\n      \"center_of_mass\": [\n        0.0407016,\n        -0.00482006,\n        -0.0289731\n      ],\n      \"diagonal_inertia\": [\n        0.0267409,\n        0.0189869,\n        0.0171587\n      ],\n      \"mass\": 2.2449,\n      \"name\": \"fr3_link3\",\n      \"principal_axes_wxyz\": [\n        0.9210254634808529,\n        -0.24416112286740155,\n        0.155272078136423,\n        0.2607451312128498\n      ]\n    },\n    {\n      \"center_of_mass\": [\n        -0.0459101,\n        0.0630493,\n        -0.00851879\n      ],\n      \"diagonal_inertia\": [\n        0.05139,\n        0.0372717,\n        0.0160047\n      ],\n      \"mass\": 2.6156,\n      \"name\": \"fr3_link4\",\n      \"principal_axes_wxyz\": [\n        0.43801818931681674,\n        0.8033113472009857,\n        0.009378124053339876,\n        0.4034141743605384\n      ]\n    },\n    {\n      \"center_of_mass\": [\n        -0.00160396,\n        0.0292536,\n        -0.0972966\n      ],\n      \"diagonal_inertia\": [\n        0.0579335,\n        0.0449144,\n        0.0130634\n      ],\n      \"mass\": 2.32712,\n      \"name\": \"fr3_link5\",\n      \"principal_axes_wxyz\": [\n        0.9190307572722409,\n        0.12560396682638839,\n        0.07515308015111181,\n        -0.36600290333395935\n      ]\n    },\n    {\n      \"center_of_mass\": [\n        0.0597131,\n        -0.0410295,\n        -0.0101693\n      ],\n      \"diagonal_inertia\": [\n        0.0175039,\n        0.0161123,\n        0.00193529\n      ],\n      \"mass\": 1.81704,\n      \"name\": \"fr3_link6\",\n      \"principal_axes_wxyz\": [\n        0.6213008752713766,\n        0.552664889050324,\n        0.5100108976132826,\n        0.2200809558178722\n      ]\n    },\n    {\n      \"center_of_mass\": [\n        0.00452258,\n        0.00862619,\n        -0.0161633\n      ],\n      \"diagonal_inertia\": [\n        0.000223836,\n        0.000223642,\n        5.64132e-07\n      ],\n      \"mass\": 0.627143,\n      \"name\": \"fr3_link7\",\n      \"principal_axes_wxyz\": [\n        0.7275789966333319,\n        0.09786879954713955,\n        -0.24905999884754462,\n        0.6316799970770778\n      ]\n    }\n  ],\n  \"compiled_gravity\": [\n    0.0,\n    0.0,\n    -9.81\n  ],\n  \"compiled_timestep\": 0.002,\n  \"does_not_verify\": [\n    \"frozen Factory equivalence\",\n    \"closed-loop performance\",\n    \"contact behavior\"\n  ],\n  \"dof_armature\": [\n    0.195,\n    0.195,\n    0.195,\n    0.195,\n    0.074,\n    0.074,\n    0.074\n  ],\n  \"dof_damping\": [\n    0.21,\n    0.21,\n    0.21,\n    0.21,\n    0.21,\n    0.21,\n    0.21\n  ],\n  \"dof_frictionloss\": [\n    1.137,\n    1.137,\n    1.137,\n    1.137,\n    0.763,\n    0.44,\n    0.248\n  ],\n  \"engine_version\": \"3.5.0\",\n  \"joints\": [\n    {\n      \"axis\": [\n        0.0,\n        0.0,\n        1.0\n      ],\n      \"dof_address\": 0,\n      \"name\": \"fr3_joint1\",\n      \"qpos_address\": 0,\n      \"range\": [\n        -2.7437,\n        2.7437\n      ],\n      \"type\": 3\n    },\n    {\n      \"axis\": [\n        0.0,\n        0.0,\n        1.0\n      ],\n      \"dof_address\": 1,\n      \"name\": \"fr3_joint2\",\n      \"qpos_address\": 1,\n      \"range\": [\n        -1.7837,\n        1.7837\n      ],\n      \"type\": 3\n    },\n    {\n      \"axis\": [\n        0.0,\n        0.0,\n        1.0\n      ],\n      \"dof_address\": 2,\n      \"name\": \"fr3_joint3\",\n      \"qpos_address\": 2,\n      \"range\": [\n        -2.9007,\n        2.9007\n      ],\n      \"type\": 3\n    },\n    {\n      \"axis\": [\n        0.0,\n        0.0,\n        1.0\n      ],\n      \"dof_address\": 3,\n      \"name\": \"fr3_joint4\",\n      \"qpos_address\": 3,\n      \"range\": [\n        -3.0421,\n        -0.1518\n      ],\n      \"type\": 3\n    },\n    {\n      \"axis\": [\n        0.0,\n        0.0,\n        1.0\n      ],\n      \"dof_address\": 4,\n      \"name\": \"fr3_joint5\",\n      \"qpos_address\": 4,\n      \"range\": [\n        -2.8065,\n        2.8065\n      ],\n      \"type\": 3\n    },\n    {\n      \"axis\": [\n        0.0,\n        0.0,\n        1.0\n      ],\n      \"dof_address\": 5,\n      \"name\": \"fr3_joint6\",\n      \"qpos_address\": 5,\n      \"range\": [\n        0.5445,\n        4.5169\n      ],\n      \"type\": 3\n    },\n    {\n      \"axis\": [\n        0.0,\n        0.0,\n        1.0\n      ],\n      \"dof_address\": 6,\n      \"name\": \"fr3_joint7\",\n      \"qpos_address\": 6,\n      \"range\": [\n        -3.0159,\n        3.0159\n      ],\n      \"type\": 3\n    }\n  ],\n  \"model\": {\n    \"bytes\": 8843,\n    \"exists\": true,\n    \"md5\": \"8072b506060b89a782e50f770c004ebc\",\n    \"path\": \"/home/ubuntu2004/mujoco_menagerie/franka_fr3/fr3.xml\",\n    \"sha256\": \"8f33d865ea6fb9596bea5cc242c8de43dbf3dd372e323b44e229e7840fecd47d\"\n  },\n  \"module\": {\n    \"bytes\": 7639,\n    \"exists\": true,\n    \"md5\": \"03f0997598ebe642747e48f54eb7c659\",\n    \"path\": \"/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/lib/python3.11/site-packages/mujoco/__init__.py\",\n    \"sha256\": \"a534c5a9685e271c634f2596284e4a4fa337ec0bfe41dfaffab89bb3162cb0db\"\n  },\n  \"nbody\": 10,\n  \"ngeom\": 36,\n  \"no_MjData_no_forward_no_step_no_viewer\": true,\n  \"nq\": 7,\n  \"nu\": 7,\n  \"nv\": 7,\n  \"peak_rss_kib\": 412156,\n  \"python\": \"/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python\",\n  \"python_version\": \"3.11.15 (main, Jun 11 2026, 15:20:16) [GCC 14.3.0]\",\n  \"runtime_s\": 0.21250417600094806,\n  \"runtime_version\": \"3.5.0\",\n  \"scope\": \"import_and_compile_candidate_only\",\n  \"status\": \"VERIFIED\"\n}\n"
+    }
+  ],
+  "claim_status": {
+    "Factory_assets_conversion_and_public_redistribution_permission": "UNKNOWN",
+    "Menagerie_Panda_equals_Factory_franka_mimic": "UNKNOWN",
+    "Menagerie_Panda_model_Apache_2_0_license_file": "VERIFIED",
+    "cross_engine_policy_performance": "UNKNOWN",
+    "existing_mujoco_engine_import_and_candidate_parse": "VERIFIED",
+    "faithful_collision_and_inertia_conversion": "PROPOSED",
+    "original_cached_factory_USD_metadata_and_hashes": "VERIFIED"
+  },
+  "decision": "CONDITIONAL",
+  "frozen_source_files": [
+    {
+      "bytes": 6419,
+      "exists": true,
+      "md5": "b24cd77d98a49648bb9c782644231c0a",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env_cfg.py",
+      "sha256": "5f804ba3f6e3d96f352490a9b5e2e1e239d308ff7eeab7ae3aad0ca6aa8daed8"
+    },
+    {
+      "bytes": 16331,
+      "exists": true,
+      "md5": "99badee8b6ee902c55968036cc4f0170",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_tasks_cfg.py",
+      "sha256": "7510b6cbed1e5bdd297723cabf7d25cef6a00b94bb3804b7578f2925a6a43971"
+    },
+    {
+      "bytes": 43992,
+      "exists": true,
+      "md5": "d12f581caf46f29a3ca5fa53d11031fd",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py",
+      "sha256": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81"
+    }
+  ],
+  "generated_utc": "2026-10-26T11:13:42Z",
+  "isaaclab_commit": "90b79bb2d44feb8d833f260f2bf37da3487180ba",
+  "license_source_files": [
+    {
+      "bytes": 1630,
+      "exists": true,
+      "md5": "a5d3625705feec4cac8fc487fad70798",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/LICENSE",
+      "sha256": "df351ebfa8af317bf5a9ad83df63a8b68e4f5c04b71f30767cdb27aa434eac62"
+    },
+    {
+      "bytes": 10173,
+      "exists": true,
+      "md5": "e23fadd6ceef8c618fc1c65191d846fa",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/docs/licenses/assets/franka-license.txt",
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+    },
+    {
+      "bytes": 806,
+      "exists": true,
+      "md5": "38bc56bcc97a4f835594558a4713fe0e",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/docs/licenses/dependencies/isaacsim-license.txt",
+      "sha256": "6bfb6c19b70d50172a88eda1cc5529bf34dc377106e873b8504af0accb5b35f9"
+    },
+    {
+      "bytes": 49043,
+      "exists": true,
+      "md5": "032d4df3607eb1b974f2f1222451eb47",
+      "path": "/home/ubuntu2004/isaacsim-4.5.0/LICENSE.txt",
+      "sha256": "e8a684e1278cc1de7a4b3fce180228f3195f02c3b208a5722122d95cce29ca20"
+    },
+    {
+      "bytes": 10140,
+      "exists": true,
+      "md5": "a291c7acd90a71d52ac3e0c9e5f74c66",
+      "path": "/home/ubuntu2004/isaacsim-4.5.0/PACKAGE-LICENSES/franka-LICENSE.txt",
+      "sha256": "bb28c48e3e078166e91cfc2b6db7ffebb8a0973b9e23b3df060561292d8d69ec"
+    },
+    {
+      "bytes": 961,
+      "exists": true,
+      "md5": "1df29d230addf630f18e5bdf947cb9a0",
+      "path": "/home/ubuntu2004/isaacsim-4.5.0/PACKAGE-LICENSES/isaac-sim-assets-LICENSE.txt",
+      "sha256": "5d10853c8554f71b06b6fe734d059b7abf108b016a9f9ff3e6b225e5598b5f3c"
+    }
+  ],
+  "menagerie_commit": "8161bba264d7fa7c99ca301e91e7fb44737676ad",
+  "menagerie_worktree_clean": true,
+  "original_cached_files": {
+    "factory_hole_8mm.usd": {
+      "bytes": 7508864,
+      "exists": true,
+      "md5": "721aa0238f093b07070cc459ad18dc6a",
+      "path": "/home/ubuntu2004/.cache/ov/client/http/afd8caf22b836b055fb4d39aff70b9965c6a352a9f62afe2b57c94c626c1a088.usd",
+      "sha256": "4bad48cde5a2e523454f9ed584023fae53d619a5ffb3d6ab08f29a6240014c28"
+    },
+    "factory_peg_8mm.usd": {
+      "bytes": 1690754,
+      "exists": true,
+      "md5": "c766c906dc1a70cb7e8a6f0a9457a354",
+      "path": "/home/ubuntu2004/.cache/ov/client/http/7f17c50be1a11dbc939c837d105bfc82c427d8d28a6a74fd88b7156b20dc8c36.usd",
+      "sha256": "b5040c8c639f3dc0731adfb6022c0d63383b7550354e413dc24e7417b600869d"
+    },
+    "franka_mimic.usd": {
+      "bytes": 7075031,
+      "exists": true,
+      "md5": "fa8d4db8c23bebe950095cf8021c922e",
+      "path": "/home/ubuntu2004/.cache/ov/client/http/600913b1e36513fb59ee5bb296fa3a02dc99cac8cd4659356b04bea1868f5ba8.usd",
+      "sha256": "86d0017a093669b222a8c640bf581cc3e3715035aa7c596600f478da011f6c8e"
+    }
+  },
+  "original_usd_probe": {
+    "command": [
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s0_asset_audit.py",
+      "--probe-usd"
+    ],
+    "returncode": 1,
+    "runtime_s": 2.194791661000636,
+    "stderr": "Traceback (most recent call last):\n  File \"/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s0_asset_audit.py\", line 261, in <module>\n    main()\n  File \"/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s0_asset_audit.py\", line 210, in main\n    usd_probe()\n  File \"/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s0_asset_audit.py\", line 159, in usd_probe\n    parent.GetReferences().AddReference(str(path), layer.defaultPrim)\npxr.Tf.ErrorException: \n\tError in 'pxrInternal_v0_22__pxrReserved__::Sdf_ListEditor<TypePolicy>::_ValidateEdit [with TypePolicy = pxrInternal_v0_22__pxrReserved__::SdfReferenceTypePolicy]' at line 278 in file /builds/omniverse/usd-ci/USD/pxr/usd/sdf/listEditor.h : 'Reference prim path <panda> must be either empty or an absolute prim path'\n",
+    "stdout": ""
+  },
+  "remote_head_probes": [
+    {
+      "body_downloaded": false,
+      "headers": {
+        "Content-Length": "7075031",
+        "Content-Type": "binary/octet-stream",
+        "ETag": "\"fa8d4db8c23bebe950095cf8021c922e\"",
+        "Last-Modified": "Thu, 30 Jan 2025 02:30:56 GMT"
+      },
+      "method": "HEAD",
+      "runtime_s": 2.4393614229993545,
+      "status": 200,
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/IsaacLab/Factory/franka_mimic.usd"
+    },
+    {
+      "body_downloaded": false,
+      "headers": {
+        "Content-Length": "1690754",
+        "Content-Type": "binary/octet-stream",
+        "ETag": "\"c766c906dc1a70cb7e8a6f0a9457a354\"",
+        "Last-Modified": "Thu, 30 Jan 2025 02:30:56 GMT"
+      },
+      "method": "HEAD",
+      "runtime_s": 0.8670182830028352,
+      "status": 200,
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/IsaacLab/Factory/factory_peg_8mm.usd"
+    },
+    {
+      "body_downloaded": false,
+      "headers": {
+        "Content-Length": "7508864",
+        "Content-Type": "binary/octet-stream",
+        "ETag": "\"721aa0238f093b07070cc459ad18dc6a\"",
+        "Last-Modified": "Thu, 30 Jan 2025 02:30:56 GMT"
+      },
+      "method": "HEAD",
+      "runtime_s": 1.694539361000352,
+      "status": 200,
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/IsaacLab/Factory/factory_hole_8mm.usd"
+    },
+    {
+      "body_downloaded": false,
+      "error": "HTTP Error 404: Not Found",
+      "method": "HEAD",
+      "runtime_s": 1.888939090000349,
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/IsaacLab/Factory/LICENSE.txt"
+    },
+    {
+      "body_downloaded": false,
+      "error": "HTTP Error 404: Not Found",
+      "method": "HEAD",
+      "runtime_s": 1.9504119490011362,
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/IsaacLab/Factory/LICENSE"
+    },
+    {
+      "body_downloaded": false,
+      "error": "HTTP Error 404: Not Found",
+      "method": "HEAD",
+      "runtime_s": 0.8986201279985835,
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/IsaacLab/Factory/license.txt"
+    },
+    {
+      "body_downloaded": false,
+      "error": "HTTP Error 404: Not Found",
+      "method": "HEAD",
+      "runtime_s": 1.7591634650016204,
+      "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/IsaacLab/Factory/franka-LICENSE.txt"
+    }
+  ],
+  "repository_starting_commit": "280634679633bf127e13349741379b3d38a27a1f",
+  "restrictions": {
+    "original_assets_redistributed": false,
+    "packages_installed": false,
+    "physics_steps_executed": 0,
+    "policy_rollouts_executed": 0,
+    "substantial_assets_downloaded": false
+  },
+  "schema_version": 1,
+  "scope": "read-only source/metadata, engine import and CPU candidate compilation; no physics execution",
+  "task": "G4-S0"
+}

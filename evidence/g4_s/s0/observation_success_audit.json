@@ -1,0 +1,796 @@
+{
+  "schema": "g4_s0_observation_success_audit_v1",
+  "created_utc": "2026-10-26T11:13:00.434896+00:00",
+  "scope": "CPU read-only source/checkpoint metadata audit; no engine import/launch, policy forward/rollout, training, optimizer, checkpoint write or installation",
+  "repository_head": "280634679633bf127e13349741379b3d38a27a1f",
+  "source_inventory": [
+    {
+      "label": "factory_env.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py",
+      "sha256": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81",
+      "matches_i0": true,
+      "line_ranges": [
+        [
+          92,
+          107
+        ],
+        [
+          132,
+          135
+        ],
+        [
+          191,
+          225
+        ],
+        [
+          231,
+          237
+        ],
+        [
+          254,
+          290
+        ],
+        [
+          296,
+          304
+        ],
+        [
+          342,
+          351
+        ],
+        [
+          425,
+          485
+        ],
+        [
+          658,
+          710
+        ],
+        [
+          845,
+          884
+        ]
+      ],
+      "upstream_commit": "90b79bb2d44feb8d833f260f2bf37da3487180ba"
+    },
+    {
+      "label": "factory_env_cfg.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env_cfg.py",
+      "sha256": "5f804ba3f6e3d96f352490a9b5e2e1e239d308ff7eeab7ae3aad0ca6aa8daed8",
+      "matches_i0": true,
+      "line_ranges": [
+        [
+          17,
+          23
+        ],
+        [
+          44,
+          46
+        ],
+        [
+          49,
+          67
+        ],
+        [
+          70,
+          116
+        ]
+      ],
+      "upstream_commit": "90b79bb2d44feb8d833f260f2bf37da3487180ba"
+    },
+    {
+      "label": "factory_tasks_cfg.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_tasks_cfg.py",
+      "sha256": "7510b6cbed1e5bdd297723cabf7d25cef6a00b94bb3804b7578f2925a6a43971",
+      "matches_i0": true,
+      "line_ranges": [
+        [
+          87,
+          132
+        ]
+      ],
+      "upstream_commit": "90b79bb2d44feb8d833f260f2bf37da3487180ba"
+    },
+    {
+      "label": "direct_rl_env.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/envs/direct_rl_env.py",
+      "sha256": "0c919fdc93e9198562edaaa3c29627a8dc0e123f581f41cdffc75641f9033fc1",
+      "line_ranges": [
+        [
+          252,
+          259
+        ],
+        [
+          329,
+          392
+        ]
+      ]
+    },
+    {
+      "label": "math.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/utils/math.py",
+      "sha256": "902973439cc588a5c98a3fa1b2ec3656a2ca7cfaba865f8ef5544014f4f81205",
+      "line_ranges": [
+        [
+          473,
+          502
+        ]
+      ]
+    },
+    {
+      "label": "running_mean_std.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/running_mean_std.py",
+      "sha256": "c7ad469e2bbc89de8419b55c768d1076f5d394d72102cc38c7e49002fc1db788",
+      "line_ranges": [
+        [
+          9,
+          31
+        ],
+        [
+          45,
+          80
+        ]
+      ]
+    },
+    {
+      "label": "recurrent.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/layers/recurrent.py",
+      "sha256": "513a0cada38071444a8b2459690db904426b0913c568b66ec8a721338210f023",
+      "line_ranges": [
+        [
+          24,
+          56
+        ],
+        [
+          74,
+          77
+        ]
+      ]
+    },
+    {
+      "label": "network_builder.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/network_builder.py",
+      "sha256": "6a03fe980305921dd4c133fe7b35641434e3c636b441bbc1436411094ad66193",
+      "line_ranges": [
+        [
+          227,
+          246
+        ],
+        [
+          397,
+          476
+        ]
+      ]
+    },
+    {
+      "label": "models.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/models.py",
+      "sha256": "78a806701b3099ea45de5c9c1e00c761d0a9443b4b39d6cce087680fc4e62f37",
+      "line_ranges": [
+        [
+          239,
+          299
+        ]
+      ]
+    },
+    {
+      "label": "g4i1_policy.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4i1_policy.py",
+      "sha256": "6f22926b1a5acff28a2a0cf774b74cbc3e97d4221b36ee639d744dbe249489e2",
+      "line_ranges": [
+        [
+          54,
+          179
+        ]
+      ]
+    },
+    {
+      "label": "g4i1_runtime.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4i1_runtime.py",
+      "sha256": "8828e98799a4da8155dfa9ff018ef80a2e5122142d7c9e0f871e0b3e1548d4fe",
+      "line_ranges": [
+        [
+          199,
+          221
+        ],
+        [
+          299,
+          314
+        ]
+      ]
+    },
+    {
+      "label": "success_metrics.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/success_metrics.py",
+      "sha256": "bd3233876429dcce64bee52be11b9f03a69b1e35279b4e285dab4e81151bbfa2",
+      "line_ranges": [
+        [
+          16,
+          63
+        ],
+        [
+          82,
+          161
+        ]
+      ]
+    },
+    {
+      "label": "interface_spec.json",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_i/i0/interface_spec.json",
+      "sha256": "8922f1aac1294398cbfa5a157b28b58a822a03906036e984cf8e8686163ea47b",
+      "line_ranges": []
+    },
+    {
+      "label": "checkpoint_audit.json",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_i/i0/checkpoint_audit.json",
+      "sha256": "b7f83be8ea0e8b6ce53f820029238bb42604fa17251b59d194b10529782ed354",
+      "line_ranges": []
+    },
+    {
+      "label": "checkpoint_and_source_identity.json",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_i/i0/checkpoint_and_source_identity.json",
+      "sha256": "f42647d510f1aa72b382eddce139f426442b02305c1094865257c3bb4e04d06d",
+      "line_ranges": []
+    },
+    {
+      "label": "g2_resolved_env.yaml",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/params/env.yaml",
+      "sha256": "9b07adc49a4ec46b41e7ae789510e47f5c20dd001ae32b22e18b5f7cc29bc876",
+      "line_ranges": [
+        [
+          21,
+          21
+        ],
+        [
+          78,
+          80
+        ],
+        [
+          99,
+          115
+        ],
+        [
+          121,
+          132
+        ],
+        [
+          178,
+          178
+        ],
+        [
+          319,
+          324
+        ]
+      ]
+    },
+    {
+      "label": "g2_resolved_agent.yaml",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/params/agent.yaml",
+      "sha256": "e72507a2984840f9620c6210a882842341882a2ef1f031860a78978942d36ace",
+      "line_ranges": []
+    }
+  ],
+  "directly_inspected_documents": [
+    "README.md",
+    "docs/ROADMAP_POLICY_INFERENCE_SIM2SIM.md",
+    "docs/REVIEW_G4_I0.md",
+    "docs/REVIEW_G4_I1.md",
+    "docs/REVIEW_G4_I2.md",
+    "evidence/g4_i/i0/interface_spec.json",
+    "scripts/g4i1_runtime.py"
+  ],
+  "checkpoint": {
+    "status": "VERIFIED",
+    "role": "g2_epoch200_primary",
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+    "bytes": 212889225,
+    "sha256_before_and_after_cpu_metadata_read": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+    "matches_frozen": true,
+    "epoch": 200,
+    "frame": 1638400,
+    "training_seed": 0,
+    "num_training_envs": 64,
+    "cpu_metadata_probe": {
+      "executed": true,
+      "interpreter": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+      "torch_load_map_location": "cpu",
+      "policy_forward_executed": false,
+      "epoch_frame_match": true,
+      "env_state_is_null": true,
+      "rms_arrays_exact_torch_equal_to_archived_float64": {
+        "running_mean": true,
+        "running_var": true,
+        "count": true
+      },
+      "rms_all_float64": true,
+      "rnn_shapes_match": true
+    },
+    "architecture": {
+      "name": "actor_critic",
+      "separate": false,
+      "space": {
+        "continuous": {
+          "mu_activation": "None",
+          "sigma_activation": "None",
+          "mu_init": {
+            "name": "default"
+          },
+          "sigma_init": {
+            "name": "const_initializer",
+            "val": 0
+          },
+          "fixed_sigma": false
+        }
+      },
+      "mlp": {
+        "units": [
+          512,
+          128,
+          64
+        ],
+        "activation": "elu",
+        "d2rl": false,
+        "initializer": {
+          "name": "default"
+        },
+        "regularizer": {
+          "name": "None"
+        }
+      },
+      "rnn": {
+        "name": "lstm",
+        "units": 1024,
+        "layers": 2,
+        "before_mlp": true,
+        "concat_input": true,
+        "layer_norm": true
+      }
+    }
+  },
+  "normalization": {
+    "status": "VERIFIED",
+    "rms": {
+      "running_mean": [
+        0.0012255092069378359,
+        -0.00012767174115339898,
+        0.016220802091269422,
+        -0.0004148297350249812,
+        0.9815708929278876,
+        -0.01319376962304078,
+        -8.221180581832617e-05,
+        0.0002684951223020321,
+        -2.7311945829650007e-05,
+        -0.003925053169754315,
+        0.00011149474764006666,
+        7.360269291309025e-05,
+        -0.0031692055512368396,
+        0.1510722365910423,
+        -0.1550172540154216,
+        -0.6155519512433955,
+        0.029090970147354147,
+        0.2467348705245342,
+        -0.011261756942388115
+      ],
+      "running_var": [
+        5.5875029198706424e-05,
+        4.393848241338778e-05,
+        0.00021127711527912718,
+        7.506108044770058e-07,
+        0.00037365255474328286,
+        0.036028821324941236,
+        7.384781293097666e-07,
+        4.188431289220786e-05,
+        4.446290477630366e-05,
+        0.0001475374360079426,
+        1.4977530870824253e-05,
+        4.5064961699082126e-05,
+        0.0030472441866966323,
+        0.045517981137704555,
+        0.05176783857200631,
+        0.12890700720791717,
+        0.049298443207540094,
+        0.07291801439246555,
+        0.04439266330924522
+      ],
+      "count": 1638401.0
+    },
+    "epsilon": 1e-05,
+    "normalized_clip": [
+      -5,
+      5
+    ],
+    "storage_dtype": "float64",
+    "calculation_dtype": "float32",
+    "expression": "clamp((obs_fp32-running_mean.float())/sqrt(running_var.float()+1e-5),-5,+5)",
+    "norm_only": false,
+    "wrapper_pre_rms_clip": "infinity",
+    "freeze": "model.eval(), requires_grad_(False), inference_mode(); no RMS update; normalize exactly once",
+    "invalid_rejection": "Wrong rank/size/dtype/device, NaN/Inf, negative variance, nonpositive count or mutated epsilon/clip rejected; never use identity replacement"
+  },
+  "actor": {
+    "status": "VERIFIED",
+    "architecture": "19 -> 2-layer LSTM(input=19,hidden=1024,dropout=0) -> LayerNorm1024(eps1e-5) -> MLP512 ELU ->128 ELU ->64 ELU ->mu6 identity; sigma/logstd6 and value1 unused for deterministic command except RNG sample consumption",
+    "rnn_before_mlp": true,
+    "configured_concat_input_true_but_inactive": true,
+    "runtime_hidden_cell_shapes": [
+      2,
+      "batch",
+      1024
+    ],
+    "dtype": "float32",
+    "reset": "zeros at initial observation; zero only done actor columns after returned reset and before first next action; never restore checkpoint runtime h/c",
+    "rng": "FrozenPolicy consumes/discards original Normal(mu,exp(logstd)).sample() before choosing mu; seed identity across MuJoCo and PhysX is not evidence of matched reset streams"
+  },
+  "observation_rows": [
+    {
+      "index": 0,
+      "name": "fingertip_pos_rel_fixed.x",
+      "original_source": "factory_env.py:194-201,256-263,691-710; factory_env_cfg.py:45-46",
+      "original_expression": "(p_tcp - (p_fixed_reset + R_fixed_reset@[0,0,0.025] + episode_noise))[0]",
+      "reference_frame": "world axes, env-origin-subtracted positions; reference point is cached at reset, not a rotating coordinate frame",
+      "units": "m",
+      "proposed_mujoco": "(data.site_xpos[tcp] - env_origin - fixed_reset_tip - episode_noise)[0]",
+      "required_transform": "Define exact panda_fingertip_centered site/body; fixed tip=body root position+R*local [0,0,.025]; use body frame, never COM; subtract fixed truth and noise, no inverse fixed rotation",
+      "precision": "MuJoCo double state -> explicitly FP32 pose/noise/operations to match actor boundary; different engines cannot promise bitwise equal poses",
+      "observable_without_privileged_state": "NO: fixed reset pose truth is simulator-derived. Robot encoders alone do not determine it; calibrated sensing/perception would be a different interface",
+      "exact_reproduction": "PROPOSED conditional on exact TCP/fixed-root frame reconstruction and per-episode Gaussian N(0,.001^2 I) noise; physical state equality UNKNOWN",
+      "status": "PROPOSED"
+    },
+    {
+      "index": 1,
+      "name": "fingertip_pos_rel_fixed.y",
+      "original_source": "factory_env.py:194-201,256-263,691-710; factory_env_cfg.py:45-46",
+      "original_expression": "(p_tcp - (p_fixed_reset + R_fixed_reset@[0,0,0.025] + episode_noise))[1]",
+      "reference_frame": "world axes, env-origin-subtracted positions; reference point is cached at reset, not a rotating coordinate frame",
+      "units": "m",
+      "proposed_mujoco": "(data.site_xpos[tcp] - env_origin - fixed_reset_tip - episode_noise)[1]",
+      "required_transform": "Define exact panda_fingertip_centered site/body; fixed tip=body root position+R*local [0,0,.025]; use body frame, never COM; subtract fixed truth and noise, no inverse fixed rotation",
+      "precision": "MuJoCo double state -> explicitly FP32 pose/noise/operations to match actor boundary; different engines cannot promise bitwise equal poses",
+      "observable_without_privileged_state": "NO: fixed reset pose truth is simulator-derived. Robot encoders alone do not determine it; calibrated sensing/perception would be a different interface",
+      "exact_reproduction": "PROPOSED conditional on exact TCP/fixed-root frame reconstruction and per-episode Gaussian N(0,.001^2 I) noise; physical state equality UNKNOWN",
+      "status": "PROPOSED"
+    },
+    {
+      "index": 2,
+      "name": "fingertip_pos_rel_fixed.z",
+      "original_source": "factory_env.py:194-201,256-263,691-710; factory_env_cfg.py:45-46",
+      "original_expression": "(p_tcp - (p_fixed_reset + R_fixed_reset@[0,0,0.025] + episode_noise))[2]",
+      "reference_frame": "world axes, env-origin-subtracted positions; reference point is cached at reset, not a rotating coordinate frame",
+      "units": "m",
+      "proposed_mujoco": "(data.site_xpos[tcp] - env_origin - fixed_reset_tip - episode_noise)[2]",
+      "required_transform": "Define exact panda_fingertip_centered site/body; fixed tip=body root position+R*local [0,0,.025]; use body frame, never COM; subtract fixed truth and noise, no inverse fixed rotation",
+      "precision": "MuJoCo double state -> explicitly FP32 pose/noise/operations to match actor boundary; different engines cannot promise bitwise equal poses",
+      "observable_without_privileged_state": "NO: fixed reset pose truth is simulator-derived. Robot encoders alone do not determine it; calibrated sensing/perception would be a different interface",
+      "exact_reproduction": "PROPOSED conditional on exact TCP/fixed-root frame reconstruction and per-episode Gaussian N(0,.001^2 I) noise; physical state equality UNKNOWN",
+      "status": "PROPOSED"
+    },
+    {
+      "index": 3,
+      "name": "fingertip_quat.w",
+      "original_source": "factory_env.py:200-201,263; factory_env_cfg.py:77",
+      "original_expression": "robot.body_quat_w[panda_fingertip_centered][0]",
+      "reference_frame": "world-frame TCP orientation, quaternion wxyz; raw sign, no canonicalization",
+      "units": "unit quaternion component",
+      "proposed_mujoco": "data.xquat[exact_tcp_body,0] OR mju_mat2Quat(data.site_xmat[tcp])[0] after explicit sign-convention validation",
+      "required_transform": "Match exact body/site local orientation; MuJoCo also wxyz; do not exchange xyzw or canonicalize w>=0. Matrix->quaternion loses sign information",
+      "precision": "Preserve unit quaternion and FP32 boundary; q and -q must be distinguished by frozen actor; conversion/engine sign equality is UNKNOWN",
+      "observable_without_privileged_state": "Conditional: encoder FK plus exact robot/tool/world calibration is possible; source currently uses simulator body pose",
+      "exact_reproduction": "PROPOSED geometric orientation; raw sign equality UNKNOWN until matched-pose/reset traces. No claim of observation equivalence from SO(3) equality alone",
+      "status": "PROPOSED"
+    },
+    {
+      "index": 4,
+      "name": "fingertip_quat.x",
+      "original_source": "factory_env.py:200-201,263; factory_env_cfg.py:77",
+      "original_expression": "robot.body_quat_w[panda_fingertip_centered][1]",
+      "reference_frame": "world-frame TCP orientation, quaternion wxyz; raw sign, no canonicalization",
+      "units": "unit quaternion component",
+      "proposed_mujoco": "data.xquat[exact_tcp_body,1] OR mju_mat2Quat(data.site_xmat[tcp])[1] after explicit sign-convention validation",
+      "required_transform": "Match exact body/site local orientation; MuJoCo also wxyz; do not exchange xyzw or canonicalize w>=0. Matrix->quaternion loses sign information",
+      "precision": "Preserve unit quaternion and FP32 boundary; q and -q must be distinguished by frozen actor; conversion/engine sign equality is UNKNOWN",
+      "observable_without_privileged_state": "Conditional: encoder FK plus exact robot/tool/world calibration is possible; source currently uses simulator body pose",
+      "exact_reproduction": "PROPOSED geometric orientation; raw sign equality UNKNOWN until matched-pose/reset traces. No claim of observation equivalence from SO(3) equality alone",
+      "status": "PROPOSED"
+    },
+    {
+      "index": 5,
+      "name": "fingertip_quat.y",
+      "original_source": "factory_env.py:200-201,263; factory_env_cfg.py:77",
+      "original_expression": "robot.body_quat_w[panda_fingertip_centered][2]",
+      "reference_frame": "world-frame TCP orientation, quaternion wxyz; raw sign, no canonicalization",
+      "units": "unit quaternion component",
+      "proposed_mujoco": "data.xquat[exact_tcp_body,2] OR mju_mat2Quat(data.site_xmat[tcp])[2] after explicit sign-convention validation",
+      "required_transform": "Match exact body/site local orientation; MuJoCo also wxyz; do not exchange xyzw or canonicalize w>=0. Matrix->quaternion loses sign information",
+      "precision": "Preserve unit quaternion and FP32 boundary; q and -q must be distinguished by frozen actor; conversion/engine sign equality is UNKNOWN",
+      "observable_without_privileged_state": "Conditional: encoder FK plus exact robot/tool/world calibration is possible; source currently uses simulator body pose",
+      "exact_reproduction": "PROPOSED geometric orientation; raw sign equality UNKNOWN until matched-pose/reset traces. No claim of observation equivalence from SO(3) equality alone",
+      "status": "PROPOSED"
+    },
+    {
+      "index": 6,
+      "name": "fingertip_quat.z",
+      "original_source": "factory_env.py:200-201,263; factory_env_cfg.py:77",
+      "original_expression": "robot.body_quat_w[panda_fingertip_centered][3]",
+      "reference_frame": "world-frame TCP orientation, quaternion wxyz; raw sign, no canonicalization",
+      "units": "unit quaternion component",
+      "proposed_mujoco": "data.xquat[exact_tcp_body,3] OR mju_mat2Quat(data.site_xmat[tcp])[3] after explicit sign-convention validation",
+      "required_transform": "Match exact body/site local orientation; MuJoCo also wxyz; do not exchange xyzw or canonicalize w>=0. Matrix->quaternion loses sign information",
+      "precision": "Preserve unit quaternion and FP32 boundary; q and -q must be distinguished by frozen actor; conversion/engine sign equality is UNKNOWN",
+      "observable_without_privileged_state": "Conditional: encoder FK plus exact robot/tool/world calibration is possible; source currently uses simulator body pose",
+      "exact_reproduction": "PROPOSED geometric orientation; raw sign equality UNKNOWN until matched-pose/reset traces. No claim of observation equivalence from SO(3) equality alone",
+      "status": "PROPOSED"
+    },
+    {
+      "index": 7,
+      "name": "ee_linvel.x",
+      "original_source": "factory_env.py:214-216,264,348-351,425-427,845-847,879-881",
+      "original_expression": "(p_tcp_current - p_tcp_previous_physics_update)[0]/(1/120)",
+      "reference_frame": "world axes; not relative to hole; not policy-step derivative",
+      "units": "m/s",
+      "proposed_mujoco": "finite_difference(p_tcp_after_substep, p_tcp_previous)/(1/120), component 0",
+      "required_transform": "Update once per new physics timestamp; preserve previous pose across all 8 substeps and final observation. On reset set previous=current, returned FD=0; do not read qvel or mj_objectVelocity as a drop-in",
+      "precision": "FP32 differencing amplifies pose roundoff by120; avoid calculating 1/15 derivative or double derivative then silently claiming FP32 parity",
+      "observable_without_privileged_state": "Conditional: encoder-derived calibrated TCP and history can estimate FD, but not exact simulator ground truth",
+      "exact_reproduction": "PROPOSED source-equivalent arithmetic given identical pose/time samples; engine pose trajectory equality UNKNOWN",
+      "status": "PROPOSED"
+    },
+    {
+      "index": 8,
+      "name": "ee_linvel.y",
+      "original_source": "factory_env.py:214-216,264,348-351,425-427,845-847,879-881",
+      "original_expression": "(p_tcp_current - p_tcp_previous_physics_update)[1]/(1/120)",
+      "reference_frame": "world axes; not relative to hole; not policy-step derivative",
+      "units": "m/s",
+      "proposed_mujoco": "finite_difference(p_tcp_after_substep, p_tcp_previous)/(1/120), component 1",
+      "required_transform": "Update once per new physics timestamp; preserve previous pose across all 8 substeps and final observation. On reset set previous=current, returned FD=0; do not read qvel or mj_objectVelocity as a drop-in",
+      "precision": "FP32 differencing amplifies pose roundoff by120; avoid calculating 1/15 derivative or double derivative then silently claiming FP32 parity",
+      "observable_without_privileged_state": "Conditional: encoder-derived calibrated TCP and history can estimate FD, but not exact simulator ground truth",
+      "exact_reproduction": "PROPOSED source-equivalent arithmetic given identical pose/time samples; engine pose trajectory equality UNKNOWN",
+      "status": "PROPOSED"
+    },
+    {
+      "index": 9,
+      "name": "ee_linvel.z",
+      "original_source": "factory_env.py:214-216,264,348-351,425-427,845-847,879-881",
+      "original_expression": "(p_tcp_current - p_tcp_previous_physics_update)[2]/(1/120)",
+      "reference_frame": "world axes; not relative to hole; not policy-step derivative",
+      "units": "m/s",
+      "proposed_mujoco": "finite_difference(p_tcp_after_substep, p_tcp_previous)/(1/120), component 2",
+      "required_transform": "Update once per new physics timestamp; preserve previous pose across all 8 substeps and final observation. On reset set previous=current, returned FD=0; do not read qvel or mj_objectVelocity as a drop-in",
+      "precision": "FP32 differencing amplifies pose roundoff by120; avoid calculating 1/15 derivative or double derivative then silently claiming FP32 parity",
+      "observable_without_privileged_state": "Conditional: encoder-derived calibrated TCP and history can estimate FD, but not exact simulator ground truth",
+      "exact_reproduction": "PROPOSED source-equivalent arithmetic given identical pose/time samples; engine pose trajectory equality UNKNOWN",
+      "status": "PROPOSED"
+    },
+    {
+      "index": 10,
+      "name": "ee_angvel.x",
+      "original_source": "factory_env.py:219-225,265,348-351,425-427,845-847,879-881; utils/math.py:474-502",
+      "original_expression": "axis_angle(sign(dq.w)*dq)[0]/dt; dq=q_current*conj(q_previous), dt=1/120",
+      "reference_frame": "world axes because left spatial quaternion difference; not local angular qvel",
+      "units": "rad/s",
+      "proposed_mujoco": "Use same wxyz Hamilton product, conjugate, torch-sign rule and Isaac axis-angle conversion on consecutive physics-step TCP quaternion; component 0",
+      "required_transform": "Do not use conj(q_previous)*q_current or body-local angular velocity. Source sign(0)=0 at exact180deg delta zeroes quaternion; preserve/report edge behavior rather than silently fix",
+      "precision": "Original epsilon1e-6 Taylor branch in axis_angle; FP32 before trig/division for source arithmetic; update once per new timestamp",
+      "observable_without_privileged_state": "Conditional: calibrated orientation history can estimate; exact source currently simulator-derived",
+      "exact_reproduction": "PROPOSED arithmetic; target quaternion sign continuity and reset parity unverified. Initial returned FD explicitly zero",
+      "status": "PROPOSED"
+    },
+    {
+      "index": 11,
+      "name": "ee_angvel.y",
+      "original_source": "factory_env.py:219-225,265,348-351,425-427,845-847,879-881; utils/math.py:474-502",
+      "original_expression": "axis_angle(sign(dq.w)*dq)[1]/dt; dq=q_current*conj(q_previous), dt=1/120",
+      "reference_frame": "world axes because left spatial quaternion difference; not local angular qvel",
+      "units": "rad/s",
+      "proposed_mujoco": "Use same wxyz Hamilton product, conjugate, torch-sign rule and Isaac axis-angle conversion on consecutive physics-step TCP quaternion; component 1",
+      "required_transform": "Do not use conj(q_previous)*q_current or body-local angular velocity. Source sign(0)=0 at exact180deg delta zeroes quaternion; preserve/report edge behavior rather than silently fix",
+      "precision": "Original epsilon1e-6 Taylor branch in axis_angle; FP32 before trig/division for source arithmetic; update once per new timestamp",
+      "observable_without_privileged_state": "Conditional: calibrated orientation history can estimate; exact source currently simulator-derived",
+      "exact_reproduction": "PROPOSED arithmetic; target quaternion sign continuity and reset parity unverified. Initial returned FD explicitly zero",
+      "status": "PROPOSED"
+    },
+    {
+      "index": 12,
+      "name": "ee_angvel.z",
+      "original_source": "factory_env.py:219-225,265,348-351,425-427,845-847,879-881; utils/math.py:474-502",
+      "original_expression": "axis_angle(sign(dq.w)*dq)[2]/dt; dq=q_current*conj(q_previous), dt=1/120",
+      "reference_frame": "world axes because left spatial quaternion difference; not local angular qvel",
+      "units": "rad/s",
+      "proposed_mujoco": "Use same wxyz Hamilton product, conjugate, torch-sign rule and Isaac axis-angle conversion on consecutive physics-step TCP quaternion; component 2",
+      "required_transform": "Do not use conj(q_previous)*q_current or body-local angular velocity. Source sign(0)=0 at exact180deg delta zeroes quaternion; preserve/report edge behavior rather than silently fix",
+      "precision": "Original epsilon1e-6 Taylor branch in axis_angle; FP32 before trig/division for source arithmetic; update once per new timestamp",
+      "observable_without_privileged_state": "Conditional: calibrated orientation history can estimate; exact source currently simulator-derived",
+      "exact_reproduction": "PROPOSED arithmetic; target quaternion sign continuity and reset parity unverified. Initial returned FD explicitly zero",
+      "status": "PROPOSED"
+    },
+    {
+      "index": 13,
+      "name": "prev_actions.position_x",
+      "original_source": "factory_env.py:258,266,286,296-304,849-877",
+      "original_expression": "self.actions[0] = .2*clipped_mu[0] + .8*previous_cache[0]",
+      "reference_frame": "controller internal EMA state; position components imply world-axis action; rotation components axis-angle action before pose projection",
+      "units": "normalized action unit",
+      "proposed_mujoco": "Python/Torch cache[0] exactly as original, update once per policy step, hold over eight physics steps",
+      "required_transform": "Reset cache=(p_tcp-fixed_action_frame)[i]/.05. Full reset is pose-dependent, not six zeros; no extra post-EMA clipping, cache may exceed [-1,1]",
+      "precision": "FP32 cache and exact .2/.8 operation order; combine with same previous clipped action and reset pose",
+      "observable_without_privileged_state": "YES internal command state, but pose-based reset inherits fixed-frame privilege for position slots",
+      "exact_reproduction": "VERIFIED source; PROPOSED MuJoCo cache execution path, no engine implemented",
+      "status": "PROPOSED"
+    },
+    {
+      "index": 14,
+      "name": "prev_actions.position_y",
+      "original_source": "factory_env.py:258,266,286,296-304,849-877",
+      "original_expression": "self.actions[1] = .2*clipped_mu[1] + .8*previous_cache[1]",
+      "reference_frame": "controller internal EMA state; position components imply world-axis action; rotation components axis-angle action before pose projection",
+      "units": "normalized action unit",
+      "proposed_mujoco": "Python/Torch cache[1] exactly as original, update once per policy step, hold over eight physics steps",
+      "required_transform": "Reset cache=(p_tcp-fixed_action_frame)[i]/.05. Full reset is pose-dependent, not six zeros; no extra post-EMA clipping, cache may exceed [-1,1]",
+      "precision": "FP32 cache and exact .2/.8 operation order; combine with same previous clipped action and reset pose",
+      "observable_without_privileged_state": "YES internal command state, but pose-based reset inherits fixed-frame privilege for position slots",
+      "exact_reproduction": "VERIFIED source; PROPOSED MuJoCo cache execution path, no engine implemented",
+      "status": "PROPOSED"
+    },
+    {
+      "index": 15,
+      "name": "prev_actions.position_z",
+      "original_source": "factory_env.py:258,266,286,296-304,849-877",
+      "original_expression": "self.actions[2] = .2*clipped_mu[2] + .8*previous_cache[2]",
+      "reference_frame": "controller internal EMA state; position components imply world-axis action; rotation components axis-angle action before pose projection",
+      "units": "normalized action unit",
+      "proposed_mujoco": "Python/Torch cache[2] exactly as original, update once per policy step, hold over eight physics steps",
+      "required_transform": "Reset cache=(p_tcp-fixed_action_frame)[i]/.05. Full reset is pose-dependent, not six zeros; no extra post-EMA clipping, cache may exceed [-1,1]",
+      "precision": "FP32 cache and exact .2/.8 operation order; combine with same previous clipped action and reset pose",
+      "observable_without_privileged_state": "YES internal command state, but pose-based reset inherits fixed-frame privilege for position slots",
+      "exact_reproduction": "VERIFIED source; PROPOSED MuJoCo cache execution path, no engine implemented",
+      "status": "PROPOSED"
+    },
+    {
+      "index": 16,
+      "name": "prev_actions.rotation_x",
+      "original_source": "factory_env.py:258,266,286,296-304,849-877",
+      "original_expression": "self.actions[3] = .2*clipped_mu[3] + .8*previous_cache[3]",
+      "reference_frame": "controller internal EMA state; position components imply world-axis action; rotation components axis-angle action before pose projection",
+      "units": "normalized action unit",
+      "proposed_mujoco": "Python/Torch cache[3] exactly as original, update once per policy step, hold over eight physics steps",
+      "required_transform": "Reset cache=0. Full reset is pose-dependent, not six zeros; no extra post-EMA clipping, cache may exceed [-1,1]",
+      "precision": "FP32 cache and exact .2/.8 operation order; combine with same previous clipped action and reset pose",
+      "observable_without_privileged_state": "YES internal command state, but pose-based reset inherits fixed-frame privilege for position slots",
+      "exact_reproduction": "VERIFIED source; PROPOSED MuJoCo cache execution path, no engine implemented",
+      "status": "PROPOSED"
+    },
+    {
+      "index": 17,
+      "name": "prev_actions.rotation_y",
+      "original_source": "factory_env.py:258,266,286,296-304,849-877",
+      "original_expression": "self.actions[4] = .2*clipped_mu[4] + .8*previous_cache[4]",
+      "reference_frame": "controller internal EMA state; position components imply world-axis action; rotation components axis-angle action before pose projection",
+      "units": "normalized action unit",
+      "proposed_mujoco": "Python/Torch cache[4] exactly as original, update once per policy step, hold over eight physics steps",
+      "required_transform": "Reset cache=0. Full reset is pose-dependent, not six zeros; no extra post-EMA clipping, cache may exceed [-1,1]",
+      "precision": "FP32 cache and exact .2/.8 operation order; combine with same previous clipped action and reset pose",
+      "observable_without_privileged_state": "YES internal command state, but pose-based reset inherits fixed-frame privilege for position slots",
+      "exact_reproduction": "VERIFIED source; PROPOSED MuJoCo cache execution path, no engine implemented",
+      "status": "PROPOSED"
+    },
+    {
+      "index": 18,
+      "name": "prev_actions.rotation_z",
+      "original_source": "factory_env.py:258,266,286,296-304,849-877",
+      "original_expression": "self.actions[5] = .2*clipped_mu[5] + .8*previous_cache[5]",
+      "reference_frame": "controller internal EMA state; position components imply world-axis action; rotation components axis-angle action before pose projection",
+      "units": "normalized action unit",
+      "proposed_mujoco": "Python/Torch cache[5] exactly as original, update once per policy step, hold over eight physics steps",
+      "required_transform": "Reset cache=yaw mapping source factory_env.py:861-877. Full reset is pose-dependent, not six zeros; no extra post-EMA clipping, cache may exceed [-1,1]",
+      "precision": "FP32 cache and exact .2/.8 operation order; combine with same previous clipped action and reset pose",
+      "observable_without_privileged_state": "YES internal command state, but pose-based reset inherits fixed-frame privilege for position slots",
+      "exact_reproduction": "VERIFIED source; PROPOSED MuJoCo cache execution path, no engine implemented",
+      "status": "PROPOSED"
+    }
+  ],
+  "critical_privileged_dependency": {
+    "status": "VERIFIED",
+    "fields": [
+      0,
+      1,
+      2,
+      13,
+      14,
+      15
+    ],
+    "description": "Actor position subtracts cached simulator fixed-asset root truth transformed to top tip plus per-episode 1mm Gaussian noise. This is not camera or external perception output; cache reset also uses this reference. Robot observations alone cannot reconstruct hole root pose. Critic43D is excluded, but actor is not privilege-free."
+  },
+  "velocity_update_contract": {
+    "dt": 0.008333333333333333,
+    "physics_hz": 120,
+    "policy_decimation": 8,
+    "policy_hz_simulated": 15,
+    "pose_history_update": "_apply_action recomputes only for a new _sim_timestamp; _get_dones computes final physics interval before observations; no policy-window average",
+    "reset": "Store current joint/TCP pose as previous; FD linear/angular buffers zeroed before initial observation",
+    "reported_g4_i2_wall_hz": 3.47,
+    "wall_rate_is_not_simulation_time": true
+  },
+  "success": {
+    "status": "VERIFIED",
+    "source": "factory_env.py:92-107,132-135,231-237,431-464; factory_tasks_cfg.py:96-109,131",
+    "held_base_local_m": [
+      0,
+      0,
+      0
+    ],
+    "target_base_local_m": [
+      0,
+      0,
+      0
+    ],
+    "fixed_height_m": 0.025,
+    "success_threshold_fraction": 0.04,
+    "xy_threshold_m": 0.0025,
+    "signed_z_upper_threshold_m": 0.001,
+    "mathematical": "pH=pHeld+R(qHeld)*[0,0,0]; pT=pFixed+R(qFixed)*[0,0,0]; sqrt((pT.x-pH.x)^2+(pT.y-pH.y)^2)<.0025 AND pH.z-pT.z<.025*.04",
+    "frame": "World/environment axes of current held/fixed roots; env origin cancels; not fixed-root local axes and not fixed observation tip",
+    "strict_inequalities": true,
+    "z_is_absolute_value": false,
+    "z_lower_bound_present": false,
+    "orientation_condition_for_peg_insert": false,
+    "force_contact_dwell_conditions_present": false,
+    "target_program_proposal": "Read target engine exact held/fixed ROOT frame current poses (not COM and not observation tip); compose zero local offsets; execute same float32 torch.linalg.vector_norm and strict comparisons before auto-reset. Do not replace by sqrt-distance to tip, abs(z), orientation, contact or tolerance padding.",
+    "geometric_success_not_physical_assembly": true,
+    "threshold_precision": "Source height*threshold is a Python float then compared in Torch FP32; target must match expression and dtype. Boundary equality fails."
+  },
+  "termination_and_metrics": {
+    "status": "VERIFIED",
+    "nominal_episode_s": 10,
+    "max_episode_length": 150,
+    "timeout_expression": "episode_length_buf >= max_episode_length-1 after episode_length_buf +=1",
+    "actual_timeout_policy_steps": 149,
+    "actual_timeout_sim_s": 9.933333333333334,
+    "terminated_and_truncated_both_timeout": true,
+    "success_early_termination": false,
+    "ordering": [
+      "8 physics steps",
+      "increment episode counter",
+      "_get_dones: intermediate values and timeout",
+      "_get_rewards: official current success captured here",
+      "auto-reset done environments",
+      "return post-reset observation",
+      "zero done actor LSTM columns before next action"
+    ],
+    "ever_success": "OR of each official pre-reset step mask, steps1..149",
+    "terminal_success": "official current mask at final pre-reset done step",
+    "first_success": "min official 1-based episode counter with true success; seconds=step*8/120",
+    "reset_auxiliary_physics": "IK/grasp and reset step_sim_no_action add physics time outside149 policy steps; they must not be counted as independent policy observations or successes"
+  },
+  "mujoco_primary_sources": [
+    {
+      "url": "https://mujoco.readthedocs.io/en/stable/APIreference/APItypes.html#mjdata",
+      "accessed_utc": "2026-10-26",
+      "supports": "body xpos/xquat/xmat, site_xpos/site_xmat are Cartesian kinematic outputs; distributed scalar mjtNum double; body frame differs from xipos COM"
+    },
+    {
+      "url": "https://mujoco.readthedocs.io/en/stable/modeling.html#frame-orientations",
+      "accessed_utc": "2026-10-26",
+      "supports": "quaternion scalar-first convention and local parent frames; compiled angles radians; orientation sign parity not guaranteed"
+    },
+    {
+      "url": "https://mujoco.readthedocs.io/en/stable/computation/index.html#general-framework",
+      "accessed_utc": "2026-10-26",
+      "supports": "qpos quaternion dimension differs from qvel; do not equate quaternion derivative/qvel to source finite differences"
+    }
+  ],
+  "unresolved": [
+    {
+      "status": "UNKNOWN",
+      "item": "Exact original panda_fingertip_centered body/site local frame in selected MuJoCo robot asset and its raw quaternion sign convention; requires licensed exact model reconstruction and CPU matched-pose traces before G4-S1 rollout"
+    },
+    {
+      "status": "PROPOSED",
+      "item": "19D target semantic reconstruction is credible given calibrated exact frames plus explicit privileged fixed geometry and cached reset noise; target implementation absent"
+    },
+    {
+      "status": "UNKNOWN",
+      "item": "PhysX/MuJoCo trajectories and contacts, reset random streams and actor commands will match; no bitwise or policy transfer performance claim"
+    }
+  ]
+}
