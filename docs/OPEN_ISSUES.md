@@ -1,5 +1,7 @@
 # 未决问题、失败及解决状态
 
+> **前瞻性路线更新（2026-10-26）**：用户决定在已启动的 G3C-R5 结束并归档后，先做 PegInsert 独立推理和控制频率/延迟/限幅/失败轨迹验收，再进行真正跨物理引擎 Sim2Sim，随后另行审阅 GearMesh、NutThread。具体门禁见 [后续路线](ROADMAP_POLICY_INFERENCE_SIM2SIM.md) 与 [工程理解问题](ENGINEERING_LEARNING_GATE.md)。本文件下文按原实验日期保留既有状态和历史建议，不构成自动继续训练的许可。
+
 更新：2026-10-25（Asia/Seoul）。G2已完成64环境、seed0、200epochs及全部主要评估；下方G0/G1、D001的“未启动/等待审阅”等语句保留为历史状态。
 
 ## G3A 当前工程验收

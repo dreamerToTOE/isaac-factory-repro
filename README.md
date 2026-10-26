@@ -1,6 +1,14 @@
 # isaac-factory-repro
 Reproduction and evaluation of contact-rich robotic assembly tasks using NVIDIA Isaac Lab, Franka, and PPO.
 
+## 下一阶段路线（2026-10-26 用户决策）
+
+**已更新优先级：PegInsert 独立策略推理工程验收 → 真正的跨物理引擎 Sim2Sim → 审阅后再决定 GearMesh → NutThread。** 这是一项未来工作排序决策，**不是**这些阶段已经完成或获得 GPU 运行授权。当前 G3C-R5 seed 1 已启动，须先等待其实际退出并保存结果；不得中断、覆盖或将新任务与其并行抢占 GPU。
+
+- [分阶段路线与科学/工程验收门禁](docs/ROADMAP_POLICY_INFERENCE_SIM2SIM.md)：明确同仿真器独立推理和跨引擎 Sim2Sim 的区别、性能指标、失败轨迹、风险及各阶段 STOP 门禁。
+- [工程理解与面试问题验收](docs/ENGINEERING_LEARNING_GATE.md)：六个核心问题、各阶段追问和由项目本人解释的学习门禁；Codex 的测试 PASS 不代表本人掌握。
+- 既有 G0–G3C 实验、提交、checkpoint 清单、监督策略及全部失败证据继续保持原样。新路线不得追溯修改旧实验事实，也不得默认采用某次训练特有的 GPU guard 例外。
+
 ## G3A 监督与日志工程验收（2026-10-25）
 
 **PASS**：先采样的独立systemd GPU guard、绑定身份后放行的闸门、真实child wait/exit、全局独占及writer flush/close已验证。77项CPU测试通过；64环境2epoch smoke实际exit0、16384transitions、829条采样无>0.5秒gap，checkpoint和末epoch TensorBoard完整。G2历史缺失不回填；截至 G3A 审阅时未开始 G3B 或新长训练，当前 G3B 状态见下文。
