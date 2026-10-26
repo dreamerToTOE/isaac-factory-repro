@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/usr/bin/python3.10",
+    "-m",
+    "pytest",
+    "tests/test_g3a_supervision.py",
+    "--basetemp=/dev/shm/g4i0_g3a_20261026t080508z_3dfe71",
+    "--junitxml=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g4_i/i0/g4i0_g3a_shm_cpu.xml",
+    "-ra"
+  ],
+  "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+  "environment_overrides": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"
+  },
+  "started_utc": "2026-10-26T08:05:08.209875+00:00",
+  "finished_utc": "2026-10-26T08:05:16.539338+00:00",
+  "duration_seconds": 8.329402670999116,
+  "exit_code": 0,
+  "basetemp": "/dev/shm/g4i0_g3a_20261026t080508z_3dfe71",
+  "scope": "CPU-only G3A supervision regression using tmpfs; existing source and tests unchanged"
+}

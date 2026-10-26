@@ -1,0 +1,337 @@
+{
+  "schema_version": "g4_i0_inference_contract_v1",
+  "status": "frozen_for_g4_i1",
+  "scope": "Original Factory PegInsert actor path; no PPO optimizer, reward, physics, success predicate, or checkpoint mutation",
+  "checkpoint_policy": {
+    "primary": "g2_epoch200_primary",
+    "secondary": "g3c_r4_epoch400_secondary",
+    "additional_completed_evidence": "g3c_r5_epoch400_additional",
+    "identity_evidence": "checkpoint_and_source_identity.json",
+    "loading": "Select explicit allowlisted role; verify file SHA-256 before trusted local torch.load(map_location=cpu, weights_only=False); verify epoch/frame, exact model key set, tensor shapes/dtypes/finiteness; strict load_state_dict; model.eval; move frozen RMS/model/state together to chosen policy device. Never silently substitute checkpoint or RMS.",
+    "rms_values_evidence": "checkpoint_audit.json#/checkpoints/<role>/rms (all 19 float64 mean/variance entries and scalar count)"
+  },
+  "input": {
+    "shape": [
+      "batch",
+      19
+    ],
+    "dtype": "float32",
+    "device": "Runtime input is contiguous float32 Tensor[B,19] on same device as actor and h/c; RMS stored float64 on that device. CPU is used only for audit/mocks in I0. Sim-to-policy device transfer is explicit via wrapper clone. No implicit batching/broadcasting.",
+    "ordering": [
+      {
+        "index": "0:3",
+        "name": "fingertip_pos_rel_fixed",
+        "meaning": "p_fingertip - (fixed_pos_obs_frame + init_fixed_pos_obs_noise); subtract the noise, not add it",
+        "units": "m",
+        "frame": "world axes; subtraction reference is not a rotating local frame",
+        "update": "one returned observation after each env.step; source value updated during each physics step",
+        "scaling": "No feature-specific pre-scale; concatenate physical values then frozen RMS float32 transform, clamp [-5,5]",
+        "source": "IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py:191-225,254-290; factory_env_cfg.py:17-23,77-89",
+        "privileged_dependency": "fixed_pos_obs_frame is tf_combine(simulator fixed_quat,fixed_pos,local tip offset) at reset, not an external perception measurement; fingertip position is simulator body pose minus env_origins"
+      },
+      {
+        "index": "3:7",
+        "name": "fingertip_quat",
+        "meaning": "fingertip midpoint orientation",
+        "units": "unit quaternion",
+        "frame": "World axes, raw body_quat_w of panda_fingertip_centered, wxyz; no sign canonicalization",
+        "update": "one returned observation after each env.step",
+        "scaling": "No feature-specific pre-scale; concatenate physical values then frozen RMS float32 transform, clamp [-5,5]",
+        "source": "IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py:191-225,254-290; factory_env_cfg.py:17-23,77-89"
+      },
+      {
+        "index": "7:10",
+        "name": "ee_linvel",
+        "meaning": "finite difference of fingertip midpoint position",
+        "units": "m/s",
+        "frame": "world axes",
+        "update": "finite difference uses one physics dt (1/120 s); value is returned at policy-step boundary",
+        "scaling": "No feature-specific pre-scale; concatenate physical values then frozen RMS float32 transform, clamp [-5,5]",
+        "source": "IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py:191-225,254-290; factory_env_cfg.py:17-23,77-89"
+      },
+      {
+        "index": "10:13",
+        "name": "ee_angvel",
+        "meaning": "quaternion difference converted to axis-angle and divided by physics dt",
+        "units": "rad/s",
+        "frame": "world axes",
+        "update": "finite difference uses one physics dt (1/120 s); value is returned at policy-step boundary",
+        "scaling": "No feature-specific pre-scale; concatenate physical values then frozen RMS float32 transform, clamp [-5,5]",
+        "source": "IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py:191-225,254-290; factory_env_cfg.py:17-23,77-89"
+      },
+      {
+        "index": "13:19",
+        "name": "prev_actions",
+        "meaning": "Factory self.actions cache after EMA; initial reset cache derived from pose, not all zeros; not the previous raw mu",
+        "units": "normalized action units",
+        "frame": "controller internal state",
+        "update": "updated at policy step by EMA before eight physics substeps; reset initializes it from the initial pose",
+        "scaling": "No feature-specific pre-scale; concatenate physical values then frozen RMS float32 transform, clamp [-5,5]",
+        "source": "IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py:191-225,254-290; factory_env_cfg.py:17-23,77-89"
+      }
+    ],
+    "critic_boundary": "The asymmetric critic receives 43 dimensions in the actual default state_order plus prev_actions. It is privileged training input and is not part of this actor deployment contract. The config class placeholder state_space=72 is overwritten by runtime concatenation; do not pass critic state to the actor.",
+    "critic_order": [
+      {
+        "name": "fingertip_pos",
+        "dim": 3
+      },
+      {
+        "name": "fingertip_quat",
+        "dim": 4
+      },
+      {
+        "name": "ee_linvel",
+        "dim": 3
+      },
+      {
+        "name": "ee_angvel",
+        "dim": 3
+      },
+      {
+        "name": "joint_pos",
+        "dim": 7
+      },
+      {
+        "name": "held_pos",
+        "dim": 3
+      },
+      {
+        "name": "held_pos_rel_fixed",
+        "dim": 3
+      },
+      {
+        "name": "held_quat",
+        "dim": 4
+      },
+      {
+        "name": "fixed_pos",
+        "dim": 3
+      },
+      {
+        "name": "fixed_quat",
+        "dim": 4
+      },
+      {
+        "name": "prev_actions",
+        "dim": 6
+      }
+    ],
+    "critic_velocity": "Critic uses simulator body velocities; actor uses physics-step finite differences. Critic joint/held/fixed poses are privileged. Actor also indirectly depends on simulator fixed-pose truth through relative position."
+  },
+  "normalization": {
+    "operation": "clamp((obs_fp32 - running_mean.float()) / sqrt(running_var.float() + 1e-5), -5.0, 5.0)",
+    "epsilon": 1e-05,
+    "clip": [
+      -5.0,
+      5.0
+    ],
+    "norm_only": false,
+    "storage_dtype": "float64",
+    "calculation_dtype": "float32",
+    "metadata": [
+      "running_mean[19]",
+      "running_var[19]",
+      "count scalar"
+    ],
+    "values": "checkpoint_audit.json: per-checkpoint rms contains complete arrays, count and config SHA",
+    "source": "rl_games/algos_torch/running_mean_std.py:9-31,45-80; models.py:34-52",
+    "freeze": "model.eval() required: no_grad/inference_mode alone does not stop RMS statistics updating in training mode; never update or write checkpoint buffers",
+    "wrapper_clip_observations": "math.inf (no finite pre-RMS clipping) from evaluator:122; distinct from normalized [-5,5]",
+    "invalid_metadata": "Reject missing/nonfloat64/wrong rank/wrong size/nonfinite mean or variance, negative variance, nonscalar/nonpositive/nonfinite count, changed epsilon or clip; never replace with identity",
+    "cpu_evidence": "All three actual checkpoint RMS compared to installed official RunningMeanStd on same FP32 synthetic input: exact equality and buffers unchanged; no actor forward was run"
+  },
+  "policy_lstm": {
+    "architecture": "continuous_a2c_logstd / actor_critic, separate=false; 19 -> torch.nn.LSTM(input19,hidden1024,layers2,dropout0) -> LayerNorm(1024,eps=1e-5) -> Linear512/ELU -> Linear128/ELU -> Linear64/ELU -> mu Linear6 (identity). Separate state-dependent logstd Linear6, exp(logstd); value Linear1 unused for deterministic actor. Asymmetric 43D central critic not required.",
+    "checkpoint_shapes": {
+      "weight_ih_l0": [
+        4096,
+        19
+      ],
+      "weight_hh_l0": [
+        4096,
+        1024
+      ],
+      "weight_ih_l1": [
+        4096,
+        1024
+      ],
+      "weight_hh_l1": [
+        4096,
+        1024
+      ],
+      "mu": [
+        6,
+        64
+      ]
+    },
+    "state": {
+      "hidden": [
+        2,
+        "batch",
+        1024
+      ],
+      "cell": [
+        2,
+        "batch",
+        1024
+      ],
+      "initialize": "zeros at first observation",
+      "reset": "zero hidden and cell columns for every completed episode before next episode action",
+      "dtype_device": "hidden/cell float32 on policy device; preserve batch identity, [2,B,1024], independent of training env count",
+      "checkpoint": "No runtime hidden/cell state restored from checkpoint; env_state is null in all three reviewed files"
+    },
+    "mode": "model.eval + inference_mode; is_train=False; choose mus not Normal.sample output; no AMP in the initial FP32 parity contract",
+    "raw_output": "mu_activation=None, so the raw mean is not intrinsically bounded",
+    "source": "rl_games/algos_torch/network_builder.py:227-246,397-476; common/layers/recurrent.py:24-56,74-77; models.py:239-299",
+    "concat_input": "Configuration true, but inactive when before_mlp=true; actual first MLP weight is [512,1024], no 19D input concatenation",
+    "rng": "Official model creates a Normal sample even when Player later selects mu; RNG advances. A mean-only implementation must explicitly preserve this RNG effect or register/reset independent RNG and report that episode seeds no longer imply identical reset streams. I0 does not claim full rollout parity.",
+    "training": "Training rollout samples Normal(mu,exp(logstd)); optimization is_train=True evaluates prev_actions logprob/entropy. Saved player deterministic=false is overridden by independent evaluator to policy_mean; training AMP flag does not authorize AMP inference."
+  },
+  "action": {
+    "shape": [
+      "batch",
+      6
+    ],
+    "dtype": "float32",
+    "ordering": [
+      {
+        "index": 0,
+        "meaning": "Cartesian fingertip position increment x",
+        "scale": "0.02 m per normalized action unit",
+        "frame": "World axes; current-position-relative increments, not rotated body coordinates",
+        "raw_output_range": "Unbounded real mu before clip; clamp to [-1,1] at Player and wrapper",
+        "units": "dimensionless before physical scale",
+        "source": "Factory factory_env.py:296-304,342-391; ctrl config:49-67"
+      },
+      {
+        "index": 1,
+        "meaning": "Cartesian fingertip position increment y",
+        "scale": "0.02 m per normalized action unit",
+        "frame": "World axes; current-position-relative increments, not rotated body coordinates",
+        "raw_output_range": "Unbounded real mu before clip; clamp to [-1,1] at Player and wrapper",
+        "units": "dimensionless before physical scale",
+        "source": "Factory factory_env.py:296-304,342-391; ctrl config:49-67"
+      },
+      {
+        "index": 2,
+        "meaning": "Cartesian fingertip position increment z",
+        "scale": "0.02 m per normalized action unit",
+        "frame": "World axes; current-position-relative increments, not rotated body coordinates",
+        "raw_output_range": "Unbounded real mu before clip; clamp to [-1,1] at Player and wrapper",
+        "units": "dimensionless before physical scale",
+        "source": "Factory factory_env.py:296-304,342-391; ctrl config:49-67"
+      },
+      {
+        "index": 3,
+        "meaning": "fingertip axis-angle rotation increment x",
+        "scale": "0.097 rad per normalized action unit",
+        "frame": "World axes; current-position-relative increments, not rotated body coordinates",
+        "raw_output_range": "Unbounded real mu before clip; clamp to [-1,1] at Player and wrapper",
+        "units": "dimensionless before physical scale",
+        "source": "Factory factory_env.py:296-304,342-391; ctrl config:49-67"
+      },
+      {
+        "index": 4,
+        "meaning": "fingertip axis-angle rotation increment y",
+        "scale": "0.097 rad per normalized action unit",
+        "frame": "World axes; current-position-relative increments, not rotated body coordinates",
+        "raw_output_range": "Unbounded real mu before clip; clamp to [-1,1] at Player and wrapper",
+        "units": "dimensionless before physical scale",
+        "source": "Factory factory_env.py:296-304,342-391; ctrl config:49-67"
+      },
+      {
+        "index": 5,
+        "meaning": "fingertip axis-angle rotation increment z",
+        "scale": "0.097 rad per normalized action unit",
+        "frame": "World axes; current-position-relative increments, not rotated body coordinates",
+        "raw_output_range": "Unbounded real mu before clip; clamp to [-1,1] at Player and wrapper",
+        "units": "dimensionless before physical scale",
+        "source": "Factory factory_env.py:296-304,342-391; ctrl config:49-67"
+      }
+    ],
+    "postprocessing": [
+      "Player selects mu, clamps [-1,1], affine-rescales Box[-1,1] (identity here); wrapper separately clips [-1,1] and clones to simulation device",
+      "Factory cache a = 0.2*incoming_clipped + 0.8*previous_cache once per policy step; NO additional cache clamp",
+      "Every physics substep: target_pos = current_fingertip_pos + a[:3]*[0.02,0.02,0.02] m; clamp target_pos-fixed_pos_action_frame using bounds [-0.05,+0.05] per axis",
+      "rotvec=a[3:]*[0.097,0.097,0.097] rad; angle=norm(rotvec); delta_quat=quat_from_angle_axis, identity if angle<=1e-6; q_target=delta_quat*q_current (left multiplication)",
+      "q_target -> Euler xyz; roll literal3.14159, pitch0, retain computed yaw; Euler -> final quaternion. Rotation bounds[1,1,1] are configured but unused in this path. PegInsert unidirectional_rot=false",
+      "Gripper target0.0; task-space PD wrench=Kp*pose_error-Kd*FD_velocity; arm torque=J^T*wrench+mass-matrix dynamically consistent null-space posture term; software torque clamp[-100,100]",
+      "Arm joint position PD gains are zero; set_joint_effort_target supplies seven arm torques. PhysX arm effort limits87N*m joints1-4,12N*m joints5-7; fingers position target0, stiffness7500,damping173,effort_limit40; requested torques do not prove actual contact forces"
+    ],
+    "safety": "Reject non-finite raw/normalized/action values and shape mismatch. Record per-dimension clipping/saturation in G4-I1; no-command/deadline behavior is not claimed by I0.",
+    "controller": {
+      "source": "factory_control.py:19-135; factory_env.py:393-423; factory_env_cfg.py:49-67,159-179",
+      "Kp": [
+        100,
+        100,
+        100,
+        30,
+        30,
+        30
+      ],
+      "Kd": "2*sqrt(Kp), rot_deriv_scale1",
+      "kp_null": 10,
+      "kd_null": 6.3246,
+      "not_policy_input": "Low-level controller additionally needs joint pos/vel, averaged left/right finger Jacobian and 7x7 arm mass matrix from simulator; these are unavailable from actor observation alone"
+    },
+    "reset_cache": {
+      "source": "factory_env.py:845-884",
+      "fixed_action_frame": "fixed_pos_obs_frame + per-episode noise",
+      "position": "(current_fingertip_pos-fixed_action_frame)/[.05,.05,.05] (not /.02)",
+      "rotation_xy": "0",
+      "yaw": "left multiply quat_from_euler(-pi,0,0) by current quat; get yaw; if yaw>pi/2 subtract2pi; if yaw<-pi add2pi; cache_z=((yaw+pi)/(3*pi/2))*2-1",
+      "velocity": "actor finite-difference linear and angular buffers zeroed",
+      "warning": "Cache is not guaranteed bounded [-1,1]; h/c zero and cache reset are different operations"
+    }
+  },
+  "timing": {
+    "physics_dt_seconds": 0.008333333333333333,
+    "physics_hz": 120,
+    "decimation": 8,
+    "simulated_policy_step_seconds": 0.06666666666666667,
+    "simulated_policy_hz": 15,
+    "action_holding": "same smoothed action is applied in each of eight _apply_action calls during one env.step; target/controller signals are regenerated in the physics loop",
+    "episode": "Nominal episode_length_s=10; max_episode_length=ceil(10/(8/120))=150; counter increments then timeout>=149, hence149 policy steps=9.9333333333 simulated seconds before auto-reset. Both terminated and truncated true at timeout. Success has no early termination. Reset/grasp/IK advances extra physics outside this episode counter.",
+    "wall_clock": "Unmeasured in I0. 15Hz is simulated cadence, not wall-clock throughput or latency. I1 records episode wall time; synchronized latency distributions/deadline behavior belong to I2.",
+    "actual_timeout_policy_steps": 149,
+    "actual_timeout_sim_seconds": 9.933333333333334,
+    "rnn_reset": "env.step computes pre-reset success/reward, auto-resets and returns new observation; evaluator then zeros h/c columns for done actors before next get_action. Source evaluate_checkpoint.py:244-274 and evaluation_runtime.py:18-27."
+  },
+  "standalone_pseudocode": [
+    "select explicitly G2 primary; verify allowlisted SHA before trusted deserialize; strict check model/RMS config and shapes",
+    "model.eval(); h,c=zeros([2,B,1024],fp32,policy_device); env.reset(); cache comes from reset pose",
+    "receive obs[B,19] fp32; verify finiteness, ordering, batch/device and frozen RMS metadata",
+    "x=clamp((obs-mean.float())/sqrt(var.float()+1e-5),-5,5)  # exactly once",
+    "under inference_mode: mu,logstd,value,(h1,c1)=LSTM_LayerNorm_MLP(x,(h,c)); validate shapes/finite",
+    "choose mu; account for official discarded Normal sample RNG effect if reproducing reset random stream",
+    "a=clamp(mu,-1,1); wrapper clips and copies to sim device; cache=.2*a+.8*cache (no reclip)",
+    "for each of8physics steps: read current pose/FD vel; regenerate position and upright quaternion targets; PD/J^T/nullspace -> arm effort and closed finger position",
+    "check done/reward/pre-reset success; environment auto-resets before returning observation",
+    "if done: zero h1,c1 done columns BEFORE next action; use new pose-derived cache and zero FD velocities, not zero cache",
+    "on nonfinite/shape/identity mismatch: raise, submit no new command, record original error and exit nonzero; I1 must mock-test this boundary. Timeout/no-command recovery is preregistered for I2, not claimed implemented by I0"
+  ],
+  "acceptance_criteria": {
+    "i0": [
+      "19D/43D order, units/frames/updates source verified",
+      "all3checkpoints SHA/config/RMS values/architecture recorded",
+      "RMS formula including dtype/clip exact CPU comparison passes",
+      "focused CPU failure-injection tests and full regression pass",
+      "historical evidence unchanged; GPU/runtime boundaries explicitly preregistered"
+    ],
+    "i1_preregistered": [
+      "standalone entry point does not create Runner optimizer/update",
+      "same observation and zero-state trace has action parity with evaluate_checkpoint within registered tolerance",
+      "checkpoint identity chain passes",
+      "at least one complete original PegInsert episode with true child wait/exit evidence",
+      "post-reset hidden/cell state and first action are recorded"
+    ],
+    "i2_preregistered": [
+      "physics/policy/control clocks separated",
+      "GPU-synchronized forward and end-to-end P50/P95/P99 plus deadline misses",
+      "raw/clipped/smoothed/final action traces and per-dimension saturation",
+      "failure trajectories and no-command policy tested",
+      "success metrics use original pre-reset predicate and fixed denominators"
+    ]
+  }
+}

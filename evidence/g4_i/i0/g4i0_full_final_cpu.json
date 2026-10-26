@@ -1,0 +1,22 @@
+{
+  "command": [
+    "../../work/envs/factory-g01/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests",
+    "--basetemp=/dev/shm/g4i0_full_a1b7b8f0d761420cbc1ff23393676359",
+    "--junitxml=evidence/g4_i/i0/g4i0_full_final_cpu.xml"
+  ],
+  "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+  "environment_overrides": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"
+  },
+  "started_utc": "2026-10-26T08:09:28.986793+00:00",
+  "duration_s": 14.622042580998823,
+  "exit_code": 0,
+  "unfiltered_tests": true,
+  ".xml_sha256": "991ced08c71963ed2e381a688186abbd7f227a92a5db64422374bd36942ce572",
+  ".txt_sha256": "1b95137965c38e2628a919c641d08fc93080e0765a21442ea5a6a244fb8d58c0"
+}

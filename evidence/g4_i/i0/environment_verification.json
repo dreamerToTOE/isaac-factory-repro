@@ -1,0 +1,16 @@
+{
+  "isaacsim_version_file": "/home/ubuntu2004/isaacsim-4.5.0/VERSION",
+  "isaacsim_build": "4.5.0-rc.36+release.19112.f59b3005.gl",
+  "version_sha256": "ae03a4157cfcbea2052862857e805daf1d4ab73c3ef5fa8bda59c90b84522f9d",
+  "isaaclab_commit": "90b79bb2d44feb8d833f260f2bf37da3487180ba",
+  "isaaclab_worktree_status": "",
+  "layer_norm_signature": "(normalized_shape: Union[int, list[int], torch.Size], eps: float = 1e-05, elementwise_affine: bool = True, bias: bool = True, device=None, dtype=None) -> None",
+  "lstm_defaults": {
+    "dropout": 0.0,
+    "bidirectional": false,
+    "batch_first": false,
+    "bias": true
+  },
+  "lstm_defaults_evidence": "installed torch.nn.LSTM documentation and rl_games/common/layers/recurrent.py:74-77 no optional kwargs passed",
+  "cpu_only": true
+}

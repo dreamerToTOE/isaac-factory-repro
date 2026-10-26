@@ -1,0 +1,15 @@
+Command: ['/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python', '-m', 'pytest', 'tests/test_g3a_supervision.py', '--basetemp=/dev/shm/g4i0_g3a_venv_20261026t080534z_c0e3ec', '--junitxml=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g4_i/i0/g4i0_g3a_shm_venv_cpu.xml', '-ra']
+Environment overrides: CUDA_VISIBLE_DEVICES="" PYTEST_DISABLE_PLUGIN_AUTOLOAD=1
+Started UTC: 2026-10-26T08:05:34.346839+00:00
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.1.1, pluggy-1.7.0
+rootdir: /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro
+collected 16 items
+
+tests/test_g3a_supervision.py ................                           [100%]
+
+- generated xml file: /home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g4_i/i0/g4i0_g3a_shm_venv_cpu.xml -
+============================== 16 passed in 8.30s ==============================
+
+Exit code: 0
+Duration seconds: 8.437424359002762

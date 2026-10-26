@@ -1,0 +1,25 @@
+{
+  "task": "G4-I0",
+  "engineering_gate": "G4_I0_PASS",
+  "learning_gate": "PENDING",
+  "questions": [
+    {
+      "question": "Factory reset后的动作缓存由初始位姿计算；如果部署入口把它和LSTM状态一起清零，哪两段后续计算会改变？",
+      "evidence": "factory_env.py:845-881; interface_spec.json action.reset_cache",
+      "user_explanation": null,
+      "review": "PENDING"
+    },
+    {
+      "question": "为什么模型内部调用Normal.sample后再选择mu，可能使只计算mu的新入口在相同evaluation seed下得到不同reset场景？你会怎样做parity对照？",
+      "evidence": "rl_games models.py:278; players.py:60-63; G4_I1_ACCEPTANCE_PLAN.md fixedtrace/RNG",
+      "user_explanation": null,
+      "review": "PENDING"
+    },
+    {
+      "question": "源码给出120Hz物理、8倍decimation和15Hz策略节奏，还缺哪些实测数据才能判断墙钟控制是否及时？",
+      "evidence": "interface_spec.json timing; direct_rl_env.py:239-259",
+      "user_explanation": null,
+      "review": "PENDING"
+    }
+  ]
+}

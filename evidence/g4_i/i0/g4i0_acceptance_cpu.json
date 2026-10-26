@@ -1,0 +1,23 @@
+{
+  "command": [
+    "../../work/envs/factory-g01/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests",
+    "--basetemp=/dev/shm/g4i0_acceptance_8ed208f557ee4977a02ea72ff0d58eae",
+    "--junitxml=evidence/g4_i/i0/g4i0_acceptance_cpu.xml"
+  ],
+  "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+  "environment_overrides": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1"
+  },
+  "started_utc": "2026-10-26T08:20:07.208387+00:00",
+  "duration_s": 14.719938516002003,
+  "exit_code": 0,
+  "unfiltered_tests": true,
+  "reason": "Final contract adds six timing/no-command mock cases required by I0 roadmap; source/other tests unchanged",
+  ".xml_sha256": "572d9c88ecabffc1b37caeefb4567ff83d4a086067b87a9badb0ab70716717c3",
+  ".txt_sha256": "8103a8e4db3075af74afe8b0377d59ac1203744744e374e6583e769b6ca70bf3"
+}

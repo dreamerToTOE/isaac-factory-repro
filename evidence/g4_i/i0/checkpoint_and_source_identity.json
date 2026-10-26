@@ -1,0 +1,959 @@
+{
+  "schema_version": "g4_i0_frozen_policy_interface_v1",
+  "created_utc": "2026-10-26T07:33:18.980611+00:00",
+  "repository_head": "9c2ce260589a32036ec346b1573e776b8f36c432",
+  "isaaclab_commit": "90b79bb2d44feb8d833f260f2bf37da3487180ba",
+  "isaaclab_tag": "v2.1.1",
+  "scope": "CPU/source/checkpoint audit only; no Isaac Sim runtime or GPU inference",
+  "primary_checkpoint": "g2_epoch200_primary",
+  "secondary_checkpoint": "g3c_r4_epoch400_secondary",
+  "additional_completed_evidence": "g3c_r5_epoch400_additional",
+  "checkpoints": {
+    "g2_epoch200_primary": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+      "workspace_relative_path": "work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+      "sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+      "bytes": 212889225,
+      "epoch": 200,
+      "frame": 1638400,
+      "training_seed": 0,
+      "num_envs": 64,
+      "horizon_length": 128,
+      "task": "peg_insert",
+      "action_dim": 6,
+      "actor_obs_dim": 19,
+      "critic_state_dim": 43,
+      "architecture": {
+        "model": "continuous_a2c_logstd",
+        "actor_critic": {
+          "name": "actor_critic",
+          "separate": false,
+          "space": {
+            "continuous": {
+              "mu_activation": "None",
+              "sigma_activation": "None",
+              "mu_init": {
+                "name": "default"
+              },
+              "sigma_init": {
+                "name": "const_initializer",
+                "val": 0
+              },
+              "fixed_sigma": false
+            }
+          },
+          "mlp": {
+            "units": [
+              512,
+              128,
+              64
+            ],
+            "activation": "elu",
+            "d2rl": false,
+            "initializer": {
+              "name": "default"
+            },
+            "regularizer": {
+              "name": "None"
+            }
+          },
+          "rnn": {
+            "name": "lstm",
+            "units": 1024,
+            "layers": 2,
+            "before_mlp": true,
+            "concat_input": true,
+            "layer_norm": true
+          }
+        },
+        "central_value": {
+          "name": "actor_critic",
+          "central_value": true,
+          "mlp": {
+            "units": [
+              512,
+              128,
+              64
+            ],
+            "activation": "elu",
+            "d2rl": false,
+            "initializer": {
+              "name": "default"
+            },
+            "regularizer": {
+              "name": "None"
+            }
+          },
+          "rnn": {
+            "name": "lstm",
+            "units": 1024,
+            "layers": 2,
+            "before_mlp": true,
+            "concat_input": true,
+            "layer_norm": true
+          }
+        }
+      },
+      "checkpoint_keys": [
+        "scaler",
+        "central_val_stats",
+        "model",
+        "epoch",
+        "frame",
+        "optimizer",
+        "assymetric_vf_nets",
+        "last_mean_rewards",
+        "env_state"
+      ],
+      "model_tensor_shapes": {
+        "value_mean_std.running_mean": [
+          1
+        ],
+        "value_mean_std.running_var": [
+          1
+        ],
+        "value_mean_std.count": [],
+        "running_mean_std.running_mean": [
+          19
+        ],
+        "running_mean_std.running_var": [
+          19
+        ],
+        "running_mean_std.count": [],
+        "a2c_network.actor_mlp.0.weight": [
+          512,
+          1024
+        ],
+        "a2c_network.actor_mlp.0.bias": [
+          512
+        ],
+        "a2c_network.actor_mlp.2.weight": [
+          128,
+          512
+        ],
+        "a2c_network.actor_mlp.2.bias": [
+          128
+        ],
+        "a2c_network.actor_mlp.4.weight": [
+          64,
+          128
+        ],
+        "a2c_network.actor_mlp.4.bias": [
+          64
+        ],
+        "a2c_network.rnn.rnn.weight_ih_l0": [
+          4096,
+          19
+        ],
+        "a2c_network.rnn.rnn.weight_hh_l0": [
+          4096,
+          1024
+        ],
+        "a2c_network.rnn.rnn.bias_ih_l0": [
+          4096
+        ],
+        "a2c_network.rnn.rnn.bias_hh_l0": [
+          4096
+        ],
+        "a2c_network.rnn.rnn.weight_ih_l1": [
+          4096,
+          1024
+        ],
+        "a2c_network.rnn.rnn.weight_hh_l1": [
+          4096,
+          1024
+        ],
+        "a2c_network.rnn.rnn.bias_ih_l1": [
+          4096
+        ],
+        "a2c_network.rnn.rnn.bias_hh_l1": [
+          4096
+        ],
+        "a2c_network.layer_norm.weight": [
+          1024
+        ],
+        "a2c_network.layer_norm.bias": [
+          1024
+        ],
+        "a2c_network.value.weight": [
+          1,
+          64
+        ],
+        "a2c_network.value.bias": [
+          1
+        ],
+        "a2c_network.mu.weight": [
+          6,
+          64
+        ],
+        "a2c_network.mu.bias": [
+          6
+        ],
+        "a2c_network.sigma.weight": [
+          6,
+          64
+        ],
+        "a2c_network.sigma.bias": [
+          6
+        ]
+      },
+      "actor_rms": {
+        "running_mean_std.running_mean": {
+          "shape": [
+            19
+          ],
+          "dtype": "torch.float64",
+          "min": -0.6155519512433955,
+          "max": 0.9815708929278876,
+          "mean": 0.032820939909411435,
+          "finite": true
+        },
+        "running_mean_std.running_var": {
+          "shape": [
+            19
+          ],
+          "dtype": "torch.float64",
+          "min": 7.384781293097666e-07,
+          "max": 0.12890700720791717,
+          "mean": 0.022782009092385865,
+          "finite": true
+        },
+        "running_mean_std.count": {
+          "shape": [],
+          "dtype": "torch.float64",
+          "min": 1638401.0,
+          "max": 1638401.0,
+          "mean": 1638401.0,
+          "finite": true
+        }
+      },
+      "normalization": {
+        "input": true,
+        "checkpoint_buffer": "model.running_mean_std.running_mean/var/count",
+        "count": 1638401.0,
+        "epsilon": 1e-05,
+        "clip": [
+          -5.0,
+          5.0
+        ],
+        "storage_dtype": "float64",
+        "calculation_dtype": "float32",
+        "frozen_values_evidence": "checkpoint_audit.json"
+      },
+      "recurrent_state": {
+        "type": "LSTM",
+        "layers": 2,
+        "hidden_size": 1024,
+        "actor_hidden_shape": [
+          2,
+          1,
+          1024
+        ],
+        "actor_cell_shape": [
+          2,
+          1,
+          1024
+        ],
+        "initialization": "zeros",
+        "reset": "zero each completed episode actor column"
+      },
+      "dependencies": {
+        "python": "3.10.12",
+        "torch": "2.7.0+cu128",
+        "rl_games": "1.6.1",
+        "isaaclab_commit": "90b79bb2d44feb8d833f260f2bf37da3487180ba",
+        "isaacsim": "4.5.0"
+      }
+    },
+    "g3c_r4_epoch400_secondary": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew__345.99203_.pth",
+      "workspace_relative_path": "work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew__345.99203_.pth",
+      "sha256": "da72a148ebe2b1e2f11f79c4316c24f515510780a3975e2304a41077436b3c36",
+      "bytes": 212889335,
+      "epoch": 400,
+      "frame": 1638400,
+      "training_seed": 0,
+      "num_envs": 32,
+      "horizon_length": 128,
+      "task": "peg_insert",
+      "action_dim": 6,
+      "actor_obs_dim": 19,
+      "critic_state_dim": 43,
+      "architecture": {
+        "model": "continuous_a2c_logstd",
+        "actor_critic": {
+          "name": "actor_critic",
+          "separate": false,
+          "space": {
+            "continuous": {
+              "mu_activation": "None",
+              "sigma_activation": "None",
+              "mu_init": {
+                "name": "default"
+              },
+              "sigma_init": {
+                "name": "const_initializer",
+                "val": 0
+              },
+              "fixed_sigma": false
+            }
+          },
+          "mlp": {
+            "units": [
+              512,
+              128,
+              64
+            ],
+            "activation": "elu",
+            "d2rl": false,
+            "initializer": {
+              "name": "default"
+            },
+            "regularizer": {
+              "name": "None"
+            }
+          },
+          "rnn": {
+            "name": "lstm",
+            "units": 1024,
+            "layers": 2,
+            "before_mlp": true,
+            "concat_input": true,
+            "layer_norm": true
+          }
+        },
+        "central_value": {
+          "name": "actor_critic",
+          "central_value": true,
+          "mlp": {
+            "units": [
+              512,
+              128,
+              64
+            ],
+            "activation": "elu",
+            "d2rl": false,
+            "initializer": {
+              "name": "default"
+            },
+            "regularizer": {
+              "name": "None"
+            }
+          },
+          "rnn": {
+            "name": "lstm",
+            "units": 1024,
+            "layers": 2,
+            "before_mlp": true,
+            "concat_input": true,
+            "layer_norm": true
+          }
+        }
+      },
+      "checkpoint_keys": [
+        "scaler",
+        "central_val_stats",
+        "model",
+        "epoch",
+        "frame",
+        "optimizer",
+        "assymetric_vf_nets",
+        "last_mean_rewards",
+        "env_state"
+      ],
+      "model_tensor_shapes": {
+        "value_mean_std.running_mean": [
+          1
+        ],
+        "value_mean_std.running_var": [
+          1
+        ],
+        "value_mean_std.count": [],
+        "running_mean_std.running_mean": [
+          19
+        ],
+        "running_mean_std.running_var": [
+          19
+        ],
+        "running_mean_std.count": [],
+        "a2c_network.actor_mlp.0.weight": [
+          512,
+          1024
+        ],
+        "a2c_network.actor_mlp.0.bias": [
+          512
+        ],
+        "a2c_network.actor_mlp.2.weight": [
+          128,
+          512
+        ],
+        "a2c_network.actor_mlp.2.bias": [
+          128
+        ],
+        "a2c_network.actor_mlp.4.weight": [
+          64,
+          128
+        ],
+        "a2c_network.actor_mlp.4.bias": [
+          64
+        ],
+        "a2c_network.rnn.rnn.weight_ih_l0": [
+          4096,
+          19
+        ],
+        "a2c_network.rnn.rnn.weight_hh_l0": [
+          4096,
+          1024
+        ],
+        "a2c_network.rnn.rnn.bias_ih_l0": [
+          4096
+        ],
+        "a2c_network.rnn.rnn.bias_hh_l0": [
+          4096
+        ],
+        "a2c_network.rnn.rnn.weight_ih_l1": [
+          4096,
+          1024
+        ],
+        "a2c_network.rnn.rnn.weight_hh_l1": [
+          4096,
+          1024
+        ],
+        "a2c_network.rnn.rnn.bias_ih_l1": [
+          4096
+        ],
+        "a2c_network.rnn.rnn.bias_hh_l1": [
+          4096
+        ],
+        "a2c_network.layer_norm.weight": [
+          1024
+        ],
+        "a2c_network.layer_norm.bias": [
+          1024
+        ],
+        "a2c_network.value.weight": [
+          1,
+          64
+        ],
+        "a2c_network.value.bias": [
+          1
+        ],
+        "a2c_network.mu.weight": [
+          6,
+          64
+        ],
+        "a2c_network.mu.bias": [
+          6
+        ],
+        "a2c_network.sigma.weight": [
+          6,
+          64
+        ],
+        "a2c_network.sigma.bias": [
+          6
+        ]
+      },
+      "actor_rms": {
+        "running_mean_std.running_mean": {
+          "shape": [
+            19
+          ],
+          "dtype": "torch.float64",
+          "min": -0.5290487985898664,
+          "max": 0.9879698678889013,
+          "mean": 0.03404680244511952,
+          "finite": true
+        },
+        "running_mean_std.running_var": {
+          "shape": [
+            19
+          ],
+          "dtype": "torch.float64",
+          "min": 7.12318200569445e-07,
+          "max": 0.17459125396629455,
+          "mean": 0.02731017393027896,
+          "finite": true
+        },
+        "running_mean_std.count": {
+          "shape": [],
+          "dtype": "torch.float64",
+          "min": 1638401.0,
+          "max": 1638401.0,
+          "mean": 1638401.0,
+          "finite": true
+        }
+      },
+      "normalization": {
+        "input": true,
+        "checkpoint_buffer": "model.running_mean_std.running_mean/var/count",
+        "count": 1638401.0,
+        "epsilon": 1e-05,
+        "clip": [
+          -5.0,
+          5.0
+        ],
+        "storage_dtype": "float64",
+        "calculation_dtype": "float32",
+        "frozen_values_evidence": "checkpoint_audit.json"
+      },
+      "recurrent_state": {
+        "type": "LSTM",
+        "layers": 2,
+        "hidden_size": 1024,
+        "actor_hidden_shape": [
+          2,
+          1,
+          1024
+        ],
+        "actor_cell_shape": [
+          2,
+          1,
+          1024
+        ],
+        "initialization": "zeros",
+        "reset": "zero each completed episode actor column"
+      },
+      "dependencies": {
+        "python": "3.10.12",
+        "torch": "2.7.0+cu128",
+        "rl_games": "1.6.1",
+        "isaaclab_commit": "90b79bb2d44feb8d833f260f2bf37da3487180ba",
+        "isaacsim": "4.5.0"
+      }
+    },
+    "g3c_r5_epoch400_additional": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_400_rew__346.54318_.pth",
+      "workspace_relative_path": "work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_400_rew__346.54318_.pth",
+      "sha256": "2b266c9b64574dc075634e10e3c6b9856899870cbabe54b157a70b7a8c9de54e",
+      "bytes": 212889335,
+      "epoch": 400,
+      "frame": 1638400,
+      "training_seed": 1,
+      "num_envs": 32,
+      "horizon_length": 128,
+      "task": "peg_insert",
+      "action_dim": 6,
+      "actor_obs_dim": 19,
+      "critic_state_dim": 43,
+      "architecture": {
+        "model": "continuous_a2c_logstd",
+        "actor_critic": {
+          "name": "actor_critic",
+          "separate": false,
+          "space": {
+            "continuous": {
+              "mu_activation": "None",
+              "sigma_activation": "None",
+              "mu_init": {
+                "name": "default"
+              },
+              "sigma_init": {
+                "name": "const_initializer",
+                "val": 0
+              },
+              "fixed_sigma": false
+            }
+          },
+          "mlp": {
+            "units": [
+              512,
+              128,
+              64
+            ],
+            "activation": "elu",
+            "d2rl": false,
+            "initializer": {
+              "name": "default"
+            },
+            "regularizer": {
+              "name": "None"
+            }
+          },
+          "rnn": {
+            "name": "lstm",
+            "units": 1024,
+            "layers": 2,
+            "before_mlp": true,
+            "concat_input": true,
+            "layer_norm": true
+          }
+        },
+        "central_value": {
+          "name": "actor_critic",
+          "central_value": true,
+          "mlp": {
+            "units": [
+              512,
+              128,
+              64
+            ],
+            "activation": "elu",
+            "d2rl": false,
+            "initializer": {
+              "name": "default"
+            },
+            "regularizer": {
+              "name": "None"
+            }
+          },
+          "rnn": {
+            "name": "lstm",
+            "units": 1024,
+            "layers": 2,
+            "before_mlp": true,
+            "concat_input": true,
+            "layer_norm": true
+          }
+        }
+      },
+      "checkpoint_keys": [
+        "scaler",
+        "central_val_stats",
+        "model",
+        "epoch",
+        "frame",
+        "optimizer",
+        "assymetric_vf_nets",
+        "last_mean_rewards",
+        "env_state"
+      ],
+      "model_tensor_shapes": {
+        "value_mean_std.running_mean": [
+          1
+        ],
+        "value_mean_std.running_var": [
+          1
+        ],
+        "value_mean_std.count": [],
+        "running_mean_std.running_mean": [
+          19
+        ],
+        "running_mean_std.running_var": [
+          19
+        ],
+        "running_mean_std.count": [],
+        "a2c_network.actor_mlp.0.weight": [
+          512,
+          1024
+        ],
+        "a2c_network.actor_mlp.0.bias": [
+          512
+        ],
+        "a2c_network.actor_mlp.2.weight": [
+          128,
+          512
+        ],
+        "a2c_network.actor_mlp.2.bias": [
+          128
+        ],
+        "a2c_network.actor_mlp.4.weight": [
+          64,
+          128
+        ],
+        "a2c_network.actor_mlp.4.bias": [
+          64
+        ],
+        "a2c_network.rnn.rnn.weight_ih_l0": [
+          4096,
+          19
+        ],
+        "a2c_network.rnn.rnn.weight_hh_l0": [
+          4096,
+          1024
+        ],
+        "a2c_network.rnn.rnn.bias_ih_l0": [
+          4096
+        ],
+        "a2c_network.rnn.rnn.bias_hh_l0": [
+          4096
+        ],
+        "a2c_network.rnn.rnn.weight_ih_l1": [
+          4096,
+          1024
+        ],
+        "a2c_network.rnn.rnn.weight_hh_l1": [
+          4096,
+          1024
+        ],
+        "a2c_network.rnn.rnn.bias_ih_l1": [
+          4096
+        ],
+        "a2c_network.rnn.rnn.bias_hh_l1": [
+          4096
+        ],
+        "a2c_network.layer_norm.weight": [
+          1024
+        ],
+        "a2c_network.layer_norm.bias": [
+          1024
+        ],
+        "a2c_network.value.weight": [
+          1,
+          64
+        ],
+        "a2c_network.value.bias": [
+          1
+        ],
+        "a2c_network.mu.weight": [
+          6,
+          64
+        ],
+        "a2c_network.mu.bias": [
+          6
+        ],
+        "a2c_network.sigma.weight": [
+          6,
+          64
+        ],
+        "a2c_network.sigma.bias": [
+          6
+        ]
+      },
+      "actor_rms": {
+        "running_mean_std.running_mean": {
+          "shape": [
+            19
+          ],
+          "dtype": "torch.float64",
+          "min": -0.4628905614844934,
+          "max": 0.975684617157402,
+          "mean": 0.015580512326783194,
+          "finite": true
+        },
+        "running_mean_std.running_var": {
+          "shape": [
+            19
+          ],
+          "dtype": "torch.float64",
+          "min": 6.820982707079015e-07,
+          "max": 0.06591731402277762,
+          "mean": 0.016649147950822535,
+          "finite": true
+        },
+        "running_mean_std.count": {
+          "shape": [],
+          "dtype": "torch.float64",
+          "min": 1638401.0,
+          "max": 1638401.0,
+          "mean": 1638401.0,
+          "finite": true
+        }
+      },
+      "normalization": {
+        "input": true,
+        "checkpoint_buffer": "model.running_mean_std.running_mean/var/count",
+        "count": 1638401.0,
+        "epsilon": 1e-05,
+        "clip": [
+          -5.0,
+          5.0
+        ],
+        "storage_dtype": "float64",
+        "calculation_dtype": "float32",
+        "frozen_values_evidence": "checkpoint_audit.json"
+      },
+      "recurrent_state": {
+        "type": "LSTM",
+        "layers": 2,
+        "hidden_size": 1024,
+        "actor_hidden_shape": [
+          2,
+          1,
+          1024
+        ],
+        "actor_cell_shape": [
+          2,
+          1,
+          1024
+        ],
+        "initialization": "zeros",
+        "reset": "zero each completed episode actor column"
+      },
+      "dependencies": {
+        "python": "3.10.12",
+        "torch": "2.7.0+cu128",
+        "rl_games": "1.6.1",
+        "isaaclab_commit": "90b79bb2d44feb8d833f260f2bf37da3487180ba",
+        "isaacsim": "4.5.0"
+      }
+    }
+  },
+  "source_inventory": [
+    {
+      "label": "factory_env_cfg.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env_cfg.py",
+      "sha256": "5f804ba3f6e3d96f352490a9b5e2e1e239d308ff7eeab7ae3aad0ca6aa8daed8",
+      "line_refs": [
+        17,
+        72,
+        77,
+        96,
+        118
+      ]
+    },
+    {
+      "label": "factory_env.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py",
+      "sha256": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81",
+      "line_refs": [
+        214,
+        254,
+        286,
+        296,
+        302,
+        342,
+        353,
+        362,
+        365,
+        399,
+        418,
+        425,
+        431,
+        458,
+        527,
+        849
+      ]
+    },
+    {
+      "label": "factory_control.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_control.py",
+      "sha256": "7ef611d530a86fa2aba9db222361b0fe8b64d34037f204ad622a17051ad5e163",
+      "line_refs": [
+        19,
+        44,
+        54,
+        64,
+        90
+      ]
+    },
+    {
+      "label": "factory_tasks_cfg.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_tasks_cfg.py",
+      "sha256": "7510b6cbed1e5bdd297723cabf7d25cef6a00b94bb3804b7578f2925a6a43971",
+      "line_refs": [
+        104,
+        112,
+        117,
+        126
+      ]
+    },
+    {
+      "label": "direct_rl_env.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/envs/direct_rl_env.py",
+      "sha256": "0c919fdc93e9198562edaaa3c29627a8dc0e123f581f41cdffc75641f9033fc1",
+      "line_refs": [
+        329,
+        342,
+        358,
+        363,
+        367,
+        383
+      ]
+    },
+    {
+      "label": "direct_rl_env_cfg.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/envs/direct_rl_env_cfg.py",
+      "sha256": "e3988fbf96bdde304a4ef1c76f21584f0160e26c617de9b77d8c4aaab53d48c8",
+      "line_refs": [
+        60
+      ]
+    },
+    {
+      "label": "isaaclab_rl_rl_games.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_rl/isaaclab_rl/rl_games.py",
+      "sha256": "512af373b28e659308bc98d54cb9f646fe1870d8ad087019ce2d54a5deee2623",
+      "line_refs": [
+        238,
+        242,
+        244,
+        256,
+        287,
+        298
+      ]
+    },
+    {
+      "label": "train.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py",
+      "sha256": "668fb1251c83d6e13271457d53a1b7079f3c2964d3284a13ac3bc2ff58194110",
+      "line_refs": [
+        87,
+        98,
+        102,
+        118,
+        136,
+        167,
+        176,
+        180
+      ]
+    },
+    {
+      "label": "evaluate_checkpoint.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/evaluate_checkpoint.py",
+      "sha256": "415dff9b59ece8a21e6bbe0a6c9fff08e2ea594cb8dc2ef8fe73e299c94af707",
+      "line_refs": [
+        103,
+        110,
+        112,
+        130,
+        134,
+        137,
+        142,
+        241,
+        246,
+        273
+      ]
+    },
+    {
+      "label": "rl_games_players.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/players.py",
+      "sha256": "e22d083c540b479b31fefc2bbd05d132a54e3f97d14bf21421498e011942c043",
+      "line_refs": [
+        45,
+        48,
+        55,
+        60,
+        67,
+        72
+      ]
+    },
+    {
+      "label": "rl_games_models.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/models.py",
+      "sha256": "78a806701b3099ea45de5c9c1e00c761d0a9443b4b39d6cce087680fc4e62f37",
+      "line_refs": [
+        239,
+        258,
+        261,
+        264,
+        278
+      ]
+    },
+    {
+      "label": "rl_games_network_builder.py",
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/network_builder.py",
+      "sha256": "6a03fe980305921dd4c133fe7b35641434e3c636b441bbc1436411094ad66193",
+      "line_refs": [
+        349,
+        355,
+        372,
+        460,
+        468,
+        475
+      ]
+    }
+  ],
+  "dependencies": {
+    "python": "3.10.12",
+    "torch": "2.7.0+cu128",
+    "rl_games": "1.6.1",
+    "numpy": "1.26.4",
+    "gymnasium": "1.2.0"
+  },
+  "unresolved_runtime_items": [
+    "actual standalone checkpoint-backed forward parity not run in G4-I0",
+    "GPU/CPU wall-clock inference latency and deadline misses not measured",
+    "sensor/robot deployment mapping outside Isaac Sim not validated",
+    "quaternion postprocessing and controller target parity require G4-I1 trace"
+  ],
+  "normalization_finalized_in_i0": "All three actual RMS buffers verified against installed official CPU implementation; complete values in checkpoint_audit.json"
+}

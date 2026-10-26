@@ -1,0 +1,4 @@
+RunningMeanStd:  (19,)
+RunningMeanStd:  (19,)
+RunningMeanStd:  (19,)
+{"output": "evidence/g4_i/i0/checkpoint_audit.json", "checkpoints_verified": 3, "source_files_hashed": 14, "official_rms_cpu_parity": "PASS"}

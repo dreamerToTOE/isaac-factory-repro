@@ -1,0 +1,105 @@
+{
+  "schema_version": "g4_i0_cpu_validation_v1",
+  "created_utc": "2026-10-26T07:51:25.816944+00:00",
+  "full_suite_observation": {
+    "command": "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 .../factory-g01/bin/python -m pytest -q tests --junitxml=evidence/g4_i/i0/g4i0_full_cpu.xml",
+    "passed": 232,
+    "failed": 2,
+    "result_file": "g4i0_full_cpu.txt",
+    "failures": [
+      "tests/test_g3a_supervision.py::test_monitor_exception_stops_child_and_records_failure",
+      "tests/test_g3a_supervision.py::test_systemd_units_survive_submitting_launcher_sigkill"
+    ],
+    "interpretation": "Original full run had two failures in unchanged G3A supervision code. Their original guard state is unavailable; timing/storage sensitivity is an inference. These failures did not recur in the unmodified G3A rerun or final unfiltered full suite; no tests or supervision checks were weakened."
+  },
+  "gpu_or_sim_runtime_tests": {
+    "run": false,
+    "status": "PREREGISTERED_FOR_G4_I1",
+    "reason": "G4-I0 is CPU/source audit only"
+  },
+  "historical_files_modified": false,
+  "updated_utc": "2026-10-26T08:20:56.141036+00:00",
+  "targeted_initial": {
+    "command": "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 .../factory-g01/bin/python -m pytest -q tests/test_g4i0_interface.py --junitxml=evidence/g4_i/i0/g4i0_targeted_cpu.xml",
+    "passed": 14,
+    "failed": 0,
+    "result_file": "g4i0_targeted_cpu.txt",
+    "junit_sha256": "7e0d93f59f4b9352a6c71dd3bba3c1549a607cad9c381d6173b9379326225dc6"
+  },
+  "scoped_diagnostic": {
+    "command": "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 .../factory-g01/bin/python -m pytest -q tests --ignore=tests/test_g3a_supervision.py --junitxml=evidence/g4_i/i0/g4i0_regression_excluding_preexisting_g3a.xml",
+    "passed": 218,
+    "failed": 0,
+    "result_file": "g4i0_regression_excluding_preexisting_g3a.txt",
+    "junit_sha256": "d8d0739416e67b41eb8a5bc1c622ca08dd7a312260bfc4fa967026a6d7b92065"
+  },
+  "unchanged_g3a_rerun": {
+    "passed": 16,
+    "exit_code": 0,
+    "receipt": "g4i0_g3a_shm_venv_cpu.json",
+    "comparison": "g4i0_g3a_shm_comparison.json"
+  },
+  "checkpoint_cpu_audit": {
+    "command": "CUDA_VISIBLE_DEVICES='' ../../work/envs/factory-g01/bin/python -m scripts.audit_g4i0 --output evidence/g4_i/i0/checkpoint_audit.json",
+    "exit_code": 0,
+    "actual_checkpoints": 3,
+    "official_rms_exact_parity": true,
+    "result": "checkpoint_audit.json",
+    "console": "checkpoint_audit_console.txt",
+    "initial_failure": "checkpoint_audit_initial_ast_error.txt",
+    "initial_failure_reason": "Collector AST selector used Assign for actual annotated AnnAssign; corrected and rerun successfully, no source/policy change."
+  },
+  "runtime_boundaries": {
+    "actual_actor_forward": false,
+    "official_rms_cpu_only": true,
+    "simulator_runtime": false,
+    "gpu_workload": false,
+    "latency_claim": null
+  },
+  "historical_preservation": "historical_preservation.json",
+  "targeted_before_clock_mock": {
+    "passed": 46,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "time_s": 1.648,
+    "result_file": "g4i0_targeted_final_cpu.txt",
+    "junit_file": "g4i0_targeted_final_cpu.xml",
+    "junit_sha256": "045b48e2f1a26f904a55226de83a6407b175f31a510530c75d346b76fefc3355",
+    "command": "CUDA_VISIBLE_DEVICES='' PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 ../../work/envs/factory-g01/bin/python -m pytest -q tests/test_g4i0_interface.py --basetemp=/dev/shm/g4i0_targeted_final --junitxml=evidence/g4_i/i0/g4i0_targeted_final_cpu.xml"
+  },
+  "full_regression_before_clock_mock": {
+    "passed": 266,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "time_s": 14.179,
+    "result_file": "g4i0_full_final_cpu.txt",
+    "junit_file": "g4i0_full_final_cpu.xml",
+    "junit_sha256": "991ced08c71963ed2e381a688186abbd7f227a92a5db64422374bd36942ce572",
+    "receipt": "g4i0_full_final_cpu.json",
+    "all_tests_included": true
+  },
+  "targeted_final": {
+    "passed": 52,
+    "failed": 0,
+    "skipped": 0,
+    "source": "Subset of final unfiltered 272-test acceptance run, not an additional separate invocation",
+    "junit_file": "g4i0_acceptance_cpu.xml",
+    "classname": "tests.test_g4i0_interface",
+    "time_s": 0.05400000000000004
+  },
+  "full_regression_final": {
+    "passed": 272,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "time_s": 14.238,
+    "result_file": "g4i0_acceptance_cpu.txt",
+    "junit_file": "g4i0_acceptance_cpu.xml",
+    "receipt": "g4i0_acceptance_cpu.json",
+    "junit_sha256": "572d9c88ecabffc1b37caeefb4567ff83d4a086067b87a9badb0ab70716717c3",
+    "all_tests_included": true,
+    "exit_code": 0
+  }
+}

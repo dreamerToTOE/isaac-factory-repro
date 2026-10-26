@@ -1,0 +1,698 @@
+{
+  "scope": "CPU hash/metadata/RMS inspection; no policy forward, simulator, or GPU",
+  "created_utc": "2026-10-26T08:07:48.387886+00:00",
+  "repository_head": "9c2ce260589a32036ec346b1573e776b8f36c432",
+  "python": "3.10.12",
+  "packages": {
+    "torch": "2.7.0+cu128",
+    "rl-games": "1.6.1",
+    "gymnasium": "1.2.0",
+    "numpy": "1.26.4",
+    "PyYAML": "6.0.3"
+  },
+  "checkpoints": {
+    "g2_epoch200_primary": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+      "sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+      "bytes": 212889225,
+      "epoch": 200,
+      "frame": 1638400,
+      "model_keys_shapes_dtypes_finite": "PASS",
+      "rms": {
+        "running_mean": [
+          0.0012255092069378359,
+          -0.00012767174115339898,
+          0.016220802091269422,
+          -0.0004148297350249812,
+          0.9815708929278876,
+          -0.01319376962304078,
+          -8.221180581832617e-05,
+          0.0002684951223020321,
+          -2.7311945829650007e-05,
+          -0.003925053169754315,
+          0.00011149474764006666,
+          7.360269291309025e-05,
+          -0.0031692055512368396,
+          0.1510722365910423,
+          -0.1550172540154216,
+          -0.6155519512433955,
+          0.029090970147354147,
+          0.2467348705245342,
+          -0.011261756942388115
+        ],
+        "running_var": [
+          5.5875029198706424e-05,
+          4.393848241338778e-05,
+          0.00021127711527912718,
+          7.506108044770058e-07,
+          0.00037365255474328286,
+          0.036028821324941236,
+          7.384781293097666e-07,
+          4.188431289220786e-05,
+          4.446290477630366e-05,
+          0.0001475374360079426,
+          1.4977530870824253e-05,
+          4.5064961699082126e-05,
+          0.0030472441866966323,
+          0.045517981137704555,
+          0.05176783857200631,
+          0.12890700720791717,
+          0.049298443207540094,
+          0.07291801439246555,
+          0.04439266330924522
+        ],
+        "count": 1638401.0
+      },
+      "rms_storage_dtype": "float64",
+      "rms_calculation_dtype": "float32",
+      "epsilon": 1e-05,
+      "normalized_clip": [
+        -5.0,
+        5.0
+      ],
+      "official_rms_cpu_parity_max_abs": 0.0,
+      "rms_eval_statistics_unchanged": true,
+      "rnn_runtime_state_in_checkpoint": false,
+      "env_state": null,
+      "agent_config_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/params/agent.yaml",
+      "agent_config_sha256": "e72507a2984840f9620c6210a882842341882a2ef1f031860a78978942d36ace",
+      "env_config_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/params/env.yaml",
+      "env_config_sha256": "9b07adc49a4ec46b41e7ae789510e47f5c20dd001ae32b22e18b5f7cc29bc876",
+      "agent_configuration": {
+        "params": {
+          "seed": 0,
+          "algo": {
+            "name": "a2c_continuous"
+          },
+          "env": {
+            "clip_actions": 1.0
+          },
+          "model": {
+            "name": "continuous_a2c_logstd"
+          },
+          "network": {
+            "name": "actor_critic",
+            "separate": false,
+            "space": {
+              "continuous": {
+                "mu_activation": "None",
+                "sigma_activation": "None",
+                "mu_init": {
+                  "name": "default"
+                },
+                "sigma_init": {
+                  "name": "const_initializer",
+                  "val": 0
+                },
+                "fixed_sigma": false
+              }
+            },
+            "mlp": {
+              "units": [
+                512,
+                128,
+                64
+              ],
+              "activation": "elu",
+              "d2rl": false,
+              "initializer": {
+                "name": "default"
+              },
+              "regularizer": {
+                "name": "None"
+              }
+            },
+            "rnn": {
+              "name": "lstm",
+              "units": 1024,
+              "layers": 2,
+              "before_mlp": true,
+              "concat_input": true,
+              "layer_norm": true
+            }
+          },
+          "load_checkpoint": false,
+          "load_path": "",
+          "config": {
+            "name": "Factory",
+            "device": "cuda:0",
+            "full_experiment_name": "g2_peginsert_64env_seed0_baseline_rerun",
+            "env_name": "rlgpu",
+            "multi_gpu": false,
+            "ppo": true,
+            "mixed_precision": true,
+            "normalize_input": true,
+            "normalize_value": true,
+            "value_bootstrap": true,
+            "num_actors": 128,
+            "reward_shaper": {
+              "scale_value": 1.0
+            },
+            "normalize_advantage": true,
+            "gamma": 0.995,
+            "tau": 0.95,
+            "learning_rate": 0.0001,
+            "lr_schedule": "adaptive",
+            "schedule_type": "standard",
+            "kl_threshold": 0.008,
+            "score_to_win": 20000,
+            "max_epochs": 200,
+            "save_best_after": 10,
+            "save_frequency": 50,
+            "print_stats": true,
+            "grad_norm": 1.0,
+            "entropy_coef": 0.0,
+            "truncate_grads": true,
+            "e_clip": 0.2,
+            "horizon_length": 128,
+            "minibatch_size": 512,
+            "mini_epochs": 4,
+            "critic_coef": 2,
+            "clip_value": true,
+            "seq_length": 128,
+            "bounds_loss_coef": 0.0001,
+            "central_value_config": {
+              "minibatch_size": 512,
+              "mini_epochs": 4,
+              "learning_rate": "1e-4",
+              "lr_schedule": "adaptive",
+              "kl_threshold": 0.008,
+              "clip_value": true,
+              "normalize_input": true,
+              "truncate_grads": true,
+              "network": {
+                "name": "actor_critic",
+                "central_value": true,
+                "mlp": {
+                  "units": [
+                    512,
+                    128,
+                    64
+                  ],
+                  "activation": "elu",
+                  "d2rl": false,
+                  "initializer": {
+                    "name": "default"
+                  },
+                  "regularizer": {
+                    "name": "None"
+                  }
+                },
+                "rnn": {
+                  "name": "lstm",
+                  "units": 1024,
+                  "layers": 2,
+                  "before_mlp": true,
+                  "concat_input": true,
+                  "layer_norm": true
+                }
+              }
+            },
+            "player": {
+              "deterministic": false
+            },
+            "train_dir": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory"
+          }
+        }
+      },
+      "num_actors_dump_caveat": "Pre-wrapper num_actors=128; actual env count comes from env config and historical runtime evidence"
+    },
+    "g3c_r4_epoch400_secondary": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/nn/last_Factory_ep_400_rew__345.99203_.pth",
+      "sha256": "da72a148ebe2b1e2f11f79c4316c24f515510780a3975e2304a41077436b3c36",
+      "bytes": 212889335,
+      "epoch": 400,
+      "frame": 1638400,
+      "model_keys_shapes_dtypes_finite": "PASS",
+      "rms": {
+        "running_mean": [
+          0.0005894752800757795,
+          0.00011531946186489724,
+          0.01630864161250053,
+          0.00012820934854082343,
+          0.9879698678889013,
+          0.02765625116578028,
+          -4.361296387038697e-05,
+          0.00017015896946116896,
+          7.138019130428759e-06,
+          -0.00391505646719232,
+          -8.370904754917465e-05,
+          6.779454818977144e-05,
+          0.009168169662043915,
+          0.10069748882929999,
+          0.19022329656096773,
+          -0.3655123454299768,
+          0.17340735964565368,
+          -0.5290487985898664,
+          0.0389835979633155
+        ],
+        "running_var": [
+          3.238650144883661e-05,
+          2.890942684452892e-05,
+          0.00020701149791579453,
+          7.12318200569445e-07,
+          0.00022632131262781134,
+          0.02295852144646072,
+          7.176184824345638e-07,
+          4.014132165813747e-05,
+          3.985081586039607e-05,
+          0.0001417100221175339,
+          1.6120025191028674e-05,
+          4.4365399780384496e-05,
+          0.005550004626654609,
+          0.038597050348422875,
+          0.05784309599357101,
+          0.0695143620685624,
+          0.06874048049763973,
+          0.17459125396629455,
+          0.08032028946756693
+        ],
+        "count": 1638401.0
+      },
+      "rms_storage_dtype": "float64",
+      "rms_calculation_dtype": "float32",
+      "epsilon": 1e-05,
+      "normalized_clip": [
+        -5.0,
+        5.0
+      ],
+      "official_rms_cpu_parity_max_abs": 0.0,
+      "rms_eval_statistics_unchanged": true,
+      "rnn_runtime_state_in_checkpoint": false,
+      "env_state": null,
+      "agent_config_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/params/agent.yaml",
+      "agent_config_sha256": "212abcbbdcb83f5aecdd7f91feb3a36a0c385671d2ca06e1ecb4e46be20c9d27",
+      "env_config_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/params/env.yaml",
+      "env_config_sha256": "01c678dca9512a99ccbe93b1b27278fe991fbb9116b7b5db33e1ed389c5dc3d4",
+      "agent_configuration": {
+        "params": {
+          "seed": 0,
+          "algo": {
+            "name": "a2c_continuous"
+          },
+          "env": {
+            "clip_actions": 1.0
+          },
+          "model": {
+            "name": "continuous_a2c_logstd"
+          },
+          "network": {
+            "name": "actor_critic",
+            "separate": false,
+            "space": {
+              "continuous": {
+                "mu_activation": "None",
+                "sigma_activation": "None",
+                "mu_init": {
+                  "name": "default"
+                },
+                "sigma_init": {
+                  "name": "const_initializer",
+                  "val": 0
+                },
+                "fixed_sigma": false
+              }
+            },
+            "mlp": {
+              "units": [
+                512,
+                128,
+                64
+              ],
+              "activation": "elu",
+              "d2rl": false,
+              "initializer": {
+                "name": "default"
+              },
+              "regularizer": {
+                "name": "None"
+              }
+            },
+            "rnn": {
+              "name": "lstm",
+              "units": 1024,
+              "layers": 2,
+              "before_mlp": true,
+              "concat_input": true,
+              "layer_norm": true
+            }
+          },
+          "load_checkpoint": false,
+          "load_path": "",
+          "config": {
+            "name": "Factory",
+            "device": "cuda:0",
+            "full_experiment_name": "g3cr4_peginsert_32env_seed0_400ep_20261025t140016z",
+            "env_name": "rlgpu",
+            "multi_gpu": false,
+            "ppo": true,
+            "mixed_precision": true,
+            "normalize_input": true,
+            "normalize_value": true,
+            "value_bootstrap": true,
+            "num_actors": 128,
+            "reward_shaper": {
+              "scale_value": 1.0
+            },
+            "normalize_advantage": true,
+            "gamma": 0.995,
+            "tau": 0.95,
+            "learning_rate": 0.0001,
+            "lr_schedule": "adaptive",
+            "schedule_type": "standard",
+            "kl_threshold": 0.008,
+            "score_to_win": 20000,
+            "max_epochs": 400,
+            "save_best_after": 10,
+            "save_frequency": 25,
+            "print_stats": true,
+            "grad_norm": 1.0,
+            "entropy_coef": 0.0,
+            "truncate_grads": true,
+            "e_clip": 0.2,
+            "horizon_length": 128,
+            "minibatch_size": 512,
+            "mini_epochs": 4,
+            "critic_coef": 2,
+            "clip_value": true,
+            "seq_length": 128,
+            "bounds_loss_coef": 0.0001,
+            "central_value_config": {
+              "minibatch_size": 512,
+              "mini_epochs": 4,
+              "learning_rate": "1e-4",
+              "lr_schedule": "adaptive",
+              "kl_threshold": 0.008,
+              "clip_value": true,
+              "normalize_input": true,
+              "truncate_grads": true,
+              "network": {
+                "name": "actor_critic",
+                "central_value": true,
+                "mlp": {
+                  "units": [
+                    512,
+                    128,
+                    64
+                  ],
+                  "activation": "elu",
+                  "d2rl": false,
+                  "initializer": {
+                    "name": "default"
+                  },
+                  "regularizer": {
+                    "name": "None"
+                  }
+                },
+                "rnn": {
+                  "name": "lstm",
+                  "units": 1024,
+                  "layers": 2,
+                  "before_mlp": true,
+                  "concat_input": true,
+                  "layer_norm": true
+                }
+              }
+            },
+            "player": {
+              "deterministic": false
+            },
+            "train_dir": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory"
+          }
+        }
+      },
+      "num_actors_dump_caveat": "Pre-wrapper num_actors=128; actual env count comes from env config and historical runtime evidence"
+    },
+    "g3c_r5_epoch400_additional": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/nn/last_Factory_ep_400_rew__346.54318_.pth",
+      "sha256": "2b266c9b64574dc075634e10e3c6b9856899870cbabe54b157a70b7a8c9de54e",
+      "bytes": 212889335,
+      "epoch": 400,
+      "frame": 1638400,
+      "model_keys_shapes_dtypes_finite": "PASS",
+      "rms": {
+        "running_mean": [
+          0.0003080287855531249,
+          -0.0005548290545181628,
+          0.01585322501265259,
+          -0.0002986016195544655,
+          0.975684617157402,
+          0.10555647767489718,
+          0.00012635791865108064,
+          0.0001281971363258791,
+          -3.7198222077969104e-05,
+          -0.003944672006985384,
+          8.063322260524985e-05,
+          -1.658975537048137e-05,
+          0.03785949089642212,
+          -0.008672101085532149,
+          -0.09143833796658332,
+          -0.4628905614844934,
+          -0.2582984655000239,
+          -0.15753310142030846,
+          0.1441171645198192
+        ],
+        "running_var": [
+          3.3577887923977454e-05,
+          3.4592369976061604e-05,
+          0.00019385806913854926,
+          6.820982707079015e-07,
+          0.0004700280154230512,
+          0.036485932064665404,
+          7.492797107635901e-07,
+          4.84111083233278e-05,
+          4.081166004675933e-05,
+          0.00013418240512806892,
+          1.4812445460121465e-05,
+          4.548686697466146e-05,
+          0.003474016296609064,
+          0.047627093749013895,
+          0.03345723573330642,
+          0.06591731402277762,
+          0.04129808602561198,
+          0.0378830287644125,
+          0.049173912202855205
+        ],
+        "count": 1638401.0
+      },
+      "rms_storage_dtype": "float64",
+      "rms_calculation_dtype": "float32",
+      "epsilon": 1e-05,
+      "normalized_clip": [
+        -5.0,
+        5.0
+      ],
+      "official_rms_cpu_parity_max_abs": 0.0,
+      "rms_eval_statistics_unchanged": true,
+      "rnn_runtime_state_in_checkpoint": false,
+      "env_state": null,
+      "agent_config_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/params/agent.yaml",
+      "agent_config_sha256": "24ac73f2081b132eb7ac413873c521ac39aab3eb18ef79e376685542c79dde6e",
+      "env_config_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/params/env.yaml",
+      "env_config_sha256": "1955faaac1cb9369cd326d30d30c8972c80f0bc1d9202db1c9c521c13de25e43",
+      "agent_configuration": {
+        "params": {
+          "seed": 1,
+          "algo": {
+            "name": "a2c_continuous"
+          },
+          "env": {
+            "clip_actions": 1.0
+          },
+          "model": {
+            "name": "continuous_a2c_logstd"
+          },
+          "network": {
+            "name": "actor_critic",
+            "separate": false,
+            "space": {
+              "continuous": {
+                "mu_activation": "None",
+                "sigma_activation": "None",
+                "mu_init": {
+                  "name": "default"
+                },
+                "sigma_init": {
+                  "name": "const_initializer",
+                  "val": 0
+                },
+                "fixed_sigma": false
+              }
+            },
+            "mlp": {
+              "units": [
+                512,
+                128,
+                64
+              ],
+              "activation": "elu",
+              "d2rl": false,
+              "initializer": {
+                "name": "default"
+              },
+              "regularizer": {
+                "name": "None"
+              }
+            },
+            "rnn": {
+              "name": "lstm",
+              "units": 1024,
+              "layers": 2,
+              "before_mlp": true,
+              "concat_input": true,
+              "layer_norm": true
+            }
+          },
+          "load_checkpoint": false,
+          "load_path": "",
+          "config": {
+            "name": "Factory",
+            "device": "cuda:0",
+            "full_experiment_name": "g3cr5_peginsert_32env_seed1_400ep_20261026t015040z",
+            "env_name": "rlgpu",
+            "multi_gpu": false,
+            "ppo": true,
+            "mixed_precision": true,
+            "normalize_input": true,
+            "normalize_value": true,
+            "value_bootstrap": true,
+            "num_actors": 128,
+            "reward_shaper": {
+              "scale_value": 1.0
+            },
+            "normalize_advantage": true,
+            "gamma": 0.995,
+            "tau": 0.95,
+            "learning_rate": 0.0001,
+            "lr_schedule": "adaptive",
+            "schedule_type": "standard",
+            "kl_threshold": 0.008,
+            "score_to_win": 20000,
+            "max_epochs": 400,
+            "save_best_after": 10,
+            "save_frequency": 25,
+            "print_stats": true,
+            "grad_norm": 1.0,
+            "entropy_coef": 0.0,
+            "truncate_grads": true,
+            "e_clip": 0.2,
+            "horizon_length": 128,
+            "minibatch_size": 512,
+            "mini_epochs": 4,
+            "critic_coef": 2,
+            "clip_value": true,
+            "seq_length": 128,
+            "bounds_loss_coef": 0.0001,
+            "central_value_config": {
+              "minibatch_size": 512,
+              "mini_epochs": 4,
+              "learning_rate": "1e-4",
+              "lr_schedule": "adaptive",
+              "kl_threshold": 0.008,
+              "clip_value": true,
+              "normalize_input": true,
+              "truncate_grads": true,
+              "network": {
+                "name": "actor_critic",
+                "central_value": true,
+                "mlp": {
+                  "units": [
+                    512,
+                    128,
+                    64
+                  ],
+                  "activation": "elu",
+                  "d2rl": false,
+                  "initializer": {
+                    "name": "default"
+                  },
+                  "regularizer": {
+                    "name": "None"
+                  }
+                },
+                "rnn": {
+                  "name": "lstm",
+                  "units": 1024,
+                  "layers": 2,
+                  "before_mlp": true,
+                  "concat_input": true,
+                  "layer_norm": true
+                }
+              }
+            },
+            "player": {
+              "deterministic": false
+            },
+            "train_dir": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory"
+          }
+        }
+      },
+      "num_actors_dump_caveat": "Pre-wrapper num_actors=128; actual env count comes from env config and historical runtime evidence"
+    }
+  },
+  "source_files": {
+    "factory_env_cfg.py": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env_cfg.py",
+      "sha256": "5f804ba3f6e3d96f352490a9b5e2e1e239d308ff7eeab7ae3aad0ca6aa8daed8"
+    },
+    "factory_env.py": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py",
+      "sha256": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81"
+    },
+    "factory_control.py": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_control.py",
+      "sha256": "7ef611d530a86fa2aba9db222361b0fe8b64d34037f204ad622a17051ad5e163"
+    },
+    "direct_rl_env.py": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/envs/direct_rl_env.py",
+      "sha256": "0c919fdc93e9198562edaaa3c29627a8dc0e123f581f41cdffc75641f9033fc1"
+    },
+    "direct_rl_env_cfg.py": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/envs/direct_rl_env_cfg.py",
+      "sha256": "e3988fbf96bdde304a4ef1c76f21584f0160e26c617de9b77d8c4aaab53d48c8"
+    },
+    "rl_games_wrapper.py": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_rl/isaaclab_rl/rl_games.py",
+      "sha256": "512af373b28e659308bc98d54cb9f646fe1870d8ad087019ce2d54a5deee2623"
+    },
+    "models.py": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/models.py",
+      "sha256": "78a806701b3099ea45de5c9c1e00c761d0a9443b4b39d6cce087680fc4e62f37"
+    },
+    "network_builder.py": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/network_builder.py",
+      "sha256": "6a03fe980305921dd4c133fe7b35641434e3c636b441bbc1436411094ad66193"
+    },
+    "running_mean_std.py": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/running_mean_std.py",
+      "sha256": "c7ad469e2bbc89de8419b55c768d1076f5d394d72102cc38c7e49002fc1db788"
+    },
+    "players.py": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/players.py",
+      "sha256": "e22d083c540b479b31fefc2bbd05d132a54e3f97d14bf21421498e011942c043"
+    },
+    "base_player.py": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/player.py",
+      "sha256": "db45d52106f3bff3b4b117d037f72c76f01f0a862b051d490a837232b4e2683f"
+    },
+    "recurrent.py": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/layers/recurrent.py",
+      "sha256": "513a0cada38071444a8b2459690db904426b0913c568b66ec8a721338210f023"
+    },
+    "evaluate_checkpoint.py": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/evaluate_checkpoint.py",
+      "sha256": "415dff9b59ece8a21e6bbe0a6c9fff08e2ea594cb8dc2ef8fe73e299c94af707"
+    },
+    "evaluation_runtime.py": {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/evaluation_runtime.py",
+      "sha256": "c42644f7c1572922c34d925b6bdc1bc45b7f2d1156362aeec71c9b79cd868e69"
+    }
+  },
+  "actual_source_observation_order_ast_verified": [
+    "fingertip_pos_rel_fixed",
+    "fingertip_quat",
+    "ee_linvel",
+    "ee_angvel",
+    "prev_actions"
+  ]
+}

@@ -1,0 +1,40 @@
+........................................................................ [ 30%]
+........................................................................ [ 61%]
+.......F.....F.......................................................... [ 92%]
+..................                                                       [100%]
+=================================== FAILURES ===================================
+____________ test_monitor_exception_stops_child_and_records_failure ____________
+
+tmp_path = PosixPath('/tmp/pytest-of-ubuntu2004/pytest-33/test_monitor_exception_stops_c0')
+
+    def test_monitor_exception_stops_child_and_records_failure(tmp_path):
+        s,g,sp,gp=guarded(tmp_path,'import time;time.sleep(20)',[{'free_MiB':4096}]*8+[{'error':'mock NVML failure'}])
+        sr,gr=finish(s,g,sp,gp)
+>       assert gr['stop_reason']=='monitor_failed' and gr['error'] and not gr['continuous_monitoring']
+E       AssertionError: assert ('monitoring_gap' == 'monitor_failed'
+E         
+E         - monitor_failed
+E         + monitoring_gap)
+
+tests/test_g3a_supervision.py:108: AssertionError
+____________ test_systemd_units_survive_submitting_launcher_sigkill ____________
+
+tmp_path = PosixPath('/tmp/pytest-of-ubuntu2004/pytest-33/test_systemd_units_survive_sub0')
+
+    def test_systemd_units_survive_submitting_launcher_sigkill(tmp_path):
+        # Only newly-created test units, with a finite sacrificial child.
+        mock=tmp_path/'mock.json';mock.write_text('[{"free_MiB":4096}]')
+        out=tmp_path/'service';prefix='g3a-cpu-'+uuid.uuid4().hex[:10]
+        p=subprocess.Popen([PY,str(ROOT/'scripts/g3a_launch_smoke.py'),'--output',str(out),'--unit-prefix',prefix,
+                             '--cwd',str(ROOT),'--mock-samples',str(mock),'--lock-file',str(tmp_path/'lock'),'--wait','--',
+                             PY,'-c','import time;time.sleep(.8)'],stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+        await_file(out/'supervisor/exec_release.json');p.kill();p.communicate(timeout=5)
+        sr=await_file(out/'supervisor/status.json');gr=await_file(out/'guard/status.json')
+>       assert sr['raw_wait_returncode']==0 and gr['continuous_monitoring']
+E       assert (-15 == 0)
+
+tests/test_g3a_supervision.py:166: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_g3a_supervision.py::test_monitor_exception_stops_child_and_records_failure
+FAILED tests/test_g3a_supervision.py::test_systemd_units_survive_submitting_launcher_sigkill
+2 failed, 232 passed in 39.91s
