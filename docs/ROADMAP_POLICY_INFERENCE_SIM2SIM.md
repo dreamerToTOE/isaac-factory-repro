@@ -5,6 +5,16 @@
 性质：**用户批准的未来工作顺序；不是实验结果或自动执行许可。**
 目标仓库：`dreamerToTOE/isaac-factory-repro`
 
+## 2026-10-26 最新导航：G4-I2 已验收，下一阶段为 G4-S0 审查
+
+**G4-I0、G4-I1、G4-I2 均为工程 PASS；G4-I2 已归档，commit `85b49ef547e07df063d2efe58457488c99935a70`。** 详见 [G4-I2 完整报告](REVIEW_G4_I2.md) 和 [I2 证据索引](../evidence/g4_i/i2/README.md)。G4-I2 使用冻结 G2 epoch200 PegInsert 策略，独立完成 288/288 回合评估，ever/terminal 均 280/288（97.22%）；与历史 280/288 **只允许非配对描述性对照**，不代表原 episode 精确重放。
+
+**当前下一阶段：G4-S0（第二物理引擎的可行性、资产与接口映射审查），尚未启动；本次状态核查不授权自动执行 G4-S0/S1/S2。** G4-S0 首先审查 MuJoCo 等候选引擎对 Franka、peg/hole、19D observation、6D action、EMA、原 PD/Jacobian/nullspace controller、接触参数、时间尺度和成功判据的忠实映射，输出 GO/CONDITIONAL/NO-GO。只有真实第二物理引擎运行才可称跨引擎 Sim2Sim；禁止以同 PhysX 的独立推理冒充，也不得跳过 S0 直接启动 GearMesh/NutThread 或重训练。
+
+I2 性能边界必须随转移工作保留：batch32 GPU forward P99 约 1.116 ms，观测至首个软件 effort-target 提交 P99 约 18.897 ms，但完整墙钟命令频率仅约 **3.470 Hz**、相对 15 Hz 目标的完整命令间隔超期率 **100%**。这是资源受限单机仿真/带仪表记录的实测，不是硬实时证明；不可把网络推理低延迟写成 15 Hz 的真实闭环能力。实际施加扭矩仍为 UNKNOWN，未认证物理接触安全。学习考核仍 **PENDING**，按用户决定推迟至完成 Sim2Sim 后独立进行，不阻塞工程审查。
+
+以下较早的“G4-I0 当前阶段”状态行及 G4-I1 授权记录，均为当时的历史导航，**不再代表当前活动阶段**；历史试验数据和原文保持不变。
+
 **Current status (2026-10-26): G3C-R5 has completed and been archived. G4-I0 is now the active next stage.**
 
 ## 2026-10-26 前瞻性更新：G4-I1 授权与学习安排
