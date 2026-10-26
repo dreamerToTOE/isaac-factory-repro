@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_collect_g3cr5.py",
+    "--junitxml=/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3cr5_manifest/collector_cpu_tests.xml"
+  ],
+  "control_actions": [],
+  "cpu_only": true,
+  "files": {
+    "scripts/collect_g3cr5.py": "c32eb77034da2c5a3cd0193f7d37cbb9d72aa92c7bf6b836011758eaf6dd7068",
+    "tests/test_collect_g3cr5.py": "2caa139d066d66601d9d7d4b78fd474a108a12334a2a880f6ac0f4a16bbe4f37"
+  },
+  "junitxml": "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3cr5_manifest/collector_cpu_tests.xml",
+  "returncode": 0,
+  "schema_version": "g3cr5_collector_cpu_checks_v1",
+  "stdout": "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3cr5_manifest/collector_cpu_tests.txt",
+  "verified_utc": "2026-10-26T02:06:25.918057+00:00"
+}

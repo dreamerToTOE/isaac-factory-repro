@@ -1,0 +1,3 @@
+.................                                                        [100%]
+- generated xml file: /home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3cr5_manifest/collector_cpu_tests.xml -
+17 passed in 3.93s

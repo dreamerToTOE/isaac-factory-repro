@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "systemd-run",
+    "--user",
+    "--unit=factory-g3cr5-20261026t015040z-artifacts",
+    "--property=WorkingDirectory=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro",
+    "--property=Restart=no",
+    "--property=KillMode=control-group",
+    "--property=TimeoutStopSec=10",
+    "/usr/bin/python3",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3cr5_manifest/postprocess.py",
+    "--manifest",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r5/manifest_frozen.json",
+    "--output",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3cr5_manifest/postprocess_state"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "Running as unit: factory-g3cr5-20261026t015040z-artifacts.service\n",
+  "cpu_only": true,
+  "script_sha256": "58e94796c3367c82dc5481f15656c6dd467a7ae9548dd2faaeed1dde07b1fc49",
+  "source": "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3cr5_manifest/postprocess.py",
+  "no_training_or_evaluation_control_actions": true,
+  "no_git_actions": true
+}

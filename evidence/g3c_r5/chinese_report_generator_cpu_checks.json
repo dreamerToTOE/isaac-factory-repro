@@ -1,0 +1,34 @@
+{
+  "schema_version": "g3cr5_chinese_report_generator_cpu_checks_v1",
+  "checked_utc": "2026-10-26T02:02:56.628046+00:00",
+  "status": "PASS",
+  "report_generator": {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g3cr5_manifest/write_chinese_report.py",
+    "bytes": 18405,
+    "sha256": "3fa77821eed0e67655e0d8ad3ea1cca91012cfb4fdbd17f5c4e3e72bf2684296"
+  },
+  "checks": [
+    {
+      "name": "complete_dynamic_fixture",
+      "status": "PASS",
+      "seed1_final_success": "279/288",
+      "seed0_final_success": "250/288",
+      "known_historical_counts_not_embedded": true
+    },
+    {
+      "name": "partial_cuda_oom_fixture",
+      "status": "PASS",
+      "verified_epochs": 10,
+      "verified_transitions": 40960,
+      "incomplete_evaluation_encoded_as_zero_success": false,
+      "actual_error_preserved": true
+    },
+    {
+      "name": "overwrite_rejected",
+      "status": "PASS",
+      "existing_output_unchanged": true
+    }
+  ],
+  "gpu_used": false,
+  "frozen_files_modified": false
+}

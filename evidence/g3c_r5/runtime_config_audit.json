@@ -1,0 +1,464 @@
+{
+  "schema_version": "g3cr5_runtime_config_audit_v1",
+  "generated_utc": "2026-10-26T02:02:01.560442+00:00",
+  "read_only_cpu_audit": true,
+  "gpu_telemetry_queried": false,
+  "manifest": {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r5/manifest_frozen.json",
+    "bytes": 24362,
+    "sha256": "f3163299d669e355c401cb825661bb99705a3b10b79b1f16fed4b090bfb77103"
+  },
+  "r4_manifest": {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r4/manifest_frozen.json",
+    "bytes": 19331,
+    "sha256": "d18f353c2e0719963194f63bdd667d9280f323c739f0dffa6ba6802029824686"
+  },
+  "configuration_comparisons": {
+    "env.yaml": {
+      "r4": {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/params/env.yaml",
+        "bytes": 12078,
+        "sha256": "01c678dca9512a99ccbe93b1b27278fe991fbb9116b7b5db33e1ed389c5dc3d4"
+      },
+      "r5": {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/params/env.yaml",
+        "bytes": 12078,
+        "sha256": "1955faaac1cb9369cd326d30d30c8972c80f0bc1d9202db1c9c521c13de25e43"
+      },
+      "differences": {
+        "seed": {
+          "r4": 0,
+          "r5": 1
+        }
+      },
+      "allowed_difference_keys": [
+        "seed"
+      ],
+      "unexpected_difference_keys": [],
+      "required_difference_values_match": true,
+      "passed": true
+    },
+    "agent.yaml": {
+      "r4": {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr4_peginsert_32env_seed0_400ep_20261025t140016z/params/agent.yaml",
+        "bytes": 2456,
+        "sha256": "212abcbbdcb83f5aecdd7f91feb3a36a0c385671d2ca06e1ecb4e46be20c9d27"
+      },
+      "r5": {
+        "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g3cr5_peginsert_32env_seed1_400ep_20261026t015040z/params/agent.yaml",
+        "bytes": 2456,
+        "sha256": "24ac73f2081b132eb7ac413873c521ac39aab3eb18ef79e376685542c79dde6e"
+      },
+      "differences": {
+        "params.config.full_experiment_name": {
+          "r4": "g3cr4_peginsert_32env_seed0_400ep_20261025t140016z",
+          "r5": "g3cr5_peginsert_32env_seed1_400ep_20261026t015040z"
+        },
+        "params.seed": {
+          "r4": 0,
+          "r5": 1
+        }
+      },
+      "allowed_difference_keys": [
+        "params.config.full_experiment_name",
+        "params.seed"
+      ],
+      "unexpected_difference_keys": [],
+      "required_difference_values_match": true,
+      "passed": true
+    }
+  },
+  "runtime_audit_snapshot": {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/train_32env_seed1_400ep_20261026t015040z/supervisor/training_audit.json",
+    "bytes": 5734,
+    "sha256": "04e02f734fffd8a476d3e2da15b24beec86b6b3b40a4efb1016a06006ed38a9e"
+  },
+  "runtime_dimensions": {
+    "num_actors": {
+      "expected": 32,
+      "actual": 32,
+      "passed": true
+    },
+    "horizon_length": {
+      "expected": 128,
+      "actual": 128,
+      "passed": true
+    },
+    "minibatch_size": {
+      "expected": 512,
+      "actual": 512,
+      "passed": true
+    },
+    "mini_epochs": {
+      "expected": 4,
+      "actual": 4,
+      "passed": true
+    },
+    "obs_shape": {
+      "expected": [
+        19
+      ],
+      "actual": [
+        19
+      ],
+      "passed": true
+    },
+    "state_shape": {
+      "expected": [
+        43
+      ],
+      "actual": [
+        43
+      ],
+      "passed": true
+    },
+    "actions_num": {
+      "expected": 6,
+      "actual": 6,
+      "passed": true
+    },
+    "mixed_precision": {
+      "expected": true,
+      "actual": true,
+      "passed": true
+    }
+  },
+  "runtime_config_registered": {
+    "num_actors": {
+      "expected": 32,
+      "actual": 32,
+      "passed": true
+    },
+    "max_epochs": {
+      "expected": 400,
+      "actual": 400,
+      "passed": true
+    },
+    "horizon_length": {
+      "expected": 128,
+      "actual": 128,
+      "passed": true
+    },
+    "minibatch_size": {
+      "expected": 512,
+      "actual": 512,
+      "passed": true
+    },
+    "mini_epochs": {
+      "expected": 4,
+      "actual": 4,
+      "passed": true
+    },
+    "save_frequency": {
+      "expected": 25,
+      "actual": 25,
+      "passed": true
+    },
+    "mixed_precision": {
+      "expected": true,
+      "actual": true,
+      "passed": true
+    },
+    "full_experiment_name": {
+      "expected": "g3cr5_peginsert_32env_seed1_400ep_20261026t015040z",
+      "actual": "g3cr5_peginsert_32env_seed1_400ep_20261026t015040z",
+      "passed": true
+    }
+  },
+  "runtime_config_comparison": {
+    "normalization": "Only hexadecimal process-local addresses in serialized object repr strings are normalized; resolved YAML files are compared recursively without normalization.",
+    "differences": {
+      "full_experiment_name": {
+        "r4": "g3cr4_peginsert_32env_seed0_400ep_20261025t140016z",
+        "r5": "g3cr5_peginsert_32env_seed1_400ep_20261026t015040z"
+      }
+    },
+    "allowed_difference_keys": [
+      "full_experiment_name"
+    ],
+    "passed": true
+  },
+  "architecture_comparison": {
+    "actor_model": {
+      "matches_r4": true,
+      "r4": "Network(\n  (value_mean_std): RunningMeanStd()\n  (running_mean_std): RunningMeanStd()\n  (a2c_network): Network(\n    (actor_cnn): Sequential()\n    (critic_cnn): Sequential()\n    (actor_mlp): Sequential(\n      (0): Linear(in_features=1024, out_features=512, bias=True)\n      (1): ELU(alpha=1.0)\n      (2): Linear(in_features=512, out_features=128, bias=True)\n      (3): ELU(alpha=1.0)\n      (4): Linear(in_features=128, out_features=64, bias=True)\n      (5): ELU(alpha=1.0)\n    )\n    (critic_mlp): Sequential()\n    (rnn): LSTMWithDones(\n      (rnn): LSTM(19, 1024, num_layers=2)\n    )\n    (layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)\n    (value): Linear(in_features=64, out_features=1, bias=True)\n    (value_act): Identity()\n    (mu): Linear(in_features=64, out_features=6, bias=True)\n    (mu_act): Identity()\n    (sigma_act): Identity()\n    (sigma): Linear(in_features=64, out_features=6, bias=True)\n  )\n)",
+      "r5": "Network(\n  (value_mean_std): RunningMeanStd()\n  (running_mean_std): RunningMeanStd()\n  (a2c_network): Network(\n    (actor_cnn): Sequential()\n    (critic_cnn): Sequential()\n    (actor_mlp): Sequential(\n      (0): Linear(in_features=1024, out_features=512, bias=True)\n      (1): ELU(alpha=1.0)\n      (2): Linear(in_features=512, out_features=128, bias=True)\n      (3): ELU(alpha=1.0)\n      (4): Linear(in_features=128, out_features=64, bias=True)\n      (5): ELU(alpha=1.0)\n    )\n    (critic_mlp): Sequential()\n    (rnn): LSTMWithDones(\n      (rnn): LSTM(19, 1024, num_layers=2)\n    )\n    (layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)\n    (value): Linear(in_features=64, out_features=1, bias=True)\n    (value_act): Identity()\n    (mu): Linear(in_features=64, out_features=6, bias=True)\n    (mu_act): Identity()\n    (sigma_act): Identity()\n    (sigma): Linear(in_features=64, out_features=6, bias=True)\n  )\n)"
+    },
+    "central_value_model": {
+      "matches_r4": true,
+      "r4": "Network(\n  (value_mean_std): RunningMeanStd()\n  (running_mean_std): RunningMeanStd()\n  (a2c_network): Network(\n    (actor_cnn): Sequential()\n    (critic_cnn): Sequential()\n    (actor_mlp): Sequential(\n      (0): Linear(in_features=1024, out_features=512, bias=True)\n      (1): ELU(alpha=1.0)\n      (2): Linear(in_features=512, out_features=128, bias=True)\n      (3): ELU(alpha=1.0)\n      (4): Linear(in_features=128, out_features=64, bias=True)\n      (5): ELU(alpha=1.0)\n    )\n    (critic_mlp): Sequential()\n    (rnn): LSTMWithDones(\n      (rnn): LSTM(43, 1024, num_layers=2)\n    )\n    (layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)\n    (value): Linear(in_features=64, out_features=1, bias=True)\n    (value_act): Identity()\n  )\n)",
+      "r5": "Network(\n  (value_mean_std): RunningMeanStd()\n  (running_mean_std): RunningMeanStd()\n  (a2c_network): Network(\n    (actor_cnn): Sequential()\n    (critic_cnn): Sequential()\n    (actor_mlp): Sequential(\n      (0): Linear(in_features=1024, out_features=512, bias=True)\n      (1): ELU(alpha=1.0)\n      (2): Linear(in_features=512, out_features=128, bias=True)\n      (3): ELU(alpha=1.0)\n      (4): Linear(in_features=128, out_features=64, bias=True)\n      (5): ELU(alpha=1.0)\n    )\n    (critic_mlp): Sequential()\n    (rnn): LSTMWithDones(\n      (rnn): LSTM(43, 1024, num_layers=2)\n    )\n    (layer_norm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)\n    (value): Linear(in_features=64, out_features=1, bias=True)\n    (value_act): Identity()\n  )\n)"
+    }
+  },
+  "frozen_source_verification": [
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/complete_g3cr4.py",
+      "bytes": 19383,
+      "sha256": "c4fa64ab82a20056f6f3d17a33d9a6c32ea9dd432b966332c33105541d3b0175",
+      "expected_sha256": "c4fa64ab82a20056f6f3d17a33d9a6c32ea9dd432b966332c33105541d3b0175",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/complete_g3cr5.py",
+      "bytes": 20583,
+      "sha256": "cf01d6ff2ae6bc277012f4ee5caa9488bd75af84b9ed9c4f8dbaa77fe14a4cd7",
+      "expected_sha256": "cf01d6ff2ae6bc277012f4ee5caa9488bd75af84b9ed9c4f8dbaa77fe14a4cd7",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/durable_supervisor.py",
+      "bytes": 9566,
+      "sha256": "2f02e42128dea3bfdda5146802ea097f6b25be805296e6a16f093f6d2b31a889",
+      "expected_sha256": "2f02e42128dea3bfdda5146802ea097f6b25be805296e6a16f093f6d2b31a889",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/evaluate_checkpoint.py",
+      "bytes": 18441,
+      "sha256": "415dff9b59ece8a21e6bbe0a6c9fff08e2ea594cb8dc2ef8fe73e299c94af707",
+      "expected_sha256": "415dff9b59ece8a21e6bbe0a6c9fff08e2ea594cb8dc2ef8fe73e299c94af707",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/evaluation_reporting.py",
+      "bytes": 1982,
+      "sha256": "8cfb68a200a9f81b430444e94b7c2c7ae54c7b4e0d39feb4a68625efc3514dcd",
+      "expected_sha256": "8cfb68a200a9f81b430444e94b7c2c7ae54c7b4e0d39feb4a68625efc3514dcd",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g2_training_observer.py",
+      "bytes": 6389,
+      "sha256": "953b5cfd20615a5d8f6b9a200ce03124828a39e6da8f8423a4989c0dc25e3d6a",
+      "expected_sha256": "953b5cfd20615a5d8f6b9a200ce03124828a39e6da8f8423a4989c0dc25e3d6a",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g3a_launch_smoke.py",
+      "bytes": 3971,
+      "sha256": "2af94bacd94d005fa6177eed7eec9e11d4d3b163ae7a2b69ef7db8a7996202cd",
+      "expected_sha256": "2af94bacd94d005fa6177eed7eec9e11d4d3b163ae7a2b69ef7db8a7996202cd",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g3cr4_launch.py",
+      "bytes": 8192,
+      "sha256": "727e8806b39a1cb5001b4ffd5ea1e8f90a45b50f9e793897f7576edd7ac0a1bc",
+      "expected_sha256": "727e8806b39a1cb5001b4ffd5ea1e8f90a45b50f9e793897f7576edd7ac0a1bc",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/g3cr5_launch.py",
+      "bytes": 11845,
+      "sha256": "b9bf30f8333885cf4c6acbf8fef2c429c23c32a76a24ec8de18034e01b1d41c7",
+      "expected_sha256": "b9bf30f8333885cf4c6acbf8fef2c429c23c32a76a24ec8de18034e01b1d41c7",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/gpu_guard.py",
+      "bytes": 9260,
+      "sha256": "bbbe15c007acd052db176743f42e0a831fd7b6b7a92a6d41dc311ca74b8146f2",
+      "expected_sha256": "bbbe15c007acd052db176743f42e0a831fd7b6b7a92a6d41dc311ca74b8146f2",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/python_entry.py",
+      "bytes": 1949,
+      "sha256": "df5ad392a16259f0be72c632643c24a20a57c8ff07e551881b0d52fefe6e011f",
+      "expected_sha256": "df5ad392a16259f0be72c632643c24a20a57c8ff07e551881b0d52fefe6e011f",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/run_sim.sh",
+      "bytes": 775,
+      "sha256": "10d11ff9b3d44c252c895ac3ca6ca2aa5301c78cbcacd1b5dc01702a494409d8",
+      "expected_sha256": "10d11ff9b3d44c252c895ac3ca6ca2aa5301c78cbcacd1b5dc01702a494409d8",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/success_metrics.py",
+      "bytes": 7768,
+      "sha256": "bd3233876429dcce64bee52be11b9f03a69b1e35279b4e285dab4e81151bbfa2",
+      "expected_sha256": "bd3233876429dcce64bee52be11b9f03a69b1e35279b4e285dab4e81151bbfa2",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/supervised_exec.py",
+      "bytes": 242,
+      "sha256": "0d9fa854306b38833c7f1f4d66d0ec04d3c8b3c1397b95991f25b00e2ffa6b89",
+      "expected_sha256": "0d9fa854306b38833c7f1f4d66d0ec04d3c8b3c1397b95991f25b00e2ffa6b89",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/supervision_common.py",
+      "bytes": 3453,
+      "sha256": "850f8fdf3c18147c8b94c109d978efc0d8c2c26bf6d8d9e6b6600c9e6d40f1e1",
+      "expected_sha256": "850f8fdf3c18147c8b94c109d978efc0d8c2c26bf6d8d9e6b6600c9e6d40f1e1",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/tensorboard_finalizer.py",
+      "bytes": 5764,
+      "sha256": "e4d14b64d1989a899a732174132a1aa1d92fc0f394115ff7ba4db6f74b586028",
+      "expected_sha256": "e4d14b64d1989a899a732174132a1aa1d92fc0f394115ff7ba4db6f74b586028",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/tensorboard_tail.py",
+      "bytes": 7220,
+      "sha256": "edb09c2acb1284fff0998532cee2dd1aeb5e8586e054679c32f178ecc6fa87fb",
+      "expected_sha256": "edb09c2acb1284fff0998532cee2dd1aeb5e8586e054679c32f178ecc6fa87fb",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/a2c_continuous.py",
+      "bytes": 7265,
+      "sha256": "998755d3365d8160930a8a8a0cfe8e7e1cd647b6cd2b7edc4e38895828c5a720",
+      "expected_sha256": "998755d3365d8160930a8a8a0cfe8e7e1cd647b6cd2b7edc4e38895828c5a720",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/central_value.py",
+      "bytes": 12013,
+      "sha256": "6e62bcce9fe892e9245ce2cd46f06fb50f85ee9843572a4dedaf5e797f1ee7b6",
+      "expected_sha256": "6e62bcce9fe892e9245ce2cd46f06fb50f85ee9843572a4dedaf5e797f1ee7b6",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/models.py",
+      "bytes": 14061,
+      "sha256": "78a806701b3099ea45de5c9c1e00c761d0a9443b4b39d6cce087680fc4e62f37",
+      "expected_sha256": "78a806701b3099ea45de5c9c1e00c761d0a9443b4b39d6cce087680fc4e62f37",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/players.py",
+      "bytes": 8927,
+      "sha256": "e22d083c540b479b31fefc2bbd05d132a54e3f97d14bf21421498e011942c043",
+      "expected_sha256": "e22d083c540b479b31fefc2bbd05d132a54e3f97d14bf21421498e011942c043",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/algos_torch/running_mean_std.py",
+      "bytes": 3958,
+      "sha256": "c7ad469e2bbc89de8419b55c768d1076f5d394d72102cc38c7e49002fc1db788",
+      "expected_sha256": "c7ad469e2bbc89de8419b55c768d1076f5d394d72102cc38c7e49002fc1db788",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/lib/python3.10/site-packages/rl_games/common/a2c_common.py",
+      "bytes": 61398,
+      "sha256": "b2ff92d888212227620138a6ca09d41ea2b8de6af044163ca3699f4ed48de661",
+      "expected_sha256": "b2ff92d888212227620138a6ca09d41ea2b8de6af044163ca3699f4ed48de661",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/scripts/reinforcement_learning/rl_games/train.py",
+      "bytes": 9280,
+      "sha256": "668fb1251c83d6e13271457d53a1b7079f3c2964d3284a13ac3bc2ff58194110",
+      "expected_sha256": "668fb1251c83d6e13271457d53a1b7079f3c2964d3284a13ac3bc2ff58194110",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/envs/direct_rl_env.py",
+      "bytes": 29922,
+      "sha256": "0c919fdc93e9198562edaaa3c29627a8dc0e123f581f41cdffc75641f9033fc1",
+      "expected_sha256": "0c919fdc93e9198562edaaa3c29627a8dc0e123f581f41cdffc75641f9033fc1",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/agents/rl_games_ppo_cfg.yaml",
+      "bytes": 2353,
+      "sha256": "a64fef462770f9ba4a3acd0fdd21eef47f0d97529182b24f255ec9ab8fd27ebb",
+      "expected_sha256": "a64fef462770f9ba4a3acd0fdd21eef47f0d97529182b24f255ec9ab8fd27ebb",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_control.py",
+      "bytes": 8326,
+      "sha256": "7ef611d530a86fa2aba9db222361b0fe8b64d34037f204ad622a17051ad5e163",
+      "expected_sha256": "7ef611d530a86fa2aba9db222361b0fe8b64d34037f204ad622a17051ad5e163",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py",
+      "bytes": 43992,
+      "sha256": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81",
+      "expected_sha256": "e36425c554ba4da862e8947ea9793e5b3453ce6c3aef8ea373ccaa8b7bc07c81",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env_cfg.py",
+      "bytes": 6419,
+      "sha256": "5f804ba3f6e3d96f352490a9b5e2e1e239d308ff7eeab7ae3aad0ca6aa8daed8",
+      "expected_sha256": "5f804ba3f6e3d96f352490a9b5e2e1e239d308ff7eeab7ae3aad0ca6aa8daed8",
+      "matches": true
+    },
+    {
+      "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_tasks_cfg.py",
+      "bytes": 16331,
+      "sha256": "7510b6cbed1e5bdd297723cabf7d25cef6a00b94bb3804b7578f2925a6a43971",
+      "expected_sha256": "7510b6cbed1e5bdd297723cabf7d25cef6a00b94bb3804b7578f2925a6a43971",
+      "matches": true
+    }
+  ],
+  "actual_training_command": {
+    "actual_command_equals_manifest_training_command": true,
+    "training_seed_actual": "1",
+    "training_seed_expected": "1",
+    "num_envs_actual": "32",
+    "epochs_actual": "400",
+    "cwd_matches": true,
+    "no_checkpoint_or_resume_arguments": true,
+    "passed": true
+  },
+  "actual_training_command_artifact": {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g3c_r5/train_32env_seed1_400ep_20261026t015040z/supervisor/command.json",
+    "bytes": 2025,
+    "sha256": "fa7b26ec2dfdbd4c9250efc5d9ba32b3a9f452e5574e698ad8abf759d7880be3"
+  },
+  "supervision_policy": {
+    "monitoring_policy": "user-authorized-no-gpu-guard",
+    "expected_policy": "user-authorized-no-gpu-guard",
+    "gpu_guard_enabled": false,
+    "gpu_telemetry_required": false,
+    "gpu_telemetry_gaps_terminate_child": false,
+    "continuous_gpu_coverage_claimed": false,
+    "command_guard_directory": null,
+    "passed": true
+  },
+  "audit_instrumentation_errors_at_snapshot": [],
+  "restore_events_at_snapshot": [],
+  "completed_epoch_count_at_snapshot": 2,
+  "last_completed_epoch_at_snapshot": 2,
+  "upstream_head": {
+    "returncode": 0,
+    "stdout": "90b79bb2d44feb8d833f260f2bf37da3487180ba\n",
+    "stderr": ""
+  },
+  "upstream_working_tree": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "checks": {
+    "yaml_identity_only_allowed_seed_and_name_differences": true,
+    "runtime_dimensions_match": true,
+    "runtime_registered_config_match": true,
+    "runtime_config_after_process_address_normalization_only_name_diff": true,
+    "architecture_strings_exactly_match_r4": true,
+    "no_restore_events": true,
+    "no_instrumentation_errors": true,
+    "frozen_sources_match": true,
+    "actual_command_matches_fresh_seed1_registration": true,
+    "supervision_policy_matches": true,
+    "upstream_pinned_clean": true
+  },
+  "passed": true,
+  "notes": [
+    "This CPU-only post-initialization audit does not control training, query GPU telemetry, or alter the scientific process.",
+    "Agent YAML num_actors=128 is the upstream pre-registration dump; actual runtime has 32 actors as recorded in the read-only training observer, identically to R4.",
+    "Env YAML seed and agent params.seed both change from 0 to 1 because the training seed populates both environment and learner RNG initialization. These are one scientific seed change.",
+    "Evaluation seeds remain 1001/1002/1003 and are distinct from training seed 1."
+  ]
+}

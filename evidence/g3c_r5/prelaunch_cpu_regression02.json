@@ -1,0 +1,9 @@
+{
+  "tests": 203,
+  "passed": 203,
+  "failed": 0,
+  "seconds": 13.85,
+  "scope": "Full suite after actual AMP statistics tests added; training/controller frozen source hashes unchanged",
+  "registered_commit": "6807cd8eccfd684794bac6155c36ab216710b181",
+  "recorded_utc": "2026-10-26T01:59:45.654622+00:00"
+}

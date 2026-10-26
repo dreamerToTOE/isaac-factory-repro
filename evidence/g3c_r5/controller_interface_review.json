@@ -1,0 +1,41 @@
+{
+  "schema_version": "g3cr5_controller_interface_review_v1",
+  "reviewed_utc": "2026-10-26T02:02:56.627740+00:00",
+  "status": "PASS",
+  "manifest": {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g3c_r5/manifest_frozen.json",
+    "bytes": 24362,
+    "sha256": "f3163299d669e355c401cb825661bb99705a3b10b79b1f16fed4b090bfb77103"
+  },
+  "controller": {
+    "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/scripts/complete_g3cr5.py",
+    "bytes": 20583,
+    "sha256": "cf01d6ff2ae6bc277012f4ee5caa9488bd75af84b9ed9c4f8dbaa77fe14a4cd7"
+  },
+  "frozen_sources_verified": 30,
+  "training_seed": 1,
+  "training_num_envs": 32,
+  "training_epochs": 400,
+  "training_horizon": 128,
+  "training_identity_gate": "PASS",
+  "only_training_argv_changes": [
+    "seed0_to_seed1",
+    "unique_full_experiment_name"
+  ],
+  "evaluation_commands_checked": 12,
+  "evaluation_seeds": [
+    1001,
+    1002,
+    1003
+  ],
+  "evaluation_seed_is_training_seed": false,
+  "evaluation_episode_denominators": {
+    "100": 96,
+    "200": 96,
+    "300": 96,
+    "400": 288
+  },
+  "evaluation_launch_kind": "evaluation",
+  "gpu_used": false,
+  "frozen_files_modified": false
+}
