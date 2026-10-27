@@ -1,0 +1,10 @@
+{
+  "files": {
+    "inertia_review.json": "17b56a30a2db988e97ea78f26019665afd83e30766476f042655b8881667117e",
+    "numerical_review.json": "e08d40c53aa0129c83026c8c12a657930c38f9713a88f775e7580b5511184b1d",
+    "step_metrics.jsonl.gz": "b84b2fb6ede531281f377c2abb2b8a3bbff7403e904cff2ef3d94ab6a3d75ed0"
+  },
+  "new_integration_steps": 0,
+  "policy_calls": 0,
+  "model_compilations": 0
+}

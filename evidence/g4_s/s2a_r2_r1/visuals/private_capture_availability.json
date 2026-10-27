@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "task": "G4-S2A-R2-R1",
+  "purpose": "Exact private preservation of external-desktop-contaminated live screenshots; no pixel edits.",
+  "records": [
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I1_ARM_HAND_C0/initial.png",
+      "source_absolute_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I1_ARM_HAND_C0/initial.png",
+      "sha256": "59b09f8ce375db6e0ccb632fd84e427e1071951e9b5b4f241490150b46ade639",
+      "actually_viewed": true,
+      "classification": "external_desktop_contaminated",
+      "disposition": "private_exact_original",
+      "sha256_before_move": "59b09f8ce375db6e0ccb632fd84e427e1071951e9b5b4f241490150b46ade639",
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r2_r1/private_desktop_captures/evidence__g4_s__s2a_r2_r1__matrix_v2__trajectories__I1_ARM_HAND_C0__initial.png",
+      "moved": true,
+      "sha256_after_move": "59b09f8ce375db6e0ccb632fd84e427e1071951e9b5b4f241490150b46ade639"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I1_ARM_HAND_C1/physics_015.png",
+      "source_absolute_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I1_ARM_HAND_C1/physics_015.png",
+      "sha256": "3cd19c5fec84edeca67825b5a3eb33e2ae950262b6a99751cecfa321ea0f345e",
+      "actually_viewed": true,
+      "classification": "external_desktop_contaminated",
+      "disposition": "private_exact_original",
+      "sha256_before_move": "3cd19c5fec84edeca67825b5a3eb33e2ae950262b6a99751cecfa321ea0f345e",
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r2_r1/private_desktop_captures/evidence__g4_s__s2a_r2_r1__matrix_v2__trajectories__I1_ARM_HAND_C1__physics_015.png",
+      "moved": true,
+      "sha256_after_move": "3cd19c5fec84edeca67825b5a3eb33e2ae950262b6a99751cecfa321ea0f345e"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I2_ARM_HAND_C1/initial.png",
+      "source_absolute_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I2_ARM_HAND_C1/initial.png",
+      "sha256": "870c0fb9ce090e89b4b72438fc2b82863fcf45db86de921449aea9dd0cfb9c1f",
+      "actually_viewed": true,
+      "classification": "external_desktop_contaminated",
+      "disposition": "private_exact_original",
+      "sha256_before_move": "870c0fb9ce090e89b4b72438fc2b82863fcf45db86de921449aea9dd0cfb9c1f",
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r2_r1/private_desktop_captures/evidence__g4_s__s2a_r2_r1__matrix_v2__trajectories__I2_ARM_HAND_C1__initial.png",
+      "moved": true,
+      "sha256_after_move": "870c0fb9ce090e89b4b72438fc2b82863fcf45db86de921449aea9dd0cfb9c1f"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I2_ARM_HAND_C1/physics_007.png",
+      "source_absolute_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I2_ARM_HAND_C1/physics_007.png",
+      "sha256": "57e388a6b11e7a9f24f1434016497ea97e4b569c3ee35da7d8e67d27fe193487",
+      "actually_viewed": true,
+      "classification": "external_desktop_contaminated",
+      "disposition": "private_exact_original",
+      "sha256_before_move": "57e388a6b11e7a9f24f1434016497ea97e4b569c3ee35da7d8e67d27fe193487",
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r2_r1/private_desktop_captures/evidence__g4_s__s2a_r2_r1__matrix_v2__trajectories__I2_ARM_HAND_C1__physics_007.png",
+      "moved": true,
+      "sha256_after_move": "57e388a6b11e7a9f24f1434016497ea97e4b569c3ee35da7d8e67d27fe193487"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_C1/physics_175.png",
+      "source_absolute_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_C1/physics_175.png",
+      "sha256": "1fc100c7e12235ff831c4ff846de2a2b7bd8c1940bc66c82832cfe25a6f950c1",
+      "actually_viewed": true,
+      "classification": "external_desktop_contaminated",
+      "disposition": "private_exact_original",
+      "sha256_before_move": "1fc100c7e12235ff831c4ff846de2a2b7bd8c1940bc66c82832cfe25a6f950c1",
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r2_r1/private_desktop_captures/evidence__g4_s__s2a_r2_r1__matrix_v2__trajectories__I3_FULL_C1__physics_175.png",
+      "moved": true,
+      "sha256_after_move": "1fc100c7e12235ff831c4ff846de2a2b7bd8c1940bc66c82832cfe25a6f950c1"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_C1/physics_177.png",
+      "source_absolute_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_C1/physics_177.png",
+      "sha256": "86753569357d25025efef524530c728107823bbd7ada019eec3749de19f3d99f",
+      "actually_viewed": true,
+      "classification": "external_desktop_contaminated",
+      "disposition": "private_exact_original",
+      "sha256_before_move": "86753569357d25025efef524530c728107823bbd7ada019eec3749de19f3d99f",
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r2_r1/private_desktop_captures/evidence__g4_s__s2a_r2_r1__matrix_v2__trajectories__I3_FULL_C1__physics_177.png",
+      "moved": true,
+      "sha256_after_move": "86753569357d25025efef524530c728107823bbd7ada019eec3749de19f3d99f"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_PASSIVE_ARM/initial.png",
+      "source_absolute_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_PASSIVE_ARM/initial.png",
+      "sha256": "345add398a1d13ae24049c2bbb0a0d1a0cb641e5f227f4b2c38a357847e64b0e",
+      "actually_viewed": true,
+      "classification": "external_desktop_contaminated",
+      "disposition": "private_exact_original",
+      "sha256_before_move": "345add398a1d13ae24049c2bbb0a0d1a0cb641e5f227f4b2c38a357847e64b0e",
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r2_r1/private_desktop_captures/evidence__g4_s__s2a_r2_r1__matrix_v2__trajectories__I3_FULL_PASSIVE_ARM__initial.png",
+      "moved": true,
+      "sha256_after_move": "345add398a1d13ae24049c2bbb0a0d1a0cb641e5f227f4b2c38a357847e64b0e"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_PASSIVE_ARM/physics_016.png",
+      "source_absolute_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_PASSIVE_ARM/physics_016.png",
+      "sha256": "ed6c18312534ca83afb8a6acbd7cb355208487358e7d15dea9ad22de0f63096d",
+      "actually_viewed": true,
+      "classification": "external_desktop_contaminated",
+      "disposition": "private_exact_original",
+      "sha256_before_move": "ed6c18312534ca83afb8a6acbd7cb355208487358e7d15dea9ad22de0f63096d",
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r2_r1/private_desktop_captures/evidence__g4_s__s2a_r2_r1__matrix_v2__trajectories__I3_FULL_PASSIVE_ARM__physics_016.png",
+      "moved": true,
+      "sha256_after_move": "ed6c18312534ca83afb8a6acbd7cb355208487358e7d15dea9ad22de0f63096d"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_PASSIVE_ARM/physics_154.png",
+      "source_absolute_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_PASSIVE_ARM/physics_154.png",
+      "sha256": null,
+      "actually_viewed": false,
+      "classification": "external_desktop_contaminated",
+      "disposition": "private_exact_original",
+      "moved": false,
+      "private_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r2_r1/private_desktop_captures/I3_FULL_PASSIVE_ARM_physics_154.png",
+      "private_preexisting": true,
+      "private_available": true,
+      "missing_from_public_at_cleanup": true,
+      "sha256_after_move": "f71697223979759953161ad97a321bb040bd0b34d7e14c19d206d3e4640049a1"
+    }
+  ],
+  "count": 9,
+  "moved_count": 8,
+  "missing_count": 0,
+  "private_preexisting_count": 1,
+  "private_available_count": 9,
+  "note": "Eight contaminated images were moved during final cleanup; physics_154 was already preserved outside Git before QA and is linked to that preexisting private file."
+}

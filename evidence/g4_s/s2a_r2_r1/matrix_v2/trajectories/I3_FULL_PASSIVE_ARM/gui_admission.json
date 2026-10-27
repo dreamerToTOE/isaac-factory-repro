@@ -1,0 +1,15 @@
+{
+  "status": "GUI_OPEN_VISIBLE",
+  "window": {
+    "window_id": "0x700000b",
+    "title": "MuJoCo : g4_s1b_adapted_panda_peg_insert",
+    "model_name": "g4_s1b_adapted_panda_peg_insert",
+    "map_state": "IsViewable",
+    "x": 190,
+    "y": 178,
+    "width": 1706,
+    "height": 960,
+    "selected_window_xwininfo": "\nxwininfo: Window id: 0x700000b \"MuJoCo : g4_s1b_adapted_panda_peg_insert\"\n\n  Absolute upper-left X:  190\n  Absolute upper-left Y:  178\n  Relative upper-left X:  20\n  Relative upper-left Y:  90\n  Width: 1706\n  Height: 960\n  Depth: 24\n  Visual: 0x3a\n  Visual Class: TrueColor\n  Border width: 0\n  Class: InputOutput\n  Colormap: 0x700000a (not installed)\n  Bit Gravity State: ForgetGravity\n  Window Gravity State: NorthWestGravity\n  Backing Store State: NotUseful\n  Save Under State: no\n  Map State: IsViewable\n  Override Redirect State: no\n  Corners:  +190+178  -2200+178  -2200-1166  +190-1166\n  -geometry 1706x960+190+178\n\n"
+  },
+  "integration_started": false
+}

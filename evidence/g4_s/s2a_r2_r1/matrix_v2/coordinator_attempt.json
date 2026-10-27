@@ -1,0 +1,7 @@
+{
+  "started_utc": "2026-10-27T02:02:13.548995+00:00",
+  "cpu_receipt": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/summary.json",
+  "cpu_sha256": "655ede1084fcd5f3a576212207d26fcd1d79dd968c12a25fc97a76f51647ba3f",
+  "policy_calls": 0,
+  "retry": false
+}

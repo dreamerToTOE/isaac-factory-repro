@@ -1,0 +1,34 @@
+{
+  "scripts/analyze_g4s2a_r2_r1.py": {
+    "sha256": "920416d8e9e40762936cec23695328679b7b93a599a64c6028a5137fd930178e",
+    "bytes": 22107
+  },
+  "scripts/analyze_g4s2a_r2_r1_contact_geometry.py": {
+    "sha256": "3757375013e642bfdbe674ff8c0568ec563024622258dd2309b79311b45bd515",
+    "bytes": 2760
+  },
+  "scripts/analyze_g4s2a_r2_r1_forensics.py": {
+    "sha256": "314921b79506d1b0f5705b4fb4a4f2f0bbfa149b334a76ab8c895cf32072abc7",
+    "bytes": 7395
+  },
+  "scripts/audit_g4s2a_r2_r1.py": {
+    "sha256": "a5ce951dfd60380df5eeeba453441193c78b262112d59c953e7c9488e1eca9ce",
+    "bytes": 25889
+  },
+  "scripts/g4s2a_r2_r1_diagnostics.py": {
+    "sha256": "6970805e3065dd1cdc1769448d192cec396e1523126adbb12911821b5815ea02",
+    "bytes": 23487
+  },
+  "scripts/g4s2a_r2_r1_model.py": {
+    "sha256": "e745d6cbe9b4befb7f5ba6585d2396d878f937639ec7052a014dc8d39b5d5ecc",
+    "bytes": 4925
+  },
+  "scripts/g4s2a_r2_r1_viewer.py": {
+    "sha256": "ad5219a9acb491f7a47337f176eb8ce1c14a66837381e21d8bff03aafa7999ab",
+    "bytes": 6255
+  },
+  "tests/test_g4s2a_r2_r1.py": {
+    "sha256": "4fc10ca8cc2e4d4dce181384de99f77cfc527c78c52be238e26466e134e6cbca",
+    "bytes": 12014
+  }
+}

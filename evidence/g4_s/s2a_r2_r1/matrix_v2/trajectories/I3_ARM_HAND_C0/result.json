@@ -1,0 +1,38 @@
+{
+  "task": "G4-S2A-R2-R1",
+  "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+  "run_id": "I3_ARM_HAND_C0",
+  "initial_id": "I3",
+  "physical_selection": "P_ARM_HAND",
+  "controller_selection": "C0",
+  "passive_arm": false,
+  "registered_steps": 235,
+  "integration_requests": 8,
+  "completed_steps": 8,
+  "simulation_duration_s": 0.06666666666666685,
+  "physics_wall_s": 0.009695481000562722,
+  "wall_s": 7.614581773000282,
+  "viewer_sync_wall_s": 0.036823619997448986,
+  "viewer_sync_count": 23,
+  "graceful_close": {
+    "viewer_close_requested": true,
+    "render_threads_joined": [
+      "Thread-1 (_launch_internal)"
+    ],
+    "remaining_render_threads": [],
+    "close_wall_s": 0.02793067600032373
+  },
+  "runtime_failure": null,
+  "early_stop_reasons": [
+    "SEVERE_PENETRATION"
+  ],
+  "policy_inferences": 0,
+  "max_slip_m": 0.00028320139404891916,
+  "max_rotation_slip_rad": 0.04470616819757209,
+  "max_arm_qvel_rad_s": 2.1536356303709607,
+  "first_contact_loss_step": 7,
+  "max_penetration_m": 0.0010371012207309892,
+  "peak_rss_kib": 801804,
+  "trace_sha256": "f64d8d6f2712d87c6ace6780adb2fb78b70ed4bb7fc270983687a2b76b86569b",
+  "termination": "DIAGNOSTIC_EARLY_STOP"
+}

@@ -1,0 +1,480 @@
+{
+  "task": "G4-S2A-R2-R1",
+  "receipts": [
+    {
+      "id": "I3_FULL_C0",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_r1_diagnostics.py",
+        "--trajectory",
+        "I3_FULL_C0",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_C0"
+      ],
+      "exact_child_exit_code": 0,
+      "supervisor_timeout": false,
+      "wall_s": 39.18793851100054,
+      "result": {
+        "task": "G4-S2A-R2-R1",
+        "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+        "run_id": "I3_FULL_C0",
+        "initial_id": "I3",
+        "physical_selection": "P_FULL",
+        "controller_selection": "C0",
+        "passive_arm": false,
+        "registered_steps": 235,
+        "integration_requests": 177,
+        "completed_steps": 177,
+        "simulation_duration_s": 1.4749999999999963,
+        "physics_wall_s": 0.21701871599725564,
+        "wall_s": 38.108998218000124,
+        "viewer_sync_wall_s": 0.581571596005233,
+        "viewer_sync_count": 367,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.02815400000054069
+        },
+        "runtime_failure": null,
+        "early_stop_reasons": [
+          "SEVERE_PENETRATION"
+        ],
+        "policy_inferences": 0,
+        "max_slip_m": 0.0006625889016645426,
+        "max_rotation_slip_rad": 0.05883680807339364,
+        "max_arm_qvel_rad_s": 1.22113810122908,
+        "first_contact_loss_step": 176,
+        "max_penetration_m": 0.0010007719414442838,
+        "peak_rss_kib": 807544,
+        "trace_sha256": "1e089224637f1bf9e1d675026a3c7d8a3ea4163b2cd4a218234aeca5ae5b5b3f",
+        "termination": "DIAGNOSTIC_EARLY_STOP"
+      }
+    },
+    {
+      "id": "I3_FULL_C1",
+      "command": null,
+      "exact_child_exit_code": null,
+      "supervisor_timeout": false,
+      "supervisor_process_lost": true,
+      "actual_recorded_physics_results": 211,
+      "unresolved_integration_request_step": 212,
+      "termination": "SUPERVISOR_PROCESS_LOST_WITHOUT_CHILD_RECEIPT",
+      "retry_allowed": false,
+      "trace_path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_C1/physics.jsonl",
+      "note": "No automatic retry; exact child exit code unavailable because supervisor process disappeared after durable request event."
+    },
+    {
+      "id": "I3_ARM_HAND_C0",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_r1_diagnostics.py",
+        "--trajectory",
+        "I3_ARM_HAND_C0",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_ARM_HAND_C0"
+      ],
+      "exact_child_exit_code": 0,
+      "supervisor_timeout": false,
+      "wall_s": 9.031398679000631,
+      "result": {
+        "task": "G4-S2A-R2-R1",
+        "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+        "run_id": "I3_ARM_HAND_C0",
+        "initial_id": "I3",
+        "physical_selection": "P_ARM_HAND",
+        "controller_selection": "C0",
+        "passive_arm": false,
+        "registered_steps": 235,
+        "integration_requests": 8,
+        "completed_steps": 8,
+        "simulation_duration_s": 0.06666666666666685,
+        "physics_wall_s": 0.009695481000562722,
+        "wall_s": 7.614581773000282,
+        "viewer_sync_wall_s": 0.036823619997448986,
+        "viewer_sync_count": 23,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.02793067600032373
+        },
+        "runtime_failure": null,
+        "early_stop_reasons": [
+          "SEVERE_PENETRATION"
+        ],
+        "policy_inferences": 0,
+        "max_slip_m": 0.00028320139404891916,
+        "max_rotation_slip_rad": 0.04470616819757209,
+        "max_arm_qvel_rad_s": 2.1536356303709607,
+        "first_contact_loss_step": 7,
+        "max_penetration_m": 0.0010371012207309892,
+        "peak_rss_kib": 801804,
+        "trace_sha256": "f64d8d6f2712d87c6ace6780adb2fb78b70ed4bb7fc270983687a2b76b86569b",
+        "termination": "DIAGNOSTIC_EARLY_STOP"
+      },
+      "corrected_launcher": "MuJoCo Python 3.11"
+    },
+    {
+      "id": "I3_ARM_HAND_C1",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_r1_diagnostics.py",
+        "--trajectory",
+        "I3_ARM_HAND_C1",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_ARM_HAND_C1"
+      ],
+      "exact_child_exit_code": 0,
+      "supervisor_timeout": false,
+      "wall_s": 17.009258514000066,
+      "result": {
+        "task": "G4-S2A-R2-R1",
+        "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+        "run_id": "I3_ARM_HAND_C1",
+        "initial_id": "I3",
+        "physical_selection": "P_ARM_HAND",
+        "controller_selection": "C1",
+        "passive_arm": false,
+        "registered_steps": 235,
+        "integration_requests": 8,
+        "completed_steps": 8,
+        "simulation_duration_s": 0.06666666666666685,
+        "physics_wall_s": 0.010611901000629587,
+        "wall_s": 6.749007152000559,
+        "viewer_sync_wall_s": 0.03934374100117566,
+        "viewer_sync_count": 23,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.02540242500072054
+        },
+        "runtime_failure": null,
+        "early_stop_reasons": [
+          "SEVERE_PENETRATION"
+        ],
+        "policy_inferences": 0,
+        "max_slip_m": 0.00029022657136072483,
+        "max_rotation_slip_rad": 0.048877376773997866,
+        "max_arm_qvel_rad_s": 2.0967865229962603,
+        "first_contact_loss_step": 7,
+        "max_penetration_m": 0.0010456789834828006,
+        "peak_rss_kib": 779868,
+        "trace_sha256": "231aa3e4b0b6b99e79404bd4c78a6c88d66309b9cd71e2b4cace08414eac323b",
+        "termination": "DIAGNOSTIC_EARLY_STOP"
+      },
+      "corrected_launcher": "MuJoCo Python 3.11"
+    },
+    {
+      "id": "I2_ARM_HAND_C0",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_r1_diagnostics.py",
+        "--trajectory",
+        "I2_ARM_HAND_C0",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I2_ARM_HAND_C0"
+      ],
+      "exact_child_exit_code": 0,
+      "supervisor_timeout": false,
+      "wall_s": 25.037581472000056,
+      "result": {
+        "task": "G4-S2A-R2-R1",
+        "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+        "run_id": "I2_ARM_HAND_C0",
+        "initial_id": "I2",
+        "physical_selection": "P_ARM_HAND",
+        "controller_selection": "C0",
+        "passive_arm": false,
+        "registered_steps": 235,
+        "integration_requests": 7,
+        "completed_steps": 7,
+        "simulation_duration_s": 0.05833333333333349,
+        "physics_wall_s": 0.00859707500148943,
+        "wall_s": 6.834360263000235,
+        "viewer_sync_wall_s": 0.03699844699985988,
+        "viewer_sync_count": 21,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.026155702999858477
+        },
+        "runtime_failure": null,
+        "early_stop_reasons": [
+          "SEVERE_PENETRATION"
+        ],
+        "policy_inferences": 0,
+        "max_slip_m": 0.0006109224297183397,
+        "max_rotation_slip_rad": 0.03096020964515683,
+        "max_arm_qvel_rad_s": 1.8794214368528754,
+        "first_contact_loss_step": 6,
+        "max_penetration_m": 0.0015071199264570733,
+        "peak_rss_kib": 783480,
+        "trace_sha256": "4fe0b7bd91ca7983829473a07cd54fa99b635ecb2df3148c8cc2b508476c7251",
+        "termination": "DIAGNOSTIC_EARLY_STOP"
+      },
+      "corrected_launcher": "MuJoCo Python 3.11"
+    },
+    {
+      "id": "I2_ARM_HAND_C1",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_r1_diagnostics.py",
+        "--trajectory",
+        "I2_ARM_HAND_C1",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I2_ARM_HAND_C1"
+      ],
+      "exact_child_exit_code": 0,
+      "supervisor_timeout": false,
+      "wall_s": 32.815720309000426,
+      "result": {
+        "task": "G4-S2A-R2-R1",
+        "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+        "run_id": "I2_ARM_HAND_C1",
+        "initial_id": "I2",
+        "physical_selection": "P_ARM_HAND",
+        "controller_selection": "C1",
+        "passive_arm": false,
+        "registered_steps": 235,
+        "integration_requests": 7,
+        "completed_steps": 7,
+        "simulation_duration_s": 0.05833333333333349,
+        "physics_wall_s": 0.008441193999715324,
+        "wall_s": 6.532064402999822,
+        "viewer_sync_wall_s": 0.037274680998052645,
+        "viewer_sync_count": 21,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.020875760999842896
+        },
+        "runtime_failure": null,
+        "early_stop_reasons": [
+          "SEVERE_PENETRATION"
+        ],
+        "policy_inferences": 0,
+        "max_slip_m": 0.0003411552165855056,
+        "max_rotation_slip_rad": 0.026477290841724427,
+        "max_arm_qvel_rad_s": 1.929396993034069,
+        "first_contact_loss_step": 6,
+        "max_penetration_m": 0.001069423256437618,
+        "peak_rss_kib": 773884,
+        "trace_sha256": "bd0985654ac73726b650de56fa432308293205c9a6f43d515fe538a19916efc4",
+        "termination": "DIAGNOSTIC_EARLY_STOP"
+      },
+      "corrected_launcher": "MuJoCo Python 3.11"
+    },
+    {
+      "id": "I1_ARM_HAND_C0",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_r1_diagnostics.py",
+        "--trajectory",
+        "I1_ARM_HAND_C0",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I1_ARM_HAND_C0"
+      ],
+      "exact_child_exit_code": 0,
+      "supervisor_timeout": false,
+      "wall_s": 46.305533587000355,
+      "result": {
+        "task": "G4-S2A-R2-R1",
+        "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+        "run_id": "I1_ARM_HAND_C0",
+        "initial_id": "I1",
+        "physical_selection": "P_ARM_HAND",
+        "controller_selection": "C0",
+        "passive_arm": false,
+        "registered_steps": 235,
+        "integration_requests": 25,
+        "completed_steps": 25,
+        "simulation_duration_s": 0.20833333333333395,
+        "physics_wall_s": 0.03299725300166756,
+        "wall_s": 12.331145952000043,
+        "viewer_sync_wall_s": 0.10882994699568371,
+        "viewer_sync_count": 59,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.027195210999707342
+        },
+        "runtime_failure": null,
+        "early_stop_reasons": [
+          "SEVERE_PENETRATION"
+        ],
+        "policy_inferences": 0,
+        "max_slip_m": 0.0013037701554614646,
+        "max_rotation_slip_rad": 0.11234044440189735,
+        "max_arm_qvel_rad_s": 3.7473114812887816,
+        "first_contact_loss_step": 24,
+        "max_penetration_m": 0.0018433763372695741,
+        "peak_rss_kib": 788268,
+        "trace_sha256": "a8c6e3acde23fcf008d3938f5cb035743d0bdc2d0780d5428108e50b407b1302",
+        "termination": "DIAGNOSTIC_EARLY_STOP"
+      },
+      "corrected_launcher": "MuJoCo Python 3.11"
+    },
+    {
+      "id": "I1_ARM_HAND_C1",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_r1_diagnostics.py",
+        "--trajectory",
+        "I1_ARM_HAND_C1",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I1_ARM_HAND_C1"
+      ],
+      "exact_child_exit_code": 0,
+      "supervisor_timeout": false,
+      "wall_s": 56.23683511700074,
+      "result": {
+        "task": "G4-S2A-R2-R1",
+        "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+        "run_id": "I1_ARM_HAND_C1",
+        "initial_id": "I1",
+        "physical_selection": "P_ARM_HAND",
+        "controller_selection": "C1",
+        "passive_arm": false,
+        "registered_steps": 235,
+        "integration_requests": 15,
+        "completed_steps": 15,
+        "simulation_duration_s": 0.12500000000000036,
+        "physics_wall_s": 0.02125427200098784,
+        "wall_s": 8.790033756999946,
+        "viewer_sync_wall_s": 0.0701822640012324,
+        "viewer_sync_count": 37,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.027375966999898083
+        },
+        "runtime_failure": null,
+        "early_stop_reasons": [
+          "SEVERE_PENETRATION"
+        ],
+        "policy_inferences": 0,
+        "max_slip_m": 0.0007099041203259182,
+        "max_rotation_slip_rad": 0.07320519419374717,
+        "max_arm_qvel_rad_s": 3.816643321174837,
+        "first_contact_loss_step": 14,
+        "max_penetration_m": 0.0018679069130998712,
+        "peak_rss_kib": 785904,
+        "trace_sha256": "0e44f3e14a058fc56a47e986fea713b052697822a3f67fa71b6c218d1eb325dc",
+        "termination": "DIAGNOSTIC_EARLY_STOP"
+      },
+      "corrected_launcher": "MuJoCo Python 3.11"
+    },
+    {
+      "id": "I3_FULL_PASSIVE_ARM",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_r1_diagnostics.py",
+        "--trajectory",
+        "I3_FULL_PASSIVE_ARM",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_PASSIVE_ARM"
+      ],
+      "exact_child_exit_code": 0,
+      "supervisor_timeout": false,
+      "wall_s": 106.74498201000006,
+      "result": {
+        "task": "G4-S2A-R2-R1",
+        "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+        "run_id": "I3_FULL_PASSIVE_ARM",
+        "initial_id": "I3",
+        "physical_selection": "P_FULL",
+        "controller_selection": "C0",
+        "passive_arm": true,
+        "registered_steps": 235,
+        "integration_requests": 154,
+        "completed_steps": 154,
+        "simulation_duration_s": 1.2833333333333303,
+        "physics_wall_s": 0.1870987279999099,
+        "wall_s": 49.03780332499991,
+        "viewer_sync_wall_s": 0.5194395510052345,
+        "viewer_sync_count": 317,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.038415332999647944
+        },
+        "runtime_failure": null,
+        "early_stop_reasons": [
+          "SEVERE_PENETRATION"
+        ],
+        "policy_inferences": 0,
+        "max_slip_m": 0.0013440622673294286,
+        "max_rotation_slip_rad": 0.07161128234997288,
+        "max_arm_qvel_rad_s": 0.002604756625474085,
+        "first_contact_loss_step": 143,
+        "max_penetration_m": 0.0010818855735547342,
+        "peak_rss_kib": 793916,
+        "trace_sha256": "9f00f6f0133fd4ac3ffb228f98d1faaf1458d33fc2bbf83cfa331f644cf5fc09",
+        "termination": "DIAGNOSTIC_EARLY_STOP"
+      },
+      "corrected_launcher": "MuJoCo Python 3.11"
+    }
+  ],
+  "new_integration_requests": 613,
+  "new_completed_physics_results": 612,
+  "maximum_steps": 2115,
+  "maximum_wall_s": 900,
+  "policy_inferences": 0,
+  "registered_trajectories": 9,
+  "receipt_count": 9,
+  "completed_accounting": false,
+  "execution_gate_passed": false,
+  "unstarted_runs": [],
+  "partial_run": "I3_FULL_C1",
+  "partial_recorded_physics_results": 211,
+  "unknown_child_exit_code": true,
+  "scientific_note": "I3_FULL_C1 supervisor process disappeared after durable request event 212; no automatic retry. All other eight registered runs have exact child exit receipts.",
+  "accounting_note": "Durable trace has 613 integration_request events and 612 physics_result events; I3_FULL_C1 request step 212 is unresolved after supervisor loss."
+}

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_r1_diagnostics.py", line 415, in <module>
+    raise SystemExit(main())
+  File "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_r1_diagnostics.py", line 409, in main
+    return trajectory_child(args.trajectory, args.manifest, args.output)
+  File "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_r1_diagnostics.py", line 220, in trajectory_child
+    pair = ModelPair(physical, controller)
+  File "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_r1_model.py", line 71, in __init__
+    self.plant = make_model(physical)
+  File "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_r1_model.py", line 53, in make_model
+    env = AdaptedPegInsertEnv()
+  File "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s1b_env.py", line 180, in __init__
+    import mujoco
+ModuleNotFoundError: No module named 'mujoco'

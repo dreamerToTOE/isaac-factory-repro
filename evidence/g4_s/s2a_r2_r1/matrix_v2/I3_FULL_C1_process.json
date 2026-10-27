@@ -1,0 +1,13 @@
+{
+  "id": "I3_FULL_C1",
+  "command": null,
+  "exact_child_exit_code": null,
+  "supervisor_timeout": false,
+  "supervisor_process_lost": true,
+  "actual_recorded_physics_results": 211,
+  "unresolved_integration_request_step": 212,
+  "termination": "SUPERVISOR_PROCESS_LOST_WITHOUT_CHILD_RECEIPT",
+  "retry_allowed": false,
+  "trace_path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_C1/physics.jsonl",
+  "note": "No automatic retry; exact child exit code unavailable because supervisor process disappeared after durable request event."
+}

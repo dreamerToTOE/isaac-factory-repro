@@ -1,0 +1,12 @@
+{
+  "task": "G4-S2A-R2-R1",
+  "passed": true,
+  "phase": "PREPHYSICS_FORENSICS_COMPLETE",
+  "frozen_manifest": "evidence/g4_s/s2a_r2_r1/forensics_v1/frozen_manifest.json",
+  "frozen_manifest_sha256": "695911f5fe0a1d32703f0d8c4274abdd2416f18ccbff0e522fe7b7f4bb2825b8",
+  "verified_files": 13,
+  "scope": "Saved historical trajectories and static forward geometry reconstruction only; no new integration, no policy inference. Positional geometry projections are not true contact surface points, and post-forward forces are not historical integration impulses.",
+  "prepared_initial_conditions": "Original admission PASS preserved; prepare transient penetration quality warning reported separately.",
+  "no_new_integration": true,
+  "no_policy_calls": true
+}

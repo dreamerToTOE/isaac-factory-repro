@@ -1,0 +1,31 @@
+{
+  "scope": "Clarification only; forensic_v1 remains unchanged.",
+  "distinction": "forensics_v1 uses any finger-name substring and nonpositive <=0; R2 official gate uses peg_collision with finger_geom_3 through 7 and pad force <=1e-6 N. These predicates are not generally equivalent.",
+  "threshold_n": 1e-06,
+  "historical_runs": {
+    "I3_B": {
+      "first_exact_gate_loss_step": 176,
+      "reconstructed_pad_force_n": {
+        "left": 0.0,
+        "right": 0.06839591074122957
+      },
+      "archived_pad_force_n": {
+        "left": 0.0,
+        "right": 0.06839591074122957
+      },
+      "raw_sha256": "d91c3bea1737cb5a416fb8804958b78cce7e3ea8c80c1f0a0dc6592c823506d6"
+    },
+    "I3_D": {
+      "first_exact_gate_loss_step": 215,
+      "reconstructed_pad_force_n": {
+        "left": 0.0,
+        "right": 0.06702732374343558
+      },
+      "archived_pad_force_n": {
+        "left": 0.0,
+        "right": 0.06702732374343558
+      },
+      "raw_sha256": "838ba74c05479bf606d9bd6394252c19a4ae1adfd8e544bf0cfcd8e35577d34f"
+    }
+  }
+}

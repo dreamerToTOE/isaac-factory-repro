@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "task": "G4-S2A-R2-R1",
+  "starting_commit": "5abe4375c2bea828816a7d2f0ff04e9ee0673ff0",
+  "final_engineering_status": "G4_S2A_R2_R1_PARTIAL",
+  "candidate_decision": "CANDIDATE_PARTIAL",
+  "r3_recommendation": "NO-GO",
+  "s2b_recommendation": "NO-GO",
+  "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+  "prephysics_forensics": {
+    "status": "PASS",
+    "receipt": "evidence/g4_s/s2a_r2_r1/forensics_v1/prephysics_receipt.json",
+    "static_fk_only": true,
+    "new_physics_before_preregistration": false
+  },
+  "preregistration": {
+    "registry": "evidence/g4_s/s2a_r2_r1/matrix_v2/preregistered_matrix.json",
+    "registered_primary_runs": 8,
+    "registered_negative_controls": 1,
+    "registered_total": 9,
+    "planned_integration_steps": 2115,
+    "max_wall_s": 900,
+    "mujoco_version": "3.5.0"
+  },
+  "execution": {
+    "attempted_runs": 9,
+    "complete_result_json_runs": 8,
+    "partial_runs": [
+      "I3_FULL_C1"
+    ],
+    "exact_exit_receipts": 8,
+    "unknown_child_exit_code_runs": [
+      "I3_FULL_C1"
+    ],
+    "automatic_retries": 0,
+    "durable_integration_requests": 613,
+    "completed_physics_results": 612,
+    "unresolved_request": {
+      "run_id": "I3_FULL_C1",
+      "step": 212,
+      "reason": "supervisor process lost after durable request event; no child receipt; no automatic retry"
+    },
+    "policy_inferences": 0,
+    "new_actor_forwards": 0,
+    "regression_physics_steps": 0
+  },
+  "scientific_outcome": {
+    "I3_FULL_C0": "late contact loss step 176; severe penetration at 177; reproduces R2 late failure",
+    "I3_FULL_C1": "partial through 211 physics results; request 212 unresolved; no final result/exit receipt",
+    "P_ARM_HAND": "all six primary variants early severe-penetration stop across I1/I2/I3",
+    "I3_FULL_PASSIVE_ARM": "early severe-penetration stop at physics step 154; passive-arm negative control",
+    "interpretation": "P_FULL early stabilization is a verified local effect; finger inertia/contact branch is sensitive; unique late root cause remains inconclusive"
+  },
+  "independent_review": {
+    "reader": "evidence/g4_s/s2a_r2_r1/numerical_review_v1/numerical_review.json",
+    "passed": false,
+    "reviewed_complete_trajectories": 8,
+    "reviewed_complete_physics_rows": 401,
+    "raw_physics_rows": 612,
+    "reason": "I3_FULL_C1 lacks result.json and exact child exit receipt; no false PASS promotion"
+  },
+  "visual_qa": {
+    "qa": "evidence/g4_s/s2a_r2_r1/visuals/live_image_qa.json",
+    "inventory_expected": 26,
+    "existing_reviewed": 25,
+    "clean_native_only": 17,
+    "external_desktop_contaminated": 9,
+    "public_clean_manifest_count": 17,
+    "private_exact_original_moved": 8,
+    "private_missing_known_sample": 0,
+    "live_vs_saved_playback_distinguished": true,
+    "private_preexisting_available": 1,
+    "private_available_count": 9,
+    "missing_from_public_but_private_preserved": 1
+  },
+  "regression": {
+    "summary": "evidence/g4_s/s2a_r2_r1/regression_final_v1/summary.json",
+    "status": "PASS",
+    "passed": true,
+    "pytest_passed": 721,
+    "pytest_skipped": 1,
+    "new_r2_r1_tests": 27,
+    "protected_tracked_files": 2316,
+    "sources_unchanged": true,
+    "no_additional_actor_forward": true,
+    "no_checkpoint_deserialization": true,
+    "no_new_physics_integration_or_gui": true
+  },
+  "preservation": {
+    "historical_evidence_preserved": true,
+    "historical_checkpoints_preserved": true,
+    "contaminated_images_not_public": true,
+    "original_s1b_untouched": true
+  },
+  "decision_basis": "PARTIAL is required because one registered supervisor process was lost after request 212, leaving unknown exit status and incomplete accounting; no automatic retry was performed."
+}

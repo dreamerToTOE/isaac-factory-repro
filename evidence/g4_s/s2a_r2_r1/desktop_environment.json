@@ -1,0 +1,21 @@
+{
+  "DISPLAY": ":1",
+  "XAUTHORITY": "/run/user/1000/gdm/Xauthority",
+  "session_readonly": "Remote=no\nType=x11\nActive=yes\n",
+  "xdpyinfo_readonly_first_lines": [
+    "name of display:    :1",
+    "version number:    11.0",
+    "vendor string:    The X.Org Foundation",
+    "vendor release number:    12101004",
+    "X.Org version: 1.21.1.4",
+    "maximum request size:  16777212 bytes",
+    "motion buffer size:  256",
+    "bitmap unit, bit order, padding:    32, LSBFirst, 32",
+    "image byte order:    LSBFirst",
+    "number of supported pixmap formats:    7",
+    "supported pixmap formats:",
+    "    depth 1, bits_per_pixel 1, scanline_pad 32"
+  ],
+  "actual_visible_GUI": "Each native MuJoCo child must independently record window IsViewable; this read-only query is not itself GUI pass.",
+  "scope": "No offscreen or headless fallback; no physics executed in query."
+}

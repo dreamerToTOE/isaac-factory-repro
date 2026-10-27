@@ -1,0 +1,31 @@
+{
+  "started_utc": "2026-10-27T02:07:37.921031+00:00",
+  "prior_partial_run": "I3_FULL_C1",
+  "prior_partial_recorded_steps": 211,
+  "new_runs_attempted": [
+    "I3_ARM_HAND_C0"
+  ],
+  "policy_calls": 0,
+  "automatic_retries": 0,
+  "wall_s": 0.1641351799999029,
+  "receipts": [
+    {
+      "id": "I3_ARM_HAND_C0",
+      "command": [
+        "/usr/bin/python3",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_r1_diagnostics.py",
+        "--trajectory",
+        "I3_ARM_HAND_C0",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_ARM_HAND_C0"
+      ],
+      "exact_child_exit_code": 1,
+      "supervisor_timeout": false,
+      "wall_s": 0.1639557460002834,
+      "result": null
+    }
+  ]
+}

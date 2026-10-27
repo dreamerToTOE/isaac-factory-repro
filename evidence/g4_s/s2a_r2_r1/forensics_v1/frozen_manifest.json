@@ -1,0 +1,19 @@
+{
+  "status": "PREPHYSICS_FORENSICS_COMPLETE",
+  "scope": "archived analysis and static FK only, no integration",
+  "sha256": {
+    "scripts/analyze_g4s2a_r2_r1_forensics.py": "314921b79506d1b0f5705b4fb4a4f2f0bbfa149b334a76ab8c895cf32072abc7",
+    "scripts/analyze_g4s2a_r2_r1_contact_geometry.py": "3757375013e642bfdbe674ff8c0568ec563024622258dd2309b79311b45bd515",
+    "evidence/g4_s/s2a_r2_r1/forensics_v1/I1_B_timeline.jsonl.gz": "aebde3f14ef377c353255d0d3eebce767a1cd1d5c8e7af472ad166bf4a01fab2",
+    "evidence/g4_s/s2a_r2_r1/forensics_v1/I1_D_timeline.jsonl.gz": "76b257133355474e8b9acc4cad1b3e724245013dd818b6e9d4fa5f4119045491",
+    "evidence/g4_s/s2a_r2_r1/forensics_v1/I1_preparation.json": "02b9bf9e7caefa96edc23e6dbb57931e22ad25579eae2db591a48370bbea3638",
+    "evidence/g4_s/s2a_r2_r1/forensics_v1/I2_B_timeline.jsonl.gz": "d5eea465867f6f550e2c7a3f4d819ee4ea967c47874e0a480f469e9cacb7d404",
+    "evidence/g4_s/s2a_r2_r1/forensics_v1/I2_D_timeline.jsonl.gz": "b7ddebd688ad8686cca1d11e0ac5ba20126f2eac464d4c07959338722a81bdee",
+    "evidence/g4_s/s2a_r2_r1/forensics_v1/I2_preparation.json": "cae4df28ff281abb135ad4c351719986f7866da07b3fe02dcf6df9afd98a9a28",
+    "evidence/g4_s/s2a_r2_r1/forensics_v1/I3_B_timeline.jsonl.gz": "705c1d0b2dd5d3fc9aaf2426eac4eab9dc0de8eafb687eda745e0b1ba968f1c4",
+    "evidence/g4_s/s2a_r2_r1/forensics_v1/I3_D_timeline.jsonl.gz": "dc56550c072e76a401cf1a526f4e9ae77fcd13af06ab2779fa108ab8a70fd755",
+    "evidence/g4_s/s2a_r2_r1/forensics_v1/I3_preparation.json": "2ca0d362d674e10af68faafd29fb4bee4e0a77f214aa93e063be58e93741309a",
+    "evidence/g4_s/s2a_r2_r1/forensics_v1/forensics.json": "d925ba08c51f0eba84740ca48293c7161e3ee2cd584ffa541f538fb90c56769d",
+    "evidence/g4_s/s2a_r2_r1/forensics_v1/geometry_projection.json": "8fa896c106367f763633b871542198a39be892b0bacc395faf538a95f9d44109"
+  }
+}

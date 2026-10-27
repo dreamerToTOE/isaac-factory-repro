@@ -1,0 +1,232 @@
+{
+  "task": "G4-S2A-R2-R1",
+  "starting_commit": "5abe4375c2bea828816a7d2f0ff04e9ee0673ff0",
+  "generated_utc": "2026-10-27T02:02:03.785588+00:00",
+  "regression_status": "PASS",
+  "passed": true,
+  "selected_cpu": {
+    "command": [
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/audit_g4s2a_r2_r1.py",
+      "--guarded-pytest",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/selected_cpu_guard.json",
+      "-q",
+      "tests",
+      "--ignore=tests/test_g4i1_policy.py",
+      "--ignore=tests/test_g4i1_edge_cpu.py",
+      "--ignore=tests/test_g4i2_fault_contract.py",
+      "--ignore=tests/test_g4i2_policy_probe.py",
+      "--deselect=tests/test_g4s2a_inference.py::test_real_frozen_bridge_matches_direct_once_normalized_recurrent_sequence_and_reset",
+      "--deselect=tests/test_g4s1b_env.py::test_environment_collector_real_exit_and_no_policy",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp=/dev/shm/g4s2a_r2_r1_cpu_7e3kmhpp/pytest",
+      "--junitxml=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/selected_cpu.xml"
+    ],
+    "exit_code": 0,
+    "duration_s": 36.61604387200077,
+    "cases": 722,
+    "passed": 721,
+    "failed": 0,
+    "skipped": 1,
+    "r2_r1_cases": 27,
+    "guard_verified": true,
+    "log": "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/selected_cpu.txt",
+    "junit": "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/selected_cpu.xml",
+    "guard": "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/selected_cpu_guard.json"
+  },
+  "static_models": {
+    "command": [
+      "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/audit_g4s2a_r2_r1.py",
+      "--guarded-pytest",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/static_models_guard.json",
+      "--static-models"
+    ],
+    "exit_code": 0,
+    "duration_s": 6.191198796999743,
+    "guard_verified": true,
+    "all_four_variants_verified": true,
+    "new_physics_steps": 0,
+    "actor_calls": 0,
+    "log": "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/static_models.txt",
+    "guard": "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/static_models_guard.json"
+  },
+  "system_plot": {
+    "command": [
+      "/usr/bin/python3",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/audit_g4s2a_r2_r1.py",
+      "--guarded-pytest",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/system_plot_guard.json",
+      "-q",
+      "tests/test_g4i2_analysis.py::test_plots_are_real_files_and_cannot_overwrite",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp=/dev/shm/g4s2a_r2_r1_cpu_ypknblid/pytest",
+      "--junitxml=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/system_plot.xml"
+    ],
+    "exit_code": 0,
+    "duration_s": 6.615722162000566,
+    "cases": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "r2_r1_cases": 0,
+    "guard_verified": true,
+    "log": "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/system_plot.txt",
+    "junit": "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/system_plot.xml",
+    "guard": "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/system_plot_guard.json"
+  },
+  "new_R2_R1_test_cases": 27,
+  "excluded_cases": 75,
+  "exclusions": {
+    "file_exclusions_historical_case_counts": {
+      "tests/test_g4i1_policy.py": 49,
+      "tests/test_g4i1_edge_cpu.py": 9,
+      "tests/test_g4i2_fault_contract.py": 11,
+      "tests/test_g4i2_policy_probe.py": 4
+    },
+    "node_exclusions": {
+      "tests/test_g4s2a_inference.py::test_real_frozen_bridge_matches_direct_once_normalized_recurrent_sequence_and_reset": "Would execute five actual actor forwards and load the checkpoint.",
+      "tests/test_g4s1b_env.py::test_environment_collector_real_exit_and_no_policy": "Would execute 518 new headless physical steps outside the registered GUI-only diagnostic matrix."
+    },
+    "excluded_count": 75,
+    "reason": "R2-R1 forbids additional actor/checkpoint execution and unregistered/headless physical integration. Original tests preserved unchanged."
+  },
+  "tripwire_negative_controls_passed": true,
+  "sources_unchanged_during_regression": true,
+  "preservation": {
+    "equal_before_after": true,
+    "protected_tracked_files": 2316,
+    "authorized_case_doc_exceptions": [
+      "docs/case_studies/README.md",
+      "docs/case_studies/SIM2SIM_PANDA_CONTROL_INSTABILITY.md"
+    ],
+    "checkpoint_count_hash_only": 3,
+    "external_source_configuration_count": 20,
+    "original_USD_count": 4,
+    "Panda_files": 78,
+    "unrelated_G3V_files": 5
+  },
+  "no_additional_actor_forward": true,
+  "no_checkpoint_deserialization": true,
+  "no_new_physics_integration_or_GUI_from_regression": true,
+  "scientific_effectiveness_not_inferred_from_test_PASS": true,
+  "source_hashes": {
+    "scripts/analyze_g4s2a_r2_r1.py": {
+      "sha256": "920416d8e9e40762936cec23695328679b7b93a599a64c6028a5137fd930178e",
+      "bytes": 22107
+    },
+    "scripts/analyze_g4s2a_r2_r1_contact_geometry.py": {
+      "sha256": "3757375013e642bfdbe674ff8c0568ec563024622258dd2309b79311b45bd515",
+      "bytes": 2760
+    },
+    "scripts/analyze_g4s2a_r2_r1_forensics.py": {
+      "sha256": "314921b79506d1b0f5705b4fb4a4f2f0bbfa149b334a76ab8c895cf32072abc7",
+      "bytes": 7395
+    },
+    "scripts/audit_g4s2a_r2_r1.py": {
+      "sha256": "a5ce951dfd60380df5eeeba453441193c78b262112d59c953e7c9488e1eca9ce",
+      "bytes": 25889
+    },
+    "scripts/g4s2a_r2_r1_diagnostics.py": {
+      "sha256": "6970805e3065dd1cdc1769448d192cec396e1523126adbb12911821b5815ea02",
+      "bytes": 23487
+    },
+    "scripts/g4s2a_r2_r1_model.py": {
+      "sha256": "e745d6cbe9b4befb7f5ba6585d2396d878f937639ec7052a014dc8d39b5d5ecc",
+      "bytes": 4925
+    },
+    "scripts/g4s2a_r2_r1_viewer.py": {
+      "sha256": "ad5219a9acb491f7a47337f176eb8ce1c14a66837381e21d8bff03aafa7999ab",
+      "bytes": 6255
+    },
+    "tests/test_g4s2a_r2_r1.py": {
+      "sha256": "4fc10ca8cc2e4d4dce181384de99f77cfc527c78c52be238e26466e134e6cbca",
+      "bytes": 12014
+    }
+  },
+  "artifacts": {
+    "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/negative_actor_guard.json": {
+      "sha256": "576320007e9c71f86955975d0fa65a9d7d865700344f200d20260c524d6752d4",
+      "bytes": 304
+    },
+    "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/selected_cpu.txt": {
+      "sha256": "1fe334671238012f2c2db3582c321fa967a4e8ea31b2d4ae7a8c83865c7d5538",
+      "bytes": 926
+    },
+    "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/selected_cpu_guard.json": {
+      "sha256": "f6e0bec6f1f4f00d1fbc6a52e0681a6b094afef7788e526c36c0f893026eda7f",
+      "bytes": 410
+    },
+    "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/runner_source.py.txt": {
+      "sha256": "a5ce951dfd60380df5eeeba453441193c78b262112d59c953e7c9488e1eca9ce",
+      "bytes": 25889
+    },
+    "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/preservation_after.json": {
+      "sha256": "bb20e992e0391179bbf7529361ae44f64866a72d90e84eb90b9e4448e15018a9",
+      "bytes": 556328
+    },
+    "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/negative_r2_r1_runner_guard.json": {
+      "sha256": "4d78ad84c9bc0adac53f19b5ebb61182be7b5f502554e86577ed2c409871dd9f",
+      "bytes": 322
+    },
+    "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/sources_after.json": {
+      "sha256": "563c5e0259bdae28e8e1dffba384e845b26120ac2bc110fc73f0bf178c9a6367",
+      "bytes": 1172
+    },
+    "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/negative_controls.json": {
+      "sha256": "d3a0985eb54f263ea7bd8056c4a4954765cd1cb152e162940b0e6a332d1e049e",
+      "bytes": 3570
+    },
+    "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/system_plot_guard.json": {
+      "sha256": "8c42ca0e43c205aef17f97972a9c3a76af9bed08daea5e9621d25383eff76b87",
+      "bytes": 410
+    },
+    "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/excluded_tests.json": {
+      "sha256": "dd641c3b66387d633b56c533fed56e5d9800cd8c2d1c48c28633cc1a5a9319e9",
+      "bytes": 791
+    },
+    "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/negative_r2_runner_guard.json": {
+      "sha256": "9acd44c4babcf810ac03e2ca8dc8639bbb56bc4ba502283602fdbfd909248cca",
+      "bytes": 319
+    },
+    "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/preservation_before.json": {
+      "sha256": "bb20e992e0391179bbf7529361ae44f64866a72d90e84eb90b9e4448e15018a9",
+      "bytes": 556328
+    },
+    "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/static_models.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/system_plot.txt": {
+      "sha256": "3d6474481d4bb3596623b0977dc19186a1773c4dc4dce37562b74b1a52ecdb95",
+      "bytes": 299
+    },
+    "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/sources_before.json": {
+      "sha256": "563c5e0259bdae28e8e1dffba384e845b26120ac2bc110fc73f0bf178c9a6367",
+      "bytes": 1172
+    },
+    "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/negative_viewer_guard.json": {
+      "sha256": "a789329958eb57e23ebe42cbad69332283f8885db5837628e6f93ad003a7111f",
+      "bytes": 307
+    },
+    "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/static_models_guard.json": {
+      "sha256": "1a83fe915e81da8a522eefde99ef33804657b17384334c574bf41d11404d99b5",
+      "bytes": 58738
+    },
+    "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/negative_physics_guard.json": {
+      "sha256": "c54704dd744fd87af8aefabed060be46e023a89eb8f94c32731ee4595b3e02e7",
+      "bytes": 309
+    },
+    "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/system_plot.xml": {
+      "sha256": "35f9f8c31a6b33a67c8e5f586404e01cdf893324e9f78666a30abde41615d383",
+      "bytes": 336
+    },
+    "evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/selected_cpu.xml": {
+      "sha256": "0a3bd8f9b16c364ab6ae02faed923bed08ff010871cc22a59ca213a44119577b",
+      "bytes": 96907
+    }
+  },
+  "wall_s": 53.900775571999475
+}

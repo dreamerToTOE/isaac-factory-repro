@@ -311,3 +311,39 @@ Space播放/暂停、Right单步、Home初态、End最后帧、S慢速、V全景
 > 我把GUI同期图与保存状态回放分开，保持所有失败和早停分母，并让独立reader从raw trace重算控制和接触。PhysX runtime M及实际输出仍未知，finger/contact耦合还没有分离，所以当前只说已验证局部效应、支持某个机制；下一阶段先解决持握质量门，再另行申请有限冻结PPO验证，不宣称恢复任务成功率。
 
 学习与理论面试考核本身仍为PENDING；以上仅更新真实工程案例文字。
+
+## 11. G4-S2A-R2-R1 — Late Contact Failure and Finger Inertia Isolation
+
+**诊断结果：`G4_S2A_R2_R1_PARTIAL`；候选：`CANDIDATE_PARTIAL`；R3 / S2B：NO-GO。** 这是在前述早期 task-space 振荡受到缓解后，对另一个问题——较晚的抓持接触失稳——开展的无策略调查。原始训练、观察/动作接口、PPO checkpoint、成功谓词与历史实验均未改写；两种动力学现象不能合并为一个未经证明的根因。
+
+### A. 已有证据与新假设
+
+R2中物理 plant 惯量增加可在三个初态抑制最初高频反向振荡，单独换臂控制器M的对照未解决早期失稳；但I3_B/D在176/215步失去左正接触，下一步peg-left finger出现超过1mm穿透并早停。力矩限幅本身不是起始速度反转的充分解释；74.56/89.30N是后向计算的左 pad 接触法向力，不是改变了40N finger motor cap。
+
+读取原准备轨迹后，I3在第2步的peg/right_finger_geom_7曾穿透873.514µm，末步恢复至6.524µm；**RESET_ADMISSION_PASS** 是旧协议结果，不能追溯取消，同时需标记 **RESET_PREPARATION_CONTACT_QUALITY_WARNING**。I1也曾有316.328µm的准备瞬态却在R2正对照保持235步；I2峰值22.444µm。准备异常是候选线索，不是已证明的晚期失效根因。
+
+原P_FULL对映射11个body均加`0.01 I kg·m²`，而Menagerie每个finger原主惯量只有 `2.375e−6 / 2.375e−6 / 7.5e−7 kg·m²`。P_ARM_HAND仅对link0..7与hand施加同样增量、保持两指原惯量；质量、CoM、几何、指驱动、摩擦、solver和物理步长冻结。C0读取原S1B arm M，C1读取所选plant同q的arm M；finger step-implicit预测始终使用物理plant的完整M。因此实验能隔离指惯量因素，同时不能把每种controller中所有数值都说成不变。影子模型只做同q静态M计算，不改变或积分真实plant。
+
+### B. 设计与结果
+
+使用R2已记录的I1/I2/I3，八个主轨迹和一个单列I3_FULL_PASSIVE_ARM负控；共同的前两条归档动作分别维持8步，之后固定原初始TCP参考，最长235步。完整固定的质量门包括双侧正接触、滑移/转动、速度、越限、pad与装配穿透；>1mm全接触穿透立即早停。没有新PPO推理，不筛选替换初态、不放宽门禁或失败后调参重试。
+
+P_FULL+C0 在 I3 第176/177步复现 R2 晚期失败；P_ARM_HAND（保留原指惯量）在 I1/I2/I3 均早期严重穿透早停；I3_FULL_PASSIVE_ARM 也在154步早停，说明臂任务力矩不是唯一充分解释。I3_FULL_C1 记录到第211步后监督进程在第212请求处丢失，退出码未知，未重跑。比较只使用同初态、同输入和共同时间窗；被动臂单列，早停不是完整轨迹成功，接触中点靠近几何边缘不足以证明边/角是唯一原因。
+
+独立 reader 对8条有完整 `result.json` 的轨迹重算401个可审阅 physics rows；原始 durable trace 实际记录了612个 physics results（其中I3_FULL_C1有211个，但没有最终 `result.json`）。因此 numerical review 明确为 **FAIL/INCOMPLETE**，而不是把缺失的监督收据当成通过。证据支持 `VERIFIED_LOCAL_EFFECT`（P_FULL 延续早期抑振）和 `SUPPORTED_MECHANISM`（手指惯量/物理 full-M 接触支路敏感），但晚期 solver、几何、准备瞬态与指驱动的唯一因果仍 `INCONCLUSIVE`。
+
+真实积分窗口的公开截图仅使用逐张 QA 判定为 `clean_native_only` 的原始 PNG；白色实验文字是 MuJoCo 内部 overlay。I3_FULL_C0 在左接触仍存在的第175步、接触丢失后的第176步和严重穿透早停的第177步如下。它们用于显示窗口和几何状态，微米级结论仍以 durable trace 为准。
+
+![I3_FULL_C0 physics step 175：失效前](../../evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_C0/physics_175.png)
+
+![I3_FULL_C0 physics step 176：左正接触丢失](../../evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_C0/physics_176.png)
+
+![I3_FULL_C0 physics step 177：严重穿透早停](../../evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_C0/physics_177.png)
+
+公开图片清单：[public_manifest.json](../../evidence/g4_s/s2a_r2_r1/visuals/public_manifest.json)；被无关桌面窗口污染的九个原始样本未作为公开画面，准确位置与哈希见[private_capture_availability.json](../../evidence/g4_s/s2a_r2_r1/visuals/private_capture_availability.json)。
+
+### C. 面试说明更新（R2-R1定稿）
+
+核心结构是：第一步分辨最初臂任务空间振荡，第二步识别惯量适配后的晚期抓持接触问题；采用同初态、同输入、物理惯量与controller M分离的预注册负控，从记录数值解释局部效应；最后给出反例、未知量和真实验收状态。监督进程在 I3_FULL_C1 第212个请求处丢失，退出码未知且未自动重跑，所以工程交付为 `PARTIAL`；P_ARM_HAND 三种初态均早停，I3 被动臂负控也早停，不能把局部P_FULL抑振结果写成全局修复。绝不把无策略诊断成功等同冻结PPO迁移成功。学习与理论面试考核仍PENDING。
+
+完整报告：[R2-R1](../REVIEW_G4_S2A_R2_R1.md)；[R2历史报告](../REVIEW_G4_S2A_R2.md)；[历史取证机器证据](../../evidence/g4_s/s2a_r2_r1/forensics_v1/forensics.json)。

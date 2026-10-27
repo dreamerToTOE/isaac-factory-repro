@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "task": "G4-S2A-R2-R1",
+  "purpose": "Independent raw event accounting generated after all registered runs; no reruns or physics.",
+  "registered_run_count": 9,
+  "runs": [
+    {
+      "run_id": "I3_FULL_C0",
+      "process_record": "evidence/g4_s/s2a_r2_r1/matrix_v2/I3_FULL_C0_process.json",
+      "trace_path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_C0/physics.jsonl",
+      "trace_exists": true,
+      "trace_sha256": "1e089224637f1bf9e1d675026a3c7d8a3ea4163b2cd4a218234aeca5ae5b5b3f",
+      "event_counts": {
+        "integration_request": 177,
+        "physics_result": 177,
+        "other": 0
+      },
+      "last_event": {
+        "event": "physics_result",
+        "step": 177
+      },
+      "result_json_exists": true,
+      "result_sha256": "bdfff991a4f3d50c58897b7d19302e96a81d8b33ac8f04ec100baa558b582ad7",
+      "exact_child_exit_code": 0,
+      "supervisor_process_lost": false,
+      "termination": "DIAGNOSTIC_EARLY_STOP",
+      "early_stop_reasons": [
+        "SEVERE_PENETRATION"
+      ],
+      "simulation_duration_s": 1.4749999999999963,
+      "wall_s": 39.18793851100054
+    },
+    {
+      "run_id": "I3_FULL_C1",
+      "process_record": "evidence/g4_s/s2a_r2_r1/matrix_v2/I3_FULL_C1_process.json",
+      "trace_path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_C1/physics.jsonl",
+      "trace_exists": true,
+      "trace_sha256": "96a3240ffd061d969cfa4a3c5b951b522744d8b7a37fe847df0dc7762c75ae8a",
+      "event_counts": {
+        "integration_request": 212,
+        "physics_result": 211,
+        "other": 0
+      },
+      "last_event": {
+        "event": "integration_request",
+        "step": 212
+      },
+      "result_json_exists": false,
+      "result_sha256": null,
+      "exact_child_exit_code": null,
+      "supervisor_process_lost": true,
+      "termination": "SUPERVISOR_PROCESS_LOST_WITHOUT_CHILD_RECEIPT",
+      "early_stop_reasons": [],
+      "simulation_duration_s": null,
+      "wall_s": null
+    },
+    {
+      "run_id": "I3_ARM_HAND_C0",
+      "process_record": "evidence/g4_s/s2a_r2_r1/matrix_v2/I3_ARM_HAND_C0_process.json",
+      "trace_path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_ARM_HAND_C0/physics.jsonl",
+      "trace_exists": true,
+      "trace_sha256": "f64d8d6f2712d87c6ace6780adb2fb78b70ed4bb7fc270983687a2b76b86569b",
+      "event_counts": {
+        "integration_request": 8,
+        "physics_result": 8,
+        "other": 0
+      },
+      "last_event": {
+        "event": "physics_result",
+        "step": 8
+      },
+      "result_json_exists": true,
+      "result_sha256": "8b3011ae8a61f6b6cfd0104cd7a61e712185c1a534618d4e6a319aeb52e16337",
+      "exact_child_exit_code": 0,
+      "supervisor_process_lost": false,
+      "termination": "DIAGNOSTIC_EARLY_STOP",
+      "early_stop_reasons": [
+        "SEVERE_PENETRATION"
+      ],
+      "simulation_duration_s": 0.06666666666666685,
+      "wall_s": 9.031398679000631
+    },
+    {
+      "run_id": "I3_ARM_HAND_C1",
+      "process_record": "evidence/g4_s/s2a_r2_r1/matrix_v2/I3_ARM_HAND_C1_process.json",
+      "trace_path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_ARM_HAND_C1/physics.jsonl",
+      "trace_exists": true,
+      "trace_sha256": "231aa3e4b0b6b99e79404bd4c78a6c88d66309b9cd71e2b4cace08414eac323b",
+      "event_counts": {
+        "integration_request": 8,
+        "physics_result": 8,
+        "other": 0
+      },
+      "last_event": {
+        "event": "physics_result",
+        "step": 8
+      },
+      "result_json_exists": true,
+      "result_sha256": "abf13121de2d34bd051221a736b702d3f6f218f54ef58b0b46d7cebaed594bce",
+      "exact_child_exit_code": 0,
+      "supervisor_process_lost": false,
+      "termination": "DIAGNOSTIC_EARLY_STOP",
+      "early_stop_reasons": [
+        "SEVERE_PENETRATION"
+      ],
+      "simulation_duration_s": 0.06666666666666685,
+      "wall_s": 17.009258514000066
+    },
+    {
+      "run_id": "I2_ARM_HAND_C0",
+      "process_record": "evidence/g4_s/s2a_r2_r1/matrix_v2/I2_ARM_HAND_C0_process.json",
+      "trace_path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I2_ARM_HAND_C0/physics.jsonl",
+      "trace_exists": true,
+      "trace_sha256": "4fe0b7bd91ca7983829473a07cd54fa99b635ecb2df3148c8cc2b508476c7251",
+      "event_counts": {
+        "integration_request": 7,
+        "physics_result": 7,
+        "other": 0
+      },
+      "last_event": {
+        "event": "physics_result",
+        "step": 7
+      },
+      "result_json_exists": true,
+      "result_sha256": "ec53f8355cce79d0f280f9f0ccb7537e30050922dd445cb87a74e90a40c62271",
+      "exact_child_exit_code": 0,
+      "supervisor_process_lost": false,
+      "termination": "DIAGNOSTIC_EARLY_STOP",
+      "early_stop_reasons": [
+        "SEVERE_PENETRATION"
+      ],
+      "simulation_duration_s": 0.05833333333333349,
+      "wall_s": 25.037581472000056
+    },
+    {
+      "run_id": "I2_ARM_HAND_C1",
+      "process_record": "evidence/g4_s/s2a_r2_r1/matrix_v2/I2_ARM_HAND_C1_process.json",
+      "trace_path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I2_ARM_HAND_C1/physics.jsonl",
+      "trace_exists": true,
+      "trace_sha256": "bd0985654ac73726b650de56fa432308293205c9a6f43d515fe538a19916efc4",
+      "event_counts": {
+        "integration_request": 7,
+        "physics_result": 7,
+        "other": 0
+      },
+      "last_event": {
+        "event": "physics_result",
+        "step": 7
+      },
+      "result_json_exists": true,
+      "result_sha256": "7f7008ad7a7c009a8be2606e02c5c6386ee2554c014cc545473fdbb27f054140",
+      "exact_child_exit_code": 0,
+      "supervisor_process_lost": false,
+      "termination": "DIAGNOSTIC_EARLY_STOP",
+      "early_stop_reasons": [
+        "SEVERE_PENETRATION"
+      ],
+      "simulation_duration_s": 0.05833333333333349,
+      "wall_s": 32.815720309000426
+    },
+    {
+      "run_id": "I1_ARM_HAND_C0",
+      "process_record": "evidence/g4_s/s2a_r2_r1/matrix_v2/I1_ARM_HAND_C0_process.json",
+      "trace_path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I1_ARM_HAND_C0/physics.jsonl",
+      "trace_exists": true,
+      "trace_sha256": "a8c6e3acde23fcf008d3938f5cb035743d0bdc2d0780d5428108e50b407b1302",
+      "event_counts": {
+        "integration_request": 25,
+        "physics_result": 25,
+        "other": 0
+      },
+      "last_event": {
+        "event": "physics_result",
+        "step": 25
+      },
+      "result_json_exists": true,
+      "result_sha256": "189b4cb204a5f8a3229114102c37d38900d82ac2b434b034f1d3095bcead0a3c",
+      "exact_child_exit_code": 0,
+      "supervisor_process_lost": false,
+      "termination": "DIAGNOSTIC_EARLY_STOP",
+      "early_stop_reasons": [
+        "SEVERE_PENETRATION"
+      ],
+      "simulation_duration_s": 0.20833333333333395,
+      "wall_s": 46.305533587000355
+    },
+    {
+      "run_id": "I1_ARM_HAND_C1",
+      "process_record": "evidence/g4_s/s2a_r2_r1/matrix_v2/I1_ARM_HAND_C1_process.json",
+      "trace_path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I1_ARM_HAND_C1/physics.jsonl",
+      "trace_exists": true,
+      "trace_sha256": "0e44f3e14a058fc56a47e986fea713b052697822a3f67fa71b6c218d1eb325dc",
+      "event_counts": {
+        "integration_request": 15,
+        "physics_result": 15,
+        "other": 0
+      },
+      "last_event": {
+        "event": "physics_result",
+        "step": 15
+      },
+      "result_json_exists": true,
+      "result_sha256": "8ff41fff0dc92a2b00e348e54976c09c758b372df53cef50f51c6dfa1c10018b",
+      "exact_child_exit_code": 0,
+      "supervisor_process_lost": false,
+      "termination": "DIAGNOSTIC_EARLY_STOP",
+      "early_stop_reasons": [
+        "SEVERE_PENETRATION"
+      ],
+      "simulation_duration_s": 0.12500000000000036,
+      "wall_s": 56.23683511700074
+    },
+    {
+      "run_id": "I3_FULL_PASSIVE_ARM",
+      "process_record": "evidence/g4_s/s2a_r2_r1/matrix_v2/I3_FULL_PASSIVE_ARM_process.json",
+      "trace_path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_PASSIVE_ARM/physics.jsonl",
+      "trace_exists": true,
+      "trace_sha256": "9f00f6f0133fd4ac3ffb228f98d1faaf1458d33fc2bbf83cfa331f644cf5fc09",
+      "event_counts": {
+        "integration_request": 154,
+        "physics_result": 154,
+        "other": 0
+      },
+      "last_event": {
+        "event": "physics_result",
+        "step": 154
+      },
+      "result_json_exists": true,
+      "result_sha256": "2949e65c71971a7e9ccf821144bb3dfdf0e9d1c17829073fc69484dc2799b4bd",
+      "exact_child_exit_code": 0,
+      "supervisor_process_lost": false,
+      "termination": "DIAGNOSTIC_EARLY_STOP",
+      "early_stop_reasons": [
+        "SEVERE_PENETRATION"
+      ],
+      "simulation_duration_s": 1.2833333333333303,
+      "wall_s": 106.74498201000006
+    }
+  ],
+  "totals": {
+    "integration_requests": 613,
+    "physics_results": 612,
+    "result_json_count": 8,
+    "exact_exit_receipt_count": 8,
+    "unknown_exit_count": 1,
+    "policy_inferences": 0
+  },
+  "planned_integration_steps": 2115,
+  "accounting_complete": false,
+  "partial_run": "I3_FULL_C1",
+  "unresolved_request": {
+    "run_id": "I3_FULL_C1",
+    "step": 212,
+    "reason": "supervisor process lost after durable request event; no child receipt; no automatic retry"
+  },
+  "review_note": "event_counts distinguish durable integration requests from completed physics_result rows; a missing result_json is not promoted to a completed run."
+}

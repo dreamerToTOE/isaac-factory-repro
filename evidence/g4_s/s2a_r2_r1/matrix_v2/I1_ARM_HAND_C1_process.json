@@ -1,0 +1,56 @@
+{
+  "id": "I1_ARM_HAND_C1",
+  "command": [
+    "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+    "-u",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_r1_diagnostics.py",
+    "--trajectory",
+    "I1_ARM_HAND_C1",
+    "--manifest",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/preregistered_matrix.json",
+    "--output",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I1_ARM_HAND_C1"
+  ],
+  "exact_child_exit_code": 0,
+  "supervisor_timeout": false,
+  "wall_s": 56.23683511700074,
+  "result": {
+    "task": "G4-S2A-R2-R1",
+    "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+    "run_id": "I1_ARM_HAND_C1",
+    "initial_id": "I1",
+    "physical_selection": "P_ARM_HAND",
+    "controller_selection": "C1",
+    "passive_arm": false,
+    "registered_steps": 235,
+    "integration_requests": 15,
+    "completed_steps": 15,
+    "simulation_duration_s": 0.12500000000000036,
+    "physics_wall_s": 0.02125427200098784,
+    "wall_s": 8.790033756999946,
+    "viewer_sync_wall_s": 0.0701822640012324,
+    "viewer_sync_count": 37,
+    "graceful_close": {
+      "viewer_close_requested": true,
+      "render_threads_joined": [
+        "Thread-1 (_launch_internal)"
+      ],
+      "remaining_render_threads": [],
+      "close_wall_s": 0.027375966999898083
+    },
+    "runtime_failure": null,
+    "early_stop_reasons": [
+      "SEVERE_PENETRATION"
+    ],
+    "policy_inferences": 0,
+    "max_slip_m": 0.0007099041203259182,
+    "max_rotation_slip_rad": 0.07320519419374717,
+    "max_arm_qvel_rad_s": 3.816643321174837,
+    "first_contact_loss_step": 14,
+    "max_penetration_m": 0.0018679069130998712,
+    "peak_rss_kib": 785904,
+    "trace_sha256": "0e44f3e14a058fc56a47e986fea713b052697822a3f67fa71b6c218d1eb325dc",
+    "termination": "DIAGNOSTIC_EARLY_STOP"
+  },
+  "corrected_launcher": "MuJoCo Python 3.11"
+}

@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "task": "G4-S2A-R2-R1",
+  "purpose": "Public live screenshot manifest; only clean native MuJoCo captures are listed.",
+  "qa_source": "evidence/g4_s/s2a_r2_r1/visuals/live_image_qa.json",
+  "public_image_count": 17,
+  "images": [
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I1_ARM_HAND_C0/physics_016.png",
+      "sha256": "1ed02909c9077ef3ee59b0718879cb368cadc3001508c71e207870a8e9df324e",
+      "classification": "clean_native_only",
+      "visual_finding": "MuJoCo native scene and expected in-render diagnostic text; no unrelated desktop pixels."
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I1_ARM_HAND_C0/physics_025.png",
+      "sha256": "bcb0f1db197d4363c80352e085517ffa73d2df2b4fefc1fb3d0ce92dbb7ae359",
+      "classification": "clean_native_only",
+      "visual_finding": "MuJoCo native scene and expected in-render diagnostic text; no unrelated desktop pixels."
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I1_ARM_HAND_C1/initial.png",
+      "sha256": "1a7a7d64e36981c68acaf6c409610ce7d75319aa5a6f60f26d56c6053e40baec",
+      "classification": "clean_native_only",
+      "visual_finding": "MuJoCo native scene and expected in-render diagnostic text; no unrelated desktop pixels."
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I2_ARM_HAND_C0/initial.png",
+      "sha256": "905fc0b247d8437c9be5b5baf480f4df73d5f6da542695220fe711242c4ed176",
+      "classification": "clean_native_only",
+      "visual_finding": "MuJoCo native scene and expected in-render diagnostic text; no unrelated desktop pixels."
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I2_ARM_HAND_C0/physics_007.png",
+      "sha256": "6054aacc85df0435d813685c43ad10c2d6927448843d73b1d26013daf6d3eda5",
+      "classification": "clean_native_only",
+      "visual_finding": "MuJoCo native scene and expected in-render diagnostic text; no unrelated desktop pixels."
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_ARM_HAND_C0/initial.png",
+      "sha256": "06a6d9a5fbe8f1681f8a9c7d54bc4c5d525387b7fee41bae94889806fa3e82d4",
+      "classification": "clean_native_only",
+      "visual_finding": "MuJoCo native scene and expected in-render diagnostic text; no unrelated desktop pixels."
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_ARM_HAND_C0/physics_008.png",
+      "sha256": "c9fe471fb3064917217e670414d9d7aa5d46525584922c9e1751482d72045b37",
+      "classification": "clean_native_only",
+      "visual_finding": "MuJoCo native scene and expected in-render diagnostic text; no unrelated desktop pixels."
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_ARM_HAND_C1/initial.png",
+      "sha256": "463c67e3c2d15b5b2373eac0b9d37220d97f25d67b67debf834051a1e693a24c",
+      "classification": "clean_native_only",
+      "visual_finding": "MuJoCo native scene and expected in-render diagnostic text; no unrelated desktop pixels."
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_ARM_HAND_C1/physics_008.png",
+      "sha256": "ad25972d612172a689c386d4937831328135ca004b4f28d8e807daf9fc6e0e6d",
+      "classification": "clean_native_only",
+      "visual_finding": "MuJoCo native scene and expected in-render diagnostic text; no unrelated desktop pixels."
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_C0/initial.png",
+      "sha256": "deef306e07c90765edb8c7656112837a17ea3cc4fced236c45e0df7bbfaa204a",
+      "classification": "clean_native_only",
+      "visual_finding": "MuJoCo native scene and expected in-render diagnostic text; no unrelated desktop pixels."
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_C0/physics_016.png",
+      "sha256": "8875f9d5adbdfad764edab6f10cf1636d9b19c07c6018641caf91383f8bc3339",
+      "classification": "clean_native_only",
+      "visual_finding": "MuJoCo native scene and expected in-render diagnostic text; no unrelated desktop pixels."
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_C0/physics_175.png",
+      "sha256": "ded97e56a986c624142b728083f46eea7f3cc3f498ee9db9da53581dd6994b3a",
+      "classification": "clean_native_only",
+      "visual_finding": "MuJoCo native scene and expected in-render diagnostic text; no unrelated desktop pixels."
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_C0/physics_176.png",
+      "sha256": "53ce7eef94347c70cb964aa9d9465c515425387af41f2a837cbbc580be2e9c06",
+      "classification": "clean_native_only",
+      "visual_finding": "MuJoCo native scene and expected in-render diagnostic text; no unrelated desktop pixels."
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_C0/physics_177.png",
+      "sha256": "66a8041326ff73f534c723e7325d0932208f5c49d64879ef42e87a3fce46ed00",
+      "classification": "clean_native_only",
+      "visual_finding": "MuJoCo native scene and expected in-render diagnostic text; no unrelated desktop pixels."
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_C1/initial.png",
+      "sha256": "bb32d0595c616e625bbff2930a8fe6b12d3b992f828607713e26e527f692980d",
+      "classification": "clean_native_only",
+      "visual_finding": "MuJoCo native scene and expected in-render diagnostic text; no unrelated desktop pixels."
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_C1/physics_016.png",
+      "sha256": "fdbb7d7571f5e893920ad8fa945e55a79d3001671810005a1a25359995ced204",
+      "classification": "clean_native_only",
+      "visual_finding": "MuJoCo native scene and expected in-render diagnostic text; no unrelated desktop pixels."
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2_r1/matrix_v2/trajectories/I3_FULL_C1/physics_176.png",
+      "sha256": "182f2c606f41f4d11cb00776c9395c14655a474640515190b6a56f4d194cd362",
+      "classification": "clean_native_only",
+      "visual_finding": "MuJoCo native scene and expected in-render diagnostic text; no unrelated desktop pixels."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "prephysics_amendment": true,
+  "old_registry": "matrix_v1/preregistered_matrix.json",
+  "active_registry": "matrix_v2/preregistered_matrix.json",
+  "scientific_settings_unchanged": true,
+  "physics_steps_before_amendment": 0,
+  "reason": "Independent audit identified that GUI sync can introduce external force after the inherited pre-sync check. The new source rejects nonzero applied forces both after sync and immediately before integration; no intended model, schedule, thresholds or experiment identities changed. Unexecuted registry v1 is preserved.",
+  "old_diagnostics_sha256": "a11869cdacd8cc649abf915850f931ea162c154e07928e57b245811305d57675",
+  "new_diagnostics_sha256": "6970805e3065dd1cdc1769448d192cec396e1523126adbb12911821b5815ea02"
+}
