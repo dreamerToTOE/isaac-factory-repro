@@ -1,0 +1,21 @@
+{
+  "inspection": "manual visual inspection; ambiguous edge removed conservatively",
+  "images": [
+    {
+      "file": "evidence/g4_s/gripper_v1/playback_i3_v1/PREP_I3_step_000.png",
+      "sha256": "0c24e3c3510a724746adc874cd6e818a489e90055855349cd7a984d232f997b2",
+      "mode": "SAVED_STATE_PLAYBACK",
+      "classification": "UNCERTAIN_EDGE_REMOVED",
+      "published_image": false,
+      "note": "Invalid initial state displayed; no physical validity claim."
+    },
+    {
+      "file": "evidence/g4_s/gripper_v1/playback_i3_v1/PREP_I3_step_001.png",
+      "sha256": "1b3377fd7935fe80d5ccdb160d786f5146e4d57fb4256d283fddb056e6d563d9",
+      "mode": "SAVED_STATE_PLAYBACK",
+      "classification": "clean_native_only",
+      "published_image": true,
+      "note": "Invalid initial state displayed; no physical validity claim."
+    }
+  ]
+}

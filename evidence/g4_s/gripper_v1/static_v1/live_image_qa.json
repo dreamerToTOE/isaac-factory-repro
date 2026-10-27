@@ -1,0 +1,38 @@
+{
+  "inspection": "manual visual inspection of all four live captures",
+  "records": [
+    {
+      "run": "PREP_I2",
+      "step": 0,
+      "sha256": "d9ca5ab912a74f930869b217e477595110b1705bc36e8448e5402ec5e02abb1c",
+      "classification": "UNRELATED_DESKTOP_REMOVED",
+      "published_image": false,
+      "note": "Original hash retained; unrelated desktop screenshot removed."
+    },
+    {
+      "run": "PREP_I2",
+      "step": 1,
+      "sha256": "d9ca5ab912a74f930869b217e477595110b1705bc36e8448e5402ec5e02abb1c",
+      "classification": "UNRELATED_DESKTOP_REMOVED",
+      "published_image": false,
+      "note": "Original hash retained; unrelated desktop screenshot removed."
+    },
+    {
+      "run": "PREP_I3",
+      "step": 0,
+      "sha256": "d9ca5ab912a74f930869b217e477595110b1705bc36e8448e5402ec5e02abb1c",
+      "classification": "UNRELATED_DESKTOP_REMOVED",
+      "published_image": false,
+      "note": "Original hash retained; unrelated desktop screenshot removed."
+    },
+    {
+      "run": "PREP_I3",
+      "step": 1,
+      "sha256": "6a490625cdf650e7229143d1bc1e191ae4ff3b64629c4e682e9e89a39097b58a",
+      "classification": "NATIVE_ONLY_OCCLUDED",
+      "published_image": true,
+      "note": "Native viewer only, scene occluded; not suitable for detailed assessment."
+    }
+  ],
+  "privacy": "desktop-contaminated PNGs removed; metadata and original hashes retained"
+}

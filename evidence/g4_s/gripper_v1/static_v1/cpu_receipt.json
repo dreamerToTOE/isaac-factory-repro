@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "counts": {
+    "tests": 51,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "static_status": "PASS",
+  "physics_steps": 0,
+  "policy_calls": 0,
+  "junit_sha256": "6cf62294bead733042ef35c922bd30a23e99ba7e6dcea5643855913a0d83e763",
+  "static_sha256": "8ec9b101ff318bc388a749811a4ab8010f5f14d53e220774562f1c020bab2caa",
+  "scope": "static checks and synthetic supervisor only"
+}

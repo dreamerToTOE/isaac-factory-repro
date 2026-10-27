@@ -1,0 +1,105 @@
+{
+  "task": "G4-S2A-GRIPPER-V1",
+  "receipts": [
+    {
+      "schema": "g4s2a_r2_r2_durable_supervision_v1",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_gripper_v1_diagnostics.py",
+        "--child",
+        "PREP_I2",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/gripper_v1/matrix_v1/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/gripper_v1/matrix_v1/runs/PREP_I2/output"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2",
+      "timeout_s": 899.9999957370019,
+      "retry": false,
+      "started_utc": "2026-10-27T07:31:45.108305+00:00",
+      "termination_class": "CHILD_EXIT",
+      "termination_reason": "child_exit",
+      "raw_wait_returncode": 0,
+      "child_exit_code": 0,
+      "child_signal": null,
+      "timed_out": false,
+      "state": "FINISHED",
+      "pid": 242567,
+      "pgid": 242567,
+      "wall_s": 7.929745311997976,
+      "error": null,
+      "last_durable_event": {
+        "event": "child_terminal",
+        "monotonic_seconds": 24453.105837023,
+        "pid": 242525,
+        "raw_wait_returncode": 0,
+        "reason": "CHILD_EXIT",
+        "run_id": "PREP_I2",
+        "schema": "g4s2a_r2_r2_durable_supervision_v1",
+        "sequence": 5,
+        "terminal": true,
+        "timed_out": false,
+        "unix_seconds": 1793086313.0380769,
+        "utc": "2026-10-27T07:31:53.038062+00:00"
+      }
+    },
+    {
+      "schema": "g4s2a_r2_r2_durable_supervision_v1",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_gripper_v1_diagnostics.py",
+        "--child",
+        "PREP_I3",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/gripper_v1/matrix_v1/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/gripper_v1/matrix_v1/runs/PREP_I3/output"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2",
+      "timeout_s": 891.8606592920005,
+      "retry": false,
+      "started_utc": "2026-10-27T07:31:53.247596+00:00",
+      "termination_class": "CHILD_EXIT",
+      "termination_reason": "child_exit",
+      "raw_wait_returncode": 0,
+      "child_exit_code": 0,
+      "child_signal": null,
+      "timed_out": false,
+      "state": "FINISHED",
+      "pid": 242841,
+      "pgid": 242841,
+      "wall_s": 6.1762225669990585,
+      "error": null,
+      "last_durable_event": {
+        "event": "child_terminal",
+        "monotonic_seconds": 24459.491600188,
+        "pid": 242525,
+        "raw_wait_returncode": 0,
+        "reason": "CHILD_EXIT",
+        "run_id": "PREP_I3",
+        "schema": "g4s2a_r2_r2_durable_supervision_v1",
+        "sequence": 5,
+        "terminal": true,
+        "timed_out": false,
+        "unix_seconds": 1793086319.42384,
+        "utc": "2026-10-27T07:31:59.423826+00:00"
+      }
+    }
+  ],
+  "unstarted": [
+    "DIAG_I2",
+    "DIAG_I3"
+  ],
+  "completed_integration_steps": 2,
+  "wall_s": 15.125001329997758,
+  "policy_calls": 0,
+  "retry": false,
+  "max_steps": 530,
+  "max_wall_s": 900,
+  "result_runs": [
+    "PREP_I2",
+    "PREP_I3"
+  ]
+}

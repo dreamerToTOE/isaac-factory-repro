@@ -1,0 +1,8 @@
+{
+  "DISPLAY": ":1",
+  "XAUTHORITY": "/run/user/1000/gdm/Xauthority",
+  "xauthority_readable": true,
+  "desktop_sessions": "2 1000 ubuntu2004 seat0 tty2",
+  "x_server_processes": "2723 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -nolisten tcp -background none -noreset -keeptty -novtswitch -verbose 3",
+  "headless_substitution": false
+}

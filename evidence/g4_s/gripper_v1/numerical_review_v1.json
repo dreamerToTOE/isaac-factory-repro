@@ -1,0 +1,137 @@
+{
+  "status": "INCOMPLETE",
+  "errors": {
+    "PREP_I3": "ValueError: DISCONTINUITY_qpos_MISMATCH",
+    "accounting": "matrix integration count mismatch"
+  },
+  "new_physics_steps": 1,
+  "stage2_authorized_by_independent_gates": false,
+  "xml_review": {
+    "p_full_non_gripper_xml_unchanged": true,
+    "arm_actuators_unchanged": 7,
+    "physical_peg_free_joint": true,
+    "unit_sum_tendon": true,
+    "peg_weld_absent": true,
+    "native_position_control_range_m": [
+      0.0,
+      0.08
+    ],
+    "force_limit_n": [
+      -40.0,
+      40.0
+    ]
+  },
+  "runs": {
+    "PREP_I2": {
+      "status": "COMPLETE",
+      "accounting": {
+        "requests": 1,
+        "results": 1,
+        "unresolved_request_step": null,
+        "complete": true
+      },
+      "initial_above": {
+        "zmin_m": 0.04684278842682636,
+        "entirely_above_opening": true,
+        "tcp_above_m": true
+      },
+      "final_above": {
+        "zmin_m": 0.04684278842682636,
+        "entirely_above_opening": true,
+        "tcp_above_m": true
+      },
+      "independent_peg_scope": "model structural static audit required; no physics inference",
+      "independent_preparation": {
+        "reset_admission_status": "FAIL",
+        "preparation_contact_quality_status": "FAIL",
+        "reason": "fewer than 30 recorded steps"
+      },
+      "runner_gate_disagreements": {},
+      "metrics": [
+        {
+          "step": 1,
+          "relative_position_m": [
+            0.0010017081394360365,
+            1.400092522252155e-18,
+            0.0345823094519866
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999994,
+              -1.1410388920517436e-17,
+              -5.786231634368e-23
+            ],
+            [
+              9.44659512742899e-18,
+              0.9999999999999981,
+              -8.105613207002704e-21
+            ],
+            [
+              -3.0366640728628655e-24,
+              -5.046623676616229e-21,
+              -0.9999999999999986
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 8.940696716308596e-08,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 1.5466318104986828e-16,
+          "bilateral": true,
+          "left_pad_force_n": 553.4388910562508,
+          "right_pad_force_n": 453.9365373821886,
+          "all_penetration_m": 0.0019017960492387505,
+          "pad_penetration_m": 0.0019017960492387505,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0019017960492387505,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.0014583720271800675,
+            0.0014583720271800675
+          ],
+          "finger_asymmetry_m": 0.0,
+          "actuation": {
+            "control_m": 0.0,
+            "tendon_length_m": 0.0099825,
+            "tendon_velocity_m_s": 0.0,
+            "unclipped_output_n": -37.434375,
+            "clipped_output_n": -37.434375,
+            "finger_generalized_n": [
+              -37.434375,
+              -37.434375
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": [
+            "SEVERE_PENETRATION"
+          ]
+        }
+      ]
+    },
+    "PREP_I3": {
+      "status": "INCOMPLETE",
+      "error": "ValueError: DISCONTINUITY_qpos_MISMATCH"
+    },
+    "DIAG_I2": {
+      "status": "UNSTARTED"
+    },
+    "DIAG_I3": {
+      "status": "UNSTARTED"
+    }
+  },
+  "note": "offline numerical review; no simulation, no policy; force is not an impulse"
+}

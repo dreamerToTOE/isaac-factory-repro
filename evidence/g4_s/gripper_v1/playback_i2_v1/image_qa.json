@@ -1,0 +1,21 @@
+{
+  "images": [
+    {
+      "file": "evidence/g4_s/gripper_v1/playback_i2_v1/PREP_I2_step_000.png",
+      "sha256": "fd92a047173c8b1dc1fcf24a81e6e4650c1b8b48a2b0e2a2927e7eeb92e66dcd",
+      "mode": "SAVED_STATE_PLAYBACK",
+      "classification": "clean_native_only",
+      "desktop_contamination_observed": false,
+      "inspection": "manual image review"
+    },
+    {
+      "file": "evidence/g4_s/gripper_v1/playback_i2_v1/PREP_I2_step_001.png",
+      "sha256": "ea9441c65f8e33c90e783b7403b849bad636c7669d81f1a73a3a0315c8eb97a0",
+      "mode": "SAVED_STATE_PLAYBACK",
+      "classification": "clean_native_only",
+      "desktop_contamination_observed": false,
+      "inspection": "manual image review"
+    }
+  ],
+  "note": "Playback on an independent data object, no integration; recorded post-forward contact force is not an impulse."
+}
