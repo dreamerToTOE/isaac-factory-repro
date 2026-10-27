@@ -67,4 +67,6 @@ Space 播放/暂停，左右键单步，L 跳到接触损失前，S 慢速，V/Z
 
 [prelaunch_v3](../evidence/g4_s/s2a_r2_r1/regression_prelaunch_v3/summary.json)：721 passed、1 skipped，额外系统绘图1 passed；27项新测试，75项明确排除（73会执行actor的历史用例、1真实策略前向、1含518步无头物理采集）；5种禁止入口负控通过。静态检查和回归没有策略、checkpoint反序列化、积分或GUI。预启动 v1 因汇总读取旧字段名而误报 FAIL，静态子进程实际通过；原失败收据保留。v2 修复汇总通过，后因GUI外力检查加强而0积分重新预注册，v3通过。
 
-保护2316个已有跟踪文件及3个 checkpoint、历史 USD 源、配置和 Menagerie 文件，唯一允许更新既有案例正文/索引。prelaunch v3 为721 passed、1 skipped，系统绘图1 passed，27项新增测试；静态MuJoCo四组合和五类入口负控通过，0 actor/physics/checkpoint。R2-R1 durable trace 记录613/2115个 integration requests，其中612个完成 physics result；另有第212请求未完成且监督丢失，没有自动重试。最终提交与远端 SHA 在交付提交后补入本节。
+保护2316个已有跟踪文件及3个 checkpoint、历史 USD 源、配置和 Menagerie 文件，唯一允许更新既有案例正文/索引。prelaunch v3 为721 passed、1 skipped，系统绘图1 passed，27项新增测试；静态MuJoCo四组合和五类入口负控通过，0 actor/physics/checkpoint。R2-R1 durable trace 记录613/2115个 integration requests，其中612个完成 physics result；另有第212请求未完成且监督丢失，没有自动重试。
+
+科学内容提交 SHA：`3c5980c054f15a30def60af97054c6359c1d373a`。推送前已验证 `origin/main` 的旧 SHA `5abe4375c2bea828816a7d2f0ff04e9ee0673ff0` 是该提交的祖先；推送后 `git ls-remote origin refs/heads/main` 返回同一科学提交 SHA。后续提交若仅更新出版收据，不改变本报告对应的科学内容。

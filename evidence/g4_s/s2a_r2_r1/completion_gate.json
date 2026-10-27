@@ -92,5 +92,13 @@
     "contaminated_images_not_public": true,
     "original_s1b_untouched": true
   },
-  "decision_basis": "PARTIAL is required because one registered supervisor process was lost after request 212, leaving unknown exit status and incomplete accounting; no automatic retry was performed."
+  "decision_basis": "PARTIAL is required because one registered supervisor process was lost after request 212, leaving unknown exit status and incomplete accounting; no automatic retry was performed.",
+  "publication": {
+    "scientific_commit_sha": "3c5980c054f15a30def60af97054c6359c1d373a",
+    "starting_remote_sha": "5abe4375c2bea828816a7d2f0ff04e9ee0673ff0",
+    "fast_forward_verified": true,
+    "remote_sha_after_push": "3c5980c054f15a30def60af97054c6359c1d373a",
+    "remote_ref": "refs/heads/main",
+    "push_command": "git push origin HEAD:main (after merge-base --is-ancestor verification)"
+  }
 }
