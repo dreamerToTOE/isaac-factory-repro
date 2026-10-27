@@ -1,0 +1,149 @@
+{
+  "continuous_monitoring": false,
+  "coverage_note": "Sampled coverage: regular intervals are not continuous measurement.",
+  "ended": {
+    "monotonic_seconds": 46456.904211368,
+    "unix_seconds": 1793108316.8364513,
+    "utc": "2026-10-27T13:38:36.836445+00:00"
+  },
+  "error": null,
+  "finalized": true,
+  "first_sample": {
+    "monotonic_seconds": 46455.637571694,
+    "unix_seconds": 1793108315.5698118,
+    "utc": "2026-10-27T13:38:35.569804+00:00"
+  },
+  "identity": {
+    "birth_ticks": "4645539",
+    "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+    "pgid": 404276,
+    "pid": 404276,
+    "state": "R"
+  },
+  "last_sample": {
+    "monotonic_seconds": 46456.80929977,
+    "unix_seconds": 1793108316.7415395,
+    "utc": "2026-10-27T13:38:36.741528+00:00"
+  },
+  "low_memory_stop_condition_observed": false,
+  "max_low_consecutive": 0,
+  "min_free_MiB": 4096.0,
+  "monitoring_gaps": [
+    {
+      "duration_seconds": 0.633305928997288,
+      "from": {
+        "monotonic_seconds": 46456.175993841,
+        "unix_seconds": 1793108316.1082337,
+        "utc": "2026-10-27T13:38:36.108223+00:00"
+      },
+      "timing_detail": {
+        "current_memory_query_seconds": 4.421999619808048e-06,
+        "previous_cycle": {
+          "csv_write_flush_seconds": 3.493699477985501e-05,
+          "heartbeat_write_seconds": 0.00025640399690018967,
+          "processing_and_coordination_after_heartbeat_seconds": 0.00023920599778648466,
+          "processing_and_coordination_before_csv_seconds": 0.6327393620013027
+        },
+        "previous_sleep": {
+          "actual_seconds": 3.282999387010932e-06,
+          "deadline_lateness_seconds": 0.5717224660111242,
+          "oversleep_seconds": 3.282999387010932e-06,
+          "requested_seconds": 0
+        }
+      },
+      "to": {
+        "monotonic_seconds": 46456.80929977,
+        "unix_seconds": 1793108316.7415395,
+        "utc": "2026-10-27T13:38:36.741528+00:00"
+      }
+    }
+  ],
+  "peak_used_MiB": 4096.0,
+  "policy": {
+    "consecutive_samples": 3,
+    "floor_MiB": 1024,
+    "gap_limit_seconds": 0.5,
+    "interval_seconds": 0.1,
+    "stale_seconds": 2
+  },
+  "sample_count": 7,
+  "schema_version": 2,
+  "started": {
+    "monotonic_seconds": 46455.440600191,
+    "unix_seconds": 1793108315.3728375,
+    "utc": "2026-10-27T13:38:35.372825+00:00"
+  },
+  "stop_reason": "monitoring_gap",
+  "stop_signals": [
+    {
+      "monotonic_seconds": 46456.883998567,
+      "signal": "SIGTERM",
+      "unix_seconds": 1793108316.8162382,
+      "utc": "2026-10-27T13:38:36.816228+00:00"
+    }
+  ],
+  "supervisor_identity": {
+    "birth_ticks": "4645562",
+    "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+    "pgid": 404296,
+    "pid": 404296,
+    "state": "R"
+  },
+  "target_identity": {
+    "birth_ticks": "4645598",
+    "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+    "pgid": 404299,
+    "pid": 404299,
+    "state": "R"
+  },
+  "timing_diagnostics": {
+    "aggregates": {
+      "csv_write_flush": {
+        "count": 7,
+        "max_seconds": 3.6712997825816274e-05,
+        "total_seconds": 0.0002033380005741492
+      },
+      "deadline_lateness": {
+        "count": 6,
+        "max_seconds": 0.5717224660111242,
+        "total_seconds": 0.6107210690388456
+      },
+      "heartbeat_write": {
+        "count": 7,
+        "max_seconds": 0.13791110499732895,
+        "total_seconds": 0.1394100959878415
+      },
+      "memory_query": {
+        "count": 7,
+        "max_seconds": 6.948997906874865e-06,
+        "total_seconds": 3.501700848573819e-05
+      },
+      "processing_and_coordination_after_heartbeat": {
+        "count": 6,
+        "max_seconds": 0.00023920599778648466,
+        "total_seconds": 0.000667608983349055
+      },
+      "processing_and_coordination_before_csv": {
+        "count": 7,
+        "max_seconds": 0.6327393620013027,
+        "total_seconds": 0.6333507290109992
+      },
+      "sleep_actual": {
+        "count": 6,
+        "max_seconds": 0.09986549300083425,
+        "total_seconds": 0.39825274100439856
+      },
+      "sleep_overshoot": {
+        "count": 6,
+        "max_seconds": 0.00021251400175970048,
+        "total_seconds": 0.0005855070194229484
+      },
+      "sleep_requested": {
+        "count": 6,
+        "max_seconds": 0.09972206899692537,
+        "total_seconds": 0.3976672339849756
+      }
+    },
+    "note": "Wall-clock segments include scheduling delays; sleep overshoot is not proof of scheduler cause. Gap detail is partial and instrumentation adds overhead."
+  }
+}

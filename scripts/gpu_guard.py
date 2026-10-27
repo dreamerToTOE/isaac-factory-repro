@@ -45,11 +45,24 @@ class Mock:
     def close(self):pass
 
 
+def gap_exceeds_limit(previous, current, limit):
+    """Preserve strict greater-than semantics for the sampled gap."""
+    return current - previous > limit
+
+
 def run(args):
     args.output=args.output.resolve();args.output.mkdir(parents=True,exist_ok=False)
     who=identity();started=stamp();super_id=None;target=None;reason=None;error=None;signals=[]
     samples=0;low=0;max_low=0;minimum=None;peak=None;first=None;last=None;gaps=[];source=None
     supervisor_heartbeat_seen=False
+    # Constant-space aggregates; no extra per-sample disk writes. The same
+    # sample-to-sample gap and stop thresholds remain authoritative.
+    timings={}
+    previous_cycle=None
+    previous_sleep=None
+    def record_timing(name, duration):
+        entry=timings.setdefault(name, {'count':0,'total_seconds':0.0,'max_seconds':0.0})
+        entry['count']+=1;entry['total_seconds']+=duration;entry['max_seconds']=max(entry['max_seconds'],duration)
     requested_stop=[];handlers={s:signal.getsignal(s) for s in (signal.SIGTERM,signal.SIGINT)}
     for s in handlers:signal.signal(s,lambda n,frame:requested_stop.append(n))
     metadata={'schema_version':2,'identity':who,'boot_id':BOOT_ID,'started':started,
@@ -65,10 +78,17 @@ def run(args):
                     'used_MiB','free_MiB','total_MiB','reserved_MiB','target_pid','low_consecutive'])
             w.writeheader();f.flush();deadline=time.monotonic()
             while True:
-                mem=source.read();at=stamp()
+                query_start=time.monotonic()
+                try: mem=source.read()
+                finally:
+                    query_seconds=time.monotonic()-query_start
+                    record_timing('memory_query',query_seconds)
+                at=stamp();cycle_start=time.monotonic()
                 if not all(math.isfinite(v) and v>=0 for v in mem.values()):raise RuntimeError('Invalid NVML memory values')
-                if last and at['monotonic_seconds']-last['monotonic_seconds']>args.gap_limit:
-                    gaps.append({'from':last,'to':at,'duration_seconds':at['monotonic_seconds']-last['monotonic_seconds']})
+                if last and gap_exceeds_limit(last['monotonic_seconds'],at['monotonic_seconds'],args.gap_limit):
+                    gaps.append({'from':last,'to':at,'duration_seconds':at['monotonic_seconds']-last['monotonic_seconds'],
+                                 'timing_detail':{'previous_cycle':previous_cycle,'previous_sleep':previous_sleep,
+                                                  'current_memory_query_seconds':query_seconds}})
                 first=first or at;last=at;samples+=1
                 low=low+1 if mem['free_MiB']<1024 else 0;max_low=max(max_low,low)
                 minimum=mem['free_MiB'] if minimum is None else min(minimum,mem['free_MiB'])
@@ -83,12 +103,19 @@ def run(args):
                         target=candidate
                         atomic_json(args.output/'attached_identity.json',{'target_identity':target,
                                     'supervisor_identity':super_id,**at},replace=False)
+                before_csv=time.monotonic()
+                coordination_seconds=before_csv-cycle_start
+                record_timing('processing_and_coordination_before_csv',coordination_seconds)
                 w.writerow({**at,'elapsed_seconds':at['monotonic_seconds']-started['monotonic_seconds'],
                             **mem,'target_pid':target['pid'] if target else '', 'low_consecutive':low});f.flush()
+                csv_seconds=time.monotonic()-before_csv;record_timing('csv_write_flush',csv_seconds)
+                heartbeat_start=time.monotonic()
                 state='bound' if target else ('ready' if mem['free_MiB']>=1024 else 'low_headroom')
                 atomic_json(args.output/'heartbeat.json',{'identity':who,'boot_id':BOOT_ID,**at,
                             'target_identity':target,'supervisor_identity':super_id,'state':state,
                             'sample_count':samples,'free_MiB':mem['free_MiB'],'low_consecutive':low},durable=False)
+                heartbeat_seconds=time.monotonic()-heartbeat_start;record_timing('heartbeat_write',heartbeat_seconds)
+                tail_start=time.monotonic()
                 exited=read_json(args.supervisor_directory/'child_exit.json')
                 final=read_json(args.supervisor_directory/'status.json')
                 if exited and exited.get('identity')==target and target:
@@ -110,8 +137,20 @@ def run(args):
                     # Give its parent wait a bounded chance to publish actual status.
                     # Continue sampling; do not invent a child return code here.
                     if not super_id or not same_process(super_id):reason='supervisor_lost_or_stale';break
+                tail_seconds=time.monotonic()-tail_start;record_timing('processing_and_coordination_after_heartbeat',tail_seconds)
+                previous_cycle={'processing_and_coordination_before_csv_seconds':coordination_seconds,
+                                'csv_write_flush_seconds':csv_seconds,'heartbeat_write_seconds':heartbeat_seconds,
+                                'processing_and_coordination_after_heartbeat_seconds':tail_seconds}
                 deadline+=args.interval
-                time.sleep(max(0,deadline-time.monotonic()))
+                sleep_start=time.monotonic();requested=max(0,deadline-sleep_start)
+                time.sleep(requested)
+                sleep_end=time.monotonic();actual=sleep_end-sleep_start
+                previous_sleep={'requested_seconds':requested,'actual_seconds':actual,
+                                'oversleep_seconds':max(0.0,actual-requested),
+                                'deadline_lateness_seconds':max(0.0,sleep_end-deadline)}
+                record_timing('sleep_requested',requested);record_timing('sleep_actual',actual)
+                record_timing('sleep_overshoot',previous_sleep['oversleep_seconds'])
+                record_timing('deadline_lateness',previous_sleep['deadline_lateness_seconds'])
             f.flush();os.fsync(f.fileno())
     except BaseException as exc:
         error={'type':type(exc).__name__,'message':str(exc)};reason='monitor_failed'
@@ -131,7 +170,8 @@ def run(args):
                 'low_memory_stop_condition_observed':max_low>=3,
                 'monitoring_gaps':gaps,'stop_reason':reason,'error':error,'stop_signals':signals,
                 'continuous_monitoring':good,'coverage_note':'Sampled coverage: regular intervals are not continuous measurement.',
-                'policy':metadata['policy']}
+                'policy':metadata['policy'], 'timing_diagnostics':{'aggregates':timings,
+                    'note':'Wall-clock segments include scheduling delays; sleep overshoot is not proof of scheduler cause. Gap detail is partial and instrumentation adds overhead.'}}
         atomic_json(args.output/'status.json',result,replace=False)
     return 0 if good else 124
 

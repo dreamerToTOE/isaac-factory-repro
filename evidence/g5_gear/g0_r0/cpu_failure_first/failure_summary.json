@@ -1,0 +1,28 @@
+{
+  "command": "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 <factory-g01-python> -m pytest -q tests/test_g5_guard_timing.py tests/test_g5_gear_verify.py tests/test_success_metrics.py tests/test_g3a_supervision.py",
+  "result": "56 passed, 1 failed in 17.20s",
+  "failed_test": "test_systemd_units_survive_submitting_launcher_sigkill",
+  "guard_reason": "monitoring_gap",
+  "gap_seconds": 0.633305928997288,
+  "timing_detail": {
+    "current_memory_query_seconds": 4.421999619808048e-06,
+    "previous_cycle": {
+      "csv_write_flush_seconds": 3.493699477985501e-05,
+      "heartbeat_write_seconds": 0.00025640399690018967,
+      "processing_and_coordination_after_heartbeat_seconds": 0.00023920599778648466,
+      "processing_and_coordination_before_csv_seconds": 0.6327393620013027
+    },
+    "previous_sleep": {
+      "actual_seconds": 3.282999387010932e-06,
+      "deadline_lateness_seconds": 0.5717224660111242,
+      "oversleep_seconds": 3.282999387010932e-06,
+      "requested_seconds": 0
+    }
+  },
+  "child_wait": -15,
+  "supervisor_error": {
+    "message": "[Errno 32] Broken pipe",
+    "type": "BrokenPipeError"
+  },
+  "interpretation": "CPU mock only: timing segment covers coordination and potentially scheduler, filesystem and identity operations; does not isolate one root cause and does not establish cause of historical GPU-run gap."
+}

@@ -23,12 +23,14 @@ try:
     import isaaclab_tasks
     from isaaclab_tasks.utils import parse_env_cfg
     from success_metrics import PreResetSuccessCapture, SuccessTracker
+    from g5_gear_capture import ResetCapture
     task = 'Isaac-Factory-GearMesh-Direct-v0'
     assert task in gym.registry
     cfg = parse_env_cfg(task, device=a.device, num_envs=1)
     cfg.seed = 0
     env = gym.make(task, cfg=cfg)
     u = env.unwrapped
+    assert u.num_envs == 1 and cfg.seed == 0
     assert u.max_episode_length == 300 and cfg.decimation == 8
     assert u.sim.is_gpu_dynamics_enabled(), 'GPU dynamics disabled'
     obs, _ = env.reset()
@@ -44,14 +46,16 @@ try:
     def conv(x): return x.detach().cpu().tolist()
     def snapshot(e, record):
         return {'held_base':conv(e.held_base_pos), 'target_base':conv(e.target_held_base_pos),
+                'env_origin':conv(e.scene.env_origins),
                 'joint_pos':conv(e._robot.data.joint_pos), 'joint_vel':conv(e._robot.data.joint_vel),
                 'held_root':conv(e._held_asset.data.root_state_w), 'fixed_root':conv(e._fixed_asset.data.root_state_w),
                 'small_root':conv(e._small_gear_asset.data.root_state_w), 'large_root':conv(e._large_gear_asset.data.root_state_w),
                 'keypoint_dist':conv(e.keypoint_dist)}
     tracker = SuccessTracker(1)
     start = time.monotonic()
-    with open(a.output, 'x', buffering=1) as f, PreResetSuccessCapture(u, convert=conv, snapshot=snapshot) as tap:
+    with open(a.output, 'x', buffering=1) as f, PreResetSuccessCapture(u, convert=conv, snapshot=snapshot) as tap, ResetCapture(u, conv) as resets:
         for i in range(a.steps):
+            resets.begin_decision()
             action = torch.zeros((1,6), device=u.device)
             action[:,0] = .05 if i % 2 else -.05
             obs, rew, term, trunc, _ = env.step(action)
@@ -64,9 +68,12 @@ try:
             for name, asset in u.scene.articulations.items():
                 assert torch.isfinite(asset.data.root_state_w).all() and torch.isfinite(asset.data.joint_vel).all(), f'nonfinite {name}'
             done = term | trunc
-            tracker.update(capture['success'], conv(done), conv(trunc), capture['step_numbers'])
-            row = {'decision':i+1, 'episode_step':capture['step_numbers'][0], 'official_success':capture['success'][0],
+            completed = tracker.update(capture['success'], conv(done), conv(trunc), capture['step_numbers'])
+            row = {'task':task, 'num_envs':u.num_envs, 'seed':cfg.seed,
+                   'episode_summary':completed[0].to_dict() if completed else None,
+                   'reset_env_ids':list(resets.events), 'decision':i+1, 'episode_step':capture['step_numbers'][0], 'official_success':capture['success'][0],
                    'terminated':conv(term)[0], 'truncated':conv(trunc)[0], 'reward':conv(rew)[0],
+                   'policy_obs':conv(obs['policy'])[0], 'critic_obs':conv(obs['critic'])[0],
                    'post_reset_episode_counter':int(u.episode_length_buf[0]), 'physics_counter':u._sim_step_counter,
                    **{k:v[0] for k,v in snap.items()}}
             f.write(json.dumps(row, allow_nan=False)+'\n'); f.flush()

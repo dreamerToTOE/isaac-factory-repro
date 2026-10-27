@@ -1,0 +1,19 @@
+{
+  "monotonic_seconds": 46456.175993841,
+  "supervisor_identity": {
+    "birth_ticks": "4645562",
+    "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+    "pgid": 404296,
+    "pid": 404296,
+    "state": "R"
+  },
+  "target_identity": {
+    "birth_ticks": "4645598",
+    "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+    "pgid": 404299,
+    "pid": 404299,
+    "state": "R"
+  },
+  "unix_seconds": 1793108316.1082337,
+  "utc": "2026-10-27T13:38:36.108223+00:00"
+}

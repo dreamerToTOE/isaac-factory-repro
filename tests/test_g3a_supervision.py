@@ -112,6 +112,11 @@ def test_sampling_gap_is_explicit_and_not_continuous(tmp_path):
     s,g,sp,gp=guarded(tmp_path,'import time;time.sleep(20)',[{'free_MiB':4096}]*8+[{'free_MiB':4096,'delay_seconds':.65}])
     sr,gr=finish(s,g,sp,gp)
     assert gr['monitoring_gaps'] and gr['stop_reason']=='monitoring_gap' and not gr['continuous_monitoring']
+    detail=gr['monitoring_gaps'][0]['timing_detail']
+    assert detail['current_memory_query_seconds'] >= .65
+    assert detail['previous_cycle'] and detail['previous_sleep']
+    assert gr['timing_diagnostics']['aggregates']['memory_query']['max_seconds'] >= .65
+    assert sr['raw_wait_returncode'] < 0
 
 def test_pid_birth_mismatch_does_not_signal_unrelated_process(tmp_path):
     c=subprocess.Popen([PY,'-c','import time;time.sleep(.3)'],start_new_session=True)

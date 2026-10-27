@@ -1,0 +1,57 @@
+{
+  "child_exit_code": null,
+  "child_identity": {
+    "birth_ticks": "4645598",
+    "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+    "pgid": 404299,
+    "pid": 404299,
+    "state": "R"
+  },
+  "child_signal": "SIGTERM",
+  "command": [
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+    "-c",
+    "import time;time.sleep(.8)"
+  ],
+  "ended": {
+    "monotonic_seconds": 46456.950660284,
+    "unix_seconds": 1793108316.8829002,
+    "utc": "2026-10-27T13:38:36.882896+00:00"
+  },
+  "error": {
+    "message": "[Errno 32] Broken pipe",
+    "type": "BrokenPipeError"
+  },
+  "exec_released": {
+    "monotonic_seconds": 46456.815590037,
+    "unix_seconds": 1793108316.74783,
+    "utc": "2026-10-27T13:38:36.747824+00:00"
+  },
+  "finalized": true,
+  "guard_identity": {
+    "birth_ticks": "4645539",
+    "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+    "pgid": 404276,
+    "pid": 404276,
+    "state": "R"
+  },
+  "guard_required": true,
+  "identity": {
+    "birth_ticks": "4645562",
+    "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+    "pgid": 404296,
+    "pid": 404296,
+    "state": "R"
+  },
+  "raw_wait_returncode": -15,
+  "received_supervisor_signals": [],
+  "schema_version": 2,
+  "started": {
+    "monotonic_seconds": 46455.665641663,
+    "unix_seconds": 1793108315.597881,
+    "utc": "2026-10-27T13:38:35.597868+00:00"
+  },
+  "stop_signals": [],
+  "termination_reason": "supervisor_error",
+  "wall_seconds": 1.2850190690005547
+}
