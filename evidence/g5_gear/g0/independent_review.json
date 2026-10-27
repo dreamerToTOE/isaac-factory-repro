@@ -1,0 +1,54 @@
+{
+  "source_hashes_unchanged": {
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/g5_gear_preflight.py": true,
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/g5_gear_verify.py": true,
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/success_metrics.py": true,
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/run_sim.sh": true,
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/python_entry.py": true,
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/g3a_launch_smoke.py": true,
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/gpu_guard.py": true,
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/durable_supervisor.py": true,
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/supervision_common.py": true,
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/supervised_exec.py": true,
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env.py": true,
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_env_cfg.py": true,
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_tasks_cfg.py": true,
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/factory_control.py": true,
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab_tasks/isaaclab_tasks/direct/factory/agents/rl_games_ppo_cfg.yaml": true,
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/upstream/IsaacLab/source/isaaclab/isaaclab/envs/direct_rl_env.py": true
+  },
+  "source_identity_all_match": true,
+  "checkpoint_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+  "checkpoint_expected_sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+  "checkpoint_actual_sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+  "checkpoint_unchanged": true,
+  "launcher_exit_code": 124,
+  "supervisor_raw_wait": -15,
+  "supervisor_reason": "child_signal",
+  "guard_reason": "monitoring_gap",
+  "guard_monitoring_gaps": [
+    {
+      "duration_seconds": 0.5052155160010443,
+      "from": {
+        "monotonic_seconds": 45305.146404488,
+        "unix_seconds": 1793107165.0786438,
+        "utc": "2026-10-27T13:19:25.078627+00:00"
+      },
+      "to": {
+        "monotonic_seconds": 45305.651620004,
+        "unix_seconds": 1793107165.58386,
+        "utc": "2026-10-27T13:19:25.583849+00:00"
+      }
+    }
+  ],
+  "guard_min_free_MiB": 5480.5,
+  "guard_peak_used_MiB": 2337.125,
+  "guard_samples": 437,
+  "trace_exists": false,
+  "console_bytes": 0,
+  "independent_decision_count": "unknown; no emitted trace",
+  "current_runtime_gpu_physx_verified": false,
+  "episode_reset_verified": false,
+  "metric_runtime_crosscheck_possible": false,
+  "historical_32_step_evidence_preserved": true
+}

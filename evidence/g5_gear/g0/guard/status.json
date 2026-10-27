@@ -1,0 +1,84 @@
+{
+  "continuous_monitoring": false,
+  "coverage_note": "Sampled coverage: regular intervals are not continuous measurement.",
+  "ended": {
+    "monotonic_seconds": 45306.380406601,
+    "unix_seconds": 1793107166.3126462,
+    "utc": "2026-10-27T13:19:26.312636+00:00"
+  },
+  "error": null,
+  "finalized": true,
+  "first_sample": {
+    "monotonic_seconds": 45261.646274901,
+    "unix_seconds": 1793107121.5785146,
+    "utc": "2026-10-27T13:18:41.578503+00:00"
+  },
+  "identity": {
+    "birth_ticks": "4526149",
+    "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+    "pgid": 386002,
+    "pid": 386002,
+    "state": "R"
+  },
+  "last_sample": {
+    "monotonic_seconds": 45305.651620004,
+    "unix_seconds": 1793107165.58386,
+    "utc": "2026-10-27T13:19:25.583849+00:00"
+  },
+  "low_memory_stop_condition_observed": false,
+  "max_low_consecutive": 0,
+  "min_free_MiB": 5480.5,
+  "monitoring_gaps": [
+    {
+      "duration_seconds": 0.5052155160010443,
+      "from": {
+        "monotonic_seconds": 45305.146404488,
+        "unix_seconds": 1793107165.0786438,
+        "utc": "2026-10-27T13:19:25.078627+00:00"
+      },
+      "to": {
+        "monotonic_seconds": 45305.651620004,
+        "unix_seconds": 1793107165.58386,
+        "utc": "2026-10-27T13:19:25.583849+00:00"
+      }
+    }
+  ],
+  "peak_used_MiB": 2337.125,
+  "policy": {
+    "consecutive_samples": 3,
+    "floor_MiB": 1024,
+    "gap_limit_seconds": 0.5,
+    "interval_seconds": 0.1,
+    "stale_seconds": 2
+  },
+  "sample_count": 437,
+  "schema_version": 2,
+  "started": {
+    "monotonic_seconds": 45261.540892187,
+    "unix_seconds": 1793107121.473132,
+    "utc": "2026-10-27T13:18:41.473112+00:00"
+  },
+  "stop_reason": "monitoring_gap",
+  "stop_signals": [
+    {
+      "monotonic_seconds": 45306.33798114,
+      "signal": "SIGTERM",
+      "unix_seconds": 1793107166.2702208,
+      "utc": "2026-10-27T13:19:26.270207+00:00"
+    }
+  ],
+  "supervisor_identity": {
+    "birth_ticks": "4526162",
+    "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+    "pgid": 386004,
+    "pid": 386004,
+    "state": "R"
+  },
+  "target_identity": {
+    "birth_ticks": "4526190",
+    "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+    "pgid": 386008,
+    "pid": 386008,
+    "state": "R"
+  }
+}
