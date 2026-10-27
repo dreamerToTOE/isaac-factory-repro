@@ -1,0 +1,199 @@
+{
+  "body_count": 11,
+  "bodies": [
+    {
+      "body": "link0",
+      "principal_inertia_before_kg_m2": [
+        0.004304650123430994,
+        0.0038798390919025367,
+        0.0031305107846664564
+      ],
+      "principal_inertia_after_kg_m2": [
+        0.014304650123430983,
+        0.013879839091902524,
+        0.013130510784666444
+      ],
+      "positive_definite_before": true,
+      "positive_definite_after": true,
+      "isotropic_offset_tensor_error_kg_m2": 1.3010426069826053e-16
+    },
+    {
+      "body": "link1",
+      "principal_inertia_before_kg_m2": [
+        0.7071370144883009,
+        0.7034354292338564,
+        0.00852455627784294
+      ],
+      "principal_inertia_after_kg_m2": [
+        0.7171370144883009,
+        0.7134354292338564,
+        0.018524556277842944
+      ],
+      "positive_definite_before": true,
+      "positive_definite_after": true,
+      "isotropic_offset_tensor_error_kg_m2": 1.0234868508263162e-16
+    },
+    {
+      "body": "link2",
+      "principal_inertia_before_kg_m2": [
+        0.03103264256517663,
+        0.02830010693683385,
+        0.0027342504979895274
+      ],
+      "principal_inertia_after_kg_m2": [
+        0.04103264256517664,
+        0.03830010693683387,
+        0.01273425049798953
+      ],
+      "positive_definite_before": true,
+      "positive_definite_after": true,
+      "isotropic_offset_tensor_error_kg_m2": 1.8908485888147197e-16
+    },
+    {
+      "body": "link3",
+      "principal_inertia_before_kg_m2": [
+        0.04150138828861061,
+        0.041479257270665607,
+        0.0012463544407238245
+      ],
+      "principal_inertia_after_kg_m2": [
+        0.051501388288610575,
+        0.05147925727066559,
+        0.011246354440723826
+      ],
+      "positive_definite_before": true,
+      "positive_definite_after": true,
+      "isotropic_offset_tensor_error_kg_m2": 3.2959746043559335e-17
+    },
+    {
+      "body": "link4",
+      "principal_inertia_before_kg_m2": [
+        0.03495964042412706,
+        0.028148276242039156,
+        0.010620083333833793
+      ],
+      "principal_inertia_after_kg_m2": [
+        0.044959640424127055,
+        0.03814827624203915,
+        0.020620083333833788
+      ],
+      "positive_definite_before": true,
+      "positive_definite_after": true,
+      "isotropic_offset_tensor_error_kg_m2": 7.112366251504909e-17
+    },
+    {
+      "body": "link5",
+      "principal_inertia_before_kg_m2": [
+        0.036762538266730406,
+        0.028853091260661545,
+        0.008034370472607986
+      ],
+      "principal_inertia_after_kg_m2": [
+        0.0467625382667304,
+        0.03885309126066154,
+        0.01803437047260798
+      ],
+      "positive_definite_before": true,
+      "positive_definite_after": true,
+      "isotropic_offset_tensor_error_kg_m2": 1.214306433183765e-17
+    },
+    {
+      "body": "link6",
+      "principal_inertia_before_kg_m2": [
+        0.005842761226567758,
+        0.004310373704197247,
+        0.001597865069234999
+      ],
+      "principal_inertia_after_kg_m2": [
+        0.01584276122656776,
+        0.014310373704197247,
+        0.011597865069234999
+      ],
+      "positive_definite_before": true,
+      "positive_definite_after": true,
+      "isotropic_offset_tensor_error_kg_m2": 1.5265566588595902e-16
+    },
+    {
+      "body": "link7",
+      "principal_inertia_before_kg_m2": [
+        0.012734492874724473,
+        0.01010547714435622,
+        0.004518029980919309
+      ],
+      "principal_inertia_after_kg_m2": [
+        0.02273449287472447,
+        0.020105477144356218,
+        0.014518029980919311
+      ],
+      "positive_definite_before": true,
+      "positive_definite_after": true,
+      "isotropic_offset_tensor_error_kg_m2": 1.734723475976807e-18
+    },
+    {
+      "body": "hand",
+      "principal_inertia_before_kg_m2": [
+        0.001,
+        0.0025,
+        0.0017
+      ],
+      "principal_inertia_after_kg_m2": [
+        0.011,
+        0.0125,
+        0.0117
+      ],
+      "positive_definite_before": true,
+      "positive_definite_after": true,
+      "isotropic_offset_tensor_error_kg_m2": 1.734723475976807e-18
+    },
+    {
+      "body": "left_finger",
+      "principal_inertia_before_kg_m2": [
+        2.375e-06,
+        2.375e-06,
+        7.5e-07
+      ],
+      "principal_inertia_after_kg_m2": [
+        0.010002375,
+        0.010002375,
+        0.010000750000000001
+      ],
+      "positive_definite_before": true,
+      "positive_definite_after": true,
+      "isotropic_offset_tensor_error_kg_m2": 0.0
+    },
+    {
+      "body": "right_finger",
+      "principal_inertia_before_kg_m2": [
+        2.375e-06,
+        2.375e-06,
+        7.5e-07
+      ],
+      "principal_inertia_after_kg_m2": [
+        0.010002375,
+        0.010002375,
+        0.010000750000000001
+      ],
+      "positive_definite_before": true,
+      "positive_definite_after": true,
+      "isotropic_offset_tensor_error_kg_m2": 0.0
+    }
+  ],
+  "unchanged_parameter_max_errors": {
+    "body_mass_kg": 0.0,
+    "body_ipos_m": 0.0,
+    "dof_armature": 0.0,
+    "force_limits": 0.0,
+    "arm_dof_ids": 0.0,
+    "arm_qpos_ids": 0.0,
+    "finger_dof_ids": 0.0,
+    "finger_qpos_ids": 0.0,
+    "arm_limits": 0.0,
+    "finger_limits": 0.0
+  },
+  "original_PhysX_runtime_mass_matrix": "UNKNOWN",
+  "original_PhysX_applied_actuator_forces": "UNKNOWN",
+  "unmapped_original_bodies": [
+    "force_sensor",
+    "fingertip_centered"
+  ]
+}

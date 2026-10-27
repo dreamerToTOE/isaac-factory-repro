@@ -1,0 +1,775 @@
+{
+  "task": "G4-S2A-R2",
+  "receipts": [
+    {
+      "id": "I1",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_diagnostics.py",
+        "--prepare",
+        "I1",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/initials/I1"
+      ],
+      "exact_child_exit_code": 0,
+      "supervisor_timeout": false,
+      "wall_s": 7.277634164000119,
+      "result": {
+        "id": "I1",
+        "preparation_steps": 0,
+        "physics_wall_s": 0.0,
+        "failure": null,
+        "admission": "PASS",
+        "policy_inferences": 0,
+        "gui_sync_wall_s": 0.005256870000039271,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.028083873000014137
+        }
+      }
+    },
+    {
+      "id": "I1_A",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_diagnostics.py",
+        "--trajectory",
+        "I1_A",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/trajectories/I1_A"
+      ],
+      "exact_child_exit_code": 0,
+      "supervisor_timeout": false,
+      "wall_s": 8.228001805999838,
+      "result": {
+        "task": "G4-S2A-R2",
+        "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+        "run_id": "I1_A",
+        "variant": "A",
+        "initial_id": "I1",
+        "registered_steps": 235,
+        "integration_requests": 5,
+        "completed_steps": 5,
+        "simulation_duration_s": 0.04166666666666677,
+        "physics_wall_s": 0.018378260000190494,
+        "wall_s": 7.413985387999901,
+        "viewer_sync_wall_s": 0.03239966700016339,
+        "viewer_sync_count": 19,
+        "gui_and_logging_overhead_s": 7.395608787999663,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.021810598000001846
+        },
+        "runtime_failure": null,
+        "early_stop_reasons": [
+          "PEG_ESCAPE_SLIP",
+          "PEG_ESCAPE_ROTATION",
+          "SEVERE_PENETRATION"
+        ],
+        "policy_inferences": 0,
+        "max_slip_m": 0.006191531536692205,
+        "max_rotation_slip_rad": 0.2315399500427903,
+        "max_arm_qvel_rad_s": 9.35770372118682,
+        "bilateral_positive_contact_fraction": 0.6,
+        "first_contact_loss_step": 4,
+        "max_penetration_m": 0.003314792606547144,
+        "peak_rss_kib": 766416,
+        "trace_sha256": "ee9e1d5b3183d9d2623a9540650c0130305a82a272d22757c3b022af5f919a34",
+        "termination": "DIAGNOSTIC_EARLY_STOP"
+      }
+    },
+    {
+      "id": "I1_B",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_diagnostics.py",
+        "--trajectory",
+        "I1_B",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/trajectories/I1_B"
+      ],
+      "exact_child_exit_code": 0,
+      "supervisor_timeout": false,
+      "wall_s": 16.69751147099987,
+      "result": {
+        "task": "G4-S2A-R2",
+        "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+        "run_id": "I1_B",
+        "variant": "B",
+        "initial_id": "I1",
+        "registered_steps": 235,
+        "integration_requests": 235,
+        "completed_steps": 235,
+        "simulation_duration_s": 1.9583333333333282,
+        "physics_wall_s": 0.1571173339998495,
+        "wall_s": 15.79574356199987,
+        "viewer_sync_wall_s": 0.7400833490016794,
+        "viewer_sync_count": 481,
+        "gui_and_logging_overhead_s": 15.63862906700001,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.021288488999971378
+        },
+        "runtime_failure": null,
+        "early_stop_reasons": [],
+        "policy_inferences": 0,
+        "max_slip_m": 0.0006677086618133421,
+        "max_rotation_slip_rad": 0.0015209446205981991,
+        "max_arm_qvel_rad_s": 1.2446740333161983,
+        "bilateral_positive_contact_fraction": 1.0,
+        "first_contact_loss_step": null,
+        "max_penetration_m": 2.0930244468061525e-05,
+        "peak_rss_kib": 769568,
+        "trace_sha256": "7bef0b46eadcdb186b74e63d59c033c0bacf882df11d2e60903009c378866932",
+        "termination": "REGISTERED_HORIZON_COMPLETE"
+      }
+    },
+    {
+      "id": "I1_C",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_diagnostics.py",
+        "--trajectory",
+        "I1_C",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/trajectories/I1_C"
+      ],
+      "exact_child_exit_code": 0,
+      "supervisor_timeout": false,
+      "wall_s": 8.177345321000075,
+      "result": {
+        "task": "G4-S2A-R2",
+        "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+        "run_id": "I1_C",
+        "variant": "C",
+        "initial_id": "I1",
+        "registered_steps": 235,
+        "integration_requests": 5,
+        "completed_steps": 5,
+        "simulation_duration_s": 0.04166666666666677,
+        "physics_wall_s": 0.003517433000070014,
+        "wall_s": 7.361251446000097,
+        "viewer_sync_wall_s": 0.03153025200003867,
+        "viewer_sync_count": 19,
+        "gui_and_logging_overhead_s": 7.357735013000138,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.0280701599999702
+        },
+        "runtime_failure": null,
+        "early_stop_reasons": [
+          "PEG_ESCAPE_SLIP",
+          "PEG_ESCAPE_ROTATION",
+          "SEVERE_PENETRATION"
+        ],
+        "policy_inferences": 0,
+        "max_slip_m": 0.0063625742605904825,
+        "max_rotation_slip_rad": 0.23448864476592438,
+        "max_arm_qvel_rad_s": 9.409768489930073,
+        "bilateral_positive_contact_fraction": 0.6,
+        "first_contact_loss_step": 4,
+        "max_penetration_m": 0.0033416365992312556,
+        "peak_rss_kib": 772276,
+        "trace_sha256": "1885ea13dff91625d19520dbc1f23f525092e3937fc69cf525423f98a26c92f8",
+        "termination": "DIAGNOSTIC_EARLY_STOP"
+      }
+    },
+    {
+      "id": "I1_D",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_diagnostics.py",
+        "--trajectory",
+        "I1_D",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/trajectories/I1_D"
+      ],
+      "exact_child_exit_code": 0,
+      "supervisor_timeout": false,
+      "wall_s": 16.89816595000002,
+      "result": {
+        "task": "G4-S2A-R2",
+        "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+        "run_id": "I1_D",
+        "variant": "D",
+        "initial_id": "I1",
+        "registered_steps": 235,
+        "integration_requests": 235,
+        "completed_steps": 235,
+        "simulation_duration_s": 1.9583333333333282,
+        "physics_wall_s": 0.16870224300123482,
+        "wall_s": 15.99374220499999,
+        "viewer_sync_wall_s": 0.7590966629991271,
+        "viewer_sync_count": 481,
+        "gui_and_logging_overhead_s": 15.825042110998766,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.02953267699990647
+        },
+        "runtime_failure": null,
+        "early_stop_reasons": [],
+        "policy_inferences": 0,
+        "max_slip_m": 0.0006478559056527629,
+        "max_rotation_slip_rad": 0.0014998107614591853,
+        "max_arm_qvel_rad_s": 1.2753028697032163,
+        "bilateral_positive_contact_fraction": 1.0,
+        "first_contact_loss_step": null,
+        "max_penetration_m": 2.187425574561326e-05,
+        "peak_rss_kib": 781460,
+        "trace_sha256": "071b31e16f4163d064aa59620f075f13fcfc113b641083d15ab6a21852dd1557",
+        "termination": "REGISTERED_HORIZON_COMPLETE"
+      }
+    },
+    {
+      "id": "I2",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_diagnostics.py",
+        "--prepare",
+        "I2",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/initials/I2"
+      ],
+      "exact_child_exit_code": 0,
+      "supervisor_timeout": false,
+      "wall_s": 7.2268148110001675,
+      "result": {
+        "id": "I2",
+        "preparation_steps": 30,
+        "physics_wall_s": 0.022036347001176182,
+        "failure": null,
+        "admission": "PASS",
+        "policy_inferences": 0,
+        "gui_sync_wall_s": 0.10230942599923765,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.021968875000311527
+        }
+      }
+    },
+    {
+      "id": "I2_A",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_diagnostics.py",
+        "--trajectory",
+        "I2_A",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/trajectories/I2_A"
+      ],
+      "exact_child_exit_code": 0,
+      "supervisor_timeout": false,
+      "wall_s": 7.577653629999986,
+      "result": {
+        "task": "G4-S2A-R2",
+        "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+        "run_id": "I2_A",
+        "variant": "A",
+        "initial_id": "I2",
+        "registered_steps": 235,
+        "integration_requests": 3,
+        "completed_steps": 3,
+        "simulation_duration_s": 0.02500000000000005,
+        "physics_wall_s": 0.002038742999502574,
+        "wall_s": 6.766864093000095,
+        "viewer_sync_wall_s": 0.021299445000295236,
+        "viewer_sync_count": 13,
+        "gui_and_logging_overhead_s": 6.764826561000518,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.01929764000033174
+        },
+        "runtime_failure": null,
+        "early_stop_reasons": [
+          "SEVERE_PENETRATION"
+        ],
+        "policy_inferences": 0,
+        "max_slip_m": 0.00181434415554913,
+        "max_rotation_slip_rad": 0.12395629936741466,
+        "max_arm_qvel_rad_s": 11.099418000651257,
+        "bilateral_positive_contact_fraction": 0.6666666666666666,
+        "first_contact_loss_step": 2,
+        "max_penetration_m": 0.0016784370492780676,
+        "peak_rss_kib": 780740,
+        "trace_sha256": "67dac3c43aca2acf29f6eb7ccfe14b837e62519358a04c849ffc228a37ce8823",
+        "termination": "DIAGNOSTIC_EARLY_STOP"
+      }
+    },
+    {
+      "id": "I2_B",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_diagnostics.py",
+        "--trajectory",
+        "I2_B",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/trajectories/I2_B"
+      ],
+      "exact_child_exit_code": 0,
+      "supervisor_timeout": false,
+      "wall_s": 16.494518491000235,
+      "result": {
+        "task": "G4-S2A-R2",
+        "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+        "run_id": "I2_B",
+        "variant": "B",
+        "initial_id": "I2",
+        "registered_steps": 235,
+        "integration_requests": 235,
+        "completed_steps": 235,
+        "simulation_duration_s": 1.9583333333333282,
+        "physics_wall_s": 0.1496986819979611,
+        "wall_s": 15.589146146000076,
+        "viewer_sync_wall_s": 0.7120802540066506,
+        "viewer_sync_count": 481,
+        "gui_and_logging_overhead_s": 15.439449548002358,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.02567567500000223
+        },
+        "runtime_failure": null,
+        "early_stop_reasons": [],
+        "policy_inferences": 0,
+        "max_slip_m": 0.0006382033456537611,
+        "max_rotation_slip_rad": 0.001360346038978273,
+        "max_arm_qvel_rad_s": 1.2239768740658448,
+        "bilateral_positive_contact_fraction": 1.0,
+        "first_contact_loss_step": null,
+        "max_penetration_m": 1.1400733831374963e-05,
+        "peak_rss_kib": 808224,
+        "trace_sha256": "eba81006dc4df184a63eda1594e20d53d7e76ae7004a1c9e895b2ec9cc494c35",
+        "termination": "REGISTERED_HORIZON_COMPLETE"
+      }
+    },
+    {
+      "id": "I2_C",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_diagnostics.py",
+        "--trajectory",
+        "I2_C",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/trajectories/I2_C"
+      ],
+      "exact_child_exit_code": 0,
+      "supervisor_timeout": false,
+      "wall_s": 7.577079794999918,
+      "result": {
+        "task": "G4-S2A-R2",
+        "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+        "run_id": "I2_C",
+        "variant": "C",
+        "initial_id": "I2",
+        "registered_steps": 235,
+        "integration_requests": 3,
+        "completed_steps": 3,
+        "simulation_duration_s": 0.02500000000000005,
+        "physics_wall_s": 0.002122114000030706,
+        "wall_s": 6.775372870999945,
+        "viewer_sync_wall_s": 0.02346619399941119,
+        "viewer_sync_count": 13,
+        "gui_and_logging_overhead_s": 6.773251964999872,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.021169063999877835
+        },
+        "runtime_failure": null,
+        "early_stop_reasons": [
+          "SEVERE_PENETRATION"
+        ],
+        "policy_inferences": 0,
+        "max_slip_m": 0.00180037912483634,
+        "max_rotation_slip_rad": 0.12187388718590385,
+        "max_arm_qvel_rad_s": 11.074204337965755,
+        "bilateral_positive_contact_fraction": 0.6666666666666666,
+        "first_contact_loss_step": 2,
+        "max_penetration_m": 0.0016937044203886697,
+        "peak_rss_kib": 767392,
+        "trace_sha256": "ea0272cf6848b48711d7b46fd2922d68a80609f25e19151a24c6ac01ed1d0324",
+        "termination": "DIAGNOSTIC_EARLY_STOP"
+      }
+    },
+    {
+      "id": "I2_D",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_diagnostics.py",
+        "--trajectory",
+        "I2_D",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/trajectories/I2_D"
+      ],
+      "exact_child_exit_code": 0,
+      "supervisor_timeout": false,
+      "wall_s": 17.095850832999986,
+      "result": {
+        "task": "G4-S2A-R2",
+        "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+        "run_id": "I2_D",
+        "variant": "D",
+        "initial_id": "I2",
+        "registered_steps": 235,
+        "integration_requests": 235,
+        "completed_steps": 235,
+        "simulation_duration_s": 1.9583333333333282,
+        "physics_wall_s": 0.15588956200008397,
+        "wall_s": 16.14350184800014,
+        "viewer_sync_wall_s": 0.7380170860024009,
+        "viewer_sync_count": 481,
+        "gui_and_logging_overhead_s": 15.9876144509999,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.02590215200007151
+        },
+        "runtime_failure": null,
+        "early_stop_reasons": [],
+        "policy_inferences": 0,
+        "max_slip_m": 0.0006292515181128815,
+        "max_rotation_slip_rad": 0.0011433579031600442,
+        "max_arm_qvel_rad_s": 1.2697924153838922,
+        "bilateral_positive_contact_fraction": 1.0,
+        "first_contact_loss_step": null,
+        "max_penetration_m": 1.123206707488663e-05,
+        "peak_rss_kib": 812492,
+        "trace_sha256": "38cb112fde29c7ec6b4a13058b59f635481b53363df8b151987dd12f37c4246a",
+        "termination": "REGISTERED_HORIZON_COMPLETE"
+      }
+    },
+    {
+      "id": "I3",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_diagnostics.py",
+        "--prepare",
+        "I3",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/initials/I3"
+      ],
+      "exact_child_exit_code": 0,
+      "supervisor_timeout": false,
+      "wall_s": 7.176891225999952,
+      "result": {
+        "id": "I3",
+        "preparation_steps": 30,
+        "physics_wall_s": 0.021760508998795558,
+        "failure": null,
+        "admission": "PASS",
+        "policy_inferences": 0,
+        "gui_sync_wall_s": 0.09083093299750544,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.01917951700033882
+        }
+      }
+    },
+    {
+      "id": "I3_A",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_diagnostics.py",
+        "--trajectory",
+        "I3_A",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/trajectories/I3_A"
+      ],
+      "exact_child_exit_code": 0,
+      "supervisor_timeout": false,
+      "wall_s": 7.627708938999604,
+      "result": {
+        "task": "G4-S2A-R2",
+        "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+        "run_id": "I3_A",
+        "variant": "A",
+        "initial_id": "I3",
+        "registered_steps": 235,
+        "integration_requests": 4,
+        "completed_steps": 4,
+        "simulation_duration_s": 0.03333333333333341,
+        "physics_wall_s": 0.002896682000027795,
+        "wall_s": 6.827737780999996,
+        "viewer_sync_wall_s": 0.024384217000260833,
+        "viewer_sync_count": 15,
+        "gui_and_logging_overhead_s": 6.824843360000159,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.028799972999877355
+        },
+        "runtime_failure": null,
+        "early_stop_reasons": [
+          "PEG_ESCAPE_ROTATION",
+          "SEVERE_PENETRATION"
+        ],
+        "policy_inferences": 0,
+        "max_slip_m": 0.004567107106467838,
+        "max_rotation_slip_rad": 0.39514089696171945,
+        "max_arm_qvel_rad_s": 12.510756007901447,
+        "bilateral_positive_contact_fraction": 0.5,
+        "first_contact_loss_step": 3,
+        "max_penetration_m": 0.0016378002580327952,
+        "peak_rss_kib": 778312,
+        "trace_sha256": "26156319050ba175a5d0d3367edf43e53ed0526d7b7222ebd1cb27d9f169e3fb",
+        "termination": "DIAGNOSTIC_EARLY_STOP"
+      }
+    },
+    {
+      "id": "I3_B",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_diagnostics.py",
+        "--trajectory",
+        "I3_B",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/trajectories/I3_B"
+      ],
+      "exact_child_exit_code": 0,
+      "supervisor_timeout": false,
+      "wall_s": 14.739740122999592,
+      "result": {
+        "task": "G4-S2A-R2",
+        "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+        "run_id": "I3_B",
+        "variant": "B",
+        "initial_id": "I3",
+        "registered_steps": 235,
+        "integration_requests": 177,
+        "completed_steps": 177,
+        "simulation_duration_s": 1.4749999999999963,
+        "physics_wall_s": 0.12187696799537662,
+        "wall_s": 13.818319000999963,
+        "viewer_sync_wall_s": 0.5725259599980745,
+        "viewer_sync_count": 365,
+        "gui_and_logging_overhead_s": 13.696443459004513,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.018729610000264074
+        },
+        "runtime_failure": null,
+        "early_stop_reasons": [
+          "SEVERE_PENETRATION"
+        ],
+        "policy_inferences": 0,
+        "max_slip_m": 0.0006625889016645426,
+        "max_rotation_slip_rad": 0.05883680807339364,
+        "max_arm_qvel_rad_s": 1.22113810122908,
+        "bilateral_positive_contact_fraction": 0.9943502824858758,
+        "first_contact_loss_step": 176,
+        "max_penetration_m": 0.0010007719414442838,
+        "peak_rss_kib": 833768,
+        "trace_sha256": "d91c3bea1737cb5a416fb8804958b78cce7e3ea8c80c1f0a0dc6592c823506d6",
+        "termination": "DIAGNOSTIC_EARLY_STOP"
+      }
+    },
+    {
+      "id": "I3_C",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_diagnostics.py",
+        "--trajectory",
+        "I3_C",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/trajectories/I3_C"
+      ],
+      "exact_child_exit_code": 0,
+      "supervisor_timeout": false,
+      "wall_s": 7.677330165000058,
+      "result": {
+        "task": "G4-S2A-R2",
+        "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+        "run_id": "I3_C",
+        "variant": "C",
+        "initial_id": "I3",
+        "registered_steps": 235,
+        "integration_requests": 4,
+        "completed_steps": 4,
+        "simulation_duration_s": 0.03333333333333341,
+        "physics_wall_s": 0.0026866600001085317,
+        "wall_s": 6.85136979400022,
+        "viewer_sync_wall_s": 0.023880159998952877,
+        "viewer_sync_count": 15,
+        "gui_and_logging_overhead_s": 6.84868458200026,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.02261921200033612
+        },
+        "runtime_failure": null,
+        "early_stop_reasons": [
+          "PEG_ESCAPE_ROTATION",
+          "SEVERE_PENETRATION"
+        ],
+        "policy_inferences": 0,
+        "max_slip_m": 0.004437611035543426,
+        "max_rotation_slip_rad": 0.37944932976492884,
+        "max_arm_qvel_rad_s": 12.54948567394035,
+        "bilateral_positive_contact_fraction": 0.5,
+        "first_contact_loss_step": 3,
+        "max_penetration_m": 0.0016462718625656655,
+        "peak_rss_kib": 783140,
+        "trace_sha256": "ea9d0b06561e2185857bdee0f8e4d464e23b074847b69a6cea6bb4f5b4eedfd8",
+        "termination": "DIAGNOSTIC_EARLY_STOP"
+      }
+    },
+    {
+      "id": "I3_D",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_diagnostics.py",
+        "--trajectory",
+        "I3_D",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/trajectories/I3_D"
+      ],
+      "exact_child_exit_code": 0,
+      "supervisor_timeout": false,
+      "wall_s": 16.491191849000188,
+      "result": {
+        "task": "G4-S2A-R2",
+        "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+        "run_id": "I3_D",
+        "variant": "D",
+        "initial_id": "I3",
+        "registered_steps": 235,
+        "integration_requests": 216,
+        "completed_steps": 216,
+        "simulation_duration_s": 1.7999999999999954,
+        "physics_wall_s": 0.15949642599707659,
+        "wall_s": 15.560019924999779,
+        "viewer_sync_wall_s": 0.8290986540037011,
+        "viewer_sync_count": 443,
+        "gui_and_logging_overhead_s": 15.400525817002745,
+        "graceful_close": {
+          "viewer_close_requested": true,
+          "render_threads_joined": [
+            "Thread-1 (_launch_internal)"
+          ],
+          "remaining_render_threads": [],
+          "close_wall_s": 0.029669334000118397
+        },
+        "runtime_failure": null,
+        "early_stop_reasons": [
+          "SEVERE_PENETRATION"
+        ],
+        "policy_inferences": 0,
+        "max_slip_m": 0.0006719107376599775,
+        "max_rotation_slip_rad": 0.060769490164491353,
+        "max_arm_qvel_rad_s": 1.262303297528486,
+        "bilateral_positive_contact_fraction": 0.9953703703703703,
+        "first_contact_loss_step": 215,
+        "max_penetration_m": 0.0010476707932385815,
+        "peak_rss_kib": 813832,
+        "trace_sha256": "838ba74c05479bf606d9bd6394252c19a4ae1adfd8e544bf0cfcd8e35577d34f",
+        "termination": "DIAGNOSTIC_EARLY_STOP"
+      }
+    }
+  ],
+  "new_integration_requests": 1417,
+  "maximum_steps": 2880,
+  "wall_s": 166.97016264500007,
+  "maximum_wall_s": 900,
+  "policy_inferences": 0,
+  "registered_initials": 3,
+  "registered_trajectories": 12,
+  "completed_accounting": true,
+  "process_failure": false,
+  "execution_gate_passed": true
+}

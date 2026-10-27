@@ -1,0 +1,80 @@
+[
+  {
+    "file": "evidence/g4_s/s2a_r2/visuals/playback_v2/I3_D/I3_D_step_214.png",
+    "experiment_id": "I3_D",
+    "initial_state_id": "I3",
+    "model_configuration": "P1+C1",
+    "model_xml_sha256": "e2ae8f5a14ab927c12897cb534819d8da63a5ce24f91200f80796fdaee1ca6fc",
+    "step": 214,
+    "simulation_time_s": 1.7833333333333334,
+    "sha256": "13628efca6980e50859acbc3f829b867eb2b5f2d51ba6cbd1d0693d23306324a",
+    "capture_method": "Actual Ubuntu X11 screen rectangle, native raised MuJoCo window",
+    "mode": "SAVED_DIAGNOSTIC_STATE_PLAYBACK",
+    "source_trace_sha256": "838ba74c05479bf606d9bd6394252c19a4ae1adfd8e544bf0cfcd8e35577d34f",
+    "new_integration_steps": 0,
+    "policy_calls": 0,
+    "window": {
+      "window_id": "0x700000b",
+      "title": "MuJoCo : g4_s1b_adapted_panda_peg_insert",
+      "model_name": "g4_s1b_adapted_panda_peg_insert",
+      "map_state": "IsViewable",
+      "x": 190,
+      "y": 178,
+      "width": 1706,
+      "height": 960,
+      "selected_window_xwininfo": "\nxwininfo: Window id: 0x700000b \"MuJoCo : g4_s1b_adapted_panda_peg_insert\"\n\n  Absolute upper-left X:  190\n  Absolute upper-left Y:  178\n  Relative upper-left X:  20\n  Relative upper-left Y:  90\n  Width: 1706\n  Height: 960\n  Depth: 24\n  Visual: 0x3a\n  Visual Class: TrueColor\n  Border width: 0\n  Class: InputOutput\n  Colormap: 0x700000a (not installed)\n  Bit Gravity State: ForgetGravity\n  Window Gravity State: NorthWestGravity\n  Backing Store State: NotUseful\n  Save Under State: no\n  Map State: IsViewable\n  Override Redirect State: no\n  Corners:  +190+178  -2200+178  -2200-1166  +190-1166\n  -geometry 1706x960+190+178\n\n"
+    }
+  },
+  {
+    "file": "evidence/g4_s/s2a_r2/visuals/playback_v2/I3_D/I3_D_step_215.png",
+    "experiment_id": "I3_D",
+    "initial_state_id": "I3",
+    "model_configuration": "P1+C1",
+    "model_xml_sha256": "e2ae8f5a14ab927c12897cb534819d8da63a5ce24f91200f80796fdaee1ca6fc",
+    "step": 215,
+    "simulation_time_s": 1.7916666666666667,
+    "sha256": "8774caccd945323bf459adcb65f7edae7df31e87018e76fbb1aa076a573bb518",
+    "capture_method": "Actual Ubuntu X11 screen rectangle, native raised MuJoCo window",
+    "mode": "SAVED_DIAGNOSTIC_STATE_PLAYBACK",
+    "source_trace_sha256": "838ba74c05479bf606d9bd6394252c19a4ae1adfd8e544bf0cfcd8e35577d34f",
+    "new_integration_steps": 0,
+    "policy_calls": 0,
+    "window": {
+      "window_id": "0x700000b",
+      "title": "MuJoCo : g4_s1b_adapted_panda_peg_insert",
+      "model_name": "g4_s1b_adapted_panda_peg_insert",
+      "map_state": "IsViewable",
+      "x": 190,
+      "y": 178,
+      "width": 1706,
+      "height": 960,
+      "selected_window_xwininfo": "\nxwininfo: Window id: 0x700000b \"MuJoCo : g4_s1b_adapted_panda_peg_insert\"\n\n  Absolute upper-left X:  190\n  Absolute upper-left Y:  178\n  Relative upper-left X:  20\n  Relative upper-left Y:  90\n  Width: 1706\n  Height: 960\n  Depth: 24\n  Visual: 0x3a\n  Visual Class: TrueColor\n  Border width: 0\n  Class: InputOutput\n  Colormap: 0x700000a (not installed)\n  Bit Gravity State: ForgetGravity\n  Window Gravity State: NorthWestGravity\n  Backing Store State: NotUseful\n  Save Under State: no\n  Map State: IsViewable\n  Override Redirect State: no\n  Corners:  +190+178  -2200+178  -2200-1166  +190-1166\n  -geometry 1706x960+190+178\n\n"
+    }
+  },
+  {
+    "file": "evidence/g4_s/s2a_r2/visuals/playback_v2/I3_D/I3_D_step_216.png",
+    "experiment_id": "I3_D",
+    "initial_state_id": "I3",
+    "model_configuration": "P1+C1",
+    "model_xml_sha256": "e2ae8f5a14ab927c12897cb534819d8da63a5ce24f91200f80796fdaee1ca6fc",
+    "step": 216,
+    "simulation_time_s": 1.8,
+    "sha256": "fb3ac22988944c6dd31076c0196258d747ab741b1680b848509f0577e66aaf08",
+    "capture_method": "Actual Ubuntu X11 screen rectangle, native raised MuJoCo window",
+    "mode": "SAVED_DIAGNOSTIC_STATE_PLAYBACK",
+    "source_trace_sha256": "838ba74c05479bf606d9bd6394252c19a4ae1adfd8e544bf0cfcd8e35577d34f",
+    "new_integration_steps": 0,
+    "policy_calls": 0,
+    "window": {
+      "window_id": "0x700000b",
+      "title": "MuJoCo : g4_s1b_adapted_panda_peg_insert",
+      "model_name": "g4_s1b_adapted_panda_peg_insert",
+      "map_state": "IsViewable",
+      "x": 190,
+      "y": 178,
+      "width": 1706,
+      "height": 960,
+      "selected_window_xwininfo": "\nxwininfo: Window id: 0x700000b \"MuJoCo : g4_s1b_adapted_panda_peg_insert\"\n\n  Absolute upper-left X:  190\n  Absolute upper-left Y:  178\n  Relative upper-left X:  20\n  Relative upper-left Y:  90\n  Width: 1706\n  Height: 960\n  Depth: 24\n  Visual: 0x3a\n  Visual Class: TrueColor\n  Border width: 0\n  Class: InputOutput\n  Colormap: 0x700000a (not installed)\n  Bit Gravity State: ForgetGravity\n  Window Gravity State: NorthWestGravity\n  Backing Store State: NotUseful\n  Save Under State: no\n  Map State: IsViewable\n  Override Redirect State: no\n  Corners:  +190+178  -2200+178  -2200-1166  +190-1166\n  -geometry 1706x960+190+178\n\n"
+    }
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "superseded_registry": "matrix_v1/preregistered_matrix.json",
+  "active_registry": "matrix_v2/preregistered_matrix.json",
+  "superseded_before_any_new_integration": true,
+  "new_integration_steps_at_amendment": 0,
+  "reason": "Independent review required exact actual child return code on timeout rather than assigning supervisor124. Implemented Popen.wait/kill/wait with separate timeout flag. Thresholds, geometry, schedule, horizon and factorial scientific design unchanged. Earlier matrix retained without coordinator attempt."
+}

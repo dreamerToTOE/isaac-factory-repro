@@ -1,0 +1,7 @@
+{
+  "started_utc": "2026-10-27T01:17:26.283489+00:00",
+  "cpu_receipt": "evidence/g4_s/s2a_r2/regression_prelaunch_v2/summary.json",
+  "cpu_sha256": "529bde96db346d684c562619d591ad81728727c47c75012a6be74cf1da9ad356",
+  "policy_calls": 0,
+  "retry": false
+}

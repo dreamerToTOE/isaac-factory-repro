@@ -1,0 +1,53 @@
+{
+  "id": "I2_D",
+  "command": [
+    "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+    "-u",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_diagnostics.py",
+    "--trajectory",
+    "I2_D",
+    "--manifest",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/preregistered_matrix.json",
+    "--output",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/trajectories/I2_D"
+  ],
+  "exact_child_exit_code": 0,
+  "supervisor_timeout": false,
+  "wall_s": 17.095850832999986,
+  "result": {
+    "task": "G4-S2A-R2",
+    "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+    "run_id": "I2_D",
+    "variant": "D",
+    "initial_id": "I2",
+    "registered_steps": 235,
+    "integration_requests": 235,
+    "completed_steps": 235,
+    "simulation_duration_s": 1.9583333333333282,
+    "physics_wall_s": 0.15588956200008397,
+    "wall_s": 16.14350184800014,
+    "viewer_sync_wall_s": 0.7380170860024009,
+    "viewer_sync_count": 481,
+    "gui_and_logging_overhead_s": 15.9876144509999,
+    "graceful_close": {
+      "viewer_close_requested": true,
+      "render_threads_joined": [
+        "Thread-1 (_launch_internal)"
+      ],
+      "remaining_render_threads": [],
+      "close_wall_s": 0.02590215200007151
+    },
+    "runtime_failure": null,
+    "early_stop_reasons": [],
+    "policy_inferences": 0,
+    "max_slip_m": 0.0006292515181128815,
+    "max_rotation_slip_rad": 0.0011433579031600442,
+    "max_arm_qvel_rad_s": 1.2697924153838922,
+    "bilateral_positive_contact_fraction": 1.0,
+    "first_contact_loss_step": null,
+    "max_penetration_m": 1.123206707488663e-05,
+    "peak_rss_kib": 812492,
+    "trace_sha256": "38cb112fde29c7ec6b4a13058b59f635481b53363df8b151987dd12f37c4246a",
+    "termination": "REGISTERED_HORIZON_COMPLETE"
+  }
+}

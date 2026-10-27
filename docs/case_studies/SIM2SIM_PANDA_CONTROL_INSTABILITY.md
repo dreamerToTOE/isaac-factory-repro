@@ -5,6 +5,8 @@
 > 首次记录：2026-10-26；仓库：`dreamerToTOE/isaac-factory-repro`。
 >
 > 本文是**正在推进的真实工程排障案例**，不是已解决的成功案例。G4-S2A-R1 已完成可见 GUI、归档重建及10×16步无策略对照，阶段 **G4_S2A_R1_PASS**；**当前 G4-S2B NO-GO**。没有修复后的完整PPO任务评估，未修改或微调PPO。
+>
+> R2已完成三初态2×2的12条预注册无策略对照及独立数值复核：plant惯量抑制初始振荡，但第三初态晚期抓持/穿透失败。**CANDIDATE_PARTIAL；R3仍NO-GO**，新证据见第10节。
 
 ## 1. 背景：为什么要做 Sim2Sim
 
@@ -139,7 +141,7 @@ D06相对同样fresh-start的D01，最大滑移降低约**99.38%**、臂最大�
 
 根因仍为多机制候选，完整任务**ROOT_CAUSE_PENDING**。
 
-## 6. 根因与修复状态
+## 6. 根因与修复状态（R1时点；R2见第10节）
 
 **ROOT_CAUSE_PENDING**：控制器/惯量/执行器/夹持/观测多因素的贡献尚未通过隔离实验确定。
 
@@ -150,7 +152,7 @@ D06相对同样fresh-start的D01，最大滑移降低约**99.38%**、臂最大�
 
 **VALIDATION_PENDING**：没有修复后的完整 PPO 任务回合，因此也没有恢复成功率可报告。
 
-## 7. 后续必须提供的修复前后对照
+## 7. 后续必须提供的修复前后对照（保留R1任务级待办）
 
 | 指标 | 冻结 S2A 基线（seed1001） | 修复后 | 证据要求 |
 | --- | ---: | --- | --- |
@@ -163,7 +165,7 @@ D06相对同样fresh-start的D01，最大滑移降低约**99.38%**、臂最大�
 
 允许改善目标 MuJoCo 适配器或动力学，但**不得改变 PPO 权重**；每一次修订应记录是修 bug、模型适配还是诊断参数，并单独注册可复现评估协议。
 
-## 8. 面试复盘（当前只可使用已验证事实）
+## 8. 面试复盘（保留R1版本；当前R2版本见第10节）
 
 **约30秒，R1已完成部分：**
 
@@ -192,3 +194,120 @@ R1诊断已完成；工程修正、独立任务验收仍PENDING。面试叙述�
 - 原始轨迹校验：[collection.json](../../evidence/g4_s/s2a/run_20261026T140338/collection.json)；不覆盖失败数据。
 
 每轮 G4-S2A-R1/R2 等实验在新证据目录记录：命令、环境、入场门禁、变体哈希、可视化来源、正负结果、时序统计、结论强度。后续若确实解决，可追加 VERIFIED_FIX 与 before/after 章节；禁止直接改写历史为“最初就成功”。
+
+## 10. G4-S2A-R2 — Dynamics Adaptation and Controller Decoupling
+
+R2的预注册2×2矩阵、真实GUI、独立复核与回归已完成：**G4_S2A_R2_PASS（诊断工程门）**。
+**CANDIDATE_PARTIAL；R3当前NO-GO；ROOT_CAUSE_PENDING / SOLUTION_PENDING / VALIDATION_PENDING。**
+这是一项有正反结果的动力学调查，没有新PPO推理或完整策略回合。
+第1–9节保留S2A/R1历史；R2没有把D06的16步正结果追溯改写为长时抓持或任务修复。
+
+### A. 为什么测body惯量，以及如何分开控制器
+
+原问题是在原19D/6D接口能够运行时，目标Panda仍在首个动作的120Hz子步中发生速度反转、
+脱抓和之后的越限。R1发现速度放大先于12Nm饱和，且Factory源码有每个body转动惯量
+加`0.01I kg·m²`的规则。这使body惯量成为有根据的目标引擎适配候选，而非任意gain搜索。
+
+body inertia通过`Σ Jω,bᵀ I_b Jω,b`进入随姿态变化的完整M；joint armature给关节空间
+添加对角项，二者不等效。11个映射body仍缺Factory额外sensor/centered-TCP，finger质量、
+CoM也有差异。P1不是精确PhysX重建；原PhysX runtime M和实际输出力矩仍UNKNOWN。
+
+| 变体 | 物理plant | arm-controller M | 含义 |
+|---|---|---|---|
+| A | P0冻结 | C0冻结 | 每初态匹配对照 |
+| B | P1 body+.01I | C0冻结 | plant-only反事实 |
+| C | P0冻结 | C1适配M | controller-only反事实 |
+| D | P1 body+.01I | C1适配M | R1 D06概念的长窗口检验 |
+
+C1用独立shadow model在plant同一q计算M，不积分，也不写plant动力学。
+原task torque `Jᵀ(Kp e−Kd FD)`不直接含M；M进入动态一致nullspace。
+原finger隐式驱动仍读plant的full-M inverse，公式和40N cap保持；因此B仍含既有finger/plant耦合，
+不能说所有controller数值冻结。B/C是故意失配的诊断反事实，不叫忠实Factory实现。
+
+### B. 三初态、固定输入与较长窗口
+
+归档I1(seed1001)、一次性diagnostic I2(seed2101)、I3(seed2102)均通过准入；
+后两者各30步物理闭指，不重采样。I3闭指曾有873.514µm全接触峰值，末10步准入通过不能掩盖该瞬态。
+每初态四变体共用固定schedule：两条归档动作在steps1/9各做一次EMA；17..235改用同一初始world TCP pose。
+235步=1.958333s，为两次闭指预留60步，使全部新积分上限仍2880。
+实际主轨迹1357步+准备60步=1417步；新增actor0。原冻结gain、dt、force cap、finger驱动、
+碰撞几何、peg自由体与success predicate全部保持。
+
+| 初态 | A / C基线与controller-only | B plant-only | D plant+controller |
+|---|---|---|---|
+| I1 | 均5步早停；首双接触丢失4；速度峰值9.358/9.410rad/s | 235步；滑移0.667709mm；双接触100% | 235步；滑移0.647856mm；双接触100% |
+| I2 | 均3步早停；首丢失2；速度11.099/11.074rad/s | 235步；滑移0.638203mm；双接触100% | 235步；滑移0.629252mm；双接触100% |
+| I3 | 均4步早停；首丢失3；速度12.511/12.549rad/s | **177步穿透早停**；首丢失176；rotation0.058837rad | **216步穿透早停**；首丢失215；rotation0.060769rad |
+
+B/D在I1/I2的所有接触峰值约11.23–21.87µm，平移<1mm、旋转<.05rad且未越限。
+I3B/D虽速度约1.22/1.26rad/s、平移<1mm，晚期仍失去左pad接触，随后一物理步
+peg-left_finger_geom_7穿透达到1.000772/1.047671mm；必须判持续抓持和接触质量失败。
+两轨迹最后左pad正法向反力约74.56/89.30N，不等于改变了40N的执行器输出限额。
+其完整horizon robot-stability门因早停不通过，观察中臂速度<1.3rad/s、joint-limit越限0；
+不能将这个接触质量失败描述成最早的爆炸式臂振荡又复发。
+全矩阵都无peg/hole接触，不是插入成功或卡孔。
+
+极值按实际执行窗口报告；因A/C早停，初始因果比较只使用同态共同窗口I1前5、I2前3、I3前4步。
+不能用一条235步轨迹和另一条3步轨迹的全程极值比例声称无偏改善，也不能把少量诊断统计当迁移成功率。
+
+### C. 已支持机制与未解决问题
+
+- **VERIFIED_LOCAL_EFFECT**：同一初态/输入下，P1抑制最初腕部振荡；B保持C0依然有该效果。
+- **CONTRADICTED**：只换controller M足以消除最初失稳；三个C都与A在相同早停步数失败。
+- **SUPPORTED_MECHANISM**：physical inertia与原task-PD/离散FD响应的耦合重要；C1不是初始改善的必要条件。
+- **INCONCLUSIVE**：唯一根因、所有plant/controller交互，以及I3晚期contact切换/指驱动/几何/solver各自贡献。
+  B/D的I3失效相差39步，不能据此忽略模型交互，也不能称C1全局没有作用。
+
+**工程决定CANDIDATE_PARTIAL。** 保留独立版本化P0/P1诊断XML，不改S1B default，不建立policy-ready修复。
+I1/I2正结果支持进一步调查，I3反例阻止跨三个初态的持续稳定PASS。
+须先另行授权解决/解释I3持握质量失败，达到同一固定门禁后才申请有限冻结PPO R3；当前R3和S2B均NO-GO。
+无策略抓持诊断不能替代任务级zero-shot验证，完整根因/方案/验证仍PENDING。
+
+### D. 可见GUI与复现
+
+实际Ubuntu `DISPLAY=:1` native MuJoCo3.5.0 viewer完成全部积分实验，原live截图和退出记录保留。
+原live及早期回放有过大彩色/接触图示遮挡，v2未完整记录visual flags，具体渲染原因未证明。
+v3每帧重置完整MjvOption并记录flags/groups；更清晰的对照图来自
+保存状态的**零积分真实GUI回放**，不冒充同期积分截图，不增加物理实验。
+逐张QA另发现2张原截图捕获无关桌面窗口；原始字节在Git外私下保留，
+原路径/位置/SHA见[可用性清单](../../evidence/g4_s/s2a_r2/visuals/private_capture_availability.json)，不作公开实验画面。
+14张v3主图的每图metadata与QA见[公开图像清单](../../evidence/g4_s/s2a_r2/visuals/public_manifest.json)。
+图像不能单独量化微米穿透或亚步接触，数值结论由原始日志和独立重算支持。
+
+![A初态抓握，保存状态GUI回放](../../evidence/g4_s/s2a_r2/visuals/playback_v3/I1_A/I1_A_step_000.png)
+
+![A在step5失稳，保存状态GUI回放](../../evidence/g4_s/s2a_r2/visuals/playback_v3/I1_A/I1_A_step_005.png)
+
+![D在I1完成235步，保存状态GUI回放](../../evidence/g4_s/s2a_r2/visuals/playback_v3/I1_D/I1_D_step_235.png)
+
+![I3_D晚期接触失败，保存状态GUI回放](../../evidence/g4_s/s2a_r2/visuals/playback_v3/I3_D/I3_D_step_216.png)
+
+![I3晚期反例的独立接触与转动分析](../../evidence/g4_s/s2a_r2/numerical_review_v2/late_grasp_contact_failure.png)
+
+独立交互命令在repo根目录运行，持续到用户关闭：
+
+```bash
+DISPLAY=:1 XAUTHORITY=/run/user/1000/gdm/Xauthority /home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python scripts/g4s2a_r2_viewer.py --matrix evidence/g4_s/s2a_r2/matrix_v2 --run I1_D
+```
+
+Space播放/暂停、Right单步、Home初态、End最后帧、S慢速、V全景、Z近景。
+`--run I3_D`可检查晚期反例。它只加载保存状态并forward；历史solver冲量不被重建。
+完整报告：[R2工程与科学门](../REVIEW_G4_S2A_R2.md)；[预注册矩阵](../../evidence/g4_s/s2a_r2/matrix_v2/preregistered_matrix.json)。
+
+### E. 当前面试表述
+
+**约30秒：**
+
+> 我把Factory冻结PPO迁移到MuJoCo时，先用120Hz子步日志和真实GUI发现，速度反转放大早于力矩饱和。源代码审计指向刚体惯量差异，但短时正结果同时改变了物理模型和controller M。我用三初态2×2对照分开两者：改plant即可抑制初始振荡，只改controller M无效；两初态保持近2秒，第三个仍晚期失去接触并穿透。所以有局部因果证据，但持续抓持和PPO迁移修复仍未通过。
+
+**约2分钟：**
+
+> 这不是actor加载失败。原checkpoint、LSTM、RMS和19D/6D接口都冻结，MuJoCo首回合能运行，却在第3物理步滑移超过1mm、第4步失去双指接触。看120Hz子步而非仅15Hz策略记录后，我发现J7在还没达到12Nm cap时速度已经反向放大，同一个策略动作内D项继续反转。因此只说“力矩饱和”不足以解释最初失稳，放宽cap的历史负控还更差。
+>
+> 我核对Factory源码的body惯量+.01I规则。它经body角速度Jacobian形成稠密、随姿态变化的M，不能用joint armature等效替代。R1短窗改善同时改了plant和controller，所以R2必须隔离：A冻结、B只改plant、C只换同q的controller M、D两者都改。shadow model只算M不积分，原task PD、nullspace公式、力矩限额、夹指驱动和几何都保持，并记录完整J/M、task/null torque、实际motor force和接触。
+>
+> 三个事前登记初态都只准备一次；同态四变体共用两条归档动作再固定初始TCP参考，没有新PPO推理。结果B/D都抑制最初振荡，C仍像A迅速失败，支持physical plant惯量是本地主要干预。I1/I2能持续235步，但I3在1.48/1.80秒失去左接触并出现约1mm指垫穿透。这个反例使候选只能PARTIAL，不能挑两个好姿态就宣布修复。
+>
+> 我把GUI同期图与保存状态回放分开，保持所有失败和早停分母，并让独立reader从raw trace重算控制和接触。PhysX runtime M及实际输出仍未知，finger/contact耦合还没有分离，所以当前只说已验证局部效应、支持某个机制；下一阶段先解决持握质量门，再另行申请有限冻结PPO验证，不宣称恢复任务成功率。
+
+学习与理论面试考核本身仍为PENDING；以上仅更新真实工程案例文字。

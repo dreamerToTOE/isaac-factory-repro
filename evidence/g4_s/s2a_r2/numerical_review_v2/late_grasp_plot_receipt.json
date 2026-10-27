@@ -1,0 +1,16 @@
+{
+  "scope": "READ_ONLY_SAVED_METRICS_VISUALIZATION",
+  "input": "evidence/g4_s/s2a_r2/numerical_review_v2/independent_step_metrics.jsonl.gz",
+  "input_sha256": "bf6aa43b6169c051cf3675f558044ac5681a2c9567556bfaa6e228a089aff0f7",
+  "method_sha256": "1b60966e04846d9f3cc46ab819ed52b4fa4aa26918886d78ad47fc30b80e3fbc",
+  "image": "late_grasp_contact_failure.png",
+  "image_sha256": "8d11f73c5c965b59159296e2982a2e03bd5af41c59053a13b9d095ae28a9c22d",
+  "run_ids": [
+    "I3_B",
+    "I3_D"
+  ],
+  "new_physics_steps": 0,
+  "new_policy_calls": 0,
+  "model_compilations": 0,
+  "warning": "Normal contact force is distinct from actuator force. These are measured saved-step contact states, not continuous-time force guarantees."
+}

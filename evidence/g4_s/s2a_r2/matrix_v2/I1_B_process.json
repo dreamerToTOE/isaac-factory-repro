@@ -1,0 +1,53 @@
+{
+  "id": "I1_B",
+  "command": [
+    "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+    "-u",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_diagnostics.py",
+    "--trajectory",
+    "I1_B",
+    "--manifest",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/preregistered_matrix.json",
+    "--output",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/trajectories/I1_B"
+  ],
+  "exact_child_exit_code": 0,
+  "supervisor_timeout": false,
+  "wall_s": 16.69751147099987,
+  "result": {
+    "task": "G4-S2A-R2",
+    "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+    "run_id": "I1_B",
+    "variant": "B",
+    "initial_id": "I1",
+    "registered_steps": 235,
+    "integration_requests": 235,
+    "completed_steps": 235,
+    "simulation_duration_s": 1.9583333333333282,
+    "physics_wall_s": 0.1571173339998495,
+    "wall_s": 15.79574356199987,
+    "viewer_sync_wall_s": 0.7400833490016794,
+    "viewer_sync_count": 481,
+    "gui_and_logging_overhead_s": 15.63862906700001,
+    "graceful_close": {
+      "viewer_close_requested": true,
+      "render_threads_joined": [
+        "Thread-1 (_launch_internal)"
+      ],
+      "remaining_render_threads": [],
+      "close_wall_s": 0.021288488999971378
+    },
+    "runtime_failure": null,
+    "early_stop_reasons": [],
+    "policy_inferences": 0,
+    "max_slip_m": 0.0006677086618133421,
+    "max_rotation_slip_rad": 0.0015209446205981991,
+    "max_arm_qvel_rad_s": 1.2446740333161983,
+    "bilateral_positive_contact_fraction": 1.0,
+    "first_contact_loss_step": null,
+    "max_penetration_m": 2.0930244468061525e-05,
+    "peak_rss_kib": 769568,
+    "trace_sha256": "7bef0b46eadcdb186b74e63d59c033c0bacf882df11d2e60903009c378866932",
+    "termination": "REGISTERED_HORIZON_COMPLETE"
+  }
+}

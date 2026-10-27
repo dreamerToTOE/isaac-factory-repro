@@ -1,0 +1,67 @@
+"""Reproduce saved-metrics plot only; no simulator imports or integration.
+
+python3 plot_late_contact.py.txt --source independent_step_metrics.jsonl.gz --output NEW_DIRECTORY
+The initial execution used the existing numerical_review_v2 directory and
+refused to overwrite either PNG or receipt. Subsequent reproduction should use
+a new output directory. This file is an evidence method, not an experiment.
+"""
+import argparse
+import gzip
+import hashlib
+import json
+from pathlib import Path
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--source', type=Path, required=True)
+parser.add_argument('--output', type=Path, required=True)
+args = parser.parse_args()
+args.output.mkdir(parents=True, exist_ok=True)
+image = args.output/'late_grasp_contact_failure.png'
+receipt = args.output/'late_grasp_plot_receipt.json'
+if image.exists() or receipt.exists():
+    raise FileExistsError('Refuse to overwrite previous plot evidence')
+records = {'I3_B': [], 'I3_D': []}
+with gzip.open(args.source, 'rt') as stream:
+    for line in stream:
+        row = json.loads(line)
+        if row['run_id'] in records:
+            records[row['run_id']].append(row)
+fig, axes = plt.subplots(2, 3, figsize=(13, 7), constrained_layout=True)
+for index, (run_id, rows) in enumerate(records.items()):
+    t = [row['time_s'] for row in rows]
+    for side, color in [('left', '#2b67ad'), ('right', '#b43f39')]:
+        axes[index, 0].plot(t, [row[side+'_pad_force_n'] for row in rows], label=side+' pad', color=color)
+    axes[index, 0].set_yscale('symlog', linthresh=.001)
+    axes[index, 0].set_ylabel(run_id+' normal contact force [N]')
+    axes[index, 0].legend(fontsize=8)
+    axes[index, 1].semilogy(t, [max(1e-9, row['pad_penetration_m']*1e6) for row in rows], color='#8253a0')
+    axes[index, 1].axhline(50, color='grey', linestyle=':', label='50 um quality')
+    axes[index, 1].axhline(1000, color='#b43f39', linestyle='--', label='1000 um abort')
+    axes[index, 1].set_ylabel('Pad penetration [um, log]')
+    axes[index, 1].legend(fontsize=8)
+    axes[index, 2].plot(t, [row['rotation_slip_rad'] for row in rows], color='#177b54')
+    axes[index, 2].axhline(.05, color='grey', linestyle=':', label='0.05 rad gate')
+    axes[index, 2].set_ylabel('Peg-hand rotation slip [rad]')
+    axes[index, 2].legend(fontsize=8)
+    loss = next((row for row in rows if not row['bilateral_positive_contact']), None)
+    if loss:
+        for axis in axes[index]:
+            axis.axvline(loss['time_s'], color='#b43f39', linewidth=.8, linestyle='--')
+    for axis in axes[index]:
+        axis.grid(True, alpha=.25)
+        axis.set_xlabel('Diagnostic simulation time [s]')
+fig.suptitle('NO_POLICY_DIAGNOSTIC_ONLY: I3 late contact failure despite <1 mm translation slip\nFirst left-pad loss is followed by high normal force, >1 mm pad penetration and >0.05 rad rotation; guard stops retained.')
+fig.savefig(image, dpi=150)
+plt.close(fig)
+sha = lambda path: hashlib.sha256(Path(path).read_bytes()).hexdigest()
+with receipt.open('x') as stream:
+    json.dump({'scope': 'READ_ONLY_SAVED_METRICS_VISUALIZATION', 'input': str(args.source),
+        'input_sha256': sha(args.source), 'method_sha256': sha(__file__), 'image': image.name,
+        'image_sha256': sha(image), 'run_ids': list(records),
+        'new_physics_steps': 0, 'new_policy_calls': 0, 'model_compilations': 0,
+        'warning': 'Normal contact force is distinct from actuator force. These are measured saved-step contact states, not continuous-time force guarantees.'}, stream, indent=2)
+    stream.write('\n')
+print(image)

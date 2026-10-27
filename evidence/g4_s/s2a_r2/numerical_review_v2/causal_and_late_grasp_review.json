@@ -1,0 +1,973 @@
+{
+  "scope": "Registered deterministic no-policy factorial cases only; no unique global root-cause claim.",
+  "full_horizon_all_gate_pass_initials_by_variant": {
+    "A": [],
+    "B": [
+      "I1",
+      "I2"
+    ],
+    "C": [],
+    "D": [
+      "I1",
+      "I2"
+    ]
+  },
+  "registered_initial_denominator": 3,
+  "classifications": [
+    {
+      "claim": "Physical P1 intervention suppresses the initial arm oscillation with either C0 or C1 in the registered cases.",
+      "status": "VERIFIED_LOCAL_EFFECT",
+      "evidence": "Matched-state common-prefix P1/C0−P0/C0 and P1/C1−P0/C1 contrasts at each initial; physical/controller M selections and source arithmetic independently verified.",
+      "limitation": "P1 includes the preserved physical-full-M-dependent finger-force response; no isolated contact/finger/inertia submechanism or global stability theorem."
+    },
+    {
+      "claim": "Changing only the arm-controller mass matrix to C1 is sufficient to eliminate the observed instability.",
+      "status": "CONTRADICTED",
+      "evidence": "P0+C1 raw guard-stop outcomes retained independently for each admitted initial condition."
+    },
+    {
+      "claim": "Both P1 and C1 are required for initial oscillation suppression.",
+      "status": "CONTRADICTED",
+      "evidence": "P1+C0 common-prefix initial oscillation and complete-horizon gate outcomes are retained separately."
+    },
+    {
+      "claim": "Low target body inertia interacting with task-space PD/FD is an important initial instability mechanism.",
+      "status": "SUPPORTED_MECHANISM",
+      "evidence": "At fixed initial state the task torque has no controller-M dependence, while physical P1 changes effective joint inertia; inspect C1-only and P1 paired outcomes.",
+      "limitation": "Nonlinear contacts, implicit finger prediction and discrete feedback remain coupled; original PhysX runtime M/forces UNKNOWN."
+    },
+    {
+      "claim": "The versioned P1+C1 candidate sustains acceptable grasp over the entire registered horizon at all admitted poses.",
+      "status": "CONTRADICTED",
+      "evidence": {
+        "failed_registered_D_trajectories": [
+          "I3_D"
+        ],
+        "complete_horizon_D_passes": [
+          "I1",
+          "I2"
+        ]
+      }
+    },
+    {
+      "claim": "The controller-M intervention has no meaningful effect on any later dynamics or failure timing.",
+      "status": "INCONCLUSIVE",
+      "evidence": "B and D have different nullspace torques and late-failure times. No repetition, contact-isolation intervention or preregistered equivalence bound establishes absence of effect."
+    },
+    {
+      "claim": "The globally unique cause of complete Sim2Sim policy failure has been established.",
+      "status": "INCONCLUSIVE",
+      "evidence": "No new PPO inference, no task-level policy validation, finite poses/horizons, late grasp failure, incomplete original body correspondence and unknown original engine runtime dynamics."
+    }
+  ],
+  "factorial_common_prefix_steps": {
+    "I1": 5,
+    "I2": 3,
+    "I3": 4
+  },
+  "late_grasp_reviews": [
+    {
+      "run_id": "I1_B",
+      "late_failure_observed": false,
+      "recorded_steps": 235,
+      "events": {
+        "first_pad_contact_loss": null,
+        "first_pad_quality_depth_exceedance": null,
+        "first_rotation_acceptance_exceedance": null,
+        "first_severe_depth_exceedance": null
+      }
+    },
+    {
+      "run_id": "I1_D",
+      "late_failure_observed": false,
+      "recorded_steps": 235,
+      "events": {
+        "first_pad_contact_loss": null,
+        "first_pad_quality_depth_exceedance": null,
+        "first_rotation_acceptance_exceedance": null,
+        "first_severe_depth_exceedance": null
+      }
+    },
+    {
+      "run_id": "I2_B",
+      "late_failure_observed": false,
+      "recorded_steps": 235,
+      "events": {
+        "first_pad_contact_loss": null,
+        "first_pad_quality_depth_exceedance": null,
+        "first_rotation_acceptance_exceedance": null,
+        "first_severe_depth_exceedance": null
+      }
+    },
+    {
+      "run_id": "I2_D",
+      "late_failure_observed": false,
+      "recorded_steps": 235,
+      "events": {
+        "first_pad_contact_loss": null,
+        "first_pad_quality_depth_exceedance": null,
+        "first_rotation_acceptance_exceedance": null,
+        "first_severe_depth_exceedance": null
+      }
+    },
+    {
+      "run_id": "I3_B",
+      "late_failure_observed": true,
+      "recorded_steps": 177,
+      "events": {
+        "first_pad_contact_loss": {
+          "step": 176,
+          "time_s": 1.4666666666666666
+        },
+        "first_pad_quality_depth_exceedance": {
+          "step": 177,
+          "time_s": 1.475
+        },
+        "first_rotation_acceptance_exceedance": {
+          "step": 177,
+          "time_s": 1.475
+        },
+        "first_severe_depth_exceedance": {
+          "step": 177,
+          "time_s": 1.475
+        }
+      },
+      "witnesses": [
+        {
+          "step": 175,
+          "time_s": 1.4583333333333333,
+          "derived_metrics": {
+            "step": 175,
+            "time_s": 1.4583333333333333,
+            "max_arm_velocity_rad_s": 0.03662937442479403,
+            "joint7_velocity_rad_s": -0.014990831549170098,
+            "joint7_interval_acceleration_rad_s2": 0.11141571131566844,
+            "max_arm_interval_acceleration_rad_s2": 0.3906997485255803,
+            "translation_slip_m": 0.0006444628387667605,
+            "rotation_slip_rad": 0.001705111848706739,
+            "left_pad_force_n": 0.14585435386449258,
+            "right_pad_force_n": 0.14786361309481205,
+            "bilateral_positive_contact": true,
+            "all_penetration_m": 6.862966258386722e-06,
+            "pad_penetration_m": 6.862966258386722e-06,
+            "assembly_penetration_m": 0.0,
+            "arm_limit_violation_rad": 0.0,
+            "finger_limit_violation_m": 0.0,
+            "requested_max_abs_torque_nm": 0.03940604980940195,
+            "max_abs_task_torque_nm": 0.05762368244624277,
+            "max_abs_null_torque_nm": 0.09270461474329761,
+            "max_abs_actual_motor_force_nm": 0.0394060498094016,
+            "max_abs_finger_command_n": 0.1830878651368226,
+            "finger_command_force_n": [
+              -0.1830878651368226,
+              -0.18297941567239664
+            ],
+            "joint7_task_torque_nm": -0.003817352706081177,
+            "joint7_null_torque_nm": 6.5510320103502724e-18,
+            "joint7_requested_torque_nm": -0.0038173527060811705,
+            "joint7_actual_motor_force_nm": -0.0038173527060815548,
+            "cartesian_position_error_norm_m": 0.0002730059086044238,
+            "cartesian_orientation_error_norm_rad": 0.00011275717683239769,
+            "fd_linear_speed_m_s": 0.007301791205942394,
+            "fd_angular_speed_rad_s": 0.0015292264809089189,
+            "actuator_saturation_fraction": 0.0,
+            "actual_motor_force_at_limit_fraction": 0.0,
+            "source_software_clipping_fraction": 0.0,
+            "physical_mass_condition": 141.49025671758,
+            "controller_mass_condition": 597.0767294063344,
+            "physical_joint7_effective_inertia_kg_m2": 0.030849418132124374,
+            "controller_joint7_effective_inertia_kg_m2": 0.005620271850190794,
+            "null_dynamic_residual": 7.31348536740134e-15
+          },
+          "qpos": [
+            -0.48695894201669776,
+            0.42335223582452236,
+            0.4617942469880942,
+            -2.078823194027111,
+            -0.2881926514079901,
+            2.4417080454233067,
+            0.6183801496972839,
+            0.0032200741511062823,
+            0.0032192358674150317,
+            0.5860530251814222,
+            -0.019051215454060813,
+            0.09395900152933492,
+            -0.16469367456626788,
+            0.0002693306807162081,
+            1.0725189750327304e-05,
+            0.9863447272144842
+          ],
+          "qvel": [
+            0.03086737978462829,
+            0.014021333720922537,
+            -0.03662937442479403,
+            0.014115799086963908,
+            0.012342314065062879,
+            0.006124753519505436,
+            -0.014990831549170098,
+            -0.00020063074492584405,
+            -0.00018603838928422836,
+            0.003277690199943871,
+            -0.0026387530974819706,
+            -0.005327083573801544,
+            -0.01111403052594985,
+            0.005680664479971791,
+            -0.11028242265842877
+          ],
+          "deepest_contact": {
+            "geom1": "peg_collision",
+            "geom2": "right_finger_geom_7",
+            "distance_m": -6.862966258386722e-06,
+            "normal_force_n": 0.1327219379063694,
+            "position_world_m": [
+              0.5872677691095047,
+              -0.015237487332203446,
+              0.14395794746385032
+            ]
+          },
+          "finger_command": {
+            "mode": "step-implicit-pd",
+            "target_opening_per_finger_m": 0.0,
+            "raw_pd_force_n": [
+              -24.14403799983106,
+              -24.131522433785555
+            ],
+            "commanded_force_n": [
+              -0.1830878651368226,
+              -0.18297941567239664
+            ]
+          },
+          "integration_actuation": {
+            "stage": "mj_step_preintegration_actuation",
+            "state_time_s": 1.6999999999999964,
+            "step_end_time_s": 1.7083333333333297,
+            "arm_actuator_force_nm": [
+              -0.0394060498094016,
+              0.004856569838177421,
+              0.010982767989526382,
+              -0.00034248092985129214,
+              -0.0084378508087767,
+              0.0011856245578264267,
+              -0.0038173527060815548
+            ],
+            "arm_qfrc_actuator_nm": [
+              -0.0394060498094016,
+              0.004856569838177421,
+              0.010982767989526382,
+              -0.00034248092985129214,
+              -0.0084378508087767,
+              0.0011856245578264267,
+              -0.0038173527060815548
+            ],
+            "finger_actuator_force_n": [
+              -0.1830878651368226,
+              -0.18297941567239664
+            ]
+          },
+          "stop_reasons": []
+        },
+        {
+          "step": 176,
+          "time_s": 1.4666666666666666,
+          "derived_metrics": {
+            "step": 176,
+            "time_s": 1.4666666666666666,
+            "max_arm_velocity_rad_s": 0.03342895587055338,
+            "joint7_velocity_rad_s": -0.01273316746406305,
+            "joint7_interval_acceleration_rad_s2": 0.27091969021284573,
+            "max_arm_interval_acceleration_rad_s2": 0.384050226508878,
+            "translation_slip_m": 0.0006510161411566643,
+            "rotation_slip_rad": 0.0011845274107817711,
+            "left_pad_force_n": 0.0,
+            "right_pad_force_n": 0.06839591074122957,
+            "bilateral_positive_contact": false,
+            "all_penetration_m": 7.113498567535979e-06,
+            "pad_penetration_m": 7.113498567535979e-06,
+            "assembly_penetration_m": 0.0,
+            "arm_limit_violation_rad": 0.0,
+            "finger_limit_violation_m": 0.0,
+            "requested_max_abs_torque_nm": 0.04468437255649299,
+            "max_abs_task_torque_nm": 0.05103432805776667,
+            "max_abs_null_torque_nm": 0.09039345734491244,
+            "max_abs_actual_motor_force_nm": 0.04468437255649711,
+            "max_abs_finger_command_n": 0.1828315590716584,
+            "finger_command_force_n": [
+              -0.1828315590716584,
+              -0.18281014427451064
+            ],
+            "joint7_task_torque_nm": 0.0037565926971119615,
+            "joint7_null_torque_nm": -5.2722916633736804e-17,
+            "joint7_requested_torque_nm": 0.0037565926971119086,
+            "joint7_actual_motor_force_nm": 0.003756592697112742,
+            "cartesian_position_error_norm_m": 0.00028717085331228526,
+            "cartesian_orientation_error_norm_rad": 0.00010041716157894826,
+            "fd_linear_speed_m_s": 0.007164658625356663,
+            "fd_angular_speed_rad_s": 0.0015614088495165118,
+            "actuator_saturation_fraction": 0.0,
+            "actual_motor_force_at_limit_fraction": 0.0,
+            "source_software_clipping_fraction": 0.0,
+            "physical_mass_condition": 141.51003365141327,
+            "controller_mass_condition": 597.1410246137573,
+            "physical_joint7_effective_inertia_kg_m2": 0.03084835855869715,
+            "controller_joint7_effective_inertia_kg_m2": 0.005620222418770896,
+            "null_dynamic_residual": 9.618433327207102e-15
+          },
+          "qpos": [
+            -0.4867258236753822,
+            0.42347206879614513,
+            0.46151567235583957,
+            -2.0787064527765855,
+            -0.28810656326205875,
+            2.441756147043996,
+            0.6182740399684168,
+            0.0032157904740545713,
+            0.003215193550731438,
+            0.5860732021721303,
+            -0.019084193058042164,
+            0.09391612008280002,
+            -0.1635221608985531,
+            0.0002925357779517749,
+            8.136258920203674e-05,
+            0.9865396143581948
+          ],
+          "qvel": [
+            0.02797420095787077,
+            0.014379956594730528,
+            -0.03342895587055338,
+            0.014008950063074921,
+            0.010330577511763785,
+            0.005772194482727528,
+            -0.01273316746406305,
+            -0.0005140412462053025,
+            -0.00048507800203119716,
+            0.002421238884967288,
+            -0.003957312477761928,
+            -0.005145773584188931,
+            0.015728038668276004,
+            -0.008275642064893965,
+            -0.2850316956108934
+          ],
+          "deepest_contact": {
+            "geom1": "peg_collision",
+            "geom2": "right_finger_geom_7",
+            "distance_m": -7.113498567535979e-06,
+            "normal_force_n": 0.0,
+            "position_world_m": [
+              0.5872994360478461,
+              -0.015266471333985412,
+              0.14391447431431184
+            ]
+          },
+          "finger_command": {
+            "mode": "step-implicit-pd",
+            "target_opening_per_finger_m": 0.0,
+            "raw_pd_force_n": [
+              -24.115847014424943,
+              -24.11208436426657
+            ],
+            "commanded_force_n": [
+              -0.1828315590716584,
+              -0.18281014427451064
+            ]
+          },
+          "integration_actuation": {
+            "stage": "mj_step_preintegration_actuation",
+            "state_time_s": 1.7083333333333297,
+            "step_end_time_s": 1.716666666666663,
+            "arm_actuator_force_nm": [
+              -0.04468437255649711,
+              0.001912191772134246,
+              0.0055616297168805395,
+              0.001817919234096685,
+              -0.0026670579405621672,
+              0.001545308849337023,
+              0.003756592697112742
+            ],
+            "arm_qfrc_actuator_nm": [
+              -0.04468437255649711,
+              0.001912191772134246,
+              0.0055616297168805395,
+              0.001817919234096685,
+              -0.0026670579405621672,
+              0.001545308849337023,
+              0.003756592697112742
+            ],
+            "finger_actuator_force_n": [
+              -0.1828315590716584,
+              -0.18281014427451064
+            ]
+          },
+          "stop_reasons": []
+        },
+        {
+          "step": 177,
+          "time_s": 1.475,
+          "derived_metrics": {
+            "step": 177,
+            "time_s": 1.475,
+            "max_arm_velocity_rad_s": 0.029755705696180232,
+            "joint7_velocity_rad_s": -0.012163544888599605,
+            "joint7_interval_acceleration_rad_s2": 0.06835470905561337,
+            "max_arm_interval_acceleration_rad_s2": 0.4407900209247781,
+            "translation_slip_m": 0.0006625889016645734,
+            "rotation_slip_rad": 0.058836808073404974,
+            "left_pad_force_n": 74.5573573142346,
+            "right_pad_force_n": 1.3473165442518136,
+            "bilateral_positive_contact": true,
+            "all_penetration_m": 0.0010007719414442838,
+            "pad_penetration_m": 0.0010007719414442838,
+            "assembly_penetration_m": 0.0,
+            "arm_limit_violation_rad": 0.0,
+            "finger_limit_violation_m": 0.0,
+            "requested_max_abs_torque_nm": 0.03505711879839639,
+            "max_abs_task_torque_nm": 0.05771468557133338,
+            "max_abs_null_torque_nm": 0.08802688311663975,
+            "max_abs_actual_motor_force_nm": 0.03505711879839019,
+            "max_abs_finger_command_n": 0.18204579882331084,
+            "finger_command_force_n": [
+              -0.18202819057948522,
+              -0.18204579882331084
+            ],
+            "joint7_task_torque_nm": -0.003671037576110024,
+            "joint7_null_torque_nm": 2.996352072760919e-17,
+            "joint7_requested_torque_nm": -0.003671037576109994,
+            "joint7_actual_motor_force_nm": -0.003671037576109985,
+            "cartesian_position_error_norm_m": 0.00031127041065155713,
+            "cartesian_orientation_error_norm_rad": 9.078601804453801e-05,
+            "fd_linear_speed_m_s": 0.007027732799420789,
+            "fd_angular_speed_rad_s": 0.0014800080865053477,
+            "actuator_saturation_fraction": 0.0,
+            "actual_motor_force_at_limit_fraction": 0.0,
+            "source_software_clipping_fraction": 0.0,
+            "physical_mass_condition": 141.52925282626563,
+            "controller_mass_condition": 597.2045633247047,
+            "physical_joint7_effective_inertia_kg_m2": 0.030847345209974692,
+            "controller_joint7_effective_inertia_kg_m2": 0.005620171834230344,
+            "null_dynamic_residual": 7.872764535074213e-15
+          },
+          "qpos": [
+            -0.4865183548917457,
+            0.42359498542481555,
+            0.46126770814170476,
+            -2.0785912596689258,
+            -0.28803063541728335,
+            2.4418015032592937,
+            0.6181726770943451,
+            0.0025267306770244387,
+            0.0025426560328108343,
+            0.5861668224487304,
+            -0.01891951622849443,
+            0.09381131148424815,
+            -0.136287406310237,
+            -0.0021575510944966884,
+            -0.008879371231653858,
+            0.9906271975980842
+          ],
+          "qvel": [
+            0.024896254036376533,
+            0.014749995440452319,
+            -0.029755705696180232,
+            0.013823172919150688,
+            0.009111341373049291,
+            0.005442745835715284,
+            -0.012163544888599605,
+            -0.08268717564361588,
+            -0.08070450215047247,
+            0.011234433192016731,
+            0.019761219545728292,
+            -0.012577031826224345,
+            -2.0277515195839086,
+            0.9316590572672249,
+            -6.60912718121989
+          ],
+          "deepest_contact": {
+            "geom1": "peg_collision",
+            "geom2": "left_finger_geom_7",
+            "distance_m": -0.0010007719414442838,
+            "normal_force_n": 24.97039544335614,
+            "position_world_m": [
+              0.5841821755746041,
+              -0.02276318785989533,
+              0.143737944725206
+            ]
+          },
+          "finger_command": {
+            "mode": "step-implicit-pd",
+            "target_opening_per_finger_m": 0.0,
+            "raw_pd_force_n": [
+              -24.029499419815767,
+              -24.03003313613439
+            ],
+            "commanded_force_n": [
+              -0.18202819057948522,
+              -0.18204579882331084
+            ]
+          },
+          "integration_actuation": {
+            "stage": "mj_step_preintegration_actuation",
+            "state_time_s": 1.716666666666663,
+            "step_end_time_s": 1.7249999999999963,
+            "arm_actuator_force_nm": [
+              -0.03505711879839019,
+              -0.00027456035634945003,
+              0.013437607424804272,
+              0.00025959936534188197,
+              -0.008405228215719145,
+              0.0009817073114405917,
+              -0.003671037576109985
+            ],
+            "arm_qfrc_actuator_nm": [
+              -0.03505711879839019,
+              -0.00027456035634945003,
+              0.013437607424804272,
+              0.00025959936534188197,
+              -0.008405228215719145,
+              0.0009817073114405917,
+              -0.003671037576109985
+            ],
+            "finger_actuator_force_n": [
+              -0.18202819057948522,
+              -0.18204579882331084
+            ]
+          },
+          "stop_reasons": [
+            "SEVERE_PENETRATION"
+          ]
+        }
+      ],
+      "interpretation": "Saved-step contact loss and subsequent penetration are observed; full original contact impulses and a unique late-failure mechanism are not established. High normal contact force is distinct from bounded actuator force."
+    },
+    {
+      "run_id": "I3_D",
+      "late_failure_observed": true,
+      "recorded_steps": 216,
+      "events": {
+        "first_pad_contact_loss": {
+          "step": 215,
+          "time_s": 1.7916666666666667
+        },
+        "first_pad_quality_depth_exceedance": {
+          "step": 216,
+          "time_s": 1.8
+        },
+        "first_rotation_acceptance_exceedance": {
+          "step": 216,
+          "time_s": 1.8
+        },
+        "first_severe_depth_exceedance": {
+          "step": 216,
+          "time_s": 1.8
+        }
+      },
+      "witnesses": [
+        {
+          "step": 214,
+          "time_s": 1.7833333333333332,
+          "derived_metrics": {
+            "step": 214,
+            "time_s": 1.7833333333333332,
+            "max_arm_velocity_rad_s": 0.012409371105400323,
+            "joint7_velocity_rad_s": 0.006463216867431849,
+            "joint7_interval_acceleration_rad_s2": 0.031060235982256004,
+            "max_arm_interval_acceleration_rad_s2": 0.031060235982256004,
+            "translation_slip_m": 0.0006640072806643688,
+            "rotation_slip_rad": 0.0009936843237968891,
+            "left_pad_force_n": 0.14385737110569666,
+            "right_pad_force_n": 0.1457118722731506,
+            "bilateral_positive_contact": true,
+            "all_penetration_m": 5.814236019442923e-06,
+            "pad_penetration_m": 5.814236019442923e-06,
+            "assembly_penetration_m": 0.0,
+            "arm_limit_violation_rad": 0.0,
+            "finger_limit_violation_m": 0.0,
+            "requested_max_abs_torque_nm": 0.03967521170402138,
+            "max_abs_task_torque_nm": 0.03858376609254032,
+            "max_abs_null_torque_nm": 0.002013878687905035,
+            "max_abs_actual_motor_force_nm": 0.03967521170401599,
+            "max_abs_finger_command_n": 0.18112165621548665,
+            "finger_command_force_n": [
+              -0.18112165621548665,
+              -0.18110669362495452
+            ],
+            "joint7_task_torque_nm": 0.0017644252043280233,
+            "joint7_null_torque_nm": -7.362468640254518e-17,
+            "joint7_requested_torque_nm": 0.0017644252043279495,
+            "joint7_actual_motor_force_nm": 0.0017644252043285526,
+            "cartesian_position_error_norm_m": 0.0010824972501643274,
+            "cartesian_orientation_error_norm_rad": 0.00016208059516152387,
+            "fd_linear_speed_m_s": 0.00042713951985308727,
+            "fd_angular_speed_rad_s": 0.00023217677528734955,
+            "actuator_saturation_fraction": 0.0,
+            "actual_motor_force_at_limit_fraction": 0.0,
+            "source_software_clipping_fraction": 0.0,
+            "physical_mass_condition": 141.3365701160101,
+            "controller_mass_condition": 141.3365701160101,
+            "physical_joint7_effective_inertia_kg_m2": 0.030901333478608788,
+            "controller_joint7_effective_inertia_kg_m2": 0.030901333478608788,
+            "null_dynamic_residual": 2.66000073791492e-15
+          },
+          "qpos": [
+            -0.5128489677071687,
+            0.4329054733654414,
+            0.4890754150890567,
+            -2.075034220869669,
+            -0.3096778338168064,
+            2.438327182142075,
+            0.6329809094727814,
+            0.0031857189085917966,
+            0.0031854918652844313,
+            0.5866628692395666,
+            -0.018812046548552265,
+            0.09311771023008851,
+            -0.16360091477602354,
+            0.0003418098411715812,
+            2.3792949050330435e-07,
+            0.9865265449294436
+          ],
+          "qvel": [
+            -0.012046632048710103,
+            0.0030869789970203333,
+            0.012409371105400323,
+            -0.0001424900908245217,
+            -0.00931308763443149,
+            -0.00088481283316535,
+            0.006463216867431849,
+            -0.0002192408747135409,
+            -0.000228715726133662,
+            -0.0007666115389929236,
+            0.00029777313356656925,
+            -0.00034190468052510233,
+            -0.0047452182872726135,
+            0.002975278420160059,
+            -0.11235471718773303
+          ],
+          "deepest_contact": {
+            "geom1": "peg_collision",
+            "geom2": "right_finger_geom_7",
+            "distance_m": -5.814236019442923e-06,
+            "normal_force_n": 0.1268915068248313,
+            "position_world_m": [
+              0.5879403806173612,
+              -0.015015582393004311,
+              0.1431164332805102
+            ]
+          },
+          "finger_command": {
+            "mode": "step-implicit-pd",
+            "target_opening_per_finger_m": 0.0,
+            "raw_pd_force_n": [
+              -23.885501536102087,
+              -23.8837435888624
+            ],
+            "commanded_force_n": [
+              -0.18112165621548665,
+              -0.18110669362495452
+            ]
+          },
+          "integration_actuation": {
+            "stage": "mj_step_preintegration_actuation",
+            "state_time_s": 2.0249999999999955,
+            "step_end_time_s": 2.0333333333333288,
+            "arm_actuator_force_nm": [
+              -0.0028195100998045387,
+              -0.03967521170401599,
+              0.004860036048546677,
+              0.007677934747008381,
+              0.0014280123667525933,
+              0.00104292167236497,
+              0.0017644252043285526
+            ],
+            "arm_qfrc_actuator_nm": [
+              -0.0028195100998045387,
+              -0.03967521170401599,
+              0.004860036048546677,
+              0.007677934747008381,
+              0.0014280123667525933,
+              0.00104292167236497,
+              0.0017644252043285526
+            ],
+            "finger_actuator_force_n": [
+              -0.18112165621548665,
+              -0.18110669362495452
+            ]
+          },
+          "stop_reasons": []
+        },
+        {
+          "step": 215,
+          "time_s": 1.7916666666666667,
+          "derived_metrics": {
+            "step": 215,
+            "time_s": 1.7916666666666667,
+            "max_arm_velocity_rad_s": 0.012559515704783886,
+            "joint7_velocity_rad_s": 0.006082275989762737,
+            "joint7_interval_acceleration_rad_s2": -0.0457129053202935,
+            "max_arm_interval_acceleration_rad_s2": 0.0457129053202935,
+            "translation_slip_m": 0.0006719107376599778,
+            "rotation_slip_rad": 0.002927111259866715,
+            "left_pad_force_n": 0.0,
+            "right_pad_force_n": 0.06702732374343558,
+            "bilateral_positive_contact": false,
+            "all_penetration_m": 5.05320035910716e-06,
+            "pad_penetration_m": 5.05320035910716e-06,
+            "assembly_penetration_m": 0.0,
+            "arm_limit_violation_rad": 0.0,
+            "finger_limit_violation_m": 0.0,
+            "requested_max_abs_torque_nm": 0.03926397840176809,
+            "max_abs_task_torque_nm": 0.037870395267280026,
+            "max_abs_null_torque_nm": 0.002570814553246259,
+            "max_abs_actual_motor_force_nm": 0.039263978401765535,
+            "max_abs_finger_command_n": 0.18084380477782674,
+            "finger_command_force_n": [
+              -0.18084380477782674,
+              -0.1808142510343509
+            ],
+            "joint7_task_torque_nm": -0.001686720285291983,
+            "joint7_null_torque_nm": -5.070437248421093e-17,
+            "joint7_requested_torque_nm": -0.0016867202852920338,
+            "joint7_actual_motor_force_nm": -0.0016867202852919652,
+            "cartesian_position_error_norm_m": 0.0010833302117151807,
+            "cartesian_orientation_error_norm_rad": 0.00016290544440809428,
+            "fd_linear_speed_m_s": 0.0003793504203855231,
+            "fd_angular_speed_rad_s": 0.00014562752827963285,
+            "actuator_saturation_fraction": 0.0,
+            "actual_motor_force_at_limit_fraction": 0.0,
+            "source_software_clipping_fraction": 0.0,
+            "physical_mass_condition": 141.33495734424866,
+            "controller_mass_condition": 141.33495734424866,
+            "physical_joint7_effective_inertia_kg_m2": 0.030901435865473812,
+            "controller_joint7_effective_inertia_kg_m2": 0.030901435865473812,
+            "null_dynamic_residual": 3.4723162333405844e-15
+          },
+          "qpos": [
+            -0.5129505911086122,
+            0.43292914456652404,
+            0.48918007771992994,
+            -2.0750369871572762,
+            -0.3097543247985783,
+            2.4383195492505454,
+            0.6330315951060295,
+            0.0031802563137327553,
+            0.0031804381620363937,
+            0.5866517814041309,
+            -0.018824685728227458,
+            0.093116115825019,
+            -0.16255747601836168,
+            0.00034042322276747587,
+            0.0001213321349613716,
+            0.9866990100233625
+          ],
+          "qvel": [
+            -0.012194808173217558,
+            0.0028405441299167128,
+            0.012559515704783886,
+            -0.0003319545129020645,
+            -0.009178917812621732,
+            -0.0009159469835657026,
+            0.006082275989762737,
+            -0.0006555113830849589,
+            -0.0006064443897644986,
+            -0.0013305402522856343,
+            -0.0015167015610230688,
+            -0.00019132860834120642,
+            0.028639877769703666,
+            -0.004412277215136668,
+            -0.25383289700222716
+          ],
+          "deepest_contact": {
+            "geom1": "peg_collision",
+            "geom2": "right_finger_geom_7",
+            "distance_m": -5.05320035910716e-06,
+            "normal_force_n": 0.0,
+            "position_world_m": [
+              0.587940053905979,
+              -0.015020003979927254,
+              0.14311398092343147
+            ]
+          },
+          "finger_command": {
+            "mode": "step-implicit-pd",
+            "target_opening_per_finger_m": 0.0,
+            "raw_pd_force_n": [
+              -23.854963143113032,
+              -23.851621169012112
+            ],
+            "commanded_force_n": [
+              -0.18084380477782674,
+              -0.1808142510343509
+            ]
+          },
+          "integration_actuation": {
+            "stage": "mj_step_preintegration_actuation",
+            "state_time_s": 2.0333333333333288,
+            "step_end_time_s": 2.041666666666662,
+            "arm_actuator_force_nm": [
+              0.00116813648828692,
+              -0.039263978401765535,
+              0.008058336513504759,
+              0.0067018314132958265,
+              -0.0011603725716434067,
+              0.0008318485697931394,
+              -0.0016867202852919652
+            ],
+            "arm_qfrc_actuator_nm": [
+              0.00116813648828692,
+              -0.039263978401765535,
+              0.008058336513504759,
+              0.0067018314132958265,
+              -0.0011603725716434067,
+              0.0008318485697931394,
+              -0.0016867202852919652
+            ],
+            "finger_actuator_force_n": [
+              -0.18084380477782674,
+              -0.1808142510343509
+            ]
+          },
+          "stop_reasons": []
+        },
+        {
+          "step": 216,
+          "time_s": 1.8,
+          "derived_metrics": {
+            "step": 216,
+            "time_s": 1.8,
+            "max_arm_velocity_rad_s": 0.013192405395723096,
+            "joint7_velocity_rad_s": 0.005984164299003488,
+            "joint7_interval_acceleration_rad_s2": -0.011773402891109876,
+            "max_arm_interval_acceleration_rad_s2": 0.10309121543054411,
+            "translation_slip_m": 0.0006713039806077285,
+            "rotation_slip_rad": 0.06076949016449867,
+            "left_pad_force_n": 89.2981696348076,
+            "right_pad_force_n": 1.4403624959961343,
+            "bilateral_positive_contact": true,
+            "all_penetration_m": 0.0010476707932385815,
+            "pad_penetration_m": 0.0010476707932385815,
+            "assembly_penetration_m": 0.0,
+            "arm_limit_violation_rad": 0.0,
+            "finger_limit_violation_m": 0.0,
+            "requested_max_abs_torque_nm": 0.03909757649739701,
+            "max_abs_task_torque_nm": 0.03741493814021166,
+            "max_abs_null_torque_nm": 0.0031033727856399906,
+            "max_abs_actual_motor_force_nm": 0.03909757649739501,
+            "max_abs_finger_command_n": 0.17985137442178706,
+            "finger_command_force_n": [
+              -0.1797543245700899,
+              -0.17985137442178706
+            ],
+            "joint7_task_torque_nm": 0.001690066022989868,
+            "joint7_null_torque_nm": 4.266814766802651e-17,
+            "joint7_requested_torque_nm": 0.0016900660229899108,
+            "joint7_actual_motor_force_nm": 0.00169006602298905,
+            "cartesian_position_error_norm_m": 0.0010834925892911375,
+            "cartesian_orientation_error_norm_rad": 0.0001633726493049811,
+            "fd_linear_speed_m_s": 0.00034984659197117066,
+            "fd_angular_speed_rad_s": 0.00020446631846309703,
+            "actuator_saturation_fraction": 0.0,
+            "actual_motor_force_at_limit_fraction": 0.0,
+            "source_software_clipping_fraction": 0.0,
+            "physical_mass_condition": 141.3331440869901,
+            "controller_mass_condition": 141.3331440869901,
+            "physical_joint7_effective_inertia_kg_m2": 0.030901546052534,
+            "controller_joint7_effective_inertia_kg_m2": 0.030901546052534,
+            "null_dynamic_residual": 3.681800475679189e-15
+          },
+          "qpos": [
+            -0.5130551799176286,
+            0.43295108105427466,
+            0.48929001443156095,
+            -2.075041994132461,
+            -0.30982365666816747,
+            2.4383127307903343,
+            0.6330814631418545,
+            0.0024974717994048047,
+            0.002513776608078509,
+            0.5867116151438698,
+            -0.01864373221958542,
+            0.09305441382905917,
+            -0.13520553784478218,
+            -0.0020725019889850566,
+            -0.008617954856707922,
+            0.9907779257359834
+          ],
+          "qvel": [
+            -0.012550657081975227,
+            0.0026323785300774298,
+            0.013192405395723096,
+            -0.0006008370221509288,
+            -0.008319824350700531,
+            -0.0008182152253422071,
+            0.005984164299003488,
+            -0.08193414171935406,
+            -0.07999938647494613,
+            0.007180048768670598,
+            0.021714421037044684,
+            -0.0074042395151794295,
+            -1.9780263302258128,
+            0.9120176826127937,
+            -6.6365783545193695
+          ],
+          "deepest_contact": {
+            "geom1": "peg_collision",
+            "geom2": "left_finger_geom_7",
+            "distance_m": -0.0010476707932385815,
+            "normal_force_n": 27.74508840537579,
+            "position_world_m": [
+              0.5847626511322941,
+              -0.022453108435012942,
+              0.1429832504705269
+            ]
+          },
+          "finger_command": {
+            "mode": "step-implicit-pd",
+            "target_opening_per_finger_m": 0.0,
+            "raw_pd_force_n": [
+              -23.738518883721966,
+              -23.748371335843693
+            ],
+            "commanded_force_n": [
+              -0.1797543245700899,
+              -0.17985137442178706
+            ]
+          },
+          "integration_actuation": {
+            "stage": "mj_step_preintegration_actuation",
+            "state_time_s": 2.041666666666662,
+            "step_end_time_s": 2.0499999999999954,
+            "arm_actuator_force_nm": [
+              -0.0017944473061698466,
+              -0.03909757649739501,
+              0.004871119126405372,
+              0.0072466092028906914,
+              0.0012564775835220566,
+              0.0006994551600928415,
+              0.00169006602298905
+            ],
+            "arm_qfrc_actuator_nm": [
+              -0.0017944473061698466,
+              -0.03909757649739501,
+              0.004871119126405372,
+              0.0072466092028906914,
+              0.0012564775835220566,
+              0.0006994551600928415,
+              0.00169006602298905
+            ],
+            "finger_actuator_force_n": [
+              -0.1797543245700899,
+              -0.17985137442178706
+            ]
+          },
+          "stop_reasons": [
+            "SEVERE_PENETRATION"
+          ]
+        }
+      ],
+      "interpretation": "Saved-step contact loss and subsequent penetration are observed; full original contact impulses and a unique late-failure mechanism are not established. High normal contact force is distinct from bounded actuator force."
+    }
+  ],
+  "root_cause_status": "ROOT_CAUSE_PENDING",
+  "solution_status": "SOLUTION_PENDING",
+  "policy_validation_status": "VALIDATION_PENDING",
+  "engineering_candidate_recommendation": "CANDIDATE_PARTIAL",
+  "R3_recommendation": "Do not begin policy validation on the basis of the current results; resolve the registered grasp/contact failures in a separately authorized no-policy gate."
+}

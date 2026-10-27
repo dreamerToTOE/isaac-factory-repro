@@ -1,0 +1,34 @@
+{
+  "id": "I1",
+  "command": [
+    "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+    "-u",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_diagnostics.py",
+    "--prepare",
+    "I1",
+    "--manifest",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/preregistered_matrix.json",
+    "--output",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/initials/I1"
+  ],
+  "exact_child_exit_code": 0,
+  "supervisor_timeout": false,
+  "wall_s": 7.277634164000119,
+  "result": {
+    "id": "I1",
+    "preparation_steps": 0,
+    "physics_wall_s": 0.0,
+    "failure": null,
+    "admission": "PASS",
+    "policy_inferences": 0,
+    "gui_sync_wall_s": 0.005256870000039271,
+    "graceful_close": {
+      "viewer_close_requested": true,
+      "render_threads_joined": [
+        "Thread-1 (_launch_internal)"
+      ],
+      "remaining_render_threads": [],
+      "close_wall_s": 0.028083873000014137
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "I2",
+  "preparation_steps": 30,
+  "physics_wall_s": 0.022036347001176182,
+  "failure": null,
+  "admission": "PASS",
+  "policy_inferences": 0,
+  "gui_sync_wall_s": 0.10230942599923765,
+  "graceful_close": {
+    "viewer_close_requested": true,
+    "render_threads_joined": [
+      "Thread-1 (_launch_internal)"
+    ],
+    "remaining_render_threads": [],
+    "close_wall_s": 0.021968875000311527
+  }
+}

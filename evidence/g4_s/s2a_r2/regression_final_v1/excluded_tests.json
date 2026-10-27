@@ -1,0 +1,14 @@
+{
+  "file_exclusions_historical_case_counts": {
+    "tests/test_g4i1_policy.py": 49,
+    "tests/test_g4i1_edge_cpu.py": 9,
+    "tests/test_g4i2_fault_contract.py": 11,
+    "tests/test_g4i2_policy_probe.py": 4
+  },
+  "node_exclusions": {
+    "tests/test_g4s2a_inference.py::test_real_frozen_bridge_matches_direct_once_normalized_recurrent_sequence_and_reset": "Would execute five actual actor forwards and load the checkpoint.",
+    "tests/test_g4s1b_env.py::test_environment_collector_real_exit_and_no_policy": "Would execute 518 new headless physical steps outside the registered GUI-only diagnostic matrix."
+  },
+  "excluded_count": 75,
+  "reason": "R2 forbids additional actor/checkpoint execution and unregistered/headless physical integration. Original tests preserved unchanged."
+}

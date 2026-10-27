@@ -1,0 +1,19 @@
+{
+  "scope": "All raw traces and numeric evidence remain public; these two contaminated screenshots are retained privately with exact hashes. Original capture metadata remains unchanged and is qualified by this availability index.",
+  "captures": [
+    {
+      "original_evidence_path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I3_D/initial.png",
+      "private_local_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r2/private_desktop_captures/matrix_v2/trajectories/I3_D/initial.png",
+      "sha256": "7eceae4b7874c9d0977cfbbb8448930b50edb2195b0d0c93f378009bc2241ac1",
+      "publicly_available": false,
+      "reason": "Visual QA found unrelated desktop window content; original bytes retained locally outside Git without editing. Not experimental visual evidence."
+    },
+    {
+      "original_evidence_path": "evidence/g4_s/s2a_r2/visuals/playback_v2/I3_B/I3_B_step_175.png",
+      "private_local_path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/logs/g4_s/s2a_r2/private_desktop_captures/visuals/playback_v2/I3_B/I3_B_step_175.png",
+      "sha256": "35d7f0f8b979345e37a1369d0fb9b4b2946dfd5a6029d1c0103aac6e418b9e23",
+      "publicly_available": false,
+      "reason": "Visual QA found unrelated desktop window content; original bytes retained locally outside Git without editing. Not experimental visual evidence."
+    }
+  ]
+}

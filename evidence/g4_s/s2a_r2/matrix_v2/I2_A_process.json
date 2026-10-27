@@ -1,0 +1,55 @@
+{
+  "id": "I2_A",
+  "command": [
+    "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+    "-u",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_diagnostics.py",
+    "--trajectory",
+    "I2_A",
+    "--manifest",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/preregistered_matrix.json",
+    "--output",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/s2a_r2/matrix_v2/trajectories/I2_A"
+  ],
+  "exact_child_exit_code": 0,
+  "supervisor_timeout": false,
+  "wall_s": 7.577653629999986,
+  "result": {
+    "task": "G4-S2A-R2",
+    "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+    "run_id": "I2_A",
+    "variant": "A",
+    "initial_id": "I2",
+    "registered_steps": 235,
+    "integration_requests": 3,
+    "completed_steps": 3,
+    "simulation_duration_s": 0.02500000000000005,
+    "physics_wall_s": 0.002038742999502574,
+    "wall_s": 6.766864093000095,
+    "viewer_sync_wall_s": 0.021299445000295236,
+    "viewer_sync_count": 13,
+    "gui_and_logging_overhead_s": 6.764826561000518,
+    "graceful_close": {
+      "viewer_close_requested": true,
+      "render_threads_joined": [
+        "Thread-1 (_launch_internal)"
+      ],
+      "remaining_render_threads": [],
+      "close_wall_s": 0.01929764000033174
+    },
+    "runtime_failure": null,
+    "early_stop_reasons": [
+      "SEVERE_PENETRATION"
+    ],
+    "policy_inferences": 0,
+    "max_slip_m": 0.00181434415554913,
+    "max_rotation_slip_rad": 0.12395629936741466,
+    "max_arm_qvel_rad_s": 11.099418000651257,
+    "bilateral_positive_contact_fraction": 0.6666666666666666,
+    "first_contact_loss_step": 2,
+    "max_penetration_m": 0.0016784370492780676,
+    "peak_rss_kib": 780740,
+    "trace_sha256": "67dac3c43aca2acf29f6eb7ccfe14b837e62519358a04c849ffc228a37ce8823",
+    "termination": "DIAGNOSTIC_EARLY_STOP"
+  }
+}

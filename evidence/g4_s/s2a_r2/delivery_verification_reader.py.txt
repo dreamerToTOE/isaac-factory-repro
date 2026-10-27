@@ -1,0 +1,124 @@
+"""Pure file/Git delivery check. No simulator, actor, checkpoint load or GUI.
+
+Run from repository root: python3 evidence/g4_s/s2a_r2/delivery_verification_reader.py.txt
+Refuses to overwrite the first receipt. Final report publication SHA is recorded
+separately after real push, avoiding a self-referential report/commit digest.
+"""
+from pathlib import Path
+import gzip,hashlib,json,re,subprocess
+
+ROOT=Path.cwd()
+BASE=ROOT/'evidence/g4_s/s2a_r2'
+START='292ca516e4909cabe2de425b28909f790f4cf351'
+ALLOWED={'docs/case_studies/SIM2SIM_PANDA_CONTROL_INSTABILITY.md','docs/case_studies/README.md'}
+def read(path):return json.loads(Path(path).read_text())
+def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+def write(path,value):
+ with Path(path).open('x') as f:json.dump(value,f,ensure_ascii=False,indent=2,allow_nan=False);f.write('\n')
+
+entries=subprocess.check_output(['git','ls-tree','-r','-z',START]).split(b'\0')
+protected=0
+for entry in entries:
+ if not entry:continue
+ meta,name=entry.split(b'\t',1);mode,kind,digest=meta.split();name=name.decode()
+ if name in ALLOWED:continue
+ assert kind==b'blob' and mode in (b'100644',b'100755'), (name,mode)
+ data=(ROOT/name).read_bytes()
+ assert hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()==digest.decode(),name
+ protected+=1
+assert protected==1979
+
+registry=read(BASE/'matrix_v2/preregistered_matrix.json')
+for name,h in registry['source_sha256'].items():assert sha(ROOT/name)==h,name
+assert not (BASE/'matrix_v1/coordinator_attempt.json').exists()
+assert registry['steps_per_trajectory']==235 and registry['maximum_new_integration_steps']==2880
+for stage in ('regression_prelaunch_v2','regression_final_v1'):
+ record=read(BASE/stage/'summary.json');assert record['passed'] and record['preservation']['equal_before_after']
+ assert record['selected_cpu']['passed']==694 and record['selected_cpu']['skipped']==1
+ assert record['new_R2_test_cases']==42 and record['excluded_cases']==75
+ assert record['system_plot']['passed']==1 and record['static_models']['all_four_variants_verified']
+ for name,metadata in read(BASE/stage/'sources_after.json').items():
+  # Prelaunch naturally predates later read-only analysis/viewer development.
+  if stage=='regression_final_v1':assert sha(ROOT/name)==metadata['sha256'],name
+
+summary=read(BASE/'matrix_v2/summary.json')
+assert summary['execution_gate_passed'] and summary['completed_accounting']
+assert summary['policy_inferences']==0 and summary['wall_s']<900 and len(summary['receipts'])==15
+assert all(r['exact_child_exit_code']==0 and not r['supervisor_timeout'] for r in summary['receipts'])
+assert sum(r['result'].get('preparation_steps',0) for r in summary['receipts'])==60
+steps=0;runids=[]
+for initial in ('I1','I2','I3'):
+ assert read(BASE/'matrix_v2/initials'/initial/'admission.json')['admission']=='PASS'
+ for variant in 'ABCD':
+  run=initial+'_'+variant;runids.append(run);directory=BASE/'matrix_v2/trajectories'/run
+  result=read(directory/'result.json');identity=read(directory/'identity.json')
+  events=[json.loads(x) for x in gzip.open(directory/'physics.jsonl.gz','rt')]
+  rows=[r for r in events if r['event']=='physics_result']
+  assert len(rows)==result['completed_steps'] and len(events)==2*len(rows) and len(rows)<=235
+  assert result['trace_sha256']==sha(directory/'physics.jsonl.gz')
+  assert [r['step'] for r in rows]==list(range(1,len(rows)+1))
+  assert result['runtime_failure'] is None and result['graceful_close']['remaining_render_threads']==[]
+  assert identity['initial_state_sha256']==sha(BASE/'matrix_v2/initials'/initial/'initial_state.json')
+  assert identity['input_schedule_sha256']==registry['input_schedule_sha256']
+  assert read(directory/'gui_admission.json')['status']=='GUI_OPEN_VISIBLE'
+  steps+=len(rows)
+assert steps==1357 and summary['new_integration_requests']==steps+60==1417
+review=read(BASE/'numerical_review_v2/numerical_review.json')
+assert review['numerical_review_passed'] and review['complete_registered_accounting']
+assert review['reviewed_physics_results']==steps and review['reviewed_trajectory_count']==12
+assert all(r['gates']['interface_correctness'] for r in review['trajectories'])
+passed=[r['run_id'] for r in review['trajectories'] if r['gates']['all_stability_gates']]
+assert passed==['I1_B','I1_D','I2_B','I2_D']
+
+private=read(BASE/'visuals/private_capture_availability.json')['captures']
+assert len(private)==2
+private_by_path={r['original_evidence_path']:r for r in private}
+for item in private:
+ assert not (ROOT/item['original_evidence_path']).exists()
+ assert sha(item['private_local_path'])==item['sha256']
+live=read(BASE/'visuals/live_image_qa.json');early=read(BASE/'visuals/earlier_playback_qa.json')
+assert live['reviewed_count']==38 and early['viewed_count']==18
+for item in live['files']+early['findings']:
+ path=ROOT/item['path']
+ assert (item.get('actually_viewed') or item.get('viewed')) is True
+ assert sha(path if path.exists() else private_by_path[item['path']]['private_local_path'])==item['sha256']
+public=read(BASE/'visuals/public_manifest.json')
+assert public['preferred_image_count']==len(public['captures'])==14
+for item in public['captures']:
+ assert sha(ROOT/item['file'])==item['sha256'] and item['mode']=='SAVED_DIAGNOSTIC_STATE_PLAYBACK'
+ assert item['new_integration_steps']==item['policy_calls']==0
+ assert item['window']['map_state']=='IsViewable'
+
+for name in ('docs/REVIEW_G4_S2A_R2.md','docs/case_studies/SIM2SIM_PANDA_CONTROL_INSTABILITY.md',
+             'docs/case_studies/README.md','evidence/g4_s/s2a_r2/README.md'):
+ path=ROOT/name;body=path.read_text()
+ for target in re.findall(r'\]\(([^)]+)\)',body):
+  if target.startswith(('http','plugin:')):continue
+  assert (path.parent/target.split('#')[0]).exists(),(name,target)
+assert 'G4_S2A_R2_PASS' in (ROOT/'docs/REVIEW_G4_S2A_R2.md').read_text()
+
+artifacts={str(p.relative_to(ROOT)):{'sha256':sha(p),'bytes':p.stat().st_size}
+ for p in sorted(BASE.rglob('*')) if p.is_file() and p.name not in ('completion_gate.json','publication_evidence.json')}
+sources={str(p.relative_to(ROOT)):{'sha256':sha(p),'bytes':p.stat().st_size}
+ for p in sorted(ROOT.glob('scripts/*g4s2a_r2*.py'))+sorted(ROOT.glob('tests/test_g4s2a_r2.py'))}
+receipt={'task':'G4-S2A-R2','starting_commit':START,'engineering_status':'G4_S2A_R2_PASS',
+ 'scope':'Completed diagnostic engineering gate; no policy/task-level validation or globally unique root cause.',
+ 'candidate_decision':'CANDIDATE_PARTIAL','R3':'NO-GO','S2B':'NO-GO',
+ 'ROOT_CAUSE':'PENDING','SOLUTION':'PENDING','VALIDATION':'PENDING','learning_assessment':'PENDING',
+ 'source_hashes':sources,'protected_starting_tracked_files':protected,'authorized_existing_document_exceptions':sorted(ALLOWED),
+ 'registered_initial_count':3,'admitted_initial_count':3,'registered_trajectory_count':12,'reviewed_run_ids':runids,
+ 'new_diagnostic_steps':steps,'new_preparation_steps':60,'total_new_integration_steps':1417,
+ 'budget_steps':2880,'new_policy_calls':0,'checkpoint_deserializations':0,
+ 'exact_all_15_child_exit_codes':0,'new_physics_execution_wall_s':summary['wall_s'],
+ 'full_horizon_all_gate_pass_runs':passed,'preserved_failure_runs':sorted(set(runids)-set(passed)),
+ 'GUI':'VERIFIED_NATIVE_X11_VISIBLE','preferred_public_GUI_images':14,'public_raw_and_playback_GUI_images':68,
+ 'private_contaminated_images_retained_with_hashes':2,'all_70_GUI_images_individually_reviewed':True,
+ 'regression_final':'PASS:694passed,1skipped,+1systemplot;42newR2cases;75explicitexclusions;4staticmodelselections',
+ 'independent_review':'PASS:1357rawresults;M/torque/finger/FD/limits/contact/slip/admission reconstructed',
+ 'historical_evidence_and_checkpoints_preserved':True,'default_S1B_changed':False,
+ 'publication':'Actual scientific commit and independent remote SHA are recorded after push in publication_evidence.json and report appendix.',
+ 'report_hash_policy':'Report is excluded from this immutable artifact hash set because publication appendix is appended only after the real push; its then-current SHA is in publication receipt.',
+ 'artifacts':artifacts}
+write(BASE/'completion_gate.json',receipt)
+print(json.dumps({'engineering_status':receipt['engineering_status'],'candidate':'CANDIDATE_PARTIAL',
+ 'artifact_count':len(artifacts),'artifact_bytes':sum(x['bytes'] for x in artifacts.values()),'protected_tracked_files':protected}))

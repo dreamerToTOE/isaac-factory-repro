@@ -1,0 +1,39 @@
+{
+  "task": "G4-S2A-R2",
+  "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+  "run_id": "I3_C",
+  "variant": "C",
+  "initial_id": "I3",
+  "registered_steps": 235,
+  "integration_requests": 4,
+  "completed_steps": 4,
+  "simulation_duration_s": 0.03333333333333341,
+  "physics_wall_s": 0.0026866600001085317,
+  "wall_s": 6.85136979400022,
+  "viewer_sync_wall_s": 0.023880159998952877,
+  "viewer_sync_count": 15,
+  "gui_and_logging_overhead_s": 6.84868458200026,
+  "graceful_close": {
+    "viewer_close_requested": true,
+    "render_threads_joined": [
+      "Thread-1 (_launch_internal)"
+    ],
+    "remaining_render_threads": [],
+    "close_wall_s": 0.02261921200033612
+  },
+  "runtime_failure": null,
+  "early_stop_reasons": [
+    "PEG_ESCAPE_ROTATION",
+    "SEVERE_PENETRATION"
+  ],
+  "policy_inferences": 0,
+  "max_slip_m": 0.004437611035543426,
+  "max_rotation_slip_rad": 0.37944932976492884,
+  "max_arm_qvel_rad_s": 12.54948567394035,
+  "bilateral_positive_contact_fraction": 0.5,
+  "first_contact_loss_step": 3,
+  "max_penetration_m": 0.0016462718625656655,
+  "peak_rss_kib": 783140,
+  "trace_sha256": "ea9d0b06561e2185857bdee0f8e4d464e23b074847b69a6cea6bb4f5b4eedfd8",
+  "termination": "DIAGNOSTIC_EARLY_STOP"
+}

@@ -1,0 +1,406 @@
+{
+  "schema_version": 1,
+  "task": "G4-S2A-R2",
+  "reviewer": "independent_subagent_r2_live_images",
+  "scope": "All 38 original LIVE integration PNG captures found under matrix_v2/trajectories/*/*.png before any public/private disposition. Not a physics or GUI visibility audit.",
+  "review_method": "Each of the 38 PNG files was actually opened with view_image and visually inspected, in consecutive batches of four (last batch two). No contact-sheet approximation, image editing, GUI launch, integration, policy invocation, or recapture was performed.",
+  "count_at_inventory": 38,
+  "reviewed_count": 38,
+  "classification_counts": {
+    "clean_native_only": 37,
+    "contaminated": 1,
+    "uncertain": 0
+  },
+  "definitions": {
+    "clean_native_only": "Visible pixels contain the MuJoCo scene and its experiment overlay, with no visually detected unrelated desktop window, notification, or private application surface. This does not independently establish native-window visibility at every time or validate numeric overlay fields.",
+    "contaminated": "Unrelated application/desktop content is visible; preserve the exact original privately with SHA receipt, omit public PNG and mark original capture unavailable.",
+    "uncertain": "Evidence insufficient to classify visible content."
+  },
+  "global_limitations": [
+    "Oversized native orange contact glyphs obscure the held peg in all 37 clean captures; these are explanatory raw evidence, not preferred geometry/closure illustrations.",
+    "Numeric overlays identify experiment and step but are not independently validated by this pixel QA.",
+    "The contaminated I3_D initial capture cannot be repaired by painting/cropping; a later saved-state playback must remain explicitly labeled and cannot replace this original live capture."
+  ],
+  "files": [
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I1_A/initial.png",
+      "sha256": "bb5d9ca946a4da486094c9420d35ca9c1254d11f1ea677d594d43624e0b374c0",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I1_A initial live overlay; close view of gripper and hole; orange native contact glyph covers most of held peg.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I1_A/physics_004.png",
+      "sha256": "8b2ccd682b4ecc61698735f7d98f6b1d792de10763db9b2040e71d9e18c9b160",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I1_A step 4 live overlay; gripper and blue hole visible, central held-peg region obscured by orange native contact glyph.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I1_A/physics_005.png",
+      "sha256": "5c2b5f40828362af03879a5acc8356238a9f0e8eecc4667c7a9e1bc5d6f80616",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I1_A step 5 live overlay; separated orange native glyph faces visible near gripper; blue hole remains visible.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I1_B/initial.png",
+      "sha256": "3ce54f74d15b3af76440b419b24c0bb8053ef5d71be44159b163c53b7208f349",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I1_B initial live overlay; gripper and blue hole visible; held-peg geometry obscured by orange native glyph.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I1_B/physics_004.png",
+      "sha256": "d02b9db3333d8dc27ded3284da21181ce9fbe01cb45cabc5a29067e44515108d",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I1_B step 4 live overlay; overlapping orange native glyphs cover held-peg region.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I1_B/physics_016.png",
+      "sha256": "608ba92a5866792cd8827b2a44e3ebee9f6ea84fa8a9bef9b65ddb6828086b5e",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I1_B step 16 live overlay; orange native glyph overlaps gripper and blue hole.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I1_B/physics_235.png",
+      "sha256": "70d98042756d39d034eb4ad5f79f41de444559dd1c38c7a59870be78043414b8",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I1_B step 235 live overlay; model is visible, orange native contact glyph still obscures held-peg detail.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I1_C/initial.png",
+      "sha256": "64ea54c92353028a622ad507e119c0d073ee7acebed7203c541fd22ae05dc7ff",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I1_C initial live overlay; same close view framing, orange native glyph obscures held peg.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I1_C/physics_004.png",
+      "sha256": "cbeabaf7f143397d7249d9aa060ae83fc7df06ae0c2137aaf10cda0437c8de6a",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I1_C step 4 live overlay; central contact glyph covers peg region.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I1_C/physics_005.png",
+      "sha256": "00067ee3d97dd74b62181b02b033907b1a0d3665464a7e1e734406a68cc2bf2f",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I1_C step 5 live overlay; multiple orange glyph faces visible, blue hole unobscured below.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I1_D/initial.png",
+      "sha256": "943cca868b903a6baa522ce5c73194eb10c7af24877da6a8d8fc6ec209beea60",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I1_D initial live overlay; orange native glyph covers most of peg.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I1_D/physics_004.png",
+      "sha256": "145cad4c198280ceef83c1072739b27a53dd09962aa81c3442757307a122a7a1",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I1_D step 4 live overlay; central contact glyph obscures peg, native model and table visible.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I1_D/physics_016.png",
+      "sha256": "88b2b8be04f73e27fa4b444cbf1f5cbea172920bdb75ed1e730c393eca22f11e",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I1_D step 16 live overlay; central orange native glyph remains oversized.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I1_D/physics_235.png",
+      "sha256": "75e51aaf25a9407ec8498b10ee34656055482d3f10dbf90a331f6ca6bb7e6523",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I1_D step 235 live overlay; gripper/table/hole visible, held-peg region covered by orange native glyph.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I2_A/initial.png",
+      "sha256": "14045cf5bc48ff9d73e66e9adff29b60a48a876c9ba64b0c1c2439f9297120e0",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I2_A initial live overlay; tilted gripper above blue bored hole, large orange native glyph obscures peg.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I2_A/physics_003.png",
+      "sha256": "4a5dd614e6ce09688da3d509942eb4ec1ccab4fae8dc1c4f6f1aee1df90ee856",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I2_A step 3 live overlay; tilted gripper and hole visible, orange native glyph covers peg.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I2_B/initial.png",
+      "sha256": "ad04d658eeda0778f48a7f2345a10e1dd12a3887000322508a156871cf31a80a",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I2_B initial live overlay; tilted gripper above hole, oversized orange native glyph.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I2_B/physics_004.png",
+      "sha256": "adf8e449a5ea8e28499279241950748e8673bdd8d2795871f46be4017fbbc59a",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I2_B step 4 live overlay; central glyph obscures held peg; bored hole visible.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I2_B/physics_016.png",
+      "sha256": "b81f8094f2379086fefebf144e8f842da944a5b02d8950c935821a3777181797",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I2_B step 16 live overlay; native scene only, orange glyph covers held peg.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I2_B/physics_235.png",
+      "sha256": "517508af6d7d5b76580c7a090ae52b59aefd3904edf70a0c78bf4e25ae9a7cec",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I2_B step 235 live overlay; native scene only, orange glyph covers held peg.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I2_C/initial.png",
+      "sha256": "2cb6c4b32bbc2f6db6e657dd6f65ddbaea6d1d7ec4deed69c433ef9a34aeae93",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I2_C initial live overlay; tilted gripper and bored hole visible; contact glyph dominates center.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I2_C/physics_003.png",
+      "sha256": "820cf2bc3640aca3d084cea36983555d40d54d9aec1e2f98fd4101adffef4c4e",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I2_C step 3 live overlay; tilted gripper and hole visible; orange contact glyph obscures held peg.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I2_D/initial.png",
+      "sha256": "f48b48ab00fa373136af4b6b772efbcc18be8bcc14ba72da1e54e020f6add52a",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I2_D initial live overlay; orange contact glyph obscures held peg, hole/table visible.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I2_D/physics_004.png",
+      "sha256": "6fd8f7c38b99ad2ea4bf89729aa9424510432e2a46b3cb7e8349f261ffb831a6",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I2_D step 4 live overlay; native model visible around oversized orange glyph.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I2_D/physics_016.png",
+      "sha256": "779734cdbd9f76b8ab0e656856621320ce7b5b6a7160614051a18ee92e292937",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I2_D step 16 live overlay; native scene only; orange contact glyph obscures held peg.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I2_D/physics_235.png",
+      "sha256": "2a0207b63bdea19783bfcb0b909c3c829f9c9a5ce63aa4d79e7537911b1752cc",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I2_D step 235 live overlay; native scene only; orange contact glyph obscures held peg.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I3_A/initial.png",
+      "sha256": "b0f7f1e179879b0a28eed3b9836675a9a4cb0ec30ab9ab58cccb07f1ea433f97",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I3_A initial live overlay; tilted gripper above blue bored hole, oversized orange native contact glyph.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I3_A/physics_004.png",
+      "sha256": "e51205babe2ecf2e7b704bcebbed1b30ea988362d85229d2f490073030198bce",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I3_A step 4 live overlay; gripper/hole/table visible, central native glyph covers held peg.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I3_B/initial.png",
+      "sha256": "bd80443e3ab4962cbb39edc9b7facad696efc6a062278a1d1484ca5be7a4218f",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I3_B initial live overlay; native scene only, orange glyph obscures peg.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I3_B/physics_004.png",
+      "sha256": "d5a925760a03bd058ee636201e96dc1d4a258e53947141620510a08ac697c61d",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I3_B step 4 live overlay; native scene only, orange glyph obscures peg.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I3_B/physics_016.png",
+      "sha256": "960578fdb321651ac2e3c6a12aea4b280156d5e213edba9fbb34a8cb772b3558",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I3_B step 16 live overlay; native scene only, orange glyph obscures peg.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I3_B/physics_177.png",
+      "sha256": "175b0bdeb21c2dcdc85cc71f516c2be8feebf2ac0e6611074f9ef44bbbc93482",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I3_B step 177 live overlay; several orange native contact glyph faces obscure peg region.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I3_C/initial.png",
+      "sha256": "4c94eb6d0cb35aed7a9a12ddf7138e81eabe489fa0b71de4ad07825412c686ce",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I3_C initial live overlay; closer camera framing than adjacent variants, native scene only, contact glyph covers held peg.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I3_C/physics_004.png",
+      "sha256": "bc06a4d0b81ac8cab48b1a5e8fa715796f1b2872a6b7bce01e54a127c1551c59",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I3_C step 4 live overlay; closer camera framing, native scene only, large contact glyph covers held peg.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I3_D/initial.png",
+      "sha256": "7eceae4b7874c9d0977cfbbb8448930b50edb2195b0d0c93f378009bc2241ac1",
+      "actually_viewed": true,
+      "classification": "contaminated",
+      "unrelated_desktop_content_detected": true,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "Entire capture shows an unrelated Codex application/chat surface instead of the MuJoCo scene; unrelated chat content and sidebar are visible. This image is not acceptable as public experiment evidence. Do not copy its private text into the public report.",
+      "recommended_disposition": "preserve_exact_original_privately_outside_git_with_sha_receipt_and_mark_public_unavailable"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I3_D/physics_004.png",
+      "sha256": "d515128be3f4e5dc3347dd7b4ad17c1422a9658071d8851b591c4d3cfbe5035d",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I3_D step 4 live overlay; native scene only, orange native contact glyph obscures held peg.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I3_D/physics_016.png",
+      "sha256": "2b9c0e6399c2e291d6e5cd65e696fc1bbd3369e3924e8212e6e66cf7bc364f55",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I3_D step 16 live overlay; native scene only, orange native contact glyph obscures held peg.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    },
+    {
+      "path": "evidence/g4_s/s2a_r2/matrix_v2/trajectories/I3_D/physics_216.png",
+      "sha256": "b20ad989056afb0dcd95da74ac2b16b262bdfd7b8ed53fab80c13fa65a13542c",
+      "actually_viewed": true,
+      "classification": "clean_native_only",
+      "unrelated_desktop_content_detected": false,
+      "preferred_for_geometry_illustration": false,
+      "visual_finding": "I3_D step 216 live overlay; multiple orange native contact glyph faces obscure peg region.",
+      "recommended_disposition": "retain_exact_original_with_contact_glyph_occlusion_note"
+    }
+  ]
+}

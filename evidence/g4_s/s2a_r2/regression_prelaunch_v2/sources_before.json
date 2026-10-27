@@ -1,0 +1,26 @@
+{
+  "scripts/analyze_g4s2a_r2.py": {
+    "sha256": "7d76d0c7c4633d8f5f8c0b11dd1efd22637e068ca9076990647897c683c4b0c8",
+    "bytes": 40554
+  },
+  "scripts/audit_g4s2a_r2.py": {
+    "sha256": "f0b1ab347a9438db4f3f5e7b215bc00bd390ee56b470cdf4db34b782ad7429bc",
+    "bytes": 20617
+  },
+  "scripts/g4s2a_r2_diagnostics.py": {
+    "sha256": "0b20710334716d67347918945d6d5246019d37a9bf1f78f93829ce7ae5c4f980",
+    "bytes": 23638
+  },
+  "scripts/g4s2a_r2_model.py": {
+    "sha256": "56e3eda236512ff47b67ba5321960faa1e54e8aa1bef2e5c2fc2c55d3f63fcc9",
+    "bytes": 6758
+  },
+  "scripts/g4s2a_r2_viewer.py": {
+    "sha256": "a0b9cae598a799987d144cebabd7cc894e16b68513bb33fc7aa06e276141475f",
+    "bytes": 4264
+  },
+  "tests/test_g4s2a_r2.py": {
+    "sha256": "76e27c745cb2f1c62e80a11711ca1a8cd6356c7d93d8ef2529c0a862b9b4fd72",
+    "bytes": 15717
+  }
+}

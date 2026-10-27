@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/audit_g4s2a_r2.py", line 315, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/audit_g4s2a_r2.py", line 250, in main
+    return guarded_pytest(sys.argv[3:], Path(sys.argv[2]))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/audit_g4s2a_r2.py", line 196, in guarded_pytest
+    static_result = static_model_checks()
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/audit_g4s2a_r2.py", line 125, in static_model_checks
+    np.testing.assert_allclose(getattr(adapted.model, attribute), getattr(baseline.model, attribute), rtol=0, atol=3e-16)
+  File "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/lib/python3.11/site-packages/numpy/testing/_private/utils.py", line 1768, in assert_allclose
+    assert_array_compare(compare, actual, desired, err_msg=str(err_msg),
+  File "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/lib/python3.11/site-packages/numpy/testing/_private/utils.py", line 983, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Not equal to tolerance rtol=0, atol=3e-16
+
+Mismatched elements: 6 / 56 (10.7%)
+First 5 mismatches are at indices:
+ [3, 0]: -0.16817480155429768 (ACTUAL), -0.16817480155429798 (DESIRED)
+ [3, 2]: -0.12287755442070325 (ACTUAL), -0.12287755442070392 (DESIRED)
+ [4, 0]: 0.6627687684234962 (ACTUAL), 0.6627687684234549 (DESIRED)
+ [4, 1]: -0.00678331473455962 (ACTUAL), -0.006783314734544799 (DESIRED)
+ [4, 2]: 0.2520531692196756 (ACTUAL), 0.25205316921967597 (DESIRED)
+Max absolute difference among violations: 4.13002965e-14
+Max relative difference among violations: 2.18499037e-12
+ ACTUAL: array([[ 1.      ,  0.      ,  0.      ,  0.      ],
+       [ 0.006305,  0.751245,  0.007418,  0.659952],
+       [ 0.711549,  0.006344, -0.013112,  0.702485],...
+ DESIRED: array([[ 1.      ,  0.      ,  0.      ,  0.      ],
+       [ 0.006305,  0.751245,  0.007418,  0.659952],
+       [ 0.711549,  0.006344, -0.013112,  0.702485],...

@@ -1,0 +1,105 @@
+[
+  {
+    "run": "I1_A",
+    "command": [
+      "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+      "scripts/g4s2a_r2_viewer.py",
+      "--run",
+      "I1_A",
+      "--steps",
+      "0,5",
+      "--capture",
+      "evidence/g4_s/s2a_r2/visuals/playback_v3/I1_A"
+    ],
+    "exact_child_exit_code": 0,
+    "wall_s": 4.374152469000364,
+    "new_physics_steps": 0,
+    "actor_calls": 0
+  },
+  {
+    "run": "I1_C",
+    "command": [
+      "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+      "scripts/g4s2a_r2_viewer.py",
+      "--run",
+      "I1_C",
+      "--steps",
+      "5",
+      "--capture",
+      "evidence/g4_s/s2a_r2/visuals/playback_v3/I1_C"
+    ],
+    "exact_child_exit_code": 0,
+    "wall_s": 3.747284127999592,
+    "new_physics_steps": 0,
+    "actor_calls": 0
+  },
+  {
+    "run": "I2_D",
+    "command": [
+      "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+      "scripts/g4s2a_r2_viewer.py",
+      "--run",
+      "I2_D",
+      "--steps",
+      "235",
+      "--capture",
+      "evidence/g4_s/s2a_r2/visuals/playback_v3/I2_D"
+    ],
+    "exact_child_exit_code": 0,
+    "wall_s": 3.9978357369996047,
+    "new_physics_steps": 0,
+    "actor_calls": 0
+  },
+  {
+    "run": "I3_B",
+    "command": [
+      "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+      "scripts/g4s2a_r2_viewer.py",
+      "--run",
+      "I3_B",
+      "--steps",
+      "175,176,177",
+      "--capture",
+      "evidence/g4_s/s2a_r2/visuals/playback_v3/I3_B"
+    ],
+    "exact_child_exit_code": 0,
+    "wall_s": 5.287610321999637,
+    "new_physics_steps": 0,
+    "actor_calls": 0
+  },
+  {
+    "run": "I3_D",
+    "command": [
+      "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+      "scripts/g4s2a_r2_viewer.py",
+      "--run",
+      "I3_D",
+      "--steps",
+      "214,215,216",
+      "--capture",
+      "evidence/g4_s/s2a_r2/visuals/playback_v3/I3_D"
+    ],
+    "exact_child_exit_code": 0,
+    "wall_s": 5.204890647999946,
+    "new_physics_steps": 0,
+    "actor_calls": 0
+  },
+  {
+    "run": "I1_D",
+    "command": [
+      "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+      "scripts/g4s2a_r2_viewer.py",
+      "--run",
+      "I1_D",
+      "--steps",
+      "0",
+      "--capture",
+      "evidence/g4_s/s2a_r2/visuals/playback_v3/overview",
+      "--overview"
+    ],
+    "exact_child_exit_code": 0,
+    "wall_s": 3.89352363099988,
+    "new_physics_steps": 0,
+    "actor_calls": 0
+  }
+]

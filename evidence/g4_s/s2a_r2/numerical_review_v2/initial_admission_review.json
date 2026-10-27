@@ -1,0 +1,64 @@
+[
+  {
+    "initial_id": "I1",
+    "present_forward_bilateral_force_n": {
+      "left": 0.22672704354981854,
+      "right": 0.22660104280630047
+    },
+    "present_arm_limit_rad": 0.0,
+    "present_finger_limit_m": 0.0,
+    "entire_cylinder_z_min_in_hole_frame_m": 0.03414450646905633,
+    "present_state_passed": true,
+    "initial_state_sha256": "0758ccbfd8049788d1075e48fbfa5ac0c6356d56ab05a16bfe6fff6f5cd59947",
+    "status": "PRESENT_STATE_RECHECKED_HISTORICAL_ADMISSION_PRESERVED",
+    "new_preparation_steps": 0,
+    "historical_ten_step_grasp_window": "Not reconstructed; original archived admission SHA remains the evidence basis.",
+    "historical_admission_sha256": "d6358d83b39a56da89cfcbbe4d7fc6c0ed8664c5257fb7a62d40865f85a3cda4"
+  },
+  {
+    "initial_id": "I2",
+    "present_forward_bilateral_force_n": {
+      "left": 0.19410548339727127,
+      "right": 0.19307994458259436
+    },
+    "present_arm_limit_rad": 0.0,
+    "present_finger_limit_m": 0.0,
+    "entire_cylinder_z_min_in_hole_frame_m": 0.04684303487509129,
+    "present_state_passed": true,
+    "initial_state_sha256": "445c88a99256cd293d6a717bbad84494dc9be80495e503107c68dc066a658219",
+    "status": "INDEPENDENT_30_STEP_PREPARATION_REVIEW",
+    "new_preparation_steps": 30,
+    "closing_trace_sha256": "44b0dce7a4473c8f29db55bc5e0062dafea365f2a60f267304427ab4cdeac35d",
+    "last10_bilateral_contact": true,
+    "last10_translation_drift_m": 6.806796473053981e-06,
+    "last10_rotation_drift_rad": 0.0001120988557670922,
+    "last10_nonpad_or_non_grasp_interference": false,
+    "saved_final_state_error": 0.0,
+    "drift_vs_runner_abs_error_m": 1.8804131429045468e-19,
+    "rotation_drift_vs_runner_abs_error_rad": 1.9807928084217274e-12,
+    "independently_admitted": true
+  },
+  {
+    "initial_id": "I3",
+    "present_forward_bilateral_force_n": {
+      "left": 0.16922894996540894,
+      "right": 0.16834884060761668
+    },
+    "present_arm_limit_rad": 0.0,
+    "present_finger_limit_m": 0.0,
+    "entire_cylinder_z_min_in_hole_frame_m": 0.044384189371298524,
+    "present_state_passed": true,
+    "initial_state_sha256": "7bbff58d8e3f70f2a5d59bd3261399b6f42bdc54609c85f7a0460cb758e065b9",
+    "status": "INDEPENDENT_30_STEP_PREPARATION_REVIEW",
+    "new_preparation_steps": 30,
+    "closing_trace_sha256": "2a3c4675404ae05c5a48c7d56cbe7633fafcd89c60e498c5cde0e895f6faa6a4",
+    "last10_bilateral_contact": true,
+    "last10_translation_drift_m": 8.413047510658638e-06,
+    "last10_rotation_drift_rad": 3.570471210846481e-05,
+    "last10_nonpad_or_non_grasp_interference": false,
+    "saved_final_state_error": 0.0,
+    "drift_vs_runner_abs_error_m": 1.0333801956502464e-19,
+    "rotation_drift_vs_runner_abs_error_rad": 3.7313515423081575e-11,
+    "independently_admitted": true
+  }
+]

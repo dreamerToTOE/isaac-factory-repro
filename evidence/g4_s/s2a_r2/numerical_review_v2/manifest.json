@@ -1,0 +1,15 @@
+{
+  "files": {
+    "causal_and_late_grasp_review.json": "6de84fa2ecc3ed30e7e5b0b0f1d0265a351e7f2e9a691cba035cef18627a8127",
+    "factorial_effects.json": "1391d7c74f48744d5cc12e2b2321ec2a749b49630c9468f68883680dcf75ab99",
+    "factorial_traces.png": "4eab8996bf42be7f6d604ebe396c7c467b83d2a3b488bdc284987eb7527b0791",
+    "independent_step_metrics.jsonl.gz": "bf6aa43b6169c051cf3675f558044ac5681a2c9567556bfaa6e228a089aff0f7",
+    "inertia_tensor_review.json": "850778047611167d2b0a0c5cde3072ea95aea039eb98960ae2ff87f73f193783",
+    "initial_admission_review.json": "dcdeca842229a8978e2c3224d5404e242650ee13de6d4079051780b4817770dd",
+    "numerical_review.json": "f7f75c9ba9526a0affb67425525b29269d4fccaa7a4788e3465a65eb73a3e5b7",
+    "trajectory_metrics.csv": "e63a738df10ee5dec2ca2ac226f3be86732d57561a99579d5b695b7ffeb6edb2"
+  },
+  "new_physics_steps": 0,
+  "new_policy_calls": 0,
+  "model_compilations": 0
+}
