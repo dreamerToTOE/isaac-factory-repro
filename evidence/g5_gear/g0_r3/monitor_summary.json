@@ -1,0 +1,72 @@
+{
+  "samples": 9004,
+  "intervals": 9003,
+  "median_interval_seconds": 0.09999967000476317,
+  "p95_interval_seconds": 0.10007223400316434,
+  "max_interval_seconds": 0.37626459300372517,
+  "over_500ms": 0,
+  "min_free_MiB": 1891.75,
+  "peak_used_MiB": 5925.875,
+  "timing_aggregates": {
+    "csv_write_flush": {
+      "count": 9004,
+      "max_seconds": 0.08560305699938908,
+      "total_seconds": 0.6328351900592679
+    },
+    "deadline_lateness": {
+      "count": 9003,
+      "max_seconds": 0.17729812640754972,
+      "total_seconds": 1.5593383967207046
+    },
+    "heartbeat_submit": {
+      "count": 9004,
+      "max_seconds": 0.0035955740022473037,
+      "total_seconds": 0.1401839425234357
+    },
+    "memory_query": {
+      "count": 9004,
+      "max_seconds": 0.27636090400483226,
+      "total_seconds": 2.472665855792002
+    },
+    "processing_and_coordination_after_heartbeat": {
+      "count": 9003,
+      "max_seconds": 0.003211073999409564,
+      "total_seconds": 3.624441406071128
+    },
+    "processing_and_coordination_before_csv": {
+      "count": 9004,
+      "max_seconds": 0.0018754749980871566,
+      "total_seconds": 1.672856462886557
+    },
+    "sleep_actual": {
+      "count": 9003,
+      "max_seconds": 0.10167572499631206,
+      "total_seconds": 891.3854522729089
+    },
+    "sleep_overshoot": {
+      "count": 9003,
+      "max_seconds": 0.002796504588332027,
+      "total_seconds": 1.1118874300082098
+    },
+    "sleep_requested": {
+      "count": 9003,
+      "max_seconds": 0.09973447000083979,
+      "total_seconds": 890.2735648429007
+    }
+  },
+  "heartbeat_publisher": {
+    "coalesced_count": 77,
+    "failure": null,
+    "first_submitted_sample": 51314.064685882,
+    "last_publish_monotonic": 52214.365596722,
+    "last_published_sample": 52214.364864485,
+    "last_submitted_sample": 52214.364864485,
+    "published_count": 8927,
+    "thread_alive_after_close": false,
+    "timing": {
+      "count": 8927,
+      "max_seconds": 0.5341217649984173,
+      "total_seconds": 29.476207735948265
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "continuous_monitoring": true,
+  "coverage_note": "Sampled coverage: regular intervals are not continuous measurement.",
+  "ended": {
+    "monotonic_seconds": 52214.53257328,
+    "unix_seconds": 1793114074.4648125,
+    "utc": "2026-10-27T15:14:34.464799+00:00"
+  },
+  "error": null,
+  "finalized": true,
+  "first_sample": {
+    "monotonic_seconds": 51314.064685882,
+    "unix_seconds": 1793113173.9969256,
+    "utc": "2026-10-27T14:59:33.996916+00:00"
+  },
+  "identity": {
+    "birth_ticks": "5131382",
+    "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+    "pgid": 449682,
+    "pid": 449682,
+    "state": "R"
+  },
+  "last_sample": {
+    "monotonic_seconds": 52214.364864485,
+    "unix_seconds": 1793114074.2971044,
+    "utc": "2026-10-27T15:14:34.297080+00:00"
+  },
+  "low_memory_stop_condition_observed": false,
+  "max_low_consecutive": 0,
+  "min_free_MiB": 1891.75,
+  "monitoring_gaps": [],
+  "peak_used_MiB": 5925.875,
+  "policy": {
+    "consecutive_samples": 3,
+    "floor_MiB": 1024,
+    "gap_limit_seconds": 0.5,
+    "interval_seconds": 0.1,
+    "stale_seconds": 2
+  },
+  "sample_count": 9004,
+  "schema_version": 2,
+  "started": {
+    "monotonic_seconds": 51313.881989623,
+    "unix_seconds": 1793113173.814225,
+    "utc": "2026-10-27T14:59:33.814199+00:00"
+  },
+  "stop_reason": "child_wait_observed",
+  "stop_signals": [],
+  "supervisor_identity": {
+    "birth_ticks": "5131391",
+    "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+    "pgid": 449684,
+    "pid": 449684,
+    "state": "R"
+  },
+  "target_identity": {
+    "birth_ticks": "5131425",
+    "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+    "pgid": 449689,
+    "pid": 449689,
+    "state": "R"
+  },
+  "timing_diagnostics": {
+    "aggregates": {
+      "csv_write_flush": {
+        "count": 9004,
+        "max_seconds": 0.08560305699938908,
+        "total_seconds": 0.6328351900592679
+      },
+      "deadline_lateness": {
+        "count": 9003,
+        "max_seconds": 0.17729812640754972,
+        "total_seconds": 1.5593383967207046
+      },
+      "heartbeat_submit": {
+        "count": 9004,
+        "max_seconds": 0.0035955740022473037,
+        "total_seconds": 0.1401839425234357
+      },
+      "memory_query": {
+        "count": 9004,
+        "max_seconds": 0.27636090400483226,
+        "total_seconds": 2.472665855792002
+      },
+      "processing_and_coordination_after_heartbeat": {
+        "count": 9003,
+        "max_seconds": 0.003211073999409564,
+        "total_seconds": 3.624441406071128
+      },
+      "processing_and_coordination_before_csv": {
+        "count": 9004,
+        "max_seconds": 0.0018754749980871566,
+        "total_seconds": 1.672856462886557
+      },
+      "sleep_actual": {
+        "count": 9003,
+        "max_seconds": 0.10167572499631206,
+        "total_seconds": 891.3854522729089
+      },
+      "sleep_overshoot": {
+        "count": 9003,
+        "max_seconds": 0.002796504588332027,
+        "total_seconds": 1.1118874300082098
+      },
+      "sleep_requested": {
+        "count": 9003,
+        "max_seconds": 0.09973447000083979,
+        "total_seconds": 890.2735648429007
+      }
+    },
+    "heartbeat_publisher": {
+      "coalesced_count": 77,
+      "failure": null,
+      "first_submitted_sample": 51314.064685882,
+      "last_publish_monotonic": 52214.365596722,
+      "last_published_sample": 52214.364864485,
+      "last_submitted_sample": 52214.364864485,
+      "published_count": 8927,
+      "thread_alive_after_close": false,
+      "timing": {
+        "count": 8927,
+        "max_seconds": 0.5341217649984173,
+        "total_seconds": 29.476207735948265
+      }
+    },
+    "note": "Sampling and heartbeat publication are separate. Wall-clock segments include scheduling delays; sleep overshoot is not proof of scheduler cause. Gap detail is partial and instrumentation adds overhead."
+  }
+}

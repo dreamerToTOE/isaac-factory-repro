@@ -1,0 +1,9 @@
+{
+  "monotonic_seconds": 51313.93383728,
+  "returncode": 0,
+  "role": "supervisor",
+  "stderr": "Running as unit: g5-gear-g0-r3-20261027-supervisor.service\n",
+  "stdout": "",
+  "unix_seconds": 1793113173.8660767,
+  "utc": "2026-10-27T14:59:33.866061+00:00"
+}

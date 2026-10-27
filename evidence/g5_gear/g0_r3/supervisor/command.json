@@ -1,0 +1,39 @@
+{
+  "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+  "command": [
+    "bash",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/run_sim.sh",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/g5_gear_preflight.py",
+    "--headless",
+    "--device",
+    "cuda:0",
+    "--output",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/evidence/g5_gear/g0_r3/trace.jsonl",
+    "--steps",
+    "300"
+  ],
+  "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro",
+  "engineering": true,
+  "environment": {
+    "FACTORY_VENV": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01",
+    "OMP_NUM_THREADS": "4"
+  },
+  "guard_directory": "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g5_gear_g0_r3_seed0_20261027/guard",
+  "identity": {
+    "birth_ticks": "5131391",
+    "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+    "pgid": 449684,
+    "pid": 449684,
+    "state": "R"
+  },
+  "lock_file": "/run/user/1000/isaac-factory-gpu0.lock",
+  "schema_version": 2,
+  "stale_seconds": 2,
+  "started": {
+    "monotonic_seconds": 51313.960676226,
+    "unix_seconds": 1793113173.8929157,
+    "utc": "2026-10-27T14:59:33.892901+00:00"
+  },
+  "startup_timeout_seconds": 30,
+  "timeout_seconds": 900.0
+}

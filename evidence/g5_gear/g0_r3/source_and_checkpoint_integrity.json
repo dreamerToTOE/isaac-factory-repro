@@ -1,0 +1,11 @@
+{
+  "registered_repo_commit": "bf7ce69c87cc21642247ae60fabb73ab02f06844",
+  "current_repo_commit": "bf7ce69c87cc21642247ae60fabb73ab02f06844",
+  "registered_upstream_commit": "90b79bb2d44feb8d833f260f2bf37da3487180ba",
+  "current_upstream_commit": "90b79bb2d44feb8d833f260f2bf37da3487180ba",
+  "registered_source_hashes_match": true,
+  "source_mismatches": [],
+  "upstream_worktree_clean": true,
+  "checkpoint_sha256_after": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+  "checkpoint_matches_expected": true
+}

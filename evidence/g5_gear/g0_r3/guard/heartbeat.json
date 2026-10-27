@@ -1,0 +1,31 @@
+{
+  "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+  "free_MiB": 3765.9375,
+  "identity": {
+    "birth_ticks": "5131382",
+    "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+    "pgid": 449682,
+    "pid": 449682,
+    "state": "R"
+  },
+  "low_consecutive": 0,
+  "monotonic_seconds": 52214.364864485,
+  "sample_count": 9004,
+  "state": "bound",
+  "supervisor_identity": {
+    "birth_ticks": "5131391",
+    "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+    "pgid": 449684,
+    "pid": 449684,
+    "state": "R"
+  },
+  "target_identity": {
+    "birth_ticks": "5131425",
+    "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+    "pgid": 449689,
+    "pid": 449689,
+    "state": "R"
+  },
+  "unix_seconds": 1793114074.2971044,
+  "utc": "2026-10-27T15:14:34.297080+00:00"
+}
