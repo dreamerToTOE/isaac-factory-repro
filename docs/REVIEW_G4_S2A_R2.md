@@ -386,8 +386,15 @@ S1B default、S2A/R1证据未改，案例第10节追加R2并更新30秒/2分钟�
 
 ## 10. Git 发布与停止
 
-本节在实际 commit/普通 fast-forward push/独立 `git ls-remote` 后归档真实 SHA，
-不在提交前虚构自己的 commit ID。最终远端核对在交付时报告。
+科学诊断主体、源码、报告、案例与完整证据的实际提交为：
+
+`db2ea97f84f43a4015591936e6bc23339105f926`。
+
+已从起点`292ca516e4909cabe2de425b28909f790f4cf351`普通fast-forward推送至GitHub `main`，
+push真实exit0；于UTC `2026-10-27T01:38:36.112269+00:00`独立执行`git ls-remote origin refs/heads/main`，
+远端返回同一SHA。工作区当时干净。
+本节及[发布收据](../evidence/g4_s/s2a_r2/publication_evidence.json)通过仅文档/发布记录的后续提交保全；
+没有新增积分、推理或改动科学结果。最终文档提交与远端head在交付答复中再次核对。
 
 STOP after G4-S2A-R2：未开始 R3、S2B、训练、微调、GearMesh、NutThread。
 学习与理论面试考核仍为 PENDING。

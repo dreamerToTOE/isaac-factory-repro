@@ -1,0 +1,32 @@
+{
+  "task": "G4-S2A-R2",
+  "scientific_commit_sha": "db2ea97f84f43a4015591936e6bc23339105f926",
+  "starting_commit_sha": "292ca516e4909cabe2de425b28909f790f4cf351",
+  "scientific_commit_file_count": 338,
+  "scientific_commit_bytes": 19918038,
+  "push": {
+    "method": "Ordinary git push origin HEAD:refs/heads/main, no force",
+    "exact_exit_code": 0,
+    "result": "292ca51..db2ea97 HEAD -> main"
+  },
+  "independent_remote_verification": {
+    "utc": "2026-10-27T01:38:36.112269+00:00",
+    "command": [
+      "git",
+      "ls-remote",
+      "origin",
+      "refs/heads/main"
+    ],
+    "output": "db2ea97f84f43a4015591936e6bc23339105f926\trefs/heads/main",
+    "expected_sha": "db2ea97f84f43a4015591936e6bc23339105f926",
+    "matches": true
+  },
+  "publication_followup_scope": [
+    "docs/REVIEW_G4_S2A_R2.md",
+    "evidence/g4_s/s2a_r2/publication_evidence.json"
+  ],
+  "report_sha256_after_publication_appendix": "4013bc2864c3a3fbc80da7bb10b3a051e7ed6460f714f5f27c157ca426586054",
+  "new_physics_steps_in_publication_followup": 0,
+  "new_actor_calls_in_publication_followup": 0,
+  "final_followup_sha_policy": "A commit cannot contain its own immutable SHA. Final publication HEAD/remote equality is independently verified after the followup push and reported in the user-facing delivery plus local Git-external final receipt."
+}
