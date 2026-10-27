@@ -1,7 +1,59 @@
 {
-  "branch": "main",
-  "delivery_status": "PREPARED_AWAITING_REVIEWED_COMMIT_AND_FAST_FORWARD_PUSH",
-  "receipt_policy": "After scientific delivery push, replace this closeout receipt with verified content SHA and remote SHA. The receipt commit cannot name itself; its final SHA is reported in the final answer.",
   "starting_commit": "85017ba626e123ed95c397c32c4b852e9118abe4",
-  "starting_local_remote_match": true
+  "branch": "main",
+  "delivery_status": "SCIENTIFIC_CONTENT_PUSHED_AND_REMOTE_VERIFIED",
+  "content_commit_sha": "d834a191fd12d9b7d8a35bda090b534eaa7a6ad9",
+  "independently_verified_remote_sha": "d834a191fd12d9b7d8a35bda090b534eaa7a6ad9",
+  "verified_utc": "2026-10-27T12:20:07.171971+00:00",
+  "fast_forward": true,
+  "force_push": false,
+  "commands": [
+    {
+      "args": [
+        "git",
+        "ls-remote",
+        "https://github.com/dreamerToTOE/isaac-factory-repro.git",
+        "refs/heads/main"
+      ],
+      "returncode": 0,
+      "stdout": "85017ba626e123ed95c397c32c4b852e9118abe4\trefs/heads/main\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "85017ba626e123ed95c397c32c4b852e9118abe4",
+        "d834a191fd12d9b7d8a35bda090b534eaa7a6ad9"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "git",
+        "push",
+        "--porcelain",
+        "origin",
+        "HEAD:refs/heads/main"
+      ],
+      "returncode": 0,
+      "stdout": "To github.com:dreamerToTOE/isaac-factory-repro.git\n \tHEAD:refs/heads/main\t85017ba..d834a19\nDone\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "git",
+        "ls-remote",
+        "https://github.com/dreamerToTOE/isaac-factory-repro.git",
+        "refs/heads/main"
+      ],
+      "returncode": 0,
+      "stdout": "d834a191fd12d9b7d8a35bda090b534eaa7a6ad9\trefs/heads/main\n",
+      "stderr": ""
+    }
+  ],
+  "receipt_policy": "This receipt is published by a subsequent receipt-only commit. Final delivery HEAD and remote SHA are independently checked and reported in the final response; a file cannot name its own commit."
 }
