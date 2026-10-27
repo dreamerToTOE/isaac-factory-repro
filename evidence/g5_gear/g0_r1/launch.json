@@ -1,0 +1,87 @@
+{
+  "created": {
+    "monotonic_seconds": 47672.143187744,
+    "unix_seconds": 1793109532.0754273,
+    "utc": "2026-10-27T13:58:52.075411+00:00"
+  },
+  "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro",
+  "safe_environment": [
+    "FACTORY_VENV=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01",
+    "OMP_NUM_THREADS=4"
+  ],
+  "schema_version": 2,
+  "source_sha256": {
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/durable_supervisor.py": "2f02e42128dea3bfdda5146802ea097f6b25be805296e6a16f093f6d2b31a889",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/g3a_launch_smoke.py": "2af94bacd94d005fa6177eed7eec9e11d4d3b163ae7a2b69ef7db8a7996202cd",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/gpu_guard.py": "512f2fbcb0b70bab1bcf99b8b7d55add568151c9dc4934ee8b52773c806a70da",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/supervised_exec.py": "0d9fa854306b38833c7f1f4d66d0ec04d3c8b3c1397b95991f25b00e2ffa6b89",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/supervision_common.py": "850f8fdf3c18147c8b94c109d978efc0d8c2c26bf6d8d9e6b6600c9e6d40f1e1"
+  },
+  "training_command": [
+    "bash",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/run_sim.sh",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/g5_gear_preflight.py",
+    "--headless",
+    "--device",
+    "cuda:0",
+    "--output",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/evidence/g5_gear/g0_r1/trace.jsonl",
+    "--steps",
+    "300"
+  ],
+  "unit_commands": {
+    "guard": [
+      "systemd-run",
+      "--user",
+      "--collect",
+      "--unit=g5-gear-g0-r1-20261027-guard",
+      "--property=WorkingDirectory=/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro",
+      "--property=Restart=no",
+      "--property=KillMode=control-group",
+      "--property=TimeoutStopSec=10",
+      "/usr/bin/python3",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/gpu_guard.py",
+      "--output",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g5_gear_g0_r1_seed0_20261027/guard",
+      "--supervisor-directory",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g5_gear_g0_r1_seed0_20261027/supervisor"
+    ],
+    "supervisor": [
+      "systemd-run",
+      "--user",
+      "--collect",
+      "--unit=g5-gear-g0-r1-20261027-supervisor",
+      "--property=WorkingDirectory=/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro",
+      "--property=Restart=no",
+      "--property=KillMode=control-group",
+      "--property=TimeoutStopSec=10",
+      "--setenv=FACTORY_VENV=/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01",
+      "--setenv=OMP_NUM_THREADS=4",
+      "/usr/bin/python3",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/durable_supervisor.py",
+      "--output",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g5_gear_g0_r1_seed0_20261027/supervisor",
+      "--guard-directory",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/g5_gear_g0_r1_seed0_20261027/guard",
+      "--lock-file",
+      "/run/user/1000/isaac-factory-gpu0.lock",
+      "--timeout",
+      "900.0",
+      "--",
+      "bash",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/run_sim.sh",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/g5_gear_preflight.py",
+      "--headless",
+      "--device",
+      "cuda:0",
+      "--output",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/evidence/g5_gear/g0_r1/trace.jsonl",
+      "--steps",
+      "300"
+    ]
+  },
+  "units": {
+    "guard": "g5-gear-g0-r1-20261027-guard",
+    "supervisor": "g5-gear-g0-r1-20261027-supervisor"
+  }
+}

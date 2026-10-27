@@ -1,0 +1,61 @@
+{
+  "child_exit_code": null,
+  "child_identity": {
+    "birth_ticks": "4767298",
+    "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+    "pgid": 419729,
+    "pid": 419729,
+    "state": "R"
+  },
+  "child_signal": "SIGTERM",
+  "command": [
+    "bash",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/run_sim.sh",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/g5_gear_preflight.py",
+    "--headless",
+    "--device",
+    "cuda:0",
+    "--output",
+    "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/evidence/g5_gear/g0_r1/trace.jsonl",
+    "--steps",
+    "300"
+  ],
+  "ended": {
+    "monotonic_seconds": 47679.837349156,
+    "unix_seconds": 1793109539.769589,
+    "utc": "2026-10-27T13:58:59.769584+00:00"
+  },
+  "error": null,
+  "exec_released": {
+    "monotonic_seconds": 47673.378246186,
+    "unix_seconds": 1793109533.310486,
+    "utc": "2026-10-27T13:58:53.310480+00:00"
+  },
+  "finalized": true,
+  "guard_identity": {
+    "birth_ticks": "4767223",
+    "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+    "pgid": 419694,
+    "pid": 419694,
+    "state": "R"
+  },
+  "guard_required": true,
+  "identity": {
+    "birth_ticks": "4767235",
+    "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+    "pgid": 419704,
+    "pid": 419704,
+    "state": "R"
+  },
+  "raw_wait_returncode": -15,
+  "received_supervisor_signals": [],
+  "schema_version": 2,
+  "started": {
+    "monotonic_seconds": 47672.394996117,
+    "unix_seconds": 1793109532.3272352,
+    "utc": "2026-10-27T13:58:52.327219+00:00"
+  },
+  "stop_signals": [],
+  "termination_reason": "child_signal",
+  "wall_seconds": 7.442353532002016
+}

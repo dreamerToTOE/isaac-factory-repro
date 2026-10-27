@@ -1,0 +1,12 @@
+{
+  "command": [
+    "factory-g01-python",
+    "scripts/g5_gear_verify.py",
+    "evidence/g5_gear/g0_r1/trace.jsonl"
+  ],
+  "exit_code": 1,
+  "stdout": "{\n  \"accepted\": false,\n  \"errors\": [\n    \"unreadable or malformed trace: [Errno 2] No such file or directory: 'evidence/g5_gear/g0_r1/trace.jsonl'\"\n  ],\n  \"decisions\": 0\n}\n",
+  "stderr": "",
+  "accepted": false,
+  "reason": "trace file absent after guard safety termination"
+}

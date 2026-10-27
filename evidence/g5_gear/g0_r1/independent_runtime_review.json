@@ -1,0 +1,225 @@
+{
+  "sample_count": 68,
+  "interval_count": 67,
+  "max_interval_seconds": 0.55064287300047,
+  "over_500ms": 1,
+  "min_free_MiB": 5481.625,
+  "peak_used_MiB": 2336.0,
+  "max_low_consecutive": 0,
+  "guard_status": {
+    "continuous_monitoring": false,
+    "coverage_note": "Sampled coverage: regular intervals are not continuous measurement.",
+    "ended": {
+      "monotonic_seconds": 47679.808194196,
+      "unix_seconds": 1793109539.7404337,
+      "utc": "2026-10-27T13:58:59.740424+00:00"
+    },
+    "error": null,
+    "finalized": true,
+    "first_sample": {
+      "monotonic_seconds": 47672.381752535,
+      "unix_seconds": 1793109532.3139925,
+      "utc": "2026-10-27T13:58:52.313984+00:00"
+    },
+    "identity": {
+      "birth_ticks": "4767223",
+      "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+      "pgid": 419694,
+      "pid": 419694,
+      "state": "R"
+    },
+    "last_sample": {
+      "monotonic_seconds": 47679.53255593,
+      "unix_seconds": 1793109539.4647958,
+      "utc": "2026-10-27T13:58:59.464785+00:00"
+    },
+    "low_memory_stop_condition_observed": false,
+    "max_low_consecutive": 0,
+    "min_free_MiB": 5481.625,
+    "monitoring_gaps": [
+      {
+        "duration_seconds": 0.55064287300047,
+        "from": {
+          "monotonic_seconds": 47678.981913057,
+          "unix_seconds": 1793109538.9141529,
+          "utc": "2026-10-27T13:58:58.914137+00:00"
+        },
+        "timing_detail": {
+          "current_memory_query_seconds": 4.5501001295633614e-05,
+          "previous_cycle": {
+            "csv_write_flush_seconds": 4.1282000893261284e-05,
+            "heartbeat_write_seconds": 0.5500856060025399,
+            "processing_and_coordination_after_heartbeat_seconds": 0.00021088799985591322,
+            "processing_and_coordination_before_csv_seconds": 0.0002269079996040091
+          },
+          "previous_sleep": {
+            "actual_seconds": 1.8650025594979525e-06,
+            "deadline_lateness_seconds": 0.45079270010319306,
+            "oversleep_seconds": 1.8650025594979525e-06,
+            "requested_seconds": 0
+          }
+        },
+        "to": {
+          "monotonic_seconds": 47679.53255593,
+          "unix_seconds": 1793109539.4647958,
+          "utc": "2026-10-27T13:58:59.464785+00:00"
+        }
+      }
+    ],
+    "peak_used_MiB": 2336.0,
+    "policy": {
+      "consecutive_samples": 3,
+      "floor_MiB": 1024,
+      "gap_limit_seconds": 0.5,
+      "interval_seconds": 0.1,
+      "stale_seconds": 2
+    },
+    "sample_count": 68,
+    "schema_version": 2,
+    "started": {
+      "monotonic_seconds": 47672.279656973,
+      "unix_seconds": 1793109532.2118938,
+      "utc": "2026-10-27T13:58:52.211877+00:00"
+    },
+    "stop_reason": "monitoring_gap",
+    "stop_signals": [
+      {
+        "monotonic_seconds": 47679.786416247,
+        "signal": "SIGTERM",
+        "unix_seconds": 1793109539.718656,
+        "utc": "2026-10-27T13:58:59.718648+00:00"
+      }
+    ],
+    "supervisor_identity": {
+      "birth_ticks": "4767235",
+      "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+      "pgid": 419704,
+      "pid": 419704,
+      "state": "R"
+    },
+    "target_identity": {
+      "birth_ticks": "4767298",
+      "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+      "pgid": 419729,
+      "pid": 419729,
+      "state": "R"
+    },
+    "timing_diagnostics": {
+      "aggregates": {
+        "csv_write_flush": {
+          "count": 68,
+          "max_seconds": 8.453099871985614e-05,
+          "total_seconds": 0.0022600979573326185
+        },
+        "deadline_lateness": {
+          "count": 67,
+          "max_seconds": 0.45079270010319306,
+          "total_seconds": 0.7531724524742458
+        },
+        "heartbeat_write": {
+          "count": 68,
+          "max_seconds": 0.5500856060025399,
+          "total_seconds": 0.6495351489720633
+        },
+        "memory_query": {
+          "count": 68,
+          "max_seconds": 0.04369305600266671,
+          "total_seconds": 0.2797574150317814
+        },
+        "processing_and_coordination_after_heartbeat": {
+          "count": 67,
+          "max_seconds": 0.00025202100368915126,
+          "total_seconds": 0.010908815980656072
+        },
+        "processing_and_coordination_before_csv": {
+          "count": 68,
+          "max_seconds": 0.2754121230027522,
+          "total_seconds": 0.2861527270433726
+        },
+        "sleep_actual": {
+          "count": 67,
+          "max_seconds": 0.09977610300120432,
+          "total_seconds": 5.919899721004185
+        },
+        "sleep_overshoot": {
+          "count": 67,
+          "max_seconds": 0.0023140120392781682,
+          "total_seconds": 0.009452126323594712
+        },
+        "sleep_requested": {
+          "count": 67,
+          "max_seconds": 0.09965929499594495,
+          "total_seconds": 5.9104475946805906
+        }
+      },
+      "note": "Wall-clock segments include scheduling delays; sleep overshoot is not proof of scheduler cause. Gap detail is partial and instrumentation adds overhead."
+    }
+  },
+  "supervisor_status": {
+    "child_exit_code": null,
+    "child_identity": {
+      "birth_ticks": "4767298",
+      "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+      "pgid": 419729,
+      "pid": 419729,
+      "state": "R"
+    },
+    "child_signal": "SIGTERM",
+    "command": [
+      "bash",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/run_sim.sh",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/scripts/g5_gear_preflight.py",
+      "--headless",
+      "--device",
+      "cuda:0",
+      "--output",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/evidence/g5_gear/g0_r1/trace.jsonl",
+      "--steps",
+      "300"
+    ],
+    "ended": {
+      "monotonic_seconds": 47679.837349156,
+      "unix_seconds": 1793109539.769589,
+      "utc": "2026-10-27T13:58:59.769584+00:00"
+    },
+    "error": null,
+    "exec_released": {
+      "monotonic_seconds": 47673.378246186,
+      "unix_seconds": 1793109533.310486,
+      "utc": "2026-10-27T13:58:53.310480+00:00"
+    },
+    "finalized": true,
+    "guard_identity": {
+      "birth_ticks": "4767223",
+      "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+      "pgid": 419694,
+      "pid": 419694,
+      "state": "R"
+    },
+    "guard_required": true,
+    "identity": {
+      "birth_ticks": "4767235",
+      "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+      "pgid": 419704,
+      "pid": 419704,
+      "state": "R"
+    },
+    "raw_wait_returncode": -15,
+    "received_supervisor_signals": [],
+    "schema_version": 2,
+    "started": {
+      "monotonic_seconds": 47672.394996117,
+      "unix_seconds": 1793109532.3272352,
+      "utc": "2026-10-27T13:58:52.327219+00:00"
+    },
+    "stop_signals": [],
+    "termination_reason": "child_signal",
+    "wall_seconds": 7.442353532002016
+  },
+  "trace_exists": false,
+  "trace_bytes": 0,
+  "trace_records": 0,
+  "child_console_bytes": 0,
+  "unrelated_processes_note": "No g5-gear or python_entry process remains; unrelated task processes were preserved.",
+  "verifier_exit_expected_nonzero_for_missing_trace": true
+}

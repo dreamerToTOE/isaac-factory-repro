@@ -1,0 +1,9 @@
+{
+  "monotonic_seconds": 47672.251804099,
+  "returncode": 0,
+  "role": "guard",
+  "stderr": "Running as unit: g5-gear-g0-r1-20261027-guard.service\n",
+  "stdout": "",
+  "unix_seconds": 1793109532.1840434,
+  "utc": "2026-10-27T13:58:52.184032+00:00"
+}

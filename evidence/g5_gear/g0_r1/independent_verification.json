@@ -1,0 +1,7 @@
+{
+  "accepted": false,
+  "errors": [
+    "unreadable or malformed trace: [Errno 2] No such file or directory: 'evidence/g5_gear/g0_r1/trace.jsonl'"
+  ],
+  "decisions": 0
+}

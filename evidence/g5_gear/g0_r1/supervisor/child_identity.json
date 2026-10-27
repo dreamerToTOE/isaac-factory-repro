@@ -1,0 +1,13 @@
+{
+  "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+  "identity": {
+    "birth_ticks": "4767298",
+    "boot_id": "93d24da4-8efe-450c-8ed7-a1ed98219cbc",
+    "pgid": 419729,
+    "pid": 419729,
+    "state": "R"
+  },
+  "monotonic_seconds": 47672.98031052,
+  "unix_seconds": 1793109532.9125502,
+  "utc": "2026-10-27T13:58:52.912540+00:00"
+}
