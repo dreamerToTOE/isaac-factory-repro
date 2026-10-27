@@ -1,0 +1,38 @@
+{
+  "task": "G4-S2A-R2-R3",
+  "scope": "NO_POLICY_DIAGNOSTIC_ONLY",
+  "run_id": "BASE_I3_PASSIVE",
+  "initial_id": "I3",
+  "physical_selection": "P_FULL",
+  "controller_selection": "C0",
+  "passive_arm": true,
+  "registered_steps": 235,
+  "integration_requests": 154,
+  "completed_steps": 154,
+  "simulation_duration_s": 1.2833333333333303,
+  "physics_wall_s": 85.9102433459957,
+  "wall_s": 130.13366781500008,
+  "viewer_sync_wall_s": 0.4797978930037061,
+  "viewer_sync_count": 317,
+  "graceful_close": {
+    "viewer_close_requested": true,
+    "render_threads_joined": [
+      "Thread-1 (_launch_internal)"
+    ],
+    "remaining_render_threads": [],
+    "close_wall_s": 0.031511750999925425
+  },
+  "runtime_failure": null,
+  "early_stop_reasons": [
+    "SEVERE_PENETRATION"
+  ],
+  "policy_inferences": 0,
+  "max_slip_m": 0.0013440622673294286,
+  "max_rotation_slip_rad": 0.07161128234997288,
+  "max_arm_qvel_rad_s": 0.002604756625474085,
+  "first_contact_loss_step": 143,
+  "max_penetration_m": 0.0010818855735547342,
+  "peak_rss_kib": 817380,
+  "trace_sha256": "2e635850c6fa2983d440b7aa679842c72937840aaee72110c40686fdf968c76f",
+  "termination": "DIAGNOSTIC_EARLY_STOP"
+}

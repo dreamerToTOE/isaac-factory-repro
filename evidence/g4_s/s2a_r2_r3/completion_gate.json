@@ -1,0 +1,40 @@
+{
+  "task": "G4-S2A-R2-R3",
+  "starting_commit": "155bf275a1b4e70592f7b1bd0da3fe3fcff1e1e8",
+  "engineering_status": "G4_S2A_R2_R3_PARTIAL",
+  "existing_p_full": "CANDIDATE_PARTIAL",
+  "new_correction": "CANDIDATE_BLOCKED",
+  "r3": "NO-GO",
+  "s2b": "NO-GO",
+  "decision": "No specific correction justified; recommend separately scoped native gripper reconstruction.",
+  "integration_steps": 566,
+  "coordinator_wall_s": 361.6136961660013,
+  "baseline_steps": {
+    "BASE_I3_ACTIVE": 177,
+    "BASE_I3_PASSIVE": 154,
+    "BASE_I2_ACTIVE": 235
+  },
+  "physical_pass": {
+    "BASE_I3_ACTIVE": false,
+    "BASE_I3_PASSIVE": false,
+    "BASE_I2_ACTIVE": true
+  },
+  "child_exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "policy_calls": 0,
+  "candidate_executed": false,
+  "independent_numerical_review_passed": true,
+  "final_guarded_tests": {
+    "passed": 754,
+    "skipped": 1,
+    "system_plot_passed": 1,
+    "excluded": 75
+  },
+  "targeted_tests_passed": 33,
+  "historical_unmatched_request": "UNKNOWN (613 requests, 612 results)",
+  "interactive_controls_manually_tested": false,
+  "live_screenshots_occluded_by_native_visualization": true
+}

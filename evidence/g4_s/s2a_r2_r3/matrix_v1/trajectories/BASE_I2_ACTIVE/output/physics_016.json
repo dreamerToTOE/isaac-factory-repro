@@ -1,0 +1,23 @@
+{
+  "experiment_id": "I2_BASE_I2_ACTIVE P_FULL+C0",
+  "initial_state_id": "I2",
+  "model_configuration": "e2ae8f5a14ab927c12897cb534819d8da63a5ce24f91200f80796fdaee1ca6fc",
+  "step": 16,
+  "simulation_time_s": 0.13333333333333333,
+  "absolute_simulation_time_s": 0.3833333333333337,
+  "sha256": "553246c53ca1489c8a1759c202b838e6043c92e6520c20e622902dfa67e8d3a7",
+  "capture_method": "Actual Ubuntu X11 screen rectangle of own raised MuJoCo window",
+  "mode": "LIVE_INTEGRATION_SCREENSHOT",
+  "obstruction": "Requires independent image QA; IsViewable alone does not prove unobstructed",
+  "window": {
+    "window_id": "0x4a0000b",
+    "title": "MuJoCo : g4_s1b_adapted_panda_peg_insert",
+    "model_name": "g4_s1b_adapted_panda_peg_insert",
+    "map_state": "IsViewable",
+    "x": 240,
+    "y": 228,
+    "width": 1706,
+    "height": 960,
+    "selected_window_xwininfo": "\nxwininfo: Window id: 0x4a0000b \"MuJoCo : g4_s1b_adapted_panda_peg_insert\"\n\n  Absolute upper-left X:  240\n  Absolute upper-left Y:  228\n  Relative upper-left X:  20\n  Relative upper-left Y:  90\n  Width: 1706\n  Height: 960\n  Depth: 24\n  Visual: 0x3a\n  Visual Class: TrueColor\n  Border width: 0\n  Class: InputOutput\n  Colormap: 0x4a0000a (not installed)\n  Bit Gravity State: ForgetGravity\n  Window Gravity State: NorthWestGravity\n  Backing Store State: NotUseful\n  Save Under State: no\n  Map State: IsViewable\n  Override Redirect State: no\n  Corners:  +240+228  -2150+228  -2150-1116  +240-1116\n  -geometry 1706x960+240+228\n\n"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "task": "G4-S2A-R2-R3",
+  "scope": "STATIC_RECORDED_INITIAL_STATE_ONLY",
+  "new_physics_steps": 0,
+  "policy_calls": 0,
+  "read_only_observer_integration_state_unchanged": true,
+  "max_J_transpose_force_residual": 3.382710778154774e-17,
+  "ncon": 4,
+  "nefc": 17,
+  "contacts": [
+    {
+      "geom1": "peg_collision",
+      "geom2": "left_finger_geom_4",
+      "dim": 4,
+      "exclude": 0,
+      "efc_address": 1,
+      "efc_rows": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "geom1": "peg_collision",
+      "geom2": "left_finger_geom_6",
+      "dim": 4,
+      "exclude": 0,
+      "efc_address": 5,
+      "efc_rows": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "geom1": "peg_collision",
+      "geom2": "right_finger_geom_5",
+      "dim": 4,
+      "exclude": 0,
+      "efc_address": 9,
+      "efc_rows": [
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "geom1": "peg_collision",
+      "geom2": "right_finger_geom_7",
+      "dim": 4,
+      "exclude": 0,
+      "efc_address": 13,
+      "efc_rows": [
+        13,
+        14,
+        15,
+        16
+      ]
+    }
+  ],
+  "mujoco_version": "3.5.0",
+  "instrumentation_sha256": "b425fa292c239486f9dc87f4cea3f99d1ad5acef67201af50c0c2bc827fa3f8b",
+  "interpretation": "This static initial-state check does not establish dynamic equivalence; historical comparison required after integration. Restore calls mj_forward before observation, not additional forward on an evolving active trajectory."
+}

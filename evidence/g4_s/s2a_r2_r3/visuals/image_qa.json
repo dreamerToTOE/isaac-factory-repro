@@ -1,0 +1,133 @@
+{
+  "review": "manual inspection of every image",
+  "images": [
+    {
+      "file": "evidence/g4_s/s2a_r2_r3/matrix_v1/trajectories/BASE_I2_ACTIVE/output/initial.png",
+      "sha256": "c0c387c69056363b10993cb4f19b6a0aa66d63e3a318dd6c78676b2c8dd7f325",
+      "mode": "LIVE_INTEGRATION",
+      "visual_review": "native_overlay_occluded",
+      "desktop_contamination_observed": false,
+      "note": "Large native visualization obscures contact; unsuitable for detailed visual diagnosis."
+    },
+    {
+      "file": "evidence/g4_s/s2a_r2_r3/matrix_v1/trajectories/BASE_I2_ACTIVE/output/physics_016.png",
+      "sha256": "553246c53ca1489c8a1759c202b838e6043c92e6520c20e622902dfa67e8d3a7",
+      "mode": "LIVE_INTEGRATION",
+      "visual_review": "native_overlay_occluded",
+      "desktop_contamination_observed": false,
+      "note": "Large native visualization obscures contact; unsuitable for detailed visual diagnosis."
+    },
+    {
+      "file": "evidence/g4_s/s2a_r2_r3/matrix_v1/trajectories/BASE_I2_ACTIVE/output/physics_235.png",
+      "sha256": "62cf8d30b898966bf6f4ef500a23f92703e2d3e0e3bb7db7ad692cbce6659b81",
+      "mode": "LIVE_INTEGRATION",
+      "visual_review": "native_overlay_occluded",
+      "desktop_contamination_observed": false,
+      "note": "Large native visualization obscures contact; unsuitable for detailed visual diagnosis."
+    },
+    {
+      "file": "evidence/g4_s/s2a_r2_r3/matrix_v1/trajectories/BASE_I3_ACTIVE/output/initial.png",
+      "sha256": "17d1eeb69035af3c77cb39f51889e0db4e9055794a1c1326099511e1f5b97961",
+      "mode": "LIVE_INTEGRATION",
+      "visual_review": "native_overlay_occluded",
+      "desktop_contamination_observed": false,
+      "note": "Large native visualization obscures contact; unsuitable for detailed visual diagnosis."
+    },
+    {
+      "file": "evidence/g4_s/s2a_r2_r3/matrix_v1/trajectories/BASE_I3_ACTIVE/output/physics_016.png",
+      "sha256": "ff1f8813dfe11777c13904b0fd18d520fd36068150e54a7f60f13214e85cb4d3",
+      "mode": "LIVE_INTEGRATION",
+      "visual_review": "native_overlay_occluded",
+      "desktop_contamination_observed": false,
+      "note": "Large native visualization obscures contact; unsuitable for detailed visual diagnosis."
+    },
+    {
+      "file": "evidence/g4_s/s2a_r2_r3/matrix_v1/trajectories/BASE_I3_ACTIVE/output/physics_175.png",
+      "sha256": "cd3b8966230c291232b7fbe41b8f8301c381084514203396935a7d4d56db9ce7",
+      "mode": "LIVE_INTEGRATION",
+      "visual_review": "native_overlay_occluded",
+      "desktop_contamination_observed": false,
+      "note": "Large native visualization obscures contact; unsuitable for detailed visual diagnosis."
+    },
+    {
+      "file": "evidence/g4_s/s2a_r2_r3/matrix_v1/trajectories/BASE_I3_ACTIVE/output/physics_176.png",
+      "sha256": "958efca7eff2eaeb9d3ab01dfb78291fe08bdc1ac04510a1be385ef1a50e17c5",
+      "mode": "LIVE_INTEGRATION",
+      "visual_review": "native_overlay_occluded",
+      "desktop_contamination_observed": false,
+      "note": "Large native visualization obscures contact; unsuitable for detailed visual diagnosis."
+    },
+    {
+      "file": "evidence/g4_s/s2a_r2_r3/matrix_v1/trajectories/BASE_I3_ACTIVE/output/physics_177.png",
+      "sha256": "459e1c9fd2f19ce8ee884734e96367fd58c78c71432ec8853786399e98bdc06e",
+      "mode": "LIVE_INTEGRATION",
+      "visual_review": "native_overlay_occluded",
+      "desktop_contamination_observed": false,
+      "note": "Large native visualization obscures contact; unsuitable for detailed visual diagnosis."
+    },
+    {
+      "file": "evidence/g4_s/s2a_r2_r3/matrix_v1/trajectories/BASE_I3_PASSIVE/output/initial.png",
+      "sha256": "fc08dd5663f1160252169bbd6bafcbe103fa4dab099cb4116b613d8d3f035aa7",
+      "mode": "LIVE_INTEGRATION",
+      "visual_review": "native_overlay_occluded",
+      "desktop_contamination_observed": false,
+      "note": "Large native visualization obscures contact; unsuitable for detailed visual diagnosis."
+    },
+    {
+      "file": "evidence/g4_s/s2a_r2_r3/matrix_v1/trajectories/BASE_I3_PASSIVE/output/physics_016.png",
+      "sha256": "5819b91b270de4168d592af71338fd504916d30a9c9c7190706a101385607754",
+      "mode": "LIVE_INTEGRATION",
+      "visual_review": "native_overlay_occluded",
+      "desktop_contamination_observed": false,
+      "note": "Large native visualization obscures contact; unsuitable for detailed visual diagnosis."
+    },
+    {
+      "file": "evidence/g4_s/s2a_r2_r3/matrix_v1/trajectories/BASE_I3_PASSIVE/output/physics_154.png",
+      "sha256": "7831b6bfc65f37c9b938ec3dd93b23c11cb24ca240d27cbef099684b5219e30f",
+      "mode": "LIVE_INTEGRATION",
+      "visual_review": "native_overlay_occluded",
+      "desktop_contamination_observed": false,
+      "note": "Large native visualization obscures contact; unsuitable for detailed visual diagnosis."
+    },
+    {
+      "file": "evidence/g4_s/s2a_r2_r3/visuals/playback_v1/BASE_I3_ACTIVE_step_155.png",
+      "sha256": "876019cd87e7a19cc15df865cac24af0522d1802ae9e69b998727e6845339a20",
+      "mode": "SAVED_STATE_PLAYBACK",
+      "visual_review": "clear_native_window",
+      "desktop_contamination_observed": false,
+      "note": "Shows saved state, not integrated contact forces or impulse."
+    },
+    {
+      "file": "evidence/g4_s/s2a_r2_r3/visuals/playback_v1/BASE_I3_ACTIVE_step_174.png",
+      "sha256": "721570b13c17f595ff385963ad4de4ac10459025068808e4be3595421f073073",
+      "mode": "SAVED_STATE_PLAYBACK",
+      "visual_review": "clear_native_window",
+      "desktop_contamination_observed": false,
+      "note": "Shows saved state, not integrated contact forces or impulse."
+    },
+    {
+      "file": "evidence/g4_s/s2a_r2_r3/visuals/playback_v1/BASE_I3_ACTIVE_step_175.png",
+      "sha256": "22a58a9707e942de7ca6f064d6c0b74c26ff163bb6292487d936948e18df3cdb",
+      "mode": "SAVED_STATE_PLAYBACK",
+      "visual_review": "clear_native_window",
+      "desktop_contamination_observed": false,
+      "note": "Shows saved state, not integrated contact forces or impulse."
+    },
+    {
+      "file": "evidence/g4_s/s2a_r2_r3/visuals/playback_v1/BASE_I3_ACTIVE_step_176.png",
+      "sha256": "cb59e2d48eb3ef70099356cac283b0a07c864b0f02dad434d05aa6d004e9cc43",
+      "mode": "SAVED_STATE_PLAYBACK",
+      "visual_review": "clear_native_window",
+      "desktop_contamination_observed": false,
+      "note": "Shows saved state, not integrated contact forces or impulse."
+    },
+    {
+      "file": "evidence/g4_s/s2a_r2_r3/visuals/playback_v1/BASE_I3_ACTIVE_step_177.png",
+      "sha256": "3e8754c9baaf11935168ff10a2c56db660b1c31c51541818ff797dea2d474c9d",
+      "mode": "SAVED_STATE_PLAYBACK",
+      "visual_review": "clear_native_window",
+      "desktop_contamination_observed": false,
+      "note": "Shows saved state, not integrated contact forces or impulse."
+    }
+  ]
+}

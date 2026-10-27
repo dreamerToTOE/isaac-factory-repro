@@ -1,0 +1,35 @@
+{
+  "timestamp_utc": "2026-10-27T06:55:24.006168+00:00",
+  "display": ":1",
+  "xauthority": "/run/user/1000/gdm/Xauthority",
+  "xauthority_exists": true,
+  "xdpyinfo_exit": 0,
+  "xdpyinfo_header": [
+    "name of display:    :1",
+    "version number:    11.0",
+    "vendor string:    The X.Org Foundation",
+    "vendor release number:    12101004",
+    "X.Org version: 1.21.1.4",
+    "maximum request size:  16777212 bytes",
+    "motion buffer size:  256",
+    "bitmap unit, bit order, padding:    32, LSBFirst, 32",
+    "image byte order:    LSBFirst",
+    "number of supported pixmap formats:    7",
+    "supported pixmap formats:",
+    "    depth 1, bits_per_pixel 1, scanline_pad 32"
+  ],
+  "loginctl_exit": 0,
+  "session": [
+    "Name=ubuntu2004",
+    "Remote=no",
+    "Type=x11",
+    "Class=user",
+    "State=active"
+  ],
+  "x_server_processes": [
+    "   2723    2721 ubuntu2+ /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -nolisten tcp -background none -noreset -keeptty -novtswitch -verbose 3",
+    " 207372  197312 ubuntu2+ /bin/bash -lc DISPLAY=:1 XAUTHORITY=/run/user/1000/gdm/Xauthority xprop -root _NET_SUPPORTING_WM_CHECK; /usr/bin/python3 - <<'PY' import json,subprocess,os,pathlib,datetime p=pathlib.Path('evidence/g4_s/s2a_r2_r3/desktop_preflight.json');p.parent.mkdir(parents=True,exist_ok=True) env=os.environ.copy();d=env.get('DISPLAY');a=env.get('XAUTHORITY'); r=subprocess.run(['xdpyinfo'],text=True,capture_output=True,env=env);s=subprocess.run(['loginctl','show-session','2','-p','Name','-p','Type','-p','State','-p','Remote','-p','Class'],text=True,capture_output=True); ps=subprocess.run(['ps','-eo','pid,ppid,user,args'],text=True,capture_output=True); dct={'timestamp_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'display':d,'xauthority':a,'xauthority_exists':bool(a and pathlib.Path(a).is_file()),'xdpyinfo_exit':r.returncode,'xdpyinfo_header':r.stdout.splitlines()[:12],'loginctl_exit':s.returncode,'session':s.stdout.splitlines(),'x_server_processes':[x for x in ps.stdout.splitlines() if '/usr/lib/xorg/Xorg ' in x or 'Xvfb' in x],'status':'PRECHECK_ONLY_NOT_VIEWER_ADMISSION','new_physics_steps':0};p.write_text(json.dumps(dct,indent=2)+'\\n');print(json.dumps(dct,indent=2)) PY"
+  ],
+  "status": "PRECHECK_ONLY_NOT_VIEWER_ADMISSION",
+  "new_physics_steps": 0
+}

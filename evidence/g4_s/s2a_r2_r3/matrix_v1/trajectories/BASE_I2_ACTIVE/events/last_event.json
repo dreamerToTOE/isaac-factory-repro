@@ -1,0 +1,14 @@
+{
+  "event": "child_terminal",
+  "monotonic_seconds": 22822.610302614,
+  "pid": 214000,
+  "raw_wait_returncode": 0,
+  "reason": "CHILD_EXIT",
+  "run_id": "BASE_I2_ACTIVE",
+  "schema": "g4s2a_r2_r2_durable_supervision_v1",
+  "sequence": 473,
+  "terminal": true,
+  "timed_out": false,
+  "unix_seconds": 1793084682.5425427,
+  "utc": "2026-10-27T07:04:42.542528+00:00"
+}
