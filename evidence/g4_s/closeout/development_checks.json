@@ -1,0 +1,11 @@
+{
+  "first_consistency_attempt": {
+    "cause": "validator checked its two own output links before creating its receipts",
+    "correction": "only these planned outputs deferred; all links checked without exceptions after actual receipt creation",
+    "error": "broken documentation links: preservation_after.json and consistency_checks.json",
+    "exit_code": 1,
+    "physics_steps": 0,
+    "policy_calls": 0
+  },
+  "historical_evidence_changed": false
+}

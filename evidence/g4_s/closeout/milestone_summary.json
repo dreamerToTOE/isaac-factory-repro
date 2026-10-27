@@ -1,0 +1,783 @@
+{
+  "authorization_boundaries": {
+    "allowed": [
+      "documentation",
+      "archived-data charts",
+      "CPU consistency and hash checks",
+      "commit and fast-forward push"
+    ],
+    "checkpoint_deserializations": 0,
+    "executed_new_physics_steps": 0,
+    "executed_new_policy_calls": 0,
+    "forbidden": [
+      "MuJoCo integration",
+      "PPO inference/training",
+      "new gripper tests",
+      "R3",
+      "S2B",
+      "GearMesh",
+      "NutThread"
+    ],
+    "future_architecture": "UNTESTED_RECOMMENDATION_REQUIRES_SEPARATE_AUTHORIZATION",
+    "learning_and_theoretical_examination": "PENDING",
+    "training": false
+  },
+  "engineering_completed_stages": [
+    "S0",
+    "S1A",
+    "S1B",
+    "S2A_R1",
+    "S2A_R2",
+    "S2A_R2_R2",
+    "GRIPPER_V1_R1"
+  ],
+  "failed_experiments": {
+    "GRIPPER_V1": {
+      "candidate_status": "NATIVE_GRIPPER_PARTIAL",
+      "engineering_status": "G4_S2A_GRIPPER_V1_PARTIAL",
+      "i2_max_pad_penetration_m": 0.0019017960492387505,
+      "i2_status": "RESET_FAIL_QUALITY_FAIL_SEVERE_PENETRATION",
+      "i3_status": "INVALID_INITIAL_STATE",
+      "new_gripper_static_mapping": "PASS"
+    },
+    "GRIPPER_V1_R1": {
+      "PREP_I2_RATE_LIMITED": {
+        "early_stop": "FINGER_LIMIT",
+        "physical_quality": "FAIL",
+        "reset_admission": "FAIL",
+        "state_integrity": "PASS",
+        "steps": 23
+      },
+      "PREP_I3_RATE_LIMITED": {
+        "early_stop": "FINGER_LIMIT",
+        "physical_quality": "FAIL",
+        "reset_admission": "FAIL",
+        "state_integrity": "PASS",
+        "steps": 23
+      }
+    },
+    "S2A": {
+      "exact_experiment_exit_code": 2,
+      "official_ever_success": false,
+      "official_terminal_success": false,
+      "policy_inferences": 149,
+      "policy_physics_steps": 1192,
+      "scientific_effectiveness": "NO_GEOMETRIC_OR_PHYSICAL_SUCCESS_OBSERVED_IN_ONE_PHYSICALLY_INVALID_FULL_LENGTH_TRACE; NO_PROBABILITY_ESTIMATE",
+      "status": "G4_S2A_PARTIAL",
+      "technically_valid_trajectories": 0
+    },
+    "scope": "physical failures / invalid execution; not blanket G4 engineering failure"
+  },
+  "failed_stages": {
+    "meaning": "scientific/physical acceptance not achieved; historical engineering statuses above remain unchanged",
+    "physical_preparation": [
+      "GRIPPER_V1",
+      "GRIPPER_V1_R1"
+    ],
+    "task_transfer": [
+      "S2A"
+    ]
+  },
+  "final_engineering_status": "PARTIAL",
+  "final_scientific_status": "NOT_DEMONSTRATED",
+  "final_status": {
+    "G4_CURRENT_GRIPPER_ROUTE": "CLOSED_WITH_NEGATIVE_RESULT",
+    "G4_S2A_R3": "NO_GO",
+    "G4_S2B": "NO_GO",
+    "G4_SIM2SIM_MILESTONE": "PARTIAL",
+    "ROOT_CAUSE": "PARTIALLY_CHARACTERIZED_NOT_UNIQUELY_IDENTIFIED",
+    "TASK_LEVEL_ZERO_SHOT_TRANSFER": "NOT_DEMONSTRATED"
+  },
+  "frozen_checkpoint_sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+  "historical_gates": {
+    "GRIPPER_V1": {
+      "original_fields": {
+        "candidate_status": "NATIVE_GRIPPER_PARTIAL",
+        "engineering_status": "G4_S2A_GRIPPER_V1_PARTIAL",
+        "i2_max_pad_penetration_m": 0.0019017960492387505,
+        "i2_status": "RESET_FAIL_QUALITY_FAIL_SEVERE_PENETRATION",
+        "i3_status": "INVALID_INITIAL_STATE",
+        "new_gripper_static_mapping": "PASS"
+      },
+      "reference": "evidence/g4_s/gripper_v1/completion_gate.json",
+      "sha256": "9530f66421341b232cd1af37092e6e079281896fa419ac3d0a9939f1b004bc90"
+    },
+    "GRIPPER_V1_R1": {
+      "original_fields": {
+        "candidate_scope": "registered native tendon model and R1 preparation schedule at 1/120 s, I2/I3 only",
+        "candidate_status": "NATIVE_GRIPPER_REJECTED",
+        "engineering_status": "G4_S2A_GRIPPER_V1_R1_PASS",
+        "historical_v1_i3_cause": "UNKNOWN",
+        "new_physics_steps": 46,
+        "policy_calls": 0,
+        "preparations": {
+          "PREP_I2_RATE_LIMITED": {
+            "early_stop": "FINGER_LIMIT",
+            "physical_quality": "FAIL",
+            "reset_admission": "FAIL",
+            "state_integrity": "PASS",
+            "steps": 23
+          },
+          "PREP_I3_RATE_LIMITED": {
+            "early_stop": "FINGER_LIMIT",
+            "physical_quality": "FAIL",
+            "reset_admission": "FAIL",
+            "state_integrity": "PASS",
+            "steps": 23
+          }
+        },
+        "r3": "NO-GO",
+        "request_result_pairs": [
+          46,
+          46
+        ],
+        "s2b": "NO-GO",
+        "state_preflight": "PASS",
+        "unstarted": [
+          "DIAG_I2_NATIVE",
+          "DIAG_I3_NATIVE"
+        ]
+      },
+      "reference": "evidence/g4_s/gripper_v1_r1/completion_gate.json",
+      "sha256": "e68e2b780f05d329353bc2290f72a8b087d57566b4d2f22787122b8d0bacfc28"
+    },
+    "S0": {
+      "original_fields": {
+        "decision": "CONDITIONAL",
+        "engineering_status": "COMPLETE",
+        "sim2sim_status": "NOT_RUN_NOT_ASSESSED"
+      },
+      "reference": "evidence/g4_s/s0/summary.json",
+      "sha256": "2f65b4e4e8b01b871ef51490e2b149fae0f38a48a925a61399fde7beacf77bdc"
+    },
+    "S1A": {
+      "original_fields": {
+        "S1B_decision": "NO-GO",
+        "engineering_status": "COMPLETE",
+        "faithful_Factory_reconstruction": "BLOCKED"
+      },
+      "reference": "evidence/g4_s/s1a/reconstruction_gate.json",
+      "sha256": "ab7443fbe276b65040d770b03656823e56bb8496a1a89665ef87f880b3dc91a8"
+    },
+    "S1B": {
+      "original_fields": {
+        "scientific_zero_shot_policy_effectiveness": "NOT_ASSESSED_NO_POLICY_AUTHORIZED_IN_THIS_STAGE",
+        "status": "G4_S1B_PASS"
+      },
+      "reference": "evidence/g4_s/s1b/reconstruction_gate.json",
+      "sha256": "0fbfc777b941f751f039cf2ee135f237ecda1285197bfd4c9d887790088d82ef"
+    },
+    "S2A": {
+      "original_fields": {
+        "exact_experiment_exit_code": 2,
+        "official_ever_success": false,
+        "official_terminal_success": false,
+        "policy_inferences": 149,
+        "policy_physics_steps": 1192,
+        "scientific_effectiveness": "NO_GEOMETRIC_OR_PHYSICAL_SUCCESS_OBSERVED_IN_ONE_PHYSICALLY_INVALID_FULL_LENGTH_TRACE; NO_PROBABILITY_ESTIMATE",
+        "status": "G4_S2A_PARTIAL",
+        "technically_valid_trajectories": 0
+      },
+      "reference": "evidence/g4_s/s2a/completion_gate.json",
+      "sha256": "038e9c5b7e73f5dbdc63c1fe301624ddb1de87c4b9657c9afea72a60d8fe2745"
+    },
+    "S2A_R1": {
+      "original_fields": {
+        "PASS_scope": "Actual Ubuntu desktop MuJoCo viewer, archive state visualization,10 preregistered16step no-policy diagnostics and independent numeric review. Not successful Sim2Sim or a verified correction.",
+        "scientific": {
+          "D06_promoted_to_official_configuration": false,
+          "D06_vs_D01_short_window_slip_reduction_fraction": 0.9937810757000535,
+          "H1_H3": "SUPPORTED_BUT_NOT_PROVEN",
+          "ROOT_CAUSE": "PENDING",
+          "S2B": "NO_GO",
+          "SOLUTION": "PENDING",
+          "VALIDATION": "PENDING",
+          "full_policy_transfer_success_not_claimed": true
+        },
+        "status": "G4_S2A_R1_PASS"
+      },
+      "reference": "evidence/g4_s/s2a_r1/completion_gate.json",
+      "sha256": "a027641eadb62fc3953d2ac3c5f7209db5195fe3b29e895d358a4e38eaaa55ed"
+    },
+    "S2A_R2": {
+      "original_fields": {
+        "R3": "NO-GO",
+        "S2B": "NO-GO",
+        "candidate_decision": "CANDIDATE_PARTIAL",
+        "engineering_status": "G4_S2A_R2_PASS",
+        "full_horizon_all_gate_pass_runs": [
+          "I1_B",
+          "I1_D",
+          "I2_B",
+          "I2_D"
+        ]
+      },
+      "reference": "evidence/g4_s/s2a_r2/completion_gate.json",
+      "sha256": "ce135c5acf3374ce318aa32c8c3bbc58d1e1398f2cdbad5b1973cb71a4a57bc3"
+    },
+    "S2A_R2_R1": {
+      "original_fields": {
+        "candidate_decision": "CANDIDATE_PARTIAL",
+        "decision_basis": "PARTIAL is required because one registered supervisor process was lost after request 212, leaving unknown exit status and incomplete accounting; no automatic retry was performed.",
+        "final_engineering_status": "G4_S2A_R2_R1_PARTIAL",
+        "scientific_outcome": {
+          "I3_FULL_C0": "late contact loss step 176; severe penetration at 177; reproduces R2 late failure",
+          "I3_FULL_C1": "partial through 211 physics results; request 212 unresolved; no final result/exit receipt",
+          "I3_FULL_PASSIVE_ARM": "early severe-penetration stop at physics step 154; passive-arm negative control",
+          "P_ARM_HAND": "all six primary variants early severe-penetration stop across I1/I2/I3",
+          "interpretation": "P_FULL early stabilization is a verified local effect; finger inertia/contact branch is sensitive; unique late root cause remains inconclusive"
+        }
+      },
+      "reference": "evidence/g4_s/s2a_r2_r1/completion_gate.json",
+      "sha256": "e8fd5df66475906ab576acf1f4b373ffaa5ba10c16101f23810445df4e6e76e3"
+    },
+    "S2A_R2_R2": {
+      "original_fields": {
+        "engineering_status": "G4_S2A_R2_R2_PASS",
+        "historical_adaptation_candidate": "CANDIDATE_PARTIAL",
+        "new_correction_candidate": "CANDIDATE_BLOCKED",
+        "new_physics_integrations": 0,
+        "new_policy_inferences": 0
+      },
+      "reference": "evidence/g4_s/s2a_r2_r2/completion_gate.json",
+      "sha256": "32f06d5c76dc6d33b7d28783d0627782fa3f1364838705fa95a6a17253fd269b"
+    },
+    "S2A_R2_R3": {
+      "original_fields": {
+        "candidate_executed": false,
+        "engineering_status": "G4_S2A_R2_R3_PARTIAL",
+        "existing_p_full": "CANDIDATE_PARTIAL",
+        "integration_steps": 566,
+        "new_correction": "CANDIDATE_BLOCKED",
+        "r3": "NO-GO",
+        "s2b": "NO-GO"
+      },
+      "reference": "evidence/g4_s/s2a_r2_r3/completion_gate.json",
+      "sha256": "99515a571a264992d35ec987cf77101daca1b63ad10dd8a1bdfe4c8f0b7160bd"
+    }
+  },
+  "historical_reference_sha256": {
+    "docs/REVIEW_G4_I0.md": "eedf8fc94d12123f6dc3a760b7996f8e19bc31dd8c7c581f9a9a5772fba63c3d",
+    "docs/REVIEW_G4_I1.md": "cc867ffbc0f1f9266490eb5129516d77b6ff409f01a0bf81191311a22841e852",
+    "docs/REVIEW_G4_I2.md": "d61b775158c220eab0a906b05a38a5a901c08dbeb72542447d4e06d804acebc1",
+    "docs/REVIEW_G4_S0.md": "46dadab076f4934dd094a83f108c9a83b8c03d5d11b4e736ecaee4a74193dd1b",
+    "docs/REVIEW_G4_S1A.md": "fa06aa6dffe47db616f096ccfc3a8bf6c91d3ca9402fd84cded5db8c4066b5c6",
+    "docs/REVIEW_G4_S1B.md": "a49e4c8399f318c402b8a087a9a727398162e9caba9312fe753bcc0355776089",
+    "docs/REVIEW_G4_S2A.md": "21707a7e5c36ef9868747c20c15987572b92721b9925b78d493ba62a6425907b",
+    "docs/REVIEW_G4_S2A_GRIPPER_V1.md": "0d08410f31f004f7dda94faf08fc4fd780ea5cb90bf3bb0b2538bbc688a29d3f",
+    "docs/REVIEW_G4_S2A_GRIPPER_V1_R1.md": "2f13f2f171f585d1748ce82fcdb9bdb515322dd358bceef2e6eb3183e62059eb",
+    "docs/REVIEW_G4_S2A_R1.md": "f3c6a812e58645990437e98139dfd0e070ff9c3538ef590dc81c7428ef40b34c",
+    "docs/REVIEW_G4_S2A_R2.md": "4013bc2864c3a3fbc80da7bb10b3a051e7ed6460f714f5f27c157ca426586054",
+    "docs/REVIEW_G4_S2A_R2_R1.md": "f8fe0d49d7b3f1f3ae220b93e83e35a14ec3050edce371942ebd3b6f00aa1e75",
+    "docs/REVIEW_G4_S2A_R2_R2.md": "6e7ea4442275b455a219e086df87e6c3aaf718e263df4be24dadea6e7bdf9c9b",
+    "docs/REVIEW_G4_S2A_R2_R3.md": "415c8ad721ed627164955d8d738891cc5ce5c4bb45170026cb0bf6938501bdf4",
+    "evidence/g2/analysis/evaluation_summary.json": "dbbc8a830d6528c7f40145838cba460a14be57ff17f169f2fbdd8d7211908bff",
+    "evidence/g4_i/i0/checkpoint_and_source_identity.json": "f42647d510f1aa72b382eddce139f426442b02305c1094865257c3bb4e04d06d",
+    "evidence/g4_i/i0/g4i0_acceptance_cpu.json": "024a730f6e48df5e7b4f1986f372ee1576c4ba97fd08378bae57517bf0c917d3",
+    "evidence/g4_i/i1/independent_parity_review.json": "1f72098e0e6ac17a54984627d510cfb15fb170c789260e208f5022d8ed6bea65",
+    "evidence/g4_i/i1/runtime_acceptance_strict_coverage.json": "f5b2c86f04c60f72806996a35f471a9f40564a82776e66055e667b6775c152c3",
+    "evidence/g4_i/i2/acceptance.json": "f205487ecb3f5db6d9f8a15a7829af7dc0980a97b624cc0790504be593c94091",
+    "evidence/g4_i/i2/results/summary.json": "40f10c397c6a52478485d2b76481b570fadea0f9a664f845fc7dcd60d79d0734",
+    "evidence/g4_i/i2/scientific_protocol_review.json": "eebf490449fba07edcb16a7ee3005cbb3a46d0162ea40ed7291637b599fe0ccb",
+    "evidence/g4_s/gripper_v1/completion_gate.json": "9530f66421341b232cd1af37092e6e079281896fa419ac3d0a9939f1b004bc90",
+    "evidence/g4_s/gripper_v1_r1/completion_gate.json": "e68e2b780f05d329353bc2290f72a8b087d57566b4d2f22787122b8d0bacfc28",
+    "evidence/g4_s/gripper_v1_r1/image_qa.json": "a1eeb0d529df593097d8426446866d9740b8f0974937be477d4fcac59ad7549b",
+    "evidence/g4_s/gripper_v1_r1/numerical_review_v1.json": "9456942582512c9582fbe1d08a246c1973795e0998832ac249ef6c30c45c93d2",
+    "evidence/g4_s/s0/summary.json": "2f65b4e4e8b01b871ef51490e2b149fae0f38a48a925a61399fde7beacf77bdc",
+    "evidence/g4_s/s1a/reconstruction_gate.json": "ab7443fbe276b65040d770b03656823e56bb8496a1a89665ef87f880b3dc91a8",
+    "evidence/g4_s/s1b/reconstruction_gate.json": "0fbfc777b941f751f039cf2ee135f237ecda1285197bfd4c9d887790088d82ef",
+    "evidence/g4_s/s2a/completion_gate.json": "038e9c5b7e73f5dbdc63c1fe301624ddb1de87c4b9657c9afea72a60d8fe2745",
+    "evidence/g4_s/s2a_r1/completion_gate.json": "a027641eadb62fc3953d2ac3c5f7209db5195fe3b29e895d358a4e38eaaa55ed",
+    "evidence/g4_s/s2a_r2/completion_gate.json": "ce135c5acf3374ce318aa32c8c3bbc58d1e1398f2cdbad5b1973cb71a4a57bc3",
+    "evidence/g4_s/s2a_r2/numerical_review_v2/factorial_effects.json": "1391d7c74f48744d5cc12e2b2321ec2a749b49630c9468f68883680dcf75ab99",
+    "evidence/g4_s/s2a_r2_r1/completion_gate.json": "e8fd5df66475906ab576acf1f4b373ffaa5ba10c16101f23810445df4e6e76e3",
+    "evidence/g4_s/s2a_r2_r2/completion_gate.json": "32f06d5c76dc6d33b7d28783d0627782fa3f1364838705fa95a6a17253fd269b",
+    "evidence/g4_s/s2a_r2_r3/completion_gate.json": "99515a571a264992d35ec987cf77101daca1b63ad10dd8a1bdfe4c8f0b7160bd"
+  },
+  "inference_engineering_evidence": {
+    "I0_CPU": {
+      "original_fields": {
+        "exit_code": 0,
+        "unfiltered_tests": true
+      },
+      "reference": "evidence/g4_i/i0/g4i0_acceptance_cpu.json",
+      "sha256": "024a730f6e48df5e7b4f1986f372ee1576c4ba97fd08378bae57517bf0c917d3"
+    },
+    "I1": {
+      "original_fields": {
+        "checks": {
+          "complete_episode": true,
+          "configuration": true,
+          "identity": true,
+          "mode": true,
+          "no_runner_optimizer": true,
+          "parity": true,
+          "policy_physics_counts": true,
+          "pose_cache_reset": true,
+          "post_reset_first_action": true,
+          "process_gate": true,
+          "recurrent_reset": true,
+          "rms": true,
+          "rng": true,
+          "source_target_fixtures": true,
+          "success_counts_match_trace": true
+        },
+        "passed": true,
+        "status": "G4_I1_PASS"
+      },
+      "reference": "evidence/g4_i/i1/runtime_acceptance_strict_coverage.json",
+      "sha256": "f5b2c86f04c60f72806996a35f471a9f40564a82776e66055e667b6775c152c3"
+    },
+    "I2": {
+      "original_fields": {
+        "checks": {
+          "action_samples": true,
+          "all_guards_sample_covered": true,
+          "b_1001_149_steps": true,
+          "b_1002_149_steps": true,
+          "b_1003_149_steps": true,
+          "budget": true,
+          "controller_samples": true,
+          "correct_denominator": true,
+          "episode_identities": true,
+          "failure_evidence_complete": true,
+          "full_cpu_exit0": true,
+          "full_episode_statistics_complete": true,
+          "gpu_event_distribution": true,
+          "i2_a_mandatory": true,
+          "matplotlib_cpu_exit0": true,
+          "original_sources_preserved": true,
+          "runtime_source_identity": true,
+          "scientific_exits": true,
+          "source_snapshot": true,
+          "timing_pooled_no_cross_seed": true
+        },
+        "scope": "completed engineering/scientific I2 scope; no real-time or physical-safety certification",
+        "status": "G4_I2_PASS"
+      },
+      "reference": "evidence/g4_i/i2/acceptance.json",
+      "sha256": "f205487ecb3f5db6d9f8a15a7829af7dc0980a97b624cc0790504be593c94091"
+    }
+  },
+  "original_source_baseline": {
+    "metric_scope": "PhysX Factory original geometric success; NOT MuJoCo transfer",
+    "original_epoch200_fields": {
+      "aggregate": {
+        "episodes_completed": 288,
+        "ever_success_count": 280,
+        "ever_success_rate": 0.9722222222222222,
+        "ever_success_wilson95": [
+          0.9461541500457419,
+          0.9858587349608235
+        ],
+        "first_success_step_conditional": {
+          "max": 105,
+          "mean": 33.535714285714285,
+          "median": 29.0,
+          "min": 18,
+          "n": 280,
+          "q25": 24.0,
+          "q75": 40.0
+        },
+        "first_success_time_seconds_conditional": {
+          "max": 7.0,
+          "mean": 2.2357142857142858,
+          "median": 1.9333333333333333,
+          "min": 1.2,
+          "n": 280,
+          "q25": 1.6,
+          "q75": 2.6666666666666665
+        },
+        "terminal_success_count": 280,
+        "terminal_success_rate": 0.9722222222222222,
+        "terminal_success_wilson95": [
+          0.9461541500457419,
+          0.9858587349608235
+        ],
+        "transient_only_count": 0
+      },
+      "checkpoint_epoch": 200,
+      "complete_preregistered_seeds": true,
+      "episodes_requested": 288,
+      "per_seed": [
+        {
+          "auto_reset_order_verified": true,
+          "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+          "checkpoint_sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+          "deterministic": true,
+          "episodes_completed": 96,
+          "episodes_requested": 96,
+          "ever_success_count": 95,
+          "ever_success_rate": 0.9895833333333334,
+          "ever_success_wilson95": [
+            0.9433338237728424,
+            0.9981588297831838
+          ],
+          "first_success_step_conditional": {
+            "max": 72,
+            "mean": 34.17894736842105,
+            "median": 33,
+            "min": 18,
+            "n": 95,
+            "q25": 24.0,
+            "q75": 40.0
+          },
+          "first_success_time_seconds_conditional": {
+            "max": 4.8,
+            "mean": 2.27859649122807,
+            "median": 2.2,
+            "min": 1.2,
+            "n": 95,
+            "q25": 1.6,
+            "q75": 2.6666666666666665
+          },
+          "input_identity": {
+            "bytes": 40819,
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch200/seed1001/metrics.json",
+            "sha256": "0a6ab77092f50b5d3fbeb9c1220940e90b18df56122d4c78362e761fba198cea"
+          },
+          "meets_preregistered_target": true,
+          "official_success_capture": "pre_reset_factory_get_curr_successes",
+          "seed": 1001,
+          "status": "complete",
+          "terminal_success_count": 95,
+          "terminal_success_rate": 0.9895833333333334,
+          "terminal_success_wilson95": [
+            0.9433338237728424,
+            0.9981588297831838
+          ],
+          "transient_only_count": 0
+        },
+        {
+          "auto_reset_order_verified": true,
+          "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+          "checkpoint_sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+          "deterministic": true,
+          "episodes_completed": 96,
+          "episodes_requested": 96,
+          "ever_success_count": 96,
+          "ever_success_rate": 1.0,
+          "ever_success_wilson95": [
+            0.9615244121423243,
+            1.0
+          ],
+          "first_success_step_conditional": {
+            "max": 98,
+            "mean": 31.625,
+            "median": 27.0,
+            "min": 18,
+            "n": 96,
+            "q25": 23.0,
+            "q75": 34.0
+          },
+          "first_success_time_seconds_conditional": {
+            "max": 6.533333333333333,
+            "mean": 2.1083333333333334,
+            "median": 1.8,
+            "min": 1.2,
+            "n": 96,
+            "q25": 1.5333333333333332,
+            "q75": 2.2666666666666666
+          },
+          "input_identity": {
+            "bytes": 40925,
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch200/seed1002/metrics.json",
+            "sha256": "1c1fa341411611232c99cbe4900fd7883cac5465ff542c1b8fa8fb4e615fa196"
+          },
+          "meets_preregistered_target": true,
+          "official_success_capture": "pre_reset_factory_get_curr_successes",
+          "seed": 1002,
+          "status": "complete",
+          "terminal_success_count": 96,
+          "terminal_success_rate": 1.0,
+          "terminal_success_wilson95": [
+            0.9615244121423243,
+            1.0
+          ],
+          "transient_only_count": 0
+        },
+        {
+          "auto_reset_order_verified": true,
+          "checkpoint": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/runs/logs/rl_games/Factory/g2_peginsert_64env_seed0_baseline_rerun/nn/last_Factory_ep_200_rew__350.4961_.pth",
+          "checkpoint_sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+          "deterministic": true,
+          "episodes_completed": 96,
+          "episodes_requested": 96,
+          "ever_success_count": 89,
+          "ever_success_rate": 0.9270833333333334,
+          "ever_success_wilson95": [
+            0.8570696833485983,
+            0.9642324186896375
+          ],
+          "first_success_step_conditional": {
+            "max": 105,
+            "mean": 34.91011235955056,
+            "median": 31,
+            "min": 18,
+            "n": 89,
+            "q25": 25.0,
+            "q75": 42.0
+          },
+          "first_success_time_seconds_conditional": {
+            "max": 7.0,
+            "mean": 2.3273408239700375,
+            "median": 2.0666666666666664,
+            "min": 1.2,
+            "n": 89,
+            "q25": 1.6666666666666667,
+            "q75": 2.8
+          },
+          "input_identity": {
+            "bytes": 40916,
+            "path": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro/evidence/g2/evaluation/epoch200/seed1003/metrics.json",
+            "sha256": "27daef215badafd17bf34dd412dc3b5fcd77fdbcb23aaf194ce15c3f1764b4e8"
+          },
+          "meets_preregistered_target": true,
+          "official_success_capture": "pre_reset_factory_get_curr_successes",
+          "seed": 1003,
+          "status": "complete",
+          "terminal_success_count": 89,
+          "terminal_success_rate": 0.9270833333333334,
+          "terminal_success_wilson95": [
+            0.8570696833485983,
+            0.9642324186896375
+          ],
+          "transient_only_count": 0
+        }
+      ]
+    },
+    "reference": "evidence/g2/analysis/evaluation_summary.json"
+  },
+  "partial_engineering_stages": [
+    "S2A",
+    "S2A_R2_R1",
+    "S2A_R2_R3",
+    "GRIPPER_V1"
+  ],
+  "rejected_candidates": {
+    "native_tendon_v1": "NATIVE_GRIPPER_REJECTED",
+    "scope": "registered native tendon model and R1 preparation schedule at 1/120 s, I2/I3 only"
+  },
+  "remaining_UNKNOWN": [
+    "unique contact/grasp root cause",
+    "historical V1 I3 initial-state mutation cause",
+    "historical I3_FULL_C1 exact child exit after unmatched request 212",
+    "source PhysX actual applied motor torque",
+    "exact original cooked PhysX collision representation",
+    "original NVIDIA asset conversion/distribution permission",
+    "target-engine task success probability",
+    "continuous collision behavior between recorded states"
+  ],
+  "schema_version": "g4_sim2sim_closeout_v1",
+  "standalone_source_inference": {
+    "comparison": "descriptive unpaired; do not pool denominators with G2",
+    "original_evaluation": {
+      "archived_comparison": {
+        "archived_n": 288,
+        "archived_rate": 0.9722222222222222,
+        "archived_successes": 280,
+        "archived_wilson95": [
+          0.9461541500457419,
+          0.9858587349608235
+        ],
+        "kind": "descriptive_unpaired",
+        "limitation": "initial conditions and RNG streams are not verified paired; no paired significance or per-episode agreement claim",
+        "standalone_minus_archived_terminal_rate": 0.0
+      },
+      "episodes_completed": 288,
+      "ever_success_count": 280,
+      "ever_success_rate": 0.9722222222222222,
+      "ever_success_wilson95": [
+        0.9461541500457419,
+        0.9858587349608235
+      ],
+      "failure_categories": {
+        "never_success": 8,
+        "terminal_success": 280
+      },
+      "first_success_time_seconds": {
+        "max": 7.0,
+        "mean": 2.2357142857142858,
+        "min": 1.2,
+        "n": 280,
+        "p50": 1.9333333333333333,
+        "p95": 4.066666666666666,
+        "p99": 5.157333333333312,
+        "std": 0.9248735894502476
+      },
+      "terminal_success_count": 280,
+      "terminal_success_rate": 0.9722222222222222,
+      "terminal_success_wilson95": [
+        0.9461541500457419,
+        0.9858587349608235
+      ],
+      "uncertainty": "episode-binomial intervals are descriptive, not training-seed uncertainty"
+    },
+    "reference": "evidence/g4_i/i2/results/summary.json"
+  },
+  "starting_commit": "85017ba626e123ed95c397c32c4b852e9118abe4",
+  "verified_local_findings": {
+    "I1_A_B_C_D_common_prefix_metrics": {
+      "A": {
+        "actual_motor_force_at_limit_fraction": 0.2857142857142857,
+        "actuator_saturation_fraction": 0.2857142857142857,
+        "bilateral_positive_contact_fraction": 0.6,
+        "first_contact_loss_step": 4,
+        "first_slip_over_1mm_step": 3,
+        "initial_controller_joint7_effective_inertia_kg_m2": 0.005710945998688221,
+        "initial_physical_joint7_effective_inertia_kg_m2": 0.005710945998688221,
+        "left_pad_force_n_max": 1.2520286924462707,
+        "left_pad_force_n_mean": 0.37392071841236774,
+        "left_pad_force_n_min": 0.0,
+        "max_abs_actual_motor_force_nm": 87.0,
+        "max_abs_finger_command_n": 0.37528117042601705,
+        "max_abs_null_torque_nm": 3.4241585970287636,
+        "max_abs_task_torque_nm": 108.55627748073191,
+        "max_all_penetration_m": 0.003314792606547144,
+        "max_arm_interval_acceleration_rad_s2": 1742.2637186899544,
+        "max_arm_limit_violation_rad": 0.0,
+        "max_arm_velocity_rad_s": 9.35770372118682,
+        "max_assembly_penetration_m": 0.0,
+        "max_cartesian_orientation_error_norm_rad": 0.0178065522069489,
+        "max_cartesian_position_error_norm_m": 0.009376964480213815,
+        "max_controller_mass_condition": 620.1551535081175,
+        "max_fd_angular_speed_rad_s": 9.939001912252959,
+        "max_fd_linear_speed_m_s": 0.46684323771688013,
+        "max_finger_limit_violation_m": 0.0,
+        "max_null_dynamic_residual": 3.412729493236424e-14,
+        "max_pad_penetration_m": 0.003314792606547144,
+        "max_physical_mass_condition": 620.1551535081175,
+        "max_requested_max_abs_torque_nm": 107.75817123419466,
+        "max_rotation_slip_rad": 0.23153995004279707,
+        "max_translation_slip_m": 0.006191531536692202,
+        "right_pad_force_n_max": 0.8278366563585999,
+        "right_pad_force_n_mean": 0.3561079641016492,
+        "right_pad_force_n_min": 0.0,
+        "simulation_duration_s": 0.041666666666666664,
+        "source_software_clipping_fraction": 0.05714285714285714,
+        "steps": 5
+      },
+      "B": {
+        "actual_motor_force_at_limit_fraction": 0.0,
+        "actuator_saturation_fraction": 0.0,
+        "bilateral_positive_contact_fraction": 1.0,
+        "first_contact_loss_step": null,
+        "first_slip_over_1mm_step": null,
+        "initial_controller_joint7_effective_inertia_kg_m2": 0.005710945998688221,
+        "initial_physical_joint7_effective_inertia_kg_m2": 0.030589006716778548,
+        "left_pad_force_n_max": 0.22597073727099382,
+        "left_pad_force_n_mean": 0.22527939769058697,
+        "left_pad_force_n_min": 0.22487661117603258,
+        "max_abs_actual_motor_force_nm": 3.916168345150642,
+        "max_abs_finger_command_n": 0.22710061850687313,
+        "max_abs_null_torque_nm": 3.4241585970287636,
+        "max_abs_task_torque_nm": 0.4964073712549221,
+        "max_all_penetration_m": 8.357804716657024e-06,
+        "max_arm_interval_acceleration_rad_s2": 11.982707361596784,
+        "max_arm_limit_violation_rad": 0.0,
+        "max_arm_velocity_rad_s": 0.42133553098846366,
+        "max_assembly_penetration_m": 0.0,
+        "max_cartesian_orientation_error_norm_rad": 0.012020748488628257,
+        "max_cartesian_position_error_norm_m": 0.009376964480213815,
+        "max_controller_mass_condition": 616.8996302071865,
+        "max_fd_angular_speed_rad_s": 0.06452145343660246,
+        "max_fd_linear_speed_m_s": 0.007364700929289971,
+        "max_finger_limit_violation_m": 0.0,
+        "max_null_dynamic_residual": 3.262933700746045e-14,
+        "max_pad_penetration_m": 8.357804716657024e-06,
+        "max_physical_mass_condition": 151.3014384726517,
+        "max_requested_max_abs_torque_nm": 3.9161683451506506,
+        "max_rotation_slip_rad": 7.936295223061497e-05,
+        "max_translation_slip_m": 7.371223485534634e-06,
+        "right_pad_force_n_max": 0.22883381083415433,
+        "right_pad_force_n_mean": 0.22828745240929585,
+        "right_pad_force_n_min": 0.2275541600058406,
+        "simulation_duration_s": 0.041666666666666664,
+        "source_software_clipping_fraction": 0.0,
+        "steps": 5
+      },
+      "C": {
+        "actual_motor_force_at_limit_fraction": 0.2857142857142857,
+        "actuator_saturation_fraction": 0.2857142857142857,
+        "bilateral_positive_contact_fraction": 0.6,
+        "first_contact_loss_step": 4,
+        "first_slip_over_1mm_step": 3,
+        "initial_controller_joint7_effective_inertia_kg_m2": 0.030589006716778548,
+        "initial_physical_joint7_effective_inertia_kg_m2": 0.005710945998688221,
+        "left_pad_force_n_max": 1.2551926022436162,
+        "left_pad_force_n_mean": 0.3747178233426977,
+        "left_pad_force_n_min": 0.0,
+        "max_abs_actual_motor_force_nm": 87.0,
+        "max_abs_finger_command_n": 0.3751825750375855,
+        "max_abs_null_torque_nm": 3.3763118745139153,
+        "max_abs_task_torque_nm": 108.69695890833756,
+        "max_all_penetration_m": 0.0033416365992312556,
+        "max_arm_interval_acceleration_rad_s2": 1742.3582371244963,
+        "max_arm_limit_violation_rad": 0.0,
+        "max_arm_velocity_rad_s": 9.409768489930073,
+        "max_assembly_penetration_m": 0.0,
+        "max_cartesian_orientation_error_norm_rad": 0.01795702014667363,
+        "max_cartesian_position_error_norm_m": 0.009376964480213815,
+        "max_controller_mass_condition": 152.36608883907667,
+        "max_fd_angular_speed_rad_s": 9.957501743347715,
+        "max_fd_linear_speed_m_s": 0.4717398112442762,
+        "max_finger_limit_violation_m": 0.0,
+        "max_null_dynamic_residual": 4.47661487932676e-15,
+        "max_pad_penetration_m": 0.0033416365992312556,
+        "max_physical_mass_condition": 620.168429347749,
+        "max_requested_max_abs_torque_nm": 107.97690454117287,
+        "max_rotation_slip_rad": 0.23448864476593106,
+        "max_translation_slip_m": 0.0063625742605904765,
+        "right_pad_force_n_max": 0.8373372899762563,
+        "right_pad_force_n_mean": 0.35627359819737814,
+        "right_pad_force_n_min": 0.0,
+        "simulation_duration_s": 0.041666666666666664,
+        "source_software_clipping_fraction": 0.05714285714285714,
+        "steps": 5
+      },
+      "D": {
+        "actual_motor_force_at_limit_fraction": 0.0,
+        "actuator_saturation_fraction": 0.0,
+        "bilateral_positive_contact_fraction": 1.0,
+        "first_contact_loss_step": null,
+        "first_slip_over_1mm_step": null,
+        "initial_controller_joint7_effective_inertia_kg_m2": 0.030589006716778548,
+        "initial_physical_joint7_effective_inertia_kg_m2": 0.030589006716778548,
+        "left_pad_force_n_max": 0.22703742154023054,
+        "left_pad_force_n_mean": 0.22623565226834336,
+        "left_pad_force_n_min": 0.2259002453276107,
+        "max_abs_actual_motor_force_nm": 3.8683216226358077,
+        "max_abs_finger_command_n": 0.22692699413491432,
+        "max_abs_null_torque_nm": 3.3763118745139153,
+        "max_abs_task_torque_nm": 0.4964073712549221,
+        "max_all_penetration_m": 8.484020646729838e-06,
+        "max_arm_interval_acceleration_rad_s2": 13.907208597395947,
+        "max_arm_limit_violation_rad": 0.0,
+        "max_arm_velocity_rad_s": 0.4875456847331875,
+        "max_assembly_penetration_m": 0.0,
+        "max_cartesian_orientation_error_norm_rad": 0.012019377483880045,
+        "max_cartesian_position_error_norm_m": 0.009376964480213815,
+        "max_controller_mass_condition": 151.30049969967632,
+        "max_fd_angular_speed_rad_s": 0.06442879380080985,
+        "max_fd_linear_speed_m_s": 0.004534660450403925,
+        "max_finger_limit_violation_m": 0.0,
+        "max_null_dynamic_residual": 4.49013831008806e-15,
+        "max_pad_penetration_m": 8.484020646729838e-06,
+        "max_physical_mass_condition": 151.30049969967632,
+        "max_requested_max_abs_torque_nm": 3.8683216226358024,
+        "max_rotation_slip_rad": 7.468556535972267e-05,
+        "max_translation_slip_m": 6.946615953762865e-06,
+        "right_pad_force_n_max": 0.22781419932715238,
+        "right_pad_force_n_mean": 0.2273275191500547,
+        "right_pad_force_n_min": 0.22648388124518576,
+        "simulation_duration_s": 0.041666666666666664,
+        "source_software_clipping_fraction": 0.0,
+        "steps": 5
+      }
+    },
+    "I1_common_prefix_steps": 5,
+    "interpretation": "P_FULL plant inertia locally stabilizes initial motion; controller-only substitution does not; no global stability or task-success claim",
+    "reference": "evidence/g4_s/s2a_r2/numerical_review_v2/factorial_effects.json",
+    "state_integrity_R1": "PASS"
+  }
+}

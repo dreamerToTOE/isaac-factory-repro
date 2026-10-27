@@ -1,0 +1,22 @@
+{
+  "all_other_historical_files_byte_identical": true,
+  "checkpoint_bytes": 16179528601,
+  "checkpoint_count": 76,
+  "checkpoint_deserializations": 0,
+  "external_scientific_files_and_all_checkpoint_hashes_identical": true,
+  "forbidden_runtime_imports": [],
+  "local_document_links": "PASS",
+  "modified_historical_files": [
+    "README.md",
+    "docs/case_studies/README.md",
+    "docs/case_studies/SIM2SIM_PANDA_CONTROL_INSTABILITY.md"
+  ],
+  "original_case_narrative_preserved": true,
+  "physics_steps": 0,
+  "policy_calls": 0,
+  "scope": "documentation and integrity only; historical simulator tests intentionally not invoked",
+  "starting_commit": "85017ba626e123ed95c397c32c4b852e9118abe4",
+  "starting_tracked_count": 2891,
+  "status": "PASS",
+  "summary_matches_original_gates": true
+}

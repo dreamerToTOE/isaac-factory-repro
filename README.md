@@ -1,10 +1,20 @@
 # isaac-factory-repro
 Reproduction and evaluation of contact-rich robotic assembly tasks using NVIDIA Isaac Lab, Franka, and PPO.
 
-## Engineering Case Studies｜工程故障复盘（持续更新）
+## G4 Sim2Sim 结项（2026-10-27）
+
+**工程里程碑 PARTIAL；当前夹爪路线 CLOSED_WITH_NEGATIVE_RESULT；任务级 zero-shot transfer NOT_DEMONSTRATED。** 源PhysX PPO独立几何成功率280/288（97.22%），不能当作MuJoCo迁移成功率。冻结推理与适配环境已运行，物理惯量适配局部抑制了初始臂振荡；持续接触/夹持未解决，原生tendon V1在有效I2/I3限速准备中均于第23物理步越限，当前已测候选被拒绝。R3/S2B均NO-GO，唯一根因未建立。
+
+- [G4中文结项报告](docs/REVIEW_G4_SIM2SIM_CLOSEOUT.md)：工程/科学结论、精确接口、阶段门禁、失败与保全。
+- [工程案例](docs/case_studies/SIM2SIM_PANDA_CONTROL_INSTABILITY.md)与[面试指南](docs/case_studies/SIM2SIM_INTERVIEW_GUIDE.md)：三个工程问题及15个技术追问，保留负面结果。
+- [机器摘要与证据索引](evidence/g4_s/closeout/README.md)：原门禁读取、历史数值图、全量checkpoint只读哈希与CPU一致性检查。
+
+本轮已停止，不自动调试、训练或启动后续任务。学习与理论考核仍PENDING。下方阶段记录保留历史口径，其中“最新/下一步”以本节结项状态为准。
+
+## Engineering Case Studies｜工程故障复盘
 
 - [工程案例索引](docs/case_studies/README.md)：真实故障、隔离排障、证据与面试总结；统一证据标准见[案例模板](docs/case_studies/CASE_STUDY_TEMPLATE.md)。
-- [Panda Sim2Sim：冻结 PPO 迁移后的控制振荡与脱抓](docs/case_studies/SIM2SIM_PANDA_CONTROL_INSTABILITY.md)：G4-S2A 首次跨引擎闭环已运行但物理失稳；**ROOT_CAUSE_PENDING / SOLUTION_PENDING / VALIDATION_PENDING**。目前 G4-S2B NO-GO，不能声称已修复或迁移成功。
+- [Panda Sim2Sim：冻结 PPO 迁移后的控制振荡与脱抓](docs/case_studies/SIM2SIM_PANDA_CONTROL_INSTABILITY.md)：臂动力学、接触操纵与状态完整性三条证据链；已结项PARTIAL，当前夹爪负面关闭，任务迁移未证明。
 
 ## G4-S1B：适配型 zero-shot Sim2Sim（2026-10-26 新授权）
 
@@ -16,7 +26,7 @@ Reproduction and evaluation of contact-rich robotic assembly tasks using NVIDIA 
 保持原结论，不能把适配模型描述成原Factory精确复刻。历史实验及下方历史导航原样保留。
 学习考核仍PENDING；S2及后续任务没有自动执行授权。
 
-## 最新工程状态（2026-10-26）
+## 历史工程状态（2026-10-26，结项前记录）
 
 **PegInsert 独立推理链路 G4-I0 → G4-I1 → G4-I2 已全部工程 PASS。** [G4-I2 中文报告](docs/REVIEW_G4_I2.md) 与 [证据索引](evidence/g4_i/i2/README.md)：冻结 G2 策略完成 288/288 回合，ever/terminal 280/288（97.22%），仅与历史结果进行非配对描述性比较；并完成 GPU 推理延迟、动作饱和率、失败轨迹及控制周期分析。G4-I2 提交：`85b49ef547e07df063d2efe58457488c99935a70`。
 

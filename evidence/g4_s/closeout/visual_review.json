@@ -1,0 +1,14 @@
+{
+  "contaminated_desktop_captures_republished": false,
+  "existing_screenshot_QA_reference": "evidence/g4_s/gripper_v1_r1/image_qa.json",
+  "existing_screenshots_reused": [
+    "evidence/g4_s/gripper_v1_r1/matrix_v1/runs/PREP_I2_RATE_LIMITED/output/step_000.png",
+    "evidence/g4_s/gripper_v1_r1/matrix_v1/runs/PREP_I2_RATE_LIMITED/output/step_023.png"
+  ],
+  "new_archived_data_charts": [
+    "inertia_common_prefix.png",
+    "gripper_target_vs_actual.png"
+  ],
+  "new_screenshots": 0,
+  "review": "visually inspected both generated charts; readable units, experiment IDs, matched or explicitly unequal windows; no simulator rendering"
+}

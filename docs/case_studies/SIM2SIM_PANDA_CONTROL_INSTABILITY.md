@@ -1,12 +1,57 @@
 # Panda Sim2Sim：冻结 PPO 策略迁移后的控制振荡与脱抓
 
-> **状态：INVESTIGATING — ROOT_CAUSE_PENDING / SOLUTION_PENDING / VALIDATION_PENDING**
+> **结项：G4_SIM2SIM_MILESTONE=PARTIAL；当前夹爪路线 CLOSED_WITH_NEGATIVE_RESULT。**
 >
-> 首次记录：2026-10-26；仓库：`dreamerToTOE/isaac-factory-repro`。
+> 2026-10-27：本轮工程调查结束，R3/S2B均NO-GO；任务级zero-shot transfer **NOT_DEMONSTRATED**。
+> 源训练/推理与目标环境集成完成，物理惯量适配的局部效果得到验证；晚期接触根因仍未唯一确定。
+> 原生tendon V1在所测模型、步长及R1协议下被拒绝，没有通过的完整MuJoCo插入回合。
 >
-> 本文是**正在推进的真实工程排障案例**，不是已解决的成功案例。G4-S2A-R1 已完成可见 GUI、归档重建及10×16步无策略对照，阶段 **G4_S2A_R1_PASS**；**当前 G4-S2B NO-GO**。没有修复后的完整PPO任务评估，未修改或微调PPO。
+> [结项报告](../REVIEW_G4_SIM2SIM_CLOSEOUT.md) · [中文面试指南](SIM2SIM_INTERVIEW_GUIDE.md) · [最终机器摘要](../../evidence/g4_s/closeout/milestone_summary.json)
 >
-> R2已完成三初态2×2的12条预注册无策略对照及独立数值复核：plant惯量抑制初始振荡，但第三初态晚期抓持/穿透失败。**CANDIDATE_PARTIAL；R3仍NO-GO**，新证据见第10节。
+> 首次记录2026-10-26。以下第1–15节保留各阶段原始叙述和负面结果；“正在调查”“下一步建议”等历史口径不构成当前继续执行授权。
+> 本轮没有新积分、策略执行或调参。学习与理论考核仍PENDING。
+
+## 外部读者导读：三个独立工程问题
+
+这不是“把一次PPO成功移植到另一个引擎”的案例，而是有完整记录的迁移失败调查。源PhysX的97.22%是原Factory几何指标；不能作为目标MuJoCo成功率。阅读时可沿以下三个问题查看证据，再按第1–15节追踪时间顺序。
+
+### 问题A：跨引擎动力学与控制稳定性
+
+**观察与测量：** S2A第2物理步J7由+.5047反转到−5.1497 rad/s，当时实际力矩−4.605 Nm尚未饱和。每物理步区分task/nullspace、requested/software/integration motor、FD及滑移；前8步只有一次策略决策。
+
+**假说与改变：** 对比body转动惯量、joint armature、限力、指驱动等负控；P_FULL给11个body各加.01I。R2的2×2矩阵独立设置plant与臂controller M(q)，只替controller的C组不能替代物理plant适配。
+
+**验证与界限：** 相同I1前5步，A/B/C/D最大臂速9.357704/.421336/9.409768/.487546 rad/s；B相对A减少95.50%。该局部效果保留，I3晚期失败也保留；不是全局稳定或策略任务修复。见第5–10节及[同窗原数据](../../evidence/g4_s/s2a_r2/numerical_review_v2/factorial_effects.json)。
+
+![同一初态与共同窗口的惯量对照](../../evidence/g4_s/closeout/inertia_common_prefix.png)
+
+### 问题B：夹爪接触与物理操纵稳定性
+
+**观察与测量：** P_FULL下I3仍在176步失去左pad正力、177步严重穿透；被动臂也失败。追踪contact几何ID、EFC标量行、约束/等式反力、指端驱动与solver阶段，而非仅从截图猜测。
+
+**假说与改变：** 自由运动隐式PD重算一致，未证明算术错误；R2-R3将积分所用求解量与额外forward诊断分开。随后另行授权的sum-tendon V1静态传动通过，骤闭I2第一步却穿透1.902 mm；一次I3初态无效。V1-R1仅限速参考，保留原驱动参数。
+
+**验证与界限：** 接触/约束转换与失败相关，不足以唯一归因solver。R1两次有效准备各23步越限，未获得真实稳定抓持；目标10µm/步不约束实际单步183.242mm位移。当前候选在已测范围被拒绝，无自动重试或新候选。见第11–15节及[最终门禁](../../evidence/g4_s/gripper_v1_r1/completion_gate.json)。
+
+![原生夹爪的目标与实际响应；不同全窗不作无偏比较](../../evidence/g4_s/closeout/gripper_target_vs_actual.png)
+
+### 问题C：实验状态完整性与可复现性
+
+**观察与测量：** V1 I3登记与真正积分前初态不一致，不能据此评价注册I3；R2-R1的请求212无结果/最终退出，不能补造。状态污染来源与未知退出保持UNKNOWN。
+
+**假说与改变：** 共享viewer路径的后续复现没有发现失配，不能直接责怪GUI。R1采用独立物理/显示model与data、单向复制、完整integration-state位级守卫和模型物理指纹；监督器持久化request/result与真实wait，分类异常并禁止自动重试。
+
+**验证与界限：** 16个篡改负控积分前拒绝；I2/I3共46步状态链一致，使后续物理失败可被可信解释。截图只展示保存状态，不证明连续接触安全。结项保全旧报告、原始轨迹和76个归档checkpoint，仅新增文档/只读检查；没有把工程PASS改写成物理PASS。见第14–15节及[保全入口](../../evidence/g4_s/closeout/README.md)。
+
+### 叙述边界与阅读顺序
+
+| 已建立 | 未建立 |
+|---|---|
+| 源PPO训练和同源独立推理；适配目标模型/控制执行 | 原Factory精确资产/接触重建；目标任务成功率 |
+| 物理惯量适配的同初态短窗改善 | 全局稳定、长时不脱抓、完整策略任务修复 |
+| 后续有效初态、监督和数值复核；原生驱动静态映射 | 历史初态变更的唯一原因、唯一接触根因、原生V1有效抓持 |
+
+第1–4节介绍失败基线；第5–10节是臂动力学与惯量隔离；第11–13节追查晚期接触和监督；第14–15节记录原生夹爪失败与状态隔离。下一代物理夹爪仅为[未测试的架构建议](../REVIEW_G4_SIM2SIM_CLOSEOUT.md)，不是已完成的解决方案。
 
 ## 1. 背景：为什么要做 Sim2Sim
 

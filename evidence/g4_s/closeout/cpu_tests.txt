@@ -1,0 +1,11 @@
+test_false_transfer_success_rejected (__main__.CloseoutChecks) ... ok
+test_missing_local_link_rejected (__main__.CloseoutChecks) ... ok
+test_original_gates_and_source_denominator (__main__.CloseoutChecks) ... ok
+test_protected_file_and_checkpoint_changes_rejected (__main__.CloseoutChecks) ... ok
+test_rewritten_historical_gate_rejected (__main__.CloseoutChecks) ... ok
+test_runtime_import_barrier (__main__.CloseoutChecks) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.027s
+
+OK

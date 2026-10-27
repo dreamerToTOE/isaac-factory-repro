@@ -1,0 +1,28 @@
+{
+  "scope": "reviewed closeout content; excludes this self-manifest and the later publication receipt",
+  "sha256": {
+    "README.md": "38fb56251f84f553af740f90aa011aec202da93070e186f11e8e80c5f27f6b5f",
+    "docs/REVIEW_G4_SIM2SIM_CLOSEOUT.md": "2da9d11253f9e716e5f98eb645004cc97b719a356694e660b202d0f332556000",
+    "docs/case_studies/README.md": "130379c51d18b36629c61e020e9cea53ebe42426af140699c065d2c161e67e92",
+    "docs/case_studies/SIM2SIM_INTERVIEW_GUIDE.md": "85b785fcff91e338b589f2610432252d10b62ba0092fe939dbfc3008f41b7ed7",
+    "docs/case_studies/SIM2SIM_PANDA_CONTROL_INSTABILITY.md": "358b0e104389c91e6e37043dbaa13fca874cd3af08d514df1ebb2b12218bf442",
+    "evidence/g4_s/closeout/README.md": "96f389abac3fb05d719a84e54bbcb95c5620de2de43d95e62b093c6cb0187356",
+    "evidence/g4_s/closeout/chart_data.json": "d1e035f187c317918db6ae5504da4195ca039601ffc35262b1718e22c739adb0",
+    "evidence/g4_s/closeout/consistency_checks.json": "0bb6462901c24bf0eae3d679d9511c443db7edd5a2b75499eb714cb46bb3f31f",
+    "evidence/g4_s/closeout/cpu_test_receipt.json": "9db2b1dc9c633d28e24374f5fc160f15a01a6ad3b0c4aaaef7f80b3cb247b521",
+    "evidence/g4_s/closeout/cpu_tests.txt": "415204205801a5bc5f5a096902b9919c430c8113c8b756b1026be4ad56059900",
+    "evidence/g4_s/closeout/delivery_review.json": "a53b268818b48f9e4e1f71069e43296bd0b9ef83ebe415c87845c709b6061c2c",
+    "evidence/g4_s/closeout/development_checks.json": "c61516a76596e674bfe145573bfbf7f6c4867139bb998b0dbc29c6e1ec772daf",
+    "evidence/g4_s/closeout/gripper_target_vs_actual.png": "5c6d3dd9279982c76e290aa8c00ba9093a01adb49f74a3dd9bccc074ad3241cf",
+    "evidence/g4_s/closeout/inertia_common_prefix.png": "f52b3821bde8180c4d1dcbea438994e4a40dfb141724114b5f7da891f95cebf4",
+    "evidence/g4_s/closeout/milestone_summary.json": "31c712de4dae1214b32459187da8306d5f679926077828a76e1623eaf56d6dff",
+    "evidence/g4_s/closeout/preservation_after.json": "08ded703eb6c31c45ff21e7e35a72033832e367fb6e478b0ffa12c15d1d2bbfc",
+    "evidence/g4_s/closeout/preservation_before.json": "e70d8bc7701d2d995335136a2d5248d8b99ddf24f3b8f0b64a83d4ad1aa94739",
+    "evidence/g4_s/closeout/source_hashes.json": "5b37af449df0ea7f89b24f7deb92ea74e795aabb46b6c9e83bf0416dd2596b12",
+    "evidence/g4_s/closeout/visual_review.json": "658ff9682bdf34b00cc3f3828cee931597322436f429ae02414e7ce85145bd02",
+    "scripts/g4_sim2sim_closeout.py": "38f90af47e899119b1cf57436b55cfee9f5450c9b798fce8510a1d2935a12359",
+    "scripts/plot_g4_sim2sim_closeout.py": "215727f6c1049287519f985eaac08234fccdb2006c54fcc25378dfe8293a75d5",
+    "tests/test_g4_sim2sim_closeout.py": "247a42c7897d62fcacc022af9c76a7f91e309e7a4d601f1d4c2705a6dc434ae1"
+  },
+  "starting_commit": "85017ba626e123ed95c397c32c4b852e9118abe4"
+}

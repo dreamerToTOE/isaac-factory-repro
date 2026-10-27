@@ -6,7 +6,9 @@
 
 | 案例 | 当前证据状态 | 研究问题 | 入口 |
 | --- | --- | --- | --- |
-| Panda Sim2Sim 控制振荡与脱抓 | **GRIPPER_V1_R1_PASS / NATIVE_GRIPPER_REJECTED / R3_NO-GO / ROOT_CAUSE_PENDING** | PhysX 中训练的冻结 PPO 在 MuJoCo 中出现快速脱抓与关节失稳；状态隔离验证通过；限速准备的 I2/I3 均因指关节越限早停 | [案例正文](SIM2SIM_PANDA_CONTROL_INSTABILITY.md) · [GRIPPER-V1-R1报告](../REVIEW_G4_S2A_GRIPPER_V1_R1.md) · [GRIPPER-V1报告](../REVIEW_G4_S2A_GRIPPER_V1.md) · [R2-R2报告](../REVIEW_G4_S2A_R2_R2.md) · [R2-R1报告](../REVIEW_G4_S2A_R2_R1.md) · [R2报告](../REVIEW_G4_S2A_R2.md) · [R1报告](../REVIEW_G4_S2A_R1.md) |
+| Panda Sim2Sim 控制振荡与脱抓 | **MILESTONE_PARTIAL / CLOSED_WITH_NEGATIVE_RESULT / TASK_TRANSFER_NOT_DEMONSTRATED** | PhysX 中训练的冻结 PPO 在 MuJoCo 中出现快速脱抓与关节失稳；状态隔离验证通过；限速准备的 I2/I3 均因指关节越限早停 | [结项报告](../REVIEW_G4_SIM2SIM_CLOSEOUT.md) · [面试指南](SIM2SIM_INTERVIEW_GUIDE.md) · [机器摘要](../../evidence/g4_s/closeout/milestone_summary.json) · [案例正文](SIM2SIM_PANDA_CONTROL_INSTABILITY.md) · [GRIPPER-V1-R1报告](../REVIEW_G4_S2A_GRIPPER_V1_R1.md) · [GRIPPER-V1报告](../REVIEW_G4_S2A_GRIPPER_V1.md) · [R2-R2报告](../REVIEW_G4_S2A_R2_R2.md) · [R2-R1报告](../REVIEW_G4_S2A_R2_R1.md) · [R2报告](../REVIEW_G4_S2A_R2.md) · [R1报告](../REVIEW_G4_S2A_R1.md) |
+
+本案例本轮已结项，R3/S2B均NO-GO；原生V1已测组合被拒绝。工程PASS、局部惯量改善和真实物理失败分别保留，未唯一确定根因。下一代夹爪只是未测试建议；学习与理论考核仍PENDING。
 
 新增其他案例时，使用 [CASE_STUDY_TEMPLATE.md](CASE_STUDY_TEMPLATE.md) 作为结构模板。
 

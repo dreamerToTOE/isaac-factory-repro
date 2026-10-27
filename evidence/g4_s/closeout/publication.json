@@ -1,0 +1,7 @@
+{
+  "branch": "main",
+  "delivery_status": "PREPARED_AWAITING_REVIEWED_COMMIT_AND_FAST_FORWARD_PUSH",
+  "receipt_policy": "After scientific delivery push, replace this closeout receipt with verified content SHA and remote SHA. The receipt commit cannot name itself; its final SHA is reported in the final answer.",
+  "starting_commit": "85017ba626e123ed95c397c32c4b852e9118abe4",
+  "starting_local_remote_match": true
+}

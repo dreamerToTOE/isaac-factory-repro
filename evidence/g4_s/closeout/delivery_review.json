@@ -1,0 +1,26 @@
+{
+  "baseline_tracked_count": 2891,
+  "checkpoint_count": 76,
+  "external_unique_files_hashed": 183,
+  "git_diff_whitespace_check": "PASS",
+  "new_chart_review": "readable numeric-only plots with IDs and units; matched first5-step window and unequal gripper horizons declared",
+  "new_docs_reviewed_for": [
+    "source vs target metric separation",
+    "historical engineering gates retained",
+    "local vs global claims",
+    "invalid initial state and unknown child exit retained",
+    "scope-limited native V1 rejection",
+    "untested next architecture requires authorization",
+    "30 second and 2 minute introductions plus 15 questions"
+  ],
+  "only_historical_changes": [
+    "README.md",
+    "docs/case_studies/README.md",
+    "docs/case_studies/SIM2SIM_PANDA_CONTROL_INSTABILITY.md"
+  ],
+  "original_experimental_evidence_sources_tests_models_configs_byte_identical": true,
+  "publication_receipt_excluded_from_content_hashes": "Updated after content commit push; final receipt-only commit SHA reported outside itself",
+  "scope": "No simulator integration, inference, deserialization or training",
+  "starting_commit": "85017ba626e123ed95c397c32c4b852e9118abe4",
+  "status": "PASS"
+}
