@@ -14,8 +14,12 @@ import math
 import os
 from pathlib import Path
 import signal
+import threading
 import time
-from supervision_common import BOOT_ID, atomic_json, fresh, identity, read_json, same_process, stamp, stop_owned
+try:
+    from supervision_common import BOOT_ID, atomic_json, fresh, identity, read_json, same_process, stamp, stop_owned
+except ModuleNotFoundError:  # package import from repository-root tests
+    from scripts.supervision_common import BOOT_ID, atomic_json, fresh, identity, read_json, same_process, stamp, stop_owned
 
 class Memory(C.Structure):
     _fields_=[('version',C.c_uint)]+[(n,C.c_ulonglong) for n in ('total','reserved','free','used')]
@@ -50,10 +54,113 @@ def gap_exceeds_limit(previous, current, limit):
     return current - previous > limit
 
 
+class HeartbeatPublisher:
+    """Publish the newest heartbeat without blocking the sampling loop.
+
+    The pending slot is bounded to one item. Replacing an older pending
+    heartbeat is safe because the payload carries its real sample timestamp;
+    the replacement count is retained in final evidence. A publisher failure
+    or stale publication is reported to the sampler and remains fail-closed.
+    """
+
+    def __init__(self, path, write_fn=atomic_json, stale_seconds=2.0):
+        self.path = Path(path)
+        self.write_fn = write_fn
+        self.stale_seconds = float(stale_seconds)
+        self._condition = threading.Condition()
+        self._pending = None
+        self._stop = False
+        self._failure = None
+        self._published_count = 0
+        self._coalesced_count = 0
+        self._first_submitted_sample = None
+        self._last_submitted_sample = None
+        self._last_published_sample = None
+        self._last_publish_monotonic = None
+        self._timings = {
+            'count': 0,
+            'total_seconds': 0.0,
+            'max_seconds': 0.0,
+        }
+        self._thread = threading.Thread(target=self._run, name='heartbeat-publisher', daemon=True)
+        self._thread.start()
+
+    def submit(self, payload, sample_monotonic):
+        with self._condition:
+            if self._failure is not None:
+                raise RuntimeError(f'heartbeat publisher failed: {self._failure}')
+            if self._stop:
+                raise RuntimeError('heartbeat publisher is stopped')
+            if self._pending is not None:
+                self._coalesced_count += 1
+            self._pending = (payload, float(sample_monotonic))
+            if self._first_submitted_sample is None:
+                self._first_submitted_sample = float(sample_monotonic)
+            self._last_submitted_sample = float(sample_monotonic)
+            self._condition.notify()
+
+    def health(self, now=None):
+        now = time.monotonic() if now is None else float(now)
+        with self._condition:
+            if self._failure is not None:
+                return 'failed'
+            if self._last_submitted_sample is None:
+                return 'starting'
+            publication_anchor = self._last_published_sample or self._first_submitted_sample
+            if publication_anchor is not None and now - publication_anchor > self.stale_seconds:
+                return 'stale'
+            return 'healthy'
+
+    def _run(self):
+        while True:
+            with self._condition:
+                while self._pending is None and not self._stop:
+                    self._condition.wait()
+                if self._pending is None and self._stop:
+                    return
+                payload, sample_monotonic = self._pending
+                self._pending = None
+            started = time.monotonic()
+            try:
+                self.write_fn(self.path, payload, durable=False)
+            except BaseException as exc:  # surfaced through health(), then fail closed
+                with self._condition:
+                    self._failure = f'{type(exc).__name__}: {exc}'
+                    self._condition.notify_all()
+                return
+            elapsed = time.monotonic() - started
+            with self._condition:
+                self._published_count += 1
+                self._last_published_sample = sample_monotonic
+                self._last_publish_monotonic = time.monotonic()
+                self._timings['count'] += 1
+                self._timings['total_seconds'] += elapsed
+                self._timings['max_seconds'] = max(self._timings['max_seconds'], elapsed)
+
+    def close(self, timeout=0.2):
+        with self._condition:
+            self._stop = True
+            self._condition.notify_all()
+        self._thread.join(max(0.0, float(timeout)))
+        with self._condition:
+            return {
+                'published_count': self._published_count,
+                'coalesced_count': self._coalesced_count,
+                'failure': self._failure,
+                'thread_alive_after_close': self._thread.is_alive(),
+                'first_submitted_sample': self._first_submitted_sample,
+                'last_submitted_sample': self._last_submitted_sample,
+                'last_published_sample': self._last_published_sample,
+                'last_publish_monotonic': self._last_publish_monotonic,
+                'timing': dict(self._timings),
+            }
+
+
 def run(args):
     args.output=args.output.resolve();args.output.mkdir(parents=True,exist_ok=False)
     who=identity();started=stamp();super_id=None;target=None;reason=None;error=None;signals=[]
     samples=0;low=0;max_low=0;minimum=None;peak=None;first=None;last=None;gaps=[];source=None
+    attached_record=None
     supervisor_heartbeat_seen=False
     # Constant-space aggregates; no extra per-sample disk writes. The same
     # sample-to-sample gap and stop thresholds remain authoritative.
@@ -71,8 +178,10 @@ def run(args):
                         'gap_limit_seconds':args.gap_limit,'stale_seconds':args.stale_seconds},
               'mock_source':str(args.mock_samples) if args.mock_samples else None}
     atomic_json(args.output/'metadata.json',metadata,replace=False)
+    publisher = None
     try:
         source=Mock(args.mock_samples) if args.mock_samples else Nvml()
+        publisher = HeartbeatPublisher(args.output/'heartbeat.json', stale_seconds=args.stale_seconds)
         with (args.output/'samples.csv').open('x',newline='') as f:
             w=csv.DictWriter(f,fieldnames=['utc','unix_seconds','monotonic_seconds','elapsed_seconds',
                     'used_MiB','free_MiB','total_MiB','reserved_MiB','target_pid','low_consecutive'])
@@ -101,8 +210,8 @@ def run(args):
                     candidate=child_record['identity']
                     if same_process(candidate):
                         target=candidate
-                        atomic_json(args.output/'attached_identity.json',{'target_identity':target,
-                                    'supervisor_identity':super_id,**at},replace=False)
+                        attached_record={'target_identity':target,
+                                         'supervisor_identity':super_id,**at}
                 before_csv=time.monotonic()
                 coordination_seconds=before_csv-cycle_start
                 record_timing('processing_and_coordination_before_csv',coordination_seconds)
@@ -111,10 +220,11 @@ def run(args):
                 csv_seconds=time.monotonic()-before_csv;record_timing('csv_write_flush',csv_seconds)
                 heartbeat_start=time.monotonic()
                 state='bound' if target else ('ready' if mem['free_MiB']>=1024 else 'low_headroom')
-                atomic_json(args.output/'heartbeat.json',{'identity':who,'boot_id':BOOT_ID,**at,
+                heartbeat_payload={'identity':who,'boot_id':BOOT_ID,**at,
                             'target_identity':target,'supervisor_identity':super_id,'state':state,
-                            'sample_count':samples,'free_MiB':mem['free_MiB'],'low_consecutive':low},durable=False)
-                heartbeat_seconds=time.monotonic()-heartbeat_start;record_timing('heartbeat_write',heartbeat_seconds)
+                            'sample_count':samples,'free_MiB':mem['free_MiB'],'low_consecutive':low}
+                publisher.submit(heartbeat_payload, at['monotonic_seconds'])
+                heartbeat_seconds=time.monotonic()-heartbeat_start;record_timing('heartbeat_submit',heartbeat_seconds)
                 tail_start=time.monotonic()
                 exited=read_json(args.supervisor_directory/'child_exit.json')
                 final=read_json(args.supervisor_directory/'status.json')
@@ -125,6 +235,10 @@ def run(args):
                 if requested_stop:reason='guard_signal';break
                 if low>=3:reason='gpu_headroom_floor';break
                 if gaps:reason='monitoring_gap';break
+                publisher_health=publisher.health()
+                if publisher_health != 'healthy':
+                    reason='heartbeat_publisher_'+publisher_health
+                    break
                 if super_id:
                     shb=read_json(args.supervisor_directory/'heartbeat.json')
                     supervisor_heartbeat_seen=supervisor_heartbeat_seen or bool(shb)
@@ -139,7 +253,7 @@ def run(args):
                     if not super_id or not same_process(super_id):reason='supervisor_lost_or_stale';break
                 tail_seconds=time.monotonic()-tail_start;record_timing('processing_and_coordination_after_heartbeat',tail_seconds)
                 previous_cycle={'processing_and_coordination_before_csv_seconds':coordination_seconds,
-                                'csv_write_flush_seconds':csv_seconds,'heartbeat_write_seconds':heartbeat_seconds,
+                                'csv_write_flush_seconds':csv_seconds,'heartbeat_submit_seconds':heartbeat_seconds,
                                 'processing_and_coordination_after_heartbeat_seconds':tail_seconds}
                 deadline+=args.interval
                 sleep_start=time.monotonic();requested=max(0,deadline-sleep_start)
@@ -161,8 +275,18 @@ def run(args):
         if source:
             try:source.close()
             except Exception as exc:error=error or {'type':type(exc).__name__,'message':str(exc)}
+        publisher_status = publisher.close() if publisher is not None else None
+        if attached_record is not None:
+            try:
+                atomic_json(args.output/'attached_identity.json', attached_record, replace=False)
+            except BaseException as exc:
+                error=error or {'type':type(exc).__name__,'message':str(exc)}
         for s,h in handlers.items():signal.signal(s,h)
-        good=reason=='child_wait_observed' and not gaps and error is None
+        publisher_good=(publisher_status is None or
+                        (publisher_status['failure'] is None and
+                         not publisher_status['thread_alive_after_close'] and
+                         publisher_status['published_count'] > 0))
+        good=reason=='child_wait_observed' and not gaps and error is None and publisher_good
         result={'schema_version':2,'finalized':True,'identity':who,'target_identity':target,
                 'supervisor_identity':super_id,'started':started,'ended':stamp(),
                 'sample_count':samples,'first_sample':first,'last_sample':last,
@@ -171,7 +295,8 @@ def run(args):
                 'monitoring_gaps':gaps,'stop_reason':reason,'error':error,'stop_signals':signals,
                 'continuous_monitoring':good,'coverage_note':'Sampled coverage: regular intervals are not continuous measurement.',
                 'policy':metadata['policy'], 'timing_diagnostics':{'aggregates':timings,
-                    'note':'Wall-clock segments include scheduling delays; sleep overshoot is not proof of scheduler cause. Gap detail is partial and instrumentation adds overhead.'}}
+                    'heartbeat_publisher': publisher_status,
+                    'note':'Sampling and heartbeat publication are separate. Wall-clock segments include scheduling delays; sleep overshoot is not proof of scheduler cause. Gap detail is partial and instrumentation adds overhead.'}}
         atomic_json(args.output/'status.json',result,replace=False)
     return 0 if good else 124
 

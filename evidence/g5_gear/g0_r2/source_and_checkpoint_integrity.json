@@ -1,0 +1,15 @@
+{
+  "baseline_commit": "966631dc3c8a67d20ec4c69cd2f5482c7f1784cf",
+  "current_commit_before_r2_commit": "966631dc3c8a67d20ec4c69cd2f5482c7f1784cf",
+  "upstream_commit": "90b79bb2d44feb8d833f260f2bf37da3487180ba",
+  "upstream_worktree_clean": true,
+  "r2_source_sha256": {
+    "scripts/gpu_guard.py": "170b76e76b4fea21c11585797d278a660375d7c5c6421ea5b323cfe387761ca7",
+    "scripts/g5_r2_cpu_stress.py": "d6eb23b15718186f268154e318f71130999bdfffcd6550ddad6f172e12c09674",
+    "tests/test_g5_heartbeat_publisher.py": "059a646a638ea008e377530d6ea4107609a3d6e962660caf0ff345eb2ffe4675"
+  },
+  "checkpoint_sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+  "checkpoint_matches_expected": true,
+  "historical_evidence_preserved": true,
+  "no_gpu_execution_in_r2": true
+}

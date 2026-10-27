@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "cpu_only": true,
+  "mounts": {
+    "repo": "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro",
+    "tmpfs": "/run/user/1000"
+  },
+  "atomic_json": [
+    {
+      "filesystem": "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/work",
+      "iterations": 50,
+      "median_seconds": 0.00012102549953851849,
+      "p95_seconds": 0.0002867500006686896,
+      "max_seconds": 0.0006122799968579784,
+      "min_seconds": 0.00011032600014004856
+    },
+    {
+      "filesystem": "/run/user/1000",
+      "iterations": 50,
+      "median_seconds": 7.496549733332358e-05,
+      "p95_seconds": 9.169300028588623e-05,
+      "max_seconds": 0.00012110000534448773,
+      "min_seconds": 7.252699288073927e-05
+    }
+  ],
+  "publisher_submit": [
+    {
+      "filesystem": "/home/ubuntu2004/Documents/Codex/2026-10-23/files-pasted-by-the-user-g2-3/work/isaac-factory-repro/work",
+      "iterations": 50,
+      "submit_median_seconds": 9.309951565228403e-07,
+      "submit_p95_seconds": 1.1369993444532156e-06,
+      "submit_max_seconds": 5.686000804416835e-06,
+      "published_count": 1,
+      "coalesced_count": 49,
+      "publisher_failure": null
+    },
+    {
+      "filesystem": "/run/user/1000",
+      "iterations": 50,
+      "submit_median_seconds": 9.245013643521816e-07,
+      "submit_p95_seconds": 1.0429939720779657e-06,
+      "submit_max_seconds": 4.185996658634394e-06,
+      "published_count": 1,
+      "coalesced_count": 49,
+      "publisher_failure": null
+    }
+  ],
+  "lifecycle": {
+    "repetitions": 10,
+    "results": [
+      {
+        "iteration": 0,
+        "wall_seconds": 1.0550127899987274,
+        "supervisor_returncode": 0,
+        "guard_continuous_monitoring": true,
+        "guard_stop_reason": "child_wait_observed",
+        "sample_count": 7,
+        "stderr_empty": true,
+        "stdout_empty": true
+      },
+      {
+        "iteration": 1,
+        "wall_seconds": 1.7553855989972362,
+        "supervisor_returncode": 0,
+        "guard_continuous_monitoring": true,
+        "guard_stop_reason": "child_wait_observed",
+        "sample_count": 13,
+        "stderr_empty": true,
+        "stdout_empty": true
+      },
+      {
+        "iteration": 2,
+        "wall_seconds": 0.9950942819996271,
+        "supervisor_returncode": 0,
+        "guard_continuous_monitoring": true,
+        "guard_stop_reason": "child_wait_observed",
+        "sample_count": 7,
+        "stderr_empty": true,
+        "stdout_empty": true
+      },
+      {
+        "iteration": 3,
+        "wall_seconds": 1.1652883749993634,
+        "supervisor_returncode": 0,
+        "guard_continuous_monitoring": true,
+        "guard_stop_reason": "child_wait_observed",
+        "sample_count": 8,
+        "stderr_empty": true,
+        "stdout_empty": true
+      },
+      {
+        "iteration": 4,
+        "wall_seconds": 1.2133937510006945,
+        "supervisor_returncode": 0,
+        "guard_continuous_monitoring": true,
+        "guard_stop_reason": "child_wait_observed",
+        "sample_count": 7,
+        "stderr_empty": true,
+        "stdout_empty": true
+      },
+      {
+        "iteration": 5,
+        "wall_seconds": 2.716967020998709,
+        "supervisor_returncode": 0,
+        "guard_continuous_monitoring": true,
+        "guard_stop_reason": "child_wait_observed",
+        "sample_count": 12,
+        "stderr_empty": true,
+        "stdout_empty": true
+      },
+      {
+        "iteration": 6,
+        "wall_seconds": 1.0386707249999745,
+        "supervisor_returncode": 0,
+        "guard_continuous_monitoring": true,
+        "guard_stop_reason": "child_wait_observed",
+        "sample_count": 7,
+        "stderr_empty": true,
+        "stdout_empty": true
+      },
+      {
+        "iteration": 7,
+        "wall_seconds": 1.0792664980035624,
+        "supervisor_returncode": 0,
+        "guard_continuous_monitoring": true,
+        "guard_stop_reason": "child_wait_observed",
+        "sample_count": 6,
+        "stderr_empty": true,
+        "stdout_empty": true
+      },
+      {
+        "iteration": 8,
+        "wall_seconds": 1.00491425000655,
+        "supervisor_returncode": 0,
+        "guard_continuous_monitoring": true,
+        "guard_stop_reason": "child_wait_observed",
+        "sample_count": 6,
+        "stderr_empty": true,
+        "stdout_empty": true
+      },
+      {
+        "iteration": 9,
+        "wall_seconds": 1.0381359449966112,
+        "supervisor_returncode": 0,
+        "guard_continuous_monitoring": true,
+        "guard_stop_reason": "child_wait_observed",
+        "sample_count": 7,
+        "stderr_empty": true,
+        "stdout_empty": true
+      }
+    ],
+    "pass_count": 10,
+    "wall_median_seconds": 1.067139644001145,
+    "wall_p95_seconds": 2.716967020998709,
+    "wall_max_seconds": 2.716967020998709
+  }
+}

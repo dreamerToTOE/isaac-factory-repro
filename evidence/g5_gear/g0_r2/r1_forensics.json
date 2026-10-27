@@ -1,0 +1,38 @@
+{
+  "r1_samples": 68,
+  "r1_intervals": 67,
+  "r1_interval_median_seconds": 0.09999933700601105,
+  "r1_interval_mean_seconds": 0.10672840888061606,
+  "r1_interval_p90_seconds": 0.10004904399829684,
+  "r1_interval_p95_seconds": 0.12121931400179164,
+  "r1_interval_p99_seconds": 0.2763718529968173,
+  "r1_max_interval_seconds": 0.55064287300047,
+  "r1_over_100ms": 31,
+  "r1_over_200ms": 2,
+  "r1_over_300ms": 1,
+  "r1_over_400ms": 1,
+  "r1_over_500ms": 1,
+  "r1_min_free_MiB": 5481.625,
+  "r1_peak_used_MiB": 2336.0,
+  "r1_heartbeat_write_seconds": {
+    "count": 68,
+    "max_seconds": 0.5500856060025399,
+    "total_seconds": 0.6495351489720633
+  },
+  "r1_memory_query_seconds": {
+    "count": 68,
+    "max_seconds": 0.04369305600266671,
+    "total_seconds": 0.2797574150317814
+  },
+  "r1_development_failure_observation": {
+    "source": "bounded R2 development lifecycle run; temporary directory expired after assertion",
+    "run_index": 4,
+    "gap_seconds": 0.841449697997,
+    "processing_before_csv_seconds": 0.840930102,
+    "interpretation": "synchronous attached_identity atomic write remained in sample path before it was deferred; preserved as a summary, not historical GPU evidence"
+  },
+  "upstream_commit": "90b79bb2d44feb8d833f260f2bf37da3487180ba",
+  "repo_commit": "966631dc3c8a67d20ec4c69cd2f5482c7f1784cf",
+  "checkpoint_sha256": "f5e9da77553f51c8fad430eb254fbeabc8963425d89cdc28af8f071944b08f2f",
+  "no_gpu_execution_in_r2": true
+}

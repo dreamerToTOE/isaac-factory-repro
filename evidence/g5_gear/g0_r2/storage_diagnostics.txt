@@ -1,0 +1,16 @@
+findmnt repo
+TARGET SOURCE    FSTYPE OPTIONS
+/      /dev/sdb3 ext4   rw,relatime,errors=remount-ro
+findmnt runtime
+TARGET         SOURCE FSTYPE OPTIONS
+/run/user/1000 tmpfs  tmpfs  rw,nosuid,nodev,relatime,size=4926156k,nr_inodes=1231539,mode=700,uid=1000,gid=1000,inode64
+filesystem stats
+. ext2/ext3 4096 189550970 105241615
+/run/user/1000 tmpfs 4096 1231539 1231478
+/tmp ext2/ext3 4096 189550970 105241615
+cpu pressure
+some avg10=0.00 avg60=0.00 avg300=0.00 total=120108977
+full avg10=0.00 avg60=0.00 avg300=0.00 total=0
+io pressure
+some avg10=1.97 avg60=11.33 avg300=32.81 total=7524130533
+full avg10=1.90 avg60=10.77 avg300=31.16 total=7251622958
