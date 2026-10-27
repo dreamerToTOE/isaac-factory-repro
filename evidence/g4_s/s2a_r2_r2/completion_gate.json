@@ -122,5 +122,13 @@
     "r2_r1_evidence_untouched": true,
     "failed_trajectories_preserved": true
   },
-  "decision_basis": "Audit established a reproducible contact-manifold chronology and exact controller arithmetic, but no single physically justified correction. No candidate matrix was launched."
+  "decision_basis": "Audit established a reproducible contact-manifold chronology and exact controller arithmetic, but no single physically justified correction. No candidate matrix was launched.",
+  "publication": {
+    "scientific_commit_sha": "fa455e76cbdecee2edcaaa30d443c5314afe6bb1",
+    "starting_remote_sha": "d1a2097b1bf43d0cc95b9bae7da231644b43503a",
+    "fast_forward_verified": true,
+    "remote_sha_after_push": "fa455e76cbdecee2edcaaa30d443c5314afe6bb1",
+    "remote_ref": "refs/heads/main",
+    "verification_command": "git ls-remote https://github.com/dreamerToTOE/isaac-factory-repro.git refs/heads/main"
+  }
 }

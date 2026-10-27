@@ -117,7 +117,7 @@ I3_FULL_PASSIVE_ARM 将 arm command 置零，但没有把 arm 机械锁定。右
 
 工程审计门为 `G4_S2A_R2_R2_PASS`，因为只读取证、API/数学审计、监督修复和独立 CPU 测试均完成，且没有未记账的新 physics。候选修正仍 `CANDIDATE_BLOCKED`；这不等于 Sim2Sim 或 PPO 成功。
 
-科学内容提交 SHA 与远端校验将在提交后补入本节；本报告不会改写历史候选结论。
+科学内容提交 SHA：`fa455e76cbdecee2edcaaa30d443c5314afe6bb1`。推送前已验证起点远端 SHA `d1a2097b1bf43d0cc95b9bae7da231644b43503a` 是该提交祖先；推送后 `git ls-remote https://github.com/dreamerToTOE/isaac-factory-repro.git refs/heads/main` 返回同一 SHA。本报告不会改写历史候选结论。
 
 ## 11. 下一阶段建议
 
