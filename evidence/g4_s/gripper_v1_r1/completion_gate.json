@@ -1,0 +1,52 @@
+{
+  "task": "G4-S2A-GRIPPER-V1-R1",
+  "start_commit": "d5290698fe20c52b1d8c539ce9e4e7ba8561466a",
+  "engineering_status": "G4_S2A_GRIPPER_V1_R1_PASS",
+  "candidate_status": "NATIVE_GRIPPER_REJECTED",
+  "candidate_scope": "registered native tendon model and R1 preparation schedule at 1/120 s, I2/I3 only",
+  "r3": "NO-GO",
+  "s2b": "NO-GO",
+  "historical_v1_i3_cause": "UNKNOWN",
+  "shared_forensic_first_mismatch": null,
+  "state_preflight": "PASS",
+  "independent_review": "COMPLETE",
+  "preparations": {
+    "PREP_I2_RATE_LIMITED": {
+      "steps": 23,
+      "state_integrity": "PASS",
+      "reset_admission": "FAIL",
+      "physical_quality": "FAIL",
+      "early_stop": "FINGER_LIMIT"
+    },
+    "PREP_I3_RATE_LIMITED": {
+      "steps": 23,
+      "state_integrity": "PASS",
+      "reset_admission": "FAIL",
+      "physical_quality": "FAIL",
+      "early_stop": "FINGER_LIMIT"
+    }
+  },
+  "new_physics_steps": 46,
+  "request_result_pairs": [
+    46,
+    46
+  ],
+  "unstarted": [
+    "DIAG_I2_NATIVE",
+    "DIAG_I3_NATIVE"
+  ],
+  "policy_calls": 0,
+  "retry": false,
+  "coordinator_wall_s": 67.28693706100239,
+  "sampled_positive_contact": false,
+  "continuous_contact_safety_verified": false,
+  "regression": {
+    "cpu_passed": 803,
+    "cpu_skipped": 8,
+    "system_plot_passed": 1,
+    "excluded": 75,
+    "targeted_passed": 62,
+    "targeted_subtests_passed": 18
+  },
+  "manual_keyboard_validation": false
+}

@@ -6,7 +6,7 @@
 
 | 案例 | 当前证据状态 | 研究问题 | 入口 |
 | --- | --- | --- | --- |
-| Panda Sim2Sim 控制振荡与脱抓 | **GRIPPER_V1_PARTIAL / NATIVE_GRIPPER_PARTIAL / R3_NO-GO / ROOT_CAUSE_PENDING** | PhysX 中训练的冻结 PPO 在 MuJoCo 中出现快速脱抓与关节失稳；原生 tendon 静态通过；I2 准备早停，I3 初态无效 | [案例正文](SIM2SIM_PANDA_CONTROL_INSTABILITY.md) · [GRIPPER-V1报告](../REVIEW_G4_S2A_GRIPPER_V1.md) · [R2-R2报告](../REVIEW_G4_S2A_R2_R2.md) · [R2-R1报告](../REVIEW_G4_S2A_R2_R1.md) · [R2报告](../REVIEW_G4_S2A_R2.md) · [R1报告](../REVIEW_G4_S2A_R1.md) |
+| Panda Sim2Sim 控制振荡与脱抓 | **GRIPPER_V1_R1_PASS / NATIVE_GRIPPER_REJECTED / R3_NO-GO / ROOT_CAUSE_PENDING** | PhysX 中训练的冻结 PPO 在 MuJoCo 中出现快速脱抓与关节失稳；状态隔离验证通过；限速准备的 I2/I3 均因指关节越限早停 | [案例正文](SIM2SIM_PANDA_CONTROL_INSTABILITY.md) · [GRIPPER-V1-R1报告](../REVIEW_G4_S2A_GRIPPER_V1_R1.md) · [GRIPPER-V1报告](../REVIEW_G4_S2A_GRIPPER_V1.md) · [R2-R2报告](../REVIEW_G4_S2A_R2_R2.md) · [R2-R1报告](../REVIEW_G4_S2A_R2_R1.md) · [R2报告](../REVIEW_G4_S2A_R2.md) · [R1报告](../REVIEW_G4_S2A_R1.md) |
 
 新增其他案例时，使用 [CASE_STUDY_TEMPLATE.md](CASE_STUDY_TEMPLATE.md) 作为结构模板。
 

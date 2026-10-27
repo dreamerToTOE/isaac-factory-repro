@@ -1,0 +1,23 @@
+{
+  "inspection": "manual inspection of every preflight screenshot",
+  "images": [
+    {
+      "path": "evidence/g4_s/gripper_v1_r1/shared_forensic_v1/shared_I3_preflight.png",
+      "sha256": "f378109898e22a3e07cc0c1988877f690ef1a33b4846e8b3699f0bf580e2dfdc",
+      "classification": "clean_native_only",
+      "mode": "NO_INTEGRATION_PREFLIGHT"
+    },
+    {
+      "path": "evidence/g4_s/gripper_v1_r1/state_preflight_v1/I2_preflight.png",
+      "sha256": "55b05351dbce65e3bc599412ea875aca7759b45859d232d9bd64b02d858e1f87",
+      "classification": "clean_native_only",
+      "mode": "NO_INTEGRATION_PREFLIGHT"
+    },
+    {
+      "path": "evidence/g4_s/gripper_v1_r1/state_preflight_v1/I3_preflight.png",
+      "sha256": "868e4cd39759a1d015788faec27b33dd9373fc44627ae7893cc9a863c32b04a0",
+      "classification": "clean_native_only",
+      "mode": "NO_INTEGRATION_PREFLIGHT"
+    }
+  ]
+}

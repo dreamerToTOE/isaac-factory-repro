@@ -1,0 +1,6 @@
+test_repeatable_both_registered_conditions_without_integration (tests.test_g4s2a_gripper_v1_r1_geometry.StaticGeometryAuditTest.test_repeatable_both_registered_conditions_without_integration) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.834s
+
+OK

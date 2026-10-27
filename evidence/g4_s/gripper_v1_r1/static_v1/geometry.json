@@ -1,0 +1,444 @@
+{
+  "status": "PASS",
+  "method": "MuJoCo compiled geom distances after mj_forward; zero mj_step calls",
+  "mujoco_version": "3.5.0",
+  "conditions": [
+    {
+      "condition": "I2",
+      "registered_finger_openings_m": [
+        0.00499125,
+        0.00499125
+      ],
+      "qvel_max_abs": 0.0,
+      "peg_geom": {
+        "compiled_type": 5,
+        "size_m": [
+          0.003993,
+          0.025,
+          0.0
+        ],
+        "radius_m": 0.003993,
+        "diameter_m": 0.007986
+      },
+      "compiled_timestep_s": 0.008333333333333333,
+      "model_xml_sha256": "cec6b31f7cf28ff08765a7e9b97e4469c837ea09da4dce94d21f494d897876b8",
+      "sides": {
+        "left": {
+          "closest_distance_m": 0.0012182815229030176,
+          "pad_geoms": [
+            {
+              "geom": "left_finger_geom_3",
+              "compiled_type": 6,
+              "size_m": [
+                0.0085,
+                0.004,
+                0.0085
+              ],
+              "distance_m": 0.0024982499999999935,
+              "nearest_points_world_m": [
+                0.5852649352791718,
+                -0.005785131229993941,
+                0.13583779550908093,
+                0.585227188771481,
+                -0.008283096054270273,
+                0.13583777719956486
+              ]
+            },
+            {
+              "geom": "left_finger_geom_4",
+              "compiled_type": 6,
+              "size_m": [
+                0.003,
+                0.002,
+                0.003
+              ],
+              "distance_m": 0.0012182815229030176,
+              "nearest_points_world_m": [
+                0.5864154666236199,
+                -0.005633861711259372,
+                0.1336761017175069,
+                0.5867479737126525,
+                -0.006805889400657881,
+                0.13367609316857357
+              ]
+            },
+            {
+              "geom": "left_finger_geom_5",
+              "compiled_type": 6,
+              "size_m": [
+                0.003,
+                0.002,
+                0.003
+              ],
+              "distance_m": 0.002104092587285897,
+              "nearest_points_world_m": [
+                0.5829829542182867,
+                -0.0050263956832098736,
+                0.13367610575388497,
+                0.5817485444635272,
+                -0.006730343503146405,
+                0.13367609312668477
+              ]
+            },
+            {
+              "geom": "left_finger_geom_6",
+              "compiled_type": 6,
+              "size_m": [
+                0.003,
+                0.002,
+                0.0035
+              ],
+              "distance_m": 0.0012182815709194583,
+              "nearest_points_world_m": [
+                0.5864156072241049,
+                -0.005633887450490354,
+                0.14267902606764754,
+                0.5867479726390439,
+                -0.006805955373829842,
+                0.14267901751840248
+              ]
+            },
+            {
+              "geom": "left_finger_geom_7",
+              "compiled_type": 6,
+              "size_m": [
+                0.003,
+                0.002,
+                0.0035
+              ],
+              "distance_m": 0.0021040924949192515,
+              "nearest_points_world_m": [
+                0.5829830731185734,
+                -0.005026548690916082,
+                0.14267903010887703,
+                0.5817485433898973,
+                -0.006730409476318116,
+                0.14267901747581402
+              ]
+            }
+          ]
+        },
+        "right": {
+          "closest_distance_m": 0.0012182815229029866,
+          "pad_geoms": [
+            {
+              "geom": "right_finger_geom_3",
+              "compiled_type": 6,
+              "size_m": [
+                0.0085,
+                0.004,
+                0.0085
+              ],
+              "distance_m": 0.002498250000000003,
+              "nearest_points_world_m": [
+                0.5853855971866742,
+                0.0021999571665519708,
+                0.13583785403796925,
+                0.5854233436943649,
+                0.0046979219908283125,
+                0.13583787234748532
+              ]
+            },
+            {
+              "geom": "right_finger_geom_4",
+              "compiled_type": 6,
+              "size_m": [
+                0.003,
+                0.002,
+                0.003
+              ],
+              "distance_m": 0.002104092587285917,
+              "nearest_points_world_m": [
+                0.5830817333732841,
+                0.001510549572831431,
+                0.13367615366821878,
+                0.581899371847922,
+                0.003251016992536699,
+                0.13367616628779871
+              ]
+            },
+            {
+              "geom": "right_finger_geom_5",
+              "compiled_type": 6,
+              "size_m": [
+                0.003,
+                0.002,
+                0.003
+              ],
+              "distance_m": 0.0012182815229029866,
+              "nearest_points_world_m": [
+                0.5865310331116391,
+                0.0020140251953395345,
+                0.13367615777478473,
+                0.5868988010970302,
+                0.0031754710950245135,
+                0.13367616632968396
+              ]
+            },
+            {
+              "geom": "right_finger_geom_6",
+              "compiled_type": 6,
+              "size_m": [
+                0.003,
+                0.002,
+                0.0035
+              ],
+              "distance_m": 0.0021040925483969655,
+              "nearest_points_world_m": [
+                0.5830819876660454,
+                0.0015106571535724487,
+                0.1426790780179431,
+                0.5818993707742555,
+                0.003250951019364499,
+                0.1426790906379251
+              ]
+            },
+            {
+              "geom": "right_finger_geom_7",
+              "compiled_type": 6,
+              "size_m": [
+                0.003,
+                0.002,
+                0.0035
+              ],
+              "distance_m": 0.001218281570919474,
+              "nearest_points_world_m": [
+                0.5865311724317733,
+                0.00201391472592994,
+                0.1426790821243065,
+                0.5868988000234311,
+                0.0031754051218526886,
+                0.14267909067951517
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "condition": "I3",
+      "registered_finger_openings_m": [
+        0.00499125,
+        0.00499125
+      ],
+      "qvel_max_abs": 0.0,
+      "peg_geom": {
+        "compiled_type": 5,
+        "size_m": [
+          0.003993,
+          0.025,
+          0.0
+        ],
+        "radius_m": 0.003993,
+        "diameter_m": 0.007986
+      },
+      "compiled_timestep_s": 0.008333333333333333,
+      "model_xml_sha256": "cec6b31f7cf28ff08765a7e9b97e4469c837ea09da4dce94d21f494d897876b8",
+      "sides": {
+        "left": {
+          "closest_distance_m": 0.0012377517300384009,
+          "pad_geoms": [
+            {
+              "geom": "left_finger_geom_3",
+              "compiled_type": 6,
+              "size_m": [
+                0.0085,
+                0.004,
+                0.0085
+              ],
+              "distance_m": 0.0024982500000000443,
+              "nearest_points_world_m": [
+                0.5879890098921099,
+                -0.02233232644598063,
+                0.13329605241492876,
+                0.5887962662213995,
+                -0.024696557881563233,
+                0.13329603438074958
+              ]
+            },
+            {
+              "geom": "left_finger_geom_4",
+              "compiled_type": 6,
+              "size_m": [
+                0.003,
+                0.002,
+                0.003
+              ],
+              "distance_m": 0.0012377517300384009,
+              "nearest_points_world_m": [
+                0.5890601369636477,
+                -0.02177343967169965,
+                0.13111811678580715,
+                0.5897922995679784,
+                -0.022771421267702294,
+                0.13111810825665288
+              ]
+            },
+            {
+              "geom": "left_finger_geom_5",
+              "compiled_type": 6,
+              "size_m": [
+                0.003,
+                0.002,
+                0.003
+              ],
+              "distance_m": 0.0020662146645699995,
+              "nearest_points_world_m": [
+                0.5856191401688282,
+                -0.02239779578414653,
+                0.1311181205827402,
+                0.5850605244540922,
+                -0.024387064876849524,
+                0.13111810830558437
+              ]
+            },
+            {
+              "geom": "left_finger_geom_6",
+              "compiled_type": 6,
+              "size_m": [
+                0.003,
+                0.002,
+                0.0035
+              ],
+              "distance_m": 0.0012377517338510854,
+              "nearest_points_world_m": [
+                0.5890599622982006,
+                -0.02177364479609681,
+                0.1401227767129045,
+                0.5897923206557761,
+                -0.02277148275421826,
+                0.14012276818427177
+              ]
+            },
+            {
+              "geom": "left_finger_geom_7",
+              "compiled_type": 6,
+              "size_m": [
+                0.003,
+                0.002,
+                0.0035
+              ],
+              "distance_m": 0.0020662147166881444,
+              "nearest_points_world_m": [
+                0.5856193186428011,
+                -0.02239790141956434,
+                0.1401227805054942,
+                0.5850605455419255,
+                -0.024387126363366853,
+                0.1401227682337636
+              ]
+            }
+          ]
+        },
+        "right": {
+          "closest_distance_m": 0.001237751733945973,
+          "pad_geoms": [
+            {
+              "geom": "right_finger_geom_3",
+              "compiled_type": 6,
+              "size_m": [
+                0.0085,
+                0.004,
+                0.0085
+              ],
+              "distance_m": 0.002498250000000014,
+              "nearest_points_world_m": [
+                0.5854085039196468,
+                -0.01477473523430755,
+                0.1332961100636647,
+                0.5846012475903573,
+                -0.012410503798724978,
+                0.13329612809784386
+              ]
+            },
+            {
+              "geom": "right_finger_geom_4",
+              "compiled_type": 6,
+              "size_m": [
+                0.003,
+                0.002,
+                0.003
+              ],
+              "distance_m": 0.0020662146645701062,
+              "nearest_points_world_m": [
+                0.5834934701953067,
+                -0.016172293932202386,
+                0.13111816807040116,
+                0.5818348919885177,
+                -0.014940075862257901,
+                0.13111818036650527
+              ]
+            },
+            {
+              "geom": "right_finger_geom_5",
+              "compiled_type": 6,
+              "size_m": [
+                0.003,
+                0.002,
+                0.003
+              ],
+              "distance_m": 0.001237751733945973,
+              "nearest_points_world_m": [
+                0.5865977009944594,
+                -0.014561794872697742,
+                0.1311181717951761,
+                0.5865666671023584,
+                -0.013324432253109333,
+                0.13111818031763886
+              ]
+            },
+            {
+              "geom": "right_finger_geom_6",
+              "compiled_type": 6,
+              "size_m": [
+                0.003,
+                0.002,
+                0.0035
+              ],
+              "distance_m": 0.0020662147500353136,
+              "nearest_points_world_m": [
+                0.5834934535224859,
+                -0.016172406386627643,
+                0.14012282799934628,
+                0.5818349130763518,
+                -0.014940137348775345,
+                0.1401228402938754
+              ]
+            },
+            {
+              "geom": "right_finger_geom_7",
+              "compiled_type": 6,
+              "size_m": [
+                0.003,
+                0.002,
+                0.0035
+              ],
+              "distance_m": 0.001237751852213468,
+              "nearest_points_world_m": [
+                0.5865978472916776,
+                -0.014561853330845267,
+                0.14012283171848858,
+                0.586566688190197,
+                -0.013324493739626906,
+                0.14012284024584556
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "schedule": {
+    "initial_opening_m": 0.00499125,
+    "reference_delta_limit_m_per_step": 1e-05,
+    "rate_limit_m_s": 0.0012000000000000001,
+    "timestep_s": 0.008333333333333333,
+    "horizon_steps": 240,
+    "contact_positive_strictly_greater_n": 1e-06,
+    "acquisition_consecutive_bilateral_observations": 10,
+    "hold_additional_consecutive_bilateral_observations": 10,
+    "relative_to_existing_50um_pad_penetration_gate": 0.2,
+    "method": "Close reference by at most 10 micrometers/step; freeze permanently on first positive pad normal force. Positive bilateral forces at ten consecutive observations enter hold; ten additional positive bilateral observations complete hold. Lost contact resets streak, not reference.",
+    "caveat": "Reference bound is not a physical displacement, penetration, or contact stability guarantee."
+  }
+}

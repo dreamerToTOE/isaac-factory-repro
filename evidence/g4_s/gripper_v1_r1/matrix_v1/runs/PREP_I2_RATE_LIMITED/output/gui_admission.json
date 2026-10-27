@@ -1,0 +1,20 @@
+{
+  "status": "GUI_OPEN_VISIBLE",
+  "window": {
+    "window_id": "0x960000b",
+    "title": "MuJoCo : g4_s1b_adapted_panda_peg_insert",
+    "model_name": "g4_s1b_adapted_panda_peg_insert",
+    "map_state": "IsViewable",
+    "x": 240,
+    "y": 228,
+    "width": 1706,
+    "height": 960,
+    "selected_window_xwininfo": "\nxwininfo: Window id: 0x960000b \"MuJoCo : g4_s1b_adapted_panda_peg_insert\"\n\n  Absolute upper-left X:  240\n  Absolute upper-left Y:  228\n  Relative upper-left X:  20\n  Relative upper-left Y:  90\n  Width: 1706\n  Height: 960\n  Depth: 24\n  Visual: 0x3a\n  Visual Class: TrueColor\n  Border width: 0\n  Class: InputOutput\n  Colormap: 0x960000a (not installed)\n  Bit Gravity State: ForgetGravity\n  Window Gravity State: NorthWestGravity\n  Backing Store State: NotUseful\n  Save Under State: no\n  Map State: IsViewable\n  Override Redirect State: no\n  Corners:  +240+228  -2150+228  -2150-1116  +240-1116\n  -geometry 1706x960+240+228\n\n"
+  },
+  "physics_model_fingerprint": "33f5f2fa35126ebd97c63c5ba24b87fb4043b372ef2c5e1971a98ae8c5574c35",
+  "viewer_model_fingerprint": "33f5f2fa35126ebd97c63c5ba24b87fb4043b372ef2c5e1971a98ae8c5574c35",
+  "distinct_model": true,
+  "distinct_data": true,
+  "DISPLAY": ":1",
+  "XAUTHORITY": "/run/user/1000/gdm/Xauthority"
+}

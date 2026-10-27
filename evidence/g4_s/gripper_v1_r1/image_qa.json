@@ -1,0 +1,62 @@
+{
+  "images": [
+    {
+      "path": "evidence/g4_s/gripper_v1_r1/matrix_v1/runs/PREP_I2_RATE_LIMITED/output/step_000.png",
+      "sha256": "78816ee6f0ed9b596e9f4d7889cdfbe97c4a6c0fca55280092d2b34d88c500b3",
+      "mode": "LIVE_PHYSICS_STATE_DISPLAY",
+      "classification": "clean_native_only",
+      "inspection": "manual image QA"
+    },
+    {
+      "path": "evidence/g4_s/gripper_v1_r1/matrix_v1/runs/PREP_I2_RATE_LIMITED/output/step_023.png",
+      "sha256": "6f7d90f3617aaa0ed4a05882d8775fbf13ae45a5c8cf370f7fadcdaf9357f1cf",
+      "mode": "LIVE_PHYSICS_STATE_DISPLAY",
+      "classification": "clean_native_only",
+      "inspection": "manual image QA"
+    },
+    {
+      "path": "evidence/g4_s/gripper_v1_r1/matrix_v1/runs/PREP_I3_RATE_LIMITED/output/step_000.png",
+      "sha256": "82e93ff9031546ce54a83cd4432094d5a01e48de757d7149fd2710f2e4c95cd0",
+      "mode": "LIVE_PHYSICS_STATE_DISPLAY",
+      "classification": "clean_native_only",
+      "inspection": "manual image QA"
+    },
+    {
+      "path": "evidence/g4_s/gripper_v1_r1/matrix_v1/runs/PREP_I3_RATE_LIMITED/output/step_023.png",
+      "sha256": "fbf7fcdd3062541474c1ceb404eb0017f9b853de2aa68df8787d67bb0573e23b",
+      "mode": "LIVE_PHYSICS_STATE_DISPLAY",
+      "classification": "clean_native_only",
+      "inspection": "manual image QA"
+    },
+    {
+      "path": "evidence/g4_s/gripper_v1_r1/playback_i2_v1/PREP_I2_RATE_LIMITED_step_005.png",
+      "sha256": "91c9a149e2c50f088618f2b1dc9969c7ca0e02bdabe4b18b2d7daeae68768bbe",
+      "mode": "SAVED_STATE_PLAYBACK",
+      "classification": "clean_native_only",
+      "inspection": "manual image QA"
+    },
+    {
+      "path": "evidence/g4_s/gripper_v1_r1/playback_i2_v1/PREP_I2_RATE_LIMITED_step_015.png",
+      "sha256": "bd91e2cc302c4aa11ae42fefa26b584f79a298b67ed3c9d150bab9e2cc78a265",
+      "mode": "SAVED_STATE_PLAYBACK",
+      "classification": "clean_native_only",
+      "inspection": "manual image QA"
+    },
+    {
+      "path": "evidence/g4_s/gripper_v1_r1/playback_i2_v1/PREP_I2_RATE_LIMITED_step_022.png",
+      "sha256": "0a42b82dc0bf8043e944dbeed9919fc009bad3afc6f2929e120688710d9a89a7",
+      "mode": "SAVED_STATE_PLAYBACK",
+      "classification": "clean_native_only",
+      "inspection": "manual image QA"
+    },
+    {
+      "path": "evidence/g4_s/gripper_v1_r1/playback_i2_v1/PREP_I2_RATE_LIMITED_step_023.png",
+      "sha256": "d48b7b9702e4337c033abe850c17165ab36e520ac7bfb72af8e4680a106fb67f",
+      "mode": "SAVED_STATE_PLAYBACK",
+      "classification": "clean_native_only",
+      "inspection": "manual image QA"
+    }
+  ],
+  "desktop_contamination_observed": false,
+  "note": "Live view is rendered from an independent data copy; screenshots are not numerical contact evidence."
+}

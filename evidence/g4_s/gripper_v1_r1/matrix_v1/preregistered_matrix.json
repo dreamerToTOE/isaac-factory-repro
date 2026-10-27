@@ -1,0 +1,119 @@
+{
+  "task": "G4-S2A-GRIPPER-V1-R1",
+  "start_commit": "d5290698fe20c52b1d8c539ce9e4e7ba8561466a",
+  "created_utc": "2026-10-27T08:17:16.672068+00:00",
+  "model_xml_sha256": "cec6b31f7cf28ff08765a7e9b97e4469c837ea09da4dce94d21f494d897876b8",
+  "model_fingerprint": "33f5f2fa35126ebd97c63c5ba24b87fb4043b372ef2c5e1971a98ae8c5574c35",
+  "sources": {
+    "scripts/g4s2a_gripper_v1_r1_diagnostics.py": "41f8857c726062e21eb9d13909e056820e0ebded9c6561d1c217a1225e1d2654",
+    "scripts/g4s2a_gripper_v1_r1_state.py": "60b94f494e7a31d0bf8cf11dbc72ca73bec0b8e6e5513796de9291a50a606bb9",
+    "scripts/g4s2a_gripper_v1_r1_schedule.py": "f2db276afc77fdf6e6271f231451cd97d70f328621cefd453dbde21a0808c0d6",
+    "scripts/g4s2a_gripper_v1_model.py": "c5f6dd05146ad80f99a4359b1f25c4cf6c829e733cbd087fb5cde831d9e85779",
+    "scripts/g4s2a_gripper_v1_diagnostics.py": "9f4a596a5473d4c9bd6b84e1ef34f5bffbb0363637ef5b0e568c9bdaf7a63c7a",
+    "scripts/g4s2a_r2_r3_diagnostics.py": "b425fa292c239486f9dc87f4cea3f99d1ad5acef67201af50c0c2bc827fa3f8b",
+    "scripts/g4s2a_r2_r2_supervisor.py": "87b9c178900eb5c73c4d589e389d4b34fa0112f3d6721d268d50e5447f88daf6",
+    "scripts/g4s2a_r2_diagnostics.py": "0b20710334716d67347918945d6d5246019d37a9bf1f78f93829ce7ae5c4f980",
+    "scripts/g4s2a_r2_model.py": "56e3eda236512ff47b67ba5321960faa1e54e8aa1bef2e5c2fc2c55d3f63fcc9",
+    "scripts/g4s1b_env.py": "065affe855ef1d3fa016d6ed8166699a9fc7ea1476d3c5302cee1663d56c92dd",
+    "scripts/g4s1b_contract.py": "dcf91aa274a6151f88f36901ce0c4a2feac76d7b8fcfe6586104f906c67d6d6c",
+    "scripts/g4s2a_smoke.py": "0a1a365b20c5312e417ddb5f759ee96aa12040b520de4ea84e62ddfc82fa40a8",
+    "scripts/g4s2a_r1_viewer.py": "0d75b8b0f961a38fd2256ee481be1f14122389e16596c3e8faa1f9a8aa4ee9fc",
+    "scripts/capture_g4s2a_r1_comparison.py": "0a5da8bd9ef79c017a3401d66daaec307330ad228907e7e4907af2a31551a415",
+    "scripts/audit_g4s2a_gripper_v1_r1_geometry.py": "0bf571af5c154bf92b69e2d68e68f826a461ed5431a6a4ef6106e23251c9f189",
+    "scripts/g4s2a_gripper_v1_r1_preflight.py": "f743503b48dab27d8d81cf6a4b1d8c3c6a3b9a40a0bb508927df2f5a3714b014",
+    "scripts/g4s2a_gripper_v1_r1_shared_forensics.py": "9314fb384dc172f959e6d194bae9074c706ea24e67aa2a967d48207f3e39b1c1"
+  },
+  "historical_inputs": {
+    "evidence/g4_s/s2a_r2/matrix_v2/initials/I2/admission.json": "4595f46126db57d6df44be8b0c3d03c86e5794a5f04cf7ca35c0c6bdc673d0a2",
+    "evidence/g4_s/s2a_r2/matrix_v2/initials/I2/reset_draw.json": "f609a8cc0d90f08b7ae0d819d822a1bf598d76c07d545ff5b22260c7cb2af9e5",
+    "evidence/g4_s/s2a_r2/matrix_v2/initials/I2/ik.json": "a51442c2ef496914c453204bf075735f896f3e2254e90481a9c800c1b3f81825",
+    "evidence/g4_s/s2a_r2/matrix_v2/initials/I2/initial_state.json": "445c88a99256cd293d6a717bbad84494dc9be80495e503107c68dc066a658219",
+    "evidence/g4_s/s2a_r2/matrix_v2/initials/I3/admission.json": "e5baff2c5a73b84fa023840adeb03bd08a1843f16a89a73fac7db6a5dc5d8838",
+    "evidence/g4_s/s2a_r2/matrix_v2/initials/I3/reset_draw.json": "b7e0c88df666e8c527fe957410bde5407ef0b3551a07039f3da688f9a403c8f3",
+    "evidence/g4_s/s2a_r2/matrix_v2/initials/I3/ik.json": "59d90f0489fee466f314ac5b0f003ef5e1a5b2aeee64c7aece46419436a3325c",
+    "evidence/g4_s/s2a_r2/matrix_v2/initials/I3/initial_state.json": "7bbff58d8e3f70f2a5d59bd3261399b6f42bdc54609c85f7a0460cb758e065b9"
+  },
+  "registered_initial_sha256": {
+    "I2": "9a0e787215babb3bf0eb002c0e29b8cf1a0dbc04596ea5b1b866cdadf36c6ad4",
+    "I3": "cd6bb419269c64c37ae08e39c52a78ea67cce4d83a7c267f4e679674546d1b63"
+  },
+  "preflight": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/gripper_v1_r1/static_v1/prelaunch_receipt.json",
+  "preflight_sha256": "c6ec1c8ec37d60245c222071991e66313075496cb92e717be507cff856b4c45e",
+  "geometry_sha256": "c3f0356823348ef314b2a22cf216d4c39848d833dc156236a5e836059070b089",
+  "runs": [
+    "PREP_I2_RATE_LIMITED",
+    "PREP_I3_RATE_LIMITED",
+    "DIAG_I2_NATIVE",
+    "DIAG_I3_NATIVE"
+  ],
+  "max_steps": 950,
+  "max_wall_s": 900,
+  "retry": false,
+  "preparation": {
+    "initial_per_finger_m": 0.00499125,
+    "max_target_delta_m": 1e-05,
+    "target_rate_m_s": 0.0012000000000000001,
+    "max_steps": 240,
+    "contact_n_gt": 1e-06,
+    "contact_rule": "freeze target permanently on first positive pad contact",
+    "acquisition_bilateral_observations": 10,
+    "hold_additional_bilateral_observations": 10,
+    "reset_final_bilateral_observations": 10,
+    "full_transient_pad_penetration_m_le": 5e-05,
+    "assembly_penetration_m_le": 1e-05,
+    "final10_relative_translation_m_lt": 0.001,
+    "final10_relative_rotation_rad_le": 0.05,
+    "arm_speed_rad_s_le": 3.0,
+    "joint_limits_le": 1e-06
+  },
+  "thresholds": {
+    "positive_pad_force_n": 1e-06,
+    "accept_slip_m": 0.001,
+    "accept_rotation_rad": 0.05,
+    "accept_arm_velocity_rad_s": 3.0,
+    "accept_arm_limit_rad": 1e-06,
+    "accept_finger_limit_m": 1e-06,
+    "accept_pad_penetration_m": 5e-05,
+    "accept_assembly_penetration_m": 1e-05,
+    "stop_slip_m": 0.005,
+    "stop_rotation_rad": 0.2,
+    "stop_arm_velocity_rad_s": 15.0,
+    "stop_arm_limit_rad": 1e-05,
+    "stop_finger_limit_m": 0.0001,
+    "stop_penetration_m": 0.001,
+    "stop_consecutive_contact_loss": 3
+  },
+  "diagnostic_steps": 235,
+  "diagnostic_schedule": {
+    "steps_1_to_8": "First archived six-dimensional clipped action; single EMA update at1",
+    "steps_9_to_16": "Second archived action; single EMA update at9",
+    "steps_17_to_235": "Fixed initial admitted world TCP position and quaternion. No further EMA/action updates; same target across matched variants.",
+    "archived_clipped_actions": [
+      [
+        -1.0,
+        1.0,
+        -1.0,
+        0.09105674177408218,
+        0.4455225169658661,
+        -1.0
+      ],
+      [
+        0.8211294412612915,
+        -0.44237399101257324,
+        -1.0,
+        0.08265963941812515,
+        1.0,
+        0.006659713573753834
+      ]
+    ],
+    "policy_inferences": 0,
+    "reason": "Two archived excitation intervals followed by fixed-pose regulation; no synthetic PPO decisions",
+    "fixed_before_new_integration": true
+  },
+  "kp": 3750.0,
+  "kv": 86.5,
+  "force_limit_n": 40.0,
+  "tendon_mapping": "L=q1+q2; ctrl=2*q_target",
+  "gui": "separate MjModel/MjData; one-way physics snapshot to viewer; no viewer writeback",
+  "policy_calls": 0
+}

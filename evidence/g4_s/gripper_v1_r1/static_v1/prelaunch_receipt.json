@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "checks": {
+    "tests": {
+      "tests": 73,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0
+    },
+    "state_preflight": "PASS",
+    "shared_forensic": "COMPLETED",
+    "geometry": "PASS",
+    "physics_steps_during_preflight": 0
+  },
+  "source_evidence": {
+    "evidence/g4_s/gripper_v1_r1/static_v1/geometry.json": "c3f0356823348ef314b2a22cf216d4c39848d833dc156236a5e836059070b089",
+    "evidence/g4_s/gripper_v1_r1/static_v1/prelaunch_frozen_tests.xml": "0380adab93736e14124ead4c4655d40f722d3bc90eddb805335840500e943f6e",
+    "evidence/g4_s/gripper_v1_r1/state_preflight_v1/state_preflight.json": "cee04ad76e52c048e16ac12e2683bed311bc2710d179417647d36befaeb8f7b4",
+    "evidence/g4_s/gripper_v1_r1/shared_forensic_v1/shared_viewer_forensics.json": "9a9f3f8a51d68f8c4dc0d1d2da6081190d78d58133cc32dd0e11013a5c61eef0"
+  },
+  "historic_corruption_cause": "UNKNOWN"
+}

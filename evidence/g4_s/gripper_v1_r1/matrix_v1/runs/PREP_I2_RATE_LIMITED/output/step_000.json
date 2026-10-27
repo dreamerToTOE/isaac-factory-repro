@@ -1,0 +1,20 @@
+{
+  "run": "PREP_I2_RATE_LIMITED",
+  "step": 0,
+  "mode": "LIVE_PHYSICS_STATE_DISPLAY",
+  "new_physics_steps_for_capture": 0,
+  "model_xml_sha256": "cec6b31f7cf28ff08765a7e9b97e4469c837ea09da4dce94d21f494d897876b8",
+  "window": {
+    "window_id": "0x960000b",
+    "title": "MuJoCo : g4_s1b_adapted_panda_peg_insert",
+    "model_name": "g4_s1b_adapted_panda_peg_insert",
+    "map_state": "IsViewable",
+    "x": 240,
+    "y": 228,
+    "width": 1706,
+    "height": 960,
+    "selected_window_xwininfo": "\nxwininfo: Window id: 0x960000b \"MuJoCo : g4_s1b_adapted_panda_peg_insert\"\n\n  Absolute upper-left X:  240\n  Absolute upper-left Y:  228\n  Relative upper-left X:  20\n  Relative upper-left Y:  90\n  Width: 1706\n  Height: 960\n  Depth: 24\n  Visual: 0x3a\n  Visual Class: TrueColor\n  Border width: 0\n  Class: InputOutput\n  Colormap: 0x960000a (not installed)\n  Bit Gravity State: ForgetGravity\n  Window Gravity State: NorthWestGravity\n  Backing Store State: NotUseful\n  Save Under State: no\n  Map State: IsViewable\n  Override Redirect State: no\n  Corners:  +240+228  -2150+228  -2150-1116  +240-1116\n  -geometry 1706x960+240+228\n\n"
+  },
+  "sha256": "78816ee6f0ed9b596e9f4d7889cdfbe97c4a6c0fca55280092d2b34d88c500b3",
+  "requires_image_qa": true
+}

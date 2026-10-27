@@ -1,0 +1,94 @@
+[
+  {
+    "file": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/gripper_v1_r1/playback_i2_v1/PREP_I2_RATE_LIMITED_step_005.png",
+    "run": "PREP_I2_RATE_LIMITED",
+    "saved_step": 5,
+    "model_xml_sha256": "cec6b31f7cf28ff08765a7e9b97e4469c837ea09da4dce94d21f494d897876b8",
+    "source_trace_sha256": "544db4dcfbbaddb86a325b40da6911caee56549e7131ea3fc9f4c612f54fb42f",
+    "sha256": "91c9a149e2c50f088618f2b1dc9969c7ca0e02bdabe4b18b2d7daeae68768bbe",
+    "mode": "SAVED_STATE_PLAYBACK",
+    "new_integration_steps": 0,
+    "policy_calls": 0,
+    "window": {
+      "window_id": "0x960000b",
+      "title": "MuJoCo : g4_s1b_adapted_panda_peg_insert",
+      "model_name": "g4_s1b_adapted_panda_peg_insert",
+      "map_state": "IsViewable",
+      "x": 240,
+      "y": 228,
+      "width": 1706,
+      "height": 960,
+      "selected_window_xwininfo": "\nxwininfo: Window id: 0x960000b \"MuJoCo : g4_s1b_adapted_panda_peg_insert\"\n\n  Absolute upper-left X:  240\n  Absolute upper-left Y:  228\n  Relative upper-left X:  20\n  Relative upper-left Y:  90\n  Width: 1706\n  Height: 960\n  Depth: 24\n  Visual: 0x3a\n  Visual Class: TrueColor\n  Border width: 0\n  Class: InputOutput\n  Colormap: 0x960000a (not installed)\n  Bit Gravity State: ForgetGravity\n  Window Gravity State: NorthWestGravity\n  Backing Store State: NotUseful\n  Save Under State: no\n  Map State: IsViewable\n  Override Redirect State: no\n  Corners:  +240+228  -2150+228  -2150-1116  +240-1116\n  -geometry 1706x960+240+228\n\n"
+    },
+    "note": "Archived state and post-forward contact force; no solver impulse reconstructed."
+  },
+  {
+    "file": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/gripper_v1_r1/playback_i2_v1/PREP_I2_RATE_LIMITED_step_015.png",
+    "run": "PREP_I2_RATE_LIMITED",
+    "saved_step": 15,
+    "model_xml_sha256": "cec6b31f7cf28ff08765a7e9b97e4469c837ea09da4dce94d21f494d897876b8",
+    "source_trace_sha256": "544db4dcfbbaddb86a325b40da6911caee56549e7131ea3fc9f4c612f54fb42f",
+    "sha256": "bd91e2cc302c4aa11ae42fefa26b584f79a298b67ed3c9d150bab9e2cc78a265",
+    "mode": "SAVED_STATE_PLAYBACK",
+    "new_integration_steps": 0,
+    "policy_calls": 0,
+    "window": {
+      "window_id": "0x960000b",
+      "title": "MuJoCo : g4_s1b_adapted_panda_peg_insert",
+      "model_name": "g4_s1b_adapted_panda_peg_insert",
+      "map_state": "IsViewable",
+      "x": 240,
+      "y": 228,
+      "width": 1706,
+      "height": 960,
+      "selected_window_xwininfo": "\nxwininfo: Window id: 0x960000b \"MuJoCo : g4_s1b_adapted_panda_peg_insert\"\n\n  Absolute upper-left X:  240\n  Absolute upper-left Y:  228\n  Relative upper-left X:  20\n  Relative upper-left Y:  90\n  Width: 1706\n  Height: 960\n  Depth: 24\n  Visual: 0x3a\n  Visual Class: TrueColor\n  Border width: 0\n  Class: InputOutput\n  Colormap: 0x960000a (not installed)\n  Bit Gravity State: ForgetGravity\n  Window Gravity State: NorthWestGravity\n  Backing Store State: NotUseful\n  Save Under State: no\n  Map State: IsViewable\n  Override Redirect State: no\n  Corners:  +240+228  -2150+228  -2150-1116  +240-1116\n  -geometry 1706x960+240+228\n\n"
+    },
+    "note": "Archived state and post-forward contact force; no solver impulse reconstructed."
+  },
+  {
+    "file": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/gripper_v1_r1/playback_i2_v1/PREP_I2_RATE_LIMITED_step_022.png",
+    "run": "PREP_I2_RATE_LIMITED",
+    "saved_step": 22,
+    "model_xml_sha256": "cec6b31f7cf28ff08765a7e9b97e4469c837ea09da4dce94d21f494d897876b8",
+    "source_trace_sha256": "544db4dcfbbaddb86a325b40da6911caee56549e7131ea3fc9f4c612f54fb42f",
+    "sha256": "0a42b82dc0bf8043e944dbeed9919fc009bad3afc6f2929e120688710d9a89a7",
+    "mode": "SAVED_STATE_PLAYBACK",
+    "new_integration_steps": 0,
+    "policy_calls": 0,
+    "window": {
+      "window_id": "0x960000b",
+      "title": "MuJoCo : g4_s1b_adapted_panda_peg_insert",
+      "model_name": "g4_s1b_adapted_panda_peg_insert",
+      "map_state": "IsViewable",
+      "x": 240,
+      "y": 228,
+      "width": 1706,
+      "height": 960,
+      "selected_window_xwininfo": "\nxwininfo: Window id: 0x960000b \"MuJoCo : g4_s1b_adapted_panda_peg_insert\"\n\n  Absolute upper-left X:  240\n  Absolute upper-left Y:  228\n  Relative upper-left X:  20\n  Relative upper-left Y:  90\n  Width: 1706\n  Height: 960\n  Depth: 24\n  Visual: 0x3a\n  Visual Class: TrueColor\n  Border width: 0\n  Class: InputOutput\n  Colormap: 0x960000a (not installed)\n  Bit Gravity State: ForgetGravity\n  Window Gravity State: NorthWestGravity\n  Backing Store State: NotUseful\n  Save Under State: no\n  Map State: IsViewable\n  Override Redirect State: no\n  Corners:  +240+228  -2150+228  -2150-1116  +240-1116\n  -geometry 1706x960+240+228\n\n"
+    },
+    "note": "Archived state and post-forward contact force; no solver impulse reconstructed."
+  },
+  {
+    "file": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/gripper_v1_r1/playback_i2_v1/PREP_I2_RATE_LIMITED_step_023.png",
+    "run": "PREP_I2_RATE_LIMITED",
+    "saved_step": 23,
+    "model_xml_sha256": "cec6b31f7cf28ff08765a7e9b97e4469c837ea09da4dce94d21f494d897876b8",
+    "source_trace_sha256": "544db4dcfbbaddb86a325b40da6911caee56549e7131ea3fc9f4c612f54fb42f",
+    "sha256": "d48b7b9702e4337c033abe850c17165ab36e520ac7bfb72af8e4680a106fb67f",
+    "mode": "SAVED_STATE_PLAYBACK",
+    "new_integration_steps": 0,
+    "policy_calls": 0,
+    "window": {
+      "window_id": "0x960000b",
+      "title": "MuJoCo : g4_s1b_adapted_panda_peg_insert",
+      "model_name": "g4_s1b_adapted_panda_peg_insert",
+      "map_state": "IsViewable",
+      "x": 240,
+      "y": 228,
+      "width": 1706,
+      "height": 960,
+      "selected_window_xwininfo": "\nxwininfo: Window id: 0x960000b \"MuJoCo : g4_s1b_adapted_panda_peg_insert\"\n\n  Absolute upper-left X:  240\n  Absolute upper-left Y:  228\n  Relative upper-left X:  20\n  Relative upper-left Y:  90\n  Width: 1706\n  Height: 960\n  Depth: 24\n  Visual: 0x3a\n  Visual Class: TrueColor\n  Border width: 0\n  Class: InputOutput\n  Colormap: 0x960000a (not installed)\n  Bit Gravity State: ForgetGravity\n  Window Gravity State: NorthWestGravity\n  Backing Store State: NotUseful\n  Save Under State: no\n  Map State: IsViewable\n  Override Redirect State: no\n  Corners:  +240+228  -2150+228  -2150-1116  +240-1116\n  -geometry 1706x960+240+228\n\n"
+    },
+    "note": "Archived state and post-forward contact force; no solver impulse reconstructed."
+  }
+]

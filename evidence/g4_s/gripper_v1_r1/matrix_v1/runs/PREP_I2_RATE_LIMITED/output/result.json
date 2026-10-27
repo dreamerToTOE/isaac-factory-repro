@@ -1,0 +1,46 @@
+{
+  "run": "PREP_I2_RATE_LIMITED",
+  "completed_steps": 23,
+  "durable_integration_requests": 23,
+  "durable_integration_results": 23,
+  "policy_calls": 0,
+  "early_stop_reasons": [
+    "FINGER_LIMIT"
+  ],
+  "runtime_failure": null,
+  "preparation_gate": {
+    "reset_admission": "FAIL",
+    "physical_quality": "FAIL",
+    "reset_errors": [
+      "HOLD_NOT_COMPLETED",
+      "BILATERAL_LAST10",
+      "JOINT_LIMIT",
+      "EARLY_STOP"
+    ],
+    "quality_errors": [
+      "RESET_NOT_ADMITTED"
+    ],
+    "bilateral_last10": false,
+    "transient_max_pad_penetration_m": 0.0,
+    "final10_max_pad_penetration_m": 0.0,
+    "max_assembly_penetration_m": 0.0,
+    "final10_stability_m": 6.505213034913027e-19,
+    "final10_angular_stability_rad": 7.300048299977716e-08,
+    "max_joint_limit_violation": 0.17732418695068644,
+    "max_arm_velocity_rad_s": 3.4851522584992965e-15,
+    "interference_bodies": [],
+    "final_above_hole": true,
+    "schedule_phase": "FREE_SPACE_APPROACH"
+  },
+  "wall_s": 31.903251755000383,
+  "viewer_sync_count": 52,
+  "graceful_close": {
+    "viewer_close_requested": true,
+    "render_threads_joined": [
+      "Thread-1 (_launch_internal)"
+    ],
+    "remaining_render_threads": [],
+    "close_wall_s": 0.029058493000775343
+  },
+  "trace_sha256": "544db4dcfbbaddb86a325b40da6911caee56549e7131ea3fc9f4c612f54fb42f"
+}

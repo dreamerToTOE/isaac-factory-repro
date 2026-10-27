@@ -1,0 +1,108 @@
+{
+  "task": "G4-S2A-GRIPPER-V1-R1",
+  "receipts": [
+    {
+      "schema": "g4s2a_r2_r2_durable_supervision_v1",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_gripper_v1_r1_diagnostics.py",
+        "--child",
+        "PREP_I2_RATE_LIMITED",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/gripper_v1_r1/matrix_v1/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/gripper_v1_r1/matrix_v1/runs/PREP_I2_RATE_LIMITED/output"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2",
+      "timeout_s": 899.9999962479997,
+      "retry": false,
+      "started_utc": "2026-10-27T08:17:50.665929+00:00",
+      "termination_class": "CHILD_EXIT",
+      "termination_reason": "child_exit",
+      "raw_wait_returncode": 0,
+      "child_exit_code": 0,
+      "child_signal": null,
+      "timed_out": false,
+      "state": "FINISHED",
+      "pid": 265820,
+      "pgid": 265820,
+      "wall_s": 33.097392545998446,
+      "error": null,
+      "last_durable_event": {
+        "event": "child_terminal",
+        "monotonic_seconds": 27243.831106196,
+        "pid": 265785,
+        "raw_wait_returncode": 0,
+        "reason": "CHILD_EXIT",
+        "run_id": "PREP_I2_RATE_LIMITED",
+        "schema": "g4s2a_r2_r2_durable_supervision_v1",
+        "sequence": 49,
+        "terminal": true,
+        "timed_out": false,
+        "unix_seconds": 1793089103.7633462,
+        "utc": "2026-10-27T08:18:23.763330+00:00"
+      }
+    },
+    {
+      "schema": "g4s2a_r2_r2_durable_supervision_v1",
+      "command": [
+        "/home/ubuntu2004/miniconda3/envs/unitree_rl_mjlab/bin/python",
+        "-u",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_gripper_v1_r1_diagnostics.py",
+        "--child",
+        "PREP_I3_RATE_LIMITED",
+        "--manifest",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/gripper_v1_r1/matrix_v1/preregistered_matrix.json",
+        "--output",
+        "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/gripper_v1_r1/matrix_v1/runs/PREP_I3_RATE_LIMITED/output"
+      ],
+      "cwd": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2",
+      "timeout_s": 866.7199806499993,
+      "retry": false,
+      "started_utc": "2026-10-27T08:18:23.945922+00:00",
+      "termination_class": "CHILD_EXIT",
+      "termination_reason": "child_exit",
+      "raw_wait_returncode": 0,
+      "child_exit_code": 0,
+      "child_signal": null,
+      "timed_out": false,
+      "state": "FINISHED",
+      "pid": 268412,
+      "pgid": 268412,
+      "wall_s": 33.821314037002594,
+      "error": null,
+      "last_durable_event": {
+        "event": "child_terminal",
+        "monotonic_seconds": 27277.83502263,
+        "pid": 265785,
+        "raw_wait_returncode": 0,
+        "reason": "CHILD_EXIT",
+        "run_id": "PREP_I3_RATE_LIMITED",
+        "schema": "g4s2a_r2_r2_durable_supervision_v1",
+        "sequence": 49,
+        "terminal": true,
+        "timed_out": false,
+        "unix_seconds": 1793089137.7672625,
+        "utc": "2026-10-27T08:18:57.767249+00:00"
+      }
+    }
+  ],
+  "unstarted": [
+    "DIAG_I2_NATIVE",
+    "DIAG_I3_NATIVE"
+  ],
+  "completed_integration_steps": 46,
+  "integration_requests": 46,
+  "unresolved_requests": 0,
+  "completed_trace_rows": 46,
+  "wall_s": 67.28693706100239,
+  "policy_calls": 0,
+  "retry": false,
+  "max_steps": 950,
+  "max_wall_s": 900,
+  "result_runs": [
+    "PREP_I2_RATE_LIMITED",
+    "PREP_I3_RATE_LIMITED"
+  ]
+}

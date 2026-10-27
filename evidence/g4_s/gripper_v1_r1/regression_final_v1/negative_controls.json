@@ -1,0 +1,77 @@
+[
+  {
+    "kind": "actor",
+    "command": [
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/audit_g4s2a_r2_r1.py",
+      "--guarded-pytest",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/gripper_v1_r1/regression_final_v1/negative_actor_guard.json",
+      "--negative-actor"
+    ],
+    "exit_code": 97,
+    "passed": true,
+    "stdout": "",
+    "stderr": "",
+    "dummy_only_no_real_actor_physics_or_viewer": true
+  },
+  {
+    "kind": "physics",
+    "command": [
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/audit_g4s2a_r2_r1.py",
+      "--guarded-pytest",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/gripper_v1_r1/regression_final_v1/negative_physics_guard.json",
+      "--negative-physics"
+    ],
+    "exit_code": 97,
+    "passed": true,
+    "stdout": "",
+    "stderr": "",
+    "dummy_only_no_real_actor_physics_or_viewer": true
+  },
+  {
+    "kind": "viewer",
+    "command": [
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/audit_g4s2a_r2_r1.py",
+      "--guarded-pytest",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/gripper_v1_r1/regression_final_v1/negative_viewer_guard.json",
+      "--negative-viewer"
+    ],
+    "exit_code": 97,
+    "passed": true,
+    "stdout": "",
+    "stderr": "",
+    "dummy_only_no_real_actor_physics_or_viewer": true
+  },
+  {
+    "kind": "r2_runner",
+    "command": [
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/audit_g4s2a_r2_r1.py",
+      "--guarded-pytest",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/gripper_v1_r1/regression_final_v1/negative_r2_runner_guard.json",
+      "--negative-r2_runner"
+    ],
+    "exit_code": 97,
+    "passed": true,
+    "stdout": "",
+    "stderr": "",
+    "dummy_only_no_real_actor_physics_or_viewer": true
+  },
+  {
+    "kind": "r2_r1_runner",
+    "command": [
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/work/envs/factory-g01/bin/python",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/audit_g4s2a_r2_r1.py",
+      "--guarded-pytest",
+      "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/evidence/g4_s/gripper_v1_r1/regression_final_v1/negative_r2_r1_runner_guard.json",
+      "--negative-r2_r1_runner"
+    ],
+    "exit_code": 97,
+    "passed": true,
+    "stdout": "",
+    "stderr": "",
+    "dummy_only_no_real_actor_physics_or_viewer": true
+  }
+]

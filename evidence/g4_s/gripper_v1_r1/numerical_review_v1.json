@@ -1,0 +1,3554 @@
+{
+  "status": "COMPLETE",
+  "errors": {},
+  "new_physics_steps": 46,
+  "stage2_authorized_by_independent_gates": false,
+  "xml_review": {
+    "p_full_non_gripper_xml_unchanged": true,
+    "arm_actuators_unchanged": 7,
+    "physical_peg_free_joint": true,
+    "unit_sum_tendon": true,
+    "peg_weld_absent": true,
+    "native_position_control_range_m": [
+      0.0,
+      0.08
+    ],
+    "force_limit_n": [
+      -40.0,
+      40.0
+    ]
+  },
+  "runs": {
+    "PREP_I2_RATE_LIMITED": {
+      "status": "COMPLETE",
+      "accounting": {
+        "requests": 23,
+        "results": 23,
+        "unresolved_request_step": null,
+        "complete": true
+      },
+      "integrity": {
+        "status": "PASS",
+        "steps_checked": 23,
+        "last_viewer_sync_count": 49,
+        "limitations": "Derived state is not equated across solver/forward stages."
+      },
+      "schedule": {
+        "first_observed_contact_command": null,
+        "first_bilateral_observation_command": null,
+        "hold_entry_command": null,
+        "complete_command": null,
+        "final_phase": "FREE_SPACE_APPROACH",
+        "final_target_m": 0.004761250000000009,
+        "max_target_delta_m": 1e-05,
+        "commands": 23
+      },
+      "initial_above": {
+        "zmin_m": 0.04684278842682636,
+        "entirely_above_opening": true,
+        "tcp_above_m": true
+      },
+      "final_above": {
+        "zmin_m": 0.04684278842682636,
+        "entirely_above_opening": true,
+        "tcp_above_m": true
+      },
+      "independent_preparation": {
+        "reset_admission_status": "FAIL",
+        "preparation_contact_quality_status": "FAIL",
+        "reason": "Incomplete acquisition or fewer than ten held steps."
+      },
+      "runner_gate_disagreements": {},
+      "aggregate": {
+        "steps": 23,
+        "first_left_positive_step": null,
+        "first_right_positive_step": null,
+        "first_bilateral_positive_step": null,
+        "total_bilateral_steps": 0,
+        "longest_bilateral_streak_steps": 0,
+        "max_abs_finger_step_displacement_m": 0.18324169707793037,
+        "max_abs_native_actuator_force_n": 40.0,
+        "max_pad_penetration_m": 0.0,
+        "max_assembly_penetration_m": 0.0,
+        "last_step_early_stop_reasons": [
+          "FINGER_LIMIT"
+        ]
+      },
+      "metrics": [
+        {
+          "step": 1,
+          "relative_position_m": [
+            0.0010017081394360365,
+            1.400092522252155e-18,
+            0.0345823094519866
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999994,
+              -1.1410388920517436e-17,
+              -5.786231634368e-23
+            ],
+            [
+              9.44659512742899e-18,
+              0.9999999999999981,
+              -8.105613207002704e-21
+            ],
+            [
+              -3.0366640728628655e-24,
+              -5.046623676616229e-21,
+              -0.9999999999999986
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 8.940696716308596e-08,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 1.5535709681686229e-16,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.004984171857304643,
+            0.004984171857304643
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -7.078142695357038e-06,
+            -7.078142695357038e-06
+          ],
+          "actuation": {
+            "control_m": 0.009962500000000001,
+            "tendon_length_m": 0.0099825,
+            "tendon_velocity_m_s": 0.0,
+            "unclipped_output_n": -0.07499999999999694,
+            "clipped_output_n": -0.07499999999999694,
+            "finger_generalized_n": [
+              -0.07500000000000284,
+              -0.07500000000000284
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 2,
+          "relative_position_m": [
+            0.0010017081394360365,
+            1.400092522252155e-18,
+            0.0345823094519866
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999994,
+              -1.1410388920517436e-17,
+              -5.786231634368e-23
+            ],
+            [
+              9.44659512742899e-18,
+              0.9999999999999981,
+              -8.105613207002704e-21
+            ],
+            [
+              -3.0366640728628655e-24,
+              -5.046623676616229e-21,
+              -0.9999999999999986
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 8.940696716308596e-08,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 3.1076888067957377e-16,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.004981815148411739,
+            0.004981815148411739
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -2.3567088929038124e-06,
+            -2.3567088929038124e-06
+          ],
+          "actuation": {
+            "control_m": 0.009942500000000002,
+            "tendon_length_m": 0.009968343714609286,
+            "tendon_velocity_m_s": -0.0016987542468856818,
+            "unclipped_output_n": 0.05002831257079539,
+            "clipped_output_n": 0.05002831257079539,
+            "finger_generalized_n": [
+              0.05002831257079521,
+              0.05002831257079521
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 3,
+          "relative_position_m": [
+            0.0010017081394360365,
+            1.400092522252155e-18,
+            0.0345823094519866
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999994,
+              -1.1410388920517436e-17,
+              -5.786231634368e-23
+            ],
+            [
+              9.44659512742899e-18,
+              0.9999999999999981,
+              -8.105613207002704e-21
+            ],
+            [
+              -3.0366640728628655e-24,
+              -5.046623676616229e-21,
+              -0.9999999999999986
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 8.940696716308596e-08,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 4.685523504880624e-16,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.004969519468541924,
+            0.004969519468541924
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -1.22956798698148e-05,
+            -1.22956798698148e-05
+          ],
+          "actuation": {
+            "control_m": 0.009922500000000002,
+            "tendon_length_m": 0.009963630296823478,
+            "tendon_velocity_m_s": -0.000565610134296889,
+            "unclipped_output_n": -0.10531333647135355,
+            "clipped_output_n": -0.10531333647135355,
+            "finger_generalized_n": [
+              -0.10531333647135455,
+              -0.10531333647135455
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 4,
+          "relative_position_m": [
+            0.0010017081394360365,
+            1.400092522252155e-18,
+            0.0345823094519866
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999994,
+              -1.1410388920517436e-17,
+              -5.786231634368e-23
+            ],
+            [
+              9.44659512742899e-18,
+              0.9999999999999981,
+              -8.105613207002704e-21
+            ],
+            [
+              -3.0366640728628655e-24,
+              -5.046623676616229e-21,
+              -0.9999999999999986
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 8.940696716308596e-08,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 6.2396486872426e-16,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.0049683824617594,
+            0.0049683824617594
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -1.137006782524208e-06,
+            -1.137006782524208e-06
+          ],
+          "actuation": {
+            "control_m": 0.009902500000000003,
+            "tendon_length_m": 0.009939038937083849,
+            "tendon_velocity_m_s": -0.0029509631687556557,
+            "unclipped_output_n": 0.11823730003294383,
+            "clipped_output_n": 0.11823730003294383,
+            "finger_generalized_n": [
+              0.11823730003293775,
+              0.11823730003293775
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 5,
+          "relative_position_m": [
+            0.0010017081394360365,
+            1.400092522252155e-18,
+            0.0345823094519866
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999994,
+              -1.1410388920517436e-17,
+              -5.786231634368e-23
+            ],
+            [
+              9.44659512742899e-18,
+              0.9999999999999981,
+              -8.105613207002704e-21
+            ],
+            [
+              -3.0366640728628655e-24,
+              -5.046623676616229e-21,
+              -0.9999999999999986
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 8.940696716308596e-08,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 7.81745702786079e-16,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.004950268369058578,
+            0.004950268369058578
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -1.8114092700822343e-05,
+            -1.8114092700822343e-05
+          ],
+          "actuation": {
+            "control_m": 0.009882500000000004,
+            "tendon_length_m": 0.0099367649235188,
+            "tendon_velocity_m_s": -0.0002728816278057631,
+            "unclipped_output_n": -0.17988920239028727,
+            "clipped_output_n": -0.17988920239028727,
+            "finger_generalized_n": [
+              -0.17988920239028516,
+              -0.17988920239028516
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 6,
+          "relative_position_m": [
+            0.0010017081394360365,
+            1.400092522252155e-18,
+            0.0345823094519866
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999994,
+              -1.1410388920517436e-17,
+              -5.786231634368e-23
+            ],
+            [
+              9.44659512742899e-18,
+              0.9999999999999981,
+              -8.105613207002704e-21
+            ],
+            [
+              -3.0366640728628655e-24,
+              -5.046623676616229e-21,
+              -0.9999999999999986
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 8.940696716308596e-08,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 9.395282870853096e-16,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.004954182475350749,
+            0.004954182475350749
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            3.914106292171073e-06,
+            3.914106292171073e-06
+          ],
+          "actuation": {
+            "control_m": 0.009862500000000005,
+            "tendon_length_m": 0.009900536738117156,
+            "tendon_velocity_m_s": -0.004347382248197273,
+            "unclipped_output_n": 0.23341079652974894,
+            "clipped_output_n": 0.23341079652974894,
+            "finger_generalized_n": [
+              0.23341079652975338,
+              0.23341079652975338
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 7,
+          "relative_position_m": [
+            0.0010017081394360365,
+            1.400092522252155e-18,
+            0.0345823094519866
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999994,
+              -1.1410388920517436e-17,
+              -5.786231634368e-23
+            ],
+            [
+              9.44659512742899e-18,
+              0.9999999999999981,
+              -8.105613207002704e-21
+            ],
+            [
+              -3.0366640728628655e-24,
+              -5.046623676616229e-21,
+              -0.9999999999999986
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 8.940696716308596e-08,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 1.0978898394734687e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.004927117871586666,
+            0.004927117871586666
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -2.7064603764083255e-05,
+            -2.7064603764083255e-05
+          ],
+          "actuation": {
+            "control_m": 0.009842500000000006,
+            "tendon_length_m": 0.009908364950701498,
+            "tendon_velocity_m_s": 0.0009393855101210375,
+            "unclipped_output_n": -0.3282504117560649,
+            "clipped_output_n": -0.3282504117560649,
+            "finger_generalized_n": [
+              -0.3282504117560734,
+              -0.3282504117560734
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 8,
+          "relative_position_m": [
+            0.0010017081394360365,
+            1.400092522252155e-18,
+            0.0345823094519866
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999994,
+              -1.1410388920517436e-17,
+              -5.786231634368e-23
+            ],
+            [
+              9.44659512742899e-18,
+              0.9999999999999981,
+              -8.105613207002704e-21
+            ],
+            [
+              -3.0366640728628655e-24,
+              -5.046623676616229e-21,
+              -0.9999999999999986
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 8.940696716308596e-08,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 1.1552299846663105e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.0049418475427605215,
+            0.0049418475427605215
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            1.472967117385586e-05,
+            1.472967117385586e-05
+          ],
+          "actuation": {
+            "control_m": 0.009822500000000007,
+            "tendon_length_m": 0.009854235743173331,
+            "tendon_velocity_m_s": -0.006495504903380059,
+            "unclipped_output_n": 0.44285213724240746,
+            "clipped_output_n": 0.44285213724240746,
+            "finger_generalized_n": [
+              0.44285213724240435,
+              0.44285213724240435
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 9,
+          "relative_position_m": [
+            0.0010017081394360365,
+            1.400092522252155e-18,
+            0.0345823094519866
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999994,
+              -1.1410388920517436e-17,
+              -5.786231634368e-23
+            ],
+            [
+              9.44659512742899e-18,
+              0.9999999999999981,
+              -8.105613207002704e-21
+            ],
+            [
+              -3.0366640728628655e-24,
+              -5.046623676616229e-21,
+              -0.9999999999999986
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 8.940696716308596e-08,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 1.3106437411214725e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.00489898288170777,
+            0.00489898288170777
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -4.28646610527517e-05,
+            -4.28646610527517e-05
+          ],
+          "actuation": {
+            "control_m": 0.009802500000000007,
+            "tendon_length_m": 0.009883695085521043,
+            "tendon_velocity_m_s": 0.003535121081725363,
+            "unclipped_output_n": -0.6102695442731274,
+            "clipped_output_n": -0.6102695442731274,
+            "finger_generalized_n": [
+              -0.6102695442731303,
+              -0.6102695442731303
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 10,
+          "relative_position_m": [
+            0.0010017081394360365,
+            1.616932956749256e-18,
+            0.0345823094519866
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999994,
+              -1.1410388920517436e-17,
+              -5.786231634368e-23
+            ],
+            [
+              9.44659512742899e-18,
+              0.9999999999999981,
+              -8.105613207002704e-21
+            ],
+            [
+              -3.0366640728628655e-24,
+              -5.046623676616229e-21,
+              -0.9999999999999986
+            ]
+          ],
+          "translation_slip_m": 2.168404344971009e-19,
+          "rotation_slip_rad": 8.940696716308596e-08,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 1.466064761940818e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.004934626502143022,
+            0.004934626502143022
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            3.564362043525192e-05,
+            3.564362043525192e-05
+          ],
+          "actuation": {
+            "control_m": 0.009782500000000008,
+            "tendon_length_m": 0.00979796576341554,
+            "tendon_velocity_m_s": -0.010287518652660376,
+            "unclipped_output_n": 0.8318737506468797,
+            "clipped_output_n": 0.8318737506468797,
+            "finger_generalized_n": [
+              0.831873750646885,
+              0.831873750646885
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 11,
+          "relative_position_m": [
+            0.0010017081394360365,
+            1.616932956749256e-18,
+            0.0345823094519866
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999994,
+              -1.1410388920517436e-17,
+              -5.786231634368e-23
+            ],
+            [
+              9.44659512742899e-18,
+              0.9999999999999981,
+              -8.105613207002704e-21
+            ],
+            [
+              -3.0366640728628655e-24,
+              -5.046623676616229e-21,
+              -0.9999999999999986
+            ]
+          ],
+          "translation_slip_m": 2.168404344971009e-19,
+          "rotation_slip_rad": 8.940696716308596e-08,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 1.523331829016154e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.004862655425871172,
+            0.004862655425871172
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -7.197107627184961e-05,
+            -7.197107627184961e-05
+          ],
+          "actuation": {
+            "control_m": 0.009762500000000009,
+            "tendon_length_m": 0.009869253004286043,
+            "tendon_velocity_m_s": 0.008554468904460464,
+            "unclipped_output_n": -1.1402853263084594,
+            "clipped_output_n": -1.1402853263084594,
+            "finger_generalized_n": [
+              -1.140285326308451,
+              -1.140285326308451
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 12,
+          "relative_position_m": [
+            0.0010017081394360365,
+            1.616932956749256e-18,
+            0.0345823094519866
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999994,
+              -1.1410388920517436e-17,
+              -5.786231634368e-23
+            ],
+            [
+              9.44659512742899e-18,
+              0.9999999999999981,
+              -8.105613207002704e-21
+            ],
+            [
+              -3.0366640728628655e-24,
+              -5.046623676616229e-21,
+              -0.9999999999999986
+            ]
+          ],
+          "translation_slip_m": 2.168404344971009e-19,
+          "rotation_slip_rad": 8.940696716308596e-08,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 1.681063780354561e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.004937775596236718,
+            0.004937775596236718
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            7.512017036554602e-05,
+            7.512017036554602e-05
+          ],
+          "actuation": {
+            "control_m": 0.00974250000000001,
+            "tendon_length_m": 0.009725310851742344,
+            "tendon_velocity_m_s": -0.017273058305243977,
+            "unclipped_output_n": 1.5585788493698502,
+            "clipped_output_n": 1.5585788493698502,
+            "finger_generalized_n": [
+              1.5585788493698516,
+              1.5585788493698516
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 13,
+          "relative_position_m": [
+            0.0010017081394360365,
+            1.616932956749256e-18,
+            0.0345823094519866
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999994,
+              -1.1410388920517436e-17,
+              -5.786231634368e-23
+            ],
+            [
+              9.44659512742899e-18,
+              0.9999999999999981,
+              -8.105613207002704e-21
+            ],
+            [
+              -3.0366640728628655e-24,
+              -5.046623676616229e-21,
+              -0.9999999999999986
+            ]
+          ],
+          "translation_slip_m": 2.168404344971009e-19,
+          "rotation_slip_rad": 8.940696716308596e-08,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 1.8387821328655916e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.004811552173872547,
+            0.004811552173872547
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -0.00012622342236417138,
+            -0.00012622342236417138
+          ],
+          "actuation": {
+            "control_m": 0.00972250000000001,
+            "tendon_length_m": 0.009875551192473436,
+            "tendon_velocity_m_s": 0.018028840887731143,
+            "unclipped_output_n": -2.13343670856409,
+            "clipped_output_n": -2.13343670856409,
+            "finger_generalized_n": [
+              -2.1334367085640906,
+              -2.1334367085640906
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 14,
+          "relative_position_m": [
+            0.0010017081394360365,
+            1.833773391246357e-18,
+            0.0345823094519866
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999994,
+              -1.1410388920517436e-17,
+              -5.786231634368e-23
+            ],
+            [
+              9.44659512742899e-18,
+              0.9999999999999981,
+              -8.105613207002704e-21
+            ],
+            [
+              -3.0366640728628655e-24,
+              -5.046623676616229e-21,
+              -0.9999999999999986
+            ]
+          ],
+          "translation_slip_m": 4.336808689942018e-19,
+          "rotation_slip_rad": 8.940696716308596e-08,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 1.9965813856032427e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.0049607281422441385,
+            0.0049607281422441385
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            0.00014917596837159177,
+            0.00014917596837159177
+          ],
+          "actuation": {
+            "control_m": 0.009702500000000011,
+            "tendon_length_m": 0.009623104347745094,
+            "tendon_velocity_m_s": -0.03029362136740115,
+            "unclipped_output_n": 2.918131944236142,
+            "clipped_output_n": 2.918131944236142,
+            "finger_generalized_n": [
+              2.918131944236144,
+              2.918131944236144
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 15,
+          "relative_position_m": [
+            0.0010017081394360365,
+            1.833773391246357e-18,
+            0.0345823094519866
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999994,
+              -1.1410388920517436e-17,
+              -5.786231634368e-23
+            ],
+            [
+              9.44659512742899e-18,
+              0.9999999999999981,
+              -8.105613207002704e-21
+            ],
+            [
+              -3.0366640728628655e-24,
+              -5.046623676616229e-21,
+              -0.9999999999999986
+            ]
+          ],
+          "translation_slip_m": 4.336808689942018e-19,
+          "rotation_slip_rad": 8.940696716308596e-08,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 2.1519158383641924e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.004733065759329845,
+            0.004733065759329845
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -0.00022766238291429316,
+            -0.00022766238291429316
+          ],
+          "actuation": {
+            "control_m": 0.009682500000000012,
+            "tendon_length_m": 0.009921456284488277,
+            "tendon_velocity_m_s": 0.03580223240918196,
+            "unclipped_output_n": -3.992979170225233,
+            "clipped_output_n": -3.992979170225233,
+            "finger_generalized_n": [
+              -3.992979170225233,
+              -3.992979170225233
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 16,
+          "relative_position_m": [
+            0.0010017081394360365,
+            1.833773391246357e-18,
+            0.0345823094519866
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999994,
+              -1.1410388920517436e-17,
+              -5.786231634368e-23
+            ],
+            [
+              9.44659512742899e-18,
+              0.9999999999999981,
+              -8.105613207002704e-21
+            ],
+            [
+              -3.0366640728628655e-24,
+              -5.046623676616229e-21,
+              -0.9999999999999986
+            ]
+          ],
+          "translation_slip_m": 4.336808689942018e-19,
+          "rotation_slip_rad": 8.940696716308596e-08,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 2.307466175392169e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.0050209425302780416,
+            0.0050209425302780416
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            0.0002878767709481962,
+            0.0002878767709481962
+          ],
+          "actuation": {
+            "control_m": 0.009662500000000013,
+            "tendon_length_m": 0.00946613151865969,
+            "tendon_velocity_m_s": -0.05463897189943034,
+            "unclipped_output_n": 5.462652874326933,
+            "clipped_output_n": 5.462652874326933,
+            "finger_generalized_n": [
+              5.462652874326935,
+              5.462652874326935
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 17,
+          "relative_position_m": [
+            0.0010017081394360365,
+            1.833773391246357e-18,
+            0.0345823094519866
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999994,
+              -1.1410388920517436e-17,
+              -5.786231634368e-23
+            ],
+            [
+              9.44659512742899e-18,
+              0.9999999999999981,
+              -8.105613207002704e-21
+            ],
+            [
+              -3.0366640728628655e-24,
+              -5.046623676616229e-21,
+              -0.9999999999999986
+            ]
+          ],
+          "translation_slip_m": 4.336808689942018e-19,
+          "rotation_slip_rad": 8.940696716308596e-08,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 2.4652973843783158e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.00460345730217284,
+            0.00460345730217284
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -0.0004174852281052018,
+            -0.0004174852281052018
+          ],
+          "actuation": {
+            "control_m": 0.009642500000000014,
+            "tendon_length_m": 0.010041885060556083,
+            "tendon_velocity_m_s": 0.06909042502756707,
+            "unclipped_output_n": -7.474015741969811,
+            "clipped_output_n": -7.474015741969811,
+            "finger_generalized_n": [
+              -7.474015741969808,
+              -7.474015741969808
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 18,
+          "relative_position_m": [
+            0.0010017081394360365,
+            1.833773391246357e-18,
+            0.0345823094519866
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999994,
+              -1.1410388920517436e-17,
+              -5.786231634368e-23
+            ],
+            [
+              9.44659512742899e-18,
+              0.9999999999999981,
+              -8.105613207002704e-21
+            ],
+            [
+              -3.0366640728628655e-24,
+              -5.046623676616229e-21,
+              -0.9999999999999986
+            ]
+          ],
+          "translation_slip_m": 4.336808689942018e-19,
+          "rotation_slip_rad": 8.940696716308596e-08,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 2.6231473130462413e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.005151000251603289,
+            0.005151000251603289
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            0.000547542949430449,
+            0.000547542949430449
+          ],
+          "actuation": {
+            "control_m": 0.009622500000000015,
+            "tendon_length_m": 0.00920691460434568,
+            "tendon_velocity_m_s": -0.10019645474524852,
+            "unclipped_output_n": 10.225438569167755,
+            "clipped_output_n": 10.225438569167755,
+            "finger_generalized_n": [
+              10.225438569167757,
+              10.225438569167757
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 19,
+          "relative_position_m": [
+            0.0010017081394360365,
+            1.833773391246357e-18,
+            0.0345823094519866
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999994,
+              -1.1410388920517436e-17,
+              -5.786231634368e-23
+            ],
+            [
+              9.44659512742899e-18,
+              0.9999999999999981,
+              -8.105613207002704e-21
+            ],
+            [
+              -3.0366640728628655e-24,
+              -5.046623676616229e-21,
+              -0.9999999999999986
+            ]
+          ],
+          "translation_slip_m": 4.336808689942018e-19,
+          "rotation_slip_rad": 8.940696716308596e-08,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 2.7811716395209495e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.004378222465171079,
+            0.004378222465171079
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -0.0007727777864322098,
+            -0.0007727777864322098
+          ],
+          "actuation": {
+            "control_m": 0.009602500000000016,
+            "tendon_length_m": 0.010302000503206577,
+            "tendon_velocity_m_s": 0.1314103078633077,
+            "unclipped_output_n": -13.990118517200724,
+            "clipped_output_n": -13.990118517200724,
+            "finger_generalized_n": [
+              -13.990118517200727,
+              -13.990118517200727
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 20,
+          "relative_position_m": [
+            0.0010017081394360365,
+            1.833773391246357e-18,
+            0.0345823094519866
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999994,
+              -1.1410388920517436e-17,
+              -5.786231634368e-23
+            ],
+            [
+              9.44659512742899e-18,
+              0.9999999999999981,
+              -8.105613207002704e-21
+            ],
+            [
+              -3.0366640728628655e-24,
+              -5.046623676616229e-21,
+              -0.9999999999999986
+            ]
+          ],
+          "translation_slip_m": 4.336808689942018e-19,
+          "rotation_slip_rad": 8.940696716308596e-08,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 2.9997041912004888e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.0054118408053479335,
+            0.0054118408053479335
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            0.0010336183401768546,
+            0.0010336183401768546
+          ],
+          "actuation": {
+            "control_m": 0.009582500000000016,
+            "tendon_length_m": 0.008756444930342158,
+            "tendon_velocity_m_s": -0.1854666687437303,
+            "unclipped_output_n": 19.14057335754964,
+            "clipped_output_n": 19.14057335754964,
+            "finger_generalized_n": [
+              19.14057335754964,
+              19.14057335754964
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 21,
+          "relative_position_m": [
+            0.0010017081394360365,
+            1.833773391246357e-18,
+            0.0345823094519866
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999994,
+              -1.1410388920517436e-17,
+              -5.786231634368e-23
+            ],
+            [
+              9.44659512742899e-18,
+              0.9999999999999981,
+              -8.105613207002704e-21
+            ],
+            [
+              -3.0366640728628655e-24,
+              -5.046623676616229e-21,
+              -0.9999999999999986
+            ]
+          ],
+          "translation_slip_m": 4.336808689942018e-19,
+          "rotation_slip_rad": 8.940696716308596e-08,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 3.1571173767628067e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.0039740220199886486,
+            0.0039740220199886486
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -0.001437818785359285,
+            -0.001437818785359285
+          ],
+          "actuation": {
+            "control_m": 0.009562500000000017,
+            "tendon_length_m": 0.010823681610695867,
+            "tendon_velocity_m_s": 0.24806840164244504,
+            "unclipped_output_n": -26.187347782180936,
+            "clipped_output_n": -26.187347782180936,
+            "finger_generalized_n": [
+              -26.187347782180936,
+              -26.187347782180936
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 22,
+          "relative_position_m": [
+            0.0010017081394360365,
+            1.833773391246357e-18,
+            0.0345823094519866
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999994,
+              -1.1410388920517436e-17,
+              -5.786231634368e-23
+            ],
+            [
+              9.44659512742899e-18,
+              0.9999999999999981,
+              -8.105613207002704e-21
+            ],
+            [
+              -3.0366640728628655e-24,
+              -5.046623676616229e-21,
+              -0.9999999999999986
+            ]
+          ],
+          "translation_slip_m": 4.336808689942018e-19,
+          "rotation_slip_rad": 8.940696716308596e-08,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 3.3154754277759787e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.005917510127243932,
+            0.005917510127243932
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            0.0019434881072552838,
+            0.0019434881072552838
+          ],
+          "actuation": {
+            "control_m": 0.009542500000000018,
+            "tendon_length_m": 0.007948044039977297,
+            "tendon_velocity_m_s": -0.3450765084862285,
+            "unclipped_output_n": 35.82832783414397,
+            "clipped_output_n": 35.82832783414397,
+            "finger_generalized_n": [
+              35.82832783414397,
+              35.82832783414397
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 23,
+          "relative_position_m": [
+            0.0010017081394360365,
+            1.1832520877550542e-18,
+            0.0345823094519866
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999994,
+              -1.1410388920517436e-17,
+              -5.786231634368e-23
+            ],
+            [
+              9.44659512742899e-18,
+              0.9999999999999981,
+              -8.105613207002704e-21
+            ],
+            [
+              -3.0366640728628655e-24,
+              -5.046623676616229e-21,
+              -0.9999999999999986
+            ]
+          ],
+          "translation_slip_m": 2.168404344971009e-19,
+          "rotation_slip_rad": 8.940696716308596e-08,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.17732418695068644,
+          "arm_speed_rad_s": 3.4851522584992965e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            -0.17732418695068644,
+            -0.177324186950686
+          ],
+          "finger_asymmetry_m": -4.440892098500626e-16,
+          "finger_step_displacement_m": [
+            -0.18324169707793037,
+            -0.18324169707792992
+          ],
+          "actuation": {
+            "control_m": 0.009522500000000019,
+            "tendon_length_m": 0.011835020254487865,
+            "tendon_velocity_m_s": 0.46643714574126804,
+            "unclipped_output_n": -49.01876406094911,
+            "clipped_output_n": -40.0,
+            "finger_generalized_n": [
+              -40.0,
+              -40.0
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": true
+          },
+          "early_stop_reasons": [
+            "FINGER_LIMIT"
+          ]
+        }
+      ]
+    },
+    "PREP_I3_RATE_LIMITED": {
+      "status": "COMPLETE",
+      "accounting": {
+        "requests": 23,
+        "results": 23,
+        "unresolved_request_step": null,
+        "complete": true
+      },
+      "integrity": {
+        "status": "PASS",
+        "steps_checked": 23,
+        "last_viewer_sync_count": 49,
+        "limitations": "Derived state is not equated across solver/forward stages."
+      },
+      "schedule": {
+        "first_observed_contact_command": null,
+        "first_bilateral_observation_command": null,
+        "hold_entry_command": null,
+        "complete_command": null,
+        "final_phase": "FREE_SPACE_APPROACH",
+        "final_target_m": 0.004761250000000009,
+        "max_target_delta_m": 1e-05,
+        "commands": 23
+      },
+      "initial_above": {
+        "zmin_m": 0.044383731367241636,
+        "entirely_above_opening": true,
+        "tcp_above_m": true
+      },
+      "final_above": {
+        "zmin_m": 0.044383731367241636,
+        "entirely_above_opening": true,
+        "tcp_above_m": true
+      },
+      "independent_preparation": {
+        "reset_admission_status": "FAIL",
+        "preparation_contact_quality_status": "FAIL",
+        "reason": "Incomplete acquisition or fewer than ten held steps."
+      },
+      "runner_gate_disagreements": {},
+      "aggregate": {
+        "steps": 23,
+        "first_left_positive_step": null,
+        "first_right_positive_step": null,
+        "first_bilateral_positive_step": null,
+        "total_bilateral_steps": 0,
+        "longest_bilateral_streak_steps": 0,
+        "max_abs_finger_step_displacement_m": 0.18324169707793087,
+        "max_abs_native_actuator_force_n": 40.0,
+        "max_pad_penetration_m": 0.0,
+        "max_assembly_penetration_m": 0.0,
+        "last_step_early_stop_reasons": [
+          "FINGER_LIMIT"
+        ]
+      },
+      "metrics": [
+        {
+          "step": 1,
+          "relative_position_m": [
+            0.0009353319215636342,
+            -1.3315516749515212e-17,
+            0.03447151016564215
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999978,
+              7.081432678257864e-16,
+              2.652745781508447e-21
+            ],
+            [
+              -1.1375844243232523e-16,
+              0.9999999999999957,
+              -1.7240508928400066e-20
+            ],
+            [
+              -1.983015055467404e-21,
+              -1.2837852976724227e-21,
+              -0.9999999999999977
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 1.332800374925012e-07,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 9.824896945258359e-17,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.004984171857304643,
+            0.004984171857304643
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -7.078142695357038e-06,
+            -7.078142695357038e-06
+          ],
+          "actuation": {
+            "control_m": 0.009962500000000001,
+            "tendon_length_m": 0.0099825,
+            "tendon_velocity_m_s": 0.0,
+            "unclipped_output_n": -0.07499999999999694,
+            "clipped_output_n": -0.07499999999999694,
+            "finger_generalized_n": [
+              -0.07500000000000284,
+              -0.07500000000000284
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 2,
+          "relative_position_m": [
+            0.0009353319215636342,
+            -1.3315516749515212e-17,
+            0.03447151016564215
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999978,
+              7.081432678257864e-16,
+              2.652745781508447e-21
+            ],
+            [
+              -1.1375844243232523e-16,
+              0.9999999999999957,
+              -1.7240508928400066e-20
+            ],
+            [
+              -1.983015055467404e-21,
+              -1.2837852976724227e-21,
+              -0.9999999999999977
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 1.332800374925012e-07,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 2.579052748632586e-16,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.004981815148411739,
+            0.004981815148411739
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -2.3567088929038124e-06,
+            -2.3567088929038124e-06
+          ],
+          "actuation": {
+            "control_m": 0.009942500000000002,
+            "tendon_length_m": 0.009968343714609286,
+            "tendon_velocity_m_s": -0.0016987542468856818,
+            "unclipped_output_n": 0.05002831257079539,
+            "clipped_output_n": 0.05002831257079539,
+            "finger_generalized_n": [
+              0.05002831257079521,
+              0.05002831257079521
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 3,
+          "relative_position_m": [
+            0.0009353319215636342,
+            -1.3315516749515212e-17,
+            0.03447151016564215
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999978,
+              7.081432678257864e-16,
+              2.652745781508447e-21
+            ],
+            [
+              -1.1375844243232523e-16,
+              0.9999999999999957,
+              -1.7240508928400066e-20
+            ],
+            [
+              -1.983015055467404e-21,
+              -1.2837852976724227e-21,
+              -0.9999999999999977
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 1.332800374925012e-07,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 3.5849101724595005e-16,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.004969519468541924,
+            0.004969519468541924
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -1.22956798698148e-05,
+            -1.22956798698148e-05
+          ],
+          "actuation": {
+            "control_m": 0.009922500000000002,
+            "tendon_length_m": 0.009963630296823478,
+            "tendon_velocity_m_s": -0.000565610134296889,
+            "unclipped_output_n": -0.10531333647135355,
+            "clipped_output_n": -0.10531333647135355,
+            "finger_generalized_n": [
+              -0.10531333647135455,
+              -0.10531333647135455
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 4,
+          "relative_position_m": [
+            0.0009353319215636342,
+            -1.3315516749515212e-17,
+            0.03447151016564215
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999978,
+              7.081432678257864e-16,
+              2.652745781508447e-21
+            ],
+            [
+              -1.1375844243232523e-16,
+              0.9999999999999957,
+              -1.7240508928400066e-20
+            ],
+            [
+              -1.983015055467404e-21,
+              -1.2837852976724227e-21,
+              -0.9999999999999977
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 1.332800374925012e-07,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 5.187423081781378e-16,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.0049683824617594,
+            0.0049683824617594
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -1.137006782524208e-06,
+            -1.137006782524208e-06
+          ],
+          "actuation": {
+            "control_m": 0.009902500000000003,
+            "tendon_length_m": 0.009939038937083849,
+            "tendon_velocity_m_s": -0.0029509631687556557,
+            "unclipped_output_n": 0.11823730003294383,
+            "clipped_output_n": 0.11823730003294383,
+            "finger_generalized_n": [
+              0.11823730003293775,
+              0.11823730003293775
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 5,
+          "relative_position_m": [
+            0.0009353319215636342,
+            -1.3315516749515212e-17,
+            0.03447151016564215
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999978,
+              7.081432678257864e-16,
+              2.652745781508447e-21
+            ],
+            [
+              -1.1375844243232523e-16,
+              0.9999999999999957,
+              -1.7240508928400066e-20
+            ],
+            [
+              -1.983015055467404e-21,
+              -1.2837852976724227e-21,
+              -0.9999999999999977
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 1.332800374925012e-07,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 6.784016991664761e-16,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.004950268369058578,
+            0.004950268369058578
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -1.8114092700822343e-05,
+            -1.8114092700822343e-05
+          ],
+          "actuation": {
+            "control_m": 0.009882500000000004,
+            "tendon_length_m": 0.0099367649235188,
+            "tendon_velocity_m_s": -0.0002728816278057631,
+            "unclipped_output_n": -0.17988920239028727,
+            "clipped_output_n": -0.17988920239028727,
+            "finger_generalized_n": [
+              -0.17988920239028516,
+              -0.17988920239028516
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 6,
+          "relative_position_m": [
+            0.0009353319215636342,
+            -1.3315516749515212e-17,
+            0.03447151016564215
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999978,
+              7.081432678257864e-16,
+              2.652745781508447e-21
+            ],
+            [
+              -1.1375844243232523e-16,
+              0.9999999999999957,
+              -1.7240508928400066e-20
+            ],
+            [
+              -1.983015055467404e-21,
+              -1.2837852976724227e-21,
+              -0.9999999999999977
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 1.332800374925012e-07,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 8.380590173659982e-16,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.004954182475350749,
+            0.004954182475350749
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            3.914106292171073e-06,
+            3.914106292171073e-06
+          ],
+          "actuation": {
+            "control_m": 0.009862500000000005,
+            "tendon_length_m": 0.009900536738117156,
+            "tendon_velocity_m_s": -0.004347382248197273,
+            "unclipped_output_n": 0.23341079652974894,
+            "clipped_output_n": 0.23341079652974894,
+            "finger_generalized_n": [
+              0.23341079652975338,
+              0.23341079652975338
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 7,
+          "relative_position_m": [
+            0.0009353319215636342,
+            -1.3315516749515212e-17,
+            0.03447151016564215
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999978,
+              7.081432678257864e-16,
+              2.652745781508447e-21
+            ],
+            [
+              -1.1375844243232523e-16,
+              0.9999999999999957,
+              -1.7240508928400066e-20
+            ],
+            [
+              -1.983015055467404e-21,
+              -1.2837852976724227e-21,
+              -0.9999999999999977
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 1.332800374925012e-07,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 8.994807695293072e-16,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.004927117871586666,
+            0.004927117871586666
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -2.7064603764083255e-05,
+            -2.7064603764083255e-05
+          ],
+          "actuation": {
+            "control_m": 0.009842500000000006,
+            "tendon_length_m": 0.009908364950701498,
+            "tendon_velocity_m_s": 0.0009393855101210375,
+            "unclipped_output_n": -0.3282504117560649,
+            "clipped_output_n": -0.3282504117560649,
+            "finger_generalized_n": [
+              -0.3282504117560734,
+              -0.3282504117560734
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 8,
+          "relative_position_m": [
+            0.0009353319215636342,
+            -1.3315516749515212e-17,
+            0.03447151016564215
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999978,
+              7.081432678257864e-16,
+              2.652745781508447e-21
+            ],
+            [
+              -1.1375844243232523e-16,
+              0.9999999999999957,
+              -1.7240508928400066e-20
+            ],
+            [
+              -1.983015055467404e-21,
+              -1.2837852976724227e-21,
+              -0.9999999999999977
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 1.332800374925012e-07,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 9.98316165273672e-16,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.0049418475427605215,
+            0.0049418475427605215
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            1.472967117385586e-05,
+            1.472967117385586e-05
+          ],
+          "actuation": {
+            "control_m": 0.009822500000000007,
+            "tendon_length_m": 0.009854235743173331,
+            "tendon_velocity_m_s": -0.006495504903380059,
+            "unclipped_output_n": 0.44285213724240746,
+            "clipped_output_n": 0.44285213724240746,
+            "finger_generalized_n": [
+              0.44285213724240435,
+              0.44285213724240435
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 9,
+          "relative_position_m": [
+            0.0009353319215636342,
+            -1.3315516749515212e-17,
+            0.03447151016564215
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999978,
+              7.081432678257864e-16,
+              2.652745781508447e-21
+            ],
+            [
+              -1.1375844243232523e-16,
+              0.9999999999999957,
+              -1.7240508928400066e-20
+            ],
+            [
+              -1.983015055467404e-21,
+              -1.2837852976724227e-21,
+              -0.9999999999999977
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 1.332800374925012e-07,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 1.099478258765236e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.00489898288170777,
+            0.00489898288170777
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -4.28646610527517e-05,
+            -4.28646610527517e-05
+          ],
+          "actuation": {
+            "control_m": 0.009802500000000007,
+            "tendon_length_m": 0.009883695085521043,
+            "tendon_velocity_m_s": 0.003535121081725363,
+            "unclipped_output_n": -0.6102695442731274,
+            "clipped_output_n": -0.6102695442731274,
+            "finger_generalized_n": [
+              -0.6102695442731303,
+              -0.6102695442731303
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 10,
+          "relative_position_m": [
+            0.0009353319215636342,
+            -1.3315516749515212e-17,
+            0.03447151016564215
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999978,
+              7.081432678257864e-16,
+              2.652745781508447e-21
+            ],
+            [
+              -1.1375844243232523e-16,
+              0.9999999999999957,
+              -1.7240508928400066e-20
+            ],
+            [
+              -1.983015055467404e-21,
+              -1.2837852976724227e-21,
+              -0.9999999999999977
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 1.332800374925012e-07,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 1.1977318505338562e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.004934626502143022,
+            0.004934626502143022
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            3.564362043525192e-05,
+            3.564362043525192e-05
+          ],
+          "actuation": {
+            "control_m": 0.009782500000000008,
+            "tendon_length_m": 0.00979796576341554,
+            "tendon_velocity_m_s": -0.010287518652660376,
+            "unclipped_output_n": 0.8318737506468797,
+            "clipped_output_n": 0.8318737506468797,
+            "finger_generalized_n": [
+              0.831873750646885,
+              0.831873750646885
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 11,
+          "relative_position_m": [
+            0.0009353319215636342,
+            -1.3315516749515212e-17,
+            0.03447151016564215
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999978,
+              7.081432678257864e-16,
+              2.652745781508447e-21
+            ],
+            [
+              -1.1375844243232523e-16,
+              0.9999999999999957,
+              -1.7240508928400066e-20
+            ],
+            [
+              -1.983015055467404e-21,
+              -1.2837852976724227e-21,
+              -0.9999999999999977
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 1.332800374925012e-07,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 1.2965326257905886e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.004862655425871172,
+            0.004862655425871172
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -7.197107627184961e-05,
+            -7.197107627184961e-05
+          ],
+          "actuation": {
+            "control_m": 0.009762500000000009,
+            "tendon_length_m": 0.009869253004286043,
+            "tendon_velocity_m_s": 0.008554468904460464,
+            "unclipped_output_n": -1.1402853263084594,
+            "clipped_output_n": -1.1402853263084594,
+            "finger_generalized_n": [
+              -1.140285326308451,
+              -1.140285326308451
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 12,
+          "relative_position_m": [
+            0.0009353319215636342,
+            -1.3315516749515212e-17,
+            0.03447151016564215
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999978,
+              7.081432678257864e-16,
+              2.652745781508447e-21
+            ],
+            [
+              -1.1375844243232523e-16,
+              0.9999999999999957,
+              -1.7240508928400066e-20
+            ],
+            [
+              -1.983015055467404e-21,
+              -1.2837852976724227e-21,
+              -0.9999999999999977
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 1.332800374925012e-07,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 1.2965072869191305e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.004937775596236718,
+            0.004937775596236718
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            7.512017036554602e-05,
+            7.512017036554602e-05
+          ],
+          "actuation": {
+            "control_m": 0.00974250000000001,
+            "tendon_length_m": 0.009725310851742344,
+            "tendon_velocity_m_s": -0.017273058305243977,
+            "unclipped_output_n": 1.5585788493698502,
+            "clipped_output_n": 1.5585788493698502,
+            "finger_generalized_n": [
+              1.5585788493698516,
+              1.5585788493698516
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 13,
+          "relative_position_m": [
+            0.0009353319215636342,
+            -1.3315516749515212e-17,
+            0.03447151016564215
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999978,
+              7.081432678257864e-16,
+              2.652745781508447e-21
+            ],
+            [
+              -1.1375844243232523e-16,
+              0.9999999999999957,
+              -1.7240508928400066e-20
+            ],
+            [
+              -1.983015055467404e-21,
+              -1.2837852976724227e-21,
+              -0.9999999999999977
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 1.332800374925012e-07,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 1.3573773171301507e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.004811552173872547,
+            0.004811552173872547
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -0.00012622342236417138,
+            -0.00012622342236417138
+          ],
+          "actuation": {
+            "control_m": 0.00972250000000001,
+            "tendon_length_m": 0.009875551192473436,
+            "tendon_velocity_m_s": 0.018028840887731143,
+            "unclipped_output_n": -2.13343670856409,
+            "clipped_output_n": -2.13343670856409,
+            "finger_generalized_n": [
+              -2.1334367085640906,
+              -2.1334367085640906
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 14,
+          "relative_position_m": [
+            0.0009353319215636342,
+            -1.3315516749515212e-17,
+            0.03447151016564215
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999978,
+              7.081432678257864e-16,
+              2.652745781508447e-21
+            ],
+            [
+              -1.1375844243232523e-16,
+              0.9999999999999957,
+              -1.7240508928400066e-20
+            ],
+            [
+              -1.983015055467404e-21,
+              -1.2837852976724227e-21,
+              -0.9999999999999977
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 1.332800374925012e-07,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 1.4561651416046693e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.0049607281422441385,
+            0.0049607281422441385
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            0.00014917596837159177,
+            0.00014917596837159177
+          ],
+          "actuation": {
+            "control_m": 0.009702500000000011,
+            "tendon_length_m": 0.009623104347745094,
+            "tendon_velocity_m_s": -0.03029362136740115,
+            "unclipped_output_n": 2.918131944236142,
+            "clipped_output_n": 2.918131944236142,
+            "finger_generalized_n": [
+              2.918131944236144,
+              2.918131944236144
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 15,
+          "relative_position_m": [
+            0.0009353319215636342,
+            -1.3315516749515212e-17,
+            0.03447151016564215
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999978,
+              7.081432678257864e-16,
+              2.652745781508447e-21
+            ],
+            [
+              -1.1375844243232523e-16,
+              0.9999999999999957,
+              -1.7240508928400066e-20
+            ],
+            [
+              -1.983015055467404e-21,
+              -1.2837852976724227e-21,
+              -0.9999999999999977
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 1.332800374925012e-07,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 1.6162570055187182e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.004733065759329845,
+            0.004733065759329845
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -0.00022766238291429316,
+            -0.00022766238291429316
+          ],
+          "actuation": {
+            "control_m": 0.009682500000000012,
+            "tendon_length_m": 0.009921456284488277,
+            "tendon_velocity_m_s": 0.03580223240918196,
+            "unclipped_output_n": -3.992979170225233,
+            "clipped_output_n": -3.992979170225233,
+            "finger_generalized_n": [
+              -3.992979170225233,
+              -3.992979170225233
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 16,
+          "relative_position_m": [
+            0.0009353319215636342,
+            -1.3315516749515212e-17,
+            0.03447151016564215
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999978,
+              7.081432678257864e-16,
+              2.652745781508447e-21
+            ],
+            [
+              -1.1375844243232523e-16,
+              0.9999999999999957,
+              -1.7240508928400066e-20
+            ],
+            [
+              -1.983015055467404e-21,
+              -1.2837852976724227e-21,
+              -0.9999999999999977
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 1.332800374925012e-07,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 1.6187647381738914e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.0050209425302780416,
+            0.0050209425302780416
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            0.0002878767709481962,
+            0.0002878767709481962
+          ],
+          "actuation": {
+            "control_m": 0.009662500000000013,
+            "tendon_length_m": 0.00946613151865969,
+            "tendon_velocity_m_s": -0.05463897189943034,
+            "unclipped_output_n": 5.462652874326933,
+            "clipped_output_n": 5.462652874326933,
+            "finger_generalized_n": [
+              5.462652874326935,
+              5.462652874326935
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 17,
+          "relative_position_m": [
+            0.0009353319215636342,
+            -1.3315516749515212e-17,
+            0.03447151016564215
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999978,
+              7.081432678257864e-16,
+              2.652745781508447e-21
+            ],
+            [
+              -1.1375844243232523e-16,
+              0.9999999999999957,
+              -1.7240508928400066e-20
+            ],
+            [
+              -1.983015055467404e-21,
+              -1.2837852976724227e-21,
+              -0.9999999999999977
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 1.332800374925012e-07,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 1.71912913177564e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.00460345730217284,
+            0.00460345730217284
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -0.0004174852281052018,
+            -0.0004174852281052018
+          ],
+          "actuation": {
+            "control_m": 0.009642500000000014,
+            "tendon_length_m": 0.010041885060556083,
+            "tendon_velocity_m_s": 0.06909042502756707,
+            "unclipped_output_n": -7.474015741969811,
+            "clipped_output_n": -7.474015741969811,
+            "finger_generalized_n": [
+              -7.474015741969808,
+              -7.474015741969808
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 18,
+          "relative_position_m": [
+            0.0009353319215636342,
+            -1.3315516749515212e-17,
+            0.03447151016564215
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999978,
+              7.081432678257864e-16,
+              2.652745781508447e-21
+            ],
+            [
+              -1.1375844243232523e-16,
+              0.9999999999999957,
+              -1.7240508928400066e-20
+            ],
+            [
+              -1.983015055467404e-21,
+              -1.2837852976724227e-21,
+              -0.9999999999999977
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 1.332800374925012e-07,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 1.817511934576758e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.005151000251603289,
+            0.005151000251603289
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            0.000547542949430449,
+            0.000547542949430449
+          ],
+          "actuation": {
+            "control_m": 0.009622500000000015,
+            "tendon_length_m": 0.00920691460434568,
+            "tendon_velocity_m_s": -0.10019645474524852,
+            "unclipped_output_n": 10.225438569167755,
+            "clipped_output_n": 10.225438569167755,
+            "finger_generalized_n": [
+              10.225438569167757,
+              10.225438569167757
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 19,
+          "relative_position_m": [
+            0.0009353319215636342,
+            -1.3315516749515212e-17,
+            0.03447151016564215
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999978,
+              7.081432678257864e-16,
+              2.652745781508447e-21
+            ],
+            [
+              -1.1375844243232523e-16,
+              0.9999999999999957,
+              -1.7240508928400066e-20
+            ],
+            [
+              -1.983015055467404e-21,
+              -1.2837852976724227e-21,
+              -0.9999999999999977
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 1.332800374925012e-07,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 1.9166413981538364e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.004378222465171079,
+            0.004378222465171079
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -0.0007727777864322098,
+            -0.0007727777864322098
+          ],
+          "actuation": {
+            "control_m": 0.009602500000000016,
+            "tendon_length_m": 0.010302000503206577,
+            "tendon_velocity_m_s": 0.1314103078633077,
+            "unclipped_output_n": -13.990118517200724,
+            "clipped_output_n": -13.990118517200724,
+            "finger_generalized_n": [
+              -13.990118517200727,
+              -13.990118517200727
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 20,
+          "relative_position_m": [
+            0.0009353319215636342,
+            -1.3315516749515212e-17,
+            0.03447151016564215
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999978,
+              7.081432678257864e-16,
+              2.652745781508447e-21
+            ],
+            [
+              -1.1375844243232523e-16,
+              0.9999999999999957,
+              -1.7240508928400066e-20
+            ],
+            [
+              -1.983015055467404e-21,
+              -1.2837852976724227e-21,
+              -0.9999999999999977
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 1.332800374925012e-07,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 2.01558583819451e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.0054118408053479335,
+            0.0054118408053479335
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            0.0010336183401768546,
+            0.0010336183401768546
+          ],
+          "actuation": {
+            "control_m": 0.009582500000000016,
+            "tendon_length_m": 0.008756444930342158,
+            "tendon_velocity_m_s": -0.1854666687437303,
+            "unclipped_output_n": 19.14057335754964,
+            "clipped_output_n": 19.14057335754964,
+            "finger_generalized_n": [
+              19.14057335754964,
+              19.14057335754964
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 21,
+          "relative_position_m": [
+            0.0009353319215636342,
+            -1.3315516749515212e-17,
+            0.03447151016564215
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999978,
+              7.081432678257864e-16,
+              2.652745781508447e-21
+            ],
+            [
+              -1.1375844243232523e-16,
+              0.9999999999999957,
+              -1.7240508928400066e-20
+            ],
+            [
+              -1.983015055467404e-21,
+              -1.2837852976724227e-21,
+              -0.9999999999999977
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 1.332800374925012e-07,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 2.1137110530138127e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.0039740220199886486,
+            0.0039740220199886486
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            -0.001437818785359285,
+            -0.001437818785359285
+          ],
+          "actuation": {
+            "control_m": 0.009562500000000017,
+            "tendon_length_m": 0.010823681610695867,
+            "tendon_velocity_m_s": 0.24806840164244504,
+            "unclipped_output_n": -26.187347782180936,
+            "clipped_output_n": -26.187347782180936,
+            "finger_generalized_n": [
+              -26.187347782180936,
+              -26.187347782180936
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 22,
+          "relative_position_m": [
+            0.0009353319215636342,
+            -1.3315516749515212e-17,
+            0.03447151016564215
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999978,
+              7.081432678257864e-16,
+              2.652745781508447e-21
+            ],
+            [
+              -1.1375844243232523e-16,
+              0.9999999999999957,
+              -1.7240508928400066e-20
+            ],
+            [
+              -1.983015055467404e-21,
+              -1.2837852976724227e-21,
+              -0.9999999999999977
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 1.332800374925012e-07,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.0,
+          "arm_speed_rad_s": 2.2742892713118333e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            0.005917510127243932,
+            0.005917510127243932
+          ],
+          "finger_asymmetry_m": 0.0,
+          "finger_step_displacement_m": [
+            0.0019434881072552838,
+            0.0019434881072552838
+          ],
+          "actuation": {
+            "control_m": 0.009542500000000018,
+            "tendon_length_m": 0.007948044039977297,
+            "tendon_velocity_m_s": -0.3450765084862285,
+            "unclipped_output_n": 35.82832783414397,
+            "clipped_output_n": 35.82832783414397,
+            "finger_generalized_n": [
+              35.82832783414397,
+              35.82832783414397
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": false
+          },
+          "early_stop_reasons": []
+        },
+        {
+          "step": 23,
+          "relative_position_m": [
+            0.0009353319215636342,
+            -1.3315516749515212e-17,
+            0.03447151016564215
+          ],
+          "relative_rotation": [
+            [
+              -0.9999999999999978,
+              7.081432678257864e-16,
+              2.652745781508447e-21
+            ],
+            [
+              -1.1375844243232523e-16,
+              0.9999999999999957,
+              -1.7240508928400066e-20
+            ],
+            [
+              -1.983015055467404e-21,
+              -1.2837852976724227e-21,
+              -0.9999999999999977
+            ]
+          ],
+          "translation_slip_m": 0.0,
+          "rotation_slip_rad": 1.332800374925012e-07,
+          "arm_limit_violation_rad": 0.0,
+          "finger_limit_violation_m": 0.17732418695068694,
+          "arm_speed_rad_s": 1.908285460361862e-15,
+          "bilateral": false,
+          "left_pad_force_n": 0.0,
+          "right_pad_force_n": 0.0,
+          "all_penetration_m": 0.0,
+          "pad_penetration_m": 0.0,
+          "assembly_penetration_m": 0.0,
+          "recorded_pad_penetration_m": 0.0,
+          "interference": [],
+          "warning_delta": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "finger_qpos_m": [
+            -0.17732418695068694,
+            -0.17732418695068602
+          ],
+          "finger_asymmetry_m": -9.159339953157541e-16,
+          "finger_step_displacement_m": [
+            -0.18324169707793087,
+            -0.18324169707792995
+          ],
+          "actuation": {
+            "control_m": 0.009522500000000019,
+            "tendon_length_m": 0.011835020254487865,
+            "tendon_velocity_m_s": 0.46643714574126804,
+            "unclipped_output_n": -49.01876406094911,
+            "clipped_output_n": -40.0,
+            "finger_generalized_n": [
+              -40.0,
+              -40.0
+            ],
+            "moment_arms": [
+              1.0,
+              1.0
+            ],
+            "clipped": true
+          },
+          "early_stop_reasons": [
+            "FINGER_LIMIT"
+          ]
+        }
+      ]
+    },
+    "DIAG_I2_NATIVE": {
+      "status": "UNSTARTED"
+    },
+    "DIAG_I3_NATIVE": {
+      "status": "UNSTARTED"
+    }
+  },
+  "note": "Read only; no MuJoCo integration or policy; force is not an impulse."
+}
