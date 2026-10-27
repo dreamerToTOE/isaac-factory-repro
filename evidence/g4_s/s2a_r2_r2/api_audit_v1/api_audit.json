@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "task": "G4-S2A-R2-R2",
+  "scope": "STATIC_API_AND_COMPILED_MODEL_ONLY",
+  "mujoco_version": "3.5.0",
+  "mj_version_string": "3.5.0",
+  "xml_path": "evidence/g4_s/s2a_r2_r1/matrix_v2/P_FULL_diagnostic.xml",
+  "xml_sha256": "e2ae8f5a14ab927c12897cb534819d8da63a5ce24f91200f80796fdaee1ca6fc",
+  "physics_calls": {
+    "mj_step": 0,
+    "mj_forward": 0,
+    "mj_contactForce": 0,
+    "mj_fullM": 0
+  },
+  "api_docstrings": {
+    "mj_contactForce": "mj_contactForce(m: mujoco._structs.MjModel, d: mujoco._structs.MjData, id: typing.SupportsInt, result: typing.Annotated[numpy.typing.NDArray[numpy.float64], \"[6, 1]\", \"flags.writeable\"]) -> None\n\nExtract 6D force:torque given contact id, in the contact frame.",
+    "mj_fullM": "mj_fullM(m: mujoco._structs.MjModel, dst: typing.Annotated[numpy.typing.NDArray[numpy.float64], \"[m, n]\", \"flags.writeable\", \"flags.c_contiguous\"], M: typing.Annotated[numpy.typing.NDArray[numpy.float64], \"[m, 1]\"]) -> None\n\nConvert sparse inertia matrix M into full (i.e. dense) matrix.",
+    "mj_forward": "mj_forward(m: mujoco._structs.MjModel, d: mujoco._structs.MjData) -> None\n\nForward dynamics: same as mj_step but do not integrate in time.",
+    "mj_step": "mj_step(m: mujoco._structs.MjModel, d: mujoco._structs.MjData, nstep: typing.SupportsInt = 1) -> None\n\nAdvance simulation, use control callback to obtain external force and control. Optionally, repeat nstep times."
+  },
+  "MjContact_fields_present": {
+    "dist": true,
+    "efc_address": true,
+    "frame": true,
+    "geom1": true,
+    "geom2": true,
+    "pos": true,
+    "dim": true,
+    "friction": true,
+    "solimp": true,
+    "solref": true
+  },
+  "MjData_fields_present": {
+    "contact": true,
+    "efc_address": false,
+    "efc_type": true,
+    "efc_id": true,
+    "efc_force": true,
+    "efc_pos": true,
+    "efc_vel": true,
+    "qfrc_constraint": true,
+    "qacc": true,
+    "qacc_warmstart": true,
+    "actuator_force": true,
+    "qfrc_actuator": true,
+    "nefc": true,
+    "warning": true
+  },
+  "constraint_constants": {
+    "mjCNSTR_CONTACT_ELLIPTIC": 7,
+    "mjCNSTR_CONTACT_FRICTIONLESS": 5,
+    "mjCNSTR_CONTACT_PYRAMIDAL": 6,
+    "mjCNSTR_EQUALITY": 0,
+    "mjCNSTR_FRICTION_DOF": 1,
+    "mjCNSTR_FRICTION_TENDON": 2,
+    "mjCNSTR_LIMIT_JOINT": 3,
+    "mjCNSTR_LIMIT_TENDON": 4
+  },
+  "equality_constants": {
+    "mjEQ_CONNECT": 0,
+    "mjEQ_DISTANCE": 6,
+    "mjEQ_FLEX": 4,
+    "mjEQ_FLEXVERT": 5,
+    "mjEQ_JOINT": 2,
+    "mjEQ_TENDON": 3,
+    "mjEQ_WELD": 1
+  },
+  "compiled_model": {
+    "nq": 16,
+    "nv": 15,
+    "nu": 9,
+    "njnt": 10,
+    "neq": 1,
+    "joint_names": [
+      "joint1",
+      "joint2",
+      "joint3",
+      "joint4",
+      "joint5",
+      "joint6",
+      "joint7",
+      "finger_joint1",
+      "finger_joint2",
+      "peg_free"
+    ],
+    "equality_constraints": [
+      {
+        "index": 0,
+        "type": 2,
+        "obj1id": 7,
+        "obj2id": 8,
+        "data": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    ],
+    "timestep_s": 0.008333333333333333,
+    "integrator": 3,
+    "solver": 2,
+    "iterations": 100,
+    "tolerance": 1e-10
+  },
+  "semantics": [
+    "contact.efc_address indexes the constraint array for a contact; it is not a contact-array index.",
+    "mj_contactForce returns a six-dimensional force/torque in the contact frame for an existing contact id.",
+    "efc_type/efc_id/efc_force/efc_pos/efc_vel are constraint-space arrays ordered by active constraint rows, not by raw contact rows.",
+    "mj_forward computes forward dynamics without integrating time; this audit did not call it.",
+    "post-step mj_forward values in historical traces are recomputed derived quantities and are not historical integration impulses."
+  ]
+}

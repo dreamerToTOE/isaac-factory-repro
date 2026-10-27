@@ -1,0 +1,11 @@
+{
+  "task": "G4-S2A-R2-R2",
+  "phase": "PREPHYSICS_FORENSICS_COMPLETE",
+  "passed": true,
+  "scope": "Archived numerical reconstruction only; no new integration, MuJoCo import, viewer, policy inference, or source-model mutation.",
+  "new_integration_steps": 0,
+  "policy_calls": 0,
+  "source_model_mutations": 0,
+  "output_sha256": "dd0f3b6e144218296e4211ccc2369abb5f7fcf2d8ee02566fbf105b0a2afdc18",
+  "output_bytes": 363795
+}

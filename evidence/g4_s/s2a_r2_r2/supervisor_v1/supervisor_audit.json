@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "task": "G4-S2A-R2-R2",
+  "scope": "CPU_ONLY_SYNTHETIC_SUPERVISOR_TESTS",
+  "generated_utc": "2026-10-27T03:17:15.957208+00:00",
+  "pytest_command": "PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 ... tests/test_g4s2a_r2_r2_supervisor.py -p no:cacheprovider",
+  "tests": 12,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": 12,
+  "new_physics_integrations": 0,
+  "mujoco_imported": false,
+  "policy_calls": 0,
+  "properties": [
+    "request fsync before operation",
+    "result only after success",
+    "exception leaves unresolved request without result",
+    "exit/signal/crash/timeout/unknown distinction",
+    "owned process-group cleanup",
+    "no automatic retry",
+    "last durable event persisted"
+  ],
+  "test_output_sha256": "df0b9f9a02926ae4f7edd7de43bbf0e44ab574b02567d4883bbe3336d3e6c641",
+  "junit_sha256": "4a9d4c03b42d19e6fffd66f0a0fd9a18e4535f42fad272bb3f159d3dce6f57e0"
+}

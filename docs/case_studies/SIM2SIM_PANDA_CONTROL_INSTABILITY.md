@@ -347,3 +347,21 @@ P_FULL+C0 在 I3 第176/177步复现 R2 晚期失败；P_ARM_HAND（保留原指
 核心结构是：第一步分辨最初臂任务空间振荡，第二步识别惯量适配后的晚期抓持接触问题；采用同初态、同输入、物理惯量与controller M分离的预注册负控，从记录数值解释局部效应；最后给出反例、未知量和真实验收状态。监督进程在 I3_FULL_C1 第212个请求处丢失，退出码未知且未自动重跑，所以工程交付为 `PARTIAL`；P_ARM_HAND 三种初态均早停，I3 被动臂负控也早停，不能把局部P_FULL抑振结果写成全局修复。绝不把无策略诊断成功等同冻结PPO迁移成功。学习与理论面试考核仍PENDING。
 
 完整报告：[R2-R1](../REVIEW_G4_S2A_R2_R1.md)；[R2历史报告](../REVIEW_G4_S2A_R2.md)；[历史取证机器证据](../../evidence/g4_s/s2a_r2_r1/forensics_v1/forensics.json)。
+
+## 12. G4-S2A-R2-R2 — Finger Actuation and Contact Solver Investigation
+
+**状态：`G4_S2A_R2_R2_PASS`（审计门）；R2-R2新修正候选：`CANDIDATE_BLOCKED`；历史P_FULL候选仍为 `CANDIDATE_PARTIAL`；R3 / S2B：NO-GO。**
+
+R2-R1之后没有直接把“夹爪 late failure”归因于 arm torque。只读取证显示 I3_B/D 和新鲜 I3_FULL_C0 都遵循同一时序：左侧几何接触先改变，随后左正 pad force 丢失，再下一物理步出现 finger 速度突变、peg rotation 和深穿透。被动臂也在显著 arm 运动之前出现右侧接触丢失和 finger/peg 跳变；零 arm command 不是机械锁定。
+
+我独立重算了 `physics_step()` 的自由运动后向欧拉 finger drive。约 `24–28 N` 的 raw PD 到约 `0.18–0.21 N` 的 actuator force 来自 `dt=1/120`、`kp=7500`、`kd=173` 和有效手指质量约 `0.01493 kg` 的隐式方程；归档 force 的重算残差为零。因此没有理由仅凭输出差异替换 controller。MuJoCo 3.5 的 equality/contact EFC 行也已按 `efc_address` 审计，post-forward 诊断没有被冒充为历史冲量。
+
+本阶段没有新的 physics、GUI 或 policy run。新增监督器只做 CPU 合成子进程验证：request/result fsync 顺序、异常不伪造结果、signal/timeout/unknown 分类、进程组清理和 no-retry 均有测试。I3_FULL_C1 的历史未知退出状态保持 UNKNOWN，不重跑。
+
+这解释了为什么 arm-control 层可以稳定而 contact-manipulation 层仍失败：手臂速度和大范围振荡已经受到 body inertia 适配抑制，但抓持仍受 finger free-motion approximation、joint equality、接触 manifold 切换和 solver 反力的耦合影响。当前证据支持局部机制，不能证明唯一 solver 根因或完成 Sim2Sim 修复。完整记录见 [R2-R2报告](../REVIEW_G4_S2A_R2_R2.md) 和 [R2-R2机器门禁](../../evidence/g4_s/s2a_r2_r2/completion_gate.json)。
+
+**面试追问：为什么 arm-control 稳定后仍会在 contact-manipulation 失败？**
+
+> 因为 arm 稳定只约束关节速度和任务空间误差，不会自动保证指端接触 manifold、equality reaction 和 peg 的受力闭环。这里的记录显示接触变化先于 finger/peg 跳变，且自由运动 finger 公式本身没有算术错误；所以要把“手臂不爆炸”和“持续双指抓持”作为两个验收门，不能用前者替代后者。
+
+学习和技术面试考核仍为 `PENDING`；没有把 R2-R2 审计写成最终 PPO 迁移成功。

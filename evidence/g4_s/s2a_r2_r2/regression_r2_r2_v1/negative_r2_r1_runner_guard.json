@@ -1,0 +1,11 @@
+{
+  "active": true,
+  "forbidden_calls": [
+    {
+      "event": "call",
+      "module_or_file": "/home/ubuntu2004/Documents/Codex/2026-10-23/the-github-repository-has-now-been/outputs/isaac-factory-repro-g4-i2/scripts/g4s2a_r2_r1_diagnostics.py",
+      "function": "run_variant"
+    }
+  ],
+  "aborted_before_body": true
+}

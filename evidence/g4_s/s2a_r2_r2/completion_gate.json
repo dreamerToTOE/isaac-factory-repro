@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "task": "G4-S2A-R2-R2",
+  "starting_commit": "d1a2097b1bf43d0cc95b9bae7da231644b43503a",
+  "engineering_status": "G4_S2A_R2_R2_PASS",
+  "new_correction_candidate": "CANDIDATE_BLOCKED",
+  "historical_adaptation_candidate": "CANDIDATE_PARTIAL",
+  "r3_recommendation": "NO-GO",
+  "s2b_recommendation": "NO-GO",
+  "scope": "NO_POLICY_DIAGNOSTIC_ONLY_READ_ONLY_AUDIT",
+  "new_physics_integrations": 0,
+  "new_policy_inferences": 0,
+  "new_gui_physics_runs": 0,
+  "stage_a_d_forensics": {
+    "status": true,
+    "receipt": "evidence/g4_s/s2a_r2_r2/forensics_v1/prephysics_receipt.json",
+    "all_assertions_pass": true,
+    "mechanism_assessment": {
+      "contact_manifold_discontinuity": "SUPPORTED_AS_CHRONOLOGY",
+      "finger_joint_motion": "SUPPORTED_AS_POST_MANIFOLD_RESPONSE",
+      "peg_rotation": "FOLLOWS_CONTACT_LOSS_IN_WINDOWS",
+      "solver_instability": "PLAUSIBLE_BUT_NOT_PROVEN",
+      "free_motion_finger_prediction_error": "NOT_FOUND; archived force matches registered equation",
+      "finger_equality_constraints": "PRESENT_AS_ONE_EQUALITY_ROW; separate equality impulse attribution unavailable in R2 archive",
+      "single_root_cause": "INCONCLUSIVE"
+    },
+    "historical_unknowns_preserved": true
+  },
+  "stage_b_c_math_api": {
+    "status": "AUDIT_COMPLETE_NO_SINGLE_CORRECTION_JUSTIFIED",
+    "single_correction_justified": false,
+    "max_formula_residual_N": 0.0,
+    "mujoco_version": "3.5.0",
+    "api_physics_calls": {
+      "mj_step": 0,
+      "mj_forward": 0,
+      "mj_contactForce": 0,
+      "mj_fullM": 0
+    },
+    "compiled_model": {
+      "nq": 16,
+      "nv": 15,
+      "nu": 9,
+      "njnt": 10,
+      "neq": 1,
+      "joint_names": [
+        "joint1",
+        "joint2",
+        "joint3",
+        "joint4",
+        "joint5",
+        "joint6",
+        "joint7",
+        "finger_joint1",
+        "finger_joint2",
+        "peg_free"
+      ],
+      "equality_constraints": [
+        {
+          "index": 0,
+          "type": 2,
+          "obj1id": 7,
+          "obj2id": 8,
+          "data": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      ],
+      "timestep_s": 0.008333333333333333,
+      "integrator": 3,
+      "solver": 2,
+      "iterations": 100,
+      "tolerance": 1e-10
+    }
+  },
+  "stage_e_supervisor": {
+    "status": "PASS",
+    "tests": 12,
+    "passed": 12,
+    "new_physics_integrations": 0,
+    "policy_calls": 0,
+    "contract": "request fsync before operation; result after success; exit/signal/crash/timeout/unknown; no retry",
+    "evidence": "evidence/g4_s/s2a_r2_r2/supervisor_v1/supervisor_audit.json"
+  },
+  "historical_supervisor_gap": {
+    "status": "UNKNOWN_PRESERVED",
+    "requests": 613,
+    "physics_results": 612,
+    "unresolved_request": {
+      "run_id": "I3_FULL_C1",
+      "step": 212
+    },
+    "automatic_retry": false,
+    "fabricated_result": false,
+    "fabricated_exit_code": false
+  },
+  "regression": {
+    "status": "PASS",
+    "pytest_cases": 734,
+    "pytest_passed": 733,
+    "pytest_skipped": 1,
+    "system_plot_passed": 1,
+    "static_models_passed": true,
+    "protected_tracked_files": 2316,
+    "sources_unchanged": true,
+    "new_physics_steps": 0,
+    "actor_calls": 0
+  },
+  "preservation": {
+    "historical_checkpoints": true,
+    "s1b_default_untouched": true,
+    "r2_r1_evidence_untouched": true,
+    "failed_trajectories_preserved": true
+  },
+  "decision_basis": "Audit established a reproducible contact-manifold chronology and exact controller arithmetic, but no single physically justified correction. No candidate matrix was launched."
+}
