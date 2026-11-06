@@ -104,7 +104,7 @@ Outstanding conceptual gaps and next targeted practice:
 - **状态：PLANNED / DEFERRED_TO_FINAL_LESSON；不是 STARTED，不是 APPROVED_FOR_IMPLEMENTATION。**
 - 在用户完成前面全部课程后，才开展这堂课的深入讨论，比较路线，确认修改范围、算法与评价协议；**现在不锁定具体方向，也不自动修改代码、Reward、成功阈值、PPO 权重、资产或启动仿真/训练。**
 - 原 G2/G3/G4 的实验事实、审计和失败结论原样保留。新指标不能追溯改写“97.22%”的含义；后续成果应单独标记协议和新基线。
-- 本课预期交付：`PEGINSERT_REALISTIC_RED‌ESIGN_PROPOSAL`（概念方案／候选路线与对比实验计划），**具体路径、阈值、算法在课程讨论后再定**，不预填 PASS。
+- 本课预期交付：`PEGINSERT_REALISTIC_REDESIGN_PROPOSAL`（概念方案／候选路线与对比实验计划），**具体路径、阈值、算法在课程讨论后再定**，不预填 PASS。
 
 ### 课程结束时应能回答
 
